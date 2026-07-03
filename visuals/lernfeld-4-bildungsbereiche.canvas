@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "lf4",
+      "type": "text",
+      "text": "Lernfeld 4: Bildungsbereiche und Lernarrangements",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 120
+    },
+    {
+      "id": "areas",
+      "type": "text",
+      "text": "Mathematik · Kunst · Natur · Musik · Theater · Gesundheit · Ethik",
+      "x": 500,
+      "y": 0,
+      "width": 480,
+      "height": 130
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "lf4",
+      "toNode": "areas"
+    }
+  ]
+}

@@ -1,30 +1,24 @@
 # Quellenpolitik
 
 ## These
-
-Die iCloud-Inbox enthält das eigentliche Material. Für eine gute Visualisierung muss dieses Material strukturell sichtbar werden.
+Die Visualisierung braucht die lokale Quelle.
 
 ## Antithese
-
-Das Repo darf nicht zum Rohdatencontainer werden. Die Materialsammlung enthält wahrscheinlich urheberrechtlich geschützte Lehrunterlagen, persönliche Prüfungsdokumente, Seminararbeiten und Gesundheits-/Verwaltungsdokumente.
+Das Repo darf kein Spiegel der iCloud werden. Original-PDFs bleiben lokal.
 
 ## Synthese
+Versioniert werden nur Struktur, aggregierte Metadaten, Kernfragen, Visual Specs und Generatoren.
 
-Dieses Repo versioniert nur:
+## Verbindliche Quelle
 
-- Modul- und Themenstruktur
-- aggregierte Metadaten
-- kuratierte Lernachsen
-- Visualisierungsspezifikationen
-- Generatoren und Validierung
+Korrekt: `~/iCloud/Drive/inbox/erzieherausbildung`.
 
-Nicht versioniert werden:
+Ausgeschlossen: `~/iCloud/Drive/inbox/1. Semester` und `~/iCloud/Drive/inbox/2. Semester`. Diese Ordner gehoeren zu Nicoles Studium und duerfen nicht als Grundlage dieses Repos verwendet werden.
 
-- Originaldateien
-- vollständige OCR-Texte
-- personenbezogene Dokumente
-- große Audio-/Bild-/Präsentationsdateien
+## Nicht versionieren
+
+Original-PDFs, Volltext-OCR, Screenshots aus Unterlagen, private Randnotizen ohne Pruefung, fremde Studienordner.
 
 ## Epistemische Leere
 
-Der aktuelle Scanner liest nur Pfade und Dateitypen. Vollinhaltliche Thesen zu Lehrmeinungen, Prüfungsgewichtung oder Kernaussagen fehlen. Nötig dafür sind selektive Extraktion, Quellenpriorisierung und eine fachliche Prüfung der jeweiligen Lehrdokumente.
+Die aktuelle Struktur kennt Ordner und PDF-Titel, aber noch keine geprueften Inhalte aus den PDFs. Fuer fachliche Aussagen fehlen Exzerpte mit Quellenbezug.
