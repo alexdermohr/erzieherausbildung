@@ -6,3 +6,5 @@ source-material.local/
 .DS_Store
 __pycache__/
 *.pyc
+machine-readable.local/
+*.ocr.local.json
