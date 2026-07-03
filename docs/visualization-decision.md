@@ -1,68 +1,26 @@
 # Visualisierungsentscheidung
 
 ## These
-
-Eine Vercel-fähige Web-App ist der beste Primärkanal: schnell, teilbar, filterbar, robust, ohne proprietäre Board-Abhängigkeit.
+Eine Vercel-faehige Web-App ist der beste Primaerkanal: schnell, teilbar, filterbar, robust.
 
 ## Antithese
-
-Eine reine Web-App ist zu glatt. Ausbildungsstoff entsteht nicht nur als Navigation, sondern als Denkbewegung. Dafür sind Obsidian Canvas und Miro besser: räumlich, verschiebbar, kollaborativ.
+Eine reine Web-App ist zu glatt. Ausbildungsmaterial braucht raeumliches Sortieren und spaetere Ergaenzungen. Dafuer sind Obsidian Canvas und Miro besser geeignet.
 
 ## Synthese
+Web wird Leseflaeche, Obsidian Canvas Denkflaeche, Miro/Schauwerk Kollaborationsflaeche. Alle drei nutzen gemeinsame Datenmodelle.
 
-Die Web-App wird zur stabilen Lesefläche. Obsidian Canvas wird zur lokalen Denkfläche. Miro/Schauwerk wird zur kollaborativen Projektionsfläche. Alle drei sollen aus einer gemeinsamen Visual Spec gespeist werden.
+## Resonanz- und Kontrastpruefung
+Deutung A: Die Materialien bilden eine schulische Lernfeldstruktur. Dann sind Lernfelder, Kompetenzachsen und Pruefungsoutput zentral.
 
-## Resonanz- und Kontrastprüfung
+Deutung B: Die Materialien bilden eine Praxisbibliothek. Dann sind Beziehung, Beobachtung, Lernarrangements, Sprache, Aufsicht, Elternkooperation und Querschnittsthemen zentraler als Lernfeldnummern.
 
-Deutung A: Die Materialien bilden einen Studiengangsüberblick. Dann sind Modul- und Prüfungsachsen zentral.
-
-Deutung B: Die Materialien bilden eigentlich ein Fall-/Praxiswissen für pädagogisch-musiktherapeutisches Handeln. Dann sind Grundbedürfnisse, Beziehung, Gruppe, Sprache, Trauma und ästhetische Bildung zentraler als Module.
-
-Beide Deutungen sind plausibel. Deshalb trennt das Repo administrative Ordnung von Sinnachsen.
-
-## Quellengewichtung
-
-1. Primärstruktur: vorhandene Ordner- und Modulnamen aus der iCloud-Inbox.
-2. Systemtiefe: wiederkehrende Module und thematische Cluster über mehrere Ordner hinweg.
-3. Methodik: explizite Trennung von Rohmaterial, abgeleiteter Struktur und Interpretation.
-4. Replizierbarkeit: Scanner und Validatoren erzeugen dieselbe Struktur erneut.
-5. Lautstärke: Dateimenge allein entscheidet nicht über Relevanz.
+Beide Deutungen bleiben im Modell erhalten.
 
 ## Risiko/Nutzen
+Nutzen: Ueberblick, Pruefungsvorbereitung, spaetere Erweiterbarkeit, klare Datenschutzgrenze.
 
-Nutzen:
-
-- schneller Überblick über verstreutes Material
-- bessere Prüfungsvorbereitung
-- wiederverwendbare Visualisierungspipeline
-- klare Trennung zwischen privat/lokal und publizierbar
-
-Risiken:
-
-- falsche Gewichtung durch reine Dateizählung
-- Datenschutzleck bei unachtsamer Rohdatenübernahme
-- Scheingenauigkeit bei noch nicht gelesenen Inhalten
-- Board-Ästhetik statt Erkenntnis
-
-Folge: Erste Version bleibt bewusst strukturell und vorsichtig. Inhaltliche Tiefenkarten entstehen erst nach selektivem Lesen.
-
-## Prämissencheck
-
-Die Empfehlung „Vercel + Canvas + Miro“ gilt nur, wenn Folgendes wahr ist:
-
-- Es kommen weitere Materialien hinzu.
-- Die Karte soll nicht nur privat, sondern auch präsentierbar sein.
-- Rohdateien sollen nicht in Git landen.
-- Miro bleibt Kollaborationsfläche, nicht Wahrheitsquelle.
-
-Wenn stattdessen nur persönliche Prüfungsvorbereitung zählt, wäre ein Obsidian-first-System mit Anki-/Markdown-Export überlegen.
+Risiken: Titel werden als Inhalt missverstanden; falsche Quelle; Vercel veroeffentlicht zu viel; Web/Canvas/Miro driften auseinander.
 
 ## Unsicherheit
-
-Unsicherheitsgrad: 0.33
-
-Ursachen: keine Volltextanalyse, nur erster Struktur- und Dateitypenbefund; Ordnername weicht vom Auftrag ab; Prüfungsgewichtung unbekannt.
-
-Interpolationsgrad: 0.45
-
-Hauptannahmen: Modulnamen, Dateicluster, frühere Präferenz für Canvas/Zoomlandkarten/Schauwerk, PrepP als statisches Vercel-Muster.
+Unsicherheitsgrad: 0.28. Interpolationsgrad: 0.36.
+Ursachen: korrekter Ordner bekannt, aber keine Volltextanalyse und keine Pruefungsgewichtung.

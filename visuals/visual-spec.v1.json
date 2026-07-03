@@ -1,38 +1,9 @@
 {
   "schema": "erzieherausbildung.visual-spec.v1",
-  "intent": "One shared semantic model for Vercel, Obsidian Canvas and Schauwerk/Miro.",
-  "layout": {
-    "primaryDirection": "left-to-right",
-    "lanes": [
-      "Quellen",
-      "Semester",
-      "Module",
-      "Sinnachsen",
-      "Prüfung und Praxis",
-      "Ausgaben"
-    ]
-  },
-  "surfaces": {
-    "vercel": {
-      "role": "stable reading and navigation surface",
-      "entry": "index.html"
-    },
-    "obsidianCanvas": {
-      "role": "local thinking surface",
-      "files": [
-        "visuals/erzieherausbildung-systemkarte.canvas",
-        "visuals/m08-paedagogische-anwendungsfelder.canvas"
-      ]
-    },
-    "schauwerkMiro": {
-      "role": "collaborative projection surface",
-      "dsl": "visuals/schauwerk-erzieherausbildung-board.dsl"
-    }
-  },
-  "principles": [
-    "Raw source material remains local.",
-    "Module order is administrative; Sinnachsen are pedagogical.",
-    "Miro is a workspace, not the source of truth.",
-    "Every strong content claim needs a source extraction step."
+  "sourceRootHint": "~/iCloud/Drive/inbox/erzieherausbildung",
+  "surfaces": [
+    "web",
+    "obsidian-canvas",
+    "schauwerk-miro"
   ]
 }
