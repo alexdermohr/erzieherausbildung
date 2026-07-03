@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erzieherausbildung – Lernlandkarte</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">Visualisierungssystem</p>
+      <h1>Erzieherausbildung / Künstlerische Therapien</h1>
+      <p class="lede">Eine vorsichtige Lernlandkarte aus Semesterstruktur, Modulen und Sinnachsen. Rohmaterial bleibt lokal.</p>
+    </header>
+
+    <main>
+      <section class="panel warning">
+        <h2>Quellenstatus</h2>
+        <p id="source-note">Lade Quellenstatus…</p>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Karte</p>
+            <h2>Module nach Sinnachsen</h2>
+          </div>
+          <label class="filter-label">Achse
+            <select id="axis-filter">
+              <option value="all">Alle Achsen</option>
+            </select>
+          </label>
+        </div>
+        <div id="axis-list" class="axis-list"></div>
+        <div id="module-grid" class="module-grid"></div>
+      </section>
+
+      <section class="panel two-col">
+        <div>
+          <p class="eyebrow">Synthese</p>
+          <h2>Empfohlene Darstellungslogik</h2>
+          <p>Web-App als Lesefläche, Obsidian Canvas als Denkfläche, Miro via Schauwerk als kollaborative Projektionsfläche.</p>
+        </div>
+        <div id="visuals-list" class="visuals-list"></div>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Risiko</p>
+        <h2>Was diese Karte noch nicht beweist</h2>
+        <ul class="limits">
+          <li>Keine Volltextanalyse der PDFs/DOCX/PPTX.</li>
+          <li>Keine Aussage über fachliche Richtigkeit einzelner Lehrmaterialien.</li>
+          <li>Dateimenge ist kein Relevanzbeweis.</li>
+          <li>Prüfungsgewichtung muss gesondert extrahiert werden.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="/assets/app.js"></script>
+  </body>
+</html>

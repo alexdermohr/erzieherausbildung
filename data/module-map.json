@@ -1,0 +1,205 @@
+{
+  "project": {
+    "title": "Erzieherausbildung / Künstlerische Therapien – Lernlandkarte",
+    "status": "initial-structure",
+    "sourceRootHint": "~/iCloud/Drive/inbox",
+    "rawMaterialCommitted": false,
+    "note": "Der erwartete Ordner 'erzieherausbildung' wurde nicht gefunden; relevante Quellen liegen als '1. Semester' und '2. Semester' vor."
+  },
+  "axes": [
+    {
+      "id": "person",
+      "label": "Person und Identität",
+      "question": "Wie wird aus Mensch, Individuum und Körper eine adressierbare Person?"
+    },
+    {
+      "id": "beziehung",
+      "label": "Beziehung und Gruppe",
+      "question": "Wie entstehen Kontakt, Begegnung, Bindung, Gruppe und therapeutische Beziehung?"
+    },
+    {
+      "id": "bildung",
+      "label": "Bildung und Gesellschaft",
+      "question": "Welche Rolle spielen ästhetische Bildung, Soziokultur und pädagogische Anwendungsfelder?"
+    },
+    {
+      "id": "wissenschaft",
+      "label": "Wissenschaft und Methode",
+      "question": "Wie werden Beobachtung, Theorie, Evidenz, Schreiben und Prüfung nachvollziehbar?"
+    },
+    {
+      "id": "kunst",
+      "label": "Kunst, Musik und Geschichte",
+      "question": "Wie werden Kunstgeschichte, Musikgeschichte und ästhetische Erfahrung therapeutisch relevant?"
+    },
+    {
+      "id": "neuro",
+      "label": "Psyche, Körper und Neuro",
+      "question": "Wie verbinden sich Psychologie, Neuropsychologie, EEG, Emotion und Selbstbezug?"
+    },
+    {
+      "id": "praxis",
+      "label": "Praxis und Prüfung",
+      "question": "Was muss handlungsfähig, dokumentierbar und prüfbar werden?"
+    }
+  ],
+  "modules": [
+    {
+      "id": "m03",
+      "semester": "1. Semester",
+      "title": "M03 Anthropologische und soziologische Grundlagen der künstlerischen Therapien",
+      "role": "Grundbegriffsschicht: Mensch, Person, Persönlichkeit, Identität, Konstruktion, Resonanz, Salutogenese und ICF.",
+      "axes": ["person", "beziehung", "wissenschaft"],
+      "coreQuestions": [
+        "Was ist Mensch, Person, Persönlichkeit und Identität?",
+        "Wie werden Selbstständigkeit, Bezogensein und Antwortfähigkeit verstanden?",
+        "Wie verändert Konstruktivismus den Wahrheits- und Objektivitätsbegriff?"
+      ],
+      "visualWeight": 4,
+      "confidence": 0.72
+    },
+    {
+      "id": "m04",
+      "semester": "1. Semester",
+      "title": "M04 Kunsthistorische Grundlagen der künstlerischen Therapien",
+      "role": "Historische und ästhetische Tiefenschicht: von Antike/Mittelalter bis Moderne, Blues, Jazz, Avantgarde und Musikgeschichte.",
+      "axes": ["kunst", "bildung", "wissenschaft"],
+      "coreQuestions": [
+        "Welche Epochen- und Bewusstseinsmodelle prägen Kunst- und Musikverständnis?",
+        "Wie werden Improvisation, Imagination und Musikgeschichte therapeutisch anschlussfähig?"
+      ],
+      "visualWeight": 3,
+      "confidence": 0.65
+    },
+    {
+      "id": "m19",
+      "semester": "1. Semester",
+      "title": "M19 Wissenschaftliches Arbeiten",
+      "role": "Methoden- und Schreibschicht: Wissenschaftsverständnis, APA, Studienarbeit, Literatur, Quellenarbeit, KI und Disziplinbegriff.",
+      "axes": ["wissenschaft", "praxis"],
+      "coreQuestions": [
+        "Was gilt als wissenschaftliches Arbeiten?",
+        "Wie werden Quellen, Abstract, Argumentation und Formalia prüfungssicher?"
+      ],
+      "visualWeight": 3,
+      "confidence": 0.78
+    },
+    {
+      "id": "eeg",
+      "semester": "2. Semester",
+      "title": "Die Kunst des EEG",
+      "role": "Brückenschicht zwischen Kunst, Emotion, Selbstpriorisierung, Neurogrundlagen und Messpraxis.",
+      "axes": ["neuro", "kunst", "wissenschaft"],
+      "coreQuestions": [
+        "Wie hängen Kunst, Gesundheit, Emotion und Selbstbezug zusammen?",
+        "Was misst EEG, welche Artefakte gibt es, und wo beginnt Interpretation?"
+      ],
+      "visualWeight": 4,
+      "confidence": 0.75
+    },
+    {
+      "id": "m01",
+      "semester": "2. Semester",
+      "title": "M01 Geschichte, Ansätze und Schulen der Musiktherapie",
+      "role": "Traditions- und Schulenkarte: musiktherapeutische Geschichte, Beuys/Cage/Stockhausen, mündliche Prüfung.",
+      "axes": ["kunst", "praxis"],
+      "coreQuestions": [
+        "Welche Ansätze und Schulen tragen heutige Musiktherapie?",
+        "Wie werden künstlerische Positionen prüfbar und therapeutisch relevant?"
+      ],
+      "visualWeight": 2,
+      "confidence": 0.55
+    },
+    {
+      "id": "m02",
+      "semester": "2. Semester",
+      "title": "M02 Medizinische und psychologische Grundlagen der interdisziplinären Therapien",
+      "role": "Psychologie- und Wissenschaftsbrücke: Schulen, Psychometrie, Allgemeine Psychologie, Neuropsychologie, Sozialpsychologie, Teamwork.",
+      "axes": ["neuro", "wissenschaft", "praxis"],
+      "coreQuestions": [
+        "Welche psychologischen Schulen und Methoden sind relevant?",
+        "Wie werden Psychometrie, Neuropsychologie und Sozialpsychologie praktisch anschlussfähig?"
+      ],
+      "visualWeight": 5,
+      "confidence": 0.77
+    },
+    {
+      "id": "m06",
+      "semester": "2. Semester",
+      "title": "M06 Musiktherapeutische Basiskompetenzen",
+      "role": "Handlungsschicht: Anamnese, Dokumentation, Wirkfaktoren, Grundbedürfnisse, Gruppe, Instrumentenkunde, Songwriting.",
+      "axes": ["beziehung", "praxis", "kunst"],
+      "coreQuestions": [
+        "Wie wird aus Musik therapeutisches Handeln?",
+        "Wie werden Bedürfnisse, Gruppe, Wirkfaktoren und Dokumentation verbunden?"
+      ],
+      "visualWeight": 5,
+      "confidence": 0.82
+    },
+    {
+      "id": "m08",
+      "semester": "2. Semester",
+      "title": "M08 Musiktherapie in pädagogischen, heilpädagogischen und sozialen Anwendungsfeldern",
+      "role": "Zentrale Praxis-/Erzieherachse: ästhetische Bildung, kulturelle Bildung, pädagogischer Kontext, Soziokultur, Sprache, Trauma.",
+      "axes": ["bildung", "beziehung", "praxis"],
+      "coreQuestions": [
+        "Wie wird Musiktherapie in pädagogischen und sozialen Feldern wirksam?",
+        "Wie verbinden sich ästhetische Bildung, Sprache, Soziokultur und Trauma?"
+      ],
+      "visualWeight": 5,
+      "confidence": 0.84
+    },
+    {
+      "id": "m16",
+      "semester": "2. Semester",
+      "title": "M16 Musikalische Selbsterfahrung",
+      "role": "Selbstbezugsschicht: musikalische Biografie, Selbsterfahrung, Reflexion.",
+      "axes": ["person", "kunst", "praxis"],
+      "coreQuestions": [
+        "Wie wird eigene musikalische Biografie zum Lern- und Reflexionsgegenstand?",
+        "Welche Grenze hat Selbsterfahrung gegenüber Theorie?"
+      ],
+      "visualWeight": 2,
+      "confidence": 0.62
+    },
+    {
+      "id": "pruefung",
+      "semester": "2. Semester",
+      "title": "Prüfung und Studienarbeiten",
+      "role": "Output- und Nachweisschicht: Studienarbeiten, Detailprüfungsplan, Anforderungen, musikalische Beispiele.",
+      "axes": ["praxis", "wissenschaft"],
+      "coreQuestions": [
+        "Welche Artefakte müssen prüfungsfähig werden?",
+        "Welche Materialien sind Belege, welche nur Übung oder Verwaltung?"
+      ],
+      "visualWeight": 3,
+      "confidence": 0.68
+    }
+  ],
+  "recommendedVisuals": [
+    {
+      "id": "web-landkarte",
+      "surface": "vercel-static-web",
+      "use": "Stabile, teilbare Übersicht mit Achsen, Modulen und Prüfungsnähe.",
+      "status": "implemented-initial"
+    },
+    {
+      "id": "obsidian-systemkarte",
+      "surface": "obsidian-canvas",
+      "use": "Lokale Denk- und Lernkarte mit räumlicher Ordnung.",
+      "status": "implemented-initial"
+    },
+    {
+      "id": "m08-focus-canvas",
+      "surface": "obsidian-canvas",
+      "use": "Fokuskarte für pädagogische, heilpädagogische und soziale Anwendungsfelder.",
+      "status": "implemented-initial"
+    },
+    {
+      "id": "schauwerk-board",
+      "surface": "miro-via-schauwerk",
+      "use": "Kollaborative Zoomlandkarte; Miro ist Arbeitsfläche, nicht Quellenwahrheit.",
+      "status": "dsl-draft"
+    }
+  ]
+}

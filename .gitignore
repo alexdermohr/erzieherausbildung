@@ -1,0 +1,8 @@
+# local source material: never commit raw course/private files
+source-material.local
+source-material.local/
+.env
+*.local.json
+.DS_Store
+__pycache__/
+*.pyc

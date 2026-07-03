@@ -1,0 +1,134 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "text": "M08 Fokuskarte\nMusiktherapie in pädagogischen, heilpädagogischen und sozialen Anwendungsfeldern",
+      "x": -760,
+      "y": -420,
+      "width": 680,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "center",
+      "type": "text",
+      "text": "M08 als Erzieherachse\nNicht nur Modul, sondern Transferfeld zwischen Bildung, Beziehung und Praxis",
+      "x": -120,
+      "y": -80,
+      "width": 520,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "aesthetic",
+      "type": "text",
+      "text": "Ästhetische Bildung\nWahrnehmen · Gestalten · Ausdruck · kulturelle Teilhabe",
+      "x": -720,
+      "y": -120,
+      "width": 360,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "pedagogy",
+      "type": "text",
+      "text": "Pädagogischer Kontext\nSpielideen · Sprache · Wahl haben · Experimentieren · Regulierung",
+      "x": -720,
+      "y": 120,
+      "width": 390,
+      "height": 170,
+      "color": "3"
+    },
+    {
+      "id": "socio",
+      "type": "text",
+      "text": "Soziokultur\nKulturelle Bildung · Projekte · Institutionen · Krisenmanagement",
+      "x": -120,
+      "y": 180,
+      "width": 420,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "trauma",
+      "type": "text",
+      "text": "Trauma / Heilpädagogik\nSicherheit · Beziehung · Körper · Regulation\nInhalte müssen noch quellengeprüft werden",
+      "x": 520,
+      "y": 130,
+      "width": 430,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "language",
+      "type": "text",
+      "text": "Durch Musik zur Sprache\nAusdrucksbildung · Abwechselnd im Mittelpunkt stehen · Fantasie",
+      "x": 520,
+      "y": -120,
+      "width": 420,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "exam",
+      "type": "text",
+      "text": "Prüfungsnutzen\nFalllogik · Methode begründen · Intervention dokumentieren · Grenzen benennen",
+      "x": -120,
+      "y": -340,
+      "width": 460,
+      "height": 150,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "aesthetic",
+      "fromSide": "right",
+      "toNode": "center",
+      "toSide": "left",
+      "label": "Bildung"
+    },
+    {
+      "id": "e2",
+      "fromNode": "pedagogy",
+      "fromSide": "right",
+      "toNode": "center",
+      "toSide": "left",
+      "label": "Praxis"
+    },
+    {
+      "id": "e3",
+      "fromNode": "socio",
+      "fromSide": "right",
+      "toNode": "center",
+      "toSide": "left",
+      "label": "Gesellschaft"
+    },
+    {
+      "id": "e4",
+      "fromNode": "trauma",
+      "fromSide": "right",
+      "toNode": "center",
+      "toSide": "left",
+      "label": "Schutz"
+    },
+    {
+      "id": "e5",
+      "fromNode": "language",
+      "fromSide": "right",
+      "toNode": "center",
+      "toSide": "left",
+      "label": "Ausdruck"
+    },
+    {
+      "id": "e6",
+      "fromNode": "center",
+      "fromSide": "right",
+      "toNode": "exam",
+      "toSide": "left",
+      "label": "prüfbar machen"
+    }
+  ]
+}

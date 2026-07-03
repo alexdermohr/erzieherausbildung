@@ -1,0 +1,145 @@
+{
+  "schema": "erzieherausbildung.source-summary.v1",
+  "generatedAt": "2026-07-03T10:46:42.647036+00:00",
+  "sourceRootHint": "~/iCloud/Drive/inbox",
+  "sourceRootObserved": "/home/alex/iCloud/Drive/inbox",
+  "rawFilesCopied": false,
+  "privacyMode": "aggregate-no-filenames",
+  "expectedNamedFolderFound": false,
+  "semesters": [
+    {
+      "title": "1. Semester",
+      "exists": true,
+      "modules": [
+        {
+          "title": "M03 Anthropologische und Soziologische Grundlagen der künstlerischen Therapien",
+          "fileCount": 68,
+          "totalBytes": 71673229,
+          "extensions": {
+            "docx": 10,
+            "heic": 1,
+            "jpg": 22,
+            "odt": 1,
+            "pdf": 31,
+            "pptx": 3
+          }
+        },
+        {
+          "title": "M04 Kunsthistorische M04 Kunsthistorische Grundlagen der künstlerischen Therapien",
+          "fileCount": 21,
+          "totalBytes": 220650311,
+          "extensions": {
+            "m4a": 2,
+            "pdf": 19
+          }
+        },
+        {
+          "title": "M19 wissenschaftliches Arbeiten",
+          "fileCount": 65,
+          "totalBytes": 85850670,
+          "extensions": {
+            "docx": 21,
+            "pdf": 43,
+            "xlsx": 1
+          }
+        }
+      ]
+    },
+    {
+      "title": "2. Semester",
+      "exists": true,
+      "modules": [
+        {
+          "title": "Die Kunst des EEG",
+          "fileCount": 19,
+          "totalBytes": 59354933,
+          "extensions": {
+            "pdf": 19
+          }
+        },
+        {
+          "title": "M01_Geschichte, Ansätze und Schulen der Musiktherapie",
+          "fileCount": 60,
+          "totalBytes": 140155692,
+          "extensions": {
+            "docx": 2,
+            "heic": 31,
+            "jpeg": 4,
+            "jpg": 1,
+            "pdf": 19,
+            "pptm": 1,
+            "pptx": 2
+          }
+        },
+        {
+          "title": "M02 Medizinische und psychologische Grundlagen der interdisziplinären Therapien",
+          "fileCount": 43,
+          "totalBytes": 40312688,
+          "extensions": {
+            "docx": 2,
+            "jpg": 3,
+            "pdf": 38
+          }
+        },
+        {
+          "title": "M06_Musiktherapeutische Basiskompetenzen",
+          "fileCount": 46,
+          "totalBytes": 22470944,
+          "extensions": {
+            "docx": 6,
+            "html": 1,
+            "jpg": 1,
+            "pdf": 35,
+            "png": 3
+          }
+        },
+        {
+          "title": "M08 Musiktherapie in pädagogischen,heilpädagogischen und sozialen Anwendungsfeldern",
+          "fileCount": 21,
+          "totalBytes": 41339360,
+          "extensions": {
+            "docx": 5,
+            "jpg": 1,
+            "pdf": 15
+          }
+        },
+        {
+          "title": "M16 Musikalische Selbsterfahrung",
+          "fileCount": 4,
+          "totalBytes": 290401,
+          "extensions": {
+            "docx": 2,
+            "pdf": 2
+          }
+        },
+        {
+          "title": "Prüfung",
+          "fileCount": 8,
+          "totalBytes": 953618,
+          "extensions": {
+            "docx": 2,
+            "pdf": 6
+          }
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "files": 355,
+    "bytes": 683051846,
+    "extensions": {
+      "docx": 50,
+      "heic": 32,
+      "html": 1,
+      "jpeg": 4,
+      "jpg": 28,
+      "m4a": 2,
+      "odt": 1,
+      "pdf": 227,
+      "png": 3,
+      "pptm": 1,
+      "pptx": 5,
+      "xlsx": 1
+    }
+  }
+}
