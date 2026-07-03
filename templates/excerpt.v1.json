@@ -1,0 +1,20 @@
+{
+  "id": "lernfeld-2-eingewoehnung-beispiel",
+  "sourceCluster": "lernfeld 2",
+  "sourceTitle": "Dateititel ohne Rohkopie",
+  "sourceLocator": "Seite oder Abschnitt falls bekannt",
+  "claimType": "excerpted",
+  "summary": "Kurze quellennahe Zusammenfassung in eigenen Worten.",
+  "concepts": [
+    "Eingewöhnung",
+    "Beziehung"
+  ],
+  "practiceUse": "Wofür hilft das in Planung, Handeln oder Reflexion?",
+  "examRelevance": "Welche Prüfungsfrage könnte damit beantwortet werden?",
+  "links": [
+    "lernfeld-2",
+    "beziehung"
+  ],
+  "reviewStatus": "draft",
+  "uncertainty": 0.35
+}

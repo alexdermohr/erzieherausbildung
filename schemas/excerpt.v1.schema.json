@@ -1,0 +1,27 @@
+{
+  "schema": "excerpt.v1",
+  "required": [
+    "id",
+    "sourceCluster",
+    "sourceTitle",
+    "claimType",
+    "summary",
+    "concepts",
+    "practiceUse",
+    "reviewStatus",
+    "uncertainty"
+  ],
+  "claimTypes": [
+    "title-derived",
+    "excerpted",
+    "interpreted",
+    "question"
+  ],
+  "reviewStatuses": [
+    "draft",
+    "checked",
+    "needs-source",
+    "rejected"
+  ],
+  "uncertainty": "number 0..1"
+}
