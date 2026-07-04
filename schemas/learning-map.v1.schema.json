@@ -1,0 +1,13 @@
+{
+  "schema": "erzieherausbildung.learning_map.contract.v1",
+  "dataSchema": "erzieherausbildung.learning_map.v1",
+  "allowedStatuses": ["background", "learned"],
+  "sourceRefPattern": "doc-XXX",
+  "committedSourceRefs": "doc-id-only",
+  "rawTextCommitted": false,
+  "bildungsleitlinienRole": "background-frame-not-center",
+  "coveragePolicy": {
+    "notExhaustivePdfSummary": true,
+    "knownIntentionalOmissions": ["doc-001"]
+  }
+}
