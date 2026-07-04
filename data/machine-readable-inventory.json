@@ -4,8 +4,8 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 277331,
-    "text_chars": 2052662,
+    "word_count": 283567,
+    "text_chars": 2095438,
     "statuses": {
       "ok": 18,
       "partial-pagewise-needs-review": 1,
@@ -19,8 +19,8 @@
   "clusters": {
     "kein lernfeld": {
       "file_count": 3,
-      "word_count": 101401,
-      "text_chars": 758402,
+      "word_count": 107637,
+      "text_chars": 801178,
       "statuses": {
         "ok": 2,
         "partial-pagewise-needs-review": 1
@@ -89,11 +89,11 @@
       "source_title": "S4_ Sprache und Kommunikation.pdf",
       "source_rel_path": "kein lernfeld/S4_ Sprache und Kommunikation.pdf",
       "extraction_status": "partial-pagewise-needs-review",
-      "word_count": 11522,
-      "text_chars": 79627,
-      "local_text_path": "machine-readable.local/texts/doc-002-pagewise.txt",
-      "extraction_note": "Pagewise extraction improved text volume, but 22 of 79 page attempts timed out or errored; completeness is not proven.",
-      "extraction_method": "pdftotext per-page batch with 8s timeout"
+      "word_count": 17758,
+      "text_chars": 122403,
+      "local_text_path": "machine-readable.local/texts/doc-002-pagewise-retry30.txt",
+      "extraction_note": "Pagewise extraction improved text volume; only page(s) 054 still failed after 30s retry, so completeness is still not fully proven.",
+      "extraction_method": "pdftotext per-page batch with 8s timeout plus 30s retry for failed pages"
     },
     {
       "ordinal": 3,
