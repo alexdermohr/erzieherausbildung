@@ -4,13 +4,12 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 310432,
-    "text_chars": 2291004,
+    "word_count": 325811,
+    "text_chars": 2395040,
     "statuses": {
       "ok": 18,
-      "ok-pagewise": 5,
-      "ok-ocr": 5,
-      "render-ok-ocr-empty-needs-manual-review": 1
+      "ok-pagewise": 6,
+      "ok-ocr": 5
     }
   },
   "clusters": {
@@ -61,10 +60,10 @@
     },
     "lernfeld 5": {
       "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
+      "word_count": 15379,
+      "text_chars": 104036,
       "statuses": {
-        "render-ok-ocr-empty-needs-manual-review": 1
+        "ok-pagewise": 1
       }
     }
   },
@@ -374,11 +373,12 @@
       "source_cluster": "lernfeld 5",
       "source_title": "Lernfeld 5_ Elternkooperation.pdf",
       "source_rel_path": "lernfeld 5/Lernfeld 5_ Elternkooperation.pdf",
-      "extraction_status": "render-ok-ocr-empty-needs-manual-review",
-      "word_count": 0,
-      "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-029.txt",
-      "extraction_note": "Rendered page sample successfully, but OCR produced no usable text in probe; likely visual/layout-heavy or scan-quality problem."
+      "extraction_status": "ok-pagewise",
+      "word_count": 15379,
+      "text_chars": 104036,
+      "local_text_path": "machine-readable.local/texts/doc-029-pagewise-ocr.txt",
+      "extraction_note": "Recovered by per-page PDF separation; zero-text pages were rendered and OCRed locally. Page 2 remains textless and is treated as blank/visual.",
+      "extraction_method": "pdfseparate + pdftotext per page; pdftoppm + tesseract for zero-text pages"
     }
   ]
 }
