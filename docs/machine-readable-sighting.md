@@ -1,12 +1,11 @@
-# Quellensichtung maschinenlesbar v13
+# Quellensichtung maschinenlesbar v14
 
 Dokumente gesichtet: 29
-Woerter extrahiert: 285685
-Status: {'ok': 18, 'ok-pagewise': 3, 'ok-ocr': 5, 'timeout-or-error': 1, 'not-yet-extracted-needs-ocr-or-manual-review': 1, 'render-ok-ocr-empty-needs-manual-review': 1}
+Woerter extrahiert: 293720
+Status: {'ok': 18, 'ok-pagewise': 4, 'ok-ocr': 5, 'not-yet-extracted-needs-ocr-or-manual-review': 1, 'render-ok-ocr-empty-needs-manual-review': 1}
 
-## Nachtrag v13
-- doc 2 wurde vollstaendig auf Seitenebene repariert.
-- Seiten 38-41 und 44-45 wurden per pdfseparate + Ghostscript repariert.
-- Seite 54 wurde mit langem pdftotext-Retry gerettet.
+## Nachtrag v14
+- doc 18 wurde per pdfseparate seitenweise erschlossen.
+- Nulltext-Seiten wurden lokal gerendert und mit Tesseract OCR gelesen.
 - Status: ok-pagewise.
-- Volltext, reparierte Einzelseiten und Seitenstatus bleiben lokal und werden nicht committed.
+- Volltext, gerenderte Seiten und OCR-Artefakte bleiben lokal und werden nicht committed.

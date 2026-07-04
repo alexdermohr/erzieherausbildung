@@ -4,13 +4,12 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 285685,
-    "text_chars": 2109468,
+    "word_count": 293720,
+    "text_chars": 2166986,
     "statuses": {
       "ok": 18,
-      "ok-pagewise": 3,
+      "ok-pagewise": 4,
       "ok-ocr": 5,
-      "timeout-or-error": 1,
       "not-yet-extracted-needs-ocr-or-manual-review": 1,
       "render-ok-ocr-empty-needs-manual-review": 1
     }
@@ -53,10 +52,10 @@
     },
     "lernfeld 4": {
       "file_count": 11,
-      "word_count": 55971,
-      "text_chars": 413742,
+      "word_count": 64006,
+      "text_chars": 471260,
       "statuses": {
-        "timeout-or-error": 1,
+        "ok-pagewise": 1,
         "ok": 6,
         "not-yet-extracted-needs-ocr-or-manual-review": 1,
         "ok-ocr": 3
@@ -257,10 +256,12 @@
       "source_cluster": "lernfeld 4",
       "source_title": "Lernfeld 4 _ Naturwissenschaft, Natur, Umwelt, Technik.pdf",
       "source_rel_path": "lernfeld 4/Lernfeld 4 _ Naturwissenschaft, Natur, Umwelt, Technik.pdf",
-      "extraction_status": "timeout-or-error",
-      "word_count": 0,
-      "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-018.txt"
+      "extraction_status": "ok-pagewise",
+      "word_count": 8035,
+      "text_chars": 57518,
+      "local_text_path": "machine-readable.local/texts/doc-018-pagewise-ocr.txt",
+      "extraction_method": "pdfseparate + pdftotext per page; pdftocairo + tesseract for zero-text pages",
+      "extraction_note": "Recovered by per-page PDF separation; zero-text pages 3,4,10,18,19,24,25,28 were rendered and OCRed locally."
     },
     {
       "ordinal": 19,

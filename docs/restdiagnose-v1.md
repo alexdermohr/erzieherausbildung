@@ -1,3 +1,3 @@
-# Restdiagnose v7
+# Restdiagnose v8
 
-doc 2, doc 14 und doc 15 sind ok-pagewise. doc 2 nutzte fuer Problemseiten pdfseparate + Ghostscript; lokale Artefakte bleiben uncommitted. Offen: doc 18, doc 25, doc 29 visuell/preprocessing. Keine Rohtexte committed.
+doc 2, doc 14, doc 15 und doc 18 sind ok-pagewise. doc 18 nutzte pdfseparate, pdftotext und OCR fuer Nulltext-Seiten. Offen: doc 25 und doc 29 visuell/preprocessing. Keine Rohtexte committed.
