@@ -4,13 +4,12 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 283711,
-    "text_chars": 2096448,
+    "word_count": 285685,
+    "text_chars": 2109468,
     "statuses": {
       "ok": 18,
-      "partial-pagewise-needs-review": 1,
+      "ok-pagewise": 3,
       "ok-ocr": 5,
-      "ok-pagewise": 2,
       "timeout-or-error": 1,
       "not-yet-extracted-needs-ocr-or-manual-review": 1,
       "render-ok-ocr-empty-needs-manual-review": 1
@@ -19,11 +18,11 @@
   "clusters": {
     "kein lernfeld": {
       "file_count": 3,
-      "word_count": 107781,
-      "text_chars": 802188,
+      "word_count": 109755,
+      "text_chars": 815208,
       "statuses": {
         "ok": 2,
-        "partial-pagewise-needs-review": 1
+        "ok-pagewise": 1
       }
     },
     "lernfeld 1": {
@@ -88,12 +87,12 @@
       "source_cluster": "kein lernfeld",
       "source_title": "S4_ Sprache und Kommunikation.pdf",
       "source_rel_path": "kein lernfeld/S4_ Sprache und Kommunikation.pdf",
-      "extraction_status": "partial-pagewise-needs-review",
-      "word_count": 17902,
-      "text_chars": 123413,
-      "local_text_path": "machine-readable.local/texts/doc-002-pagewise-final.txt",
-      "extraction_note": "Page 54 was recovered with 180s retry; pages 38,39,44 timed out during render probes and pages 38-41/44-45 still need PDF repair or visual review.",
-      "extraction_method": "pdftotext per-page batch with retries up to 180s plus render probes"
+      "extraction_status": "ok-pagewise",
+      "word_count": 19876,
+      "text_chars": 136433,
+      "local_text_path": "machine-readable.local/texts/doc-002-pagewise-repaired.txt",
+      "extraction_note": "All 79 pages have selected local text; pages 38-41 and 44-45 were recovered via pdfseparate + Ghostscript repair; page 54 required long pdftotext retry.",
+      "extraction_method": "pdftotext per-page batch plus pdfseparate/ghostscript repair for problematic pages"
     },
     {
       "ordinal": 3,
