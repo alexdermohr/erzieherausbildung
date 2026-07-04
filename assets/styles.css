@@ -80,3 +80,15 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
   select { background: #161616; }
   .axis-card, .visual-card, .module-card { background: rgba(255,255,255,.035); }
 }
+
+/* learning map web surface */
+.fineprint { color: var(--muted); font-size: .92rem; max-width: 780px; }
+.stat-grid { display: grid; gap: 12px; margin-top: 18px; }
+.stat-card { border: 1px solid var(--line); border-radius: 18px; padding: 16px; }
+.stat-card strong { display: block; font-size: 2rem; }
+.topic-grid { display: grid; gap: 14px; }
+.topic-card, .relation-card { border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
+.topic-card h3, .relation-card h3 { margin: 0 0 10px; font-size: 1.05rem; }
+.source-line { margin-top: 12px; font-size: .82rem; color: var(--muted); }
+.muted-tag { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+.relation-list { display: grid; gap: 12px; }

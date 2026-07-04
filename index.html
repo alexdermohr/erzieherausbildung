@@ -8,51 +8,56 @@
   </head>
   <body>
     <header class="hero">
-      <p class="eyebrow">Visualisierungssystem</p>
-      <h1>Erzieherausbildung / Künstlerische Therapien</h1>
-      <p class="lede">Eine vorsichtige Lernlandkarte aus Wissensinhalten, Lernfeldern und Sinnachsen. Rohmaterial bleibt lokal.</p>
+      <p class="eyebrow">Wissenslandkarte</p>
+      <h1>Erzieherausbildung</h1>
+      <p class="lede">Eine übersichtliche Karte der Wissensinhalte, Begriffe und Zusammenhänge. Rohmaterial bleibt lokal; sichtbar wird die geordnete Struktur.</p>
     </header>
 
     <main>
       <section class="panel warning">
-        <h2>Quellenstatus</h2>
+        <h2>Quellen- und Kartenstatus</h2>
         <p id="source-note">Lade Quellenstatus…</p>
+        <p id="source-detail" class="fineprint"></p>
+        <div id="map-stats" class="stat-grid"></div>
       </section>
 
       <section class="panel">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Karte</p>
-            <h2>Wissensinhalte nach Sinnachsen</h2>
+            <p class="eyebrow">Sinnachsen</p>
+            <h2>Wissensbereiche im Überblick</h2>
           </div>
-          <label class="filter-label">Achse
+          <label class="filter-label">Themen filtern
             <select id="axis-filter">
               <option value="all">Alle Achsen</option>
             </select>
           </label>
         </div>
         <div id="axis-list" class="axis-list"></div>
-        <div id="module-grid" class="module-grid"></div>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Themenknoten</p>
+        <h2>Alle sichtbaren Wissensinhalte</h2>
+        <div id="topic-grid" class="topic-grid"></div>
       </section>
 
       <section class="panel two-col">
         <div>
-          <p class="eyebrow">Synthese</p>
-          <h2>Empfohlene Darstellungslogik</h2>
-          <p>Web-App als Lesefläche, Obsidian Canvas als Denkfläche, Miro via Schauwerk als kollaborative Projektionsfläche.</p>
+          <p class="eyebrow">Zusammenhänge</p>
+          <h2>Beziehungen zwischen Achsen</h2>
+          <p>Die Karte trennt Inhalte zur Orientierung und verbindet sie über Beziehungen wieder.</p>
         </div>
-        <div id="visuals-list" class="visuals-list"></div>
+        <div id="relation-list" class="relation-list"></div>
       </section>
 
-      <section class="panel">
-        <p class="eyebrow">Risiko</p>
-        <h2>Was diese Karte noch nicht beweist</h2>
-        <ul class="limits">
-          <li>Keine Volltextanalyse der PDFs/DOCX/PPTX.</li>
-          <li>Keine Aussage über fachliche Richtigkeit einzelner Lehrmaterialien.</li>
-          <li>Dateimenge ist kein Relevanzbeweis.</li>
-          <li>Gewichtung, Tiefe und Vollständigkeit der Wissensinhalte müssen schrittweise geprüft werden.</li>
-        </ul>
+      <section class="panel two-col">
+        <div>
+          <p class="eyebrow">Abdeckung</p>
+          <h2>Was diese Karte zeigt</h2>
+          <p id="coverage-note"></p>
+        </div>
+        <div id="surface-list" class="visuals-list"></div>
       </section>
     </main>
 
