@@ -1,0 +1,579 @@
+{
+  "schema": "erzieherausbildung.learning_map.v1",
+  "purpose": "Kanonisches Zwischenmodell für Zusammenfassung, Ordnung, Visualisierung und spätere Detailfüllung des bisher gelernten Stoffs.",
+  "principles": [
+    "Unterrichtskern vor Materialmenge.",
+    "Bildungsleitlinien sind Hintergrundrahmen, nicht Zentrum.",
+    "Erst Ordnung, dann Details.",
+    "Jeder Knoten bleibt mit Quellen-Dokumenten rückbindbar."
+  ],
+  "source_policy": {
+    "raw_text_committed": false,
+    "uses_local_machine_readable_texts": true,
+    "detail_quotes_later": true,
+    "committed_source_refs": "doc-id-only",
+    "not_exhaustive_pdf_summary": true,
+    "bildungsleitlinien_role": "background-frame-not-center"
+  },
+  "axes": [
+    {
+      "id": "professionalitaet",
+      "title": "Professionelle Haltung und Berufsrolle",
+      "summary": "Rolle, Verantwortung, Arbeitsfelder, professionelle Haltung und Reflexion.",
+      "status": "learned",
+      "sources": [
+        "doc-004",
+        "doc-005",
+        "doc-006",
+        "doc-007"
+      ],
+      "topics": [
+        {
+          "id": "berufsrolle",
+          "title": "Berufsrolle",
+          "sources": [
+            "doc-004"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "professionelle-haltung",
+          "title": "Professionelle Haltung",
+          "sources": [
+            "doc-005"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "arbeitsbedingungen",
+          "title": "Arbeitsbedingungen",
+          "sources": [
+            "doc-006"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "arbeitsfelder",
+          "title": "Arbeitsfelder",
+          "sources": [
+            "doc-007"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "reflexion",
+          "title": "Reflexion und Selbstverständnis",
+          "sources": [
+            "doc-004",
+            "doc-005"
+          ],
+          "status": "learned"
+        }
+      ]
+    },
+    {
+      "id": "beziehung-entwicklung",
+      "title": "Beziehung, Entwicklung und Selbstwirksamkeit",
+      "summary": "Eingewöhnung, Bindung, Entwicklung, Selbstwirksamkeit und pädagogische Begleitung.",
+      "status": "learned",
+      "sources": [
+        "doc-008",
+        "doc-010",
+        "doc-016"
+      ],
+      "topics": [
+        {
+          "id": "eingewoehnung",
+          "title": "Eingewöhnung",
+          "sources": [
+            "doc-008"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "bindung-beziehung",
+          "title": "Bindung und Beziehung",
+          "sources": [
+            "doc-008",
+            "doc-016"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "selbstwirksamkeit",
+          "title": "Selbstwirksamkeit",
+          "sources": [
+            "doc-010"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "anpassung-selbstbestimmung",
+          "title": "Anpassung und Selbstbestimmung",
+          "sources": [
+            "doc-016"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "aufsichtspflicht",
+          "title": "Aufsichtspflicht",
+          "sources": [
+            "doc-010"
+          ],
+          "status": "learned"
+        }
+      ]
+    },
+    {
+      "id": "sprache-kommunikation",
+      "title": "Sprache, Kommunikation und Konflikte",
+      "summary": "Sprachbildung, Gesprächsanlässe, Konfliktverstehen und kommunikative Alltagspraxis.",
+      "status": "learned",
+      "sources": [
+        "doc-002",
+        "doc-009",
+        "doc-011",
+        "doc-012"
+      ],
+      "topics": [
+        {
+          "id": "sprache-kommunikation",
+          "title": "Sprache und Kommunikation",
+          "sources": [
+            "doc-002",
+            "doc-011"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "sprachbildung",
+          "title": "Sprachbildung im Alltag",
+          "sources": [
+            "doc-011"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "gespraechsanlaesse",
+          "title": "Gesprächsanlässe",
+          "sources": [
+            "doc-009"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "konflikte",
+          "title": "Konflikte",
+          "sources": [
+            "doc-012"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "dialogische-haltung",
+          "title": "Dialogische Haltung",
+          "sources": [
+            "doc-009",
+            "doc-011"
+          ],
+          "status": "learned"
+        }
+      ]
+    },
+    {
+      "id": "beobachtung-fallverstehen",
+      "title": "Beobachtung, Fallverstehen und Dokumentation",
+      "summary": "Ressourcenorientierte Beobachtung, Dokumentation, Analyse und pädagogische Folgerungen.",
+      "status": "learned",
+      "sources": [
+        "doc-014"
+      ],
+      "topics": [
+        {
+          "id": "ressourcenorientierung",
+          "title": "Ressourcenorientierung",
+          "sources": [
+            "doc-014"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "beobachtung",
+          "title": "Beobachtung",
+          "sources": [
+            "doc-014"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "dokumentation",
+          "title": "Dokumentation",
+          "sources": [
+            "doc-014"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "fallverstehen",
+          "title": "Fallverstehen",
+          "sources": [
+            "doc-014"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "foerderplanung",
+          "title": "Förderliche Schlüsse ziehen",
+          "sources": [
+            "doc-014"
+          ],
+          "status": "learned"
+        }
+      ]
+    },
+    {
+      "id": "gruppe-institution-politik",
+      "title": "Gruppe, Institution, Wohngruppe und Politik",
+      "summary": "Wohngruppe, Regeln, Partizipation, politische Bildung und institutionelle Verantwortung.",
+      "status": "learned",
+      "sources": [
+        "doc-013",
+        "doc-015",
+        "doc-016",
+        "doc-017"
+      ],
+      "topics": [
+        {
+          "id": "wohngruppe",
+          "title": "Wohngruppe",
+          "sources": [
+            "doc-013",
+            "doc-017"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "regeln-struktur",
+          "title": "Regeln und Struktur",
+          "sources": [
+            "doc-013",
+            "doc-017"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "partizipation",
+          "title": "Partizipation",
+          "sources": [
+            "doc-015",
+            "doc-016"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "politik",
+          "title": "Politische Bildung",
+          "sources": [
+            "doc-015"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "macht-verantwortung",
+          "title": "Macht und Verantwortung",
+          "sources": [
+            "doc-015",
+            "doc-016"
+          ],
+          "status": "learned"
+        }
+      ]
+    },
+    {
+      "id": "bildungsbereiche",
+      "title": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "summary": "Mathematik, Naturwissenschaft, Kunst, Musik, Theater, Religion, Gesundheit und Ernährung.",
+      "status": "learned",
+      "sources": [
+        "doc-018",
+        "doc-019",
+        "doc-020",
+        "doc-021",
+        "doc-023",
+        "doc-024",
+        "doc-025",
+        "doc-026",
+        "doc-027",
+        "doc-028"
+      ],
+      "topics": [
+        {
+          "id": "mathematik",
+          "title": "Frühkindliche Mathematik",
+          "sources": [
+            "doc-019",
+            "doc-024"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "naturwissenschaft",
+          "title": "Natur, Umwelt, Technik",
+          "sources": [
+            "doc-018"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "kunst-aesthetik",
+          "title": "Kunst und Ästhetik",
+          "sources": [
+            "doc-020"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "musik-rhythmik",
+          "title": "Musik und Rhythmik",
+          "sources": [
+            "doc-023"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "theater",
+          "title": "Theater",
+          "sources": [
+            "doc-025"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "gesundheit-ernaehrung",
+          "title": "Gesundheit und Ernährung",
+          "sources": [
+            "doc-026"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "religion-ethik",
+          "title": "Religion, Gesellschaft und Ethik",
+          "sources": [
+            "doc-028"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "lernarrangements",
+          "title": "Lernarrangements",
+          "sources": [
+            "doc-021"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "sozialpaedagogische-grundlagen",
+          "title": "Sozialpädagogische Grundlagen",
+          "sources": [
+            "doc-027",
+            "doc-022"
+          ],
+          "status": "learned"
+        }
+      ]
+    },
+    {
+      "id": "eltern-kooperation",
+      "title": "Elternkooperation und Übergänge",
+      "summary": "Zusammenarbeit mit Eltern, Gesprächsführung, Erziehungspartnerschaft und Übergänge.",
+      "status": "learned",
+      "sources": [
+        "doc-029"
+      ],
+      "topics": [
+        {
+          "id": "elternkooperation",
+          "title": "Elternkooperation",
+          "sources": [
+            "doc-029"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "erziehungspartnerschaft",
+          "title": "Erziehungspartnerschaft",
+          "sources": [
+            "doc-029"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "elterngespraeche",
+          "title": "Elterngespräche",
+          "sources": [
+            "doc-029"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "uebergaenge",
+          "title": "Übergänge",
+          "sources": [
+            "doc-029",
+            "doc-008"
+          ],
+          "status": "learned"
+        },
+        {
+          "id": "familienperspektive",
+          "title": "Familienperspektive",
+          "sources": [
+            "doc-029"
+          ],
+          "status": "learned"
+        }
+      ]
+    },
+    {
+      "id": "rahmen-recht-ethik",
+      "title": "Rahmen, Recht, Schutz und Ethik",
+      "summary": "Bildungsleitlinien, Schutzauftrag, Aufsicht, Rechte, Ethik und institutioneller Rahmen.",
+      "status": "background",
+      "sources": [
+        "doc-003",
+        "doc-010",
+        "doc-015",
+        "doc-028"
+      ],
+      "topics": [
+        {
+          "id": "bildungsleitlinien",
+          "title": "Bildungsleitlinien als Rahmen",
+          "sources": [
+            "doc-003"
+          ],
+          "status": "background"
+        },
+        {
+          "id": "kindeswohl",
+          "title": "Kindeswohl und Schutz",
+          "sources": [
+            "doc-003",
+            "doc-010"
+          ],
+          "status": "background"
+        },
+        {
+          "id": "rechte",
+          "title": "Kinderrechte und Beteiligung",
+          "sources": [
+            "doc-003",
+            "doc-015"
+          ],
+          "status": "background"
+        },
+        {
+          "id": "ethik",
+          "title": "Ethik",
+          "sources": [
+            "doc-028"
+          ],
+          "status": "background"
+        },
+        {
+          "id": "institutioneller-auftrag",
+          "title": "Institutioneller Auftrag",
+          "sources": [
+            "doc-003"
+          ],
+          "status": "background"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "professionalitaet",
+      "to": "beziehung-entwicklung",
+      "relation": "Professionelle Haltung zeigt sich in Beziehungsgestaltung."
+    },
+    {
+      "from": "beziehung-entwicklung",
+      "to": "sprache-kommunikation",
+      "relation": "Beziehung ermöglicht Sprache, Dialog und Konfliktbearbeitung."
+    },
+    {
+      "from": "sprache-kommunikation",
+      "to": "beobachtung-fallverstehen",
+      "relation": "Beobachtung braucht sprachliche und dokumentierende Genauigkeit."
+    },
+    {
+      "from": "beobachtung-fallverstehen",
+      "to": "gruppe-institution-politik",
+      "relation": "Fallverstehen führt zu pädagogischem Handeln in Gruppe und Institution."
+    },
+    {
+      "from": "gruppe-institution-politik",
+      "to": "rahmen-recht-ethik",
+      "relation": "Institutionelles Handeln braucht Rechte, Schutz und Ethik."
+    },
+    {
+      "from": "bildungsbereiche",
+      "to": "beziehung-entwicklung",
+      "relation": "Bildungsbereiche werden über Beziehung und Begleitung wirksam."
+    },
+    {
+      "from": "eltern-kooperation",
+      "to": "beziehung-entwicklung",
+      "relation": "Elternkooperation stabilisiert Übergänge und Entwicklung."
+    },
+    {
+      "from": "rahmen-recht-ethik",
+      "to": "bildungsbereiche",
+      "relation": "Bildungsleitlinien rahmen Bildungsbereiche, dominieren aber nicht die Lernkarte."
+    }
+  ],
+  "planned_renders": [
+    "obsidian_canvas",
+    "schauwerk_or_miro_board",
+    "prepp_style_homepage"
+  ],
+  "coverage": {
+    "linked_doc_ids": [
+      "doc-002",
+      "doc-003",
+      "doc-004",
+      "doc-005",
+      "doc-006",
+      "doc-007",
+      "doc-008",
+      "doc-009",
+      "doc-010",
+      "doc-011",
+      "doc-012",
+      "doc-013",
+      "doc-014",
+      "doc-015",
+      "doc-016",
+      "doc-017",
+      "doc-018",
+      "doc-019",
+      "doc-020",
+      "doc-021",
+      "doc-022",
+      "doc-023",
+      "doc-024",
+      "doc-025",
+      "doc-026",
+      "doc-027",
+      "doc-028",
+      "doc-029"
+    ],
+    "intentionally_unmodeled_doc_ids": [
+      "doc-001"
+    ],
+    "reason": "v1 ordnet den Unterrichtskern; nicht jede maschinenlesbare Quelle wird als eigener Themenknoten modelliert."
+  }
+}

@@ -1,0 +1,735 @@
+{
+  "nodes": [
+    {
+      "id": "center",
+      "type": "text",
+      "text": "Kind in Entwicklung, Beziehung und Institution",
+      "x": 0,
+      "y": 0,
+      "width": 380,
+      "height": 120
+    },
+    {
+      "id": "axis-professionalitaet",
+      "type": "text",
+      "text": "Professionelle Haltung und Berufsrolle\n\nRolle, Verantwortung, Arbeitsfelder, professionelle Haltung und Reflexion.\n\nQuellen: doc-004, doc-005, doc-006, doc-007",
+      "x": -720,
+      "y": -420,
+      "width": 430,
+      "height": 220
+    },
+    {
+      "id": "topic-berufsrolle",
+      "type": "text",
+      "text": "Berufsrolle\ndoc-004",
+      "x": -720,
+      "y": -170,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-professionelle-haltung",
+      "type": "text",
+      "text": "Professionelle Haltung\ndoc-005",
+      "x": -490,
+      "y": -170,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-arbeitsbedingungen",
+      "type": "text",
+      "text": "Arbeitsbedingungen\ndoc-006",
+      "x": -720,
+      "y": -65,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-arbeitsfelder",
+      "type": "text",
+      "text": "Arbeitsfelder\ndoc-007",
+      "x": -490,
+      "y": -65,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-reflexion",
+      "type": "text",
+      "text": "Reflexion und Selbstverständnis\ndoc-004, doc-005",
+      "x": -720,
+      "y": 40,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "axis-beziehung-entwicklung",
+      "type": "text",
+      "text": "Beziehung, Entwicklung und Selbstwirksamkeit\n\nEingewöhnung, Bindung, Entwicklung, Selbstwirksamkeit und pädagogische Begleitung.\n\nQuellen: doc-008, doc-010, doc-016",
+      "x": 0,
+      "y": -520,
+      "width": 430,
+      "height": 220
+    },
+    {
+      "id": "topic-eingewoehnung",
+      "type": "text",
+      "text": "Eingewöhnung\ndoc-008",
+      "x": 0,
+      "y": -270,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-bindung-beziehung",
+      "type": "text",
+      "text": "Bindung und Beziehung\ndoc-008, doc-016",
+      "x": 230,
+      "y": -270,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-selbstwirksamkeit",
+      "type": "text",
+      "text": "Selbstwirksamkeit\ndoc-010",
+      "x": 0,
+      "y": -165,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-anpassung-selbstbestimmung",
+      "type": "text",
+      "text": "Anpassung und Selbstbestimmung\ndoc-016",
+      "x": 230,
+      "y": -165,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-aufsichtspflicht",
+      "type": "text",
+      "text": "Aufsichtspflicht\ndoc-010",
+      "x": 0,
+      "y": -60,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "axis-sprache-kommunikation",
+      "type": "text",
+      "text": "Sprache, Kommunikation und Konflikte\n\nSprachbildung, Gesprächsanlässe, Konfliktverstehen und kommunikative Alltagspraxis.\n\nQuellen: doc-002, doc-009, doc-011, doc-012",
+      "x": 720,
+      "y": -420,
+      "width": 430,
+      "height": 220
+    },
+    {
+      "id": "topic-sprache-kommunikation",
+      "type": "text",
+      "text": "Sprache und Kommunikation\ndoc-002, doc-011",
+      "x": 720,
+      "y": -170,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-sprachbildung",
+      "type": "text",
+      "text": "Sprachbildung im Alltag\ndoc-011",
+      "x": 950,
+      "y": -170,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-gespraechsanlaesse",
+      "type": "text",
+      "text": "Gesprächsanlässe\ndoc-009",
+      "x": 720,
+      "y": -65,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-konflikte",
+      "type": "text",
+      "text": "Konflikte\ndoc-012",
+      "x": 950,
+      "y": -65,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-dialogische-haltung",
+      "type": "text",
+      "text": "Dialogische Haltung\ndoc-009, doc-011",
+      "x": 720,
+      "y": 40,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "axis-beobachtung-fallverstehen",
+      "type": "text",
+      "text": "Beobachtung, Fallverstehen und Dokumentation\n\nRessourcenorientierte Beobachtung, Dokumentation, Analyse und pädagogische Folgerungen.\n\nQuellen: doc-014",
+      "x": -780,
+      "y": 0,
+      "width": 430,
+      "height": 220
+    },
+    {
+      "id": "topic-ressourcenorientierung",
+      "type": "text",
+      "text": "Ressourcenorientierung\ndoc-014",
+      "x": -780,
+      "y": 250,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-beobachtung",
+      "type": "text",
+      "text": "Beobachtung\ndoc-014",
+      "x": -550,
+      "y": 250,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-dokumentation",
+      "type": "text",
+      "text": "Dokumentation\ndoc-014",
+      "x": -780,
+      "y": 355,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-fallverstehen",
+      "type": "text",
+      "text": "Fallverstehen\ndoc-014",
+      "x": -550,
+      "y": 355,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-foerderplanung",
+      "type": "text",
+      "text": "Förderliche Schlüsse ziehen\ndoc-014",
+      "x": -780,
+      "y": 460,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "axis-gruppe-institution-politik",
+      "type": "text",
+      "text": "Gruppe, Institution, Wohngruppe und Politik\n\nWohngruppe, Regeln, Partizipation, politische Bildung und institutionelle Verantwortung.\n\nQuellen: doc-013, doc-015, doc-016, doc-017",
+      "x": 780,
+      "y": 0,
+      "width": 430,
+      "height": 220
+    },
+    {
+      "id": "topic-wohngruppe",
+      "type": "text",
+      "text": "Wohngruppe\ndoc-013, doc-017",
+      "x": 780,
+      "y": 250,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-regeln-struktur",
+      "type": "text",
+      "text": "Regeln und Struktur\ndoc-013, doc-017",
+      "x": 1010,
+      "y": 250,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-partizipation",
+      "type": "text",
+      "text": "Partizipation\ndoc-015, doc-016",
+      "x": 780,
+      "y": 355,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-politik",
+      "type": "text",
+      "text": "Politische Bildung\ndoc-015",
+      "x": 1010,
+      "y": 355,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-macht-verantwortung",
+      "type": "text",
+      "text": "Macht und Verantwortung\ndoc-015, doc-016",
+      "x": 780,
+      "y": 460,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "axis-bildungsbereiche",
+      "type": "text",
+      "text": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis\n\nMathematik, Naturwissenschaft, Kunst, Musik, Theater, Religion, Gesundheit und Ernährung.\n\nQuellen: doc-018, doc-019, doc-020, doc-021, doc-023, doc-024, doc-025, doc-026, doc-027, doc-028",
+      "x": -720,
+      "y": 420,
+      "width": 430,
+      "height": 220
+    },
+    {
+      "id": "topic-mathematik",
+      "type": "text",
+      "text": "Frühkindliche Mathematik\ndoc-019, doc-024",
+      "x": -720,
+      "y": 670,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-naturwissenschaft",
+      "type": "text",
+      "text": "Natur, Umwelt, Technik\ndoc-018",
+      "x": -490,
+      "y": 670,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-kunst-aesthetik",
+      "type": "text",
+      "text": "Kunst und Ästhetik\ndoc-020",
+      "x": -720,
+      "y": 775,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-musik-rhythmik",
+      "type": "text",
+      "text": "Musik und Rhythmik\ndoc-023",
+      "x": -490,
+      "y": 775,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-theater",
+      "type": "text",
+      "text": "Theater\ndoc-025",
+      "x": -720,
+      "y": 880,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "axis-eltern-kooperation",
+      "type": "text",
+      "text": "Elternkooperation und Übergänge\n\nZusammenarbeit mit Eltern, Gesprächsführung, Erziehungspartnerschaft und Übergänge.\n\nQuellen: doc-029",
+      "x": 0,
+      "y": 520,
+      "width": 430,
+      "height": 220
+    },
+    {
+      "id": "topic-elternkooperation",
+      "type": "text",
+      "text": "Elternkooperation\ndoc-029",
+      "x": 0,
+      "y": 770,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-erziehungspartnerschaft",
+      "type": "text",
+      "text": "Erziehungspartnerschaft\ndoc-029",
+      "x": 230,
+      "y": 770,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-elterngespraeche",
+      "type": "text",
+      "text": "Elterngespräche\ndoc-029",
+      "x": 0,
+      "y": 875,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-uebergaenge",
+      "type": "text",
+      "text": "Übergänge\ndoc-029, doc-008",
+      "x": 230,
+      "y": 875,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-familienperspektive",
+      "type": "text",
+      "text": "Familienperspektive\ndoc-029",
+      "x": 0,
+      "y": 980,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "axis-rahmen-recht-ethik",
+      "type": "text",
+      "text": "Rahmen, Recht, Schutz und Ethik\n\nBildungsleitlinien, Schutzauftrag, Aufsicht, Rechte, Ethik und institutioneller Rahmen.\n\nQuellen: doc-003, doc-010, doc-015, doc-028",
+      "x": 720,
+      "y": 420,
+      "width": 430,
+      "height": 220
+    },
+    {
+      "id": "topic-bildungsleitlinien",
+      "type": "text",
+      "text": "Bildungsleitlinien als Rahmen\ndoc-003",
+      "x": 720,
+      "y": 670,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-kindeswohl",
+      "type": "text",
+      "text": "Kindeswohl und Schutz\ndoc-003, doc-010",
+      "x": 950,
+      "y": 670,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-rechte",
+      "type": "text",
+      "text": "Kinderrechte und Beteiligung\ndoc-003, doc-015",
+      "x": 720,
+      "y": 775,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-ethik",
+      "type": "text",
+      "text": "Ethik\ndoc-028",
+      "x": 950,
+      "y": 775,
+      "width": 210,
+      "height": 80
+    },
+    {
+      "id": "topic-institutioneller-auftrag",
+      "type": "text",
+      "text": "Institutioneller Auftrag\ndoc-003",
+      "x": 720,
+      "y": 880,
+      "width": 210,
+      "height": 80
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-center-professionalitaet",
+      "fromNode": "center",
+      "toNode": "axis-professionalitaet"
+    },
+    {
+      "id": "edge-professionalitaet-berufsrolle",
+      "fromNode": "axis-professionalitaet",
+      "toNode": "topic-berufsrolle"
+    },
+    {
+      "id": "edge-professionalitaet-professionelle-haltung",
+      "fromNode": "axis-professionalitaet",
+      "toNode": "topic-professionelle-haltung"
+    },
+    {
+      "id": "edge-professionalitaet-arbeitsbedingungen",
+      "fromNode": "axis-professionalitaet",
+      "toNode": "topic-arbeitsbedingungen"
+    },
+    {
+      "id": "edge-professionalitaet-arbeitsfelder",
+      "fromNode": "axis-professionalitaet",
+      "toNode": "topic-arbeitsfelder"
+    },
+    {
+      "id": "edge-professionalitaet-reflexion",
+      "fromNode": "axis-professionalitaet",
+      "toNode": "topic-reflexion"
+    },
+    {
+      "id": "edge-center-beziehung-entwicklung",
+      "fromNode": "center",
+      "toNode": "axis-beziehung-entwicklung"
+    },
+    {
+      "id": "edge-beziehung-entwicklung-eingewoehnung",
+      "fromNode": "axis-beziehung-entwicklung",
+      "toNode": "topic-eingewoehnung"
+    },
+    {
+      "id": "edge-beziehung-entwicklung-bindung-beziehung",
+      "fromNode": "axis-beziehung-entwicklung",
+      "toNode": "topic-bindung-beziehung"
+    },
+    {
+      "id": "edge-beziehung-entwicklung-selbstwirksamkeit",
+      "fromNode": "axis-beziehung-entwicklung",
+      "toNode": "topic-selbstwirksamkeit"
+    },
+    {
+      "id": "edge-beziehung-entwicklung-anpassung-selbstbestimmung",
+      "fromNode": "axis-beziehung-entwicklung",
+      "toNode": "topic-anpassung-selbstbestimmung"
+    },
+    {
+      "id": "edge-beziehung-entwicklung-aufsichtspflicht",
+      "fromNode": "axis-beziehung-entwicklung",
+      "toNode": "topic-aufsichtspflicht"
+    },
+    {
+      "id": "edge-center-sprache-kommunikation",
+      "fromNode": "center",
+      "toNode": "axis-sprache-kommunikation"
+    },
+    {
+      "id": "edge-sprache-kommunikation-sprache-kommunikation",
+      "fromNode": "axis-sprache-kommunikation",
+      "toNode": "topic-sprache-kommunikation"
+    },
+    {
+      "id": "edge-sprache-kommunikation-sprachbildung",
+      "fromNode": "axis-sprache-kommunikation",
+      "toNode": "topic-sprachbildung"
+    },
+    {
+      "id": "edge-sprache-kommunikation-gespraechsanlaesse",
+      "fromNode": "axis-sprache-kommunikation",
+      "toNode": "topic-gespraechsanlaesse"
+    },
+    {
+      "id": "edge-sprache-kommunikation-konflikte",
+      "fromNode": "axis-sprache-kommunikation",
+      "toNode": "topic-konflikte"
+    },
+    {
+      "id": "edge-sprache-kommunikation-dialogische-haltung",
+      "fromNode": "axis-sprache-kommunikation",
+      "toNode": "topic-dialogische-haltung"
+    },
+    {
+      "id": "edge-center-beobachtung-fallverstehen",
+      "fromNode": "center",
+      "toNode": "axis-beobachtung-fallverstehen"
+    },
+    {
+      "id": "edge-beobachtung-fallverstehen-ressourcenorientierung",
+      "fromNode": "axis-beobachtung-fallverstehen",
+      "toNode": "topic-ressourcenorientierung"
+    },
+    {
+      "id": "edge-beobachtung-fallverstehen-beobachtung",
+      "fromNode": "axis-beobachtung-fallverstehen",
+      "toNode": "topic-beobachtung"
+    },
+    {
+      "id": "edge-beobachtung-fallverstehen-dokumentation",
+      "fromNode": "axis-beobachtung-fallverstehen",
+      "toNode": "topic-dokumentation"
+    },
+    {
+      "id": "edge-beobachtung-fallverstehen-fallverstehen",
+      "fromNode": "axis-beobachtung-fallverstehen",
+      "toNode": "topic-fallverstehen"
+    },
+    {
+      "id": "edge-beobachtung-fallverstehen-foerderplanung",
+      "fromNode": "axis-beobachtung-fallverstehen",
+      "toNode": "topic-foerderplanung"
+    },
+    {
+      "id": "edge-center-gruppe-institution-politik",
+      "fromNode": "center",
+      "toNode": "axis-gruppe-institution-politik"
+    },
+    {
+      "id": "edge-gruppe-institution-politik-wohngruppe",
+      "fromNode": "axis-gruppe-institution-politik",
+      "toNode": "topic-wohngruppe"
+    },
+    {
+      "id": "edge-gruppe-institution-politik-regeln-struktur",
+      "fromNode": "axis-gruppe-institution-politik",
+      "toNode": "topic-regeln-struktur"
+    },
+    {
+      "id": "edge-gruppe-institution-politik-partizipation",
+      "fromNode": "axis-gruppe-institution-politik",
+      "toNode": "topic-partizipation"
+    },
+    {
+      "id": "edge-gruppe-institution-politik-politik",
+      "fromNode": "axis-gruppe-institution-politik",
+      "toNode": "topic-politik"
+    },
+    {
+      "id": "edge-gruppe-institution-politik-macht-verantwortung",
+      "fromNode": "axis-gruppe-institution-politik",
+      "toNode": "topic-macht-verantwortung"
+    },
+    {
+      "id": "edge-center-bildungsbereiche",
+      "fromNode": "center",
+      "toNode": "axis-bildungsbereiche"
+    },
+    {
+      "id": "edge-bildungsbereiche-mathematik",
+      "fromNode": "axis-bildungsbereiche",
+      "toNode": "topic-mathematik"
+    },
+    {
+      "id": "edge-bildungsbereiche-naturwissenschaft",
+      "fromNode": "axis-bildungsbereiche",
+      "toNode": "topic-naturwissenschaft"
+    },
+    {
+      "id": "edge-bildungsbereiche-kunst-aesthetik",
+      "fromNode": "axis-bildungsbereiche",
+      "toNode": "topic-kunst-aesthetik"
+    },
+    {
+      "id": "edge-bildungsbereiche-musik-rhythmik",
+      "fromNode": "axis-bildungsbereiche",
+      "toNode": "topic-musik-rhythmik"
+    },
+    {
+      "id": "edge-bildungsbereiche-theater",
+      "fromNode": "axis-bildungsbereiche",
+      "toNode": "topic-theater"
+    },
+    {
+      "id": "edge-center-eltern-kooperation",
+      "fromNode": "center",
+      "toNode": "axis-eltern-kooperation"
+    },
+    {
+      "id": "edge-eltern-kooperation-elternkooperation",
+      "fromNode": "axis-eltern-kooperation",
+      "toNode": "topic-elternkooperation"
+    },
+    {
+      "id": "edge-eltern-kooperation-erziehungspartnerschaft",
+      "fromNode": "axis-eltern-kooperation",
+      "toNode": "topic-erziehungspartnerschaft"
+    },
+    {
+      "id": "edge-eltern-kooperation-elterngespraeche",
+      "fromNode": "axis-eltern-kooperation",
+      "toNode": "topic-elterngespraeche"
+    },
+    {
+      "id": "edge-eltern-kooperation-uebergaenge",
+      "fromNode": "axis-eltern-kooperation",
+      "toNode": "topic-uebergaenge"
+    },
+    {
+      "id": "edge-eltern-kooperation-familienperspektive",
+      "fromNode": "axis-eltern-kooperation",
+      "toNode": "topic-familienperspektive"
+    },
+    {
+      "id": "edge-center-rahmen-recht-ethik",
+      "fromNode": "center",
+      "toNode": "axis-rahmen-recht-ethik"
+    },
+    {
+      "id": "edge-rahmen-recht-ethik-bildungsleitlinien",
+      "fromNode": "axis-rahmen-recht-ethik",
+      "toNode": "topic-bildungsleitlinien"
+    },
+    {
+      "id": "edge-rahmen-recht-ethik-kindeswohl",
+      "fromNode": "axis-rahmen-recht-ethik",
+      "toNode": "topic-kindeswohl"
+    },
+    {
+      "id": "edge-rahmen-recht-ethik-rechte",
+      "fromNode": "axis-rahmen-recht-ethik",
+      "toNode": "topic-rechte"
+    },
+    {
+      "id": "edge-rahmen-recht-ethik-ethik",
+      "fromNode": "axis-rahmen-recht-ethik",
+      "toNode": "topic-ethik"
+    },
+    {
+      "id": "edge-rahmen-recht-ethik-institutioneller-auftrag",
+      "fromNode": "axis-rahmen-recht-ethik",
+      "toNode": "topic-institutioneller-auftrag"
+    },
+    {
+      "id": "cross-1",
+      "fromNode": "axis-professionalitaet",
+      "toNode": "axis-beziehung-entwicklung",
+      "label": "Professionelle Haltung zeigt sich in Beziehungsgestaltung."
+    },
+    {
+      "id": "cross-2",
+      "fromNode": "axis-beziehung-entwicklung",
+      "toNode": "axis-sprache-kommunikation",
+      "label": "Beziehung ermöglicht Sprache, Dialog und Konfliktbearbeitung"
+    },
+    {
+      "id": "cross-3",
+      "fromNode": "axis-sprache-kommunikation",
+      "toNode": "axis-beobachtung-fallverstehen",
+      "label": "Beobachtung braucht sprachliche und dokumentierende Genauigk"
+    },
+    {
+      "id": "cross-4",
+      "fromNode": "axis-beobachtung-fallverstehen",
+      "toNode": "axis-gruppe-institution-politik",
+      "label": "Fallverstehen führt zu pädagogischem Handeln in Gruppe und I"
+    },
+    {
+      "id": "cross-5",
+      "fromNode": "axis-gruppe-institution-politik",
+      "toNode": "axis-rahmen-recht-ethik",
+      "label": "Institutionelles Handeln braucht Rechte, Schutz und Ethik."
+    },
+    {
+      "id": "cross-6",
+      "fromNode": "axis-bildungsbereiche",
+      "toNode": "axis-beziehung-entwicklung",
+      "label": "Bildungsbereiche werden über Beziehung und Begleitung wirksa"
+    },
+    {
+      "id": "cross-7",
+      "fromNode": "axis-eltern-kooperation",
+      "toNode": "axis-beziehung-entwicklung",
+      "label": "Elternkooperation stabilisiert Übergänge und Entwicklung."
+    },
+    {
+      "id": "cross-8",
+      "fromNode": "axis-rahmen-recht-ethik",
+      "toNode": "axis-bildungsbereiche",
+      "label": "Bildungsleitlinien rahmen Bildungsbereiche, dominieren aber "
+    }
+  ]
+}
