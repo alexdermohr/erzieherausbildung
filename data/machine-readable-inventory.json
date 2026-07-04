@@ -4,12 +4,12 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 207762,
-    "text_chars": 1543946,
+    "word_count": 217515,
+    "text_chars": 1615217,
     "statuses": {
       "ok": 18,
       "timeout-or-error": 4,
-      "low-text-needs-ocr-or-manual-review": 2,
+      "ok-ocr": 2,
       "not-yet-extracted-needs-ocr-or-manual-review": 5
     }
   },
@@ -25,11 +25,11 @@
     },
     "lernfeld 1": {
       "file_count": 4,
-      "word_count": 5136,
-      "text_chars": 39259,
+      "word_count": 14889,
+      "text_chars": 110530,
       "statuses": {
         "ok": 2,
-        "low-text-needs-ocr-or-manual-review": 2
+        "ok-ocr": 2
       }
     },
     "lernfeld 2": {
@@ -114,10 +114,12 @@
       "source_cluster": "lernfeld 1",
       "source_title": "S1_ Professionelle Haltung.pdf",
       "source_rel_path": "lernfeld 1/S1_ Professionelle Haltung.pdf",
-      "extraction_status": "low-text-needs-ocr-or-manual-review",
-      "word_count": 4,
-      "text_chars": 49,
-      "local_text_path": "machine-readable.local/texts/doc-005.txt"
+      "extraction_status": "ok-ocr",
+      "word_count": 9191,
+      "text_chars": 66635,
+      "local_text_path": "machine-readable.local/texts/doc-005.txt",
+      "extraction_method": "pdftoppm + tesseract deu+eng",
+      "ocr_note": "OCR text generated locally; raw OCR text not committed."
     },
     {
       "ordinal": 6,
@@ -134,10 +136,12 @@
       "source_cluster": "lernfeld 1",
       "source_title": "S3_ Arbeitsfeldern.pdf",
       "source_rel_path": "lernfeld 1/S3_ Arbeitsfeldern.pdf",
-      "extraction_status": "low-text-needs-ocr-or-manual-review",
-      "word_count": 0,
-      "text_chars": 5,
-      "local_text_path": "machine-readable.local/texts/doc-007.txt"
+      "extraction_status": "ok-ocr",
+      "word_count": 566,
+      "text_chars": 4690,
+      "local_text_path": "machine-readable.local/texts/doc-007.txt",
+      "extraction_method": "pdftoppm + tesseract deu+eng",
+      "ocr_note": "OCR text generated locally; raw OCR text not committed."
     },
     {
       "ordinal": 8,

@@ -1,12 +1,16 @@
-# Quellensichtung maschinenlesbar v2
+# Quellensichtung maschinenlesbar v3
 
 Dokumente gesichtet: 29
-Wörter extrahiert: 207762
-Status: {'ok': 18, 'timeout-or-error': 4, 'low-text-needs-ocr-or-manual-review': 2, 'not-yet-extracted-needs-ocr-or-manual-review': 5}
+Wörter extrahiert: 217515
+Status: {'ok': 18, 'timeout-or-error': 4, 'ok-ocr': 2, 'not-yet-extracted-needs-ocr-or-manual-review': 5}
+
+## OCR-Nachtrag
+- doc 5 und doc 7 wurden lokal per pdftoppm + tesseract (deu+eng) nacherfasst.
+- OCR-Volltexte bleiben lokal und werden nicht committed.
 
 ## Cluster
 - kein lernfeld: {'file_count': 3, 'word_count': 97231, 'text_chars': 732023, 'statuses': {'ok': 2, 'timeout-or-error': 1}}
-- lernfeld 1: {'file_count': 4, 'word_count': 5136, 'text_chars': 39259, 'statuses': {'ok': 2, 'low-text-needs-ocr-or-manual-review': 2}}
+- lernfeld 1: {'file_count': 4, 'word_count': 14889, 'text_chars': 110530, 'statuses': {'ok': 2, 'ok-ocr': 2}}
 - lernfeld 2: {'file_count': 6, 'word_count': 44621, 'text_chars': 329968, 'statuses': {'ok': 6}}
 - lernfeld 3: {'file_count': 4, 'word_count': 23876, 'text_chars': 172164, 'statuses': {'timeout-or-error': 2, 'ok': 2}}
 - lernfeld 4: {'file_count': 11, 'word_count': 36898, 'text_chars': 270532, 'statuses': {'timeout-or-error': 1, 'ok': 6, 'not-yet-extracted-needs-ocr-or-manual-review': 4}}
@@ -17,9 +21,9 @@ Status: {'ok': 18, 'timeout-or-error': 4, 'low-text-needs-ocr-or-manual-review':
 - 2. kein lernfeld/S4_ Sprache und Kommunikation.pdf: 7352 Wörter, timeout-or-error
 - 3. kein lernfeld/bildungsleitlinien-data.pdf: 86273 Wörter, ok
 - 4. lernfeld 1/S1_ Berufsrolle.pdf: 1751 Wörter, ok
-- 5. lernfeld 1/S1_ Professionelle Haltung.pdf: 4 Wörter, low-text-needs-ocr-or-manual-review
+- 5. lernfeld 1/S1_ Professionelle Haltung.pdf: 9191 Wörter, ok-ocr
 - 6. lernfeld 1/S3_ Arbeitsbedingungen.pdf: 3381 Wörter, ok
-- 7. lernfeld 1/S3_ Arbeitsfeldern.pdf: 0 Wörter, low-text-needs-ocr-or-manual-review
+- 7. lernfeld 1/S3_ Arbeitsfeldern.pdf: 566 Wörter, ok-ocr
 - 8. lernfeld 2/Lernfeld 2_ Eingewöhnung.pdf: 9440 Wörter, ok
 - 9. lernfeld 2/Lernfeld 2_ Gesprächanlässe.pdf: 2785 Wörter, ok
 - 10. lernfeld 2/Lernfeld 2_ Selbstwirksamkeit & Aufsichtspflicht.pdf: 3160 Wörter, ok
