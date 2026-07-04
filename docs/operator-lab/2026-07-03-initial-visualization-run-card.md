@@ -28,4 +28,4 @@ Repo wird trotzdem unter dem gewünschten Namen angelegt. Die Inhalte werden als
 
 ## Evidenzgrenze
 
-Keine Volltextanalyse. Keine fachliche Prüfung einzelner PDF-/DOCX-Inhalte. Erste Visualisierung beruht auf Ordnerstruktur, Dateitypen und sichtbaren Modultiteln.
+Keine Volltextanalyse. Keine fachliche Sichtung einzelner PDF-/DOCX-Inhalte. Erste Visualisierung beruht auf Ordnerstruktur, Dateitypen und sichtbaren Modultiteln.

@@ -33,10 +33,10 @@ data/excerpts/lernfeld-1.jsonl
 docs/exzerpte/lernfeld-1.md
 ```
 
-Jeder Eintrag braucht Quelle, Seiten-/Abschnittshinweis, Kurzinhalt, paedagogischen Begriff, Praxisbezug, Pruefungsrelevanz und Unsicherheitsgrad. Regel: Kein starker Claim ohne Exzerpt.
+Jeder Eintrag braucht Quelle, Seiten-/Abschnittshinweis, Kurzinhalt, pädagogischen Begriff, Wissensbezug, Querverbindungen und Unsicherheitsgrad. Regel: Kein starker Claim ohne Exzerpt.
 
 ## Phase 3 – Web-App v2
-Filter nach Lernfeld, Sinnachse, Praxisbezug und Pruefungsnaehe; Detailseiten pro Lernfeld; Querverbindungen; Lernmodus; Markdown-Export.
+Filter nach Lernfeld, Sinnachse, Wissensbereich und Querverbindung; Detailseiten pro Lernfeld; Querverbindungen; Lernmodus; Markdown-Export.
 
 ## Phase 4 – Canvas-Generator
 `scripts/generate_canvas.py` erzeugt Systemkarte, Lernfeldkarten und Querschnittskarten aus `data/module-map.json`, `data/excerpts/*.jsonl` und `visuals/visual-spec.v1.json`.
@@ -58,7 +58,7 @@ Aktivieren, wenn gemeinsame Sortierung, Praesentation oder grosse Zoomlandkarte 
 `main` bleibt stabil. Jede Strukturaenderung auf Feature-Branch. PR statt Direktpush. Pflichtcheck: `python3 scripts/validate_repository.py`.
 
 ## Risiko- und Nutzenabschaetzung
-Nutzen: Orientierung, Lernen, Pruefung, Praxis, Nachtaltigkeit.
+Nutzen: Orientierung, Lernen, Überblick, Praxis, Nachhaltigkeit.
 Risiken: Datenschutz, Falschzuordnung, Scheingenauigkeit, Tooldrift, Aesthetikfalle.
 Gegenmassnahmen: `.gitignore`, Validator, gemeinsame Visual Spec, Exzerptmodell, PR-Review.
 
@@ -76,7 +76,7 @@ Nebenwirkung: Erste Version bleibt abstrakt; Detailkarten kommen erst nach Exzer
 ## Belegt / plausibel / spekulativ
 Belegt: korrekter Ordner `erzieherausbildung`, Cluster `kein lernfeld` und `lernfeld 1`– lernfeld 5`, Bestand aus PDFs.
 Plausibel: Lernfeld 4 braucht Fokuskarte; Sprache/Kommunikation ist Querschnitt; Web/Canvas/Miro ist robuster als eine Einzelflaeche.
-Spekulativ: Pruefungsrelevanz einzelner Themen, Gewichtung einzelner PDFs, Miro-Sofortbedarf.
+Spekulativ: Gewichtung einzelner Themen, Tiefe einzelner PDFs, Miro-Sofortbedarf.
 
 ## Essenz
 Hebel: Lernfeldstruktur plus Sinnachsen statt Dateisammlung.

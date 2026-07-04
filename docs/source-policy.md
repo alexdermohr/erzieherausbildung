@@ -17,7 +17,7 @@ Ausgeschlossen: `~/iCloud/Drive/inbox/1. Semester` und `~/iCloud/Drive/inbox/2. 
 
 ## Nicht versionieren
 
-Original-PDFs, Volltext-OCR, Screenshots aus Unterlagen, private Randnotizen ohne Pruefung, fremde Studienordner.
+Original-PDFs, Volltext-OCR, Screenshots aus Unterlagen, private Randnotizen ohne Quellencheck, fremde Studienordner.
 
 ## Epistemische Leere
 
