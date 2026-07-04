@@ -1,5 +1,5 @@
 {
-  "schema": "erzieherausbildung.machine_readable_inventory.v1",
+  "schema": "erzieherausbildung.machine_readable_inventory.v2",
   "raw_text_committed": false,
   "local_output_root": "machine-readable.local",
   "document_count": 29,
@@ -14,237 +14,66 @@
     }
   },
   "clusters": {
-    "Lernfeld 2_ Eingewöhnung.pdf": {
-      "file_count": 1,
-      "word_count": 9440,
-      "text_chars": 70315,
+    "kein lernfeld": {
+      "file_count": 3,
+      "word_count": 97231,
+      "text_chars": 732023,
       "statuses": {
-        "ok": 1
-      }
-    },
-    "Lernfeld 2_ Gesprächanlässe.pdf": {
-      "file_count": 1,
-      "word_count": 2785,
-      "text_chars": 19901,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "Lernfeld 2_ Selbstwirksamkeit & Aufsichtspflicht.pdf": {
-      "file_count": 1,
-      "word_count": 3160,
-      "text_chars": 23843,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "Lernfeld 2_ Sprache & Kommunikation.pdf": {
-      "file_count": 1,
-      "word_count": 12651,
-      "text_chars": 95571,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
-      "statuses": {
+        "ok": 2,
         "timeout-or-error": 1
       }
     },
-    "Lernfeld 4 _ Naturwissenschaft, Natur, Umwelt, Technik.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
+    "lernfeld 1": {
+      "file_count": 4,
+      "word_count": 5136,
+      "text_chars": 39259,
       "statuses": {
-        "timeout-or-error": 1
+        "ok": 2,
+        "low-text-needs-ocr-or-manual-review": 2
       }
     },
-    "Lernfeld 4_ Frühkindliche Mathematische Bildung.pdf": {
-      "file_count": 1,
-      "word_count": 11386,
-      "text_chars": 82098,
+    "lernfeld 2": {
+      "file_count": 6,
+      "word_count": 44621,
+      "text_chars": 329968,
       "statuses": {
-        "ok": 1
+        "ok": 6
       }
     },
-    "Lernfeld 4_ Kunst & Ästhetik .pdf": {
-      "file_count": 1,
-      "word_count": 5930,
-      "text_chars": 43362,
+    "lernfeld 3": {
+      "file_count": 4,
+      "word_count": 23876,
+      "text_chars": 172164,
       "statuses": {
-        "ok": 1
-      }
-    },
-    "Lernfeld 4_ Lernarragments.pdf": {
-      "file_count": 1,
-      "word_count": 6267,
-      "text_chars": 48215,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "Lernfeld 4_ Sozialpädagogische Grundlagen .pdf": {
-      "file_count": 1,
-      "word_count": 4428,
-      "text_chars": 32616,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "Lernfeld 5_ Elternkooperation.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
-      "statuses": {
-        "not-yet-extracted-needs-ocr-or-manual-review": 1
-      }
-    },
-    "Musik & Rhythmisch.pdf": {
-      "file_count": 1,
-      "word_count": 6299,
-      "text_chars": 45737,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "S1_ Berufsrolle.pdf": {
-      "file_count": 1,
-      "word_count": 1751,
-      "text_chars": 12156,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "S1_ Professionelle Haltung.pdf": {
-      "file_count": 1,
-      "word_count": 4,
-      "text_chars": 49,
-      "statuses": {
-        "low-text-needs-ocr-or-manual-review": 1
-      }
-    },
-    "S3 u S4_ Politik.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
-      "statuses": {
-        "timeout-or-error": 1
-      }
-    },
-    "S3_ Arbeitsbedingungen.pdf": {
-      "file_count": 1,
-      "word_count": 3381,
-      "text_chars": 27049,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "S3_ Arbeitsfeldern.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 5,
-      "statuses": {
-        "low-text-needs-ocr-or-manual-review": 1
-      }
-    },
-    "S3_ Frühkindliche Mathematik.pdf": {
-      "file_count": 1,
-      "word_count": 2588,
-      "text_chars": 18504,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "S3_ Konflikte.pdf": {
-      "file_count": 1,
-      "word_count": 5155,
-      "text_chars": 38619,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "S3_ Theater.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
-      "statuses": {
-        "not-yet-extracted-needs-ocr-or-manual-review": 1
-      }
-    },
-    "S4_ Anpassung und Selbstbestimmung Wohngruppe.pdf": {
-      "file_count": 1,
-      "word_count": 12446,
-      "text_chars": 90445,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "S4_ Gesundheit und Ernährung.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
-      "statuses": {
-        "not-yet-extracted-needs-ocr-or-manual-review": 1
-      }
-    },
-    "S4_ Grundlagen.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
-      "statuses": {
-        "not-yet-extracted-needs-ocr-or-manual-review": 1
-      }
-    },
-    "S4_ Informatik.pdf": {
-      "file_count": 1,
-      "word_count": 3606,
-      "text_chars": 27568,
-      "statuses": {
-        "ok": 1
-      }
-    },
-    "S4_ Religion, Gesellschaft und Ethik.pdf": {
-      "file_count": 1,
-      "word_count": 0,
-      "text_chars": 0,
-      "statuses": {
-        "not-yet-extracted-needs-ocr-or-manual-review": 1
-      }
-    },
-    "S4_ Sprache und Kommunikation.pdf": {
-      "file_count": 1,
-      "word_count": 7352,
-      "text_chars": 53248,
-      "statuses": {
-        "timeout-or-error": 1
-      }
-    },
-    "S4_ Wohngruppe.pdf": {
-      "file_count": 2,
-      "word_count": 22860,
-      "text_chars": 163438,
-      "statuses": {
+        "timeout-or-error": 2,
         "ok": 2
       }
     },
-    "bildungsleitlinien-data.pdf": {
-      "file_count": 1,
-      "word_count": 86273,
-      "text_chars": 651207,
+    "lernfeld 4": {
+      "file_count": 11,
+      "word_count": 36898,
+      "text_chars": 270532,
       "statuses": {
-        "ok": 1
+        "timeout-or-error": 1,
+        "ok": 6,
+        "not-yet-extracted-needs-ocr-or-manual-review": 4
+      }
+    },
+    "lernfeld 5": {
+      "file_count": 1,
+      "word_count": 0,
+      "text_chars": 0,
+      "statuses": {
+        "not-yet-extracted-needs-ocr-or-manual-review": 1
       }
     }
   },
   "documents": [
     {
       "ordinal": 1,
-      "source_cluster": "S4_ Informatik.pdf",
+      "source_cluster": "kein lernfeld",
       "source_title": "S4_ Informatik.pdf",
-      "source_rel_path": "S4_ Informatik.pdf",
+      "source_rel_path": "kein lernfeld/S4_ Informatik.pdf",
       "extraction_status": "ok",
       "word_count": 3606,
       "text_chars": 27568,
@@ -252,9 +81,9 @@
     },
     {
       "ordinal": 2,
-      "source_cluster": "S4_ Sprache und Kommunikation.pdf",
+      "source_cluster": "kein lernfeld",
       "source_title": "S4_ Sprache und Kommunikation.pdf",
-      "source_rel_path": "S4_ Sprache und Kommunikation.pdf",
+      "source_rel_path": "kein lernfeld/S4_ Sprache und Kommunikation.pdf",
       "extraction_status": "timeout-or-error",
       "word_count": 7352,
       "text_chars": 53248,
@@ -262,9 +91,9 @@
     },
     {
       "ordinal": 3,
-      "source_cluster": "bildungsleitlinien-data.pdf",
+      "source_cluster": "kein lernfeld",
       "source_title": "bildungsleitlinien-data.pdf",
-      "source_rel_path": "bildungsleitlinien-data.pdf",
+      "source_rel_path": "kein lernfeld/bildungsleitlinien-data.pdf",
       "extraction_status": "ok",
       "word_count": 86273,
       "text_chars": 651207,
@@ -272,9 +101,9 @@
     },
     {
       "ordinal": 4,
-      "source_cluster": "S1_ Berufsrolle.pdf",
+      "source_cluster": "lernfeld 1",
       "source_title": "S1_ Berufsrolle.pdf",
-      "source_rel_path": "S1_ Berufsrolle.pdf",
+      "source_rel_path": "lernfeld 1/S1_ Berufsrolle.pdf",
       "extraction_status": "ok",
       "word_count": 1751,
       "text_chars": 12156,
@@ -282,9 +111,9 @@
     },
     {
       "ordinal": 5,
-      "source_cluster": "S1_ Professionelle Haltung.pdf",
+      "source_cluster": "lernfeld 1",
       "source_title": "S1_ Professionelle Haltung.pdf",
-      "source_rel_path": "S1_ Professionelle Haltung.pdf",
+      "source_rel_path": "lernfeld 1/S1_ Professionelle Haltung.pdf",
       "extraction_status": "low-text-needs-ocr-or-manual-review",
       "word_count": 4,
       "text_chars": 49,
@@ -292,9 +121,9 @@
     },
     {
       "ordinal": 6,
-      "source_cluster": "S3_ Arbeitsbedingungen.pdf",
+      "source_cluster": "lernfeld 1",
       "source_title": "S3_ Arbeitsbedingungen.pdf",
-      "source_rel_path": "S3_ Arbeitsbedingungen.pdf",
+      "source_rel_path": "lernfeld 1/S3_ Arbeitsbedingungen.pdf",
       "extraction_status": "ok",
       "word_count": 3381,
       "text_chars": 27049,
@@ -302,9 +131,9 @@
     },
     {
       "ordinal": 7,
-      "source_cluster": "S3_ Arbeitsfeldern.pdf",
+      "source_cluster": "lernfeld 1",
       "source_title": "S3_ Arbeitsfeldern.pdf",
-      "source_rel_path": "S3_ Arbeitsfeldern.pdf",
+      "source_rel_path": "lernfeld 1/S3_ Arbeitsfeldern.pdf",
       "extraction_status": "low-text-needs-ocr-or-manual-review",
       "word_count": 0,
       "text_chars": 5,
@@ -312,9 +141,9 @@
     },
     {
       "ordinal": 8,
-      "source_cluster": "Lernfeld 2_ Eingewöhnung.pdf",
+      "source_cluster": "lernfeld 2",
       "source_title": "Lernfeld 2_ Eingewöhnung.pdf",
-      "source_rel_path": "Lernfeld 2_ Eingewöhnung.pdf",
+      "source_rel_path": "lernfeld 2/Lernfeld 2_ Eingewöhnung.pdf",
       "extraction_status": "ok",
       "word_count": 9440,
       "text_chars": 70315,
@@ -322,9 +151,9 @@
     },
     {
       "ordinal": 9,
-      "source_cluster": "Lernfeld 2_ Gesprächanlässe.pdf",
+      "source_cluster": "lernfeld 2",
       "source_title": "Lernfeld 2_ Gesprächanlässe.pdf",
-      "source_rel_path": "Lernfeld 2_ Gesprächanlässe.pdf",
+      "source_rel_path": "lernfeld 2/Lernfeld 2_ Gesprächanlässe.pdf",
       "extraction_status": "ok",
       "word_count": 2785,
       "text_chars": 19901,
@@ -332,9 +161,9 @@
     },
     {
       "ordinal": 10,
-      "source_cluster": "Lernfeld 2_ Selbstwirksamkeit & Aufsichtspflicht.pdf",
+      "source_cluster": "lernfeld 2",
       "source_title": "Lernfeld 2_ Selbstwirksamkeit & Aufsichtspflicht.pdf",
-      "source_rel_path": "Lernfeld 2_ Selbstwirksamkeit & Aufsichtspflicht.pdf",
+      "source_rel_path": "lernfeld 2/Lernfeld 2_ Selbstwirksamkeit & Aufsichtspflicht.pdf",
       "extraction_status": "ok",
       "word_count": 3160,
       "text_chars": 23843,
@@ -342,9 +171,9 @@
     },
     {
       "ordinal": 11,
-      "source_cluster": "Lernfeld 2_ Sprache & Kommunikation.pdf",
+      "source_cluster": "lernfeld 2",
       "source_title": "Lernfeld 2_ Sprache & Kommunikation.pdf",
-      "source_rel_path": "Lernfeld 2_ Sprache & Kommunikation.pdf",
+      "source_rel_path": "lernfeld 2/Lernfeld 2_ Sprache & Kommunikation.pdf",
       "extraction_status": "ok",
       "word_count": 12651,
       "text_chars": 95571,
@@ -352,9 +181,9 @@
     },
     {
       "ordinal": 12,
-      "source_cluster": "S3_ Konflikte.pdf",
+      "source_cluster": "lernfeld 2",
       "source_title": "S3_ Konflikte.pdf",
-      "source_rel_path": "S3_ Konflikte.pdf",
+      "source_rel_path": "lernfeld 2/S3_ Konflikte.pdf",
       "extraction_status": "ok",
       "word_count": 5155,
       "text_chars": 38619,
@@ -362,9 +191,9 @@
     },
     {
       "ordinal": 13,
-      "source_cluster": "S4_ Wohngruppe.pdf",
+      "source_cluster": "lernfeld 2",
       "source_title": "S4_ Wohngruppe.pdf",
-      "source_rel_path": "S4_ Wohngruppe.pdf",
+      "source_rel_path": "lernfeld 2/S4_ Wohngruppe.pdf",
       "extraction_status": "ok",
       "word_count": 11430,
       "text_chars": 81719,
@@ -372,9 +201,9 @@
     },
     {
       "ordinal": 14,
-      "source_cluster": "Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
+      "source_cluster": "lernfeld 3",
       "source_title": "Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
-      "source_rel_path": "Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
+      "source_rel_path": "lernfeld 3/Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
       "extraction_status": "timeout-or-error",
       "word_count": 0,
       "text_chars": 0,
@@ -382,9 +211,9 @@
     },
     {
       "ordinal": 15,
-      "source_cluster": "S3 u S4_ Politik.pdf",
+      "source_cluster": "lernfeld 3",
       "source_title": "S3 u S4_ Politik.pdf",
-      "source_rel_path": "S3 u S4_ Politik.pdf",
+      "source_rel_path": "lernfeld 3/S3 u S4_ Politik.pdf",
       "extraction_status": "timeout-or-error",
       "word_count": 0,
       "text_chars": 0,
@@ -392,9 +221,9 @@
     },
     {
       "ordinal": 16,
-      "source_cluster": "S4_ Anpassung und Selbstbestimmung Wohngruppe.pdf",
+      "source_cluster": "lernfeld 3",
       "source_title": "S4_ Anpassung und Selbstbestimmung Wohngruppe.pdf",
-      "source_rel_path": "S4_ Anpassung und Selbstbestimmung Wohngruppe.pdf",
+      "source_rel_path": "lernfeld 3/S4_ Anpassung und Selbstbestimmung Wohngruppe.pdf",
       "extraction_status": "ok",
       "word_count": 12446,
       "text_chars": 90445,
@@ -402,9 +231,9 @@
     },
     {
       "ordinal": 17,
-      "source_cluster": "S4_ Wohngruppe.pdf",
+      "source_cluster": "lernfeld 3",
       "source_title": "S4_ Wohngruppe.pdf",
-      "source_rel_path": "S4_ Wohngruppe.pdf",
+      "source_rel_path": "lernfeld 3/S4_ Wohngruppe.pdf",
       "extraction_status": "ok",
       "word_count": 11430,
       "text_chars": 81719,
@@ -412,9 +241,9 @@
     },
     {
       "ordinal": 18,
-      "source_cluster": "Lernfeld 4 _ Naturwissenschaft, Natur, Umwelt, Technik.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "Lernfeld 4 _ Naturwissenschaft, Natur, Umwelt, Technik.pdf",
-      "source_rel_path": "Lernfeld 4 _ Naturwissenschaft, Natur, Umwelt, Technik.pdf",
+      "source_rel_path": "lernfeld 4/Lernfeld 4 _ Naturwissenschaft, Natur, Umwelt, Technik.pdf",
       "extraction_status": "timeout-or-error",
       "word_count": 0,
       "text_chars": 0,
@@ -422,9 +251,9 @@
     },
     {
       "ordinal": 19,
-      "source_cluster": "Lernfeld 4_ Frühkindliche Mathematische Bildung.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "Lernfeld 4_ Frühkindliche Mathematische Bildung.pdf",
-      "source_rel_path": "Lernfeld 4_ Frühkindliche Mathematische Bildung.pdf",
+      "source_rel_path": "lernfeld 4/Lernfeld 4_ Frühkindliche Mathematische Bildung.pdf",
       "extraction_status": "ok",
       "word_count": 11386,
       "text_chars": 82098,
@@ -432,9 +261,9 @@
     },
     {
       "ordinal": 20,
-      "source_cluster": "Lernfeld 4_ Kunst & Ästhetik .pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "Lernfeld 4_ Kunst & Ästhetik .pdf",
-      "source_rel_path": "Lernfeld 4_ Kunst & Ästhetik .pdf",
+      "source_rel_path": "lernfeld 4/Lernfeld 4_ Kunst & Ästhetik .pdf",
       "extraction_status": "ok",
       "word_count": 5930,
       "text_chars": 43362,
@@ -442,9 +271,9 @@
     },
     {
       "ordinal": 21,
-      "source_cluster": "Lernfeld 4_ Lernarragments.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "Lernfeld 4_ Lernarragments.pdf",
-      "source_rel_path": "Lernfeld 4_ Lernarragments.pdf",
+      "source_rel_path": "lernfeld 4/Lernfeld 4_ Lernarragments.pdf",
       "extraction_status": "ok",
       "word_count": 6267,
       "text_chars": 48215,
@@ -452,9 +281,9 @@
     },
     {
       "ordinal": 22,
-      "source_cluster": "Lernfeld 4_ Sozialpädagogische Grundlagen .pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "Lernfeld 4_ Sozialpädagogische Grundlagen .pdf",
-      "source_rel_path": "Lernfeld 4_ Sozialpädagogische Grundlagen .pdf",
+      "source_rel_path": "lernfeld 4/Lernfeld 4_ Sozialpädagogische Grundlagen .pdf",
       "extraction_status": "ok",
       "word_count": 4428,
       "text_chars": 32616,
@@ -462,9 +291,9 @@
     },
     {
       "ordinal": 23,
-      "source_cluster": "Musik & Rhythmisch.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "Musik & Rhythmisch.pdf",
-      "source_rel_path": "Musik & Rhythmisch.pdf",
+      "source_rel_path": "lernfeld 4/Musik & Rhythmisch.pdf",
       "extraction_status": "ok",
       "word_count": 6299,
       "text_chars": 45737,
@@ -472,9 +301,9 @@
     },
     {
       "ordinal": 24,
-      "source_cluster": "S3_ Frühkindliche Mathematik.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "S3_ Frühkindliche Mathematik.pdf",
-      "source_rel_path": "S3_ Frühkindliche Mathematik.pdf",
+      "source_rel_path": "lernfeld 4/S3_ Frühkindliche Mathematik.pdf",
       "extraction_status": "ok",
       "word_count": 2588,
       "text_chars": 18504,
@@ -482,9 +311,9 @@
     },
     {
       "ordinal": 25,
-      "source_cluster": "S3_ Theater.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "S3_ Theater.pdf",
-      "source_rel_path": "S3_ Theater.pdf",
+      "source_rel_path": "lernfeld 4/S3_ Theater.pdf",
       "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
       "word_count": 0,
       "text_chars": 0,
@@ -492,9 +321,9 @@
     },
     {
       "ordinal": 26,
-      "source_cluster": "S4_ Gesundheit und Ernährung.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "S4_ Gesundheit und Ernährung.pdf",
-      "source_rel_path": "S4_ Gesundheit und Ernährung.pdf",
+      "source_rel_path": "lernfeld 4/S4_ Gesundheit und Ernährung.pdf",
       "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
       "word_count": 0,
       "text_chars": 0,
@@ -502,9 +331,9 @@
     },
     {
       "ordinal": 27,
-      "source_cluster": "S4_ Grundlagen.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "S4_ Grundlagen.pdf",
-      "source_rel_path": "S4_ Grundlagen.pdf",
+      "source_rel_path": "lernfeld 4/S4_ Grundlagen.pdf",
       "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
       "word_count": 0,
       "text_chars": 0,
@@ -512,9 +341,9 @@
     },
     {
       "ordinal": 28,
-      "source_cluster": "S4_ Religion, Gesellschaft und Ethik.pdf",
+      "source_cluster": "lernfeld 4",
       "source_title": "S4_ Religion, Gesellschaft und Ethik.pdf",
-      "source_rel_path": "S4_ Religion, Gesellschaft und Ethik.pdf",
+      "source_rel_path": "lernfeld 4/S4_ Religion, Gesellschaft und Ethik.pdf",
       "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
       "word_count": 0,
       "text_chars": 0,
@@ -522,9 +351,9 @@
     },
     {
       "ordinal": 29,
-      "source_cluster": "Lernfeld 5_ Elternkooperation.pdf",
+      "source_cluster": "lernfeld 5",
       "source_title": "Lernfeld 5_ Elternkooperation.pdf",
-      "source_rel_path": "Lernfeld 5_ Elternkooperation.pdf",
+      "source_rel_path": "lernfeld 5/Lernfeld 5_ Elternkooperation.pdf",
       "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
       "word_count": 0,
       "text_chars": 0,
