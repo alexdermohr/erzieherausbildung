@@ -8,7 +8,7 @@ Die vorige Zuordnung zu `1. Semester` und `2. Semester` war falsch; diese Ordner
 
 ## Zweck
 
-Visualisierung der Erzieherausbildung als Lernfeld-, Kompetenz- und Prüfungskarte, ohne Original-PDFs zu versionieren.
+Visualisierung der Erzieherausbildung als Wissens-, Lernfeld- und Zusammenhangskarte, ohne Original-PDFs zu versionieren.
 
 ## Primärordnung
 

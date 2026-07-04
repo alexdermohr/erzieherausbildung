@@ -10,37 +10,37 @@
     {
       "id": "rolle",
       "label": "Rolle und Haltung",
-      "question": "Leitfrage wird im Exzerptmodell präzisiert."
+      "question": "Welche Wissensinhalte, Begriffe und Beziehungen gehören zu dieser Achse?"
     },
     {
       "id": "beziehung",
       "label": "Beziehung und Schutz",
-      "question": "Leitfrage wird im Exzerptmodell präzisiert."
+      "question": "Welche Wissensinhalte, Begriffe und Beziehungen gehören zu dieser Achse?"
     },
     {
       "id": "beobachtung",
       "label": "Beobachtung und Selbstbestimmung",
-      "question": "Leitfrage wird im Exzerptmodell präzisiert."
+      "question": "Welche Wissensinhalte, Begriffe und Beziehungen gehören zu dieser Achse?"
     },
     {
       "id": "bildung",
       "label": "Bildung und Lernarrangements",
-      "question": "Leitfrage wird im Exzerptmodell präzisiert."
+      "question": "Welche Wissensinhalte, Begriffe und Beziehungen gehören zu dieser Achse?"
     },
     {
       "id": "kooperation",
       "label": "Kooperation und Kommunikation",
-      "question": "Leitfrage wird im Exzerptmodell präzisiert."
+      "question": "Welche Wissensinhalte, Begriffe und Beziehungen gehören zu dieser Achse?"
     },
     {
       "id": "querschnitt",
       "label": "Querschnitt und Rahmen",
-      "question": "Leitfrage wird im Exzerptmodell präzisiert."
+      "question": "Welche Wissensinhalte, Begriffe und Beziehungen gehören zu dieser Achse?"
     },
     {
-      "id": "pruefung",
-      "label": "Praxis und Prüfung",
-      "question": "Leitfrage wird im Exzerptmodell präzisiert."
+      "id": "ueberblick",
+      "label": "Übersicht und Zusammenhänge",
+      "question": "Welche Wissensinhalte gehören zusammen, und welche Beziehungen machen sie verständlich?"
     }
   ],
   "modules": [
@@ -48,15 +48,15 @@
       "id": "kein-lernfeld",
       "sourceCluster": "kein lernfeld",
       "title": "kein lernfeld",
-      "role": "Quelle aus lokalem Lernfeldordner",
+      "role": "Quelle aus lokalem Lernfeldordner; dient der übersichtlichen Wissensordnung.",
       "axes": [
         "querschnitt",
         "kooperation",
         "bildung"
       ],
       "coreQuestions": [
-        "Was ist der Kern dieses Lernfelds?",
-        "Was muss handlungs- und prüfungsfähig werden?"
+        "Welche Wissensinhalte gehören zu diesem Lernfeld?",
+        "Welche Begriffe, Beziehungen und Beispiele machen den Inhalt verständlich?"
       ],
       "topics": [
         "Bildungsleitlinien",
@@ -70,14 +70,14 @@
       "id": "lernfeld-1",
       "sourceCluster": "lernfeld 1",
       "title": "lernfeld 1",
-      "role": "Quelle aus lokalem Lernfeldordner",
+      "role": "Quelle aus lokalem Lernfeldordner; dient der übersichtlichen Wissensordnung.",
       "axes": [
         "rolle",
-        "pruefung"
+        "ueberblick"
       ],
       "coreQuestions": [
-        "Was ist der Kern dieses Lernfelds?",
-        "Was muss handlungs- und prüfungsfähig werden?"
+        "Welche Wissensinhalte gehören zu diesem Lernfeld?",
+        "Welche Begriffe, Beziehungen und Beispiele machen den Inhalt verständlich?"
       ],
       "topics": [
         "Berufsrolle",
@@ -92,15 +92,15 @@
       "id": "lernfeld-2",
       "sourceCluster": "lernfeld 2",
       "title": "lernfeld 2",
-      "role": "Quelle aus lokalem Lernfeldordner",
+      "role": "Quelle aus lokalem Lernfeldordner; dient der übersichtlichen Wissensordnung.",
       "axes": [
         "beziehung",
         "kooperation",
-        "pruefung"
+        "ueberblick"
       ],
       "coreQuestions": [
-        "Was ist der Kern dieses Lernfelds?",
-        "Was muss handlungs- und prüfungsfähig werden?"
+        "Welche Wissensinhalte gehören zu diesem Lernfeld?",
+        "Welche Begriffe, Beziehungen und Beispiele machen den Inhalt verständlich?"
       ],
       "topics": [
         "Eingewöhnung",
@@ -117,15 +117,15 @@
       "id": "lernfeld-3",
       "sourceCluster": "lernfeld 3",
       "title": "lernfeld 3",
-      "role": "Quelle aus lokalem Lernfeldordner",
+      "role": "Quelle aus lokalem Lernfeldordner; dient der übersichtlichen Wissensordnung.",
       "axes": [
         "beobachtung",
         "beziehung",
-        "pruefung"
+        "ueberblick"
       ],
       "coreQuestions": [
-        "Was ist der Kern dieses Lernfelds?",
-        "Was muss handlungs- und prüfungsfähig werden?"
+        "Welche Wissensinhalte gehören zu diesem Lernfeld?",
+        "Welche Begriffe, Beziehungen und Beispiele machen den Inhalt verständlich?"
       ],
       "topics": [
         "Ressourcenorientierte Beobachtung",
@@ -140,15 +140,15 @@
       "id": "lernfeld-4",
       "sourceCluster": "lernfeld 4",
       "title": "lernfeld 4",
-      "role": "Quelle aus lokalem Lernfeldordner",
+      "role": "Quelle aus lokalem Lernfeldordner; dient der übersichtlichen Wissensordnung.",
       "axes": [
         "bildung",
         "rolle",
-        "pruefung"
+        "ueberblick"
       ],
       "coreQuestions": [
-        "Was ist der Kern dieses Lernfelds?",
-        "Was muss handlungs- und prüfungsfähig werden?"
+        "Welche Wissensinhalte gehören zu diesem Lernfeld?",
+        "Welche Begriffe, Beziehungen und Beispiele machen den Inhalt verständlich?"
       ],
       "topics": [
         "Mathematik",
@@ -167,15 +167,15 @@
       "id": "lernfeld-5",
       "sourceCluster": "lernfeld 5",
       "title": "lernfeld 5",
-      "role": "Quelle aus lokalem Lernfeldordner",
+      "role": "Quelle aus lokalem Lernfeldordner; dient der übersichtlichen Wissensordnung.",
       "axes": [
         "kooperation",
         "rolle",
-        "pruefung"
+        "ueberblick"
       ],
       "coreQuestions": [
-        "Was ist der Kern dieses Lernfelds?",
-        "Was muss handlungs- und prüfungsfähig werden?"
+        "Welche Wissensinhalte gehören zu diesem Lernfeld?",
+        "Welche Begriffe, Beziehungen und Beispiele machen den Inhalt verständlich?"
       ],
       "topics": [
         "Elternkooperation"
