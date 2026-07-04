@@ -4,14 +4,14 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 247424,
-    "text_chars": 1839404,
+    "word_count": 273161,
+    "text_chars": 2026283,
     "statuses": {
       "ok": 18,
       "partial-text-needs-review": 1,
       "ok-ocr": 5,
-      "ok-pagewise": 1,
-      "timeout-or-error": 2,
+      "ok-pagewise": 2,
+      "timeout-or-error": 1,
       "not-yet-extracted-needs-ocr-or-manual-review": 1,
       "render-ok-ocr-empty-needs-manual-review": 1
     }
@@ -45,11 +45,10 @@
     },
     "lernfeld 3": {
       "file_count": 4,
-      "word_count": 34712,
-      "text_chars": 253141,
+      "word_count": 60449,
+      "text_chars": 440020,
       "statuses": {
-        "ok-pagewise": 1,
-        "timeout-or-error": 1,
+        "ok-pagewise": 2,
         "ok": 2
       }
     },
@@ -226,10 +225,12 @@
       "source_cluster": "lernfeld 3",
       "source_title": "S3 u S4_ Politik.pdf",
       "source_rel_path": "lernfeld 3/S3 u S4_ Politik.pdf",
-      "extraction_status": "timeout-or-error",
-      "word_count": 0,
-      "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-015.txt"
+      "extraction_status": "ok-pagewise",
+      "word_count": 25737,
+      "text_chars": 186879,
+      "local_text_path": "machine-readable.local/texts/doc-015.txt",
+      "extraction_method": "pdftotext per-page batch with 8s timeout",
+      "extraction_note": "Recovered by one-page pdftotext batching; page status stored locally."
     },
     {
       "ordinal": 16,
