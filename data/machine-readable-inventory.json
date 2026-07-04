@@ -8,9 +8,11 @@
     "text_chars": 1758427,
     "statuses": {
       "ok": 18,
-      "timeout-or-error": 4,
+      "partial-text-needs-review": 1,
       "ok-ocr": 5,
-      "not-yet-extracted-needs-ocr-or-manual-review": 2
+      "timeout-or-error": 3,
+      "not-yet-extracted-needs-ocr-or-manual-review": 1,
+      "render-ok-ocr-empty-needs-manual-review": 1
     }
   },
   "clusters": {
@@ -20,7 +22,7 @@
       "text_chars": 732023,
       "statuses": {
         "ok": 2,
-        "timeout-or-error": 1
+        "partial-text-needs-review": 1
       }
     },
     "lernfeld 1": {
@@ -65,7 +67,7 @@
       "word_count": 0,
       "text_chars": 0,
       "statuses": {
-        "not-yet-extracted-needs-ocr-or-manual-review": 1
+        "render-ok-ocr-empty-needs-manual-review": 1
       }
     }
   },
@@ -85,10 +87,11 @@
       "source_cluster": "kein lernfeld",
       "source_title": "S4_ Sprache und Kommunikation.pdf",
       "source_rel_path": "kein lernfeld/S4_ Sprache und Kommunikation.pdf",
-      "extraction_status": "timeout-or-error",
+      "extraction_status": "partial-text-needs-review",
       "word_count": 7352,
       "text_chars": 53248,
-      "local_text_path": "machine-readable.local/texts/doc-002.txt"
+      "local_text_path": "machine-readable.local/texts/doc-002.txt",
+      "extraction_note": "pdftotext produced substantial text but earlier full extraction timed out; needs manual completeness review."
     },
     {
       "ordinal": 3,
@@ -365,10 +368,11 @@
       "source_cluster": "lernfeld 5",
       "source_title": "Lernfeld 5_ Elternkooperation.pdf",
       "source_rel_path": "lernfeld 5/Lernfeld 5_ Elternkooperation.pdf",
-      "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
+      "extraction_status": "render-ok-ocr-empty-needs-manual-review",
       "word_count": 0,
       "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-029.txt"
+      "local_text_path": "machine-readable.local/texts/doc-029.txt",
+      "extraction_note": "Rendered page sample successfully, but OCR produced no usable text in probe; likely visual/layout-heavy or scan-quality problem."
     }
   ]
 }
