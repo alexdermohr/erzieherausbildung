@@ -4,13 +4,12 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 293720,
-    "text_chars": 2166986,
+    "word_count": 310432,
+    "text_chars": 2291004,
     "statuses": {
       "ok": 18,
-      "ok-pagewise": 4,
+      "ok-pagewise": 5,
       "ok-ocr": 5,
-      "not-yet-extracted-needs-ocr-or-manual-review": 1,
       "render-ok-ocr-empty-needs-manual-review": 1
     }
   },
@@ -52,12 +51,11 @@
     },
     "lernfeld 4": {
       "file_count": 11,
-      "word_count": 64006,
-      "text_chars": 471260,
+      "word_count": 80718,
+      "text_chars": 595278,
       "statuses": {
-        "ok-pagewise": 1,
+        "ok-pagewise": 2,
         "ok": 6,
-        "not-yet-extracted-needs-ocr-or-manual-review": 1,
         "ok-ocr": 3
       }
     },
@@ -328,10 +326,12 @@
       "source_cluster": "lernfeld 4",
       "source_title": "S3_ Theater.pdf",
       "source_rel_path": "lernfeld 4/S3_ Theater.pdf",
-      "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
-      "word_count": 0,
-      "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-025.txt"
+      "extraction_status": "ok-pagewise",
+      "word_count": 16712,
+      "text_chars": 124018,
+      "local_text_path": "machine-readable.local/texts/doc-025-pagewise-ocr.txt",
+      "extraction_method": "pdfseparate + pdftotext per page; pdftocairo + tesseract for zero-text pages",
+      "extraction_note": "Recovered by per-page PDF separation; 24 zero-text pages were rendered and OCRed locally. Page 47 remains text-sparse and is likely visual."
     },
     {
       "ordinal": 26,

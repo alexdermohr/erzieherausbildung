@@ -1,11 +1,11 @@
-# Quellensichtung maschinenlesbar v14
+# Quellensichtung maschinenlesbar v15
 
 Dokumente gesichtet: 29
-Woerter extrahiert: 293720
-Status: {'ok': 18, 'ok-pagewise': 4, 'ok-ocr': 5, 'not-yet-extracted-needs-ocr-or-manual-review': 1, 'render-ok-ocr-empty-needs-manual-review': 1}
+Woerter extrahiert: 310432
+Status: {'ok': 18, 'ok-pagewise': 5, 'ok-ocr': 5, 'render-ok-ocr-empty-needs-manual-review': 1}
 
-## Nachtrag v14
-- doc 18 wurde per pdfseparate seitenweise erschlossen.
-- Nulltext-Seiten wurden lokal gerendert und mit Tesseract OCR gelesen.
-- Status: ok-pagewise.
+## Nachtrag v15
+- doc 25 wurde per pdfseparate seitenweise erschlossen.
+- 24 Nulltext-Seiten wurden lokal gerendert und mit Tesseract OCR gelesen.
+- Status: ok-pagewise; Seite 47 bleibt textarm und wahrscheinlich visuell.
 - Volltext, gerenderte Seiten und OCR-Artefakte bleiben lokal und werden nicht committed.
