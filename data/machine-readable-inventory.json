@@ -4,11 +4,11 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 273161,
-    "text_chars": 2026283,
+    "word_count": 277331,
+    "text_chars": 2052662,
     "statuses": {
       "ok": 18,
-      "partial-text-needs-review": 1,
+      "partial-pagewise-needs-review": 1,
       "ok-ocr": 5,
       "ok-pagewise": 2,
       "timeout-or-error": 1,
@@ -19,11 +19,11 @@
   "clusters": {
     "kein lernfeld": {
       "file_count": 3,
-      "word_count": 97231,
-      "text_chars": 732023,
+      "word_count": 101401,
+      "text_chars": 758402,
       "statuses": {
         "ok": 2,
-        "partial-text-needs-review": 1
+        "partial-pagewise-needs-review": 1
       }
     },
     "lernfeld 1": {
@@ -88,11 +88,12 @@
       "source_cluster": "kein lernfeld",
       "source_title": "S4_ Sprache und Kommunikation.pdf",
       "source_rel_path": "kein lernfeld/S4_ Sprache und Kommunikation.pdf",
-      "extraction_status": "partial-text-needs-review",
-      "word_count": 7352,
-      "text_chars": 53248,
-      "local_text_path": "machine-readable.local/texts/doc-002.txt",
-      "extraction_note": "pdftotext produced substantial text but earlier full extraction timed out; needs manual completeness review."
+      "extraction_status": "partial-pagewise-needs-review",
+      "word_count": 11522,
+      "text_chars": 79627,
+      "local_text_path": "machine-readable.local/texts/doc-002-pagewise.txt",
+      "extraction_note": "Pagewise extraction improved text volume, but 22 of 79 page attempts timed out or errored; completeness is not proven.",
+      "extraction_method": "pdftotext per-page batch with 8s timeout"
     },
     {
       "ordinal": 3,
