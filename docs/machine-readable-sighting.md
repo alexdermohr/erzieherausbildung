@@ -1,19 +1,19 @@
-# Quellensichtung maschinenlesbar v5
+# Quellensichtung maschinenlesbar v8
 
 Dokumente gesichtet: 29
-Wörter extrahiert: 236588
-Status: {'ok': 18, 'partial-text-needs-review': 1, 'ok-ocr': 5, 'timeout-or-error': 3, 'not-yet-extracted-needs-ocr-or-manual-review': 1, 'render-ok-ocr-empty-needs-manual-review': 1}
+Wörter extrahiert: 247424
+Status: {'ok': 18, 'partial-text-needs-review': 1, 'ok-ocr': 5, 'ok-pagewise': 1, 'timeout-or-error': 2, 'not-yet-extracted-needs-ocr-or-manual-review': 1, 'render-ok-ocr-empty-needs-manual-review': 1}
 
-## Diagnose-Nachtrag v5
-- doc 2 wurde von timeout/error zu partial-text-needs-review präzisiert, weil bereits substanzieller Text vorliegt.
-- doc 29 wurde als render-ok-ocr-empty-needs-manual-review klassifiziert: Seitenrendering funktioniert, OCR-Probe bleibt leer.
-- Keine Volltexte, PNGs oder OCR-Artefakte werden committed.
+## Nachtrag v8
+- doc 14 wurde per Ein-Seite-pro-Prozess-Batch mit 8s Timeout nacherfasst.
+- Ergebnis: 102 Seiten verarbeitet, 11438 Wörter lokaler Volltext.
+- Volltext und Seitenstatus bleiben lokal und werden nicht committed.
 
 ## Cluster
 - kein lernfeld: {'file_count': 3, 'word_count': 97231, 'text_chars': 732023, 'statuses': {'ok': 2, 'partial-text-needs-review': 1}}
 - lernfeld 1: {'file_count': 4, 'word_count': 14889, 'text_chars': 110530, 'statuses': {'ok': 2, 'ok-ocr': 2}}
 - lernfeld 2: {'file_count': 6, 'word_count': 44621, 'text_chars': 329968, 'statuses': {'ok': 6}}
-- lernfeld 3: {'file_count': 4, 'word_count': 23876, 'text_chars': 172164, 'statuses': {'timeout-or-error': 2, 'ok': 2}}
+- lernfeld 3: {'file_count': 4, 'word_count': 34712, 'text_chars': 253141, 'statuses': {'ok-pagewise': 1, 'timeout-or-error': 1, 'ok': 2}}
 - lernfeld 4: {'file_count': 11, 'word_count': 55971, 'text_chars': 413742, 'statuses': {'timeout-or-error': 1, 'ok': 6, 'not-yet-extracted-needs-ocr-or-manual-review': 1, 'ok-ocr': 3}}
 - lernfeld 5: {'file_count': 1, 'word_count': 0, 'text_chars': 0, 'statuses': {'render-ok-ocr-empty-needs-manual-review': 1}}
 
@@ -31,7 +31,7 @@ Status: {'ok': 18, 'partial-text-needs-review': 1, 'ok-ocr': 5, 'timeout-or-erro
 - 11. lernfeld 2/Lernfeld 2_ Sprache & Kommunikation.pdf: 12651 Wörter, ok
 - 12. lernfeld 2/S3_ Konflikte.pdf: 5155 Wörter, ok
 - 13. lernfeld 2/S4_ Wohngruppe.pdf: 11430 Wörter, ok
-- 14. lernfeld 3/Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf: 0 Wörter, timeout-or-error
+- 14. lernfeld 3/Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf: 10836 Wörter, ok-pagewise
 - 15. lernfeld 3/S3 u S4_ Politik.pdf: 0 Wörter, timeout-or-error
 - 16. lernfeld 3/S4_ Anpassung und Selbstbestimmung Wohngruppe.pdf: 12446 Wörter, ok
 - 17. lernfeld 3/S4_ Wohngruppe.pdf: 11430 Wörter, ok

@@ -4,13 +4,14 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 236588,
-    "text_chars": 1758427,
+    "word_count": 247424,
+    "text_chars": 1839404,
     "statuses": {
       "ok": 18,
       "partial-text-needs-review": 1,
       "ok-ocr": 5,
-      "timeout-or-error": 3,
+      "ok-pagewise": 1,
+      "timeout-or-error": 2,
       "not-yet-extracted-needs-ocr-or-manual-review": 1,
       "render-ok-ocr-empty-needs-manual-review": 1
     }
@@ -44,10 +45,11 @@
     },
     "lernfeld 3": {
       "file_count": 4,
-      "word_count": 23876,
-      "text_chars": 172164,
+      "word_count": 34712,
+      "text_chars": 253141,
       "statuses": {
-        "timeout-or-error": 2,
+        "ok-pagewise": 1,
+        "timeout-or-error": 1,
         "ok": 2
       }
     },
@@ -212,10 +214,12 @@
       "source_cluster": "lernfeld 3",
       "source_title": "Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
       "source_rel_path": "lernfeld 3/Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
-      "extraction_status": "timeout-or-error",
-      "word_count": 0,
-      "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-014.txt"
+      "extraction_status": "ok-pagewise",
+      "word_count": 10836,
+      "text_chars": 80977,
+      "local_text_path": "machine-readable.local/texts/doc-014.txt",
+      "extraction_method": "pdftotext per-page batch with 8s timeout",
+      "extraction_note": "Recovered by one-page pdftotext batching; per-page status stored locally under machine-readable.local/pagewise/doc-014/status.tsv."
     },
     {
       "ordinal": 15,

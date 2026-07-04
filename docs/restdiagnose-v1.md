@@ -1,12 +1,17 @@
-# Restdiagnose v1
+# Restdiagnose v2
 
-Die sechs Restfälle werden als Problemtypen geführt. Keine Rohtexte oder OCR-Bilder werden committed.
+Die Restfaelle werden als Problemtypen gefuehrt. Keine Rohtexte oder OCR-Bilder werden committed.
 
-- doc 2: Teiltext vorhanden, Vollständigkeit prüfen.
-- doc 14: Timeout, seitenweise Extraktion nötig.
-- doc 15: großer Timeout, nach kleinerem Batch-Proof bearbeiten.
+## Erledigt in m8
+
+- doc 14: Ein-Seite-pro-Prozess-Batch erfolgreich. 102 Seiten verarbeitet, 11438 Woerter lokal extrahiert. Inventarstatus: ok-pagewise.
+
+## Weiter offen
+
+- doc 2: Teiltext vorhanden, Vollstaendigkeit pruefen.
+- doc 15: grosser Timeout, nach kleinerem Batch-Proof bearbeiten.
 - doc 18: Render funktioniert, OCR-Probe rauscht.
-- doc 25: OCR-Probe rauscht, visuell prüfen.
+- doc 25: OCR-Probe rauscht, visuell pruefen.
 - doc 29: Render funktioniert, OCR-Probe leer.
 
-Nächster Schritt: visuelle Stichprobe und sehr kleine Seitenbatches.
+Naechster Schritt: doc 15 nur mit Seitenbatches; doc 18/25/29 zuerst visuell/preprocessing pruefen.
