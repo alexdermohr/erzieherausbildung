@@ -1,11 +1,11 @@
-# Quellensichtung maschinenlesbar v3
+# Quellensichtung maschinenlesbar v4
 
 Dokumente gesichtet: 29
-Wörter extrahiert: 217515
-Status: {'ok': 18, 'timeout-or-error': 4, 'ok-ocr': 2, 'not-yet-extracted-needs-ocr-or-manual-review': 5}
+Wörter extrahiert: 236588
+Status: {'ok': 18, 'timeout-or-error': 4, 'ok-ocr': 5, 'not-yet-extracted-needs-ocr-or-manual-review': 2}
 
-## OCR-Nachtrag
-- doc 5 und doc 7 wurden lokal per pdftoppm + tesseract (deu+eng) nacherfasst.
+## OCR-Nachtrag v4
+- doc 26 bis 28 wurden lokal per pdftoppm + tesseract nacherfasst, soweit Textdateien erzeugt wurden.
 - OCR-Volltexte bleiben lokal und werden nicht committed.
 
 ## Cluster
@@ -13,7 +13,7 @@ Status: {'ok': 18, 'timeout-or-error': 4, 'ok-ocr': 2, 'not-yet-extracted-needs-
 - lernfeld 1: {'file_count': 4, 'word_count': 14889, 'text_chars': 110530, 'statuses': {'ok': 2, 'ok-ocr': 2}}
 - lernfeld 2: {'file_count': 6, 'word_count': 44621, 'text_chars': 329968, 'statuses': {'ok': 6}}
 - lernfeld 3: {'file_count': 4, 'word_count': 23876, 'text_chars': 172164, 'statuses': {'timeout-or-error': 2, 'ok': 2}}
-- lernfeld 4: {'file_count': 11, 'word_count': 36898, 'text_chars': 270532, 'statuses': {'timeout-or-error': 1, 'ok': 6, 'not-yet-extracted-needs-ocr-or-manual-review': 4}}
+- lernfeld 4: {'file_count': 11, 'word_count': 55971, 'text_chars': 413742, 'statuses': {'timeout-or-error': 1, 'ok': 6, 'not-yet-extracted-needs-ocr-or-manual-review': 1, 'ok-ocr': 3}}
 - lernfeld 5: {'file_count': 1, 'word_count': 0, 'text_chars': 0, 'statuses': {'not-yet-extracted-needs-ocr-or-manual-review': 1}}
 
 ## Dokumente
@@ -42,7 +42,7 @@ Status: {'ok': 18, 'timeout-or-error': 4, 'ok-ocr': 2, 'not-yet-extracted-needs-
 - 23. lernfeld 4/Musik & Rhythmisch.pdf: 6299 Wörter, ok
 - 24. lernfeld 4/S3_ Frühkindliche Mathematik.pdf: 2588 Wörter, ok
 - 25. lernfeld 4/S3_ Theater.pdf: 0 Wörter, not-yet-extracted-needs-ocr-or-manual-review
-- 26. lernfeld 4/S4_ Gesundheit und Ernährung.pdf: 0 Wörter, not-yet-extracted-needs-ocr-or-manual-review
-- 27. lernfeld 4/S4_ Grundlagen.pdf: 0 Wörter, not-yet-extracted-needs-ocr-or-manual-review
-- 28. lernfeld 4/S4_ Religion, Gesellschaft und Ethik.pdf: 0 Wörter, not-yet-extracted-needs-ocr-or-manual-review
+- 26. lernfeld 4/S4_ Gesundheit und Ernährung.pdf: 8942 Wörter, ok-ocr
+- 27. lernfeld 4/S4_ Grundlagen.pdf: 7899 Wörter, ok-ocr
+- 28. lernfeld 4/S4_ Religion, Gesellschaft und Ethik.pdf: 2232 Wörter, ok-ocr
 - 29. lernfeld 5/Lernfeld 5_ Elternkooperation.pdf: 0 Wörter, not-yet-extracted-needs-ocr-or-manual-review

@@ -4,13 +4,13 @@
   "local_output_root": "machine-readable.local",
   "document_count": 29,
   "totals": {
-    "word_count": 217515,
-    "text_chars": 1615217,
+    "word_count": 236588,
+    "text_chars": 1758427,
     "statuses": {
       "ok": 18,
       "timeout-or-error": 4,
-      "ok-ocr": 2,
-      "not-yet-extracted-needs-ocr-or-manual-review": 5
+      "ok-ocr": 5,
+      "not-yet-extracted-needs-ocr-or-manual-review": 2
     }
   },
   "clusters": {
@@ -51,12 +51,13 @@
     },
     "lernfeld 4": {
       "file_count": 11,
-      "word_count": 36898,
-      "text_chars": 270532,
+      "word_count": 55971,
+      "text_chars": 413742,
       "statuses": {
         "timeout-or-error": 1,
         "ok": 6,
-        "not-yet-extracted-needs-ocr-or-manual-review": 4
+        "not-yet-extracted-needs-ocr-or-manual-review": 1,
+        "ok-ocr": 3
       }
     },
     "lernfeld 5": {
@@ -328,30 +329,36 @@
       "source_cluster": "lernfeld 4",
       "source_title": "S4_ Gesundheit und Ernährung.pdf",
       "source_rel_path": "lernfeld 4/S4_ Gesundheit und Ernährung.pdf",
-      "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
-      "word_count": 0,
-      "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-026.txt"
+      "extraction_status": "ok-ocr",
+      "word_count": 8942,
+      "text_chars": 67553,
+      "local_text_path": "machine-readable.local/texts/doc-026.txt",
+      "extraction_method": "pdftoppm + tesseract deu+eng",
+      "ocr_note": "OCR text generated locally; raw OCR text not committed."
     },
     {
       "ordinal": 27,
       "source_cluster": "lernfeld 4",
       "source_title": "S4_ Grundlagen.pdf",
       "source_rel_path": "lernfeld 4/S4_ Grundlagen.pdf",
-      "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
-      "word_count": 0,
-      "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-027.txt"
+      "extraction_status": "ok-ocr",
+      "word_count": 7899,
+      "text_chars": 60363,
+      "local_text_path": "machine-readable.local/texts/doc-027.txt",
+      "extraction_method": "pdftoppm + tesseract deu+eng",
+      "ocr_note": "OCR text generated locally; raw OCR text not committed."
     },
     {
       "ordinal": 28,
       "source_cluster": "lernfeld 4",
       "source_title": "S4_ Religion, Gesellschaft und Ethik.pdf",
       "source_rel_path": "lernfeld 4/S4_ Religion, Gesellschaft und Ethik.pdf",
-      "extraction_status": "not-yet-extracted-needs-ocr-or-manual-review",
-      "word_count": 0,
-      "text_chars": 0,
-      "local_text_path": "machine-readable.local/texts/doc-028.txt"
+      "extraction_status": "ok-ocr",
+      "word_count": 2232,
+      "text_chars": 15294,
+      "local_text_path": "machine-readable.local/texts/doc-028.txt",
+      "extraction_method": "pdftoppm + tesseract deu+eng",
+      "ocr_note": "OCR text generated locally; raw OCR text not committed."
     },
     {
       "ordinal": 29,
