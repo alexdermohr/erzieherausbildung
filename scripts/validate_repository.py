@@ -113,6 +113,13 @@ assert coverage["linked_doc_ids"] == sorted(topic_sources)
 canvas = j("visuals/learning-map-v1.canvas")
 assert len(canvas["nodes"]) >= 40
 assert len(canvas["edges"]) >= 8
+system_canvas = j("visuals/erzieherausbildung-systemkarte.canvas")
+required_system_nodes = {"source-boundary", "source-ids", "learning-map", "knowledge-network", "web-surface", "canvas-surface", "miro-surface", "docs-review", "validation"}
+system_node_ids = {node["id"] for node in system_canvas["nodes"]}
+assert required_system_nodes <= system_node_ids
+required_system_edges = {("source-boundary", "source-ids"), ("source-ids", "learning-map"), ("learning-map", "knowledge-network"), ("knowledge-network", "web-surface"), ("learning-map", "canvas-surface"), ("canvas-surface", "miro-surface"), ("validation", "docs-review")}
+system_edges = {(edge["fromNode"], edge["toNode"]) for edge in system_canvas["edges"]}
+assert required_system_edges <= system_edges
 
 net = j("data/knowledge-network.v1.json")
 net_contract = j("schemas/knowledge-network.v1.schema.json")
