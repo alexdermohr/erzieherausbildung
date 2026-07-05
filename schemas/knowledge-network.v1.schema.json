@@ -1,0 +1,8 @@
+{
+  "schema": "erzieherausbildung.knowledge_network.contract.v1",
+  "dataSchema": "erzieherausbildung.knowledge_network.v1",
+  "sourceModel": "data/learning-map.v1.json",
+  "clusterCount": 7,
+  "topicCount": 44,
+  "rawTextCommitted": false
+}

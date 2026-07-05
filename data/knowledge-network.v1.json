@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.knowledge_network.v1",
+  "source_model": "data/learning-map.v1.json",
+  "purpose": "Zweite Ordnungsschicht: dieselben Wissensinhalte werden als Erkenntniscluster und Bruecken modelliert, nicht als weitere Materialzusammenfassung.",
+  "source_policy": {
+    "raw_text_committed": false,
+    "committed_source_refs": "doc-id-only",
+    "derived_from_learning_map": true
+  },
+  "clusters": [
+    {
+      "id": "beruf-haltung-auftrag",
+      "title": "Beruf, Haltung und Auftrag",
+      "insight": "Professionelles Handeln beginnt bei Rolle, Haltung und institutioneller Verantwortung.",
+      "topics": ["Berufsrolle", "Professionelle Haltung", "Arbeitsbedingungen", "Arbeitsfelder", "Reflexion und Selbstverständnis", "Macht und Verantwortung", "Institutioneller Auftrag"],
+      "sources": ["doc-004", "doc-005", "doc-006", "doc-007", "doc-015", "doc-016", "doc-003"]
+    },
+    {
+      "id": "beziehung-entwicklung-schutz",
+      "title": "Beziehung, Entwicklung und Schutz",
+      "insight": "Entwicklung wird verstehbar, wenn Beziehung, Selbstwirksamkeit, Schutz und Beteiligung zusammen betrachtet werden.",
+      "topics": ["Eingewöhnung", "Bindung und Beziehung", "Selbstwirksamkeit", "Anpassung und Selbstbestimmung", "Aufsichtspflicht", "Kindeswohl und Schutz", "Kinderrechte und Beteiligung"],
+      "sources": ["doc-008", "doc-010", "doc-016", "doc-003", "doc-015"]
+    },
+    {
+      "id": "sprache-dialog-konflikt",
+      "title": "Sprache, Dialog und Konflikt",
+      "insight": "Sprache ist nicht nur Bildungsbereich, sondern Medium fuer Beziehung, Konfliktverstehen und Kooperation.",
+      "topics": ["Sprache und Kommunikation", "Sprachbildung im Alltag", "Gesprächsanlässe", "Konflikte", "Dialogische Haltung", "Elterngespräche"],
+      "sources": ["doc-002", "doc-009", "doc-011", "doc-012", "doc-029"]
+    },
+    {
+      "id": "wahrnehmen-verstehen-handeln",
+      "title": "Wahrnehmen, Verstehen und Handeln",
+      "insight": "Beobachtung wird paedagogisch erst durch Dokumentation, Fallverstehen und passende Schlussfolgerungen.",
+      "topics": ["Ressourcenorientierung", "Beobachtung", "Dokumentation", "Fallverstehen", "Förderliche Schlüsse ziehen"],
+      "sources": ["doc-014"]
+    },
+    {
+      "id": "gruppe-institution-familie",
+      "title": "Gruppe, Institution und Familie",
+      "insight": "Kinder handeln in Gruppen, Institutionen und Familienbezuegen; Regeln, Partizipation und Kooperation gehoeren zusammen.",
+      "topics": ["Wohngruppe", "Regeln und Struktur", "Partizipation", "Politische Bildung", "Elternkooperation", "Erziehungspartnerschaft", "Übergänge", "Familienperspektive"],
+      "sources": ["doc-013", "doc-017", "doc-015", "doc-016", "doc-029", "doc-008"]
+    },
+    {
+      "id": "bildung-ausdruck-praxis",
+      "title": "Bildungs- und Ausdruckspraxis",
+      "insight": "Bildungsbereiche werden als Erfahrungsraeume sichtbar: mathematisch, naturbezogen, aesthetisch, musikalisch, koerperlich und ethisch.",
+      "topics": ["Frühkindliche Mathematik", "Natur, Umwelt, Technik", "Kunst und Ästhetik", "Musik und Rhythmik", "Theater", "Gesundheit und Ernährung", "Religion, Gesellschaft und Ethik", "Lernarrangements", "Sozialpädagogische Grundlagen"],
+      "sources": ["doc-019", "doc-024", "doc-018", "doc-020", "doc-023", "doc-025", "doc-026", "doc-028", "doc-021", "doc-027", "doc-022"]
+    },
+    {
+      "id": "rahmen-ethik-leitlinien",
+      "title": "Rahmen, Ethik und Leitlinien",
+      "insight": "Rahmenwissen ordnet die Praxis, soll sie aber nicht ersetzen: Leitlinien und Ethik bilden Hintergrundfolie.",
+      "topics": ["Bildungsleitlinien als Rahmen", "Ethik"],
+      "sources": ["doc-003", "doc-028"]
+    }
+  ],
+  "bridges": [
+    {"from": "beruf-haltung-auftrag", "to": "beziehung-entwicklung-schutz", "relation": "Haltung zeigt sich konkret in Beziehung, Schutz und Beteiligung."},
+    {"from": "beziehung-entwicklung-schutz", "to": "sprache-dialog-konflikt", "relation": "Beziehung schafft die Grundlage fuer Dialog, Sprachbildung und Konfliktbearbeitung."},
+    {"from": "sprache-dialog-konflikt", "to": "wahrnehmen-verstehen-handeln", "relation": "Beobachtung und Dokumentation brauchen sprachliche Genauigkeit."},
+    {"from": "wahrnehmen-verstehen-handeln", "to": "gruppe-institution-familie", "relation": "Fallverstehen fuehrt zu Handeln in Gruppen, Institutionen und Familienbezuegen."},
+    {"from": "gruppe-institution-familie", "to": "rahmen-ethik-leitlinien", "relation": "Institutionelles Handeln braucht Schutz-, Rechte- und Ethikrahmen."},
+    {"from": "bildung-ausdruck-praxis", "to": "beziehung-entwicklung-schutz", "relation": "Bildungsangebote werden durch Beziehung, Begleitung und Schutz wirksam."},
+    {"from": "gruppe-institution-familie", "to": "sprache-dialog-konflikt", "relation": "Eltern- und Gruppenarbeit ist wesentlich Kommunikationsarbeit."}
+  ],
+  "coverage": {
+    "topic_count": 44,
+    "cluster_count": 7,
+    "known_gap": "doc-001 bleibt wie in learning-map v1 bewusst nicht als Themenknoten modelliert."
+  }
+}

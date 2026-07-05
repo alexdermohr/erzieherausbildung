@@ -112,4 +112,32 @@ assert coverage["linked_doc_ids"] == sorted(topic_sources)
 canvas = j("visuals/learning-map-v1.canvas")
 assert len(canvas["nodes"]) >= 40
 assert len(canvas["edges"]) >= 8
+
+net = j("data/knowledge-network.v1.json")
+net_contract = j("schemas/knowledge-network.v1.schema.json")
+assert net["schema"] == "erzieherausbildung.knowledge_network.v1"
+assert net["source_model"] == "data/learning-map.v1.json"
+assert net["source_policy"]["raw_text_committed"] is False
+assert net_contract["dataSchema"] == net["schema"]
+assert len(net["clusters"]) == net_contract["clusterCount"] == 7
+cluster_ids = {cluster["id"] for cluster in net["clusters"]}
+network_topics = []
+network_sources = set()
+for cluster in net["clusters"]:
+    assert cluster["topics"]
+    assert cluster["insight"].strip()
+    network_topics.extend(cluster["topics"])
+    for source in cluster["sources"]:
+        check_doc(source, valid_docs, "knowledge-network " + cluster["id"])
+        network_sources.add(source)
+assert len(network_topics) == net_contract["topicCount"] == 44
+assert len(network_topics) == len(set(network_topics))
+learning_topics = {topic["title"] for axis in axes for topic in axis["topics"]}
+assert set(network_topics) == learning_topics
+for bridge in net["bridges"]:
+    assert bridge["from"] in cluster_ids
+    assert bridge["to"] in cluster_ids
+    assert bridge["relation"].strip()
+assert net["coverage"]["topic_count"] == len(network_topics)
+assert (root / "docs/knowledge-network-v1.md").exists()
 print("repository validation passed")
