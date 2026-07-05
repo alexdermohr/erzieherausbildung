@@ -4,5 +4,14 @@
   "sourceModel": "data/learning-map.v1.json",
   "clusterCount": 7,
   "topicCount": 44,
-  "rawTextCommitted": false
+  "rawTextCommitted": false,
+  "bridgeTypeField": "type",
+  "allowedBridgeTypes": [
+    "enables",
+    "frames",
+    "requires_precision",
+    "leads_to_action",
+    "stabilizes",
+    "communicates"
+  ]
 }

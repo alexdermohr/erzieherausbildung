@@ -22,6 +22,17 @@ Ergänzung zur Lernlandkarte v1. Die Lernlandkarte zeigt die Themen. Das Wissens
 - Bildungsangebote wirken über Beziehung, Begleitung und Schutz.
 - Eltern- und Gruppenarbeit ist wesentlich Kommunikationsarbeit.
 
+## Brückentypen
+
+Die Brückentypen beschreiben Erkenntnis- und Ordnungsrollen der vorhandenen Brücken. Sie sind keine harten Kausalbeweise und behaupten keine neuen PDF-Claims; sie typisieren nur, wie ein vorhandener Zusammenhang gelesen werden soll.
+
+- `enables` — ermöglicht / trägt
+- `frames` — rahmt / begrenzt / ordnet
+- `requires_precision` — braucht Genauigkeit / Übersetzung
+- `leads_to_action` — führt zu pädagogischem Handeln
+- `stabilizes` — stabilisiert Übergänge / Entwicklung
+- `communicates` — wird über Kommunikation wirksam
+
 ## Abgrenzung
 
 Quelle ist `data/learning-map.v1.json`. Rohtexte bleiben lokal. `doc-001` bleibt wie bisher bewusst nicht als Themenknoten modelliert.

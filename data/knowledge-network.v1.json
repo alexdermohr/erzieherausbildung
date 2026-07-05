@@ -59,13 +59,13 @@
     }
   ],
   "bridges": [
-    {"from": "beruf-haltung-auftrag", "to": "beziehung-entwicklung-schutz", "relation": "Haltung zeigt sich konkret in Beziehung, Schutz und Beteiligung."},
-    {"from": "beziehung-entwicklung-schutz", "to": "sprache-dialog-konflikt", "relation": "Beziehung schafft die Grundlage fuer Dialog, Sprachbildung und Konfliktbearbeitung."},
-    {"from": "sprache-dialog-konflikt", "to": "wahrnehmen-verstehen-handeln", "relation": "Beobachtung und Dokumentation brauchen sprachliche Genauigkeit."},
-    {"from": "wahrnehmen-verstehen-handeln", "to": "gruppe-institution-familie", "relation": "Fallverstehen fuehrt zu Handeln in Gruppen, Institutionen und Familienbezuegen."},
-    {"from": "gruppe-institution-familie", "to": "rahmen-ethik-leitlinien", "relation": "Institutionelles Handeln braucht Schutz-, Rechte- und Ethikrahmen."},
-    {"from": "bildung-ausdruck-praxis", "to": "beziehung-entwicklung-schutz", "relation": "Bildungsangebote werden durch Beziehung, Begleitung und Schutz wirksam."},
-    {"from": "gruppe-institution-familie", "to": "sprache-dialog-konflikt", "relation": "Eltern- und Gruppenarbeit ist wesentlich Kommunikationsarbeit."}
+    {"from": "beruf-haltung-auftrag", "to": "beziehung-entwicklung-schutz", "type": "frames", "relation": "Haltung zeigt sich konkret in Beziehung, Schutz und Beteiligung."},
+    {"from": "beziehung-entwicklung-schutz", "to": "sprache-dialog-konflikt", "type": "enables", "relation": "Beziehung schafft die Grundlage fuer Dialog, Sprachbildung und Konfliktbearbeitung."},
+    {"from": "sprache-dialog-konflikt", "to": "wahrnehmen-verstehen-handeln", "type": "requires_precision", "relation": "Beobachtung und Dokumentation brauchen sprachliche Genauigkeit."},
+    {"from": "wahrnehmen-verstehen-handeln", "to": "gruppe-institution-familie", "type": "leads_to_action", "relation": "Fallverstehen fuehrt zu Handeln in Gruppen, Institutionen und Familienbezuegen."},
+    {"from": "gruppe-institution-familie", "to": "rahmen-ethik-leitlinien", "type": "frames", "relation": "Institutionelles Handeln braucht Schutz-, Rechte- und Ethikrahmen."},
+    {"from": "bildung-ausdruck-praxis", "to": "beziehung-entwicklung-schutz", "type": "enables", "relation": "Bildungsangebote werden durch Beziehung, Begleitung und Schutz wirksam."},
+    {"from": "gruppe-institution-familie", "to": "sprache-dialog-konflikt", "type": "communicates", "relation": "Eltern- und Gruppenarbeit ist wesentlich Kommunikationsarbeit."}
   ],
   "coverage": {
     "topic_count": 44,
