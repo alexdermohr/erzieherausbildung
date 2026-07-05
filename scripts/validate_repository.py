@@ -31,6 +31,7 @@ required = [
     "schemas/learning-map.v1.schema.json",
     "visuals/learning-map-v1.canvas",
     "scripts/obsidian_views.py",
+    "scripts/validate_view_export.py",
     "docs/obsidian-vault-spiegel.md",
 ]
 for path in required:
@@ -165,6 +166,8 @@ for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-system
 
 obsidian_script = (root / "scripts/obsidian_views.py").read_text(encoding="utf-8")
 obsidian_doc = (root / "docs/obsidian-vault-spiegel.md").read_text(encoding="utf-8")
+view_export_validator = (root / "scripts/validate_view_export.py").read_text(encoding="utf-8")
+workflow_validate = (root / ".github/workflows/validate.yml").read_text(encoding="utf-8")
 for token in [
     "~/vault-gewebe/schule/erzieherausbildung",
     "visuals/erzieherausbildung-systemkarte.canvas",
@@ -193,6 +196,9 @@ for token in [
     assert token in obsidian_script
 assert "SPIEGELDATEI aus /home/alex/repos/erzieherausbildung" in obsidian_script
 assert "git status" in obsidian_script
+for token in ["TemporaryDirectory", "target outside vault", "read_bytes()", "obsidian export validation passed"]:
+    assert token in view_export_validator
+assert "python3 scripts/validate_view_export.py" in workflow_validate
 assert "refusing to write: vault git status is not clean" in obsidian_script
 for token in ["Repo bleibt kanonisch", "Vault", "Dry-Run", "kein gesamtes Repo", "machine-readable.local"]:
     assert token in obsidian_doc

@@ -14,3 +14,4 @@ jobs:
           python-version: '3.12'
       - run: python3 scripts/validate_repository.py
       - run: python3 scripts/validate_excerpts.py
+      - run: python3 scripts/validate_view_export.py
