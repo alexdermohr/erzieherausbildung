@@ -1,43 +1,143 @@
 {
   "nodes": [
     {
-      "id": "source",
+      "id": "source-boundary",
       "type": "text",
-      "text": "erzieherausbildung",
-      "x": 0,
-      "y": 0,
-      "width": 300,
-      "height": 100
+      "text": "Lokale Quellenebene\nPDFs und machine-readable.local bleiben lokal. Keine Rohtexte, OCR-Artefakte oder Screenshots im Repo.",
+      "x": -840,
+      "y": -240,
+      "width": 420,
+      "height": 160
     },
     {
-      "id": "fields",
+      "id": "source-ids",
       "type": "text",
-      "text": "Lernfelder 1–5 plus Querschnitt",
-      "x": 400,
-      "y": 0,
-      "width": 360,
-      "height": 120
+      "text": "Belegschicht\ndoc-001 bis doc-029 als stabile Quellen-IDs. Commitfähige Rückbindung: doc-ID-only.",
+      "x": -360,
+      "y": -240,
+      "width": 420,
+      "height": 150
     },
     {
-      "id": "outputs",
+      "id": "learning-map",
       "type": "text",
-      "text": "Web · Canvas · Miro",
-      "x": 820,
-      "y": 0,
-      "width": 300,
-      "height": 100
+      "text": "Lernlandkarte v1\ndata/learning-map.v1.json: 8 Sinnachsen, Themen, Quellenbindung. Bildungsleitlinien rahmen, dominieren aber nicht.",
+      "x": 120,
+      "y": -240,
+      "width": 460,
+      "height": 170
+    },
+    {
+      "id": "knowledge-network",
+      "type": "text",
+      "text": "Wissensnetz v1\ndata/knowledge-network.v1.json: 7 Cluster, 44 Themen, typisierte Brücken als Erkenntnisrollen.",
+      "x": 660,
+      "y": -240,
+      "width": 460,
+      "height": 170
+    },
+    {
+      "id": "web-surface",
+      "type": "text",
+      "text": "Web-Lesefläche\nindex.html, assets/app.js und assets/styles.css. Filterbare Orientierung über Achsen, Cluster, Themen und Brückenrollen.",
+      "x": -360,
+      "y": 80,
+      "width": 460,
+      "height": 180
+    },
+    {
+      "id": "canvas-surface",
+      "type": "text",
+      "text": "Canvas-Denkfläche\nvisuals/learning-map-v1.canvas. Räumliche Übersicht für Achsen, Themen und Zusammenhangslinien.",
+      "x": 120,
+      "y": 80,
+      "width": 460,
+      "height": 170
+    },
+    {
+      "id": "miro-surface",
+      "type": "text",
+      "text": "Schauwerk/Miro-Kollaborationsfläche\nvisuals/schauwerk-erzieherausbildung-board.dsl. Spätere Arbeitsfläche für gemeinsames Sortieren, Zoomen und Ergänzen.",
+      "x": 660,
+      "y": 80,
+      "width": 460,
+      "height": 190
+    },
+    {
+      "id": "docs-review",
+      "type": "text",
+      "text": "Review- und Sinnschicht\ndocs/learning-map-v1.md, docs/knowledge-network-v1.md, docs/visualization-decision.md. Keine Prüfungsnutzen-Logik.",
+      "x": 120,
+      "y": 360,
+      "width": 460,
+      "height": 180
+    },
+    {
+      "id": "validation",
+      "type": "text",
+      "text": "Validierung und Schutzgeländer\nscripts/validate_repository.py, scripts/validate_excerpts.py, CI Validate. Prüft Grenzen, Quellen-IDs und Visualorgane.",
+      "x": -360,
+      "y": 360,
+      "width": 460,
+      "height": 180
     }
   ],
   "edges": [
     {
-      "id": "e1",
-      "fromNode": "source",
-      "toNode": "fields"
+      "id": "e-source-ids",
+      "fromNode": "source-boundary",
+      "fromSide": "right",
+      "toNode": "source-ids",
+      "toSide": "left",
+      "label": "begrenzt"
     },
     {
-      "id": "e2",
-      "fromNode": "fields",
-      "toNode": "outputs"
+      "id": "e-ids-map",
+      "fromNode": "source-ids",
+      "fromSide": "right",
+      "toNode": "learning-map",
+      "toSide": "left",
+      "label": "trägt"
+    },
+    {
+      "id": "e-map-network",
+      "fromNode": "learning-map",
+      "fromSide": "right",
+      "toNode": "knowledge-network",
+      "toSide": "left",
+      "label": "verdichtet"
+    },
+    {
+      "id": "e-network-web",
+      "fromNode": "knowledge-network",
+      "fromSide": "bottom",
+      "toNode": "web-surface",
+      "toSide": "top",
+      "label": "wird filterbar"
+    },
+    {
+      "id": "e-map-canvas",
+      "fromNode": "learning-map",
+      "fromSide": "bottom",
+      "toNode": "canvas-surface",
+      "toSide": "top",
+      "label": "wird räumlich"
+    },
+    {
+      "id": "e-canvas-miro",
+      "fromNode": "canvas-surface",
+      "fromSide": "right",
+      "toNode": "miro-surface",
+      "toSide": "left",
+      "label": "kann gespiegelt werden"
+    },
+    {
+      "id": "e-docs-validation",
+      "fromNode": "validation",
+      "fromSide": "top",
+      "toNode": "docs-review",
+      "toSide": "bottom",
+      "label": "prüft"
     }
   ]
 }
