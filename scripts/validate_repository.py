@@ -30,6 +30,8 @@ required = [
     "docs/learning-map-v1.md",
     "schemas/learning-map.v1.schema.json",
     "visuals/learning-map-v1.canvas",
+    "scripts/obsidian_views.py",
+    "docs/obsidian-vault-spiegel.md",
 ]
 for path in required:
     must_exist(path)
@@ -158,8 +160,42 @@ assert "/data/knowledge-network.v1.json" in app_js
 for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list"]:
     assert element_id in index_html
 readme = (root / "README.md").read_text(encoding="utf-8")
-for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/visualization-decision.md"]:
+for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "scripts/obsidian_views.py --dry-run"]:
     assert token in readme
+
+obsidian_script = (root / "scripts/obsidian_views.py").read_text(encoding="utf-8")
+obsidian_doc = (root / "docs/obsidian-vault-spiegel.md").read_text(encoding="utf-8")
+for token in [
+    "~/vault-gewebe/schule/erzieherausbildung",
+    "visuals/erzieherausbildung-systemkarte.canvas",
+    "visuals/learning-map-v1.canvas",
+    "docs/learning-map-v1.md",
+    "docs/knowledge-network-v1.md",
+    "docs/visualization-decision.md",
+    "Systemkarte.canvas",
+    "Lernlandkarte.canvas",
+    "Lernlandkarte.md",
+    "Wissensnetz.md",
+    "Visualisierungsentscheidung.md",
+    ".erzieherausbildung-obsidian-view.json",
+    "repo-canonical-vault-derived",
+    "machine-readable.local",
+    "source-material.local",
+    ".pdf",
+    ".docx",
+    ".pptx",
+    ".m4a",
+    ".heic",
+    ".jpg",
+    ".jpeg",
+    ".png",
+]:
+    assert token in obsidian_script
+assert "SPIEGELDATEI aus /home/alex/repos/erzieherausbildung" in obsidian_script
+assert "git status" in obsidian_script
+assert "refusing to write: vault git status is not clean" in obsidian_script
+for token in ["Repo bleibt kanonisch", "Vault", "Dry-Run", "kein gesamtes Repo", "machine-readable.local"]:
+    assert token in obsidian_doc
 assert "renderClusters" in app_js
 assert "bridgeRole" in app_js
 assert "bridgeClass" in app_js
