@@ -103,3 +103,6 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
 .cluster-action { border: 1px solid var(--accent); border-radius: 999px; padding: 8px 12px; }
 .cluster-card details { margin-top: 12px; }
 .cluster-card summary { cursor: pointer; font-weight: 800; color: var(--accent); }
+.bridge-role { margin: 0 0 8px; color: var(--accent); font-size: .78rem; font-weight: 900; }
+.relation-card.outgoing { border-left: 6px solid var(--accent); }
+.relation-card.incoming { border-right: 6px solid var(--accent); }

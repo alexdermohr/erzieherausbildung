@@ -152,13 +152,30 @@ function renderTopics() {
   });
 }
 
+function bridgeRole(bridge) {
+  if (state.activeCluster === "all") return "Netzbrücke";
+  if (bridge.from === state.activeCluster && bridge.to === state.activeCluster) return "Binnenbrücke";
+  if (bridge.from === state.activeCluster) return "Ausgehend";
+  if (bridge.to === state.activeCluster) return "Eingehend";
+  return "Verwandt";
+}
+
+function bridgeClass(role) {
+  if (role === "Ausgehend") return "outgoing";
+  if (role === "Eingehend") return "incoming";
+  if (role === "Binnenbrücke") return "internal";
+  return "network";
+}
+
 function renderRelations() {
   const target = document.querySelector("#relation-list");
   target.innerHTML = "";
   const clusterById = new Map(state.network.clusters.map((cluster) => [cluster.id, cluster.title]));
   const bridges = state.activeCluster === "all" ? state.network.bridges : state.network.bridges.filter((bridge) => bridge.from === state.activeCluster || bridge.to === state.activeCluster);
   bridges.forEach((bridge) => {
-    const card = el("article", "relation-card");
+    const role = bridgeRole(bridge);
+    const card = el("article", `relation-card ${bridgeClass(role)}`);
+    card.append(el("p", "bridge-role", role));
     card.append(el("h3", "", `${clusterById.get(bridge.from)} → ${clusterById.get(bridge.to)}`));
     card.append(el("p", "", bridge.relation));
     target.append(card);
