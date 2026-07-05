@@ -1,8 +1,10 @@
 const learningMapUrl = "/data/learning-map.v1.json";
+const knowledgeNetworkUrl = "/data/knowledge-network.v1.json";
 const sourceSummaryUrl = "/data/source-summary.json";
 
 const state = {
   map: null,
+  network: null,
   activeAxis: "all",
 };
 
@@ -11,10 +13,6 @@ function el(tag, className, text) {
   if (className) node.className = className;
   if (text !== undefined) node.textContent = text;
   return node;
-}
-
-function unique(values) {
-  return [...new Set(values.filter(Boolean))];
 }
 
 function topicCount(axis) {
@@ -28,26 +26,25 @@ function allTopics() {
 function renderSourceSummary(summary) {
   const target = document.querySelector("#source-note");
   const map = state.map;
+  const network = state.network;
   const topicTotal = allTopics().length;
   const linkedDocs = map.coverage?.linked_doc_ids?.length ?? 0;
   const fileCount = summary?.totals?.files ?? "29";
   const words = summary?.totals?.word_count ?? "325.811";
-  target.textContent = `${map.axes.length} Sinnachsen, ${topicTotal} Themenknoten, ${linkedDocs} Quellenbezüge aus ${fileCount} PDFs. Rohtexte bleiben lokal.`;
+  target.textContent = `${map.axes.length} Sinnachsen, ${topicTotal} Themen, ${network.clusters.length} Cluster und ${network.bridges.length} Brücken aus ${fileCount} PDFs. Rohtexte bleiben lokal.`;
   const detail = document.querySelector("#source-detail");
-  detail.textContent = `Maschinenlesbarer Arbeitsstand: ${words.toLocaleString?.("de-DE") ?? words} Wörter laut Inventar; diese Webfläche zeigt keine Rohtexte, sondern strukturierte Wissensknoten.`;
+  detail.textContent = `Maschinenlesbarer Arbeitsstand: ${words.toLocaleString?.("de-DE") ?? words} Wörter laut Inventar; sichtbar werden Struktur, Cluster und Beziehungen, nicht die Rohtexte.`;
 }
 
 function renderStats() {
   const target = document.querySelector("#map-stats");
   const topics = allTopics();
-  const background = topics.filter((topic) => topic.status === "background").length;
-  const learned = topics.filter((topic) => topic.status === "learned").length;
   target.innerHTML = "";
   [
     ["Sinnachsen", state.map.axes.length],
     ["Themen", topics.length],
-    ["Gelernt", learned],
-    ["Rahmen", background],
+    ["Cluster", state.network.clusters.length],
+    ["Brücken", state.network.bridges.length],
   ].forEach(([label, value]) => {
     const card = el("article", "stat-card");
     card.append(el("strong", "", String(value)));
@@ -78,8 +75,22 @@ function renderAxes() {
     card.append(el("p", "module-meta", `${topicCount(axis)} Themen · ${axis.status}`));
     card.append(el("h3", "", axis.title));
     card.append(el("p", "", axis.summary));
-    const sources = el("p", "source-line", `Quellen: ${axis.sources.join(", ")}`);
-    card.append(sources);
+    card.append(el("p", "source-line", `Quellen: ${axis.sources.join(", ")}`));
+    target.append(card);
+  });
+}
+
+function renderClusters() {
+  const target = document.querySelector("#cluster-list");
+  target.innerHTML = "";
+  state.network.clusters.forEach((cluster) => {
+    const card = el("article", "cluster-card");
+    card.append(el("p", "module-meta", `${cluster.topics.length} Themen · ${cluster.sources.length} Quellen`));
+    card.append(el("h3", "", cluster.title));
+    card.append(el("p", "", cluster.insight));
+    const topicList = el("ul", "compact-list");
+    cluster.topics.forEach((topic) => topicList.append(el("li", "", topic)));
+    card.append(topicList);
     target.append(card);
   });
 }
@@ -105,11 +116,11 @@ function renderTopics() {
 function renderRelations() {
   const target = document.querySelector("#relation-list");
   target.innerHTML = "";
-  const axisById = new Map(state.map.axes.map((axis) => [axis.id, axis.title]));
-  state.map.edges.forEach((edge) => {
+  const clusterById = new Map(state.network.clusters.map((cluster) => [cluster.id, cluster.title]));
+  state.network.bridges.forEach((bridge) => {
     const card = el("article", "relation-card");
-    card.append(el("h3", "", `${axisById.get(edge.from)} → ${axisById.get(edge.to)}`));
-    card.append(el("p", "", edge.label));
+    card.append(el("h3", "", `${clusterById.get(bridge.from)} → ${clusterById.get(bridge.to)}`));
+    card.append(el("p", "", bridge.relation));
     target.append(card);
   });
 }
@@ -117,8 +128,9 @@ function renderRelations() {
 function renderCoverage() {
   const target = document.querySelector("#coverage-note");
   const coverage = state.map.coverage;
+  const netCoverage = state.network.coverage;
   const omitted = coverage?.intentionally_unmodeled_doc_ids?.join(", ") || "keine";
-  target.textContent = `${coverage.linked_doc_ids.length} doc-IDs sind an Themen gebunden. Bewusst nicht als Themenknoten modelliert: ${omitted}. ${coverage.reason}`;
+  target.textContent = `${coverage.linked_doc_ids.length} doc-IDs sind an Themen gebunden. Das Wissensnetz clustert ${netCoverage.topic_count} Themen in ${netCoverage.cluster_count} Erkenntnisgruppen. Bewusst nicht als Themenknoten modelliert: ${omitted}.`;
 }
 
 function renderSurfaces() {
@@ -133,15 +145,18 @@ function renderSurfaces() {
 }
 
 async function boot() {
-  const [map, sourceSummary] = await Promise.all([
+  const [map, network, sourceSummary] = await Promise.all([
     fetch(learningMapUrl).then((res) => res.json()),
+    fetch(knowledgeNetworkUrl).then((res) => res.json()),
     fetch(sourceSummaryUrl).then((res) => res.json()).catch(() => null),
   ]);
   state.map = map;
+  state.network = network;
   renderSourceSummary(sourceSummary);
   renderStats();
   renderAxisFilter();
   renderAxes();
+  renderClusters();
   renderTopics();
   renderRelations();
   renderCoverage();
