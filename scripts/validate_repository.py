@@ -140,4 +140,11 @@ for bridge in net["bridges"]:
     assert bridge["relation"].strip()
 assert net["coverage"]["topic_count"] == len(network_topics)
 assert (root / "docs/knowledge-network-v1.md").exists()
+app_js = (root / "assets/app.js").read_text(encoding="utf-8")
+index_html = (root / "index.html").read_text(encoding="utf-8")
+assert "/data/learning-map.v1.json" in app_js
+assert "/data/knowledge-network.v1.json" in app_js
+for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list"]:
+    assert element_id in index_html
+assert "renderClusters" in app_js
 print("repository validation passed")
