@@ -23,6 +23,17 @@ Visualisierung der Erzieherausbildung als Wissens-, Lernfeld- und Zusammenhangsk
 
 Vercel/Web-App als Lesefläche, Obsidian Canvas als Denkfläche, Miro via Schauwerk als spätere Kollaborationsfläche.
 
+
+## Startpunkte
+
+- Web-Lesefläche: [`index.html`](index.html)
+- Systemkarte: [`visuals/erzieherausbildung-systemkarte.canvas`](visuals/erzieherausbildung-systemkarte.canvas)
+- Lernlandkarte: [`visuals/learning-map-v1.canvas`](visuals/learning-map-v1.canvas) und [`docs/learning-map-v1.md`](docs/learning-map-v1.md)
+- Wissensnetz: [`docs/knowledge-network-v1.md`](docs/knowledge-network-v1.md) und [`data/knowledge-network.v1.json`](data/knowledge-network.v1.json)
+- Darstellungsentscheidung: [`docs/visualization-decision.md`](docs/visualization-decision.md)
+
+Gerendert anschauen: `index.html` im Browser öffnen; die `.canvas`-Dateien in Obsidian öffnen.
+
 ## Lokal aktualisieren
 
 ```bash

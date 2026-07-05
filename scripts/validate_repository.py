@@ -157,6 +157,9 @@ assert "/data/learning-map.v1.json" in app_js
 assert "/data/knowledge-network.v1.json" in app_js
 for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list"]:
     assert element_id in index_html
+readme = (root / "README.md").read_text(encoding="utf-8")
+for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/visualization-decision.md"]:
+    assert token in readme
 assert "renderClusters" in app_js
 assert "bridgeRole" in app_js
 assert "bridgeClass" in app_js
