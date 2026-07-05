@@ -7,6 +7,7 @@ DOC = re.compile(r"^doc-\d{3}$")
 SKIP = {".git", "source-material.local", "machine-readable.local"}
 RAW = {".pdf", ".docx", ".pptx", ".m4a", ".heic", ".jpg", ".jpeg", ".png"}
 STATUS = {"learned", "background"}
+BRIDGE_TYPES = {"enables", "frames", "requires_precision", "leads_to_action", "stabilizes", "communicates"}
 
 def j(path):
     return json.loads((root / path).read_text(encoding="utf-8"))
@@ -119,6 +120,8 @@ assert net["schema"] == "erzieherausbildung.knowledge_network.v1"
 assert net["source_model"] == "data/learning-map.v1.json"
 assert net["source_policy"]["raw_text_committed"] is False
 assert net_contract["dataSchema"] == net["schema"]
+assert net_contract["bridgeTypeField"] == "type"
+assert set(net_contract["allowedBridgeTypes"]) == BRIDGE_TYPES
 assert len(net["clusters"]) == net_contract["clusterCount"] == 7
 cluster_ids = {cluster["id"] for cluster in net["clusters"]}
 network_topics = []
@@ -137,6 +140,7 @@ assert set(network_topics) == learning_topics
 for bridge in net["bridges"]:
     assert bridge["from"] in cluster_ids
     assert bridge["to"] in cluster_ids
+    assert bridge["type"] in BRIDGE_TYPES
     assert bridge["relation"].strip()
 assert net["coverage"]["topic_count"] == len(network_topics)
 assert (root / "docs/knowledge-network-v1.md").exists()
@@ -149,7 +153,9 @@ for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list"]:
 assert "renderClusters" in app_js
 assert "bridgeRole" in app_js
 assert "bridgeClass" in app_js
+assert "bridgeTypeLabel" in app_js
 assert "bridge-role" in app_js
+assert "bridge-type" in app_js
 assert "activeCluster" in app_js
 assert "cluster-action" in app_js
 assert 'document.createElement("details")' in app_js

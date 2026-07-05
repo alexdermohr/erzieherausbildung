@@ -34,6 +34,20 @@ function activeClusterTopicSet() {
   return cluster ? new Set(cluster.topics) : null;
 }
 
+
+const bridgeTypeLabels = {
+  enables: "ermöglicht / trägt",
+  frames: "rahmt / ordnet",
+  requires_precision: "braucht Genauigkeit",
+  leads_to_action: "führt zu Handeln",
+  stabilizes: "stabilisiert",
+  communicates: "Kommunikation",
+};
+
+function bridgeTypeLabel(type) {
+  return bridgeTypeLabels[type] ?? type;
+}
+
 function rerenderFocusViews() {
   renderClusters();
   renderTopics();
@@ -175,7 +189,10 @@ function renderRelations() {
   bridges.forEach((bridge) => {
     const role = bridgeRole(bridge);
     const card = el("article", `relation-card ${bridgeClass(role)}`);
-    card.append(el("p", "bridge-role", role));
+    const roleLine = el("p", "bridge-role");
+    roleLine.append(el("span", "bridge-role-badge", role));
+    roleLine.append(el("span", "bridge-type", bridgeTypeLabel(bridge.type)));
+    card.append(roleLine);
     card.append(el("h3", "", `${clusterById.get(bridge.from)} → ${clusterById.get(bridge.to)}`));
     card.append(el("p", "", bridge.relation));
     target.append(card);
