@@ -147,4 +147,7 @@ assert "/data/knowledge-network.v1.json" in app_js
 for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list"]:
     assert element_id in index_html
 assert "renderClusters" in app_js
+assert "activeCluster" in app_js
+assert "cluster-action" in app_js
+assert 'document.createElement("details")' in app_js
 print("repository validation passed")
