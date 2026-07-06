@@ -1,0 +1,128 @@
+# Canvas-Homepage- und Detailverlinkungsplan v1
+
+## These
+Die Homepage soll die vorhandenen `.canvas`-Dateien nicht nur erwähnen, sondern direkt als visuelle Denkfläche anzeigen. Dadurch wird die Weboberfläche zur schnellen Lesefläche mit räumlicher Orientierung.
+
+## Antithese
+Eine native Canvas-Ansicht in der Homepage kann die Obsidian-Canvas-Erfahrung nicht vollständig ersetzen. Obsidian bleibt für manuelles Verschieben, räumliches Denken und spätere Verdichtung überlegen.
+
+## Synthese
+Die Homepage rendert `.canvas` read-only als Browseransicht. Obsidian bleibt Denkwerkzeug. Beide Flächen verwenden dieselben abgeleiteten Daten und dürfen keine Rohquellen veröffentlichen.
+
+## Zielbild
+
+```text
+Übersicht
+  -> Canvas-Knoten
+    -> Themen- oder Achsendetail
+      -> doc-ID-Rückbindung
+        -> Exzerptschicht
+          -> spätere Detailaufbereitung
+            -> lokale Ursprungsquelle, nicht öffentlich
+```
+
+Die alternative Sinnachse kippt von „Welche Datei ist wo sichtbar?“ zu „Wie tief kann ein Lernender von der Karte zum belegten Wissen zoomen?“.
+
+## Phase 1 - Homepage rendert vorhandene Canvas-Dateien
+
+Akzeptanz:
+
+- `index.html` enthält eine eigene Canvas-Sektion.
+- `assets/app.js` lädt `visuals/learning-map-v1.canvas`, `visuals/erzieherausbildung-systemkarte.canvas` und `visuals/lernfeld-4-bildungsbereiche.canvas`.
+- Die Canvas-Knoten und Kanten werden ohne externe Bibliothek als SVG gerendert.
+- Die Ansicht bleibt read-only; die kanonischen `.canvas`-Dateien bleiben im Repo.
+
+## Phase 2 - Knoten öffnen Detailkontext
+
+Akzeptanz:
+
+- Klick auf einen Canvas-Knoten öffnet ein Detailpanel.
+- Achsenknoten werden mit `data/learning-map.v1.json` verbunden.
+- Themenknoten werden über stabile IDs und Titelnormalisierung mit ihren Quellen verbunden.
+- Das Panel zeigt Status, Quellen-IDs, vorhandene Pilotexzerpte und fehlende Detailtiefe.
+
+## Phase 3 - Detailschicht ausbauen
+
+Zielartefakte:
+
+```text
+data/details/*.v1.json
+data/excerpts/*.jsonl
+schemas/detail.v1.schema.json
+scripts/validate_details.py
+```
+
+Jede Detaildatei soll enthalten:
+
+- Begriff oder Thema
+- Kurzdefinition
+- fachliche Einordnung
+- Praxisbezug
+- typische Missverständnisse
+- Brücken zu anderen Themen
+- Exzerpte und Belegstatus
+- offene Fragen
+
+## Phase 4 - Canvas aus Daten generieren
+
+Ziel:
+
+```text
+data/learning-map.v1.json
++ data/details/*.v1.json
++ data/excerpts/*.jsonl
+  -> scripts/generate_canvas.py
+  -> visuals/*.canvas
+  -> Homepage und Obsidian
+```
+
+Damit wird vermieden, dass Web, Canvas und Markdown drei auseinanderlaufende Wahrheiten bilden. Drei Wahrheiten sind gut für Philosophie-Seminare, schlecht für Lernlandkarten.
+
+## Quellen- und Oberflächenpolitik
+
+Belegt sichtbar:
+
+- eigene Strukturierung
+- eigene Zusammenfassungen
+- `doc-XXX`-Beleganker
+- Fundstellenbeschreibungen aus Exzerpten
+- Status der Aufbereitung
+
+Nicht sichtbar:
+
+- Roh-PDFs
+- OCR-Rohtexte
+- lokale Pfade
+- `.local`-Arbeitsbereiche
+- urheberrechtlich riskante Volltextauszüge
+
+## Resonanz- und Kontrastprüfung
+
+Deutung A: Die Karte ist primär eine schulische Lernfeldübersicht. Dann sind Sinnachsen, Lernfelder und Themenabdeckung entscheidend.
+
+Deutung B: Die Karte ist primär eine Praxisbibliothek. Dann sind Beziehung, Beobachtung, Elternkooperation, Aufsicht, Sprache und Lernarrangements zentraler als Lernfeldnummern.
+
+Das Modell hält beide Deutungen offen: Achsen geben Ordnung, Details geben Praxisnähe.
+
+## Risiken und Gegenmaßnahmen
+
+- Risiko: Die Browseransicht wirkt wie ein Ersatz für Obsidian. Gegenmaßnahme: read-only kennzeichnen.
+- Risiko: grobe Zusammenfassungen werden als fertiges Wissen missverstanden. Gegenmaßnahme: Status und Detailtiefe sichtbar machen.
+- Risiko: Rohmaterial wird versehentlich veröffentlicht. Gegenmaßnahme: nur abgeleitete Dateien laden, keine lokalen Quellenpfade.
+- Risiko: Canvas, Web und Exzerpte driften auseinander. Gegenmaßnahme: späterer Generator und Validator.
+
+## Unsicherheit
+
+Unsicherheitsgrad: 0.24.
+Ursachen: Die `.canvas`-Dateien sind vorhanden und renderbar, aber Detaildaten sind noch Pilotstand.
+
+Interpolationsgrad: 0.31.
+Hauptannahme: Die Homepage soll nicht nur eine Liste der Inhalte sein, sondern ein navigierbarer Einstieg vom Raumplan zur belegten Detailaufbereitung.
+
+## Nächste Umsetzungsschritte
+
+1. Canvas-Sektion in Homepage einbauen.
+2. Canvas-Dateien als SVG rendern.
+3. Knoten-Detailpanel mit vorhandenen `doc-XXX`-Quellen verbinden.
+4. Pilotexzerpte anzeigen, wenn sie zur Quelle passen.
+5. Spätere Detailschicht als offene Lücke sichtbar machen.
