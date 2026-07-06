@@ -26,9 +26,12 @@ required = [
     "data/source-summary.json",
     "data/machine-readable-inventory.json",
     "data/learning-map.v1.json",
+    "data/surface-policy.v1.json",
     "docs/implementation-plan.md",
     "docs/learning-map-v1.md",
+    "docs/surface-policy-v1.md",
     "schemas/learning-map.v1.schema.json",
+    "schemas/surface-policy.v1.schema.json",
     "visuals/learning-map-v1.canvas",
     "scripts/obsidian_views.py",
     "scripts/validate_view_export.py",
@@ -154,14 +157,52 @@ for bridge in net["bridges"]:
     assert bridge["relation"].strip()
 assert net["coverage"]["topic_count"] == len(network_topics)
 assert (root / "docs/knowledge-network-v1.md").exists()
+surface = j("data/surface-policy.v1.json")
+surface_contract = j("schemas/surface-policy.v1.schema.json")
+assert surface["schema"] == "erzieherausbildung.surface_policy.v1"
+assert surface_contract["schema"] == "erzieherausbildung.surface_policy.contract.v1"
+assert surface_contract["dataSchema"] == surface["schema"]
+assert surface["source_policy"]["raw_text_committed"] is False
+assert surface["source_policy"]["committed_source_refs"] == "doc-id-only"
+assert surface["source_policy"]["not_by_exam_utility"] is True
+assert surface["source_policy"]["bildungsleitlinien_role"] == surface_contract["bildungsleitlinienRole"]
+surface_ids = [item["id"] for item in surface["surfaces"]]
+assert surface_ids == surface_contract["surfaceIds"]
+assert len(surface_ids) == len(set(surface_ids))
+surface_by_id = {item["id"]: item for item in surface["surfaces"]}
+assert surface_by_id[surface_contract["canonicalSurface"]]["authority"] == "canonical"
+for surface_id in surface_contract["derivedSurfaceIds"]:
+    assert surface_by_id[surface_id]["authority"] == "derived"
+assert {item["role"] for item in surface["surfaces"]} == set(surface_contract["roles"])
+assert surface_by_id["repo"]["status"] == "active"
+assert surface_by_id["web"]["status"] == "active"
+assert surface_by_id["obsidian"]["status"] == "active"
+assert surface_by_id["schauwerk_miro"]["status"] == "planned"
+surface_alignment = {entry["render_id"]: entry["surface_id"] for entry in surface["surface_alignment"]}
+assert surface_alignment == surface_contract["surfaceAlignment"]
+assert set(surface_alignment) == set(lrn["planned_renders"])
+for item in surface["surfaces"]:
+    assert item["title"].strip()
+    assert item["data_sources"]
+    assert item["outputs"]
+    assert item["guards"]
+    assert item["risk"].strip()
+    assert item["next_use"].strip()
+assert "dirty-vault-stop" in surface_by_id["obsidian"]["guards"]
+assert "temp-vault CI validation" in surface_by_id["obsidian"]["guards"]
+assert any("Keine Prüfungsnutzenlogik" in invariant for invariant in surface["invariants"])
+assert any("Bildungsleitlinien" in invariant for invariant in surface["invariants"])
+
 app_js = (root / "assets/app.js").read_text(encoding="utf-8")
 index_html = (root / "index.html").read_text(encoding="utf-8")
 assert "/data/learning-map.v1.json" in app_js
 assert "/data/knowledge-network.v1.json" in app_js
+for source in surface_by_id["web"]["data_sources"]:
+    assert "/" + source in app_js
 for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list"]:
     assert element_id in index_html
 readme = (root / "README.md").read_text(encoding="utf-8")
-for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "scripts/obsidian_views.py --dry-run"]:
+for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
     assert token in readme
 
 obsidian_script = (root / "scripts/obsidian_views.py").read_text(encoding="utf-8")
@@ -202,6 +243,9 @@ assert "python3 scripts/validate_view_export.py" in workflow_validate
 assert "refusing to write: vault git status is not clean" in obsidian_script
 for token in ["Repo bleibt kanonisch", "Vault", "Dry-Run", "kein gesamtes Repo", "machine-readable.local"]:
     assert token in obsidian_doc
+surface_doc = (root / "docs/surface-policy-v1.md").read_text(encoding="utf-8")
+for token in ["Repo bleibt Kanon", "Lesefläche", "Denkfläche", "Kollaborationsfläche", "Keine Prüfungsnutzenlogik"]:
+    assert token in surface_doc
 assert "renderClusters" in app_js
 assert "bridgeRole" in app_js
 assert "bridgeClass" in app_js
