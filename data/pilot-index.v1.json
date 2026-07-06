@@ -3,29 +3,43 @@
   "source": "data/excerpts/*.jsonl",
   "purpose": "Aggregierter Abdeckungsstand der ersten Belegknoten; keine Rohtextablage und keine Vollständigkeitsbehauptung.",
   "totals": {
-    "entries": 2
+    "entries": 5
   },
   "byReviewStatus": {
-    "draft": 2
+    "draft": 5
   },
   "byClaimType": {
-    "excerpted": 2
+    "excerpted": 5
   },
   "bySourceCluster": {
+    "lernfeld 1": 1,
     "lernfeld 2": 1,
-    "lernfeld 4": 1
+    "lernfeld 3": 1,
+    "lernfeld 4": 1,
+    "lernfeld 5": 1
   },
   "sourceTitles": [
     "Lernfeld 2_ Eingewöhnung.pdf",
-    "Lernfeld 4_ Lernarragments.pdf"
+    "Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
+    "Lernfeld 4_ Lernarragments.pdf",
+    "Lernfeld 5_ Elternkooperation.pdf",
+    "S1_ Berufsrolle.pdf"
   ],
   "concepts": {
+    "Beobachtung": 1,
+    "Berufsrolle": 1,
     "Bindung und Beziehung": 1,
     "Eingewöhnung": 1,
+    "Elternkooperation": 1,
+    "Erziehungspartnerschaft": 1,
+    "Fallverstehen": 1,
+    "Familienperspektive": 1,
     "Interessenorientierung": 1,
     "Lernarrangements": 1,
     "Planung": 1,
-    "Ressourcenorientierung": 1,
+    "Professionelle Haltung": 1,
+    "Reflexion": 1,
+    "Ressourcenorientierung": 2,
     "Übergang": 1
   },
   "knownLimits": [
