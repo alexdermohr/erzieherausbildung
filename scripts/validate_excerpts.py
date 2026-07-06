@@ -13,7 +13,7 @@ BLOCKED = set(schema.get("blockedFields", []))
 ALLOWED = REQ | OPTIONAL
 CLAIMS = set(schema["claimTypes"])
 STATUS = set(schema["reviewStatuses"])
-LOCATOR_PLACEHOLDERS = set(schema.get("sourceLocatorPlaceholders", []))
+LOCATOR_PLACEHOLDERS = {str(value).strip() for value in schema.get("sourceLocatorPlaceholders", [])}
 ID = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 
 
@@ -25,9 +25,13 @@ def is_string_list(value) -> bool:
     return isinstance(value, list) and bool(value) and all(is_nonempty_string(item) for item in value)
 
 
+def normalized_locator(value) -> str:
+    return value.strip() if isinstance(value, str) else ""
+
+
 def has_concrete_locator(item: dict) -> bool:
-    locator = item.get("sourceLocator")
-    return is_nonempty_string(locator) and locator not in LOCATOR_PLACEHOLDERS
+    locator = normalized_locator(item.get("sourceLocator"))
+    return bool(locator) and locator not in LOCATOR_PLACEHOLDERS
 
 
 def validate_item(item: dict, where: str) -> list[str]:
@@ -77,6 +81,8 @@ assert schema["schema"] == "erzieherausbildung.excerpt.contract.v1"
 assert schema["dataSchema"] == "erzieherausbildung.excerpt.v1"
 assert "sourceLocator" in REQ
 assert "links" in REQ
+for placeholder in LOCATOR_PLACEHOLDERS:
+    assert not has_concrete_locator({"sourceLocator": f" {placeholder} "})
 
 template = json.loads((root / "templates" / "excerpt.v1.json").read_text(encoding="utf-8"))
 problems.extend(validate_item(template, "templates/excerpt.v1.json"))
