@@ -1,0 +1,16 @@
+{
+  "schema": "erzieherausbildung.surface_policy.contract.v1",
+  "dataSchema": "erzieherausbildung.surface_policy.v1",
+  "surfaceIds": ["repo", "web", "obsidian", "schauwerk_miro"],
+  "canonicalSurface": "repo",
+  "derivedSurfaceIds": ["web", "obsidian", "schauwerk_miro"],
+  "roles": ["canonical_source", "reading_surface", "thinking_surface", "collaboration_surface"],
+  "surfaceAlignment": {
+    "prepp_style_homepage": "web",
+    "obsidian_canvas": "obsidian",
+    "schauwerk_or_miro_board": "schauwerk_miro"
+  },
+  "rawTextCommitted": false,
+  "committedSourceRefs": "doc-id-only",
+  "bildungsleitlinienRole": "background-frame-not-center"
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "erzieherausbildung.surface_policy.v1",
+  "purpose": "Kanonische Rollenklärung für Repo, Web, Obsidian und spätere Schauwerk/Miro-Flächen. Sie verhindert, dass eine bequeme Oberfläche zur zweiten Wahrheit wird.",
+  "source_policy": {
+    "raw_text_committed": false,
+    "committed_source_refs": "doc-id-only",
+    "not_by_exam_utility": true,
+    "bildungsleitlinien_role": "background-frame-not-center"
+  },
+  "surfaces": [
+    {
+      "id": "repo",
+      "title": "Repo-Kanon",
+      "role": "canonical_source",
+      "authority": "canonical",
+      "status": "active",
+      "data_sources": [
+        "data/learning-map.v1.json",
+        "data/knowledge-network.v1.json",
+        "data/source-summary.json",
+        "data/machine-readable-inventory.json"
+      ],
+      "outputs": ["README.md", "docs/*.md", "visuals/*.canvas", "index.html"],
+      "guards": ["repository validation", "raw artifact scan", "doc-id Rückbindung"],
+      "risk": "Das Repo kann zu abstrakt bleiben, wenn keine späteren Exzerpte nachgezogen werden.",
+      "next_use": "Struktur- und Contract-Arbeit zuerst hier ändern."
+    },
+    {
+      "id": "web",
+      "title": "Web-Lesefläche",
+      "role": "reading_surface",
+      "authority": "derived",
+      "status": "active",
+      "data_sources": [
+        "data/learning-map.v1.json",
+        "data/knowledge-network.v1.json",
+        "data/source-summary.json"
+      ],
+      "outputs": ["index.html", "assets/app.js", "assets/styles.css"],
+      "guards": ["static fetch allow-list", "source summary only", "no raw source material"],
+      "risk": "Die Lesefläche kann durch Glätte Scheingenauigkeit erzeugen.",
+      "next_use": "Überblick, Filter, Clusterfokus und später Detailkarten."
+    },
+    {
+      "id": "obsidian",
+      "title": "Obsidian-Denkfläche",
+      "role": "thinking_surface",
+      "authority": "derived",
+      "status": "active",
+      "data_sources": [
+        "visuals/erzieherausbildung-systemkarte.canvas",
+        "visuals/learning-map-v1.canvas",
+        "docs/learning-map-v1.md",
+        "docs/knowledge-network-v1.md",
+        "docs/visualization-decision.md"
+      ],
+      "outputs": ["~/vault-gewebe/schule/erzieherausbildung"],
+      "guards": ["safe-list export", "manifest", "mirror warning", "target inside vault", "dirty-vault-stop", "temp-vault CI validation"],
+      "risk": "Obsidian ist bequem genug, um fälschlich als Kanon gelesen zu werden.",
+      "next_use": "Denken, Navigieren, Umordnen als abgeleitete Oberfläche."
+    },
+    {
+      "id": "schauwerk_miro",
+      "title": "Schauwerk/Miro-Kollaborationsfläche",
+      "role": "collaboration_surface",
+      "authority": "derived",
+      "status": "planned",
+      "data_sources": ["data/learning-map.v1.json", "data/knowledge-network.v1.json"],
+      "outputs": ["future Schauwerk/Miro board"],
+      "guards": ["deferred until collaboration need", "no source authority", "export from shared data models"],
+      "risk": "Eine große Kollaborationsfläche kann Ordnung simulieren, bevor Begriffe geklärt sind.",
+      "next_use": "Erst aktivieren, wenn gemeinsame Sortierung oder Präsentation konkret gebraucht wird."
+    }
+  ],
+  "surface_alignment": [
+    {"render_id": "prepp_style_homepage", "surface_id": "web", "function": "Lesefläche"},
+    {"render_id": "obsidian_canvas", "surface_id": "obsidian", "function": "Denkfläche"},
+    {"render_id": "schauwerk_or_miro_board", "surface_id": "schauwerk_miro", "function": "Kollaborationsfläche"}
+  ],
+  "forbidden_material": ["raw_text", "pdf", "docx", "pptx", "m4a", "heic", "jpg", "jpeg", "png", "machine-readable.local", "source-material.local"],
+  "invariants": [
+    "Repo bleibt Kanon.",
+    "Oberflächen sind abgeleitet.",
+    "Keine Rohtexte, PDFs, Office-Dateien oder Bilder committen.",
+    "Keine Prüfungsnutzenlogik als Ordnungsprinzip.",
+    "Bildungsleitlinien bleiben Rahmen, nicht Zentrum.",
+    "Neue starke Claims brauchen spätere Exzerpt- oder Quellenrückbindung."
+  ]
+}
