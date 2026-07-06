@@ -35,7 +35,16 @@ Pflichtfelder stehen in `schemas/excerpt.v1.schema.json` und werden durch `scrip
 
 ## Verbotene Felder
 
-`examRelevance`, `rawText`, `quote`, `pageImage` und `ocrText` sind verboten. Das Repo speichert keine Rohtexte und ordnet nicht nach Prüfungsnutzen.
+Prüfungsnutzen, Rohtext, Direktzitat, Seitenbild und OCR-Artefakt sind keine Exzerptfelder. Das Repo speichert keine Rohtexte und ordnet nicht nach Prüfungsnutzen.
+
+## Pilotstatus
+
+`data/excerpts/pilot-v1.jsonl` enthält zwei erste `draft`-Exzerpte:
+
+- Lernfeld 2 / `doc-008`: Eingewöhnung, Bindung und Übergang.
+- Lernfeld 4 / `doc-021`: Lernarrangements, Interessen- und Ressourcenorientierung.
+
+Beide Einträge sind paraphrasiert, kurz gehalten und mit konkreter Fundstelle versehen. Sie sind Einstiegsknoten, keine vollständige Inhaltserschließung.
 
 ## Resonanz- und Kontrastprüfung
 
@@ -45,4 +54,4 @@ Deutung B: Exzerpte sind Belegknoten. Dann muss jeder starke Claim Fundstelle, R
 
 ## Epistemische Leere
 
-Noch fehlen echte Exzerpte aus den Unterlagen. Nötig für Detailkarten: zwei Pilotquellen, eine aus Lernfeld 2 und eine aus Lernfeld 4.
+Die Pilotexzerpte beweisen den Pfad, aber sie ersetzen noch keine systematische Tiefenerschließung. Nötig für Detailkarten: mehr geprüfte Exzerpte je Lernfeld und klare Entscheidung, wann ein Entwurf zu `checked` hochgestuft werden darf.
