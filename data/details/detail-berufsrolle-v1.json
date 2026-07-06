@@ -1,0 +1,54 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-berufsrolle-v1",
+  "title": "Berufsrolle",
+  "topicIds": [
+    "berufsrolle"
+  ],
+  "axisIds": [
+    "professionalitaet"
+  ],
+  "sourceRefs": [
+    "doc-004"
+  ],
+  "excerptRefs": [
+    "doc-004-berufsrolle-auftrag-reflexion"
+  ],
+  "summary": "Berufsrolle meint hier nicht nur eine Berufsbezeichnung, sondern die Fähigkeit, pädagogisches Handeln über Auftrag, Haltung und Reflexion zu begründen.",
+  "coreIdeas": [
+    "Professionelles Handeln braucht mehr als persönliche Sympathie oder spontane Alltagserfahrung.",
+    "Reflexion verbindet konkrete Situation, institutionellen Auftrag und eigenes Selbstverständnis.",
+    "Berufsrolle wird im Alltag sichtbar: in Sprache, Grenzen, Verantwortung und begründeten Entscheidungen."
+  ],
+  "practiceAnchors": [
+    "Bei Konflikten nicht nur fragen, was ich persönlich tun würde, sondern welche fachliche Rolle gerade handlungsleitend sein muss.",
+    "Eigene Reaktionen nach Situationen kurz mit Auftrag, Haltung und Kindperspektive abgleichen."
+  ],
+  "commonMisunderstandings": [
+    "Berufsrolle ist nicht bloß Auftreten oder Autorität.",
+    "Reflexion ist keine nachträgliche Rechtfertigung, sondern Teil professioneller Steuerung."
+  ],
+  "bridges": [
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Berufsrolle konkretisiert sich über professionelle Haltung."
+    },
+    {
+      "targetId": "reflexion",
+      "relation": "Reflexion macht Alltagshandeln begründbar."
+    }
+  ],
+  "openQuestions": [
+    "Welche Situationen aus der Praxis zeigen besonders deutlich den Unterschied zwischen persönlicher Reaktion und professioneller Rolle?",
+    "Welche Begriffe aus doc-004 müssen später noch genauer belegt werden?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.36,
+  "interpolation": 0.32,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

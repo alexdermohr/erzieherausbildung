@@ -1,0 +1,95 @@
+{
+  "schema": "erzieherausbildung.detail_index.v1",
+  "details": [
+    {
+      "id": "detail-berufsrolle-v1",
+      "title": "Berufsrolle",
+      "path": "/data/details/detail-berufsrolle-v1.json",
+      "topicIds": [
+        "berufsrolle"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "sourceRefs": [
+        "doc-004"
+      ],
+      "excerptRefs": [
+        "doc-004-berufsrolle-auftrag-reflexion"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-eingewoehnung-v1",
+      "title": "Eingewöhnung",
+      "path": "/data/details/detail-eingewoehnung-v1.json",
+      "topicIds": [
+        "eingewoehnung"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "sourceRefs": [
+        "doc-008"
+      ],
+      "excerptRefs": [
+        "doc-008-eingewoehnung-bindung-individuell"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-beobachtung-v1",
+      "title": "Beobachtung",
+      "path": "/data/details/detail-beobachtung-v1.json",
+      "topicIds": [
+        "beobachtung"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "excerptRefs": [
+        "doc-014-beobachtung-ressourcen-fallverstehen"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-lernarrangements-v1",
+      "title": "Lernarrangements",
+      "path": "/data/details/detail-lernarrangements-v1.json",
+      "topicIds": [
+        "lernarrangements"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-021"
+      ],
+      "excerptRefs": [
+        "doc-021-lernarrangement-interessen-planung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-elternkooperation-v1",
+      "title": "Elternkooperation",
+      "path": "/data/details/detail-elternkooperation-v1.json",
+      "topicIds": [
+        "elternkooperation"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "sourceRefs": [
+        "doc-029"
+      ],
+      "excerptRefs": [
+        "doc-029-elternkooperation-erziehungspartnerschaft"
+      ],
+      "detailStatus": "draft"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "erzieherausbildung.detail.contract.v1",
+  "dataSchema": "erzieherausbildung.detail.v1",
+  "indexSchema": "erzieherausbildung.detail_index.v1",
+  "required": [
+    "schema",
+    "id",
+    "title",
+    "topicIds",
+    "axisIds",
+    "sourceRefs",
+    "excerptRefs",
+    "summary",
+    "coreIdeas",
+    "practiceAnchors",
+    "commonMisunderstandings",
+    "bridges",
+    "openQuestions",
+    "detailStatus",
+    "uncertainty",
+    "interpolation",
+    "sourcePolicy"
+  ],
+  "detailStatuses": [
+    "draft",
+    "checked",
+    "needs-source",
+    "rejected"
+  ],
+  "sourceRefPattern": "doc-XXX",
+  "blockedFields": [
+    "rawMaterial",
+    "directCitation",
+    "pageScreenshot",
+    "ocrArtifact",
+    "localPath"
+  ],
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "public_surface": "own synthesis plus source anchors only",
+    "origin_material": "local only"
+  },
+  "numericRanges": {
+    "uncertainty": "0..1",
+    "interpolation": "0..1"
+  }
+}

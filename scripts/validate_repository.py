@@ -28,16 +28,19 @@ required = [
     "data/machine-readable-inventory.json",
     "data/learning-map.v1.json",
     "data/pilot-index.v1.json",
+    "data/details/index.v1.json",
     "data/surface-policy.v1.json",
     "docs/implementation-plan.md",
     "docs/learning-map-v1.md",
     "docs/pilot-index-v1.md",
     "docs/surface-policy-v1.md",
     "schemas/learning-map.v1.schema.json",
+    "schemas/detail.v1.schema.json",
     "schemas/surface-policy.v1.schema.json",
     "visuals/learning-map-v1.canvas",
     "scripts/obsidian_views.py",
     "scripts/build_pilot_index.py",
+    "scripts/validate_details.py",
     "scripts/validate_view_export.py",
     "docs/obsidian-vault-spiegel.md",
 ]
@@ -257,6 +260,31 @@ assert "bridgeTypeLabel" in app_js
 assert "bridge-role" in app_js
 assert "bridge-type" in app_js
 assert "activeCluster" in app_js
+
+
+detail_schema = j("schemas/detail.v1.schema.json")
+detail_index = j("data/details/index.v1.json")
+assert detail_schema["schema"] == "erzieherausbildung.detail.contract.v1"
+assert detail_schema["dataSchema"] == "erzieherausbildung.detail.v1"
+assert detail_schema["indexSchema"] == detail_index["schema"]
+assert detail_schema["sourcePolicy"]["raw_text_committed"] is False
+assert len(detail_index["details"]) >= 5
+detail_paths = [entry["path"] for entry in detail_index["details"]]
+assert len(detail_paths) == len(set(detail_paths))
+for entry in detail_index["details"]:
+    assert entry["path"].startswith("/data/details/")
+    detail = j(entry["path"].lstrip("/"))
+    assert detail["schema"] == detail_schema["dataSchema"]
+    assert detail["id"] == entry["id"]
+    assert detail["sourcePolicy"]["raw_text_committed"] is False
+    assert detail["sourcePolicy"]["source_refs_only"] is True
+    assert detail["sourcePolicy"]["no_direct_citation"] is True
+    assert detail["sourcePolicy"]["local_origin_material_only"] is True
+    assert detail["topicIds"]
+    assert detail["axisIds"]
+    assert detail["sourceRefs"]
+    assert detail["excerptRefs"]
+assert "validate_details.py" in (root / ".github/workflows/validate.yml").read_text(encoding="utf-8")
 assert "cluster-action" in app_js
 assert 'document.createElement("details")' in app_js
 

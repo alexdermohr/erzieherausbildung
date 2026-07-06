@@ -1,0 +1,58 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-eingewoehnung-v1",
+  "title": "Eingewöhnung",
+  "topicIds": [
+    "eingewoehnung"
+  ],
+  "axisIds": [
+    "beziehung-entwicklung"
+  ],
+  "sourceRefs": [
+    "doc-008"
+  ],
+  "excerptRefs": [
+    "doc-008-eingewoehnung-bindung-individuell"
+  ],
+  "summary": "Eingewöhnung wird als individueller Übergangsprozess verstanden, in dem Beziehungssicherheit wichtiger ist als ein starrer Zeitplan.",
+  "coreIdeas": [
+    "Das Kind braucht verlässliche Begleitung, bevor Trennung tragfähig werden kann.",
+    "Neue Beziehungen entstehen über wiederholte, feinfühlige und vorhersehbare Situationen.",
+    "Eltern oder vertraute Bezugspersonen sind Teil des Übergangs, nicht Störfaktor der Ablösung."
+  ],
+  "practiceAnchors": [
+    "Eingewöhnung nicht nach Kalender, sondern nach Signalen von Sicherheit, Belastung und Kontaktaufnahme planen.",
+    "Trennungssituationen beobachten: Wer reguliert das Kind, wodurch entsteht Beruhigung, wann kippt Überforderung?"
+  ],
+  "commonMisunderstandings": [
+    "Eingewöhnung ist nicht gleich schnelle Trennung.",
+    "Bindung an neue Fachkräfte entsteht nicht durch Gewöhnung allein, sondern durch verlässliche Beziehungserfahrung."
+  ],
+  "bridges": [
+    {
+      "targetId": "bindung-beziehung",
+      "relation": "Eingewöhnung ist ein konkreter Prüfstein für Bindungs- und Beziehungsgestaltung."
+    },
+    {
+      "targetId": "uebergaenge",
+      "relation": "Eingewöhnung ist ein Übergang zwischen Familie und Institution."
+    },
+    {
+      "targetId": "elternkooperation",
+      "relation": "Elternkooperation stabilisiert den Übergangsprozess."
+    }
+  ],
+  "openQuestions": [
+    "Welche Beobachtungskriterien zeigen, dass ein Kind ausreichend Sicherheit aufgebaut hat?",
+    "Welche Rolle spielt Elternkommunikation in schwierigen Eingewöhnungsverläufen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.32,
+  "interpolation": 0.3,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

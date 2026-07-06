@@ -182,3 +182,18 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
   .canvas-detail,
   .excerpt-card { background: rgba(255,255,255,.035); fill: color-mix(in srgb, var(--panel) 88%, black); }
 }
+
+/* detail model surface */
+.knowledge-detail-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+  margin: 12px 0;
+  background: rgba(255,255,255,.50);
+}
+.knowledge-detail-card h4 { margin: 4px 0 8px; }
+.detail-subsection { margin-top: 12px; }
+.detail-subsection h5 { margin: 0 0 6px; font-size: .92rem; color: var(--accent); }
+@media (prefers-color-scheme: dark) {
+  .knowledge-detail-card { background: rgba(255,255,255,.045); }
+}
