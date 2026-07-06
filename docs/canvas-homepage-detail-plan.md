@@ -150,3 +150,15 @@ scripts/validate_details.py
 ```
 
 Resonanzprüfung: Die Detailschicht stärkt die Homepage als Lernfläche, ohne Obsidian als Denkfläche zu ersetzen. Kontrastprüfung: Wenn später alle 44 Themen sofort mit generischen Details gefüllt würden, entstünde Scheingenauigkeit. Deshalb bleibt die Detailschicht excerpt-gebunden und validiert.
+
+
+## Detail-Coverage v1
+
+Die Detailschicht weist nun explizit aus, wie viel Themenabdeckung sie hat. `data/details/index.v1.json` enthält eine `coverage`-Sektion mit Gesamtzahl, Detailzahl, fehlenden Themen und Achsenaufschlüsselung.
+
+These: Coverage-Signale machen die Lernlandkarte ehrlicher, weil sie Tiefe nicht behaupten, sondern anzeigen.
+Antithese: Sichtbare Lücken können unfertig wirken.
+Synthese: Das ist erwünscht. Die Lücke ist ein Arbeitsauftrag, kein Makel.
+
+Nutzen: Die Homepage kann `Detail vorhanden` und `Detail offen` markieren.
+Risiko: Nutzer könnten offene Themen als unwichtig lesen. Gegenmittel: Der Text benennt die epistemische Leere ausdrücklich.

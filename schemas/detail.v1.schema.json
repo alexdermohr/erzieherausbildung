@@ -43,5 +43,28 @@
   "numericRanges": {
     "uncertainty": "0..1",
     "interpolation": "0..1"
-  }
+  },
+  "indexRequired": [
+    "schema",
+    "coverage",
+    "details"
+  ],
+  "coverageFields": [
+    "topicCount",
+    "detailCount",
+    "detailedTopicCount",
+    "missingTopicCount",
+    "detailCoverageRatio",
+    "detailedTopicIds",
+    "missingTopicIds",
+    "byAxis",
+    "coverageStatus",
+    "epistemicEmpty"
+  ],
+  "coverageStatuses": [
+    "pilot-partial",
+    "expanding",
+    "complete",
+    "stale"
+  ]
 }

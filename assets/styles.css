@@ -197,3 +197,6 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
 @media (prefers-color-scheme: dark) {
   .knowledge-detail-card { background: rgba(255,255,255,.045); }
 }
+
+.detail-ready-tag { border: 1px solid var(--accent); }
+.detail-missing-tag { background: transparent; border: 1px dashed var(--line); color: var(--muted); }
