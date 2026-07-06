@@ -1,5 +1,6 @@
 import json
 import re
+import importlib.util
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
@@ -26,14 +27,17 @@ required = [
     "data/source-summary.json",
     "data/machine-readable-inventory.json",
     "data/learning-map.v1.json",
+    "data/pilot-index.v1.json",
     "data/surface-policy.v1.json",
     "docs/implementation-plan.md",
     "docs/learning-map-v1.md",
+    "docs/pilot-index-v1.md",
     "docs/surface-policy-v1.md",
     "schemas/learning-map.v1.schema.json",
     "schemas/surface-policy.v1.schema.json",
     "visuals/learning-map-v1.canvas",
     "scripts/obsidian_views.py",
+    "scripts/build_pilot_index.py",
     "scripts/validate_view_export.py",
     "docs/obsidian-vault-spiegel.md",
 ]
@@ -255,4 +259,13 @@ assert "bridge-type" in app_js
 assert "activeCluster" in app_js
 assert "cluster-action" in app_js
 assert 'document.createElement("details")' in app_js
+
+spec = importlib.util.spec_from_file_location("pilot_index_builder", root / "scripts/build_pilot_index.py")
+pilot_index_builder = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(pilot_index_builder)
+expected_pilot_json, expected_pilot_doc = pilot_index_builder.build_outputs()
+assert (root / "data/pilot-index.v1.json").read_text(encoding="utf-8") == expected_pilot_json
+assert (root / "docs/pilot-index-v1.md").read_text(encoding="utf-8") == expected_pilot_doc
+
 print("repository validation passed")
