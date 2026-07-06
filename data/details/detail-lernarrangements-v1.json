@@ -1,0 +1,58 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-lernarrangements-v1",
+  "title": "Lernarrangements",
+  "topicIds": [
+    "lernarrangements"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-021"
+  ],
+  "excerptRefs": [
+    "doc-021-lernarrangement-interessen-planung"
+  ],
+  "summary": "Lernarrangements sind geplante Bildungsangebote, die sich an Interessen, Ressourcen und beobachtbaren Themen der Kinder orientieren sollen.",
+  "coreIdeas": [
+    "Planung ist notwendig, darf aber das Kind nicht durch ein fertiges Aktivitätsprogramm ersetzen.",
+    "Interessen und Ressourcen der Kinder liefern fachliche Gründe für Material, Setting und Begleitung.",
+    "Ein Lernarrangement verbindet Beobachtung, Bildungsbereich, pädagogische Begleitung und Reflexion."
+  ],
+  "practiceAnchors": [
+    "Vor der Planung fragen: Welches Thema der Kinder wurde beobachtet und welche Ressource kann daran anschließen?",
+    "Material und Raum so wählen, dass Kinder selbst tätig werden können und nicht nur Anweisungen ausführen."
+  ],
+  "commonMisunderstandings": [
+    "Ein Angebot ist nicht automatisch ein Lernarrangement.",
+    "Kindorientierung bedeutet nicht Planlosigkeit, sondern begründete Offenheit."
+  ],
+  "bridges": [
+    {
+      "targetId": "beobachtung",
+      "relation": "Beobachtung liefert Hinweise auf Bildungsthemen und Interessen."
+    },
+    {
+      "targetId": "ressourcenorientierung",
+      "relation": "Ressourcenorientierung bestimmt die Anschlussfähigkeit des Arrangements."
+    },
+    {
+      "targetId": "bildungsbereiche",
+      "relation": "Bildungsbereiche geben mögliche fachliche Rahmungen."
+    }
+  ],
+  "openQuestions": [
+    "Welche Planungsstruktur soll später als Standardvorlage genutzt werden?",
+    "Wie werden Kindinteresse, Bildungsziel und Reflexion klar voneinander unterschieden?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.34,
+  "interpolation": 0.33,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

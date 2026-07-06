@@ -1,0 +1,58 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-elternkooperation-v1",
+  "title": "Elternkooperation",
+  "topicIds": [
+    "elternkooperation"
+  ],
+  "axisIds": [
+    "eltern-kooperation"
+  ],
+  "sourceRefs": [
+    "doc-029"
+  ],
+  "excerptRefs": [
+    "doc-029-elternkooperation-erziehungspartnerschaft"
+  ],
+  "summary": "Elternkooperation verbindet Familie und Einrichtung: Pädagogische Arbeit wird tragfähiger, wenn Austausch, Vertrauen und gemeinsame Verantwortung bewusst gestaltet werden.",
+  "coreIdeas": [
+    "Eltern sind nicht nur Informationsquelle, sondern Teil des pädagogischen Beziehungssystems.",
+    "Erziehungspartnerschaft braucht Kommunikation, Vertrauen und geklärte Zuständigkeiten.",
+    "Übergänge und schwierige Situationen werden stabiler, wenn Familie und Einrichtung nicht gegeneinander arbeiten."
+  ],
+  "practiceAnchors": [
+    "Elterngespräche vorbereiten: Anlass, Beobachtung, Ziel, offene Fragen und gemeinsame nächste Schritte trennen.",
+    "Bei Spannungen nicht sofort in Verteidigung gehen, sondern die Familienperspektive als Informationsquelle prüfen."
+  ],
+  "commonMisunderstandings": [
+    "Elternkooperation ist nicht bloß freundlicher Kontakt an der Tür.",
+    "Erziehungspartnerschaft bedeutet nicht, dass Fachkräfte ihren pädagogischen Auftrag aufgeben."
+  ],
+  "bridges": [
+    {
+      "targetId": "eingewoehnung",
+      "relation": "Elternkooperation stabilisiert Eingewöhnung und Übergänge."
+    },
+    {
+      "targetId": "uebergaenge",
+      "relation": "Übergänge brauchen abgestimmte Kommunikation."
+    },
+    {
+      "targetId": "familienperspektive",
+      "relation": "Familienperspektive erweitert das Fallverstehen."
+    }
+  ],
+  "openQuestions": [
+    "Welche Gesprächsmodelle oder Gesprächsphasen sollen später ergänzt werden?",
+    "Wie werden Grenzen der Kooperation bei Konflikten, Schutzfragen oder unterschiedlichen Erwartungen beschrieben?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.35,
+  "interpolation": 0.32,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

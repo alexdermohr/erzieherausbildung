@@ -126,3 +126,27 @@ Hauptannahme: Die Homepage soll nicht nur eine Liste der Inhalte sein, sondern e
 3. Knoten-Detailpanel mit vorhandenen `doc-XXX`-Quellen verbinden.
 4. Pilotexzerpte anzeigen, wenn sie zur Quelle passen.
 5. Spätere Detailschicht als offene Lücke sichtbar machen.
+
+
+## Umsetzungsstand nach Detailmodell v1
+
+Der erste Detailmodell-Slice ist bewusst klein: Er erzeugt fünf Detailaufbereitungen aus vorhandenen `excerpted`-Pilotexzerpten. Dadurch wird keine flächendeckende Tiefe behauptet. Sichtbar werden nur Themen, für die ein Detailobjekt mit `sourceRefs`, `excerptRefs`, `detailStatus`, `uncertainty` und `interpolation` existiert.
+
+Aktive Detailthemen:
+
+- Berufsrolle (`doc-004`)
+- Eingewöhnung (`doc-008`)
+- Beobachtung (`doc-014`)
+- Lernarrangements (`doc-021`)
+- Elternkooperation (`doc-029`)
+
+Neue Artefakte:
+
+```text
+data/details/index.v1.json
+data/details/detail-*.json
+schemas/detail.v1.schema.json
+scripts/validate_details.py
+```
+
+Resonanzprüfung: Die Detailschicht stärkt die Homepage als Lernfläche, ohne Obsidian als Denkfläche zu ersetzen. Kontrastprüfung: Wenn später alle 44 Themen sofort mit generischen Details gefüllt würden, entstünde Scheingenauigkeit. Deshalb bleibt die Detailschicht excerpt-gebunden und validiert.

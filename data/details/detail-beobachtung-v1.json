@@ -1,0 +1,58 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-beobachtung-v1",
+  "title": "Beobachtung",
+  "topicIds": [
+    "beobachtung"
+  ],
+  "axisIds": [
+    "beobachtung-fallverstehen"
+  ],
+  "sourceRefs": [
+    "doc-014"
+  ],
+  "excerptRefs": [
+    "doc-014-beobachtung-ressourcen-fallverstehen"
+  ],
+  "summary": "Beobachtung wird als ressourcenorientierter Zugang zum Kind gefasst: Sie soll Stärken, Interessen und Entwicklungsmöglichkeiten sichtbar machen.",
+  "coreIdeas": [
+    "Beobachtung ist mehr als Hinsehen; sie braucht Perspektive, Auswahl und Dokumentation.",
+    "Ressourcenorientierung verschiebt den Blick von Defiziten zu Kompetenzen und nächsten Schritten.",
+    "Fallverstehen entsteht erst, wenn Beobachtungen geordnet und pädagogisch gedeutet werden."
+  ],
+  "practiceAnchors": [
+    "Dokumentation so formulieren, dass beobachtbares Verhalten und Deutung unterscheidbar bleiben.",
+    "Aus Beobachtungen nächste pädagogische Angebote ableiten, nicht nur Entwicklungsstände benennen."
+  ],
+  "commonMisunderstandings": [
+    "Ressourcenorientierung heißt nicht, Schwierigkeiten zu ignorieren.",
+    "Beobachtung ist nicht automatisch objektiv; sie braucht Reflexion der eigenen Deutungsbrille."
+  ],
+  "bridges": [
+    {
+      "targetId": "ressourcenorientierung",
+      "relation": "Ressourcenorientierung bestimmt, worauf Beobachtung achtet."
+    },
+    {
+      "targetId": "fallverstehen",
+      "relation": "Fallverstehen ordnet Beobachtungen zu pädagogischem Sinn."
+    },
+    {
+      "targetId": "lernarrangements",
+      "relation": "Beobachtungen können Lernarrangements begründen."
+    }
+  ],
+  "openQuestions": [
+    "Welche Verfahren wurden im Unterricht konkret genannt?",
+    "Wie wird aus einer Beobachtung ein fachlich tragfähiger pädagogischer Schluss?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.33,
+  "interpolation": 0.31,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

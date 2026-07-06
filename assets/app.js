@@ -2,6 +2,7 @@ const learningMapUrl = "/data/learning-map.v1.json";
 const knowledgeNetworkUrl = "/data/knowledge-network.v1.json";
 const sourceSummaryUrl = "/data/source-summary.json";
 const excerptIndexUrl = "/data/excerpts/pilot-v1.jsonl";
+const detailIndexUrl = "/data/details/index.v1.json";
 
 const canvasViews = [
   {
@@ -28,6 +29,7 @@ const state = {
   map: null,
   network: null,
   excerpts: [],
+  details: [],
   activeAxis: "all",
   activeCluster: "all",
   canvas: {
@@ -289,6 +291,67 @@ async function loadExcerpts() {
   }
 }
 
+async function loadDetails() {
+  try {
+    const response = await fetch(detailIndexUrl);
+    if (!response.ok) return [];
+    const index = await response.json();
+    const entries = Array.isArray(index.details) ? index.details : [];
+    return Promise.all(entries.map(async (entry) => {
+      try {
+        const detailResponse = await fetch(entry.path);
+        if (!detailResponse.ok) return null;
+        return await detailResponse.json();
+      } catch {
+        return null;
+      }
+    })).then((items) => items.filter(Boolean));
+  } catch {
+    return [];
+  }
+}
+
+function matchingDetails(sources, title, topicId = "", axisId = "") {
+  const sourceSet = new Set((sources ?? []).map(String));
+  const titleNorm = normalizeText(title);
+  const topicNorm = normalizeText(topicId);
+  const axisNorm = normalizeText(axisId);
+  return state.details.filter((detail) => {
+    const sourceMatch = (detail.sourceRefs ?? []).some((source) => sourceSet.has(String(source)));
+    const topicMatch = (detail.topicIds ?? []).some((topic) => normalizeText(topic) === topicNorm || normalizeText(topic) === titleNorm);
+    const axisMatch = axisNorm && (detail.axisIds ?? []).some((axis) => normalizeText(axis) === axisNorm);
+    const titleMatch = normalizeText(detail.title).includes(titleNorm) || titleNorm.includes(normalizeText(detail.title));
+    return sourceMatch || topicMatch || axisMatch || titleMatch;
+  });
+}
+
+function appendListSection(target, title, items) {
+  if (!items?.length) return;
+  const section = el("div", "detail-subsection");
+  section.append(el("h5", "", title));
+  const list = el("ul", "compact-list");
+  items.forEach((item) => list.append(el("li", "", item)));
+  section.append(list);
+  target.append(section);
+}
+
+function renderKnowledgeDetail(target, detail) {
+  const card = el("article", "knowledge-detail-card");
+  card.append(el("p", "module-meta", `Detailstatus: ${detail.detailStatus ?? "draft"} · Unsicherheit ${detail.uncertainty ?? "?"} · Interpolation ${detail.interpolation ?? "?"}`));
+  card.append(el("h4", "", detail.title));
+  card.append(el("p", "", detail.summary));
+  appendListSection(card, "Kernideen", detail.coreIdeas);
+  appendListSection(card, "Praxisanker", detail.practiceAnchors);
+  appendListSection(card, "Typische Fehlannahmen", detail.commonMisunderstandings);
+  appendListSection(card, "Offene Fragen", detail.openQuestions);
+  if (detail.bridges?.length) {
+    const bridgeList = detail.bridges.map((bridge) => `${bridge.targetId}: ${bridge.relation}`);
+    appendListSection(card, "Brücken", bridgeList);
+  }
+  card.append(el("p", "fineprint", `Beleganker: ${(detail.sourceRefs ?? []).join(", ")} · Exzerpte: ${(detail.excerptRefs ?? []).join(", ")}`));
+  target.append(card);
+}
+
 function activeCanvasView() {
   return canvasViews.find((view) => view.id === state.canvas.activeView) ?? canvasViews[0];
 }
@@ -433,7 +496,9 @@ function renderCanvasDetail(node) {
   const summary = context.topic
     ? `Dieses Thema gehört zur Achse „${context.topic.axisTitle}“ und ist über Quellenanker mit der späteren Detailaufbereitung verbindbar.`
     : context.axis?.summary ?? "Dieser Canvas-Knoten ist noch nicht eindeutig an eine Sinnachse oder ein Thema gebunden.";
-  const excerpts = matchingExcerpts(sources, heading, context.topic?.id ?? context.axis?.id ?? node.id);
+  const topicOrAxisId = context.topic?.id ?? context.axis?.id ?? node.id;
+  const excerpts = matchingExcerpts(sources, heading, topicOrAxisId);
+  const details = matchingDetails(sources, heading, context.topic?.id ?? "", context.axis?.id ?? "");
 
   target.append(el("p", "eyebrow", context.kind === "topic" ? "Themenknoten" : context.kind === "axis" ? "Sinnachse" : "Canvas-Knoten"));
   target.append(el("h3", "", heading));
@@ -441,6 +506,15 @@ function renderCanvasDetail(node) {
   if (context.topic?.axisTitle) target.append(el("p", "fineprint", `Achse: ${context.topic.axisTitle}`));
   target.append(el("p", "", summary));
   appendSourceTags(target, sources);
+
+  const detailBlock = el("article", "detail-note");
+  detailBlock.append(el("h4", "", "Detailaufbereitung"));
+  if (details.length) {
+    details.slice(0, 3).forEach((detail) => renderKnowledgeDetail(detailBlock, detail));
+  } else {
+    detailBlock.append(el("p", "", "Für diesen Knoten gibt es noch keine Detaildatei. Das bleibt als Arbeitslücke sichtbar."));
+  }
+  target.append(detailBlock);
 
   const depth = el("article", "detail-note");
   depth.append(el("h4", "", "Detailtiefe"));
@@ -597,15 +671,17 @@ function renderCanvasSurface() {
 }
 
 async function boot() {
-  const [map, network, sourceSummary, excerpts] = await Promise.all([
+  const [map, network, sourceSummary, excerpts, details] = await Promise.all([
     fetch(learningMapUrl).then((res) => res.json()),
     fetch(knowledgeNetworkUrl).then((res) => res.json()),
     fetch(sourceSummaryUrl).then((res) => res.json()).catch(() => null),
     loadExcerpts(),
+    loadDetails(),
   ]);
   state.map = map;
   state.network = network;
   state.excerpts = excerpts;
+  state.details = details;
   renderSourceSummary(sourceSummary);
   renderStats();
   renderCanvasSelector();
