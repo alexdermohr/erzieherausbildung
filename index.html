@@ -21,6 +21,26 @@
         <div id="map-stats" class="stat-grid"></div>
       </section>
 
+      <section class="panel canvas-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Canvas in der Homepage</p>
+            <h2>Räumliche Lernlandkarte</h2>
+            <p class="fineprint">Die Homepage rendert die vorhandenen Obsidian-Canvas-Dateien read-only. Klick auf einen Knoten zeigt Quellenanker, Status und vorhandene Exzerpte.</p>
+          </div>
+          <label class="filter-label">Canvas wählen
+            <select id="canvas-view-select"></select>
+          </label>
+        </div>
+        <div class="canvas-layout">
+          <div class="canvas-stage-wrap">
+            <p id="canvas-status" class="fineprint">Lade Canvas…</p>
+            <div id="canvas-viewer" class="canvas-viewer" aria-label="Canvas-Visualisierung"></div>
+          </div>
+          <aside id="canvas-detail" class="canvas-detail" aria-live="polite"></aside>
+        </div>
+      </section>
+
       <section class="panel">
         <div class="section-head">
           <div>
