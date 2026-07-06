@@ -3,15 +3,18 @@
   "source": "data/excerpts/*.jsonl",
   "purpose": "Aggregierter Abdeckungsstand der ersten Belegknoten; keine Rohtextablage und keine Vollständigkeitsbehauptung.",
   "totals": {
-    "entries": 5
+    "entries": 7
   },
   "byReviewStatus": {
-    "draft": 5
+    "draft": 5,
+    "needs-source": 2
   },
   "byClaimType": {
-    "excerpted": 5
+    "excerpted": 5,
+    "question": 2
   },
   "bySourceCluster": {
+    "kein lernfeld": 2,
     "lernfeld 1": 1,
     "lernfeld 2": 1,
     "lernfeld 3": 1,
@@ -23,23 +26,30 @@
     "Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
     "Lernfeld 4_ Lernarragments.pdf",
     "Lernfeld 5_ Elternkooperation.pdf",
-    "S1_ Berufsrolle.pdf"
+    "S1_ Berufsrolle.pdf",
+    "S4_ Informatik.pdf",
+    "S4_ Sprache und Kommunikation.pdf"
   ],
   "concepts": {
     "Beobachtung": 1,
     "Berufsrolle": 1,
     "Bindung und Beziehung": 1,
+    "Digitale Bildung": 1,
     "Eingewöhnung": 1,
     "Elternkooperation": 1,
     "Erziehungspartnerschaft": 1,
     "Fallverstehen": 1,
     "Familienperspektive": 1,
+    "Informatik": 1,
     "Interessenorientierung": 1,
+    "Kommunikation": 1,
     "Lernarrangements": 1,
     "Planung": 1,
     "Professionelle Haltung": 1,
+    "Querschnitt": 2,
     "Reflexion": 1,
     "Ressourcenorientierung": 2,
+    "Sprache": 1,
     "Übergang": 1
   },
   "knownLimits": [

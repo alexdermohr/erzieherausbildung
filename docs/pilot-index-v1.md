@@ -12,10 +12,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 5
-- Reviewstatus: {'draft': 5}
-- Claim-Typen: {'excerpted': 5}
-- Lernfelder/Cluster: {'lernfeld 1': 1, 'lernfeld 2': 1, 'lernfeld 3': 1, 'lernfeld 4': 1, 'lernfeld 5': 1}
+- Einträge: 7
+- Reviewstatus: {'draft': 5, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 5, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 1, 'lernfeld 3': 1, 'lernfeld 4': 1, 'lernfeld 5': 1}
 
 ## Quellen im Pilot
 
@@ -24,23 +24,30 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Lernfeld 4_ Lernarragments.pdf
 - Lernfeld 5_ Elternkooperation.pdf
 - S1_ Berufsrolle.pdf
+- S4_ Informatik.pdf
+- S4_ Sprache und Kommunikation.pdf
 
 ## Begriffe im Pilot
 
 - Beobachtung: 1
 - Berufsrolle: 1
 - Bindung und Beziehung: 1
+- Digitale Bildung: 1
 - Eingewöhnung: 1
 - Elternkooperation: 1
 - Erziehungspartnerschaft: 1
 - Fallverstehen: 1
 - Familienperspektive: 1
+- Informatik: 1
 - Interessenorientierung: 1
+- Kommunikation: 1
 - Lernarrangements: 1
 - Planung: 1
 - Professionelle Haltung: 1
+- Querschnitt: 2
 - Reflexion: 1
 - Ressourcenorientierung: 2
+- Sprache: 1
 - Übergang: 1
 
 ## Grenze
