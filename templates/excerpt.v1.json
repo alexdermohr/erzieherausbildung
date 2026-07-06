@@ -1,20 +1,19 @@
 {
-  "id": "lernfeld-2-eingewoehnung-beispiel",
+  "id": "lernfeld-2-eingewoehnung-offene-frage",
   "sourceCluster": "lernfeld 2",
   "sourceTitle": "Dateititel ohne Rohkopie",
-  "sourceLocator": "Seite oder Abschnitt falls bekannt",
-  "claimType": "excerpted",
-  "summary": "Kurze quellennahe Zusammenfassung in eigenen Worten.",
+  "sourceLocator": "not-yet-located",
+  "claimType": "question",
+  "summary": "Welche quellennahe Aussage soll aus dieser Quelle später geprüft übernommen werden?",
   "concepts": [
     "Eingewöhnung",
     "Beziehung"
   ],
   "practiceUse": "Wofür hilft das in Planung, Handeln oder Reflexion?",
-  "examRelevance": "Welche Prüfungsfrage könnte damit beantwortet werden?",
   "links": [
     "lernfeld-2",
     "beziehung"
   ],
-  "reviewStatus": "draft",
-  "uncertainty": 0.35
+  "reviewStatus": "needs-source",
+  "uncertainty": 0.75
 }

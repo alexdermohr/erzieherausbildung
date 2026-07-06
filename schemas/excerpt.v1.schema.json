@@ -1,15 +1,27 @@
 {
-  "schema": "excerpt.v1",
+  "schema": "erzieherausbildung.excerpt.contract.v1",
+  "dataSchema": "erzieherausbildung.excerpt.v1",
   "required": [
     "id",
     "sourceCluster",
     "sourceTitle",
+    "sourceLocator",
     "claimType",
     "summary",
     "concepts",
     "practiceUse",
+    "links",
     "reviewStatus",
     "uncertainty"
+  ],
+  "optional": [
+    "notes"
+  ],
+  "blockedFields": [
+    "rawMaterial",
+    "directCitation",
+    "pageScreenshot",
+    "ocrArtifact"
   ],
   "claimTypes": [
     "title-derived",
@@ -23,5 +35,16 @@
     "needs-source",
     "rejected"
   ],
+  "sourceLocatorPlaceholders": [
+    "unknown",
+    "not-yet-located",
+    "Seite oder Abschnitt falls bekannt"
+  ],
+  "claimDiscipline": {
+    "title-derived": "Strukturhinweis aus Metadaten; darf nicht checked sein und braucht hohe Unsicherheit.",
+    "excerpted": "Quellennahe eigene Zusammenfassung; braucht konkrete Fundstelle.",
+    "interpreted": "Deutung aus einem Exzerpt; braucht konkrete Fundstelle und bleibt als Interpretation markiert.",
+    "question": "Offene Arbeitsfrage; darf nicht checked sein und braucht hohe Unsicherheit."
+  },
   "uncertainty": "number 0..1"
 }
