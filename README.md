@@ -30,6 +30,7 @@ Vercel/Web-App als Lesefläche, Obsidian Canvas als Denkfläche, Miro via Schauw
 - Systemkarte: [`visuals/erzieherausbildung-systemkarte.canvas`](visuals/erzieherausbildung-systemkarte.canvas)
 - Lernlandkarte: [`visuals/learning-map-v1.canvas`](visuals/learning-map-v1.canvas) und [`docs/learning-map-v1.md`](docs/learning-map-v1.md)
 - Wissensnetz: [`docs/knowledge-network-v1.md`](docs/knowledge-network-v1.md) und [`data/knowledge-network.v1.json`](data/knowledge-network.v1.json)
+- Pilot-Index: [`docs/pilot-index-v1.md`](docs/pilot-index-v1.md) und [`data/pilot-index.v1.json`](data/pilot-index.v1.json)
 - Darstellungsentscheidung: [`docs/visualization-decision.md`](docs/visualization-decision.md)
 - Surface Policy: [`docs/surface-policy-v1.md`](docs/surface-policy-v1.md) und [`data/surface-policy.v1.json`](data/surface-policy.v1.json)
 - Obsidian-Vault-Spiegel: [`docs/obsidian-vault-spiegel.md`](docs/obsidian-vault-spiegel.md) und Dry-Run mit `python3 scripts/obsidian_views.py --dry-run`

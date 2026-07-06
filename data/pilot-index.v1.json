@@ -1,0 +1,36 @@
+{
+  "schema": "erzieherausbildung.pilot_index.v1",
+  "source": "data/excerpts/*.jsonl",
+  "purpose": "Aggregierter Abdeckungsstand der ersten Belegknoten; keine Rohtextablage und keine Vollständigkeitsbehauptung.",
+  "totals": {
+    "entries": 2
+  },
+  "byReviewStatus": {
+    "draft": 2
+  },
+  "byClaimType": {
+    "excerpted": 2
+  },
+  "bySourceCluster": {
+    "lernfeld 2": 1,
+    "lernfeld 4": 1
+  },
+  "sourceTitles": [
+    "Lernfeld 2_ Eingewöhnung.pdf",
+    "Lernfeld 4_ Lernarragments.pdf"
+  ],
+  "concepts": {
+    "Bindung und Beziehung": 1,
+    "Eingewöhnung": 1,
+    "Interessenorientierung": 1,
+    "Lernarrangements": 1,
+    "Planung": 1,
+    "Ressourcenorientierung": 1,
+    "Übergang": 1
+  },
+  "knownLimits": [
+    "nur Pilotstand",
+    "alle Einträge draft",
+    "keine systematische Tiefenerschließung"
+  ]
+}
