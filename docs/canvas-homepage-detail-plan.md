@@ -186,3 +186,10 @@ Regel: Kein Thema wandert aus dem Backlog in `data/details/*.json`, bevor ein ne
 Der erste Backlog-Eintrag `sprache-kommunikation` wurde aus `needs-source-location` herausgelöst: `doc-011` liefert eine konkrete Fundstelle zur dialogischen Bilderbuchbetrachtung und Literacy. Daraus wurden ein excerpted Exzerpt und eine Detaildatei erzeugt. Coverage steigt von 5/44 auf 6/44; der Backlog sinkt von 39 auf 38 offene Themen.
 
 Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.
+
+
+## Detail-Slice Ressourcenorientierung v1
+
+Der Medium-Backlog-Eintrag `ressourcenorientierung` wurde aus `doc-014` herausgelöst. Die lokale Fundstelle beschreibt Ressourcen als Fähigkeiten, Interessen, Stärken und unterstützende Kontexte und grenzt Ressourcenorientierung von Defizitblindheit ab. Coverage steigt von 6/44 auf 7/44; der Backlog sinkt von 38 auf 37 offene Themen.
+
+Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.

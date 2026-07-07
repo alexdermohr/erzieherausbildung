@@ -12,10 +12,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 8
-- Reviewstatus: {'draft': 6, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 6, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 2, 'lernfeld 3': 1, 'lernfeld 4': 1, 'lernfeld 5': 1}
+- Einträge: 9
+- Reviewstatus: {'draft': 7, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 7, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 2, 'lernfeld 3': 2, 'lernfeld 4': 1, 'lernfeld 5': 1}
 
 ## Quellen im Pilot
 
@@ -41,18 +41,22 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Erzählen: 1
 - Fallverstehen: 1
 - Familienperspektive: 1
+- Förderung: 1
 - Informatik: 1
+- Interessen: 1
 - Interessenorientierung: 1
 - Kommunikation: 1
 - Lernarrangements: 1
+- Lerngeschichten: 1
 - Literacy: 1
 - Planung: 1
 - Professionelle Haltung: 1
 - Querschnitt: 2
 - Reflexion: 1
-- Ressourcenorientierung: 2
+- Ressourcenorientierung: 3
 - Sprache: 1
 - Sprache und Kommunikation: 1
+- Stärken: 1
 - Zuhören: 1
 - Übergang: 1
 

@@ -1,0 +1,64 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-ressourcenorientierung-v1",
+  "title": "Ressourcenorientierung",
+  "topicIds": [
+    "ressourcenorientierung"
+  ],
+  "axisIds": [
+    "beobachtung-fallverstehen"
+  ],
+  "sourceRefs": [
+    "doc-014"
+  ],
+  "excerptRefs": [
+    "doc-014-ressourcenorientierung-staerken-foerderung"
+  ],
+  "summary": "Ressourcenorientierung bedeutet, Kinder über ihre Fähigkeiten, Interessen, Stärken und unterstützenden Kontexte zu verstehen. Sie ersetzt Defizitwahrnehmung nicht, verschiebt aber den Ausgangspunkt pädagogischer Planung auf tragfähige Ressourcen.",
+  "coreIdeas": [
+    "Ressourcen können individuell, sozial und materiell sein: Fähigkeiten, Motivation, Beziehungen, Unterstützung und Bildungsangebote gehören zusammen.",
+    "Schwierigkeiten bleiben relevant, werden aber nicht zum alleinigen Deutungsrahmen.",
+    "Förderung wird anschlussfähiger, wenn sie an Interessen, Stärken und beobachteten Lernprozessen des Kindes ansetzt."
+  ],
+  "practiceAnchors": [
+    "Beobachtungsnotizen prüfen: Welche Fähigkeit, welches Interesse oder welche soziale Ressource wird sichtbar?",
+    "Förderplanung nicht mit Defizit beginnen, sondern mit dem, woran das Kind bereits arbeitet und worauf es reagiert.",
+    "Im Teamgespräch Ressourcen verschiedener Beobachtungen sammeln, bevor nächste Schritte beschlossen werden."
+  ],
+  "commonMisunderstandings": [
+    "Ressourcenorientierung bedeutet nicht, Probleme zu ignorieren.",
+    "Stärkenorientierung ist nicht bloß positives Formulieren, sondern verändert den fachlichen Ausgangspunkt.",
+    "Ressourcen liegen nicht nur im Kind, sondern auch im Umfeld und in den pädagogisch gestaltbaren Bedingungen."
+  ],
+  "bridges": [
+    {
+      "targetId": "beobachtung",
+      "relation": "Beobachtung liefert die konkreten Hinweise auf Ressourcen."
+    },
+    {
+      "targetId": "fallverstehen",
+      "relation": "Fallverstehen ordnet Ressourcen, Bedürfnisse und Kontexte zusammen."
+    },
+    {
+      "targetId": "foerderplanung",
+      "relation": "Förderplanung soll an vorhandenen Ressourcen anschließen."
+    },
+    {
+      "targetId": "lernarrangements",
+      "relation": "Lernarrangements werden passender, wenn sie Interessen und Stärken aufnehmen."
+    }
+  ],
+  "openQuestions": [
+    "Wie lassen sich Ressourcen im Beobachtungsbogen so dokumentieren, dass Deutung und beobachtbares Verhalten getrennt bleiben?",
+    "Welche Grenze hat Ressourcenorientierung bei Schutzfragen, massiver Belastung oder akuter Überforderung?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.29,
+  "interpolation": 0.27,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
