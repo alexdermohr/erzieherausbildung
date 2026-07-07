@@ -12,14 +12,15 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 11
-- Reviewstatus: {'draft': 9, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 9, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 2, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 1}
+- Einträge: 12
+- Reviewstatus: {'draft': 10, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 10, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 3, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 1}
 
 ## Quellen im Pilot
 
 - Lernfeld 2_ Eingewöhnung.pdf
+- Lernfeld 2_ Eingewöhnung und Bindung.pdf
 - Lernfeld 2_ Sprache & Kommunikation.pdf
 - Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf
 - Lernfeld 4_ Lernarragments.pdf
@@ -32,7 +33,9 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 - Beobachtung: 3
 - Berufsrolle: 1
-- Bindung und Beziehung: 1
+- Bezugsperson: 1
+- Bildungsprozesse: 1
+- Bindung und Beziehung: 2
 - Deutung: 1
 - Dialog: 1
 - Digitale Bildung: 1
@@ -57,6 +60,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Querschnitt: 2
 - Reflexion: 1
 - Ressourcenorientierung: 3
+- Sicherheit: 1
 - Sprache: 1
 - Sprache und Kommunikation: 1
 - Stärken: 1
@@ -64,6 +68,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - kollegialer Austausch: 2
 - naechste Schritte: 1
 - nächste Schritte: 1
+- sichere Basis: 1
 - Übergang: 1
 
 ## Grenze

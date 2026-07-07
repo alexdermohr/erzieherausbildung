@@ -3,9 +3,9 @@
   "purpose": "Steuert die nächste Detailausweitung ohne Scheintiefe: offene Themen werden erst nach quellengebundenem Exzerpt zu Detaildateien.",
   "coverageSnapshot": {
     "topicCount": 44,
-    "detailedTopicCount": 9,
-    "missingTopicCount": 35,
-    "detailCoverageRatio": 0.205
+    "detailedTopicCount": 10,
+    "missingTopicCount": 34,
+    "detailCoverageRatio": 0.227
   },
   "selectionRule": "Nur Themen mit neuem excerpted oder interpreted Exzerpt dürfen in data/details/*.json überführt werden.",
   "blockedFields": [
@@ -16,25 +16,6 @@
     "localPath"
   ],
   "entries": [
-    {
-      "id": "backlog-bindung-beziehung",
-      "topicId": "bindung-beziehung",
-      "title": "Bindung und Beziehung",
-      "axisId": "beziehung-entwicklung",
-      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
-      "sourceRefs": [
-        "doc-008",
-        "doc-016"
-      ],
-      "relatedExcerptRefs": [
-        "doc-008-eingewoehnung-bindung-individuell"
-      ],
-      "priority": "medium",
-      "status": "needs-own-excerpt",
-      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
     {
       "id": "backlog-erziehungspartnerschaft",
       "topicId": "erziehungspartnerschaft",

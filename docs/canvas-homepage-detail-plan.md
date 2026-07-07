@@ -207,3 +207,10 @@ Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext b
 Der Backlog-Eintrag `foerderplanung` wurde aus `doc-014` herausgelöst. Die lokale Fundstelle beschreibt Förderplanung als gezielte Planung nächster Schritte auf Basis dokumentierter Beobachtungen, kollegialem Austausch, Dialog mit dem Kind und Gestaltung der Lernumgebung. Coverage steigt von 8/44 auf 9/44; der Backlog sinkt von 36 auf 35 offene Themen.
 
 Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.
+
+
+## Detail-Slice Bindung und Beziehung v1
+
+Der Medium-Backlog-Eintrag `bindung-beziehung` wurde aus `doc-008` herausgelöst. Die lokale Fundstelle beschreibt eine tragfähige Fachkraft-Kind-Beziehung mit bindungsähnlichen Eigenschaften als Sicherheitsgrundlage für Eingewöhnung, Exploration und Bildungsprozesse. Coverage steigt von 9/44 auf 10/44; der Backlog sinkt von 35 auf 34 offene Themen.
+
+Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.

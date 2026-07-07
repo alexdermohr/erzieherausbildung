@@ -1,0 +1,64 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-bindung-beziehung-v1",
+  "title": "Bindung und Beziehung",
+  "topicIds": [
+    "bindung-beziehung"
+  ],
+  "axisIds": [
+    "beziehung-entwicklung"
+  ],
+  "sourceRefs": [
+    "doc-008"
+  ],
+  "excerptRefs": [
+    "doc-008-bindung-beziehung-sicherheit-bildung"
+  ],
+  "summary": "Bindung und Beziehung bilden eine Sicherheitsgrundlage für pädagogische Prozesse. Eine tragfähige Fachkraft-Kind-Beziehung ermöglicht Orientierung, Beruhigung, Exploration und Beteiligung; sie ist damit nicht Zusatz, sondern Bedingung gelingender Bildung.",
+  "coreIdeas": [
+    "Kinder bewältigen neue Situationen leichter, wenn vertraute Bezugspersonen und verlässliche Fachkräfte Sicherheit geben.",
+    "Eine pädagogische Beziehung soll bindungsähnliche Qualitäten haben, ohne Elternbindung zu ersetzen.",
+    "Sicherheit durch Beziehung unterstützt Exploration, Lernen und Übergänge."
+  ],
+  "practiceAnchors": [
+    "Bei Eingewöhnung beobachten, ob das Kind die Fachkraft als Trost, Orientierung oder sichere Basis nutzen kann.",
+    "Beziehungsgestaltung nicht nur über Nähe, sondern auch über Verlässlichkeit, Feinfühligkeit, Wiederholung und klare Reaktion planen.",
+    "Unsicherheit des Kindes als Beziehungssignal lesen, nicht vorschnell als Verweigerung oder Störung."
+  ],
+  "commonMisunderstandings": [
+    "Bindung und Beziehung sind nicht identisch mit Sympathie.",
+    "Eine Fachkraft ersetzt nicht die Elternbindung, kann aber eine tragfähige pädagogische Beziehung aufbauen.",
+    "Bildung beginnt nicht erst nach der Beziehung; Beziehung ist Teil der Bildungsbedingung."
+  ],
+  "bridges": [
+    {
+      "targetId": "eingewoehnung",
+      "relation": "Eingewöhnung prüft konkret, ob Sicherheit in neuer Beziehung entstehen kann."
+    },
+    {
+      "targetId": "uebergaenge",
+      "relation": "Übergänge brauchen Beziehungssicherheit und verlässliche Bezugspersonen."
+    },
+    {
+      "targetId": "beobachtung",
+      "relation": "Beobachtung zeigt, wie ein Kind Nähe, Distanz, Trost und Exploration nutzt."
+    },
+    {
+      "targetId": "bildung",
+      "relation": "Bildungsprozesse setzen emotionale Sicherheit und Beteiligung voraus."
+    }
+  ],
+  "openQuestions": [
+    "Welche Aussagen aus doc-016 sollen die Beziehungsperspektive ergänzen?",
+    "Wie wird der Unterschied zwischen Elternbindung und pädagogischer Beziehung später präzise markiert?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.3,
+  "interpolation": 0.28,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
