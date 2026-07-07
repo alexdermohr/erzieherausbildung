@@ -92,6 +92,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-foerderplanung-v1",
+      "title": "Förderliche Schlüsse ziehen",
+      "path": "/data/details/detail-foerderplanung-v1.json",
+      "topicIds": [
+        "foerderplanung"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "excerptRefs": [
+        "doc-014-foerderplanung-naechste-schritte"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-lernarrangements-v1",
       "title": "Lernarrangements",
       "path": "/data/details/detail-lernarrangements-v1.json",
@@ -148,16 +166,17 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 8,
-    "detailedTopicCount": 8,
-    "missingTopicCount": 36,
-    "detailCoverageRatio": 0.182,
+    "detailCount": 9,
+    "detailedTopicCount": 9,
+    "missingTopicCount": 35,
+    "detailCoverageRatio": 0.205,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
       "eingewoehnung",
       "elternkooperation",
       "fallverstehen",
+      "foerderplanung",
       "lernarrangements",
       "ressourcenorientierung",
       "sprache-kommunikation"
@@ -175,7 +194,6 @@
       "erziehungspartnerschaft",
       "ethik",
       "familienperspektive",
-      "foerderplanung",
       "gespraechsanlaesse",
       "gesundheit-ernaehrung",
       "institutioneller-auftrag",
@@ -253,16 +271,16 @@
         "axisId": "beobachtung-fallverstehen",
         "title": "Beobachtung, Fallverstehen und Dokumentation",
         "topicCount": 5,
-        "detailedTopicCount": 3,
-        "detailCoverageRatio": 0.6,
+        "detailedTopicCount": 4,
+        "detailCoverageRatio": 0.8,
         "detailedTopicIds": [
           "beobachtung",
           "fallverstehen",
+          "foerderplanung",
           "ressourcenorientierung"
         ],
         "missingTopicIds": [
-          "dokumentation",
-          "foerderplanung"
+          "dokumentation"
         ]
       },
       {

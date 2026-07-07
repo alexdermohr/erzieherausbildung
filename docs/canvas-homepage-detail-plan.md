@@ -200,3 +200,10 @@ Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext b
 Der Medium-Backlog-Eintrag `fallverstehen` wurde aus `doc-014` herausgelöst. Die lokale Fundstelle verbindet Beobachtung, Reflexion, kollegialen Austausch, Hypothesenbildung und nächste Schritte. Coverage steigt von 7/44 auf 8/44; der Backlog sinkt von 37 auf 36 offene Themen.
 
 Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.
+
+
+## Detail-Slice Förderplanung v1
+
+Der Backlog-Eintrag `foerderplanung` wurde aus `doc-014` herausgelöst. Die lokale Fundstelle beschreibt Förderplanung als gezielte Planung nächster Schritte auf Basis dokumentierter Beobachtungen, kollegialem Austausch, Dialog mit dem Kind und Gestaltung der Lernumgebung. Coverage steigt von 8/44 auf 9/44; der Backlog sinkt von 36 auf 35 offene Themen.
+
+Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.

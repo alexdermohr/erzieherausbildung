@@ -1,0 +1,64 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-foerderplanung-v1",
+  "title": "Förderliche Schlüsse ziehen",
+  "topicIds": [
+    "foerderplanung"
+  ],
+  "axisIds": [
+    "beobachtung-fallverstehen"
+  ],
+  "sourceRefs": [
+    "doc-014"
+  ],
+  "excerptRefs": [
+    "doc-014-foerderplanung-naechste-schritte"
+  ],
+  "summary": "Förderplanung übersetzt Beobachtung und Fallverstehen in nächste pädagogische Schritte. Sie fragt, wie Lernprozesse weiter unterstützt werden können: durch gezielte Angebote, veränderte Lernumgebung, kollegial abgestimmte Reaktionen und Dialog mit dem Kind.",
+  "coreIdeas": [
+    "Förderplanung ist mehr als spontane Reaktion; sie ergänzt Alltagshandeln durch bewusste nächste Schritte.",
+    "Nächste Schritte sollen auf dokumentierten Beobachtungen und kollegialem Austausch beruhen.",
+    "Motivation, Wissen, Können und Lerngelegenheiten des Kindes bestimmen, welche Unterstützung passend ist."
+  ],
+  "practiceAnchors": [
+    "Nach einer Beobachtung festhalten: Was könnte das Kind als nächsten Schritt brauchen, und welche Umgebung hilft dabei?",
+    "Im Team prüfen, ob ein geplantes Angebot an beobachtete Interessen, Ressourcen und Bedürfnisse anschließt.",
+    "Mit dem Kind in Austausch gehen, statt Förderplanung nur über das Kind hinweg zu beschließen."
+  ],
+  "commonMisunderstandings": [
+    "Förderplanung ist nicht Defizitverwaltung.",
+    "Ein nächster Schritt ist nicht automatisch ein fertiges Angebot; auch Beziehung, Material, Raum oder Reaktion können verändert werden.",
+    "Spontane Reaktionen sind nicht falsch, aber sie ersetzen keine reflektierte Planung."
+  ],
+  "bridges": [
+    {
+      "targetId": "beobachtung",
+      "relation": "Beobachtung liefert die Grundlage der Förderplanung."
+    },
+    {
+      "targetId": "fallverstehen",
+      "relation": "Fallverstehen begründet, warum ein bestimmter nächster Schritt sinnvoll ist."
+    },
+    {
+      "targetId": "ressourcenorientierung",
+      "relation": "Ressourcenorientierung bestimmt, woran Förderung anschließen soll."
+    },
+    {
+      "targetId": "lernarrangements",
+      "relation": "Lernarrangements können konkrete Formen geplanter nächster Schritte sein."
+    }
+  ],
+  "openQuestions": [
+    "Wie soll eine spätere Standardstruktur für nächste Schritte aussehen?",
+    "Wie wird verhindert, dass Förderplanung zu starr wird und kindliche Beteiligung verliert?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.3,
+  "interpolation": 0.28,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
