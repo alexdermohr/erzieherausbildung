@@ -1,0 +1,676 @@
+{
+  "schema": "erzieherausbildung.detail_backlog.v1",
+  "purpose": "Steuert die nächste Detailausweitung ohne Scheintiefe: offene Themen werden erst nach quellengebundenem Exzerpt zu Detaildateien.",
+  "coverageSnapshot": {
+    "topicCount": 44,
+    "detailedTopicCount": 5,
+    "missingTopicCount": 39,
+    "detailCoverageRatio": 0.114
+  },
+  "selectionRule": "Nur Themen mit neuem excerpted oder interpreted Exzerpt dürfen in data/details/*.json überführt werden.",
+  "blockedFields": [
+    "rawMaterial",
+    "directCitation",
+    "pageScreenshot",
+    "ocrArtifact",
+    "localPath"
+  ],
+  "entries": [
+    {
+      "id": "backlog-sprache-kommunikation",
+      "topicId": "sprache-kommunikation",
+      "title": "Sprache und Kommunikation",
+      "axisId": "sprache-kommunikation",
+      "axisTitle": "Sprache, Kommunikation und Konflikte",
+      "sourceRefs": [
+        "doc-002",
+        "doc-011"
+      ],
+      "relatedExcerptRefs": [
+        "doc-002-sprache-kommunikation-querschnittsfrage"
+      ],
+      "priority": "high",
+      "status": "needs-source-location",
+      "reason": "Es existiert bereits ein needs-source-Frageexzerpt; zuerst Fundstelle klären, dann excerpted sichern.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-fallverstehen",
+      "topicId": "fallverstehen",
+      "title": "Fallverstehen",
+      "axisId": "beobachtung-fallverstehen",
+      "axisTitle": "Beobachtung, Fallverstehen und Dokumentation",
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "relatedExcerptRefs": [
+        "doc-014-beobachtung-ressourcen-fallverstehen"
+      ],
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-ressourcenorientierung",
+      "topicId": "ressourcenorientierung",
+      "title": "Ressourcenorientierung",
+      "axisId": "beobachtung-fallverstehen",
+      "axisTitle": "Beobachtung, Fallverstehen und Dokumentation",
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "relatedExcerptRefs": [
+        "doc-014-beobachtung-ressourcen-fallverstehen",
+        "doc-021-lernarrangement-interessen-planung"
+      ],
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-bindung-beziehung",
+      "topicId": "bindung-beziehung",
+      "title": "Bindung und Beziehung",
+      "axisId": "beziehung-entwicklung",
+      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
+      "sourceRefs": [
+        "doc-008",
+        "doc-016"
+      ],
+      "relatedExcerptRefs": [
+        "doc-008-eingewoehnung-bindung-individuell"
+      ],
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-erziehungspartnerschaft",
+      "topicId": "erziehungspartnerschaft",
+      "title": "Erziehungspartnerschaft",
+      "axisId": "eltern-kooperation",
+      "axisTitle": "Elternkooperation und Übergänge",
+      "sourceRefs": [
+        "doc-029"
+      ],
+      "relatedExcerptRefs": [
+        "doc-029-elternkooperation-erziehungspartnerschaft"
+      ],
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-familienperspektive",
+      "topicId": "familienperspektive",
+      "title": "Familienperspektive",
+      "axisId": "eltern-kooperation",
+      "axisTitle": "Elternkooperation und Übergänge",
+      "sourceRefs": [
+        "doc-029"
+      ],
+      "relatedExcerptRefs": [
+        "doc-029-elternkooperation-erziehungspartnerschaft"
+      ],
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-uebergaenge",
+      "topicId": "uebergaenge",
+      "title": "Übergänge",
+      "axisId": "eltern-kooperation",
+      "axisTitle": "Elternkooperation und Übergänge",
+      "sourceRefs": [
+        "doc-029",
+        "doc-008"
+      ],
+      "relatedExcerptRefs": [
+        "doc-008-eingewoehnung-bindung-individuell"
+      ],
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-professionelle-haltung",
+      "topicId": "professionelle-haltung",
+      "title": "Professionelle Haltung",
+      "axisId": "professionalitaet",
+      "axisTitle": "Professionelle Haltung und Berufsrolle",
+      "sourceRefs": [
+        "doc-005"
+      ],
+      "relatedExcerptRefs": [
+        "doc-004-berufsrolle-auftrag-reflexion"
+      ],
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-reflexion",
+      "topicId": "reflexion",
+      "title": "Reflexion und Selbstverständnis",
+      "axisId": "professionalitaet",
+      "axisTitle": "Professionelle Haltung und Berufsrolle",
+      "sourceRefs": [
+        "doc-004",
+        "doc-005"
+      ],
+      "relatedExcerptRefs": [
+        "doc-004-berufsrolle-auftrag-reflexion"
+      ],
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-dokumentation",
+      "topicId": "dokumentation",
+      "title": "Dokumentation",
+      "axisId": "beobachtung-fallverstehen",
+      "axisTitle": "Beobachtung, Fallverstehen und Dokumentation",
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-foerderplanung",
+      "topicId": "foerderplanung",
+      "title": "Förderliche Schlüsse ziehen",
+      "axisId": "beobachtung-fallverstehen",
+      "axisTitle": "Beobachtung, Fallverstehen und Dokumentation",
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-anpassung-selbstbestimmung",
+      "topicId": "anpassung-selbstbestimmung",
+      "title": "Anpassung und Selbstbestimmung",
+      "axisId": "beziehung-entwicklung",
+      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
+      "sourceRefs": [
+        "doc-016"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-aufsichtspflicht",
+      "topicId": "aufsichtspflicht",
+      "title": "Aufsichtspflicht",
+      "axisId": "beziehung-entwicklung",
+      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
+      "sourceRefs": [
+        "doc-010"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-selbstwirksamkeit",
+      "topicId": "selbstwirksamkeit",
+      "title": "Selbstwirksamkeit",
+      "axisId": "beziehung-entwicklung",
+      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
+      "sourceRefs": [
+        "doc-010"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-gesundheit-ernaehrung",
+      "topicId": "gesundheit-ernaehrung",
+      "title": "Gesundheit und Ernährung",
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "sourceRefs": [
+        "doc-026"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-kunst-aesthetik",
+      "topicId": "kunst-aesthetik",
+      "title": "Kunst und Ästhetik",
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "sourceRefs": [
+        "doc-020"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-mathematik",
+      "topicId": "mathematik",
+      "title": "Frühkindliche Mathematik",
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "sourceRefs": [
+        "doc-019",
+        "doc-024"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-musik-rhythmik",
+      "topicId": "musik-rhythmik",
+      "title": "Musik und Rhythmik",
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "sourceRefs": [
+        "doc-023"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-naturwissenschaft",
+      "topicId": "naturwissenschaft",
+      "title": "Natur, Umwelt, Technik",
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "sourceRefs": [
+        "doc-018"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-religion-ethik",
+      "topicId": "religion-ethik",
+      "title": "Religion, Gesellschaft und Ethik",
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "sourceRefs": [
+        "doc-028"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-sozialpaedagogische-grundlagen",
+      "topicId": "sozialpaedagogische-grundlagen",
+      "title": "Sozialpädagogische Grundlagen",
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "sourceRefs": [
+        "doc-027",
+        "doc-022"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-theater",
+      "topicId": "theater",
+      "title": "Theater",
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "sourceRefs": [
+        "doc-025"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-elterngespraeche",
+      "topicId": "elterngespraeche",
+      "title": "Elterngespräche",
+      "axisId": "eltern-kooperation",
+      "axisTitle": "Elternkooperation und Übergänge",
+      "sourceRefs": [
+        "doc-029"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-macht-verantwortung",
+      "topicId": "macht-verantwortung",
+      "title": "Macht und Verantwortung",
+      "axisId": "gruppe-institution-politik",
+      "axisTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "sourceRefs": [
+        "doc-015",
+        "doc-016"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-partizipation",
+      "topicId": "partizipation",
+      "title": "Partizipation",
+      "axisId": "gruppe-institution-politik",
+      "axisTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "sourceRefs": [
+        "doc-015",
+        "doc-016"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-politik",
+      "topicId": "politik",
+      "title": "Politische Bildung",
+      "axisId": "gruppe-institution-politik",
+      "axisTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "sourceRefs": [
+        "doc-015"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-regeln-struktur",
+      "topicId": "regeln-struktur",
+      "title": "Regeln und Struktur",
+      "axisId": "gruppe-institution-politik",
+      "axisTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "sourceRefs": [
+        "doc-013",
+        "doc-017"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-wohngruppe",
+      "topicId": "wohngruppe",
+      "title": "Wohngruppe",
+      "axisId": "gruppe-institution-politik",
+      "axisTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "sourceRefs": [
+        "doc-013",
+        "doc-017"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-arbeitsbedingungen",
+      "topicId": "arbeitsbedingungen",
+      "title": "Arbeitsbedingungen",
+      "axisId": "professionalitaet",
+      "axisTitle": "Professionelle Haltung und Berufsrolle",
+      "sourceRefs": [
+        "doc-006"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-arbeitsfelder",
+      "topicId": "arbeitsfelder",
+      "title": "Arbeitsfelder",
+      "axisId": "professionalitaet",
+      "axisTitle": "Professionelle Haltung und Berufsrolle",
+      "sourceRefs": [
+        "doc-007"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-bildungsleitlinien",
+      "topicId": "bildungsleitlinien",
+      "title": "Bildungsleitlinien als Rahmen",
+      "axisId": "rahmen-recht-ethik",
+      "axisTitle": "Rahmen, Recht, Schutz und Ethik",
+      "sourceRefs": [
+        "doc-003"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-ethik",
+      "topicId": "ethik",
+      "title": "Ethik",
+      "axisId": "rahmen-recht-ethik",
+      "axisTitle": "Rahmen, Recht, Schutz und Ethik",
+      "sourceRefs": [
+        "doc-028"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-institutioneller-auftrag",
+      "topicId": "institutioneller-auftrag",
+      "title": "Institutioneller Auftrag",
+      "axisId": "rahmen-recht-ethik",
+      "axisTitle": "Rahmen, Recht, Schutz und Ethik",
+      "sourceRefs": [
+        "doc-003"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-kindeswohl",
+      "topicId": "kindeswohl",
+      "title": "Kindeswohl und Schutz",
+      "axisId": "rahmen-recht-ethik",
+      "axisTitle": "Rahmen, Recht, Schutz und Ethik",
+      "sourceRefs": [
+        "doc-003",
+        "doc-010"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-rechte",
+      "topicId": "rechte",
+      "title": "Kinderrechte und Beteiligung",
+      "axisId": "rahmen-recht-ethik",
+      "axisTitle": "Rahmen, Recht, Schutz und Ethik",
+      "sourceRefs": [
+        "doc-003",
+        "doc-015"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-dialogische-haltung",
+      "topicId": "dialogische-haltung",
+      "title": "Dialogische Haltung",
+      "axisId": "sprache-kommunikation",
+      "axisTitle": "Sprache, Kommunikation und Konflikte",
+      "sourceRefs": [
+        "doc-009",
+        "doc-011"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-gespraechsanlaesse",
+      "topicId": "gespraechsanlaesse",
+      "title": "Gesprächsanlässe",
+      "axisId": "sprache-kommunikation",
+      "axisTitle": "Sprache, Kommunikation und Konflikte",
+      "sourceRefs": [
+        "doc-009"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-konflikte",
+      "topicId": "konflikte",
+      "title": "Konflikte",
+      "axisId": "sprache-kommunikation",
+      "axisTitle": "Sprache, Kommunikation und Konflikte",
+      "sourceRefs": [
+        "doc-012"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    },
+    {
+      "id": "backlog-sprachbildung",
+      "topicId": "sprachbildung",
+      "title": "Sprachbildung im Alltag",
+      "axisId": "sprache-kommunikation",
+      "axisTitle": "Sprache, Kommunikation und Konflikte",
+      "sourceRefs": [
+        "doc-011"
+      ],
+      "relatedExcerptRefs": [],
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
+      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
+      "blockedUntil": "source-excerpted"
+    }
+  ]
+}

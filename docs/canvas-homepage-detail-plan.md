@@ -162,3 +162,21 @@ Synthese: Das ist erwünscht. Die Lücke ist ein Arbeitsauftrag, kein Makel.
 
 Nutzen: Die Homepage kann `Detail vorhanden` und `Detail offen` markieren.
 Risiko: Nutzer könnten offene Themen als unwichtig lesen. Gegenmittel: Der Text benennt die epistemische Leere ausdrücklich.
+
+## Detail-Backlog v1
+
+Die Detailausweitung bleibt quellengebunden. Da derzeit nur fünf `excerpted`-Exzerpte vorhanden sind, erzeugt der nächste Schritt keine erfundenen Detailseiten, sondern eine validierte Arbeitsliste der 39 offenen Themen.
+
+These: Ein Backlog ist hier produktiver als generische Details, weil es die nächste Exzerptarbeit steuert.
+Antithese: Der sichtbare Fortschritt wirkt kleiner als neue Detailkarten.
+Synthese: Das ist fachlich sauberer. Erst Exzerpt, dann Detail.
+
+Neue Artefakte:
+
+```text
+data/details/backlog.v1.json
+schemas/detail-backlog.v1.schema.json
+scripts/validate_detail_backlog.py
+```
+
+Regel: Kein Thema wandert aus dem Backlog in `data/details/*.json`, bevor ein neues `excerpted` oder `interpreted` Exzerpt vorliegt.

@@ -1,0 +1,46 @@
+{
+  "schema": "erzieherausbildung.detail_backlog.contract.v1",
+  "dataSchema": "erzieherausbildung.detail_backlog.v1",
+  "required": [
+    "schema",
+    "purpose",
+    "coverageSnapshot",
+    "selectionRule",
+    "blockedFields",
+    "entries"
+  ],
+  "entryRequired": [
+    "id",
+    "topicId",
+    "title",
+    "axisId",
+    "axisTitle",
+    "sourceRefs",
+    "relatedExcerptRefs",
+    "priority",
+    "status",
+    "reason",
+    "nextAction",
+    "blockedUntil"
+  ],
+  "priorities": [
+    "high",
+    "medium",
+    "normal"
+  ],
+  "statuses": [
+    "needs-source-location",
+    "needs-own-excerpt",
+    "needs-excerpt"
+  ],
+  "blockedUntilValues": [
+    "source-excerpted"
+  ],
+  "blockedFields": [
+    "rawMaterial",
+    "directCitation",
+    "pageScreenshot",
+    "ocrArtifact",
+    "localPath"
+  ]
+}
