@@ -2,6 +2,24 @@
   "schema": "erzieherausbildung.detail_index.v1",
   "details": [
     {
+      "id": "detail-beobachtung-v1",
+      "title": "Beobachtung",
+      "path": "/data/details/detail-beobachtung-v1.json",
+      "topicIds": [
+        "beobachtung"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "excerptRefs": [
+        "doc-014-beobachtung-ressourcen-fallverstehen"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-berufsrolle-v1",
       "title": "Berufsrolle",
       "path": "/data/details/detail-berufsrolle-v1.json",
@@ -38,20 +56,20 @@
       "detailStatus": "draft"
     },
     {
-      "id": "detail-beobachtung-v1",
-      "title": "Beobachtung",
-      "path": "/data/details/detail-beobachtung-v1.json",
+      "id": "detail-elternkooperation-v1",
+      "title": "Elternkooperation",
+      "path": "/data/details/detail-elternkooperation-v1.json",
       "topicIds": [
-        "beobachtung"
+        "elternkooperation"
       ],
       "axisIds": [
-        "beobachtung-fallverstehen"
+        "eltern-kooperation"
       ],
       "sourceRefs": [
-        "doc-014"
+        "doc-029"
       ],
       "excerptRefs": [
-        "doc-014-beobachtung-ressourcen-fallverstehen"
+        "doc-029-elternkooperation-erziehungspartnerschaft"
       ],
       "detailStatus": "draft"
     },
@@ -74,36 +92,37 @@
       "detailStatus": "draft"
     },
     {
-      "id": "detail-elternkooperation-v1",
-      "title": "Elternkooperation",
-      "path": "/data/details/detail-elternkooperation-v1.json",
+      "id": "detail-sprache-kommunikation-v1",
+      "title": "Sprache und Kommunikation",
+      "path": "/data/details/detail-sprache-kommunikation-v1.json",
       "topicIds": [
-        "elternkooperation"
+        "sprache-kommunikation"
       ],
       "axisIds": [
-        "eltern-kooperation"
+        "sprache-kommunikation"
       ],
       "sourceRefs": [
-        "doc-029"
+        "doc-011"
       ],
       "excerptRefs": [
-        "doc-029-elternkooperation-erziehungspartnerschaft"
+        "doc-011-sprache-kommunikation-dialog-literacy"
       ],
       "detailStatus": "draft"
     }
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 5,
-    "detailedTopicCount": 5,
-    "missingTopicCount": 39,
-    "detailCoverageRatio": 0.114,
+    "detailCount": 6,
+    "detailedTopicCount": 6,
+    "missingTopicCount": 38,
+    "detailCoverageRatio": 0.136,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
       "eingewoehnung",
       "elternkooperation",
-      "lernarrangements"
+      "lernarrangements",
+      "sprache-kommunikation"
     ],
     "missingTopicIds": [
       "anpassung-selbstbestimmung",
@@ -141,7 +160,6 @@
       "selbstwirksamkeit",
       "sozialpaedagogische-grundlagen",
       "sprachbildung",
-      "sprache-kommunikation",
       "theater",
       "uebergaenge",
       "wohngruppe"
@@ -183,15 +201,16 @@
         "axisId": "sprache-kommunikation",
         "title": "Sprache, Kommunikation und Konflikte",
         "topicCount": 5,
-        "detailedTopicCount": 0,
-        "detailCoverageRatio": 0.0,
-        "detailedTopicIds": [],
+        "detailedTopicCount": 1,
+        "detailCoverageRatio": 0.2,
+        "detailedTopicIds": [
+          "sprache-kommunikation"
+        ],
         "missingTopicIds": [
           "dialogische-haltung",
           "gespraechsanlaesse",
           "konflikte",
-          "sprachbildung",
-          "sprache-kommunikation"
+          "sprachbildung"
         ]
       },
       {

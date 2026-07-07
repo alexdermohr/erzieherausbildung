@@ -180,3 +180,9 @@ scripts/validate_detail_backlog.py
 ```
 
 Regel: Kein Thema wandert aus dem Backlog in `data/details/*.json`, bevor ein neues `excerpted` oder `interpreted` Exzerpt vorliegt.
+
+## Detail-Slice Sprache und Kommunikation v1
+
+Der erste Backlog-Eintrag `sprache-kommunikation` wurde aus `needs-source-location` herausgelöst: `doc-011` liefert eine konkrete Fundstelle zur dialogischen Bilderbuchbetrachtung und Literacy. Daraus wurden ein excerpted Exzerpt und eine Detaildatei erzeugt. Coverage steigt von 5/44 auf 6/44; der Backlog sinkt von 39 auf 38 offene Themen.
+
+Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.
