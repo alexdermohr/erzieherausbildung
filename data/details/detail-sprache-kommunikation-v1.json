@@ -1,0 +1,64 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-sprache-kommunikation-v1",
+  "title": "Sprache und Kommunikation",
+  "topicIds": [
+    "sprache-kommunikation"
+  ],
+  "axisIds": [
+    "sprache-kommunikation"
+  ],
+  "sourceRefs": [
+    "doc-011"
+  ],
+  "excerptRefs": [
+    "doc-011-sprache-kommunikation-dialog-literacy"
+  ],
+  "summary": "Sprache und Kommunikation sind pädagogische Beziehungspraxis und Bildungsmedium zugleich. Sprachbildung entsteht besonders dort, wo Erwachsene dialogisch zuhören, gemeinsame Aufmerksamkeit herstellen und Kindern Zeit für eigene Bedeutungen geben.",
+  "coreIdeas": [
+    "Sprache wird nicht nur vermittelt, sondern in Beziehung und gemeinsamem Tun erfahren.",
+    "Dialogische Situationen verbinden Zuwendung, Zuhören, Sprechen, Wiederholen und geteilte Aufmerksamkeit.",
+    "Bilderbuchbetrachtung und Erzählen können Literacy-Erfahrungen eröffnen, weil Bilder, Schrift, Geschichte und Gespräch miteinander verbunden werden."
+  ],
+  "practiceAnchors": [
+    "Bei Bilderbüchern nicht nur vorlesen, sondern Fragen, Wiederholungen, Verweilen und kindliche Deutungen zulassen.",
+    "Sprachbildung als Alltagssituation planen: Nähe, Ruhe, gemeinsamer Fokus und echtes Zuhören sind Teil der Methode.",
+    "Beobachten, welche Kinder über Bilder, Geschichten oder Gespräche leichter in Kontakt kommen."
+  ],
+  "commonMisunderstandings": [
+    "Sprachförderung ist nicht nur Wortschatztraining oder korrektes Nachsprechen.",
+    "Kommunikation ist nicht bloß Informationsaustausch; sie stiftet Beziehung und Beteiligung.",
+    "Literacy beginnt nicht erst mit Lesenlernen in der Schule, sondern mit frühen Erfahrungen von Schrift, Bildern, Geschichten und Erzählen."
+  ],
+  "bridges": [
+    {
+      "targetId": "beziehung",
+      "relation": "Dialogische Kommunikation ist eine Form von Beziehungsgestaltung."
+    },
+    {
+      "targetId": "bildung",
+      "relation": "Sprache erschließt Themen, Bedeutungen und gemeinsames Denken."
+    },
+    {
+      "targetId": "beobachtung",
+      "relation": "Sprachliche Beiträge zeigen Interessen, Deutungen und Entwicklungsstände."
+    },
+    {
+      "targetId": "literacy",
+      "relation": "Literacy verbindet Sprache, Schrift, Bilder und Erzählkultur."
+    }
+  ],
+  "openQuestions": [
+    "Welche Aussagen aus doc-002 ergänzen die querschnittliche Rolle von Sprache über Lernfelder hinweg?",
+    "Wie sollen Dialog, Literacy und alltagsintegrierte Sprachbildung später voneinander abgegrenzt werden?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.3,
+  "interpolation": 0.28,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

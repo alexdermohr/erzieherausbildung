@@ -3,26 +3,27 @@
   "source": "data/excerpts/*.jsonl",
   "purpose": "Aggregierter Abdeckungsstand der ersten Belegknoten; keine Rohtextablage und keine Vollständigkeitsbehauptung.",
   "totals": {
-    "entries": 7
+    "entries": 8
   },
   "byReviewStatus": {
-    "draft": 5,
+    "draft": 6,
     "needs-source": 2
   },
   "byClaimType": {
-    "excerpted": 5,
+    "excerpted": 6,
     "question": 2
   },
   "bySourceCluster": {
     "kein lernfeld": 2,
     "lernfeld 1": 1,
-    "lernfeld 2": 1,
+    "lernfeld 2": 2,
     "lernfeld 3": 1,
     "lernfeld 4": 1,
     "lernfeld 5": 1
   },
   "sourceTitles": [
     "Lernfeld 2_ Eingewöhnung.pdf",
+    "Lernfeld 2_ Sprache & Kommunikation.pdf",
     "Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf",
     "Lernfeld 4_ Lernarragments.pdf",
     "Lernfeld 5_ Elternkooperation.pdf",
@@ -34,22 +35,27 @@
     "Beobachtung": 1,
     "Berufsrolle": 1,
     "Bindung und Beziehung": 1,
+    "Dialog": 1,
     "Digitale Bildung": 1,
     "Eingewöhnung": 1,
     "Elternkooperation": 1,
     "Erziehungspartnerschaft": 1,
+    "Erzählen": 1,
     "Fallverstehen": 1,
     "Familienperspektive": 1,
     "Informatik": 1,
     "Interessenorientierung": 1,
     "Kommunikation": 1,
     "Lernarrangements": 1,
+    "Literacy": 1,
     "Planung": 1,
     "Professionelle Haltung": 1,
     "Querschnitt": 2,
     "Reflexion": 1,
     "Ressourcenorientierung": 2,
     "Sprache": 1,
+    "Sprache und Kommunikation": 1,
+    "Zuhören": 1,
     "Übergang": 1
   },
   "knownLimits": [
