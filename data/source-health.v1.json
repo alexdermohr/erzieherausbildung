@@ -1,0 +1,269 @@
+{
+  "schema": "erzieherausbildung.source_health.v1",
+  "purpose": "Macht lokale Quellenlücken sichtbar, ohne Rohtexte oder lokale Inhalte zu veröffentlichen.",
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "local_paths_are_relative_only": true,
+    "diagnostic_metadata_only": true
+  },
+  "summary": {
+    "sourceCount": 28,
+    "okCount": 25,
+    "emptyCount": 3,
+    "missingCount": 0
+  },
+  "sources": [
+    {
+      "sourceRef": "doc-002",
+      "localTextPath": "machine-readable.local/texts/doc-002.txt",
+      "exists": true,
+      "sizeBytes": 53248,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-003",
+      "localTextPath": "machine-readable.local/texts/doc-003.txt",
+      "exists": true,
+      "sizeBytes": 651207,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-004",
+      "localTextPath": "machine-readable.local/texts/doc-004.txt",
+      "exists": true,
+      "sizeBytes": 12156,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-005",
+      "localTextPath": "machine-readable.local/texts/doc-005.txt",
+      "exists": true,
+      "sizeBytes": 67883,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-006",
+      "localTextPath": "machine-readable.local/texts/doc-006.txt",
+      "exists": true,
+      "sizeBytes": 27049,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-007",
+      "localTextPath": "machine-readable.local/texts/doc-007.txt",
+      "exists": true,
+      "sizeBytes": 4781,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-008",
+      "localTextPath": "machine-readable.local/texts/doc-008.txt",
+      "exists": true,
+      "sizeBytes": 70315,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-009",
+      "localTextPath": "machine-readable.local/texts/doc-009.txt",
+      "exists": true,
+      "sizeBytes": 19901,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-010",
+      "localTextPath": "machine-readable.local/texts/doc-010.txt",
+      "exists": true,
+      "sizeBytes": 23843,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-011",
+      "localTextPath": "machine-readable.local/texts/doc-011.txt",
+      "exists": true,
+      "sizeBytes": 95571,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-012",
+      "localTextPath": "machine-readable.local/texts/doc-012.txt",
+      "exists": true,
+      "sizeBytes": 38619,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-013",
+      "localTextPath": "machine-readable.local/texts/doc-013.txt",
+      "exists": true,
+      "sizeBytes": 81719,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-014",
+      "localTextPath": "machine-readable.local/texts/doc-014.txt",
+      "exists": true,
+      "sizeBytes": 83515,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-015",
+      "localTextPath": "machine-readable.local/texts/doc-015.txt",
+      "exists": true,
+      "sizeBytes": 190215,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-016",
+      "localTextPath": "machine-readable.local/texts/doc-016.txt",
+      "exists": true,
+      "sizeBytes": 90445,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-017",
+      "localTextPath": "machine-readable.local/texts/doc-017.txt",
+      "exists": true,
+      "sizeBytes": 81719,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-018",
+      "localTextPath": "machine-readable.local/texts/doc-018.txt",
+      "exists": true,
+      "sizeBytes": 0,
+      "status": "empty"
+    },
+    {
+      "sourceRef": "doc-019",
+      "localTextPath": "machine-readable.local/texts/doc-019.txt",
+      "exists": true,
+      "sizeBytes": 82098,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-020",
+      "localTextPath": "machine-readable.local/texts/doc-020.txt",
+      "exists": true,
+      "sizeBytes": 43362,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-021",
+      "localTextPath": "machine-readable.local/texts/doc-021.txt",
+      "exists": true,
+      "sizeBytes": 48215,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-022",
+      "localTextPath": "machine-readable.local/texts/doc-022.txt",
+      "exists": true,
+      "sizeBytes": 32616,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-023",
+      "localTextPath": "machine-readable.local/texts/doc-023.txt",
+      "exists": true,
+      "sizeBytes": 45737,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-024",
+      "localTextPath": "machine-readable.local/texts/doc-024.txt",
+      "exists": true,
+      "sizeBytes": 18504,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-025",
+      "localTextPath": "machine-readable.local/texts/doc-025.txt",
+      "exists": true,
+      "sizeBytes": 0,
+      "status": "empty"
+    },
+    {
+      "sourceRef": "doc-026",
+      "localTextPath": "machine-readable.local/texts/doc-026.txt",
+      "exists": true,
+      "sizeBytes": 68941,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-027",
+      "localTextPath": "machine-readable.local/texts/doc-027.txt",
+      "exists": true,
+      "sizeBytes": 61771,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-028",
+      "localTextPath": "machine-readable.local/texts/doc-028.txt",
+      "exists": true,
+      "sizeBytes": 15631,
+      "status": "ok"
+    },
+    {
+      "sourceRef": "doc-029",
+      "localTextPath": "machine-readable.local/texts/doc-029.txt",
+      "exists": true,
+      "sizeBytes": 0,
+      "status": "empty"
+    }
+  ],
+  "affectedBacklogEntries": [
+    {
+      "topicId": "erziehungspartnerschaft",
+      "title": "Erziehungspartnerschaft",
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "affectedSourceRefs": [
+        "doc-029"
+      ]
+    },
+    {
+      "topicId": "familienperspektive",
+      "title": "Familienperspektive",
+      "priority": "medium",
+      "status": "needs-own-excerpt",
+      "affectedSourceRefs": [
+        "doc-029"
+      ]
+    },
+    {
+      "topicId": "naturwissenschaft",
+      "title": "Natur, Umwelt, Technik",
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "affectedSourceRefs": [
+        "doc-018"
+      ]
+    },
+    {
+      "topicId": "theater",
+      "title": "Theater",
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "affectedSourceRefs": [
+        "doc-025"
+      ]
+    },
+    {
+      "topicId": "elterngespraeche",
+      "title": "Elterngespräche",
+      "priority": "normal",
+      "status": "needs-excerpt",
+      "affectedSourceRefs": [
+        "doc-029"
+      ]
+    }
+  ],
+  "affectedDetails": [
+    {
+      "detailId": "detail-elternkooperation-v1",
+      "title": "Elternkooperation",
+      "affectedSourceRefs": [
+        "doc-029"
+      ]
+    }
+  ]
+}

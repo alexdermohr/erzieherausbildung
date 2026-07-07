@@ -25,6 +25,7 @@ required = [
     "README.md",
     "data/module-map.json",
     "data/source-summary.json",
+    "data/source-health.v1.json",
     "data/machine-readable-inventory.json",
     "data/learning-map.v1.json",
     "data/pilot-index.v1.json",
@@ -45,6 +46,7 @@ required = [
     "scripts/validate_details.py",
     "scripts/validate_detail_backlog.py",
     "scripts/validate_view_export.py",
+    "scripts/validate_source_health.py",
     "docs/obsidian-vault-spiegel.md",
 ]
 for path in required:
@@ -320,3 +322,11 @@ assert (root / "data/pilot-index.v1.json").read_text(encoding="utf-8") == expect
 assert (root / "docs/pilot-index-v1.md").read_text(encoding="utf-8") == expected_pilot_doc
 
 print("repository validation passed")
+
+source_health = j("data/source-health.v1.json")
+assert source_health["schema"] == "erzieherausbildung.source_health.v1"
+assert source_health["sourcePolicy"]["raw_text_committed"] is False
+assert source_health["sourcePolicy"]["diagnostic_metadata_only"] is True
+assert source_health["summary"]["sourceCount"] == len(source_health["sources"])
+assert "validate_source_health.py" in workflow_validate
+assert any(item["sourceRef"] == "doc-029" and item["status"] == "empty" for item in source_health["sources"])

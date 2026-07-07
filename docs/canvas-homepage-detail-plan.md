@@ -221,3 +221,11 @@ Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext b
 Der Medium-Backlog-Eintrag `uebergaenge` wurde aus `doc-008` herausgelöst. Die lokale Fundstelle beschreibt Übergänge als sensible Wechselprozesse, die stabile Rahmenbedingungen, Vorhersagbarkeit, Übergangsobjekte, Elternbezug und kindorientierte Sicherheit benötigen. Coverage steigt von 10/44 auf 11/44; der Backlog sinkt von 34 auf 33 offene Themen.
 
 Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.
+
+## Source-Health v1
+
+Die Detailausweitung darf nicht nur Backlog-getrieben sein. Vor neuen Details muss sichtbar sein, ob die lokale Textgrundlage tragfähig ist.
+
+Befund: `doc-029` ist lokal als Textdatei vorhanden, aber leer. Daher werden `erziehungspartnerschaft` und `familienperspektive` vorerst nicht ausgebaut, obwohl sie im Backlog als `medium` erscheinen.
+
+Synthese: Eine Source-Health-Projektion macht solche Lücken sichtbar, ohne Rohtexte, OCR oder lokale absolute Pfade zu veröffentlichen.
