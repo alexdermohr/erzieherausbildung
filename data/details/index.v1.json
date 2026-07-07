@@ -74,6 +74,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-fallverstehen-v1",
+      "title": "Fallverstehen",
+      "path": "/data/details/detail-fallverstehen-v1.json",
+      "topicIds": [
+        "fallverstehen"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "excerptRefs": [
+        "doc-014-fallverstehen-beobachtung-deutung-naechste-schritte"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-lernarrangements-v1",
       "title": "Lernarrangements",
       "path": "/data/details/detail-lernarrangements-v1.json",
@@ -130,15 +148,16 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 7,
-    "detailedTopicCount": 7,
-    "missingTopicCount": 37,
-    "detailCoverageRatio": 0.159,
+    "detailCount": 8,
+    "detailedTopicCount": 8,
+    "missingTopicCount": 36,
+    "detailCoverageRatio": 0.182,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
       "eingewoehnung",
       "elternkooperation",
+      "fallverstehen",
       "lernarrangements",
       "ressourcenorientierung",
       "sprache-kommunikation"
@@ -155,7 +174,6 @@
       "elterngespraeche",
       "erziehungspartnerschaft",
       "ethik",
-      "fallverstehen",
       "familienperspektive",
       "foerderplanung",
       "gespraechsanlaesse",
@@ -235,15 +253,15 @@
         "axisId": "beobachtung-fallverstehen",
         "title": "Beobachtung, Fallverstehen und Dokumentation",
         "topicCount": 5,
-        "detailedTopicCount": 2,
-        "detailCoverageRatio": 0.4,
+        "detailedTopicCount": 3,
+        "detailCoverageRatio": 0.6,
         "detailedTopicIds": [
           "beobachtung",
+          "fallverstehen",
           "ressourcenorientierung"
         ],
         "missingTopicIds": [
           "dokumentation",
-          "fallverstehen",
           "foerderplanung"
         ]
       },
