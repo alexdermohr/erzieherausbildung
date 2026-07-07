@@ -238,6 +238,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-sprachbildung-v1",
+      "title": "Sprachbildung im Alltag",
+      "path": "/data/details/detail-sprachbildung-v1.json",
+      "topicIds": [
+        "sprachbildung"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "sourceRefs": [
+        "doc-011"
+      ],
+      "excerptRefs": [
+        "doc-011-sprachbildung-alltag-literacy-erzaehlen"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-sprache-kommunikation-v1",
       "title": "Sprache und Kommunikation",
       "path": "/data/details/detail-sprache-kommunikation-v1.json",
@@ -276,10 +294,10 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 15,
-    "detailedTopicCount": 15,
-    "missingTopicCount": 29,
-    "detailCoverageRatio": 0.341,
+    "detailCount": 16,
+    "detailedTopicCount": 16,
+    "missingTopicCount": 28,
+    "detailCoverageRatio": 0.364,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
@@ -294,6 +312,7 @@
       "konflikte",
       "lernarrangements",
       "ressourcenorientierung",
+      "sprachbildung",
       "sprache-kommunikation",
       "uebergaenge"
     ],
@@ -324,7 +343,6 @@
       "religion-ethik",
       "selbstwirksamkeit",
       "sozialpaedagogische-grundlagen",
-      "sprachbildung",
       "theater",
       "wohngruppe"
     ],
@@ -365,17 +383,16 @@
         "axisId": "sprache-kommunikation",
         "title": "Sprache, Kommunikation und Konflikte",
         "topicCount": 5,
-        "detailedTopicCount": 4,
-        "detailCoverageRatio": 0.8,
+        "detailedTopicCount": 5,
+        "detailCoverageRatio": 1.0,
         "detailedTopicIds": [
           "dialogische-haltung",
           "gespraechsanlaesse",
           "konflikte",
+          "sprachbildung",
           "sprache-kommunikation"
         ],
-        "missingTopicIds": [
-          "sprachbildung"
-        ]
+        "missingTopicIds": []
       },
       {
         "axisId": "beobachtung-fallverstehen",
