@@ -285,6 +285,16 @@ for entry in detail_index["details"]:
     assert detail["sourceRefs"]
     assert detail["excerptRefs"]
 assert "validate_details.py" in (root / ".github/workflows/validate.yml").read_text(encoding="utf-8")
+
+assert detail_index["coverage"]["topicCount"] == len(learning_topics)
+assert detail_index["coverage"]["detailedTopicCount"] == len({topic for entry in detail_index["details"] for topic in entry["topicIds"]})
+assert detail_index["coverage"]["missingTopicCount"] + detail_index["coverage"]["detailedTopicCount"] == detail_index["coverage"]["topicCount"]
+assert detail_index["coverage"]["coverageStatus"] == "pilot-partial"
+assert "epistemicEmpty" in detail_index["coverage"]
+assert "/data/details/index.v1.json" in app_js
+assert "detailCoverageLabel" in app_js
+assert "Detail offen" in app_js
+assert "Detail vorhanden" in app_js
 assert "cluster-action" in app_js
 assert 'document.createElement("details")' in app_js
 

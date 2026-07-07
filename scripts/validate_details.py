@@ -125,6 +125,63 @@ else:
     detail_index = json.loads(index_path.read_text(encoding="utf-8"))
     if detail_index.get("schema") != schema["indexSchema"]:
         problems.append("detail index: bad schema")
+    for key in schema.get("indexRequired", []):
+        if key not in detail_index:
+            problems.append(f"detail index: missing {key}")
+    coverage = detail_index.get("coverage")
+    if not isinstance(coverage, dict):
+        problems.append("detail index: coverage object required")
+    else:
+        for key in schema.get("coverageFields", []):
+            if key not in coverage:
+                problems.append(f"detail index: coverage missing {key}")
+        if coverage.get("coverageStatus") not in set(schema.get("coverageStatuses", [])):
+            problems.append("detail index: bad coverageStatus")
+        topic_ids = sorted(valid_topics)
+        detailed_topic_ids = sorted({topic for entry in detail_index.get("details", []) for topic in entry.get("topicIds", [])})
+        missing_topic_ids = sorted(set(topic_ids) - set(detailed_topic_ids))
+        if coverage.get("topicCount") != len(topic_ids):
+            problems.append("detail index: bad coverage.topicCount")
+        if coverage.get("detailCount") != len(detail_index.get("details", [])):
+            problems.append("detail index: bad coverage.detailCount")
+        if coverage.get("detailedTopicCount") != len(detailed_topic_ids):
+            problems.append("detail index: bad coverage.detailedTopicCount")
+        if coverage.get("missingTopicCount") != len(missing_topic_ids):
+            problems.append("detail index: bad coverage.missingTopicCount")
+        if coverage.get("detailedTopicIds") != detailed_topic_ids:
+            problems.append("detail index: bad coverage.detailedTopicIds")
+        if coverage.get("missingTopicIds") != missing_topic_ids:
+            problems.append("detail index: bad coverage.missingTopicIds")
+        ratio = round(len(detailed_topic_ids) / len(topic_ids), 3) if topic_ids else 0
+        if coverage.get("detailCoverageRatio") != ratio:
+            problems.append("detail index: bad coverage.detailCoverageRatio")
+        if not coverage.get("epistemicEmpty"):
+            problems.append("detail index: missing epistemicEmpty")
+        axes = {axis["id"]: [topic["id"] for topic in axis["topics"]] for axis in learning["axes"]}
+        by_axis = coverage.get("byAxis")
+        if not isinstance(by_axis, list) or len(by_axis) != len(axes):
+            problems.append("detail index: bad coverage.byAxis")
+        else:
+            seen_axes = set()
+            for entry in by_axis:
+                axis_id = entry.get("axisId")
+                if axis_id not in axes:
+                    problems.append(f"detail index: unknown coverage axis {axis_id}")
+                    continue
+                seen_axes.add(axis_id)
+                axis_topics = set(axes[axis_id])
+                axis_detailed = sorted(axis_topics & set(detailed_topic_ids))
+                axis_missing = sorted(axis_topics - set(detailed_topic_ids))
+                if entry.get("topicCount") != len(axis_topics):
+                    problems.append(f"detail index: bad topicCount for {axis_id}")
+                if entry.get("detailedTopicCount") != len(axis_detailed):
+                    problems.append(f"detail index: bad detailedTopicCount for {axis_id}")
+                if entry.get("detailedTopicIds") != axis_detailed:
+                    problems.append(f"detail index: bad detailedTopicIds for {axis_id}")
+                if entry.get("missingTopicIds") != axis_missing:
+                    problems.append(f"detail index: bad missingTopicIds for {axis_id}")
+            if seen_axes != set(axes):
+                problems.append("detail index: coverage.byAxis misses axes")
     seen = set()
     for entry in detail_index.get("details", []):
         detail_id = entry.get("id")

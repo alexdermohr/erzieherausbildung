@@ -91,5 +91,193 @@
       ],
       "detailStatus": "draft"
     }
-  ]
+  ],
+  "coverage": {
+    "topicCount": 44,
+    "detailCount": 5,
+    "detailedTopicCount": 5,
+    "missingTopicCount": 39,
+    "detailCoverageRatio": 0.114,
+    "detailedTopicIds": [
+      "beobachtung",
+      "berufsrolle",
+      "eingewoehnung",
+      "elternkooperation",
+      "lernarrangements"
+    ],
+    "missingTopicIds": [
+      "anpassung-selbstbestimmung",
+      "arbeitsbedingungen",
+      "arbeitsfelder",
+      "aufsichtspflicht",
+      "bildungsleitlinien",
+      "bindung-beziehung",
+      "dialogische-haltung",
+      "dokumentation",
+      "elterngespraeche",
+      "erziehungspartnerschaft",
+      "ethik",
+      "fallverstehen",
+      "familienperspektive",
+      "foerderplanung",
+      "gespraechsanlaesse",
+      "gesundheit-ernaehrung",
+      "institutioneller-auftrag",
+      "kindeswohl",
+      "konflikte",
+      "kunst-aesthetik",
+      "macht-verantwortung",
+      "mathematik",
+      "musik-rhythmik",
+      "naturwissenschaft",
+      "partizipation",
+      "politik",
+      "professionelle-haltung",
+      "rechte",
+      "reflexion",
+      "regeln-struktur",
+      "religion-ethik",
+      "ressourcenorientierung",
+      "selbstwirksamkeit",
+      "sozialpaedagogische-grundlagen",
+      "sprachbildung",
+      "sprache-kommunikation",
+      "theater",
+      "uebergaenge",
+      "wohngruppe"
+    ],
+    "byAxis": [
+      {
+        "axisId": "professionalitaet",
+        "title": "Professionelle Haltung und Berufsrolle",
+        "topicCount": 5,
+        "detailedTopicCount": 1,
+        "detailCoverageRatio": 0.2,
+        "detailedTopicIds": [
+          "berufsrolle"
+        ],
+        "missingTopicIds": [
+          "arbeitsbedingungen",
+          "arbeitsfelder",
+          "professionelle-haltung",
+          "reflexion"
+        ]
+      },
+      {
+        "axisId": "beziehung-entwicklung",
+        "title": "Beziehung, Entwicklung und Selbstwirksamkeit",
+        "topicCount": 5,
+        "detailedTopicCount": 1,
+        "detailCoverageRatio": 0.2,
+        "detailedTopicIds": [
+          "eingewoehnung"
+        ],
+        "missingTopicIds": [
+          "anpassung-selbstbestimmung",
+          "aufsichtspflicht",
+          "bindung-beziehung",
+          "selbstwirksamkeit"
+        ]
+      },
+      {
+        "axisId": "sprache-kommunikation",
+        "title": "Sprache, Kommunikation und Konflikte",
+        "topicCount": 5,
+        "detailedTopicCount": 0,
+        "detailCoverageRatio": 0.0,
+        "detailedTopicIds": [],
+        "missingTopicIds": [
+          "dialogische-haltung",
+          "gespraechsanlaesse",
+          "konflikte",
+          "sprachbildung",
+          "sprache-kommunikation"
+        ]
+      },
+      {
+        "axisId": "beobachtung-fallverstehen",
+        "title": "Beobachtung, Fallverstehen und Dokumentation",
+        "topicCount": 5,
+        "detailedTopicCount": 1,
+        "detailCoverageRatio": 0.2,
+        "detailedTopicIds": [
+          "beobachtung"
+        ],
+        "missingTopicIds": [
+          "dokumentation",
+          "fallverstehen",
+          "foerderplanung",
+          "ressourcenorientierung"
+        ]
+      },
+      {
+        "axisId": "gruppe-institution-politik",
+        "title": "Gruppe, Institution, Wohngruppe und Politik",
+        "topicCount": 5,
+        "detailedTopicCount": 0,
+        "detailCoverageRatio": 0.0,
+        "detailedTopicIds": [],
+        "missingTopicIds": [
+          "macht-verantwortung",
+          "partizipation",
+          "politik",
+          "regeln-struktur",
+          "wohngruppe"
+        ]
+      },
+      {
+        "axisId": "bildungsbereiche",
+        "title": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+        "topicCount": 9,
+        "detailedTopicCount": 1,
+        "detailCoverageRatio": 0.111,
+        "detailedTopicIds": [
+          "lernarrangements"
+        ],
+        "missingTopicIds": [
+          "gesundheit-ernaehrung",
+          "kunst-aesthetik",
+          "mathematik",
+          "musik-rhythmik",
+          "naturwissenschaft",
+          "religion-ethik",
+          "sozialpaedagogische-grundlagen",
+          "theater"
+        ]
+      },
+      {
+        "axisId": "eltern-kooperation",
+        "title": "Elternkooperation und Übergänge",
+        "topicCount": 5,
+        "detailedTopicCount": 1,
+        "detailCoverageRatio": 0.2,
+        "detailedTopicIds": [
+          "elternkooperation"
+        ],
+        "missingTopicIds": [
+          "elterngespraeche",
+          "erziehungspartnerschaft",
+          "familienperspektive",
+          "uebergaenge"
+        ]
+      },
+      {
+        "axisId": "rahmen-recht-ethik",
+        "title": "Rahmen, Recht, Schutz und Ethik",
+        "topicCount": 5,
+        "detailedTopicCount": 0,
+        "detailCoverageRatio": 0.0,
+        "detailedTopicIds": [],
+        "missingTopicIds": [
+          "bildungsleitlinien",
+          "ethik",
+          "institutioneller-auftrag",
+          "kindeswohl",
+          "rechte"
+        ]
+      }
+    ],
+    "coverageStatus": "pilot-partial",
+    "epistemicEmpty": "Die meisten Themen haben noch keine Detailaufbereitung. Das ist ein sichtbarer Arbeitsstand, kein Fehler."
+  }
 }
