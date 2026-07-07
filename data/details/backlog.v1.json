@@ -3,9 +3,9 @@
   "purpose": "Steuert die nächste Detailausweitung ohne Scheintiefe: offene Themen werden erst nach quellengebundenem Exzerpt zu Detaildateien.",
   "coverageSnapshot": {
     "topicCount": 44,
-    "detailedTopicCount": 12,
-    "missingTopicCount": 32,
-    "detailCoverageRatio": 0.273
+    "detailedTopicCount": 15,
+    "missingTopicCount": 29,
+    "detailCoverageRatio": 0.341
   },
   "selectionRule": "Nur Themen mit neuem excerpted oder interpreted Exzerpt dürfen in data/details/*.json überführt werden.",
   "blockedFields": [
@@ -475,55 +475,6 @@
       "sourceRefs": [
         "doc-003",
         "doc-015"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-dialogische-haltung",
-      "topicId": "dialogische-haltung",
-      "title": "Dialogische Haltung",
-      "axisId": "sprache-kommunikation",
-      "axisTitle": "Sprache, Kommunikation und Konflikte",
-      "sourceRefs": [
-        "doc-009",
-        "doc-011"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-gespraechsanlaesse",
-      "topicId": "gespraechsanlaesse",
-      "title": "Gesprächsanlässe",
-      "axisId": "sprache-kommunikation",
-      "axisTitle": "Sprache, Kommunikation und Konflikte",
-      "sourceRefs": [
-        "doc-009"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-konflikte",
-      "topicId": "konflikte",
-      "title": "Konflikte",
-      "axisId": "sprache-kommunikation",
-      "axisTitle": "Sprache, Kommunikation und Konflikte",
-      "sourceRefs": [
-        "doc-012"
       ],
       "relatedExcerptRefs": [],
       "priority": "normal",

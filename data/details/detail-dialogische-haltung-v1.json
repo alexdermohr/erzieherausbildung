@@ -1,0 +1,74 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-dialogische-haltung-v1",
+  "title": "Dialogische Haltung",
+  "topicIds": [
+    "dialogische-haltung"
+  ],
+  "axisIds": [
+    "sprache-kommunikation"
+  ],
+  "sourceRefs": [
+    "doc-009",
+    "doc-011"
+  ],
+  "excerptRefs": [
+    "doc-009-dialogische-haltung-feedback-zuhoeren",
+    "doc-011-sprache-kommunikation-dialog-literacy"
+  ],
+  "summary": "Dialogische Haltung beschreibt eine pädagogische Grundform des Sprechens mit Kindern: Erwachsene hören auf Bedeutung, bestätigen den Mitteilungsimpuls, erweitern Sprache beiläufig und halten Beziehung sowie Gesprächsfluss offen. Sie verbindet Sprachbildung, Beziehungsgestaltung und Beobachtung.",
+  "coreIdeas": [
+    "Im Dialog steht nicht die Korrektur des Kindes im Vordergrund, sondern das gemeinsame Verstehen und Weiterführen seiner Bedeutung.",
+    "Korrektives Feedback kann sprachbildend wirken, wenn es beiläufig, bestätigend und in den Sinnzusammenhang eingebettet bleibt.",
+    "Dialogisches Vorlesen und Bilderbuchbetrachtung schaffen Gesprächsräume, in denen Kinder deuten, erzählen, vergleichen und eigene Sichtweisen formulieren.",
+    "Eine dialogische Haltung schützt Sprechfreude, weil sie Fehler nicht bloßstellt und Kinder als Gesprächspartner ernst nimmt."
+  ],
+  "practiceAnchors": [
+    "Kindliche Aussagen reformulieren, ohne das Kind frontal zu verbessern.",
+    "Bei Bilderbüchern nicht nur Fragen abprüfen, sondern Wahrnehmungen, Vermutungen und persönliche Deutungen zulassen.",
+    "Gesprächsfluss vor Perfektion setzen: einzelne Fehler dürfen offen bleiben, wenn sonst der Mitteilungsdrang gebremst würde.",
+    "Aufmerksam beobachten, worüber ein Kind sprechen will, welche Worte es sucht und welche Bedeutungen es herstellt."
+  ],
+  "commonMisunderstandings": [
+    "Dialogische Haltung ist nicht grenzenloses Plaudern, sondern fachlich aufmerksame Beziehungssprache.",
+    "Korrektives Feedback ist keine direkte Fehlerkorrektur und kein Nachsprechenlassen.",
+    "Sprachbildung entsteht nicht nur durch Material, sondern durch die Qualität der Antwort der Fachkraft.",
+    "Zuhören ist keine passive Technik; es steuert, welche Bedeutungen für das Kind sichtbar und weiterführbar werden."
+  ],
+  "bridges": [
+    {
+      "targetId": "sprache-kommunikation",
+      "relation": "Dialogische Haltung konkretisiert Sprache als Beziehungs- und Bildungsmedium."
+    },
+    {
+      "targetId": "sprachbildung",
+      "relation": "Sprachbildung wird alltagsintegriert, wenn Erwachsene kindliche Äußerungen erweitern und weiterführen."
+    },
+    {
+      "targetId": "bindung-beziehung",
+      "relation": "Zugewandte Antwortpraxis stärkt Sicherheit und Beteiligung im Gespräch."
+    },
+    {
+      "targetId": "beobachtung",
+      "relation": "Dialog zeigt Interessen, Begriffe, Deutungen und Entwicklungsstände des Kindes."
+    },
+    {
+      "targetId": "gespraechsanlaesse",
+      "relation": "Gesprächsanlässe werden erst durch dialogische Reaktion pädagogisch fruchtbar."
+    }
+  ],
+  "openQuestions": [
+    "Soll dialogische Haltung später als eigenes Querschnittsprinzip über Elternarbeit, Konflikte und Bildungsbereiche laufen?",
+    "Wie wird die Grenze zwischen sprachlicher Erweiterung, Gesprächsführung und Literacy didaktisch markiert?",
+    "Welche Beispiele brauchen eine geprüfte Fassung, ohne Rohdialoge aus Quellen zu übernehmen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.3,
+  "interpolation": 0.26,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
