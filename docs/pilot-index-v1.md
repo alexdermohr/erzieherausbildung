@@ -12,10 +12,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 12
-- Reviewstatus: {'draft': 10, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 10, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 3, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 1}
+- Einträge: 13
+- Reviewstatus: {'draft': 11, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 11, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 4, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 1}
 
 ## Quellen im Pilot
 
@@ -39,7 +39,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Deutung: 1
 - Dialog: 1
 - Digitale Bildung: 1
-- Eingewöhnung: 1
+- Eingewöhnung: 2
 - Elternkooperation: 1
 - Erziehungspartnerschaft: 1
 - Erzählen: 1
@@ -60,7 +60,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Querschnitt: 2
 - Reflexion: 1
 - Ressourcenorientierung: 3
-- Sicherheit: 1
+- Sicherheit: 2
 - Sprache: 1
 - Sprache und Kommunikation: 1
 - Stärken: 1
@@ -68,8 +68,11 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - kollegialer Austausch: 2
 - naechste Schritte: 1
 - nächste Schritte: 1
+- sanfter Übergang: 1
 - sichere Basis: 1
 - Übergang: 1
+- Übergangsobjekt: 1
+- Übergänge: 1
 
 ## Grenze
 

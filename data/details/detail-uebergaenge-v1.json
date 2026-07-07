@@ -1,0 +1,64 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-uebergaenge-v1",
+  "title": "Übergänge",
+  "topicIds": [
+    "uebergaenge"
+  ],
+  "axisIds": [
+    "eltern-kooperation"
+  ],
+  "sourceRefs": [
+    "doc-008"
+  ],
+  "excerptRefs": [
+    "doc-008-uebergaenge-sicherheit-rahmen"
+  ],
+  "summary": "Übergänge sind pädagogisch zu gestaltende Wechsel zwischen vertrauten und neuen Lebens-, Beziehungs- und Lernkontexten. Sie gelingen eher, wenn Sicherheit, Vorhersagbarkeit, Beziehungskontinuität und individuelle Bedürfnisse des Kindes leitend sind.",
+  "coreIdeas": [
+    "Ein Übergang ist mehr als ein organisatorischer Wechsel; er betrifft Sicherheit, Beziehungen und Orientierung.",
+    "Stabile Rahmenbedingungen, vertraute Bezugspersonen und vorhersehbare Abläufe entlasten Kinder in Übergangssituationen.",
+    "Übergangsobjekte, Familienbezüge und behutsame Beteiligung können Brücken zwischen Zuhause und Einrichtung bilden."
+  ],
+  "practiceAnchors": [
+    "Bei Übergängen prüfen: Was ist für das Kind vertraut, was neu, und wo braucht es Sicherheit?",
+    "Abläufe vorhersehbar halten und unnötige Sonderreize in sensiblen Übergangsphasen reduzieren.",
+    "Eltern, Bezugspersonen oder persönliche Gegenstände als Brücken nutzen, ohne das Ziel der neuen Beziehung zu unterlaufen."
+  ],
+  "commonMisunderstandings": [
+    "Ein Übergang ist nicht abgeschlossen, nur weil ein Kind körperlich anwesend ist.",
+    "Schnelle Ablösung ist nicht automatisch gelingende Eingewöhnung.",
+    "Übergangsgestaltung ist nicht nur Aufgabe der Eltern; Fachkräfte gestalten Rahmen, Beziehung und Sicherheit mit."
+  ],
+  "bridges": [
+    {
+      "targetId": "eingewoehnung",
+      "relation": "Eingewöhnung ist ein zentraler Übergang in die Einrichtung."
+    },
+    {
+      "targetId": "bindung-beziehung",
+      "relation": "Beziehungssicherheit trägt Übergänge."
+    },
+    {
+      "targetId": "elternkooperation",
+      "relation": "Elternkooperation stabilisiert Übergänge zwischen Familie und Einrichtung."
+    },
+    {
+      "targetId": "sicherheit",
+      "relation": "Sicherheit ist die zentrale Bedingung für Orientierung und Exploration im Übergang."
+    }
+  ],
+  "openQuestions": [
+    "Welche weiteren Übergänge außer Eingewöhnung sollen später aufgenommen werden: Krippe-Kita, Kita-Schule, Gruppenwechsel?",
+    "Wie werden organisatorische Übergangsplanung und emotionale Übergangsbegleitung klar unterschieden?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.31,
+  "interpolation": 0.29,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
