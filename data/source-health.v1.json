@@ -8,8 +8,8 @@
   },
   "summary": {
     "sourceCount": 28,
-    "okCount": 25,
-    "emptyCount": 3,
+    "okCount": 26,
+    "emptyCount": 2,
     "missingCount": 0
   },
   "sources": [
@@ -206,29 +206,11 @@
       "sourceRef": "doc-029",
       "localTextPath": "machine-readable.local/texts/doc-029.txt",
       "exists": true,
-      "sizeBytes": 0,
-      "status": "empty"
+      "sizeBytes": 106404,
+      "status": "ok"
     }
   ],
   "affectedBacklogEntries": [
-    {
-      "topicId": "erziehungspartnerschaft",
-      "title": "Erziehungspartnerschaft",
-      "priority": "medium",
-      "status": "needs-own-excerpt",
-      "affectedSourceRefs": [
-        "doc-029"
-      ]
-    },
-    {
-      "topicId": "familienperspektive",
-      "title": "Familienperspektive",
-      "priority": "medium",
-      "status": "needs-own-excerpt",
-      "affectedSourceRefs": [
-        "doc-029"
-      ]
-    },
     {
       "topicId": "naturwissenschaft",
       "title": "Natur, Umwelt, Technik",
@@ -246,24 +228,7 @@
       "affectedSourceRefs": [
         "doc-025"
       ]
-    },
-    {
-      "topicId": "elterngespraeche",
-      "title": "Elterngespräche",
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "affectedSourceRefs": [
-        "doc-029"
-      ]
     }
   ],
-  "affectedDetails": [
-    {
-      "detailId": "detail-elternkooperation-v1",
-      "title": "Elternkooperation",
-      "affectedSourceRefs": [
-        "doc-029"
-      ]
-    }
-  ]
+  "affectedDetails": []
 }

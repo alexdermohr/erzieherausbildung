@@ -51,11 +51,8 @@ if sources:
         if item.get("status") == "missing" and item.get("exists") is not False:
             problems.append(f"{item.get('sourceRef')}: missing status requires exists false")
 
-# Current known important invariant:
-# doc-029 is empty locally and must remain visible until repaired.
-doc029 = [item for item in sources if item.get("sourceRef") == "doc-029"]
-if doc029 and doc029[0].get("status") != "empty":
-    problems.append("doc-029 should be visible as empty until local text is repaired")
+# Source health is a snapshot. It may improve when local text extraction is repaired.
+# The validator checks consistency, not a frozen status for any one document.
 
 if problems:
     print("\n".join(problems))
