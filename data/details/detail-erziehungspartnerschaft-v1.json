@@ -1,0 +1,64 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-erziehungspartnerschaft-v1",
+  "title": "Erziehungspartnerschaft",
+  "topicIds": [
+    "erziehungspartnerschaft"
+  ],
+  "axisIds": [
+    "eltern-kooperation"
+  ],
+  "sourceRefs": [
+    "doc-029"
+  ],
+  "excerptRefs": [
+    "doc-029-erziehungspartnerschaft-augenhoehe-vertrauen"
+  ],
+  "summary": "Erziehungspartnerschaft meint eine professionelle, kindorientierte Zusammenarbeit zwischen Fachkräften und Eltern. Sie verlangt Vertrauen, respektvolle Kommunikation, Perspektivübernahme und eine bewusste Gestaltung von Gesprächen, besonders wenn Sprache, Kultur oder Unsicherheit Verständigung erschweren.",
+  "coreIdeas": [
+    "Das Kind bleibt der gemeinsame Bezugspunkt, nicht der Konflikt zwischen Erwachsenen.",
+    "Elternperspektiven können von Unsicherheit, Sprachbarrieren, Sorge, Schuldgefühl oder anderen Erwartungen geprägt sein.",
+    "Professionelle Kommunikation braucht Vorbereitung, einfache Sprache, Nachfragen, positives Feedback und eine Haltung auf Augenhöhe."
+  ],
+  "practiceAnchors": [
+    "Vor Gesprächen klären: Welche Sprach- oder Verständnishürden könnten bestehen, und welche Unterstützung braucht es?",
+    "Eltern nicht nur informieren, sondern regelmäßig Verständnis sichern und ihre Perspektive aktiv einholen.",
+    "Bei Konflikten die Priorität auf das Kind und gemeinsame nächste Schritte legen, nicht auf Schuldzuweisung."
+  ],
+  "commonMisunderstandings": [
+    "Erziehungspartnerschaft bedeutet nicht, dass Fachkräfte und Eltern immer dieselbe Sicht haben müssen.",
+    "Eltern, die zurückhaltend oder abwehrend wirken, sind nicht automatisch desinteressiert.",
+    "Augenhöhe ist keine private Sympathie, sondern professionelle Beziehungsgestaltung."
+  ],
+  "bridges": [
+    {
+      "targetId": "elternkooperation",
+      "relation": "Erziehungspartnerschaft konkretisiert Elternkooperation als gemeinsame Verantwortung für das Kind."
+    },
+    {
+      "targetId": "familienperspektive",
+      "relation": "Die Perspektive der Familie muss verstanden werden, bevor Verhalten der Eltern bewertet wird."
+    },
+    {
+      "targetId": "elterngespraeche",
+      "relation": "Gespräche sind ein zentrales Werkzeug der Erziehungspartnerschaft."
+    },
+    {
+      "targetId": "uebergaenge",
+      "relation": "Übergänge gelingen eher, wenn Eltern und Fachkräfte kooperieren und Vertrauen aufbauen."
+    }
+  ],
+  "openQuestions": [
+    "Wie lässt sich Erziehungspartnerschaft von bloßer Elterninformation im Datenmodell klar unterscheiden?",
+    "Welche Aussagen aus weiteren Quellen sollen später Machtasymmetrien und Grenzen von Partnerschaft ergänzen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.33,
+  "interpolation": 0.31,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

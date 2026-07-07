@@ -92,6 +92,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-erziehungspartnerschaft-v1",
+      "title": "Erziehungspartnerschaft",
+      "path": "/data/details/detail-erziehungspartnerschaft-v1.json",
+      "topicIds": [
+        "erziehungspartnerschaft"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "sourceRefs": [
+        "doc-029"
+      ],
+      "excerptRefs": [
+        "doc-029-erziehungspartnerschaft-augenhoehe-vertrauen"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-fallverstehen-v1",
       "title": "Fallverstehen",
       "path": "/data/details/detail-fallverstehen-v1.json",
@@ -202,16 +220,17 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 11,
-    "detailedTopicCount": 11,
-    "missingTopicCount": 33,
-    "detailCoverageRatio": 0.25,
+    "detailCount": 12,
+    "detailedTopicCount": 12,
+    "missingTopicCount": 32,
+    "detailCoverageRatio": 0.273,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
       "bindung-beziehung",
       "eingewoehnung",
       "elternkooperation",
+      "erziehungspartnerschaft",
       "fallverstehen",
       "foerderplanung",
       "lernarrangements",
@@ -228,7 +247,6 @@
       "dialogische-haltung",
       "dokumentation",
       "elterngespraeche",
-      "erziehungspartnerschaft",
       "ethik",
       "familienperspektive",
       "gespraechsanlaesse",
@@ -358,15 +376,15 @@
         "axisId": "eltern-kooperation",
         "title": "Elternkooperation und Übergänge",
         "topicCount": 5,
-        "detailedTopicCount": 2,
-        "detailCoverageRatio": 0.4,
+        "detailedTopicCount": 3,
+        "detailCoverageRatio": 0.6,
         "detailedTopicIds": [
           "elternkooperation",
+          "erziehungspartnerschaft",
           "uebergaenge"
         ],
         "missingTopicIds": [
           "elterngespraeche",
-          "erziehungspartnerschaft",
           "familienperspektive"
         ]
       },

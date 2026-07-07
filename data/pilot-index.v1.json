@@ -3,14 +3,14 @@
   "source": "data/excerpts/*.jsonl",
   "purpose": "Aggregierter Abdeckungsstand der ersten Belegknoten; keine Rohtextablage und keine Vollständigkeitsbehauptung.",
   "totals": {
-    "entries": 13
+    "entries": 14
   },
   "byReviewStatus": {
-    "draft": 11,
+    "draft": 12,
     "needs-source": 2
   },
   "byClaimType": {
-    "excerpted": 11,
+    "excerpted": 12,
     "question": 2
   },
   "bySourceCluster": {
@@ -19,7 +19,7 @@
     "lernfeld 2": 4,
     "lernfeld 3": 4,
     "lernfeld 4": 1,
-    "lernfeld 5": 1
+    "lernfeld 5": 2
   },
   "sourceTitles": [
     "Lernfeld 2_ Eingewöhnung.pdf",
@@ -33,6 +33,7 @@
     "S4_ Sprache und Kommunikation.pdf"
   ],
   "concepts": {
+    "Augenhöhe": 1,
     "Beobachtung": 3,
     "Berufsrolle": 1,
     "Bezugsperson": 1,
@@ -42,8 +43,8 @@
     "Dialog": 1,
     "Digitale Bildung": 1,
     "Eingewöhnung": 2,
-    "Elternkooperation": 1,
-    "Erziehungspartnerschaft": 1,
+    "Elternkooperation": 2,
+    "Erziehungspartnerschaft": 2,
     "Erzählen": 1,
     "Fallverstehen": 2,
     "Familienperspektive": 1,
@@ -66,10 +67,12 @@
     "Sprache": 1,
     "Sprache und Kommunikation": 1,
     "Stärken": 1,
+    "Vertrauen": 1,
     "Zuhören": 1,
     "kollegialer Austausch": 2,
     "naechste Schritte": 1,
     "nächste Schritte": 1,
+    "professionelles Gespräch": 1,
     "sanfter Übergang": 1,
     "sichere Basis": 1,
     "Übergang": 1,
