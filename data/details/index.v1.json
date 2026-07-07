@@ -38,6 +38,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-bindung-beziehung-v1",
+      "title": "Bindung und Beziehung",
+      "path": "/data/details/detail-bindung-beziehung-v1.json",
+      "topicIds": [
+        "bindung-beziehung"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "sourceRefs": [
+        "doc-008"
+      ],
+      "excerptRefs": [
+        "doc-008-bindung-beziehung-sicherheit-bildung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-eingewoehnung-v1",
       "title": "Eingewöhnung",
       "path": "/data/details/detail-eingewoehnung-v1.json",
@@ -166,13 +184,14 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 9,
-    "detailedTopicCount": 9,
-    "missingTopicCount": 35,
-    "detailCoverageRatio": 0.205,
+    "detailCount": 10,
+    "detailedTopicCount": 10,
+    "missingTopicCount": 34,
+    "detailCoverageRatio": 0.227,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
+      "bindung-beziehung",
       "eingewoehnung",
       "elternkooperation",
       "fallverstehen",
@@ -187,7 +206,6 @@
       "arbeitsfelder",
       "aufsichtspflicht",
       "bildungsleitlinien",
-      "bindung-beziehung",
       "dialogische-haltung",
       "dokumentation",
       "elterngespraeche",
@@ -239,15 +257,15 @@
         "axisId": "beziehung-entwicklung",
         "title": "Beziehung, Entwicklung und Selbstwirksamkeit",
         "topicCount": 5,
-        "detailedTopicCount": 1,
-        "detailCoverageRatio": 0.2,
+        "detailedTopicCount": 2,
+        "detailCoverageRatio": 0.4,
         "detailedTopicIds": [
+          "bindung-beziehung",
           "eingewoehnung"
         ],
         "missingTopicIds": [
           "anpassung-selbstbestimmung",
           "aufsichtspflicht",
-          "bindung-beziehung",
           "selbstwirksamkeit"
         ]
       },
