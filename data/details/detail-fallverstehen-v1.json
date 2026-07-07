@@ -1,0 +1,64 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-fallverstehen-v1",
+  "title": "Fallverstehen",
+  "topicIds": [
+    "fallverstehen"
+  ],
+  "axisIds": [
+    "beobachtung-fallverstehen"
+  ],
+  "sourceRefs": [
+    "doc-014"
+  ],
+  "excerptRefs": [
+    "doc-014-fallverstehen-beobachtung-deutung-naechste-schritte"
+  ],
+  "summary": "Fallverstehen ist die fachliche Ordnungsleistung zwischen Beobachtung und Handeln. Es sammelt Beobachtungen, Kontext, unterschiedliche Eindrücke und Deutungen, um Verhalten nicht vorschnell zu bewerten, sondern pädagogisch verstehbar zu machen.",
+  "coreIdeas": [
+    "Fallverstehen beginnt mit beobachtbarem Verhalten, endet aber nicht bei der Beschreibung.",
+    "Kontext, mehrere Beobachtungen und kollegialer Austausch schützen vor vorschneller Zuschreibung.",
+    "Hypothesen über Interessen, Bedürfnisse oder den Sinn eines Verhaltens müssen in nächste pädagogische Schritte übersetzt werden."
+  ],
+  "practiceAnchors": [
+    "Bei störend wirkendem Verhalten zuerst Beobachtungen und Situationen sammeln, bevor eine feste Deutung entsteht.",
+    "Im Team fragen: Welche Übereinstimmungen und Abweichungen sehen wir, und welche Ressourcen oder Bedürfnisse könnten sichtbar werden?",
+    "Nächste Schritte als überprüfbare pädagogische Reaktion planen, nicht als Strafe oder bloße Ermahnung."
+  ],
+  "commonMisunderstandings": [
+    "Fallverstehen ist keine Entschuldigung für jedes Verhalten.",
+    "Eine einzelne Beobachtung reicht nicht für eine stabile Deutung.",
+    "Deutung ist nicht Beliebigkeit; sie muss an Beobachtung, Kontext und fachliche Begriffe rückgebunden bleiben."
+  ],
+  "bridges": [
+    {
+      "targetId": "beobachtung",
+      "relation": "Beobachtung liefert das Material für Fallverstehen."
+    },
+    {
+      "targetId": "ressourcenorientierung",
+      "relation": "Ressourcenorientierung beeinflusst, welche Deutungen und Anschlussmöglichkeiten sichtbar werden."
+    },
+    {
+      "targetId": "foerderplanung",
+      "relation": "Fallverstehen begründet nächste pädagogische Schritte."
+    },
+    {
+      "targetId": "reflexion",
+      "relation": "Reflexion prüft eigene Zuschreibungen und professionelle Reaktionen."
+    }
+  ],
+  "openQuestions": [
+    "Welche Struktur soll ein späteres Fallverstehen-Protokoll haben: Beobachtung, Kontext, Hypothese, Ressource, nächster Schritt?",
+    "Wie wird verhindert, dass Hypothesen über ein Kind zu festen Etiketten werden?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.31,
+  "interpolation": 0.29,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

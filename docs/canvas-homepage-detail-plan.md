@@ -193,3 +193,10 @@ Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext b
 Der Medium-Backlog-Eintrag `ressourcenorientierung` wurde aus `doc-014` herausgelöst. Die lokale Fundstelle beschreibt Ressourcen als Fähigkeiten, Interessen, Stärken und unterstützende Kontexte und grenzt Ressourcenorientierung von Defizitblindheit ab. Coverage steigt von 6/44 auf 7/44; der Backlog sinkt von 38 auf 37 offene Themen.
 
 Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.
+
+
+## Detail-Slice Fallverstehen v1
+
+Der Medium-Backlog-Eintrag `fallverstehen` wurde aus `doc-014` herausgelöst. Die lokale Fundstelle verbindet Beobachtung, Reflexion, kollegialen Austausch, Hypothesenbildung und nächste Schritte. Coverage steigt von 7/44 auf 8/44; der Backlog sinkt von 37 auf 36 offene Themen.
+
+Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.
