@@ -12,10 +12,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 10
-- Reviewstatus: {'draft': 8, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 8, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 2, 'lernfeld 3': 3, 'lernfeld 4': 1, 'lernfeld 5': 1}
+- Einträge: 11
+- Reviewstatus: {'draft': 9, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 9, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 2, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 1}
 
 ## Quellen im Pilot
 
@@ -30,7 +30,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Begriffe im Pilot
 
-- Beobachtung: 2
+- Beobachtung: 3
 - Berufsrolle: 1
 - Bindung und Beziehung: 1
 - Deutung: 1
@@ -42,6 +42,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Erzählen: 1
 - Fallverstehen: 2
 - Familienperspektive: 1
+- Foerderplanung: 1
 - Förderung: 1
 - Informatik: 1
 - Interessen: 1
@@ -49,6 +50,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Kommunikation: 1
 - Lernarrangements: 1
 - Lerngeschichten: 1
+- Lernumgebung: 1
 - Literacy: 1
 - Planung: 1
 - Professionelle Haltung: 1
@@ -59,7 +61,8 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Sprache und Kommunikation: 1
 - Stärken: 1
 - Zuhören: 1
-- kollegialer Austausch: 1
+- kollegialer Austausch: 2
+- naechste Schritte: 1
 - nächste Schritte: 1
 - Übergang: 1
 
