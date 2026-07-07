@@ -29,6 +29,7 @@ required = [
     "data/learning-map.v1.json",
     "data/pilot-index.v1.json",
     "data/details/index.v1.json",
+    "data/details/backlog.v1.json",
     "data/surface-policy.v1.json",
     "docs/implementation-plan.md",
     "docs/learning-map-v1.md",
@@ -36,11 +37,13 @@ required = [
     "docs/surface-policy-v1.md",
     "schemas/learning-map.v1.schema.json",
     "schemas/detail.v1.schema.json",
+    "schemas/detail-backlog.v1.schema.json",
     "schemas/surface-policy.v1.schema.json",
     "visuals/learning-map-v1.canvas",
     "scripts/obsidian_views.py",
     "scripts/build_pilot_index.py",
     "scripts/validate_details.py",
+    "scripts/validate_detail_backlog.py",
     "scripts/validate_view_export.py",
     "docs/obsidian-vault-spiegel.md",
 ]
@@ -295,6 +298,16 @@ assert "/data/details/index.v1.json" in app_js
 assert "detailCoverageLabel" in app_js
 assert "Detail offen" in app_js
 assert "Detail vorhanden" in app_js
+
+detail_backlog_schema = j("schemas/detail-backlog.v1.schema.json")
+detail_backlog = j("data/details/backlog.v1.json")
+assert detail_backlog_schema["schema"] == "erzieherausbildung.detail_backlog.contract.v1"
+assert detail_backlog_schema["dataSchema"] == detail_backlog["schema"]
+assert len(detail_backlog["entries"]) == detail_index["coverage"]["missingTopicCount"]
+assert detail_backlog["coverageSnapshot"]["missingTopicCount"] == detail_index["coverage"]["missingTopicCount"]
+assert detail_backlog["selectionRule"].strip()
+assert "rawMaterial" in detail_backlog["blockedFields"]
+assert "validate_detail_backlog.py" in workflow_validate
 assert "cluster-action" in app_js
 assert 'document.createElement("details")' in app_js
 
