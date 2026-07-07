@@ -12,15 +12,17 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 14
-- Reviewstatus: {'draft': 12, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 12, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 4, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 2}
+- Einträge: 17
+- Reviewstatus: {'draft': 15, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 15, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 7, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 2}
 
 ## Quellen im Pilot
 
 - Lernfeld 2_ Eingewöhnung.pdf
 - Lernfeld 2_ Eingewöhnung und Bindung.pdf
+- Lernfeld 2_ Gesprächsanlässe.pdf
+- Lernfeld 2_ Konflikte im offenen Elementarbereich.pdf
 - Lernfeld 2_ Sprache & Kommunikation.pdf
 - Lernfeld 3_ Ressourcenorientierte Beobachtungen.pdf
 - Lernfeld 4_ Lernarragments.pdf
@@ -31,6 +33,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Begriffe im Pilot
 
+- Alltagssprache: 1
 - Augenhöhe: 1
 - Beobachtung: 3
 - Berufsrolle: 1
@@ -39,6 +42,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Bindung und Beziehung: 2
 - Deutung: 1
 - Dialog: 1
+- Dialogische Haltung: 1
 - Digitale Bildung: 1
 - Eingewöhnung: 2
 - Elternkooperation: 2
@@ -48,26 +52,38 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Familienperspektive: 1
 - Foerderplanung: 1
 - Förderung: 1
+- Gefühlsregulation: 1
+- Gesprächsanlässe: 1
+- Hypothesenbildung: 1
 - Informatik: 1
 - Interessen: 1
 - Interessenorientierung: 1
+- Kinderperspektive: 1
+- Kinderrechte: 1
 - Kommunikation: 1
+- Konfliktbegleitung: 1
+- Konflikte: 1
 - Lernarrangements: 1
 - Lerngeschichten: 1
 - Lernumgebung: 1
 - Literacy: 1
+- Perspektivübernahme: 1
 - Planung: 1
 - Professionelle Haltung: 1
 - Querschnitt: 2
 - Reflexion: 1
+- Reformulieren: 1
 - Ressourcenorientierung: 3
 - Sicherheit: 2
 - Sprache: 1
 - Sprache und Kommunikation: 1
+- Sprechfreude: 1
 - Stärken: 1
 - Vertrauen: 1
 - Zuhören: 1
+- aktives Zuhören: 2
 - kollegialer Austausch: 2
+- korrektives Feedback: 1
 - naechste Schritte: 1
 - nächste Schritte: 1
 - professionelles Gespräch: 1

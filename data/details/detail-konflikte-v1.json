@@ -1,0 +1,73 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-konflikte-v1",
+  "title": "Konflikte",
+  "topicIds": [
+    "konflikte"
+  ],
+  "axisIds": [
+    "sprache-kommunikation"
+  ],
+  "sourceRefs": [
+    "doc-012"
+  ],
+  "excerptRefs": [
+    "doc-012-konflikte-sozial-emotional-begleiten"
+  ],
+  "summary": "Konflikte sind im pädagogischen Alltag keine bloße Störung, sondern eine sichtbare Lern- und Beziehungssituation. Sie zeigen Bedürfnisse, Grenzen, Rollen, emotionale Regulation und Gruppendynamik. Fachkräfte sichern den Rahmen, begleiten sprachliche Aushandlung und helfen Kindern, Gefühle, Perspektiven und faire Lösungen zu verstehen.",
+  "coreIdeas": [
+    "Konflikte gehören zur Entwicklung und können soziale, emotionale und moralische Lernprozesse anstoßen.",
+    "Ein Konflikt zeigt nicht nur Verhalten, sondern oft ein verdecktes Bedürfnis nach Zugehörigkeit, Gerechtigkeit, Kontrolle, Schutz oder Anerkennung.",
+    "Pädagogische Begleitung heißt nicht, den Konflikt sofort für Kinder zu lösen, sondern Sicherheit, Sprache, Perspektivübernahme und Beteiligung zu ermöglichen.",
+    "Im offenen Konzept entstehen zusätzliche Konfliktlagen, weil Räume, Gruppen, Rollen und Regeln beweglicher werden."
+  ],
+  "practiceAnchors": [
+    "Vor einer Lösung zuerst sichern: Wer braucht Schutz, wer braucht Abstand, wer braucht Sprache für sein Gefühl?",
+    "Kinder dabei unterstützen, Ärger, Enttäuschung oder Angst zu benennen, statt nur das sichtbare Verhalten zu sanktionieren.",
+    "Perspektiven trennen: Was wollte jedes Kind? Was hat es verstanden? Was wurde als ungerecht erlebt?",
+    "Regeln nicht mechanisch anwenden, sondern mit Beteiligung, Schutz und Gleichbehandlung zusammendenken.",
+    "Nach einem Konflikt beobachten, ob Rollen, Ausschlüsse oder wiederkehrende Gruppendynamiken dahinterliegen."
+  ],
+  "commonMisunderstandings": [
+    "Konflikte bedeuten nicht automatisch, dass die Gruppe schlecht geführt wird.",
+    "Eine schnelle Erwachsenenlösung kann Ruhe erzeugen, aber Konfliktkompetenz verhindern.",
+    "Gefühle zu benennen ist keine Nebensache; ohne Emotionssprache bleibt Konfliktbearbeitung oft körperlich oder machtförmig.",
+    "Regeln allein ersetzen kein Fallverstehen und keine Perspektivübernahme."
+  ],
+  "bridges": [
+    {
+      "targetId": "sprache-kommunikation",
+      "relation": "Konfliktbearbeitung braucht Sprache, damit Gefühle, Interessen und Lösungen aushandelbar werden."
+    },
+    {
+      "targetId": "fallverstehen",
+      "relation": "Wiederkehrende Konflikte können Hinweise auf Bedürfnisse, Rollen oder institutionelle Spannungen geben."
+    },
+    {
+      "targetId": "partizipation",
+      "relation": "Faire Konfliktlösung verlangt Beteiligung der Kinder, nicht nur erwachsene Entscheidung."
+    },
+    {
+      "targetId": "regeln-struktur",
+      "relation": "Regeln geben Orientierung, müssen aber in konkreten Situationen pädagogisch ausgelegt werden."
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "relation": "Fachkräfte entscheiden über Schutz, Gesprächsraum und Deutung; diese Macht muss reflektiert werden."
+    }
+  ],
+  "openQuestions": [
+    "Welche Konfliktformen im Kindesalter sollen später getrennt werden: Besitzkonflikt, Regelkonflikt, Ausschluss, körperlicher Streit, Machtspiel?",
+    "Wie stark soll das offene Konzept als eigene Konfliktursache modelliert werden?",
+    "Welche Verbindung zu Kinderrechten und Schutzauftrag braucht eine spätere geprüfte Fassung?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.28,
+  "interpolation": 0.24,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

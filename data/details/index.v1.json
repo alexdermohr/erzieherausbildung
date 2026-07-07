@@ -56,6 +56,26 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-dialogische-haltung-v1",
+      "title": "Dialogische Haltung",
+      "path": "/data/details/detail-dialogische-haltung-v1.json",
+      "topicIds": [
+        "dialogische-haltung"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "sourceRefs": [
+        "doc-009",
+        "doc-011"
+      ],
+      "excerptRefs": [
+        "doc-009-dialogische-haltung-feedback-zuhoeren",
+        "doc-011-sprache-kommunikation-dialog-literacy"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-eingewoehnung-v1",
       "title": "Eingewöhnung",
       "path": "/data/details/detail-eingewoehnung-v1.json",
@@ -146,6 +166,42 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-gespraechsanlaesse-v1",
+      "title": "Gesprächsanlässe",
+      "path": "/data/details/detail-gespraechsanlaesse-v1.json",
+      "topicIds": [
+        "gespraechsanlaesse"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "sourceRefs": [
+        "doc-009"
+      ],
+      "excerptRefs": [
+        "doc-009-gespraechsanlaesse-kindperspektive-aktuelles"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-konflikte-v1",
+      "title": "Konflikte",
+      "path": "/data/details/detail-konflikte-v1.json",
+      "topicIds": [
+        "konflikte"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "sourceRefs": [
+        "doc-012"
+      ],
+      "excerptRefs": [
+        "doc-012-konflikte-sozial-emotional-begleiten"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-lernarrangements-v1",
       "title": "Lernarrangements",
       "path": "/data/details/detail-lernarrangements-v1.json",
@@ -220,19 +276,22 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 12,
-    "detailedTopicCount": 12,
-    "missingTopicCount": 32,
-    "detailCoverageRatio": 0.273,
+    "detailCount": 15,
+    "detailedTopicCount": 15,
+    "missingTopicCount": 29,
+    "detailCoverageRatio": 0.341,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
       "bindung-beziehung",
+      "dialogische-haltung",
       "eingewoehnung",
       "elternkooperation",
       "erziehungspartnerschaft",
       "fallverstehen",
       "foerderplanung",
+      "gespraechsanlaesse",
+      "konflikte",
       "lernarrangements",
       "ressourcenorientierung",
       "sprache-kommunikation",
@@ -244,16 +303,13 @@
       "arbeitsfelder",
       "aufsichtspflicht",
       "bildungsleitlinien",
-      "dialogische-haltung",
       "dokumentation",
       "elterngespraeche",
       "ethik",
       "familienperspektive",
-      "gespraechsanlaesse",
       "gesundheit-ernaehrung",
       "institutioneller-auftrag",
       "kindeswohl",
-      "konflikte",
       "kunst-aesthetik",
       "macht-verantwortung",
       "mathematik",
@@ -309,15 +365,15 @@
         "axisId": "sprache-kommunikation",
         "title": "Sprache, Kommunikation und Konflikte",
         "topicCount": 5,
-        "detailedTopicCount": 1,
-        "detailCoverageRatio": 0.2,
+        "detailedTopicCount": 4,
+        "detailCoverageRatio": 0.8,
         "detailedTopicIds": [
-          "sprache-kommunikation"
-        ],
-        "missingTopicIds": [
           "dialogische-haltung",
           "gespraechsanlaesse",
           "konflikte",
+          "sprache-kommunikation"
+        ],
+        "missingTopicIds": [
           "sprachbildung"
         ]
       },

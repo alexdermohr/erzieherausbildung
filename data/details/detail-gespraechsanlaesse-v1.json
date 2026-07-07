@@ -1,0 +1,72 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-gespraechsanlaesse-v1",
+  "title": "Gesprächsanlässe",
+  "topicIds": [
+    "gespraechsanlaesse"
+  ],
+  "axisIds": [
+    "sprache-kommunikation"
+  ],
+  "sourceRefs": [
+    "doc-009"
+  ],
+  "excerptRefs": [
+    "doc-009-gespraechsanlaesse-kindperspektive-aktuelles"
+  ],
+  "summary": "Gesprächsanlässe sind pädagogisch bedeutsame Ausgangspunkte für Sprache: aktuelle Themen, Alltagssituationen, Kinderfragen, Missverständnisse, Emotionen oder beobachtete Interessen können zum Gespräch werden. Entscheidend ist, dass Fachkräfte die Kinderperspektive prüfen und den Anlass nicht in ein starres Abfragen verwandeln.",
+  "coreIdeas": [
+    "Ein Gesprächsanlass beginnt oft bei einer konkreten Situation, nicht bei einem abstrakten Lernziel.",
+    "Fachkräfte bilden Hypothesen darüber, was Kinder denken, fühlen oder verstehen könnten, und prüfen diese im Gespräch.",
+    "Aktives Zuhören, Reformulieren und Nachfragen verwandeln Alltagssprache in pädagogische Entwicklungsbegleitung.",
+    "Gesprächsanlässe verbinden Sprache, Beziehung und Beobachtung: Was Kinder erzählen, zeigt auch ihre Sicht auf Welt und Gruppe."
+  ],
+  "practiceAnchors": [
+    "Aktuelle Themen aus dem Alltag aufnehmen, statt nur vorbereitete Gesprächsinhalte durchzuführen.",
+    "Vor dem pädagogischen Impuls fragen: Was könnte das Kind gerade meinen, fühlen oder brauchen?",
+    "Kindliche Beiträge nicht vorschnell bewerten, sondern als Hinweis auf Deutung, Interesse oder Belastung lesen.",
+    "Aus einem Gesprächsanlass passende Anschlussformen wählen: Frage, Wiederholung, Spielanregung, Bilderbuch, Lied oder Beobachtungsnotiz."
+  ],
+  "commonMisunderstandings": [
+    "Ein Gesprächsanlass ist nicht automatisch ein gelenktes Lehrgespräch.",
+    "Spontane Gespräche sind nicht weniger pädagogisch als geplante Angebote, wenn sie fachlich wahrgenommen werden.",
+    "Nicht jede kindliche Äußerung braucht sofort eine Korrektur oder Erklärung.",
+    "Kinderperspektive ist nicht geratenes Wissen, sondern eine Hypothese, die im Dialog geprüft werden muss."
+  ],
+  "bridges": [
+    {
+      "targetId": "dialogische-haltung",
+      "relation": "Gesprächsanlässe brauchen dialogische Reaktion, damit sie nicht zu Abfrage oder Belehrung werden."
+    },
+    {
+      "targetId": "beobachtung",
+      "relation": "Gesprächsanlässe entstehen häufig aus beobachteten Interessen, Gefühlen oder Situationen."
+    },
+    {
+      "targetId": "fallverstehen",
+      "relation": "Wiederkehrende Gesprächsanlässe können Hinweise auf Themen, Belastungen oder soziale Rollen geben."
+    },
+    {
+      "targetId": "sprachbildung",
+      "relation": "Alltagssituationen bieten natürliche Gelegenheiten für Wortschatz, Erzählung, Fragebildung und Bedeutungsverhandlung."
+    },
+    {
+      "targetId": "konflikte",
+      "relation": "Konflikte können Gesprächsanlässe sein, wenn Gefühle und Perspektiven sprachlich bearbeitet werden."
+    }
+  ],
+  "openQuestions": [
+    "Welche Typologie von Gesprächsanlässen soll später entstehen: Alltag, Konflikt, Bilderbuch, Pflege, Spiel, Projekt, Elternkontakt?",
+    "Wie werden Gesprächsanlässe in der Visualisierung von Methoden der Gesprächsführung abgegrenzt?",
+    "Welche Verbindung zur Elternkooperation braucht eine zweite Ausbaustufe?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.34,
+  "interpolation": 0.3,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
