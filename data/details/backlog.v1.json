@@ -3,9 +3,9 @@
   "purpose": "Steuert die nächste Detailausweitung ohne Scheintiefe: offene Themen werden erst nach quellengebundenem Exzerpt zu Detaildateien.",
   "coverageSnapshot": {
     "topicCount": 44,
-    "detailedTopicCount": 11,
-    "missingTopicCount": 33,
-    "detailCoverageRatio": 0.25
+    "detailedTopicCount": 12,
+    "missingTopicCount": 32,
+    "detailCoverageRatio": 0.273
   },
   "selectionRule": "Nur Themen mit neuem excerpted oder interpreted Exzerpt dürfen in data/details/*.json überführt werden.",
   "blockedFields": [
@@ -17,16 +17,16 @@
   ],
   "entries": [
     {
-      "id": "backlog-erziehungspartnerschaft",
-      "topicId": "erziehungspartnerschaft",
-      "title": "Erziehungspartnerschaft",
+      "id": "backlog-elterngespraeche",
+      "topicId": "elterngespraeche",
+      "title": "Elterngespräche",
       "axisId": "eltern-kooperation",
       "axisTitle": "Elternkooperation und Übergänge",
       "sourceRefs": [
         "doc-029"
       ],
       "relatedExcerptRefs": [
-        "doc-029-elternkooperation-erziehungspartnerschaft"
+        "doc-029-erziehungspartnerschaft-augenhoehe-vertrauen"
       ],
       "priority": "medium",
       "status": "needs-own-excerpt",
@@ -44,7 +44,8 @@
         "doc-029"
       ],
       "relatedExcerptRefs": [
-        "doc-029-elternkooperation-erziehungspartnerschaft"
+        "doc-029-elternkooperation-erziehungspartnerschaft",
+        "doc-029-erziehungspartnerschaft-augenhoehe-vertrauen"
       ],
       "priority": "medium",
       "status": "needs-own-excerpt",
@@ -276,22 +277,6 @@
       "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
       "sourceRefs": [
         "doc-025"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-elterngespraeche",
-      "topicId": "elterngespraeche",
-      "title": "Elterngespräche",
-      "axisId": "eltern-kooperation",
-      "axisTitle": "Elternkooperation und Übergänge",
-      "sourceRefs": [
-        "doc-029"
       ],
       "relatedExcerptRefs": [],
       "priority": "normal",

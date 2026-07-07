@@ -229,3 +229,10 @@ Die Detailausweitung darf nicht nur Backlog-getrieben sein. Vor neuen Details mu
 Befund: `doc-029` ist lokal als Textdatei vorhanden, aber leer. Daher werden `erziehungspartnerschaft` und `familienperspektive` vorerst nicht ausgebaut, obwohl sie im Backlog als `medium` erscheinen.
 
 Synthese: Eine Source-Health-Projektion macht solche Lücken sichtbar, ohne Rohtexte, OCR oder lokale absolute Pfade zu veröffentlichen.
+
+
+## Detail-Slice Erziehungspartnerschaft v1
+
+Der Medium-Backlog-Eintrag `erziehungspartnerschaft` wurde nach der lokalen Reparatur von `doc-029` herausgelöst. Die lokale Fundstelle fokussiert Eltern-Erzieher-Kooperation, Sprachbarrieren, Augenhöhe, Vertrauensaufbau und die Priorität auf dem Kind. Coverage steigt von 11/44 auf 12/44; der Backlog sinkt von 33 auf 32 offene Themen.
+
+Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.

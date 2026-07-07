@@ -12,10 +12,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 13
-- Reviewstatus: {'draft': 11, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 11, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 4, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 1}
+- Einträge: 14
+- Reviewstatus: {'draft': 12, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 12, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 4, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 2}
 
 ## Quellen im Pilot
 
@@ -31,6 +31,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Begriffe im Pilot
 
+- Augenhöhe: 1
 - Beobachtung: 3
 - Berufsrolle: 1
 - Bezugsperson: 1
@@ -40,8 +41,8 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Dialog: 1
 - Digitale Bildung: 1
 - Eingewöhnung: 2
-- Elternkooperation: 1
-- Erziehungspartnerschaft: 1
+- Elternkooperation: 2
+- Erziehungspartnerschaft: 2
 - Erzählen: 1
 - Fallverstehen: 2
 - Familienperspektive: 1
@@ -64,10 +65,12 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Sprache: 1
 - Sprache und Kommunikation: 1
 - Stärken: 1
+- Vertrauen: 1
 - Zuhören: 1
 - kollegialer Austausch: 2
 - naechste Schritte: 1
 - nächste Schritte: 1
+- professionelles Gespräch: 1
 - sanfter Übergang: 1
 - sichere Basis: 1
 - Übergang: 1
