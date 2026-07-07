@@ -92,6 +92,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-ressourcenorientierung-v1",
+      "title": "Ressourcenorientierung",
+      "path": "/data/details/detail-ressourcenorientierung-v1.json",
+      "topicIds": [
+        "ressourcenorientierung"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "excerptRefs": [
+        "doc-014-ressourcenorientierung-staerken-foerderung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-sprache-kommunikation-v1",
       "title": "Sprache und Kommunikation",
       "path": "/data/details/detail-sprache-kommunikation-v1.json",
@@ -112,16 +130,17 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 6,
-    "detailedTopicCount": 6,
-    "missingTopicCount": 38,
-    "detailCoverageRatio": 0.136,
+    "detailCount": 7,
+    "detailedTopicCount": 7,
+    "missingTopicCount": 37,
+    "detailCoverageRatio": 0.159,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
       "eingewoehnung",
       "elternkooperation",
       "lernarrangements",
+      "ressourcenorientierung",
       "sprache-kommunikation"
     ],
     "missingTopicIds": [
@@ -156,7 +175,6 @@
       "reflexion",
       "regeln-struktur",
       "religion-ethik",
-      "ressourcenorientierung",
       "selbstwirksamkeit",
       "sozialpaedagogische-grundlagen",
       "sprachbildung",
@@ -217,16 +235,16 @@
         "axisId": "beobachtung-fallverstehen",
         "title": "Beobachtung, Fallverstehen und Dokumentation",
         "topicCount": 5,
-        "detailedTopicCount": 1,
-        "detailCoverageRatio": 0.2,
+        "detailedTopicCount": 2,
+        "detailCoverageRatio": 0.4,
         "detailedTopicIds": [
-          "beobachtung"
+          "beobachtung",
+          "ressourcenorientierung"
         ],
         "missingTopicIds": [
           "dokumentation",
           "fallverstehen",
-          "foerderplanung",
-          "ressourcenorientierung"
+          "foerderplanung"
         ]
       },
       {
