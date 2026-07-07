@@ -3,20 +3,20 @@
   "source": "data/excerpts/*.jsonl",
   "purpose": "Aggregierter Abdeckungsstand der ersten Belegknoten; keine Rohtextablage und keine Vollständigkeitsbehauptung.",
   "totals": {
-    "entries": 12
+    "entries": 13
   },
   "byReviewStatus": {
-    "draft": 10,
+    "draft": 11,
     "needs-source": 2
   },
   "byClaimType": {
-    "excerpted": 10,
+    "excerpted": 11,
     "question": 2
   },
   "bySourceCluster": {
     "kein lernfeld": 2,
     "lernfeld 1": 1,
-    "lernfeld 2": 3,
+    "lernfeld 2": 4,
     "lernfeld 3": 4,
     "lernfeld 4": 1,
     "lernfeld 5": 1
@@ -41,7 +41,7 @@
     "Deutung": 1,
     "Dialog": 1,
     "Digitale Bildung": 1,
-    "Eingewöhnung": 1,
+    "Eingewöhnung": 2,
     "Elternkooperation": 1,
     "Erziehungspartnerschaft": 1,
     "Erzählen": 1,
@@ -62,7 +62,7 @@
     "Querschnitt": 2,
     "Reflexion": 1,
     "Ressourcenorientierung": 3,
-    "Sicherheit": 1,
+    "Sicherheit": 2,
     "Sprache": 1,
     "Sprache und Kommunikation": 1,
     "Stärken": 1,
@@ -70,8 +70,11 @@
     "kollegialer Austausch": 2,
     "naechste Schritte": 1,
     "nächste Schritte": 1,
+    "sanfter Übergang": 1,
     "sichere Basis": 1,
-    "Übergang": 1
+    "Übergang": 1,
+    "Übergangsobjekt": 1,
+    "Übergänge": 1
   },
   "knownLimits": [
     "nur Pilotstand",

@@ -214,3 +214,10 @@ Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext b
 Der Medium-Backlog-Eintrag `bindung-beziehung` wurde aus `doc-008` herausgelöst. Die lokale Fundstelle beschreibt eine tragfähige Fachkraft-Kind-Beziehung mit bindungsähnlichen Eigenschaften als Sicherheitsgrundlage für Eingewöhnung, Exploration und Bildungsprozesse. Coverage steigt von 9/44 auf 10/44; der Backlog sinkt von 35 auf 34 offene Themen.
 
 Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.
+
+
+## Detail-Slice Übergänge v1
+
+Der Medium-Backlog-Eintrag `uebergaenge` wurde aus `doc-008` herausgelöst. Die lokale Fundstelle beschreibt Übergänge als sensible Wechselprozesse, die stabile Rahmenbedingungen, Vorhersagbarkeit, Übergangsobjekte, Elternbezug und kindorientierte Sicherheit benötigen. Coverage steigt von 10/44 auf 11/44; der Backlog sinkt von 34 auf 33 offene Themen.
+
+Prämisse: Nur eigene Zusammenfassung und Beleganker werden committed. Rohtext bleibt lokal.

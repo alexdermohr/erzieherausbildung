@@ -180,14 +180,32 @@
         "doc-011-sprache-kommunikation-dialog-literacy"
       ],
       "detailStatus": "draft"
+    },
+    {
+      "id": "detail-uebergaenge-v1",
+      "title": "Übergänge",
+      "path": "/data/details/detail-uebergaenge-v1.json",
+      "topicIds": [
+        "uebergaenge"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "sourceRefs": [
+        "doc-008"
+      ],
+      "excerptRefs": [
+        "doc-008-uebergaenge-sicherheit-rahmen"
+      ],
+      "detailStatus": "draft"
     }
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 10,
-    "detailedTopicCount": 10,
-    "missingTopicCount": 34,
-    "detailCoverageRatio": 0.227,
+    "detailCount": 11,
+    "detailedTopicCount": 11,
+    "missingTopicCount": 33,
+    "detailCoverageRatio": 0.25,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
@@ -198,7 +216,8 @@
       "foerderplanung",
       "lernarrangements",
       "ressourcenorientierung",
-      "sprache-kommunikation"
+      "sprache-kommunikation",
+      "uebergaenge"
     ],
     "missingTopicIds": [
       "anpassung-selbstbestimmung",
@@ -233,7 +252,6 @@
       "sozialpaedagogische-grundlagen",
       "sprachbildung",
       "theater",
-      "uebergaenge",
       "wohngruppe"
     ],
     "byAxis": [
@@ -340,16 +358,16 @@
         "axisId": "eltern-kooperation",
         "title": "Elternkooperation und Übergänge",
         "topicCount": 5,
-        "detailedTopicCount": 1,
-        "detailCoverageRatio": 0.2,
+        "detailedTopicCount": 2,
+        "detailCoverageRatio": 0.4,
         "detailedTopicIds": [
-          "elternkooperation"
+          "elternkooperation",
+          "uebergaenge"
         ],
         "missingTopicIds": [
           "elterngespraeche",
           "erziehungspartnerschaft",
-          "familienperspektive",
-          "uebergaenge"
+          "familienperspektive"
         ]
       },
       {
