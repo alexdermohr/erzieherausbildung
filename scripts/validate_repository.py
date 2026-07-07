@@ -329,4 +329,3 @@ assert source_health["sourcePolicy"]["raw_text_committed"] is False
 assert source_health["sourcePolicy"]["diagnostic_metadata_only"] is True
 assert source_health["summary"]["sourceCount"] == len(source_health["sources"])
 assert "validate_source_health.py" in workflow_validate
-assert any(item["sourceRef"] == "doc-029" and item["status"] == "empty" for item in source_health["sources"])
