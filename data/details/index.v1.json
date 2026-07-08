@@ -112,6 +112,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-elterngespraeche-v1",
+      "title": "Elterngespräche",
+      "path": "/data/details/detail-elterngespraeche-v1.json",
+      "topicIds": [
+        "elterngespraeche"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "sourceRefs": [
+        "doc-029"
+      ],
+      "excerptRefs": [
+        "doc-029-elterngespraeche-vorbereitung-perspektivwechsel"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-elternkooperation-v1",
       "title": "Elternkooperation",
       "path": "/data/details/detail-elternkooperation-v1.json",
@@ -162,6 +180,24 @@
       ],
       "excerptRefs": [
         "doc-014-fallverstehen-beobachtung-deutung-naechste-schritte"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-familienperspektive-v1",
+      "title": "Familienperspektive",
+      "path": "/data/details/detail-familienperspektive-v1.json",
+      "topicIds": [
+        "familienperspektive"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "sourceRefs": [
+        "doc-029"
+      ],
+      "excerptRefs": [
+        "doc-029-familienperspektive-lebenslagen-erwartungen"
       ],
       "detailStatus": "draft"
     },
@@ -312,10 +348,10 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 17,
-    "detailedTopicCount": 17,
-    "missingTopicCount": 27,
-    "detailCoverageRatio": 0.386,
+    "detailCount": 19,
+    "detailedTopicCount": 19,
+    "missingTopicCount": 25,
+    "detailCoverageRatio": 0.432,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
@@ -323,9 +359,11 @@
       "dialogische-haltung",
       "dokumentation",
       "eingewoehnung",
+      "elterngespraeche",
       "elternkooperation",
       "erziehungspartnerschaft",
       "fallverstehen",
+      "familienperspektive",
       "foerderplanung",
       "gespraechsanlaesse",
       "konflikte",
@@ -341,9 +379,7 @@
       "arbeitsfelder",
       "aufsichtspflicht",
       "bildungsleitlinien",
-      "elterngespraeche",
       "ethik",
-      "familienperspektive",
       "gesundheit-ernaehrung",
       "institutioneller-auftrag",
       "kindeswohl",
@@ -466,17 +502,16 @@
         "axisId": "eltern-kooperation",
         "title": "Elternkooperation und Übergänge",
         "topicCount": 5,
-        "detailedTopicCount": 3,
-        "detailCoverageRatio": 0.6,
+        "detailedTopicCount": 5,
+        "detailCoverageRatio": 1.0,
         "detailedTopicIds": [
+          "elterngespraeche",
           "elternkooperation",
           "erziehungspartnerschaft",
+          "familienperspektive",
           "uebergaenge"
         ],
-        "missingTopicIds": [
-          "elterngespraeche",
-          "familienperspektive"
-        ]
+        "missingTopicIds": []
       },
       {
         "axisId": "rahmen-recht-ethik",

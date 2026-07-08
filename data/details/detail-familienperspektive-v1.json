@@ -1,0 +1,79 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-familienperspektive-v1",
+  "title": "Familienperspektive",
+  "topicIds": [
+    "familienperspektive"
+  ],
+  "axisIds": [
+    "eltern-kooperation"
+  ],
+  "sourceRefs": [
+    "doc-029"
+  ],
+  "excerptRefs": [
+    "doc-029-familienperspektive-lebenslagen-erwartungen"
+  ],
+  "summary": "Familienperspektive heißt, das Kind nicht isoliert von seinem familiären Kontext zu verstehen. Familien bringen unterschiedliche Lebensformen, Sprachen, Erfahrungen, Ressourcen, Belastungen und Erwartungen mit. Pädagogische Professionalität zeigt sich darin, diese Unterschiede wahrzunehmen, ohne Familien vorschnell festzulegen.",
+  "coreIdeas": [
+    "Es gibt nicht die Eltern und nicht die Familie; Familien unterscheiden sich in Lebensform, Sprache, Erwerbslage, Migrationserfahrung, Ressourcen und Erwartungen.",
+    "Elterliches Verhalten kann aus Unsicherheit, schlechten Erfahrungen, Sprachbarrieren, Sorge, Überforderung oder anderen Prioritäten entstehen.",
+    "Fachkräfte brauchen Perspektivwechsel: Wie könnte sich die Situation aus Sicht der Eltern oder des Kindes anfühlen?",
+    "Familienperspektive verhindert, dass einzelne Informationen zu festen Etiketten über Eltern werden.",
+    "Kooperation gelingt eher, wenn Familien mit ihren Ressourcen, nicht nur mit ihren Problemen sichtbar werden."
+  ],
+  "practiceAnchors": [
+    "Vor Bewertungen fragen: Welche Informationen habe ich wirklich, welche fehlen, welche Annahmen ergänze ich selbst?",
+    "Familiäre Lebenslagen in Gesprächen nicht ausfragen, sondern sensibel und anlassbezogen klären.",
+    "Väter, weitere Bezugspersonen, getrennt lebende Eltern oder erweiterte Familien nicht automatisch ausblenden.",
+    "Bei Familien mit Sprach- oder Migrationserfahrung Unterstützung anbieten, ohne sie auf diese Erfahrung zu reduzieren.",
+    "Im Team prüfen, wie über bestimmte Eltern gesprochen wird und ob Zuschreibungen Kooperation erschweren."
+  ],
+  "commonMisunderstandings": [
+    "Familienperspektive bedeutet nicht, jedes Verhalten der Eltern unkritisch zu übernehmen.",
+    "Kultureller Hintergrund erklärt nicht automatisch elterliches Verhalten.",
+    "Familiendaten ersetzen kein Gespräch mit den Eltern.",
+    "Ressourcenorientierung bedeutet nicht, Belastungen zu ignorieren.",
+    "Eine schwierige Beziehung zu Eltern ist nicht nur Eigenschaft der Eltern, sondern entsteht auch aus institutionellen Erwartungen und Kommunikation."
+  ],
+  "bridges": [
+    {
+      "targetId": "elternkooperation",
+      "relation": "Kooperation braucht ein Verständnis der familiären Lage und Sichtweise."
+    },
+    {
+      "targetId": "elterngespraeche",
+      "relation": "Elterngespräche werden tragfähiger, wenn Erwartungen, Ressourcen und Unsicherheiten der Familie mitgedacht werden."
+    },
+    {
+      "targetId": "erziehungspartnerschaft",
+      "relation": "Partnerschaft entsteht eher, wenn Familie nicht als Störgröße, sondern als Bezugssystem des Kindes gesehen wird."
+    },
+    {
+      "targetId": "uebergaenge",
+      "relation": "Übergänge berühren immer auch familiäre Routinen, Sorgen und Erwartungen."
+    },
+    {
+      "targetId": "reflexion",
+      "relation": "Familienperspektive verlangt Reflexion eigener Bilder, Vorannahmen und Teamnarrative über Eltern."
+    },
+    {
+      "targetId": "kindeswohl",
+      "relation": "Familienperspektive muss später mit Schutzauftrag und Kindeswohlgrenzen verbunden werden."
+    }
+  ],
+  "openQuestions": [
+    "Wie werden Familienformen, Migrationserfahrung, Armut und Erwerbslage später differenziert, ohne statistische Scheintiefe zu erzeugen?",
+    "Welche Brücke zur Rechts- und Schutzachse braucht Familienperspektive?",
+    "Soll Mehrsprachigkeit als eigene Karte zwischen Familienperspektive, Sprachbildung und Elternkooperation entstehen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.34,
+  "interpolation": 0.31,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

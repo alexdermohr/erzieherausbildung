@@ -12,10 +12,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 19
-- Reviewstatus: {'draft': 17, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 17, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 8, 'lernfeld 3': 5, 'lernfeld 4': 1, 'lernfeld 5': 2}
+- Einträge: 21
+- Reviewstatus: {'draft': 19, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 19, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 8, 'lernfeld 3': 5, 'lernfeld 4': 1, 'lernfeld 5': 4}
 
 ## Quellen im Pilot
 
@@ -48,15 +48,19 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Digitale Bildung: 1
 - Dokumentation: 1
 - Eingewöhnung: 2
+- Elterngespräche: 1
 - Elternkooperation: 2
+- Erwartungen: 1
 - Erziehungspartnerschaft: 2
 - Erzählen: 2
 - Fallverstehen: 2
-- Familienperspektive: 1
+- Familienformen: 1
+- Familienperspektive: 2
 - Foerderplanung: 1
 - Förderung: 1
 - Gefühlsregulation: 1
 - Gesprächsanlässe: 1
+- Gesprächsvorbereitung: 1
 - Hypothesenbildung: 1
 - Informatik: 1
 - Interessen: 1
@@ -66,10 +70,12 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Kommunikation: 1
 - Konfliktbegleitung: 1
 - Konflikte: 1
+- Lebenslagen: 1
 - Lernarrangements: 1
 - Lerngeschichten: 2
 - Lernumgebung: 1
 - Literacy: 2
+- Perspektivwechsel: 1
 - Perspektivübernahme: 1
 - Planung: 1
 - Portfolio: 1
@@ -77,15 +83,18 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Querschnitt: 2
 - Reflexion: 1
 - Reformulieren: 1
+- Ressourcen: 1
 - Ressourcenorientierung: 3
 - Schriftkultur: 1
 - Sicherheit: 2
+- Sprachbarriere: 1
 - Sprachbildung im Alltag: 1
 - Sprache: 1
 - Sprache und Kommunikation: 1
 - Sprechfreude: 1
 - Stärken: 1
-- Vertrauen: 1
+- Vertrauen: 2
+- Vorannahmen: 1
 - Wanddokumentation: 1
 - Zuhören: 1
 - aktives Zuhören: 2
@@ -94,7 +103,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - naechste Schritte: 1
 - nicht-situative Sprache: 1
 - nächste Schritte: 1
-- professionelles Gespräch: 1
+- professionelles Gespräch: 2
 - sanfter Übergang: 1
 - sichere Basis: 1
 - Übergang: 1

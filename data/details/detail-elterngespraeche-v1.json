@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-elterngespraeche-v1",
+  "title": "Elterngespräche",
+  "topicIds": [
+    "elterngespraeche"
+  ],
+  "axisIds": [
+    "eltern-kooperation"
+  ],
+  "sourceRefs": [
+    "doc-029"
+  ],
+  "excerptRefs": [
+    "doc-029-elterngespraeche-vorbereitung-perspektivwechsel"
+  ],
+  "summary": "Elterngespräche sind professionelle Gesprächssituationen zwischen Einrichtung und Familie. Sie brauchen Vorbereitung, klares Anliegen, verständliche Sprache, Perspektivwechsel und eine Haltung, die Eltern nicht nur informiert, sondern als Gesprächspartner ernst nimmt.",
+  "coreIdeas": [
+    "Ein Elterngespräch beginnt vor dem Termin: Fachkräfte prüfen Anlass, Ziel, vorhandene Informationen, mögliche Belastungen und eigene Vorannahmen.",
+    "Gespräche über das eigene Kind können für Eltern emotional und ungewohnt sein; das beeinflusst Reaktion, Abwehr, Unsicherheit oder Gesprächsbereitschaft.",
+    "Sprachbarrieren und unterschiedliche kulturelle Erwartungen verlangen zusätzliche Klarheit, Zeit, Nachfragen und geeignete Unterstützung.",
+    "Professioneller Gesprächsaufbau verbindet Beziehung, Sachklärung, Verständlichkeit und konkrete nächste Schritte.",
+    "Ein gutes Gespräch vermeidet Defizitfixierung und schafft Raum für Elternsicht, Sorge, Wissen über das Kind und gemeinsame Verantwortung."
+  ],
+  "practiceAnchors": [
+    "Vor dem Gespräch klären: Was ist Anlass, was ist Ziel, was muss ich wissen, was vermute ich nur?",
+    "Mit einer positiven oder konkreten Beobachtung beginnen, statt sofort mit Problem- oder Defizitmeldung einzusteigen.",
+    "Regelmäßig prüfen, ob Aussagen verstanden wurden; Nicken oder Lächeln nicht automatisch als Verstehen werten.",
+    "Bei Sprachbarrieren einfache Sprache, Visualisierung, schriftliche Informationen oder geeignete Dolmetschstrukturen vorbereiten.",
+    "Zum Abschluss gemeinsam festhalten, was vereinbart wurde und welcher nächste Kontakt sinnvoll ist."
+  ],
+  "commonMisunderstandings": [
+    "Elterngespräche sind nicht nur Informationsweitergabe der Fachkraft.",
+    "Freundlichkeit ersetzt keine Gesprächsvorbereitung.",
+    "Schwieriges Gesprächsverhalten der Eltern bedeutet nicht automatisch Desinteresse.",
+    "Sprachbarrieren sind nicht nur ein technisches Übersetzungsproblem, sondern betreffen Vertrauen, Macht und Teilhabe.",
+    "Ein Tür-und-Angel-Gespräch eignet sich nicht für jede Klärung."
+  ],
+  "bridges": [
+    {
+      "targetId": "elternkooperation",
+      "relation": "Elterngespräche sind eine konkrete Form, in der Kooperation praktisch wird."
+    },
+    {
+      "targetId": "erziehungspartnerschaft",
+      "relation": "Gespräche auf Augenhöhe stützen die gemeinsame Verantwortung für das Kind."
+    },
+    {
+      "targetId": "familienperspektive",
+      "relation": "Gute Gespräche berücksichtigen Lebenslage, Erwartungen und Ressourcen der Familie."
+    },
+    {
+      "targetId": "dokumentation",
+      "relation": "Dokumentierte Beobachtungen geben Gesprächen konkrete Grundlage statt bloßer Zuschreibung."
+    },
+    {
+      "targetId": "dialogische-haltung",
+      "relation": "Elterngespräche brauchen Zuhören, Nachfragen und ernsthaftes Aufgreifen der Elternsicht."
+    }
+  ],
+  "openQuestions": [
+    "Soll später zwischen Aufnahmegespräch, Entwicklungsgespräch, Konfliktgespräch und Tür-und-Angel-Gespräch unterschieden werden?",
+    "Welche Gesprächstechniken sollen als eigene Methodenkarten ausgearbeitet werden?",
+    "Wie werden Dolmetschstrukturen, Datenschutz und Machtverhältnisse rechtlich sauber ergänzt?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.32,
+  "interpolation": 0.27,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
