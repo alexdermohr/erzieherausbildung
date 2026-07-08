@@ -16,6 +16,7 @@ EXPECTED_FILES = {
     "Lernlandkarte.canvas",
     "Lernlandkarte.md",
     "Wissensnetz.md",
+    "Pilotindex.md",
     "Visualisierungsentscheidung.md",
     ".erzieherausbildung-obsidian-view.json",
 }
@@ -80,11 +81,14 @@ def validate_with_temp_home(home: Path) -> None:
     assert "machine-readable.local" in manifest["forbidden_parts"]
     assert ".pdf" in manifest["forbidden_suffixes"]
 
-    for name in ["Start hier.md", "Lernlandkarte.md", "Wissensnetz.md", "Visualisierungsentscheidung.md"]:
+    for name in ["Start hier.md", "Lernlandkarte.md", "Wissensnetz.md", "Pilotindex.md", "Visualisierungsentscheidung.md"]:
         assert WARNING in (target / name).read_text(encoding="utf-8")
 
     assert (ROOT / "visuals" / "erzieherausbildung-systemkarte.canvas").read_bytes() == (target / "Systemkarte.canvas").read_bytes()
     assert (ROOT / "visuals" / "learning-map-v1.canvas").read_bytes() == (target / "Lernlandkarte.canvas").read_bytes()
+    pilot_text = (target / "Pilotindex.md").read_text(encoding="utf-8")
+    assert "Offene Quellenarbeit" in pilot_text
+    assert "Konkret lokalisierte Quellen im Pilot" in pilot_text
 
     (vault / "dirty.md").write_text("dirty\n", encoding="utf-8")
     dirty = run([sys.executable, str(SCRIPT)], env=env, check=False)
