@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-selbstwirksamkeit-v1",
+  "title": "Selbstwirksamkeit",
+  "topicIds": [
+    "selbstwirksamkeit"
+  ],
+  "axisIds": [
+    "beziehung-entwicklung"
+  ],
+  "sourceRefs": [
+    "doc-010"
+  ],
+  "excerptRefs": [
+    "doc-010-selbstwirksamkeit-erfahrung-zutrauen-verantwortung"
+  ],
+  "summary": "Selbstwirksamkeit bezeichnet die Erfahrung und Erwartung, durch eigenes Handeln etwas bewirken zu können. Pädagogisch wird sie gestärkt, wenn Kinder nicht nur geschützt, sondern ernsthaft beteiligt, ermutigt und mit bewältigbaren Verantwortungen konfrontiert werden.",
+  "coreIdeas": [
+    "Selbstwirksamkeit entsteht vor allem aus eigener Erfahrung: Ich handle, ich bewältige, ich verändere etwas.",
+    "Zutrauen von Erwachsenen kann Selbstwirksamkeit fördern, wenn es mit realen Handlungsmöglichkeiten verbunden ist.",
+    "Übermäßige Kontrolle schwächt Selbstwirksamkeit, weil Kinder dann keine Folgen ihres eigenen Handelns erleben.",
+    "Selbstwirksamkeit braucht passende Herausforderungen: zu leicht bleibt wirkungslos, zu schwer erzeugt Überforderung.",
+    "Sie verbindet Beziehung, Ressourcenorientierung, Beteiligung und Lernarrangements."
+  ],
+  "practiceAnchors": [
+    "Kindern echte Aufgaben geben, deren Ergebnis für sie und die Gruppe sichtbar ist.",
+    "Nicht sofort übernehmen, wenn etwas schwierig wird; erst Unterstützung dosieren und Lösungsversuche ermöglichen.",
+    "Erfolge auf Handlung, Strategie und Ausdauer beziehen, nicht nur loben.",
+    "Risiken pädagogisch prüfen: Welche Erfahrung kann das Kind selbst machen, welche Grenze ist nötig?",
+    "Nach Handlungen mit Kindern besprechen, was sie selbst geschafft, entschieden oder verändert haben."
+  ],
+  "commonMisunderstandings": [
+    "Selbstwirksamkeit ist nicht bloß Selbstbewusstsein.",
+    "Kinder allein machen zu lassen ist noch keine Förderung von Selbstwirksamkeit.",
+    "Lob ersetzt keine wirksame Erfahrung.",
+    "Schutz und Selbstwirksamkeit stehen nicht grundsätzlich gegeneinander; sie müssen abgewogen werden.",
+    "Nur erfolgreiche Situationen zuzulassen verhindert wichtige Bewältigungserfahrungen."
+  ],
+  "bridges": [
+    {
+      "targetId": "aufsichtspflicht",
+      "relation": "Aufsicht muss Freiräume ermöglichen, in denen Selbstwirksamkeit erfahrbar wird."
+    },
+    {
+      "targetId": "ressourcenorientierung",
+      "relation": "Selbstwirksamkeit baut auf sichtbaren Stärken und Handlungsmöglichkeiten des Kindes auf."
+    },
+    {
+      "targetId": "lernarrangements",
+      "relation": "Räume und Angebote können so gestaltet werden, dass Kinder eigenständig handeln und Folgen erleben."
+    },
+    {
+      "targetId": "anpassung-selbstbestimmung",
+      "relation": "Selbstwirksamkeit verlangt eigene Wahl- und Entscheidungsspielräume."
+    },
+    {
+      "targetId": "beobachtung",
+      "relation": "Beobachtung zeigt, wo Kinder Initiative, Ausdauer und Zutrauen entwickeln."
+    }
+  ],
+  "openQuestions": [
+    "Soll Selbstwirksamkeit später mit Partizipation und demokratischer Bildung enger verbunden werden?",
+    "Welche Praxisbeispiele zeigen Selbstwirksamkeit ohne Scheinbeteiligung?",
+    "Wie wird Überforderung als Grenze von Selbstwirksamkeitsförderung markiert?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.29,
+  "interpolation": 0.24,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

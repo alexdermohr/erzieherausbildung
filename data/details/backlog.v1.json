@@ -3,9 +3,9 @@
   "purpose": "Steuert die nächste Detailausweitung ohne Scheintiefe: offene Themen werden erst nach quellengebundenem Exzerpt zu Detaildateien.",
   "coverageSnapshot": {
     "topicCount": 44,
-    "detailedTopicCount": 19,
-    "missingTopicCount": 25,
-    "detailCoverageRatio": 0.432
+    "detailedTopicCount": 22,
+    "missingTopicCount": 22,
+    "detailCoverageRatio": 0.5
   },
   "selectionRule": "Nur Themen mit neuem excerpted oder interpreted Exzerpt dürfen in data/details/*.json überführt werden.",
   "blockedFields": [
@@ -51,54 +51,6 @@
       "priority": "medium",
       "status": "needs-own-excerpt",
       "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-anpassung-selbstbestimmung",
-      "topicId": "anpassung-selbstbestimmung",
-      "title": "Anpassung und Selbstbestimmung",
-      "axisId": "beziehung-entwicklung",
-      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
-      "sourceRefs": [
-        "doc-016"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-aufsichtspflicht",
-      "topicId": "aufsichtspflicht",
-      "title": "Aufsichtspflicht",
-      "axisId": "beziehung-entwicklung",
-      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
-      "sourceRefs": [
-        "doc-010"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-selbstwirksamkeit",
-      "topicId": "selbstwirksamkeit",
-      "title": "Selbstwirksamkeit",
-      "axisId": "beziehung-entwicklung",
-      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
-      "sourceRefs": [
-        "doc-010"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
       "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
       "blockedUntil": "source-excerpted"
     },

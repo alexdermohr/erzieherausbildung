@@ -2,6 +2,42 @@
   "schema": "erzieherausbildung.detail_index.v1",
   "details": [
     {
+      "id": "detail-anpassung-selbstbestimmung-v1",
+      "title": "Anpassung und Selbstbestimmung",
+      "path": "/data/details/detail-anpassung-selbstbestimmung-v1.json",
+      "topicIds": [
+        "anpassung-selbstbestimmung"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "sourceRefs": [
+        "doc-016"
+      ],
+      "excerptRefs": [
+        "doc-016-anpassung-selbstbestimmung-bindung-freiraum"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-aufsichtspflicht-v1",
+      "title": "Aufsichtspflicht",
+      "path": "/data/details/detail-aufsichtspflicht-v1.json",
+      "topicIds": [
+        "aufsichtspflicht"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "sourceRefs": [
+        "doc-010"
+      ],
+      "excerptRefs": [
+        "doc-010-aufsichtspflicht-schutz-freiraum-entwicklungsfoerderung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-beobachtung-v1",
       "title": "Beobachtung",
       "path": "/data/details/detail-beobachtung-v1.json",
@@ -292,6 +328,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-selbstwirksamkeit-v1",
+      "title": "Selbstwirksamkeit",
+      "path": "/data/details/detail-selbstwirksamkeit-v1.json",
+      "topicIds": [
+        "selbstwirksamkeit"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "sourceRefs": [
+        "doc-010"
+      ],
+      "excerptRefs": [
+        "doc-010-selbstwirksamkeit-erfahrung-zutrauen-verantwortung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-sprachbildung-v1",
       "title": "Sprachbildung im Alltag",
       "path": "/data/details/detail-sprachbildung-v1.json",
@@ -348,11 +402,13 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 19,
-    "detailedTopicCount": 19,
-    "missingTopicCount": 25,
-    "detailCoverageRatio": 0.432,
+    "detailCount": 22,
+    "detailedTopicCount": 22,
+    "missingTopicCount": 22,
+    "detailCoverageRatio": 0.5,
     "detailedTopicIds": [
+      "anpassung-selbstbestimmung",
+      "aufsichtspflicht",
       "beobachtung",
       "berufsrolle",
       "bindung-beziehung",
@@ -369,15 +425,14 @@
       "konflikte",
       "lernarrangements",
       "ressourcenorientierung",
+      "selbstwirksamkeit",
       "sprachbildung",
       "sprache-kommunikation",
       "uebergaenge"
     ],
     "missingTopicIds": [
-      "anpassung-selbstbestimmung",
       "arbeitsbedingungen",
       "arbeitsfelder",
-      "aufsichtspflicht",
       "bildungsleitlinien",
       "ethik",
       "gesundheit-ernaehrung",
@@ -395,7 +450,6 @@
       "reflexion",
       "regeln-struktur",
       "religion-ethik",
-      "selbstwirksamkeit",
       "sozialpaedagogische-grundlagen",
       "theater",
       "wohngruppe"
@@ -421,17 +475,16 @@
         "axisId": "beziehung-entwicklung",
         "title": "Beziehung, Entwicklung und Selbstwirksamkeit",
         "topicCount": 5,
-        "detailedTopicCount": 2,
-        "detailCoverageRatio": 0.4,
+        "detailedTopicCount": 5,
+        "detailCoverageRatio": 1.0,
         "detailedTopicIds": [
-          "bindung-beziehung",
-          "eingewoehnung"
-        ],
-        "missingTopicIds": [
           "anpassung-selbstbestimmung",
           "aufsichtspflicht",
+          "bindung-beziehung",
+          "eingewoehnung",
           "selbstwirksamkeit"
-        ]
+        ],
+        "missingTopicIds": []
       },
       {
         "axisId": "sprache-kommunikation",

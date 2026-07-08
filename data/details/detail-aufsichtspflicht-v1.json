@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-aufsichtspflicht-v1",
+  "title": "Aufsichtspflicht",
+  "topicIds": [
+    "aufsichtspflicht"
+  ],
+  "axisIds": [
+    "beziehung-entwicklung"
+  ],
+  "sourceRefs": [
+    "doc-010"
+  ],
+  "excerptRefs": [
+    "doc-010-aufsichtspflicht-schutz-freiraum-entwicklungsfoerderung"
+  ],
+  "summary": "Aufsichtspflicht ist die pädagogisch-rechtliche Aufgabe, Kinder vor erheblichen Gefahren zu schützen und zugleich Entwicklung, Selbstständigkeit und Selbstwirksamkeit nicht durch übermäßige Kontrolle zu blockieren. Sie verlangt situative Abwägung statt pauschaler Verbote.",
+  "coreIdeas": [
+    "Aufsicht ist kein Gegensatz zur Erziehung, sondern Teil einer entwicklungsfördernden Verantwortung.",
+    "Fachkräfte müssen Gefahren einschätzen, Kinder belehren oder warnen, beobachten und bei konkreter Gefahr eingreifen.",
+    "Zu viel Kontrolle kann Entwicklung behindern; angemessener Freiraum ist pädagogisch notwendig.",
+    "Aufsicht richtet sich nach Alter, Entwicklungsstand, Situation, Gruppe, Umgebung und konkretem Risiko.",
+    "Die zentrale Frage lautet: Was schützt das Kind, ohne seine Erfahrungs- und Handlungsmöglichkeiten unnötig zu nehmen?"
+  ],
+  "practiceAnchors": [
+    "Vor Aktivitäten Risiken und Entwicklungsgewinne getrennt prüfen.",
+    "Kinder über Gefahren informieren, statt nur Verbote auszusprechen.",
+    "Beobachten und präsent bleiben, ohne jede Handlung vorwegzunehmen.",
+    "Bei akuter Selbst- oder Fremdgefährdung klar eingreifen.",
+    "Im Team klären, welche Aufsicht bei Feuer, Ausflug, Werkzeug, Wasser, Straße oder Kleingruppen jeweils angemessen ist."
+  ],
+  "commonMisunderstandings": [
+    "Aufsichtspflicht bedeutet nicht permanente Kontrolle.",
+    "Freiraum bedeutet nicht Aufsichtslosigkeit.",
+    "Gefahr ist nicht automatisch ein pädagogischer Fehler; entscheidend ist die angemessene Einschätzung und Begleitung.",
+    "Rechtliche Sicherheit entsteht nicht durch maximale Verbote.",
+    "Aufsicht darf Selbstständigkeit nicht systematisch verhindern."
+  ],
+  "bridges": [
+    {
+      "targetId": "selbstwirksamkeit",
+      "relation": "Aufsicht muss so gestaltet werden, dass Kinder eigene Handlungserfahrungen machen können."
+    },
+    {
+      "targetId": "kindeswohl",
+      "relation": "Schutzpflicht und Kindeswohl setzen Grenzen pädagogischer Freiräume."
+    },
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Professionelle Aufsicht verlangt begründete Abwägung statt Angst- oder Routinenhandeln."
+    },
+    {
+      "targetId": "anpassung-selbstbestimmung",
+      "relation": "Aufsicht beeinflusst, wie viel Selbstbestimmung Kindern praktisch zugestanden wird."
+    },
+    {
+      "targetId": "regeln-struktur",
+      "relation": "Regeln können Aufsicht transparent und nachvollziehbar machen."
+    }
+  ],
+  "openQuestions": [
+    "Soll Aufsichtspflicht später zusätzlich in der Rechts- und Ethikachse gespiegelt werden?",
+    "Welche konkreten Risikosituationen brauchen eigene Beispiele?",
+    "Wie wird Teamabsprache als Schutz vor individueller Über- oder Unterkontrolle modelliert?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.3,
+  "interpolation": 0.25,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
