@@ -3,7 +3,6 @@ const knowledgeNetworkUrl = "/data/knowledge-network.v1.json";
 const sourceSummaryUrl = "/data/source-summary.json";
 const excerptIndexUrl = "/data/excerpts/pilot-v1.jsonl";
 const detailIndexUrl = "/data/details/index.v1.json";
-const detailBacklogUrl = "/data/details/backlog.v1.json";
 const detailBridgeIndexUrl = "/data/detail-bridge-index.v1.json";
 
 const canvasViews = [

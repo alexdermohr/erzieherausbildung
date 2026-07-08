@@ -38,7 +38,7 @@ Deutung B: Die Oberflächen sind Erkenntnisorgane. Dann muss ihre Autorität exp
 
 ## Risiko und Nutzen
 
-Nutzen: klare Zuständigkeit, weniger Drift, bessere spätere Erweiterbarkeit und bessere Trennung von Kanon, Denkraum und Lesefläche.
+Nutzen: klare Zuständigkeit, weniger Drift, bessere spätere Erweiterbarkeit und bessere Trennung von Kanon, Denkraum und Lesefläche. Die Web-Lesefläche darf nur deklarierte Struktur-, Exzerpt-, Detail- und Brückenindexdaten laden.
 
 Risiko: Der Contract kann bürokratisch wirken. Gegenmittel: klein halten, mit `data/surface-policy.v1.json` maschinenprüfbar machen und nicht zum Ersatz für Inhalte aufblasen.
 
