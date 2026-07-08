@@ -1,5 +1,6 @@
 import json
 import re
+import sys
 import importlib.util
 from pathlib import Path
 
@@ -344,6 +345,19 @@ assert all(item["reviewStatus"] == "needs-source" for item in pilot_index["unres
 assert all(item["claimType"] in {"question", "title-derived"} for item in pilot_index["unresolvedSourceWork"])
 assert "Konkret lokalisierte Quellen im Pilot" in expected_pilot_doc
 assert "Offene Quellenarbeit" in expected_pilot_doc
+
+
+obsidian_spec = importlib.util.spec_from_file_location("obsidian_views", root / "scripts/obsidian_views.py")
+obsidian_views = importlib.util.module_from_spec(obsidian_spec)
+assert obsidian_spec.loader is not None
+sys.modules[obsidian_spec.name] = obsidian_views
+obsidian_spec.loader.exec_module(obsidian_views)
+obsidian_doc = (root / "docs/obsidian-vault-spiegel.md").read_text(encoding="utf-8")
+for view_file in obsidian_views.VIEW_FILES:
+    assert f"`{view_file.source}` -> `{view_file.target}`" in obsidian_doc
+for generated in obsidian_views.GENERATED_FILES:
+    assert f"`{generated}`" in obsidian_doc
+assert "keine Rohquellenablage" in obsidian_doc
 
 source_health = j("data/source-health.v1.json")
 assert source_health["schema"] == "erzieherausbildung.source_health.v1"
