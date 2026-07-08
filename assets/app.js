@@ -37,6 +37,7 @@ const state = {
   activeAxis: "all",
   activeCluster: "all",
   activeDetailBridgeAxis: "all",
+  activeDetailBridgeTarget: "",
   canvas: {
     activeView: canvasViews[0].id,
     data: null,
@@ -279,8 +280,40 @@ function renderDetailBridgeAxisFilter() {
   select.value = state.activeDetailBridgeAxis;
   select.onchange = () => {
     state.activeDetailBridgeAxis = select.value;
+    state.activeDetailBridgeTarget = "";
     renderDetailBridgeIndex();
   };
+}
+
+function bridgeIncomingForTarget(index, targetId) {
+  return (index.bridges ?? []).filter((bridge) => bridge.targetId === targetId);
+}
+
+function renderIncomingBridgeDetails(index, targetId) {
+  const target = document.querySelector("#detail-bridge-incoming-list");
+  if (!target) return;
+  target.innerHTML = "";
+  if (!targetId) {
+    target.append(el("p", "fineprint", "Hub auswählen, um eingehende Detailkarten und Relationstexte zu sehen."));
+    return;
+  }
+
+  const targetMeta = index.byTarget?.[targetId];
+  const bridges = bridgeIncomingForTarget(index, targetId);
+  const heading = el("h4", "", `Eingehend zu ${targetMeta?.targetTitle ?? targetId}`);
+  target.append(heading);
+  target.append(el("p", "fineprint", `${bridges.length} Detail-Brücken. Diese Relationstexte sind aus Detailkarten abgeleitet.`));
+
+  bridges.slice(0, 16).forEach((bridge) => {
+    const card = el("article", "incoming-bridge-card");
+    card.append(el("h5", "", bridge.sourceTitle));
+    card.append(el("p", "", bridge.relation));
+    card.append(el("p", "fineprint", `${bridge.sourceDetailId} → ${bridge.targetId}`));
+    target.append(card);
+  });
+  if (bridges.length > 16) {
+    target.append(el("p", "fineprint", `${bridges.length - 16} weitere eingehende Brücken sind im generierten Detail-Brückenindex dokumentiert.`));
+  }
 }
 
 function renderDetailBridgeIndex() {
@@ -300,6 +333,9 @@ function renderDetailBridgeIndex() {
   const activeAxis = state.activeDetailBridgeAxis;
   const hubs = (index.hubs ?? []).filter((hub) => activeAxis === "all" || targetAxisForHub(index, hub) === activeAxis).slice(0, 8);
   const axes = activeAxis === "all" ? (index.byTargetAxis ?? []) : (index.byTargetAxis ?? []).filter((axis) => axis.axisId === activeAxis);
+  if (!hubs.some((hub) => hub.targetId === state.activeDetailBridgeTarget)) {
+    state.activeDetailBridgeTarget = hubs[0]?.targetId ?? "";
+  }
   const axisTitle = activeDetailBridgeAxisTitle(index);
   summary.textContent = `${index.totals.details} Detailkarten erzeugen ${index.totals.bridges} Brücken zu ${index.totals.targets} Zielknoten. Filter: ${axisTitle}. Ein hoher Eingangswert markiert Orientierungsknoten, nicht automatisch Wichtigkeit im Ausbildungsplan.`;
 
@@ -308,13 +344,19 @@ function renderDetailBridgeIndex() {
   }
 
   hubs.forEach((hub) => {
-    const card = el("article", "relation-card network");
-    const roleLine = el("p", "bridge-role");
+    const card = el("button", `relation-card hub-button network ${hub.targetId === state.activeDetailBridgeTarget ? "active" : ""}`);
+    card.type = "button";
+    card.setAttribute("aria-pressed", hub.targetId === state.activeDetailBridgeTarget ? "true" : "false");
+    card.onclick = () => {
+      state.activeDetailBridgeTarget = hub.targetId;
+      renderDetailBridgeIndex();
+    };
+    const roleLine = el("span", "bridge-role");
     roleLine.append(el("span", "bridge-role-badge", "Hub"));
     roleLine.append(el("span", "bridge-type", `${hub.incomingBridgeCount} eingehende Brücken`));
     card.append(roleLine);
-    card.append(el("h3", "", hub.targetTitle));
-    card.append(el("p", "fineprint", hub.targetId));
+    card.append(el("span", "hub-title", hub.targetTitle));
+    card.append(el("span", "fineprint hub-id", hub.targetId));
     hubsTarget.append(card);
   });
 
@@ -325,6 +367,8 @@ function renderDetailBridgeIndex() {
     card.append(el("p", "fineprint", axis.axisId));
     axesTarget.append(card);
   });
+
+  renderIncomingBridgeDetails(index, state.activeDetailBridgeTarget);
 }
 
 function renderCoverage() {
