@@ -32,11 +32,11 @@
   ],
   "bridges": [
     {
-      "targetId": "beziehung",
+      "targetId": "bindung-beziehung",
       "relation": "Dialogische Kommunikation ist eine Form von Beziehungsgestaltung."
     },
     {
-      "targetId": "bildung",
+      "targetId": "bildungsbereiche",
       "relation": "Sprache erschließt Themen, Bedeutungen und gemeinsames Denken."
     },
     {
@@ -44,7 +44,7 @@
       "relation": "Sprachliche Beiträge zeigen Interessen, Deutungen und Entwicklungsstände."
     },
     {
-      "targetId": "literacy",
+      "targetId": "sprachbildung",
       "relation": "Literacy verbindet Sprache, Schrift, Bilder und Erzählkultur."
     }
   ],

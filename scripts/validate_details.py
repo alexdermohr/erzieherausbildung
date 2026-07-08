@@ -21,6 +21,7 @@ DOC = re.compile(r"^doc-\d{3}$")
 ID = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 valid_topics = {topic["id"] for axis in learning["axes"] for topic in axis["topics"]}
 valid_axes = {axis["id"] for axis in learning["axes"]}
+valid_bridge_targets = valid_topics | valid_axes
 valid_sources = {source for axis in learning["axes"] for source in axis["sources"]} | {source for axis in learning["axes"] for topic in axis["topics"] for source in topic["sources"]}
 excerpt_ids = {item["id"] for item in excerpts}
 
@@ -41,8 +42,11 @@ def validate_bridge(value, where, problems):
     if not isinstance(value, dict):
         problems.append(f"{where}: bridge must be object")
         return
-    if not nonempty_string(value.get("targetId")):
+    target_id = value.get("targetId")
+    if not nonempty_string(target_id):
         problems.append(f"{where}: bridge targetId required")
+    elif target_id not in valid_bridge_targets:
+        problems.append(f"{where}: unknown bridge targetId {target_id}")
     if not nonempty_string(value.get("relation")):
         problems.append(f"{where}: bridge relation required")
 
