@@ -71,7 +71,14 @@
       <section class="panel">
         <p class="eyebrow">Detail-Brückenindex</p>
         <h2>Verbindungsknoten zwischen Detailkarten</h2>
-        <p class="fineprint">Diese Lesefläche zeigt die aus Detailkarten abgeleiteten Brücken. Sie ist Orientierung, keine neue Quelle.</p>
+        <div class="section-head compact-section-head">
+          <p class="fineprint">Diese Lesefläche zeigt die aus Detailkarten abgeleiteten Brücken. Sie ist Orientierung, keine neue Quelle.</p>
+          <label class="filter-label">Zielachse filtern
+            <select id="detail-bridge-axis-filter">
+              <option value="all">Alle Zielachsen</option>
+            </select>
+          </label>
+        </div>
         <div id="detail-bridge-summary" class="fineprint"></div>
         <div class="bridge-index-layout">
           <div>
