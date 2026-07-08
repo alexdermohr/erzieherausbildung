@@ -989,7 +989,7 @@
         "missingTopicIds": []
       }
     ],
-    "coverageStatus": "pilot-partial",
-    "epistemicEmpty": "Die meisten Themen haben noch keine Detailaufbereitung. Das ist ein sichtbarer Arbeitsstand, kein Fehler."
+    "coverageStatus": "complete",
+    "epistemicEmpty": "Alle aktuell modellierten Themen haben eine erste quellengebundene Detailaufbereitung. Das ist vollständige Erstabdeckung, keine endgültige inhaltliche Sättigung."
   }
 }

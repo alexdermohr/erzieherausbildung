@@ -258,7 +258,8 @@ function renderCoverage() {
   const omitted = coverage?.intentionally_unmodeled_doc_ids?.join(", ") || "keine";
   const cluster = selectedCluster();
   const focus = cluster ? ` Fokus: ${cluster.title} mit ${cluster.topics.length} Themen.` : "";
-  const detailLine = detailCoverage ? ` Detailaufbereitung: ${detailCoverage.detailedTopicCount}/${detailCoverage.topicCount} Themen; ${detailCoverage.missingTopicCount} Themen bleiben offen.` : "";
+  const detailOpenText = detailCoverage?.missingTopicCount === 0 ? "keine Themen bleiben offen" : `${detailCoverage.missingTopicCount} Themen bleiben offen`;
+  const detailLine = detailCoverage ? ` Detailaufbereitung: ${detailCoverage.detailedTopicCount}/${detailCoverage.topicCount} Themen; ${detailOpenText}.` : "";
   target.textContent = `${coverage.linked_doc_ids.length} doc-IDs sind an Themen gebunden. Das Wissensnetz clustert ${netCoverage.topic_count} Themen in ${netCoverage.cluster_count} Erkenntnisgruppen.${focus}${detailLine} Bewusst nicht als Themenknoten modelliert: ${omitted}.`;
 }
 

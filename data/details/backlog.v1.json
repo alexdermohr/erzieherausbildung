@@ -1,6 +1,6 @@
 {
   "schema": "erzieherausbildung.detail_backlog.v1",
-  "purpose": "Steuert die nächste Detailausweitung ohne Scheintiefe: offene Themen werden erst nach quellengebundenem Exzerpt zu Detaildateien.",
+  "purpose": "Hält offene Detailthemen und deren quellengebundene Auswahlregel; bei vollständiger Detailcoverage bleibt entries leer.",
   "coverageSnapshot": {
     "topicCount": 44,
     "detailedTopicCount": 44,

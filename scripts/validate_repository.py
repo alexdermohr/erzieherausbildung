@@ -283,8 +283,8 @@ assert "validate_detail_source_alignment.py" in (root / ".github/workflows/valid
 assert detail_index["coverage"]["topicCount"] == len(learning_topics)
 assert detail_index["coverage"]["detailedTopicCount"] == len({topic for entry in detail_index["details"] for topic in entry["topicIds"]})
 assert detail_index["coverage"]["missingTopicCount"] + detail_index["coverage"]["detailedTopicCount"] == detail_index["coverage"]["topicCount"]
-assert detail_index["coverage"]["coverageStatus"] == "pilot-partial"
-assert "epistemicEmpty" in detail_index["coverage"]
+assert detail_index["coverage"]["coverageStatus"] == "complete"
+assert "vollständige Erstabdeckung" in detail_index["coverage"]["epistemicEmpty"]
 assert "/data/details/index.v1.json" in app_js
 assert "detailCoverageLabel" in app_js
 assert "Detail offen" in app_js
