@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import importlib.util
 import json
 import os
 import subprocess
@@ -10,16 +11,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "obsidian_views.py"
-EXPECTED_FILES = {
-    "Start hier.md",
-    "Systemkarte.canvas",
-    "Lernlandkarte.canvas",
-    "Lernlandkarte.md",
-    "Wissensnetz.md",
-    "Pilotindex.md",
-    "Visualisierungsentscheidung.md",
-    ".erzieherausbildung-obsidian-view.json",
-}
+
+
+def load_obsidian_views():
+    spec = importlib.util.spec_from_file_location("obsidian_views", SCRIPT)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+OBSIDIAN_VIEWS = load_obsidian_views()
+EXPECTED_FILES = {file.target for file in OBSIDIAN_VIEWS.VIEW_FILES} | set(OBSIDIAN_VIEWS.GENERATED_FILES)
+MARKDOWN_TARGETS = {file.target for file in OBSIDIAN_VIEWS.VIEW_FILES if file.mode == "markdown"} | {"Start hier.md"}
 POLICY = "repo-canonical-vault-derived"
 SCHEMA = "erzieherausbildung.obsidian_view_export.v1"
 WARNING = "SPIEGELDATEI aus /home/alex/repos/erzieherausbildung"
@@ -81,7 +86,7 @@ def validate_with_temp_home(home: Path) -> None:
     assert "machine-readable.local" in manifest["forbidden_parts"]
     assert ".pdf" in manifest["forbidden_suffixes"]
 
-    for name in ["Start hier.md", "Lernlandkarte.md", "Wissensnetz.md", "Pilotindex.md", "Visualisierungsentscheidung.md"]:
+    for name in MARKDOWN_TARGETS:
         assert WARNING in (target / name).read_text(encoding="utf-8")
 
     assert (ROOT / "visuals" / "erzieherausbildung-systemkarte.canvas").read_bytes() == (target / "Systemkarte.canvas").read_bytes()
