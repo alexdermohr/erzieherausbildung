@@ -76,6 +76,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-dokumentation-v1",
+      "title": "Dokumentation",
+      "path": "/data/details/detail-dokumentation-v1.json",
+      "topicIds": [
+        "dokumentation"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "sourceRefs": [
+        "doc-014"
+      ],
+      "excerptRefs": [
+        "doc-014-dokumentation-lerngeschichte-austausch"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-eingewoehnung-v1",
       "title": "Eingewöhnung",
       "path": "/data/details/detail-eingewoehnung-v1.json",
@@ -294,15 +312,16 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 16,
-    "detailedTopicCount": 16,
-    "missingTopicCount": 28,
-    "detailCoverageRatio": 0.364,
+    "detailCount": 17,
+    "detailedTopicCount": 17,
+    "missingTopicCount": 27,
+    "detailCoverageRatio": 0.386,
     "detailedTopicIds": [
       "beobachtung",
       "berufsrolle",
       "bindung-beziehung",
       "dialogische-haltung",
+      "dokumentation",
       "eingewoehnung",
       "elternkooperation",
       "erziehungspartnerschaft",
@@ -322,7 +341,6 @@
       "arbeitsfelder",
       "aufsichtspflicht",
       "bildungsleitlinien",
-      "dokumentation",
       "elterngespraeche",
       "ethik",
       "familienperspektive",
@@ -398,17 +416,16 @@
         "axisId": "beobachtung-fallverstehen",
         "title": "Beobachtung, Fallverstehen und Dokumentation",
         "topicCount": 5,
-        "detailedTopicCount": 4,
-        "detailCoverageRatio": 0.8,
+        "detailedTopicCount": 5,
+        "detailCoverageRatio": 1.0,
         "detailedTopicIds": [
           "beobachtung",
+          "dokumentation",
           "fallverstehen",
           "foerderplanung",
           "ressourcenorientierung"
         ],
-        "missingTopicIds": [
-          "dokumentation"
-        ]
+        "missingTopicIds": []
       },
       {
         "axisId": "gruppe-institution-politik",
