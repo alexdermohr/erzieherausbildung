@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-arbeitsfelder-v1",
+  "title": "Arbeitsfelder",
+  "topicIds": [
+    "arbeitsfelder"
+  ],
+  "axisIds": [
+    "professionalitaet"
+  ],
+  "sourceRefs": [
+    "doc-007"
+  ],
+  "excerptRefs": [
+    "doc-007-arbeitsfelder-einrichtungen-auftrag-rahmen"
+  ],
+  "summary": "Arbeitsfelder beschreiben die institutionellen Orte, Zielgruppen und Aufträge pädagogischer Arbeit. Krippe, Kita, Hort, Jugendhilfe oder andere Einrichtungen unterscheiden sich in Altersspanne, Alltag, Auftrag, Rahmenbedingungen, Kooperationen und Handlungskonzepten. Berufsrolle wird je nach Arbeitsfeld konkret anders ausgefüllt.",
+  "coreIdeas": [
+    "Arbeitsfelder geben pädagogischer Arbeit einen konkreten institutionellen Rahmen.",
+    "Zielgruppe, Alter, Auftrag und Einrichtungstyp verändern Aufgaben und Formen professioneller Beziehung.",
+    "Arbeitsfeldwissen hilft, Berufsrolle nicht abstrakt, sondern kontextbezogen zu verstehen.",
+    "Rahmenbedingungen und Handlungskonzepte bestimmen mit, welche pädagogischen Entscheidungen plausibel sind.",
+    "Übergänge zwischen Arbeitsfeldern machen Gemeinsamkeiten und Unterschiede der Profession sichtbar."
+  ],
+  "practiceAnchors": [
+    "Bei jedem Arbeitsfeld fragen: Wer ist Zielgruppe, was ist Auftrag, welche Alltagssituationen prägen die Arbeit?",
+    "Einrichtungen nicht nur nach Namen unterscheiden, sondern nach Handlungskonzept, Rahmenbedingungen und Kooperationen.",
+    "Expertengespräche oder Hospitationen nutzen, um abstraktes Arbeitsfeldwissen mit konkretem Alltag zu verbinden.",
+    "Unterschiede zwischen Krippe, Kita, Hort und Jugendhilfe als Unterschiede in Rolle, Verantwortung und Beziehungsgestaltung lesen.",
+    "Arbeitsfeldwissen mit eigenen Berufsvorstellungen und Grenzen verbinden."
+  ],
+  "commonMisunderstandings": [
+    "Arbeitsfelder sind nicht bloß Einsatzorte.",
+    "Erzieherisches Handeln sieht nicht in jeder Einrichtung gleich aus.",
+    "Einrichtungstypen erklären nicht alles; konkrete Konzeption und Teamkultur bleiben bedeutsam.",
+    "Arbeitsfelder dürfen nicht nur nach persönlicher Vorliebe, sondern auch nach Auftrag und Anforderungen verstanden werden.",
+    "Ein Überblick über Arbeitsfelder ersetzt keine Auseinandersetzung mit konkreter Praxis."
+  ],
+  "bridges": [
+    {
+      "targetId": "berufsrolle",
+      "relation": "Die Berufsrolle wird im jeweiligen Arbeitsfeld konkret ausgestaltet."
+    },
+    {
+      "targetId": "arbeitsbedingungen",
+      "relation": "Jedes Arbeitsfeld bringt eigene Rahmenbedingungen und Belastungen mit."
+    },
+    {
+      "targetId": "institutioneller-auftrag",
+      "relation": "Arbeitsfelder unterscheiden sich wesentlich durch ihren institutionellen Auftrag."
+    },
+    {
+      "targetId": "wohngruppe",
+      "relation": "Wohngruppen markieren ein spezifisches Arbeitsfeld stationärer oder teilstationärer Hilfen."
+    },
+    {
+      "targetId": "uebergaenge",
+      "relation": "Übergänge zwischen Einrichtungen machen Arbeitsfeldgrenzen für Kinder und Familien praktisch relevant."
+    }
+  ],
+  "openQuestions": [
+    "Soll später eine eigene Arbeitsfeldmatrix entstehen?",
+    "Welche Arbeitsfelder sind für die Ausbildung zentral genug für eigene Unterkarten?",
+    "Wie werden Hospitationen oder Expertengespräche als Erkenntnisquelle modelliert, ohne Prüfungslogik zu erzeugen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.39,
+  "interpolation": 0.34,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

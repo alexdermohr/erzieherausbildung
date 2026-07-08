@@ -3,9 +3,9 @@
   "purpose": "Steuert die nächste Detailausweitung ohne Scheintiefe: offene Themen werden erst nach quellengebundenem Exzerpt zu Detaildateien.",
   "coverageSnapshot": {
     "topicCount": 44,
-    "detailedTopicCount": 22,
-    "missingTopicCount": 22,
-    "detailCoverageRatio": 0.5
+    "detailedTopicCount": 26,
+    "missingTopicCount": 18,
+    "detailCoverageRatio": 0.591
   },
   "selectionRule": "Nur Themen mit neuem excerpted oder interpreted Exzerpt dürfen in data/details/*.json überführt werden.",
   "blockedFields": [
@@ -16,44 +16,6 @@
     "localPath"
   ],
   "entries": [
-    {
-      "id": "backlog-professionelle-haltung",
-      "topicId": "professionelle-haltung",
-      "title": "Professionelle Haltung",
-      "axisId": "professionalitaet",
-      "axisTitle": "Professionelle Haltung und Berufsrolle",
-      "sourceRefs": [
-        "doc-005"
-      ],
-      "relatedExcerptRefs": [
-        "doc-004-berufsrolle-auftrag-reflexion"
-      ],
-      "priority": "medium",
-      "status": "needs-own-excerpt",
-      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-reflexion",
-      "topicId": "reflexion",
-      "title": "Reflexion und Selbstverständnis",
-      "axisId": "professionalitaet",
-      "axisTitle": "Professionelle Haltung und Berufsrolle",
-      "sourceRefs": [
-        "doc-004",
-        "doc-005"
-      ],
-      "relatedExcerptRefs": [
-        "doc-004-berufsrolle-auftrag-reflexion",
-        "doc-014-fallverstehen-beobachtung-deutung-naechste-schritte"
-      ],
-      "priority": "medium",
-      "status": "needs-own-excerpt",
-      "reason": "Das Thema ist mit einem vorhandenen excerpted Exzerpt verwandt, braucht aber eigene Detailgrundlage.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
     {
       "id": "backlog-gesundheit-ernaehrung",
       "topicId": "gesundheit-ernaehrung",
@@ -260,38 +222,6 @@
       "sourceRefs": [
         "doc-013",
         "doc-017"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-arbeitsbedingungen",
-      "topicId": "arbeitsbedingungen",
-      "title": "Arbeitsbedingungen",
-      "axisId": "professionalitaet",
-      "axisTitle": "Professionelle Haltung und Berufsrolle",
-      "sourceRefs": [
-        "doc-006"
-      ],
-      "relatedExcerptRefs": [],
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "reason": "Noch keine eigene Detailaufbereitung und kein direktes Exzerpt vorhanden.",
-      "nextAction": "Ein quellengebundenes Exzerpt nach excerpt.v1 anlegen; erst danach Detaildatei erzeugen.",
-      "blockedUntil": "source-excerpted"
-    },
-    {
-      "id": "backlog-arbeitsfelder",
-      "topicId": "arbeitsfelder",
-      "title": "Arbeitsfelder",
-      "axisId": "professionalitaet",
-      "axisTitle": "Professionelle Haltung und Berufsrolle",
-      "sourceRefs": [
-        "doc-007"
       ],
       "relatedExcerptRefs": [],
       "priority": "normal",

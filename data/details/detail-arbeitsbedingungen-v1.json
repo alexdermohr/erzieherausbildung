@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-arbeitsbedingungen-v1",
+  "title": "Arbeitsbedingungen",
+  "topicIds": [
+    "arbeitsbedingungen"
+  ],
+  "axisIds": [
+    "professionalitaet"
+  ],
+  "sourceRefs": [
+    "doc-006"
+  ],
+  "excerptRefs": [
+    "doc-006-arbeitsbedingungen-belastung-ressourcen-team"
+  ],
+  "summary": "Arbeitsbedingungen bilden den strukturellen Rahmen pädagogischer Professionalität. Personalschlüssel, Arbeitszeit, Erholung, Team, Leitung, Ressourcen und Belastungen beeinflussen, wie gesund und fachlich handlungsfähig Fachkräfte bleiben und welche Qualität im Alltag möglich ist.",
+  "coreIdeas": [
+    "Pädagogische Qualität hängt nicht nur von individueller Haltung ab, sondern auch von organisatorischen Bedingungen.",
+    "Belastung entsteht, wenn Anforderungen dauerhaft höher sind als verfügbare Ressourcen und Erholung fehlt.",
+    "Teamqualität und Leitung können Arbeitsbedingungen gesundheitsförderlich oder belastungsverschärfend prägen.",
+    "Arbeitsbedingungen beeinflussen Selbstregulation, Empathie, Aufmerksamkeit und Beziehungsqualität.",
+    "Professionelles Handeln muss strukturelle Grenzen benennen können, statt Überlastung nur individuell zu deuten."
+  ],
+  "practiceAnchors": [
+    "Belastungen nicht nur als persönliches Versagen lesen, sondern Anforderungen und Ressourcen vergleichen.",
+    "Im Team sichtbar machen, wo Überstunden, Alleindienste oder fehlende Pausen pädagogische Qualität gefährden.",
+    "Leitung und Organisation als Teil professioneller Verantwortung mitdenken.",
+    "Ressourcen wie Teamabsprachen, verlässliche Strukturen und Erholung als fachliche Schutzfaktoren behandeln.",
+    "Bei pädagogischen Fehlbelastungen auch die Rahmenbedingungen prüfen."
+  ],
+  "commonMisunderstandings": [
+    "Gute Haltung kompensiert schlechte Arbeitsbedingungen nicht unbegrenzt.",
+    "Belastung ist nicht nur individuelles Stressmanagement.",
+    "Teamprobleme sind keine Nebensache, sondern können pädagogische Qualität direkt betreffen.",
+    "Ressourcenorientierung gilt nicht nur für Kinder, sondern auch für Fachkräfte und Organisation.",
+    "Strukturelle Kritik ist nicht automatisch Unprofessionalität."
+  ],
+  "bridges": [
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Haltung braucht tragfähige Bedingungen, damit sie im Alltag erhalten bleibt."
+    },
+    {
+      "targetId": "berufsrolle",
+      "relation": "Zur Berufsrolle gehört auch, Belastungsgrenzen und Rahmenbedingungen fachlich zu benennen."
+    },
+    {
+      "targetId": "arbeitsfelder",
+      "relation": "Arbeitsbedingungen unterscheiden sich je nach Arbeitsfeld und institutionellem Auftrag."
+    },
+    {
+      "targetId": "institutioneller-auftrag",
+      "relation": "Der Auftrag einer Einrichtung muss mit real verfügbaren Ressourcen vermittelt werden."
+    },
+    {
+      "targetId": "gesundheit-ernaehrung",
+      "relation": "Gesundheit betrifft auch Fachkräfte als Voraussetzung pädagogischer Handlungsfähigkeit."
+    }
+  ],
+  "openQuestions": [
+    "Wie stark sollen arbeitsrechtliche und tarifliche Aspekte später ausgebaut werden?",
+    "Welche Brücke braucht das Thema zu Politik, Trägerstruktur und Fachkräftemangel?",
+    "Wie wird Belastung sichtbar, ohne das Projekt in Organisationsberatung zu verschieben?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.33,
+  "interpolation": 0.29,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

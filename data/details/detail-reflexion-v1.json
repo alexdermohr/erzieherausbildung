@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-reflexion-v1",
+  "title": "Reflexion und Selbstverständnis",
+  "topicIds": [
+    "reflexion"
+  ],
+  "axisIds": [
+    "professionalitaet"
+  ],
+  "sourceRefs": [
+    "doc-004",
+    "doc-005"
+  ],
+  "excerptRefs": [
+    "doc-004-005-reflexion-professionelles-selbstverstaendnis"
+  ],
+  "summary": "Reflexion und Selbstverständnis machen aus Alltagshandeln professionelles Handeln. Fachkräfte prüfen eigene Reaktionen, berufliche Rolle, fachliche Ziele, Teamhaltungen und mögliche Konflikte. Dadurch wird pädagogisches Handeln begründbar, veränderbar und anschlussfähig.",
+  "coreIdeas": [
+    "Reflexion trennt persönliche Betroffenheit von fachlicher Entscheidung, ohne Gefühle zu ignorieren.",
+    "Professionelles Selbstverständnis klärt, welchen Auftrag und welche Verantwortung die Fachkraft übernimmt.",
+    "Teamreflexion erweitert den Blick und verhindert, dass Einzeldeutungen unkontrolliert handlungsleitend werden.",
+    "Reflexion ist besonders nötig, wenn Situationen emotional, konflikthaft oder mehrdeutig sind.",
+    "Selbstverständnis bleibt entwicklungsfähig; Professionalität bedeutet auch, eigene Muster korrigieren zu können."
+  ],
+  "practiceAnchors": [
+    "Nach schwierigen Situationen fragen: Was habe ich beobachtet, was gedeutet, was gefühlt, was getan?",
+    "Eigene biografische und normative Prägungen markieren, bevor sie pädagogisch wirksam werden.",
+    "Kollegialen Austausch nutzen, um Hypothesen und blinde Flecken zu prüfen.",
+    "Den institutionellen Auftrag in Entscheidungen mitdenken: Was ist meine Rolle hier?",
+    "Reflexion dokumentieren, wenn daraus wiederkehrende Absprachen oder nächste Schritte entstehen."
+  ],
+  "commonMisunderstandings": [
+    "Reflexion ist nicht bloß Nachdenken im Stillen.",
+    "Selbstkritik allein ist noch keine professionelle Reflexion.",
+    "Reflexion darf Handeln nicht endlos blockieren; sie soll Entscheidungen begründbarer machen.",
+    "Teamreflexion ist nicht dazu da, Schuld zu verteilen.",
+    "Ein professionelles Selbstverständnis ist kein starres Rollenbild."
+  ],
+  "bridges": [
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Haltung braucht Reflexion, damit sie nicht zur ungeprüften persönlichen Überzeugung wird."
+    },
+    {
+      "targetId": "berufsrolle",
+      "relation": "Reflexion klärt, was aus der Berufsrolle heraus geboten ist."
+    },
+    {
+      "targetId": "fallverstehen",
+      "relation": "Fallverstehen verlangt Reflexion eigener Deutungen und Hypothesen."
+    },
+    {
+      "targetId": "familienperspektive",
+      "relation": "Reflexion schützt vor festen Bildern über Eltern und Familien."
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "relation": "Macht in pädagogischen Beziehungen muss reflektiert werden, um verantwortlich eingesetzt zu werden."
+    }
+  ],
+  "openQuestions": [
+    "Soll Reflexion später methodisch nach Selbstreflexion, Teamreflexion, Supervision und Dokumentation differenziert werden?",
+    "Welche Reflexionsfragen gehören als wiederverwendbare Praxisanker ins System?",
+    "Wie wird Reflexion mit Machtkritik und Ethik verbunden?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.31,
+  "interpolation": 0.26,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

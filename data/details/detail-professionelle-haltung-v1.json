@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-professionelle-haltung-v1",
+  "title": "Professionelle Haltung",
+  "topicIds": [
+    "professionelle-haltung"
+  ],
+  "axisIds": [
+    "professionalitaet"
+  ],
+  "sourceRefs": [
+    "doc-005"
+  ],
+  "excerptRefs": [
+    "doc-005-professionelle-haltung-selbstreflexion-teamhaltung"
+  ],
+  "summary": "Professionelle Haltung ist die fachlich reflektierte Art, Kindern, Eltern, Themen und Konflikten zu begegnen. Sie verbindet Wertschätzung, Grenzen, Fachwissen, Selbstreflexion und Teamabstimmung. Sie ist damit mehr als persönliche Freundlichkeit oder intuitive Reaktion.",
+  "coreIdeas": [
+    "Professionelle Haltung entsteht durch Selbstreflexion, Fachwissen und gemeinsame Klärung im Team.",
+    "Eigene biografische Erfahrungen beeinflussen pädagogische Reaktionen und müssen deshalb bewusst geprüft werden.",
+    "Wertschätzung und Grenzsetzung gehören zusammen: Haltung ist weder Beliebigkeit noch bloße Kontrolle.",
+    "Eine Einrichtung braucht nach innen und außen erkennbare gemeinsame Orientierungen.",
+    "Professionelle Haltung zeigt sich besonders in schwierigen, konflikthaften oder emotional aufgeladenen Situationen."
+  ],
+  "practiceAnchors": [
+    "Eigene spontane Reaktionen als Hinweis nehmen: Was genau irritiert, verunsichert oder ärgert mich?",
+    "Fachliche Begründungen suchen, bevor aus persönlichem Empfinden eine pädagogische Entscheidung wird.",
+    "Grenzen klar benennen, ohne Kinder abzuwerten.",
+    "Teamabsprachen zu wiederkehrenden Themen herstellen, damit Kinder und Eltern nicht beliebige Einzelhaltungen erleben.",
+    "Haltung in Gesprächen, Dokumentation, Regeln und Raumgestaltung sichtbar machen."
+  ],
+  "commonMisunderstandings": [
+    "Professionelle Haltung ist nicht dasselbe wie Nettsein.",
+    "Eine starke persönliche Meinung ist noch keine fachliche Haltung.",
+    "Grenzen setzen widerspricht Wertschätzung nicht.",
+    "Teamhaltung bedeutet nicht, individuelle Reflexion auszuschalten.",
+    "Haltung lässt sich nicht nur behaupten; sie muss im Handeln erkennbar werden."
+  ],
+  "bridges": [
+    {
+      "targetId": "berufsrolle",
+      "relation": "Die Berufsrolle braucht Haltung, damit Aufgaben fachlich und nicht nur persönlich ausgefüllt werden."
+    },
+    {
+      "targetId": "reflexion",
+      "relation": "Haltung wird professionell, wenn sie regelmäßig reflektiert und korrigierbar bleibt."
+    },
+    {
+      "targetId": "dialogische-haltung",
+      "relation": "Dialogische Haltung ist eine konkrete Ausprägung professioneller Haltung in Kommunikation."
+    },
+    {
+      "targetId": "aufsichtspflicht",
+      "relation": "Auch Schutz und Grenzen brauchen eine begründete professionelle Haltung."
+    },
+    {
+      "targetId": "elternkooperation",
+      "relation": "Eltern erleben Professionalität wesentlich über Haltung, Sprache und Verlässlichkeit."
+    }
+  ],
+  "openQuestions": [
+    "Soll Haltung später als Querschnittskarte mit Ethik, Macht und Kindeswohl verbunden werden?",
+    "Welche konkreten Teamverfahren sichern gemeinsame Haltung ohne Starrheit?",
+    "Wie werden Grenzen zwischen persönlicher Moral und fachlicher Haltung sichtbar gemacht?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.32,
+  "interpolation": 0.27,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
