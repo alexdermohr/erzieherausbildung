@@ -223,31 +223,17 @@ obsidian_script = (root / "scripts/obsidian_views.py").read_text(encoding="utf-8
 obsidian_doc = (root / "docs/obsidian-vault-spiegel.md").read_text(encoding="utf-8")
 view_export_validator = (root / "scripts/validate_view_export.py").read_text(encoding="utf-8")
 workflow_validate = (root / ".github/workflows/validate.yml").read_text(encoding="utf-8")
-for token in [
-    "~/vault-gewebe/schule/erzieherausbildung",
-    "visuals/erzieherausbildung-systemkarte.canvas",
-    "visuals/learning-map-v1.canvas",
-    "docs/learning-map-v1.md",
-    "docs/knowledge-network-v1.md",
-    "docs/visualization-decision.md",
-    "Systemkarte.canvas",
-    "Lernlandkarte.canvas",
-    "Lernlandkarte.md",
-    "Wissensnetz.md",
-    "Visualisierungsentscheidung.md",
-    ".erzieherausbildung-obsidian-view.json",
-    "repo-canonical-vault-derived",
-    "machine-readable.local",
-    "source-material.local",
-    ".pdf",
-    ".docx",
-    ".pptx",
-    ".m4a",
-    ".heic",
-    ".jpg",
-    ".jpeg",
-    ".png",
-]:
+obsidian_spec = importlib.util.spec_from_file_location("obsidian_views", root / "scripts/obsidian_views.py")
+obsidian_views = importlib.util.module_from_spec(obsidian_spec)
+assert obsidian_spec.loader is not None
+sys.modules[obsidian_spec.name] = obsidian_views
+obsidian_spec.loader.exec_module(obsidian_views)
+for token in ["~/vault-gewebe/schule/erzieherausbildung", obsidian_views.POLICY, *obsidian_views.GENERATED_FILES]:
+    assert token in obsidian_script
+for view_file in obsidian_views.VIEW_FILES:
+    assert view_file.source in obsidian_script
+    assert view_file.target in obsidian_script
+for token in [*obsidian_views.FORBIDDEN_PARTS, *obsidian_views.FORBIDDEN_SUFFIXES]:
     assert token in obsidian_script
 assert "SPIEGELDATEI aus /home/alex/repos/erzieherausbildung" in obsidian_script
 assert "git status" in obsidian_script
@@ -347,12 +333,6 @@ assert "Konkret lokalisierte Quellen im Pilot" in expected_pilot_doc
 assert "Offene Quellenarbeit" in expected_pilot_doc
 
 
-obsidian_spec = importlib.util.spec_from_file_location("obsidian_views", root / "scripts/obsidian_views.py")
-obsidian_views = importlib.util.module_from_spec(obsidian_spec)
-assert obsidian_spec.loader is not None
-sys.modules[obsidian_spec.name] = obsidian_views
-obsidian_spec.loader.exec_module(obsidian_views)
-obsidian_doc = (root / "docs/obsidian-vault-spiegel.md").read_text(encoding="utf-8")
 for view_file in obsidian_views.VIEW_FILES:
     assert f"`{view_file.source}` -> `{view_file.target}`" in obsidian_doc
 for generated in obsidian_views.GENERATED_FILES:
