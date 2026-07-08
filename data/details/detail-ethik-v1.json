@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-ethik-v1",
+  "title": "Ethik",
+  "topicIds": [
+    "ethik"
+  ],
+  "axisIds": [
+    "rahmen-recht-ethik"
+  ],
+  "sourceRefs": [
+    "doc-028"
+  ],
+  "excerptRefs": [
+    "doc-028-ethik-werte-dilemma-verantwortung"
+  ],
+  "summary": "Ethik fragt nach verantwortbarem Handeln, Werten, Dilemmata und Perspektiven. In pädagogischen Situationen geht es darum, unterschiedliche Überzeugungen, Religionen, Gerechtigkeitsfragen und eigene Haltungen so zu begleiten, dass Kinder nicht belehrt, abgewertet oder vereinnahmt werden.",
+  "coreIdeas": [
+    "Ethik beginnt dort, wo Werte, Interessen oder Pflichten in Spannung geraten.",
+    "Pädagogische Fachkräfte bringen eigene Werte mit, dürfen diese aber nicht unreflektiert durchsetzen.",
+    "Religiöse und weltanschauliche Perspektiven können Gesprächsanlass sein, ohne bewertet oder vereinheitlicht zu werden.",
+    "Ethische Dilemmata helfen, Begründungen, Folgen und Perspektiven sichtbar zu machen.",
+    "Ethik verbindet Haltung, Verantwortung, Rechte, Macht und Reflexion."
+  ],
+  "practiceAnchors": [
+    "In Wertkonflikten zuerst klären: Welche Werte, Rechte oder Bedürfnisse stehen hier in Spannung?",
+    "Eigene Haltung kenntlich und reflektiert halten, ohne Kinder zur Übernahme zu drängen.",
+    "Fragen zu Religion, Gebet oder Weltanschauung sachlich und respektvoll begleiten.",
+    "Dilemmata nutzen, um Perspektiven und Begründungen zu üben.",
+    "Ethische Fragen im Team besprechen, wenn Verantwortung oder Grenzen unklar sind."
+  ],
+  "commonMisunderstandings": [
+    "Ethik ist nicht bloß Religion.",
+    "Neutralität bedeutet nicht, keine Werte zu haben.",
+    "Eigene Überzeugung ersetzt keine fachliche Begründung.",
+    "Kinderfragen zu Religion oder Moral sind nicht automatisch Bekenntnisunterricht.",
+    "Ein Dilemma hat nicht immer eine einfache richtige Lösung."
+  ],
+  "bridges": [
+    {
+      "targetId": "religion-ethik",
+      "relation": "Ethik verbindet sich mit religiösen und weltanschaulichen Bildungsanlässen."
+    },
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Haltung muss ethisch reflektiert werden, wenn Werte wirksam werden."
+    },
+    {
+      "targetId": "rechte",
+      "relation": "Rechte setzen ethische und rechtliche Grenzen pädagogischen Handelns."
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "relation": "Machtfragen sind immer auch ethische Verantwortungsfragen."
+    },
+    {
+      "targetId": "reflexion",
+      "relation": "Ethisches Handeln braucht Reflexion eigener Werte und Deutungen."
+    }
+  ],
+  "openQuestions": [
+    "Soll Ethik später mit Religion/Ethik als Bildungsbereich verbunden oder getrennt visualisiert werden?",
+    "Welche Dilemmata eignen sich als exemplarische Knoten?",
+    "Wie wird Wertorientierung ohne moralische Belehrung dargestellt?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.4,
+  "interpolation": 0.35,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

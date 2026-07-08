@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-rechte-v1",
+  "title": "Kinderrechte und Beteiligung",
+  "topicIds": [
+    "rechte"
+  ],
+  "axisIds": [
+    "rahmen-recht-ethik"
+  ],
+  "sourceRefs": [
+    "doc-003",
+    "doc-015"
+  ],
+  "excerptRefs": [
+    "doc-003-015-rechte-kinderrechte-beteiligung"
+  ],
+  "summary": "Kinderrechte sichern Kindern Schutz, Bildung, Beteiligung, Gleichheit, Meinungsäußerung und Beschwerde. Pädagogisch bedeuten sie, Kinder nicht nur als Adressaten von Fürsorge zu sehen, sondern als Subjekte mit eigenen Perspektiven, Rechten und Beteiligungsansprüchen.",
+  "coreIdeas": [
+    "Kinderrechte sind rechtlicher und pädagogischer Maßstab zugleich.",
+    "Beteiligung ist nicht nur gute Methode, sondern Ausdruck eines Rechts auf Mitentscheidung.",
+    "Schutz, Bildung und Beteiligung müssen zusammen gedacht werden.",
+    "Beschwerde ist Teil von Rechten und Schutz, nicht Störung des Betriebs.",
+    "Rechte verändern die Rolle der Fachkraft: Sie begleitet, schützt, ermöglicht und begrenzt Macht."
+  ],
+  "practiceAnchors": [
+    "Kinderrechte in Alltagssprache und Alltagssituationen übersetzen.",
+    "Beteiligungsrechte nicht nur bei angenehmen Themen zulassen.",
+    "Beschwerden als Information über Macht, Beziehung und Struktur ernst nehmen.",
+    "Bei Entscheidungen prüfen, ob Kinderperspektiven einbezogen wurden.",
+    "Rechte mit Schutzgrenzen und institutionellem Auftrag vermitteln."
+  ],
+  "commonMisunderstandings": [
+    "Kinderrechte bedeuten nicht, dass Kinder alles entscheiden.",
+    "Schutzrechte und Beteiligungsrechte stehen nicht grundsätzlich gegeneinander.",
+    "Rechte sind nicht erst Thema, wenn Kinder sie einfordern.",
+    "Beschwerde ist kein Ungehorsam.",
+    "Rechte bleiben wirkungslos, wenn sie nicht in Strukturen übersetzt werden."
+  ],
+  "bridges": [
+    {
+      "targetId": "partizipation",
+      "relation": "Partizipation ist die Alltagspraxis von Beteiligungsrechten."
+    },
+    {
+      "targetId": "kindeswohl",
+      "relation": "Der Vorrang des Kindeswohls ist ein zentrales Kinderrechtsprinzip."
+    },
+    {
+      "targetId": "politik",
+      "relation": "Kinderrechte und Beteiligung sind Grundlage demokratischer Bildung."
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "relation": "Rechte begrenzen Fachkraftmacht und machen Verantwortung überprüfbar."
+    },
+    {
+      "targetId": "bildungsleitlinien",
+      "relation": "Kinderrechte sind ein Leitmotiv der Bildungsleitlinien."
+    }
+  ],
+  "openQuestions": [
+    "Soll eine eigene Kinderrechte-Unterstruktur entstehen?",
+    "Wie werden Beschwerdeverfahren und Beteiligungsrechte später visualisiert?",
+    "Welche Praxisbeispiele zeigen Rechte ohne abstrakte Rechtslastigkeit?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.34,
+  "interpolation": 0.29,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
