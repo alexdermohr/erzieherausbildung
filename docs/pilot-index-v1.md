@@ -43,7 +43,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Lernfeld 4_ Wohngruppe / stationaere Jugendhilfe.pdf
 - Lernfeld 4_ stationaere Jugendhilfe.pdf
 - Lernfeld 5_ Elternkooperation.pdf
-- Musik und Rhythmik.pdf
+- Musik und Rhythmik.pdf / Hamburger Bildungsleitlinien.pdf
 - S1_ Berufsrolle.pdf
 - S1_ Berufsrolle.pdf / Lernfeld 1_ Professionelle Haltung.pdf
 - S4_ Informatik.pdf
