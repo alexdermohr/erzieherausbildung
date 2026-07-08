@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-gesundheit-ernaehrung-v1",
+  "title": "Gesundheit und Ernährung",
+  "topicIds": [
+    "gesundheit-ernaehrung"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-026"
+  ],
+  "excerptRefs": [
+    "doc-026-gesundheit-ernaehrung-koerper-mahlzeit"
+  ],
+  "summary": "Gesundheit und Ernährung sind ein Bildungsbereich des Körpers, der Alltagsroutinen, Mahlzeiten, Bewegung, Genuss, Körperwahrnehmung und Wohlbefinden verbindet. Pädagogisch geht es um gesundheitsförderliche Erfahrung statt um reine Belehrung.",
+  "coreIdeas": [
+    "Ernährung ist körperlich, sozial und kulturell: Kinder erleben Essen als Geschmack, Beziehung, Routine und Beteiligung.",
+    "Gesundheitsbildung entsteht in wiederkehrenden Alltagssituationen wie Mahlzeiten, Bewegung, Hygiene und Ruhe.",
+    "Körperwahrnehmung und Selbstregulation sind wichtiger als abstrakte Gesundheitsregeln.",
+    "Fehlernährung und Bewegungsmangel sind fachlich relevant, dürfen aber nicht beschämend bearbeitet werden.",
+    "Gesundheit verbindet Kindeswohl, Elternkooperation, Raumgestaltung und pädagogische Vorbildfunktion."
+  ],
+  "practiceAnchors": [
+    "Mahlzeiten als pädagogische Situation gestalten: ruhig, beteiligend, sozial und ohne Druck.",
+    "Kinder an Auswahl, Vorbereitung oder Gespräch über Essen altersangemessen beteiligen.",
+    "Körper- und Sättigungssignale ernst nehmen, statt nur Tellerleer-Regeln zu setzen.",
+    "Bewegung, Ruhe, Trinken und Hygiene als zusammenhängende Gesundheitsroutinen sichtbar machen.",
+    "Ernährungsfragen mit Familien sensibel besprechen, ohne Lebenslagen abzuwerten."
+  ],
+  "commonMisunderstandings": [
+    "Gesundheitsbildung ist nicht Ernährungsbelehrung.",
+    "Gesundes Essen ersetzt keine soziale Mahlzeitgestaltung.",
+    "Kontrolle über Essen kann Beschämung erzeugen.",
+    "Bewegung ist kein Zusatzangebot, sondern Teil von Wohlbefinden.",
+    "Elterngewohnheiten dürfen nicht vorschnell als Desinteresse gelesen werden."
+  ],
+  "bridges": [
+    {
+      "targetId": "kindeswohl",
+      "relation": "Gesundheit ist Teil von Schutz, Wohlbefinden und Entwicklung."
+    },
+    {
+      "targetId": "elternkooperation",
+      "relation": "Ernährung und Gesundheit berühren familiäre Routinen und Erwartungen."
+    },
+    {
+      "targetId": "selbstwirksamkeit",
+      "relation": "Kinder erleben Wirksamkeit, wenn sie Körperbedürfnisse wahrnehmen und Entscheidungen mittragen."
+    },
+    {
+      "targetId": "arbeitsbedingungen",
+      "relation": "Gesundheitsförderliche Praxis braucht Personal, Zeit und Routinen."
+    },
+    {
+      "targetId": "bildungsleitlinien",
+      "relation": "Gesundheit ist als Bildungsbereich im Rahmen verankert."
+    }
+  ],
+  "openQuestions": [
+    "Wie werden Körper, Ernährung, Hygiene und Bewegung später differenziert visualisiert?",
+    "Welche Rolle sollen Armut, Esskultur und Familiengewohnheiten spielen?",
+    "Wie lässt sich Gesundheitsbildung ohne Beschämung darstellen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.34,
+  "interpolation": 0.29,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

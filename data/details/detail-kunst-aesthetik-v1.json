@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-kunst-aesthetik-v1",
+  "title": "Kunst und Ästhetik",
+  "topicIds": [
+    "kunst-aesthetik"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-020"
+  ],
+  "excerptRefs": [
+    "doc-020-kunst-aesthetik-wahrnehmung-material-ausdruck"
+  ],
+  "summary": "Kunst und Ästhetik beschreiben sinnliche Wahrnehmung, Materialerfahrung, Gestaltung und Ausdruck. Kinder bearbeiten Welt über Farben, Formen, Bilder, Spuren, Körper, Gefühle und innere Vorstellungen. Das Produkt ist weniger zentral als der Erfahrungs- und Ausdrucksprozess.",
+  "coreIdeas": [
+    "Ästhetik meint sinnliche Wahrnehmung, nicht nur Schönheit.",
+    "Kinder gestalten, um Wahrnehmungen, Gefühle, innere Bilder und Theorien auszudrücken.",
+    "Materialien, Werkzeuge und Räume eröffnen unterschiedliche Zugänge zur Welt.",
+    "Ästhetische Prozesse sind beobachtbar, dokumentierbar und anschlussfähig für weitere Bildungsimpulse.",
+    "Kunst verbindet Wahrnehmung, Selbstwirksamkeit, Sprache, Dokumentation und kulturelle Teilhabe."
+  ],
+  "practiceAnchors": [
+    "Materialvielfalt anbieten, ohne das Ergebnis vorzugeben.",
+    "Beschreiben, was das Kind tut und wahrnimmt, statt Werke vorschnell zu bewerten.",
+    "Kinder über Material, Spuren, Farben und eigene Bedeutungen sprechen lassen.",
+    "Dokumentation nutzen, um Bildungsprozesse statt nur Produkte sichtbar zu machen.",
+    "Raum und Werkzeug so vorbereiten, dass Kinder eigenständig experimentieren können."
+  ],
+  "commonMisunderstandings": [
+    "Kunst ist nicht Basteln nach Vorlage.",
+    "Ästhetik bedeutet nicht nur schön oder dekorativ.",
+    "Ein gelungenes Produkt beweist nicht automatisch einen tiefen Bildungsprozess.",
+    "Materialfreiheit ohne Begleitung kann überfordern.",
+    "Bewertung durch Erwachsene kann Ausdrucksfreude blockieren."
+  ],
+  "bridges": [
+    {
+      "targetId": "dokumentation",
+      "relation": "Ästhetische Prozesse lassen sich über Bilder, Werke und Beobachtungen sichtbar machen."
+    },
+    {
+      "targetId": "beobachtung",
+      "relation": "Wahrnehmendes Beobachten hilft, den Ausdruck des Kindes zu verstehen."
+    },
+    {
+      "targetId": "musik-rhythmik",
+      "relation": "Musik und Kunst teilen Wahrnehmung, Ausdruck und Gestaltung."
+    },
+    {
+      "targetId": "theater",
+      "relation": "Theater erweitert ästhetische Bildung um Rolle, Körper und Szene."
+    },
+    {
+      "targetId": "ressourcenorientierung",
+      "relation": "Ästhetik macht individuelle Zugänge und Stärken sichtbar."
+    }
+  ],
+  "openQuestions": [
+    "Soll eine eigene Material- und Atelierkarte entstehen?",
+    "Wie werden Produkt, Prozess und Deutung visuell unterschieden?",
+    "Welche Brücke braucht Kunst zu Inklusion und kultureller Vielfalt?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.33,
+  "interpolation": 0.28,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

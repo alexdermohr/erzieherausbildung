@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-theater-v1",
+  "title": "Theater",
+  "topicIds": [
+    "theater"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-003"
+  ],
+  "excerptRefs": [
+    "doc-003-theater-symbolspiel-improvisation-ausdruck"
+  ],
+  "summary": "Theater ist symbolisches, körperliches und soziales Spiel. Kinder gestalten Rollen, Szenen, Geschichten, Bewegungen, Sprache, Musik und Publikumssituationen. Theaterspiel macht Erfahrungen darstellbar und verwandelt soziale Wirklichkeit in Ausdruck, Spiel und gemeinsame Deutung.",
+  "coreIdeas": [
+    "Theater entsteht aus Nachahmung, Rolle, Improvisation, Symbolen und Ausdruck.",
+    "Kinder nutzen Körper, Sprache, Bewegung, Musik und Materialien, um Szenen zu gestalten.",
+    "Theaterspiel bearbeitet soziale Wirklichkeit spielerisch und künstlerisch.",
+    "Das Publikum verändert die Situation: Darstellen wird zu geteilter Erfahrung.",
+    "Theater verbindet Sprache, Musik, Kunst, Gruppe, Selbstwirksamkeit und Perspektivwechsel."
+  ],
+  "practiceAnchors": [
+    "Geschichten, Alltagsszenen oder Interessen der Kinder als Ausgangspunkt für Spiel nehmen.",
+    "Improvisation ermöglichen, statt Rollen und Text vollständig vorzugeben.",
+    "Requisiten, Puppen, Kostüme, Musik und Raum als offene Impulse anbieten.",
+    "Kinder selbst entscheiden lassen, ob sie spielen, zuschauen, erzählen oder gestalten.",
+    "Theaterprozesse dokumentieren, ohne nur die Aufführung zu bewerten."
+  ],
+  "commonMisunderstandings": [
+    "Theater ist nicht nur Aufführung vor Eltern.",
+    "Ein fertiger Text ist nicht Voraussetzung für Theaterspiel.",
+    "Zuschauen kann ebenfalls Beteiligung sein.",
+    "Theaterpädagogik darf Kinder nicht bloßstellen.",
+    "Improvisation ist nicht planlos, sondern offen strukturiert."
+  ],
+  "bridges": [
+    {
+      "targetId": "kunst-aesthetik",
+      "relation": "Theater ist Teil ästhetischer Bildung."
+    },
+    {
+      "targetId": "musik-rhythmik",
+      "relation": "Musik, Rhythmus und Bewegung können Szenen tragen."
+    },
+    {
+      "targetId": "sprache-kommunikation",
+      "relation": "Theater nutzt Sprache, Stimme, Erzählung und nonverbale Kommunikation."
+    },
+    {
+      "targetId": "selbstwirksamkeit",
+      "relation": "Kinder erleben Wirkung, wenn ihre Rollen und Szenen Resonanz erzeugen."
+    },
+    {
+      "targetId": "gruppe-institution-politik",
+      "relation": "Theater macht Rollen, Konflikte und Gruppenbeziehungen spielerisch bearbeitbar."
+    }
+  ],
+  "openQuestions": [
+    "Wie wird Theaterspiel von Rollenspiel und Freispiel abgegrenzt?",
+    "Welche Schutzfragen entstehen bei Publikum und Darstellung?",
+    "Wie kann Theater ohne Produkt- und Aufführungsdruck sichtbar werden?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.36,
+  "interpolation": 0.31,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

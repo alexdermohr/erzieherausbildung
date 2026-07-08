@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-naturwissenschaft-v1",
+  "title": "Natur, Umwelt und Technik",
+  "topicIds": [
+    "naturwissenschaft"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-003"
+  ],
+  "excerptRefs": [
+    "doc-003-naturwissenschaft-natur-umwelt-technik-erfahrung"
+  ],
+  "summary": "Natur, Umwelt und Technik bilden einen forschenden Bildungsbereich. Kinder beobachten Phänomene, erkunden Tiere, Pflanzen, Wetter, Materialien, Werkzeuge und technische Zusammenhänge. Lernen entsteht über Neugier, Fragen, Ausprobieren und nachhaltige Alltagserfahrungen.",
+  "coreIdeas": [
+    "Kinder verstehen Natur und Technik durch Beobachten, Berühren, Ausprobieren und Fragen.",
+    "Naturerfahrung verbindet Bewegung, Wahrnehmung, Verantwortung und Nachhaltigkeit.",
+    "Technik wird im Alltag erfahrbar: Werkzeuge, Geräte, Bauen, Reparieren, Wirkungen und Ursachen.",
+    "Fachkräfte müssen nicht alle Antworten haben, sondern forschende Situationen ermöglichen.",
+    "Naturwissenschaftliche Bildung bleibt kindgerecht, wenn sie an Phänomenen und Erfahrung ansetzt."
+  ],
+  "practiceAnchors": [
+    "Draußenräume, Naturmaterialien und technische Alltagsgeräte als Erfahrungsquellen nutzen.",
+    "Kinderfragen zu Wetter, Tieren, Pflanzen, Bauen oder Geräten aufgreifen.",
+    "Beobachten, Vermuten, Ausprobieren und Vergleichen sprachlich begleiten.",
+    "Nachhaltigkeit über konkrete Alltagshandlungen erfahrbar machen.",
+    "Fachwissen dosiert einbringen, ohne kindliche Forschung zu ersetzen."
+  ],
+  "commonMisunderstandings": [
+    "Naturwissenschaft in der Kita ist kein Schulunterricht.",
+    "Technikbildung bedeutet nicht nur digitale Geräte.",
+    "Forschendes Lernen braucht nicht immer Experimentiermaterial aus dem Labor.",
+    "Nachhaltigkeit bleibt leer, wenn Kinder keine Handlungsmöglichkeiten erleben.",
+    "Erwachsene müssen Unsicherheit aushalten können."
+  ],
+  "bridges": [
+    {
+      "targetId": "mathematik",
+      "relation": "Messen, Sortieren und Vergleichen verbinden Naturerfahrung mit Mathematik."
+    },
+    {
+      "targetId": "gesundheit-ernaehrung",
+      "relation": "Körper, Natur und Wohlbefinden sind in Alltagserfahrungen verbunden."
+    },
+    {
+      "targetId": "partizipation",
+      "relation": "Nachhaltigkeit wird bedeutsam, wenn Kinder Handlungsmöglichkeiten erleben."
+    },
+    {
+      "targetId": "selbstwirksamkeit",
+      "relation": "Kinder erleben Wirksamkeit, wenn sie Natur und Technik handelnd verstehen."
+    },
+    {
+      "targetId": "bildungsleitlinien",
+      "relation": "Natur/Umwelt/Technik ist als Bildungsbereich rahmend verankert."
+    }
+  ],
+  "openQuestions": [
+    "Soll ein eigener MINT-/Forschen-Untercluster entstehen?",
+    "Wie werden Natur, Umwelt, Technik und Nachhaltigkeit differenziert?",
+    "Welche Visualisierung zeigt Forschen ohne Unterrichtslogik?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.36,
+  "interpolation": 0.31,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

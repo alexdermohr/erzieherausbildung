@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-mathematik-v1",
+  "title": "Frühkindliche Mathematik",
+  "topicIds": [
+    "mathematik"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-019",
+    "doc-024"
+  ],
+  "excerptRefs": [
+    "doc-019-024-mathematik-alltag-mengen-muster-messen"
+  ],
+  "summary": "Frühkindliche Mathematik entsteht im Alltag, wenn Kinder Mengen, Muster, Räume, Formen, Daten, Größen und Beziehungen entdecken. Sie ist kein vorgezogenes Schulfach, sondern eine Weise, Ordnung und Struktur in der Welt zu erfahren.",
+  "coreIdeas": [
+    "Kinder begegnen Mathematik beim Sortieren, Bauen, Vergleichen, Zählen, Messen und Ordnen.",
+    "Muster und Strukturen sind zentrale mathematische Erfahrungen des Alltags.",
+    "Raum- und Körpererfahrungen bilden Grundlagen geometrischen Denkens.",
+    "Daten und Messungen können aus echten Kinderfragen entstehen.",
+    "Mathematik wird verständlich, wenn sie an Handlung, Material und Gespräch gebunden bleibt."
+  ],
+  "practiceAnchors": [
+    "Mathematische Situationen im Alltag erkennen: Tischdecken, Bauen, Wege, Kalender, Mengen, Reihenfolgen.",
+    "Gleiches Material in größeren Mengen bereitstellen, damit Kinder sortieren und vergleichen können.",
+    "Fragen der Kinder zu Zahlen, Formen oder Größen aufnehmen, statt Arbeitsblattlogik zu erzeugen.",
+    "Messen und Daten sammeln an reale Fragen binden.",
+    "Mathematische Begriffe behutsam einführen, wenn sie an Erfahrung anschließen."
+  ],
+  "commonMisunderstandings": [
+    "Frühmathematik ist nicht Rechnenlernen.",
+    "Zählen allein ist noch kein mathematisches Verständnis.",
+    "Mathematik steckt nicht nur in Angeboten, sondern im Alltag.",
+    "Material ohne Gespräch bleibt oft bloße Beschäftigung.",
+    "Fehler sind wichtige Hinweise auf Denkwege."
+  ],
+  "bridges": [
+    {
+      "targetId": "naturwissenschaft",
+      "relation": "Messen, Vergleichen und Daten verbinden Mathematik mit Natur/Technik."
+    },
+    {
+      "targetId": "lernarrangements",
+      "relation": "Material und Raumgestaltung eröffnen mathematische Erfahrung."
+    },
+    {
+      "targetId": "selbstwirksamkeit",
+      "relation": "Kinder erleben, dass Ordnen und Vergleichen Probleme lösbar macht."
+    },
+    {
+      "targetId": "beobachtung",
+      "relation": "Beobachtung zeigt, welche mathematischen Strategien Kinder bereits nutzen."
+    },
+    {
+      "targetId": "bildungsleitlinien",
+      "relation": "Mathematik ist als Bildungsbereich rahmend verankert."
+    }
+  ],
+  "openQuestions": [
+    "Soll Musterbildung als eigene Unterkarte entstehen?",
+    "Wie werden mathematische Alltagssituationen ohne Verschulung visualisiert?",
+    "Welche Verbindung braucht Mathematik zu Sprache und Dokumentation?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.29,
+  "interpolation": 0.24,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

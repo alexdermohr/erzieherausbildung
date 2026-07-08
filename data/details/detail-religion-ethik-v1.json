@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-religion-ethik-v1",
+  "title": "Religion, Gesellschaft und Ethik",
+  "topicIds": [
+    "religion-ethik"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-028",
+    "doc-003"
+  ],
+  "excerptRefs": [
+    "doc-028-religion-ethik-gesellschaft-perspektiven"
+  ],
+  "summary": "Religion, Gesellschaft und Ethik bilden einen Bildungsbereich für Sinnfragen, Werte, Zugehörigkeit, Differenz, Gerechtigkeit, Rituale und Weltanschauungen. Kinder begegnen unterschiedlichen Überzeugungen und brauchen Begleitung, die respektvoll, reflektiert und nicht missionierend ist.",
+  "coreIdeas": [
+    "Kinder stellen Fragen nach Sinn, Tod, Gerechtigkeit, Festen, Religion und Zusammenleben.",
+    "Religiöse und weltanschauliche Vielfalt gehört zur Lebenswelt vieler Kinder.",
+    "Ethik hilft, Werte und Dilemmata zu besprechen, ohne einfache Antworten zu erzwingen.",
+    "Fachkräfte brauchen Reflexion der eigenen Überzeugungen und Grenzen.",
+    "Der Bildungsbereich verbindet Familienperspektive, Kinderrechte, Inklusion und politische Bildung."
+  ],
+  "practiceAnchors": [
+    "Kinderfragen zu Religion oder Werten sachlich aufnehmen und nicht abwerten.",
+    "Unterschiedliche Familienpraktiken und Feste respektvoll sichtbar machen.",
+    "Dilemmagespräche nutzen, um Perspektiven und Begründungen zu üben.",
+    "Eigene Haltung kenntlich reflektieren, ohne sie Kindern aufzudrängen.",
+    "Bei religiösen Themen Familienperspektiven und institutionellen Auftrag zusammen beachten."
+  ],
+  "commonMisunderstandings": [
+    "Religion/Ethik ist nicht Bekenntnisunterricht.",
+    "Neutralität heißt nicht, Wertefragen zu vermeiden.",
+    "Alle Religionen gleich zu behandeln heißt nicht, Unterschiede unsichtbar zu machen.",
+    "Kinderfragen sind nicht automatisch Provokation.",
+    "Ethik ist nicht nur ein Sonderthema, sondern durchzieht pädagogische Verantwortung."
+  ],
+  "bridges": [
+    {
+      "targetId": "ethik",
+      "relation": "Der Bildungsbereich konkretisiert ethische Reflexion in Alltagsthemen."
+    },
+    {
+      "targetId": "familienperspektive",
+      "relation": "Religion und Werte sind oft Teil familiärer Lebenswelten."
+    },
+    {
+      "targetId": "rechte",
+      "relation": "Kinderrechte rahmen Respekt, Beteiligung und Schutz."
+    },
+    {
+      "targetId": "politik",
+      "relation": "Gesellschaftliche Fragen verbinden Religion/Ethik mit demokratischer Bildung."
+    },
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Fachkräfte müssen eigene Werte professionell reflektieren."
+    }
+  ],
+  "openQuestions": [
+    "Wie wird Religion/Ethik vom allgemeinen Ethik-Rahmen unterschieden?",
+    "Welche Beispiele zeigen religionssensible Bildung ohne Bekenntnislogik?",
+    "Wie werden Konflikte um Werte und Familienperspektiven bearbeitet?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.39,
+  "interpolation": 0.34,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-musik-rhythmik-v1",
+  "title": "Musik und Rhythmik",
+  "topicIds": [
+    "musik-rhythmik"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-023",
+    "doc-003"
+  ],
+  "excerptRefs": [
+    "doc-023-musik-rhythmik-klang-bewegung-wahrnehmung"
+  ],
+  "summary": "Musik und Rhythmik verbinden Stimme, Klang, Bewegung, Körper, Wahrnehmung, Gruppe und Ausdruck. Kinder singen, hören, tanzen, musizieren, reagieren auf Rhythmus und erleben Musik als soziale und emotionale Praxis.",
+  "coreIdeas": [
+    "Musik beginnt bei Stimme, Klang, Körper und Bewegung.",
+    "Rhythmus und Wiederholung geben Orientierung und gemeinsames Erleben.",
+    "Musikalische Bildung stärkt Wahrnehmung, Ausdruck, Sprache und Gruppenerfahrung.",
+    "Kinder brauchen Zugang zu Instrumenten, Liedern, Klängen, Stille und unterschiedlichen musikalischen Traditionen.",
+    "Musik ist nicht nur Angebot, sondern kann Alltag, Ritual, Übergang und Beziehung strukturieren."
+  ],
+  "practiceAnchors": [
+    "Singen, Bewegung und Instrumente mit einfachen wiederkehrenden Formen verbinden.",
+    "Kinder musikalisch antworten lassen, nicht nur vorsingen oder vormachen.",
+    "Instrumente und Klangmaterial zugänglich machen.",
+    "Musik als Ritual für Übergänge, Sammlung oder gemeinsame Stimmung nutzen.",
+    "Unterschiedliche musikalische Erfahrungen aus Familien und Sozialraum einbeziehen."
+  ],
+  "commonMisunderstandings": [
+    "Musikpädagogik verlangt keine perfekte Musikalität der Fachkraft.",
+    "Musik ist nicht nur Aufführung für Erwachsene.",
+    "Rhythmik ist mehr als Bewegungsspiel.",
+    "Laute Beteiligung ist nicht die einzige Form musikalischen Interesses.",
+    "Musik darf kulturelle Vielfalt nicht vereinheitlichen."
+  ],
+  "bridges": [
+    {
+      "targetId": "kunst-aesthetik",
+      "relation": "Musik ist Teil ästhetischer Bildung."
+    },
+    {
+      "targetId": "theater",
+      "relation": "Musik, Rhythmus und Szene greifen im Theaterspiel ineinander."
+    },
+    {
+      "targetId": "sprache-kommunikation",
+      "relation": "Lieder, Rhythmus und Stimme unterstützen sprachliche und kommunikative Erfahrung."
+    },
+    {
+      "targetId": "gruppe-institution-politik",
+      "relation": "Gemeinsames Musizieren erzeugt Gruppe, Rollen und Verantwortung."
+    },
+    {
+      "targetId": "dokumentation",
+      "relation": "Musikalisches Verhalten kann beobachtet und für Anschlussimpulse genutzt werden."
+    }
+  ],
+  "openQuestions": [
+    "Wie wird Rhythmik gegenüber Musik differenziert?",
+    "Welche Rolle spielen Stimme und Körper als Instrumente?",
+    "Wie kann Musik im Alltag sichtbar werden statt nur als Angebot?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.33,
+  "interpolation": 0.28,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

@@ -346,6 +346,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-gesundheit-ernaehrung-v1",
+      "title": "Gesundheit und Ernährung",
+      "path": "/data/details/detail-gesundheit-ernaehrung-v1.json",
+      "topicIds": [
+        "gesundheit-ernaehrung"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-026"
+      ],
+      "excerptRefs": [
+        "doc-026-gesundheit-ernaehrung-koerper-mahlzeit"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-institutioneller-auftrag-v1",
       "title": "Institutioneller Auftrag",
       "path": "/data/details/detail-institutioneller-auftrag-v1.json",
@@ -401,6 +419,25 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-kunst-aesthetik-v1",
+      "title": "Kunst und Ästhetik",
+      "path": "/data/details/detail-kunst-aesthetik-v1.json",
+      "topicIds": [
+        "kunst-aesthetik"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-020",
+        "doc-003"
+      ],
+      "excerptRefs": [
+        "doc-020-kunst-aesthetik-wahrnehmung-material-ausdruck"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-lernarrangements-v1",
       "title": "Lernarrangements",
       "path": "/data/details/detail-lernarrangements-v1.json",
@@ -435,6 +472,63 @@
       ],
       "excerptRefs": [
         "doc-013-015-016-macht-verantwortung-fachkraft-beteiligung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-mathematik-v1",
+      "title": "Frühkindliche Mathematik",
+      "path": "/data/details/detail-mathematik-v1.json",
+      "topicIds": [
+        "mathematik"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-019",
+        "doc-024",
+        "doc-003"
+      ],
+      "excerptRefs": [
+        "doc-019-024-mathematik-alltag-mengen-muster-messen"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-musik-rhythmik-v1",
+      "title": "Musik und Rhythmik",
+      "path": "/data/details/detail-musik-rhythmik-v1.json",
+      "topicIds": [
+        "musik-rhythmik"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-023",
+        "doc-003"
+      ],
+      "excerptRefs": [
+        "doc-023-musik-rhythmik-klang-bewegung-wahrnehmung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-naturwissenschaft-v1",
+      "title": "Natur, Umwelt und Technik",
+      "path": "/data/details/detail-naturwissenschaft-v1.json",
+      "topicIds": [
+        "naturwissenschaft"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-003"
+      ],
+      "excerptRefs": [
+        "doc-003-naturwissenschaft-natur-umwelt-technik-erfahrung"
       ],
       "detailStatus": "draft"
     },
@@ -551,6 +645,25 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-religion-ethik-v1",
+      "title": "Religion, Gesellschaft und Ethik",
+      "path": "/data/details/detail-religion-ethik-v1.json",
+      "topicIds": [
+        "religion-ethik"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-028",
+        "doc-003"
+      ],
+      "excerptRefs": [
+        "doc-028-religion-ethik-gesellschaft-perspektiven"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-ressourcenorientierung-v1",
       "title": "Ressourcenorientierung",
       "path": "/data/details/detail-ressourcenorientierung-v1.json",
@@ -587,6 +700,25 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-sozialpaedagogische-grundlagen-v1",
+      "title": "Sozialpädagogische Grundlagen",
+      "path": "/data/details/detail-sozialpaedagogische-grundlagen-v1.json",
+      "topicIds": [
+        "sozialpaedagogische-grundlagen"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-022",
+        "doc-027"
+      ],
+      "excerptRefs": [
+        "doc-022-027-sozialpaedagogische-grundlagen-bildung-handlung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-sprachbildung-v1",
       "title": "Sprachbildung im Alltag",
       "path": "/data/details/detail-sprachbildung-v1.json",
@@ -619,6 +751,24 @@
       ],
       "excerptRefs": [
         "doc-011-sprache-kommunikation-dialog-literacy"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-theater-v1",
+      "title": "Theater",
+      "path": "/data/details/detail-theater-v1.json",
+      "topicIds": [
+        "theater"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "sourceRefs": [
+        "doc-003"
+      ],
+      "excerptRefs": [
+        "doc-003-theater-symbolspiel-improvisation-ausdruck"
       ],
       "detailStatus": "draft"
     },
@@ -662,10 +812,10 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 36,
-    "detailedTopicCount": 36,
-    "missingTopicCount": 8,
-    "detailCoverageRatio": 0.818,
+    "detailCount": 44,
+    "detailedTopicCount": 44,
+    "missingTopicCount": 0,
+    "detailCoverageRatio": 1.0,
     "detailedTopicIds": [
       "anpassung-selbstbestimmung",
       "arbeitsbedingungen",
@@ -686,34 +836,33 @@
       "familienperspektive",
       "foerderplanung",
       "gespraechsanlaesse",
+      "gesundheit-ernaehrung",
       "institutioneller-auftrag",
       "kindeswohl",
       "konflikte",
+      "kunst-aesthetik",
       "lernarrangements",
       "macht-verantwortung",
+      "mathematik",
+      "musik-rhythmik",
+      "naturwissenschaft",
       "partizipation",
       "politik",
       "professionelle-haltung",
       "rechte",
       "reflexion",
       "regeln-struktur",
+      "religion-ethik",
       "ressourcenorientierung",
       "selbstwirksamkeit",
+      "sozialpaedagogische-grundlagen",
       "sprachbildung",
       "sprache-kommunikation",
+      "theater",
       "uebergaenge",
       "wohngruppe"
     ],
-    "missingTopicIds": [
-      "gesundheit-ernaehrung",
-      "kunst-aesthetik",
-      "mathematik",
-      "musik-rhythmik",
-      "naturwissenschaft",
-      "religion-ethik",
-      "sozialpaedagogische-grundlagen",
-      "theater"
-    ],
+    "missingTopicIds": [],
     "byAxis": [
       {
         "axisId": "professionalitaet",
@@ -794,21 +943,20 @@
         "axisId": "bildungsbereiche",
         "title": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
         "topicCount": 9,
-        "detailedTopicCount": 1,
-        "detailCoverageRatio": 0.111,
+        "detailedTopicCount": 9,
+        "detailCoverageRatio": 1.0,
         "detailedTopicIds": [
-          "lernarrangements"
-        ],
-        "missingTopicIds": [
           "gesundheit-ernaehrung",
           "kunst-aesthetik",
+          "lernarrangements",
           "mathematik",
           "musik-rhythmik",
           "naturwissenschaft",
           "religion-ethik",
           "sozialpaedagogische-grundlagen",
           "theater"
-        ]
+        ],
+        "missingTopicIds": []
       },
       {
         "axisId": "eltern-kooperation",
