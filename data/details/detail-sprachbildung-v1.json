@@ -1,0 +1,79 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-sprachbildung-v1",
+  "title": "Sprachbildung im Alltag",
+  "topicIds": [
+    "sprachbildung"
+  ],
+  "axisIds": [
+    "sprache-kommunikation"
+  ],
+  "sourceRefs": [
+    "doc-011"
+  ],
+  "excerptRefs": [
+    "doc-011-sprachbildung-alltag-literacy-erzaehlen"
+  ],
+  "summary": "Sprachbildung im Alltag ist keine isolierte Förderstunde, sondern eine durchgehende Qualität pädagogischer Situationen. Sie entsteht, wenn Fachkräfte Alltag, Spiel, Bilderbücher, Erzählen, Schriftzeichen, Fragen und Zuhören so begleiten, dass Kinder Sprache als Mittel für Bedeutung, Beziehung, Weltverstehen und Ausdruck erfahren.",
+  "coreIdeas": [
+    "Alltagsintegrierte Sprachbildung nutzt reale Situationen: Kinder sprechen, fragen, erzählen, deuten und verhandeln Bedeutungen dort, wo für sie etwas relevant ist.",
+    "Literacy erweitert Sprachbildung um frühe Erfahrungen mit Schrift, Symbolen, Büchern, Erzählstruktur, Medien und kulturellen Kommunikationsformen.",
+    "Sprachbildung braucht mehr als Wortschatztraining: Kinder entwickeln auch Erzählfähigkeit, Zuhören, Perspektivwechsel, nicht-situative Sprache und Freude am Ausdruck.",
+    "Bilderbuchdialoge und Erzählsituationen sind sprachbildend, wenn Erwachsene nicht nur vorlesen oder abfragen, sondern Deutungen, Anschlusskommunikation und kindliche Beiträge ermöglichen.",
+    "Ungleiche familiäre Spracherfahrungen machen sprachreiche pädagogische Umgebungen besonders bedeutsam."
+  ],
+  "practiceAnchors": [
+    "Alltagssituationen als Sprachgelegenheiten lesen: Anziehen, Essen, Spiel, Konflikt, Pflege, Projekt und Übergang können Gesprächsanlässe werden.",
+    "Bilderbücher dialogisch nutzen: Kinder beschreiben, vermuten, erzählen weiter, vergleichen mit eigenen Erfahrungen und sprechen über Bilder, Figuren und Schrift.",
+    "Kinder zum Erzählen anregen, ohne ihre Sprache ständig zu korrigieren; entscheidend ist, dass Bedeutungen entstehen und weitergeführt werden.",
+    "Schrift im Raum sichtbar und sinnvoll machen: Beschriftungen, Namen, Listen, Symbole, Bücher und eigene Geschichten zeigen, dass Schrift Kommunikation trägt.",
+    "Auch nicht-situative Sprache fördern: Kinder erzählen von Vergangenem, Abwesendem, Vorgestelltem und Möglichkeitsräumen."
+  ],
+  "commonMisunderstandings": [
+    "Sprachbildung ist nicht dasselbe wie ein isoliertes Sprachförderprogramm.",
+    "Literacy meint nicht nur frühes Lesen und Schreiben, sondern ein breites Feld von Sprach-, Schrift-, Erzähl- und Medienerfahrungen.",
+    "Ein Bilderbuch ist nicht automatisch sprachbildend; entscheidend ist die Qualität des Dialogs und der Anschlusskommunikation.",
+    "Sprachbildung ist nicht nur Defizitausgleich, sondern Bildungsarbeit für alle Kinder.",
+    "Korrektur allein erzeugt noch keine Sprachfreude und keine Erzählkompetenz."
+  ],
+  "bridges": [
+    {
+      "targetId": "dialogische-haltung",
+      "relation": "Sprachbildung gelingt alltagsintegriert, wenn Fachkräfte kindliche Beiträge dialogisch aufnehmen und erweitern."
+    },
+    {
+      "targetId": "gespraechsanlaesse",
+      "relation": "Gesprächsanlässe sind der konkrete Ort, an dem Alltag zur Sprachbildung wird."
+    },
+    {
+      "targetId": "sprache-kommunikation",
+      "relation": "Sprachbildung operationalisiert Sprache und Kommunikation als Bildungsmedium."
+    },
+    {
+      "targetId": "beobachtung",
+      "relation": "Sprachliche Äußerungen zeigen Interessen, Begriffe, Deutungen und Entwicklungsstände."
+    },
+    {
+      "targetId": "lernarrangements",
+      "relation": "Sprachreiche Räume, Bücher, Beschriftungen und Erzählanlässe machen Sprachbildung gestaltbar."
+    },
+    {
+      "targetId": "elternkooperation",
+      "relation": "Familiäre Sprach- und Literacy-Erfahrungen können in der Zusammenarbeit mit Eltern wertschätzend aufgegriffen werden."
+    }
+  ],
+  "openQuestions": [
+    "Soll Literacy später als Unterkarte von Sprachbildung oder als eigene Brücke zwischen Sprache, Medien und Bildungsbereichen modelliert werden?",
+    "Welche Praxisbeispiele können ergänzt werden, ohne Aufgabenblätter oder Rohdialoge aus Quellen zu übernehmen?",
+    "Wie wird Mehrsprachigkeit später mit Sprachbildung, Elternkooperation und Bildungsungleichheit verbunden?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.31,
+  "interpolation": 0.27,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

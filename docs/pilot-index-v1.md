@@ -12,10 +12,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 17
-- Reviewstatus: {'draft': 15, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 15, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 7, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 2}
+- Einträge: 18
+- Reviewstatus: {'draft': 16, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 16, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 8, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 2}
 
 ## Quellen im Pilot
 
@@ -38,6 +38,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Beobachtung: 3
 - Berufsrolle: 1
 - Bezugsperson: 1
+- Bilderbuchdialog: 1
 - Bildungsprozesse: 1
 - Bindung und Beziehung: 2
 - Deutung: 1
@@ -47,7 +48,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Eingewöhnung: 2
 - Elternkooperation: 2
 - Erziehungspartnerschaft: 2
-- Erzählen: 1
+- Erzählen: 2
 - Fallverstehen: 2
 - Familienperspektive: 1
 - Foerderplanung: 1
@@ -66,7 +67,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Lernarrangements: 1
 - Lerngeschichten: 1
 - Lernumgebung: 1
-- Literacy: 1
+- Literacy: 2
 - Perspektivübernahme: 1
 - Planung: 1
 - Professionelle Haltung: 1
@@ -74,7 +75,9 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Reflexion: 1
 - Reformulieren: 1
 - Ressourcenorientierung: 3
+- Schriftkultur: 1
 - Sicherheit: 2
+- Sprachbildung im Alltag: 1
 - Sprache: 1
 - Sprache und Kommunikation: 1
 - Sprechfreude: 1
@@ -85,6 +88,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - kollegialer Austausch: 2
 - korrektives Feedback: 1
 - naechste Schritte: 1
+- nicht-situative Sprache: 1
 - nächste Schritte: 1
 - professionelles Gespräch: 1
 - sanfter Übergang: 1
