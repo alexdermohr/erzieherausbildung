@@ -36,7 +36,7 @@ def build_json(items: list[dict]) -> dict:
     by_claim = Counter(item["claimType"] for item in items)
     by_cluster = Counter(item["sourceCluster"] for item in items)
     concepts = Counter(concept for item in items for concept in item["concepts"])
-    source_titles = sorted({item["sourceTitle"] for item in items})
+    source_titles = sorted({item["sourceTitle"] for item in items if has_concrete_locator(item)})
     unresolved_source_work = [
         {
             "id": item["id"],

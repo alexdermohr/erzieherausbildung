@@ -53,8 +53,6 @@ Diese Einträge sind Arbeitsfragen ohne konkrete Fundstelle; sie zählen nicht a
 - Musik und Rhythmik.pdf / Hamburger Bildungsleitlinien.pdf
 - S1_ Berufsrolle.pdf
 - S1_ Berufsrolle.pdf / Lernfeld 1_ Professionelle Haltung.pdf
-- S4_ Informatik.pdf
-- S4_ Sprache und Kommunikation.pdf
 - Sozialpädagogische Grundlagen / Handlungszyklus.pdf
 
 ## Begriffe im Pilot
