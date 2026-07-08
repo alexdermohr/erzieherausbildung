@@ -12,10 +12,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 18
-- Reviewstatus: {'draft': 16, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 16, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 8, 'lernfeld 3': 4, 'lernfeld 4': 1, 'lernfeld 5': 2}
+- Einträge: 19
+- Reviewstatus: {'draft': 17, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 17, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 8, 'lernfeld 3': 5, 'lernfeld 4': 1, 'lernfeld 5': 2}
 
 ## Quellen im Pilot
 
@@ -35,7 +35,8 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 - Alltagssprache: 1
 - Augenhöhe: 1
-- Beobachtung: 3
+- Austausch: 1
+- Beobachtung: 4
 - Berufsrolle: 1
 - Bezugsperson: 1
 - Bilderbuchdialog: 1
@@ -45,6 +46,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Dialog: 1
 - Dialogische Haltung: 1
 - Digitale Bildung: 1
+- Dokumentation: 1
 - Eingewöhnung: 2
 - Elternkooperation: 2
 - Erziehungspartnerschaft: 2
@@ -65,11 +67,12 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Konfliktbegleitung: 1
 - Konflikte: 1
 - Lernarrangements: 1
-- Lerngeschichten: 1
+- Lerngeschichten: 2
 - Lernumgebung: 1
 - Literacy: 2
 - Perspektivübernahme: 1
 - Planung: 1
+- Portfolio: 1
 - Professionelle Haltung: 1
 - Querschnitt: 2
 - Reflexion: 1
@@ -83,6 +86,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Sprechfreude: 1
 - Stärken: 1
 - Vertrauen: 1
+- Wanddokumentation: 1
 - Zuhören: 1
 - aktives Zuhören: 2
 - kollegialer Austausch: 2

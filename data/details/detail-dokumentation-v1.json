@@ -1,0 +1,79 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-dokumentation-v1",
+  "title": "Dokumentation",
+  "topicIds": [
+    "dokumentation"
+  ],
+  "axisIds": [
+    "beobachtung-fallverstehen"
+  ],
+  "sourceRefs": [
+    "doc-014"
+  ],
+  "excerptRefs": [
+    "doc-014-dokumentation-lerngeschichte-austausch"
+  ],
+  "summary": "Dokumentation macht pädagogische Wahrnehmung nachvollziehbar, anschlussfähig und besprechbar. Sie hält nicht nur fest, was passiert ist, sondern ordnet Beobachtungen so, dass Kinder, Fachkräfte und Eltern über Interessen, Lernwege, Stärken und nächste Schritte ins Gespräch kommen können.",
+  "coreIdeas": [
+    "Dokumentation ist keine bloße Verwaltung von Beobachtungen, sondern eine pädagogische Form der Sichtbarmachung von Lernen.",
+    "Lerngeschichten, Portfolios und Wanddokumentationen verbinden konkrete Alltagssituationen mit Deutung, Wertschätzung und Anschlusskommunikation.",
+    "Gute Dokumentation bleibt beobachtungsnah, ressourcenorientiert und nachvollziehbar; sie ersetzt nicht das Fallverstehen, sondern macht es überprüfbar.",
+    "Dokumentation kann Kindern Beteiligung ermöglichen, wenn sie eigene Perspektiven, Aussagen, Fotos oder Deutungen einbringen.",
+    "Für Eltern und Team wird Dokumentation zur gemeinsamen Gesprächsgrundlage über Entwicklung, Interessen und pädagogische nächste Schritte."
+  ],
+  "practiceAnchors": [
+    "Beobachtungen zeitnah, konkret und möglichst wertarm festhalten, bevor pädagogische Deutungen ergänzt werden.",
+    "In Lerngeschichten nicht nur Ergebnis oder Leistung beschreiben, sondern Interesse, Ausdauer, Beziehung, Strategie und Lernweg sichtbar machen.",
+    "Portfolio und Wanddokumentation so gestalten, dass Kinder sie wiederfinden, anschauen, kommentieren und weiterführen können.",
+    "Dokumentationen im Team nutzen, um verschiedene Wahrnehmungen zu vergleichen und Hypothesen nicht vorschnell zu verfestigen.",
+    "Elterngespräche mit dokumentierten Situationen stützen, damit Austausch nicht abstrakt oder defizitorientiert bleibt."
+  ],
+  "commonMisunderstandings": [
+    "Dokumentation ist nicht identisch mit Beweisführung oder Kontrolle.",
+    "Viele Notizen bedeuten noch keine gute Dokumentation; entscheidend ist, ob sie pädagogisch anschlussfähig sind.",
+    "Fotos ersetzen keine Beobachtung und keine Deutung.",
+    "Eine Lerngeschichte ist nicht nur ein schöner Text für das Portfolio, sondern Teil eines Beobachtungs-, Austausch- und Planungsprozesses.",
+    "Dokumentation darf Ressourcen sichtbar machen, ohne Schwierigkeiten unsichtbar zu machen."
+  ],
+  "bridges": [
+    {
+      "targetId": "beobachtung",
+      "relation": "Dokumentation hält Beobachtungen fest und macht sie später überprüfbar und besprechbar."
+    },
+    {
+      "targetId": "fallverstehen",
+      "relation": "Erst dokumentierte Situationen ermöglichen es, Deutungen mit Kontext und mehreren Perspektiven abzugleichen."
+    },
+    {
+      "targetId": "foerderplanung",
+      "relation": "Nächste Schritte werden belastbarer, wenn sie aus dokumentierten Lernwegen und Interessen abgeleitet sind."
+    },
+    {
+      "targetId": "ressourcenorientierung",
+      "relation": "Dokumentation kann Stärken und Fortschritte sichtbar machen, statt nur Abweichungen zu sammeln."
+    },
+    {
+      "targetId": "elternkooperation",
+      "relation": "Dokumentierte Alltagssituationen schaffen konkrete Gesprächsanlässe mit Eltern."
+    },
+    {
+      "targetId": "dialogische-haltung",
+      "relation": "Wenn Kinder in Dokumentation einbezogen werden, entsteht Austausch über ihre eigene Sicht auf Lernen und Alltag."
+    }
+  ],
+  "openQuestions": [
+    "Soll später zwischen Beobachtungsnotiz, Lerngeschichte, Portfolio, Wanddokumentation und Entwicklungsdokumentation unterschieden werden?",
+    "Welche Datenschutz- und Schutzgrenzen braucht Dokumentation in der späteren Rechts- und Ethikachse?",
+    "Wie werden Elternperspektive und Kinderperspektive dokumentiert, ohne sie zu vereinnahmen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.3,
+  "interpolation": 0.25,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
