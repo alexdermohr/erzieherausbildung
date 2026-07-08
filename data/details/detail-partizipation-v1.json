@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-partizipation-v1",
+  "title": "Partizipation",
+  "topicIds": [
+    "partizipation"
+  ],
+  "axisIds": [
+    "gruppe-institution-politik"
+  ],
+  "sourceRefs": [
+    "doc-015",
+    "doc-016"
+  ],
+  "excerptRefs": [
+    "doc-015-016-partizipation-mitentscheidung-beteiligung"
+  ],
+  "summary": "Partizipation bedeutet, Kinder und Jugendliche an Entscheidungen zu beteiligen, die ihr Leben betreffen. Sie reicht über Anhörung hinaus: Entscheidend ist, ob Beteiligung reale Wirkung auf Entscheidungen, Regeln, Alltag und Verantwortung hat.",
+  "coreIdeas": [
+    "Partizipation ist weder Kinderherrschaft noch bloß freundliches Nachfragen.",
+    "Echte Beteiligung verändert Entscheidungsprozesse und Machtverteilung.",
+    "Mitbestimmung braucht Information, verständliche Optionen und nachvollziehbare Grenzen.",
+    "Partizipation fördert Selbstwirksamkeit, Verantwortung und demokratische Erfahrung.",
+    "Alibi-Partizipation entsteht, wenn Kinder mitreden dürfen, aber nichts beeinflussen können."
+  ],
+  "practiceAnchors": [
+    "Vor Entscheidungen klären: Was ist offen, was ist nicht verhandelbar, und warum?",
+    "Kinder und Jugendliche in Gruppenentscheidungen, Alltagsthemen und Regeln einbeziehen.",
+    "Beteiligung alters- und entwicklungsangemessen gestalten, ohne sie symbolisch zu entwerten.",
+    "Rückmelden, was aus Beiträgen geworden ist.",
+    "Auch leise, belastete oder konfliktvermeidende Kinder aktiv beteiligungsfähig machen."
+  ],
+  "commonMisunderstandings": [
+    "Partizipation heißt nicht, dass Erwachsene keine Verantwortung mehr tragen.",
+    "Mitreden ist noch keine Mitentscheidung.",
+    "Beteiligung darf nicht nur für harmlose Themen gelten.",
+    "Partizipation kann ohne klare Informationen nicht gelingen.",
+    "Demokratische Beteiligung ist nicht dasselbe wie Mehrheitsdruck."
+  ],
+  "bridges": [
+    {
+      "targetId": "rechte",
+      "relation": "Partizipation ist eng mit Kinderrechten und Beteiligungsrechten verbunden."
+    },
+    {
+      "targetId": "selbstwirksamkeit",
+      "relation": "Mitentscheidung lässt Kinder erleben, dass ihr Handeln und Sprechen Wirkung hat."
+    },
+    {
+      "targetId": "politik",
+      "relation": "Partizipation ist eine konkrete Praxis demokratischer und politischer Bildung."
+    },
+    {
+      "targetId": "regeln-struktur",
+      "relation": "Regeln werden zu Lernfeldern, wenn sie gemeinsam ausgehandelt oder geprüft werden."
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "relation": "Partizipation verändert Machtverhältnisse und verlangt verantwortliche Begrenzung von Fachkraftmacht."
+    }
+  ],
+  "openQuestions": [
+    "Soll später eine Partizipationsleiter oder Beteiligungsmatrix als Visualisierung entstehen?",
+    "Wie werden nicht verhandelbare Schutzgrenzen sichtbar gemacht?",
+    "Welche Praxisbeispiele unterscheiden echte Beteiligung von Alibi-Beteiligung?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.3,
+  "interpolation": 0.25,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-politik-v1",
+  "title": "Politische Bildung",
+  "topicIds": [
+    "politik"
+  ],
+  "axisIds": [
+    "gruppe-institution-politik"
+  ],
+  "sourceRefs": [
+    "doc-015"
+  ],
+  "excerptRefs": [
+    "doc-015-politische-bildung-demokratie-partizipation"
+  ],
+  "summary": "Politische Bildung in pädagogischen Einrichtungen meint nicht nur Wissen über Staat oder Parteien. Sie entsteht dort, wo Kinder und Jugendliche Demokratie, Rechte, Beteiligung, Aushandlung, Konflikt und gemeinsame Verantwortung im eigenen Alltag erfahren.",
+  "coreIdeas": [
+    "Politische Bildung beginnt im Alltag: Wer darf sprechen, entscheiden, widersprechen und mitgestalten?",
+    "Demokratiebildung braucht reale Beteiligungsstrukturen, nicht nur thematische Projekte.",
+    "Kinder und Jugendliche erfahren Politik auch über Macht, Regeln, Ausschluss, Zugehörigkeit und Rechte.",
+    "Pädagogische Institutionen sind selbst politische Lernorte, weil sie Entscheidungen und Ordnung herstellen.",
+    "Politische Bildung verbindet Partizipation, Kinderrechte, Konfliktfähigkeit und Verantwortungsübernahme."
+  ],
+  "practiceAnchors": [
+    "Alltagsentscheidungen als demokratische Lerngelegenheiten erkennen.",
+    "Konflikte nicht nur befrieden, sondern Aushandlung und Perspektiven sichtbar machen.",
+    "Kinderrechte und Beteiligungsmöglichkeiten konkret im Einrichtungsalltag verankern.",
+    "Gruppenentscheidungen so moderieren, dass Minderheiten nicht unsichtbar werden.",
+    "Politische Themen an Alltagserfahrungen von Gerechtigkeit, Fairness und Mitbestimmung anschließen."
+  ],
+  "commonMisunderstandings": [
+    "Politische Bildung ist nicht parteipolitische Beeinflussung.",
+    "Ein Projekt zu Demokratie ersetzt keine demokratische Alltagspraxis.",
+    "Kinder sind nicht zu jung für Erfahrungen mit Fairness, Macht und Mitbestimmung.",
+    "Mehrheitsentscheidung ist nicht automatisch demokratisch, wenn Beteiligung ungleich verteilt ist.",
+    "Politische Bildung darf Konflikte nicht vermeiden, sondern muss sie bearbeitbar machen."
+  ],
+  "bridges": [
+    {
+      "targetId": "partizipation",
+      "relation": "Partizipation ist der zentrale Praxisort politischer Bildung."
+    },
+    {
+      "targetId": "rechte",
+      "relation": "Kinderrechte geben politischer Bildung einen normativen Rahmen."
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "relation": "Politische Bildung macht Machtverhältnisse und Verantwortung besprechbar."
+    },
+    {
+      "targetId": "regeln-struktur",
+      "relation": "Regeln sind politische Alltagsobjekte, wenn sie gemeinsam begründet und verändert werden können."
+    },
+    {
+      "targetId": "institutioneller-auftrag",
+      "relation": "Einrichtungen müssen klären, wie Demokratiebildung in ihrem Auftrag praktisch wird."
+    }
+  ],
+  "openQuestions": [
+    "Wie wird politische Bildung für Kita, Hort, offene Jugendarbeit und Wohngruppe unterschiedlich konkret?",
+    "Welche Verbindung braucht politische Bildung zu Medien, Konflikt und Diskriminierung?",
+    "Wie kann politische Bildung sichtbar werden, ohne zur Prüfungs- oder Projektlogik zu verengen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.34,
+  "interpolation": 0.29,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

@@ -346,6 +346,63 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-macht-verantwortung-v1",
+      "title": "Macht und Verantwortung",
+      "path": "/data/details/detail-macht-verantwortung-v1.json",
+      "topicIds": [
+        "macht-verantwortung"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "sourceRefs": [
+        "doc-013",
+        "doc-015",
+        "doc-016"
+      ],
+      "excerptRefs": [
+        "doc-013-015-016-macht-verantwortung-fachkraft-beteiligung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-partizipation-v1",
+      "title": "Partizipation",
+      "path": "/data/details/detail-partizipation-v1.json",
+      "topicIds": [
+        "partizipation"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "sourceRefs": [
+        "doc-015",
+        "doc-016"
+      ],
+      "excerptRefs": [
+        "doc-015-016-partizipation-mitentscheidung-beteiligung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-politik-v1",
+      "title": "Politische Bildung",
+      "path": "/data/details/detail-politik-v1.json",
+      "topicIds": [
+        "politik"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "sourceRefs": [
+        "doc-015"
+      ],
+      "excerptRefs": [
+        "doc-015-politische-bildung-demokratie-partizipation"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-professionelle-haltung-v1",
       "title": "Professionelle Haltung",
       "path": "/data/details/detail-professionelle-haltung-v1.json",
@@ -379,6 +436,25 @@
       ],
       "excerptRefs": [
         "doc-004-005-reflexion-professionelles-selbstverstaendnis"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-regeln-struktur-v1",
+      "title": "Regeln und Struktur",
+      "path": "/data/details/detail-regeln-struktur-v1.json",
+      "topicIds": [
+        "regeln-struktur"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "sourceRefs": [
+        "doc-013",
+        "doc-016"
+      ],
+      "excerptRefs": [
+        "doc-013-016-regeln-struktur-alltag-gruppe"
       ],
       "detailStatus": "draft"
     },
@@ -471,14 +547,33 @@
         "doc-008-uebergaenge-sicherheit-rahmen"
       ],
       "detailStatus": "draft"
+    },
+    {
+      "id": "detail-wohngruppe-v1",
+      "title": "Wohngruppe",
+      "path": "/data/details/detail-wohngruppe-v1.json",
+      "topicIds": [
+        "wohngruppe"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "sourceRefs": [
+        "doc-013",
+        "doc-016"
+      ],
+      "excerptRefs": [
+        "doc-013-016-wohngruppe-lebensraum-alltag-hilfe"
+      ],
+      "detailStatus": "draft"
     }
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 26,
-    "detailedTopicCount": 26,
-    "missingTopicCount": 18,
-    "detailCoverageRatio": 0.591,
+    "detailCount": 31,
+    "detailedTopicCount": 31,
+    "missingTopicCount": 13,
+    "detailCoverageRatio": 0.705,
     "detailedTopicIds": [
       "anpassung-selbstbestimmung",
       "arbeitsbedingungen",
@@ -499,13 +594,18 @@
       "gespraechsanlaesse",
       "konflikte",
       "lernarrangements",
+      "macht-verantwortung",
+      "partizipation",
+      "politik",
       "professionelle-haltung",
       "reflexion",
+      "regeln-struktur",
       "ressourcenorientierung",
       "selbstwirksamkeit",
       "sprachbildung",
       "sprache-kommunikation",
-      "uebergaenge"
+      "uebergaenge",
+      "wohngruppe"
     ],
     "missingTopicIds": [
       "bildungsleitlinien",
@@ -514,18 +614,13 @@
       "institutioneller-auftrag",
       "kindeswohl",
       "kunst-aesthetik",
-      "macht-verantwortung",
       "mathematik",
       "musik-rhythmik",
       "naturwissenschaft",
-      "partizipation",
-      "politik",
       "rechte",
-      "regeln-struktur",
       "religion-ethik",
       "sozialpaedagogische-grundlagen",
-      "theater",
-      "wohngruppe"
+      "theater"
     ],
     "byAxis": [
       {
@@ -592,16 +687,16 @@
         "axisId": "gruppe-institution-politik",
         "title": "Gruppe, Institution, Wohngruppe und Politik",
         "topicCount": 5,
-        "detailedTopicCount": 0,
-        "detailCoverageRatio": 0.0,
-        "detailedTopicIds": [],
-        "missingTopicIds": [
+        "detailedTopicCount": 5,
+        "detailCoverageRatio": 1.0,
+        "detailedTopicIds": [
           "macht-verantwortung",
           "partizipation",
           "politik",
           "regeln-struktur",
           "wohngruppe"
-        ]
+        ],
+        "missingTopicIds": []
       },
       {
         "axisId": "bildungsbereiche",
