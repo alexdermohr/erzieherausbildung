@@ -156,6 +156,10 @@ else:
             problems.append("detail index: bad coverage.detailedTopicIds")
         if coverage.get("missingTopicIds") != missing_topic_ids:
             problems.append("detail index: bad coverage.missingTopicIds")
+        if missing_topic_ids and coverage.get("coverageStatus") == "complete":
+            problems.append("detail index: complete coverageStatus with missing topics")
+        if not missing_topic_ids and coverage.get("coverageStatus") != "complete":
+            problems.append("detail index: non-complete coverageStatus with full coverage")
         ratio = round(len(detailed_topic_ids) / len(topic_ids), 3) if topic_ids else 0
         if coverage.get("detailCoverageRatio") != ratio:
             problems.append("detail index: bad coverage.detailCoverageRatio")
