@@ -24,7 +24,7 @@ Diese Einträge sind Arbeitsfragen ohne konkrete Fundstelle; sie zählen nicht a
 - `doc-001-informatik-querschnittsfrage` — S4_ Informatik.pdf (needs-source, Unsicherheit 0.78)
 - `doc-002-sprache-kommunikation-querschnittsfrage` — S4_ Sprache und Kommunikation.pdf (needs-source, Unsicherheit 0.77)
 
-## Quellen im Pilot
+## Konkret lokalisierte Quellen im Pilot
 
 - B Ernährung und Gesundheit.pdf
 - Frühmathematik / Mathematik ist machbar.pdf
