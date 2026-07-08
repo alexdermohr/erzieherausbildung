@@ -345,11 +345,10 @@ assert all(item["claimType"] in {"question", "title-derived"} for item in pilot_
 assert "Konkret lokalisierte Quellen im Pilot" in expected_pilot_doc
 assert "Offene Quellenarbeit" in expected_pilot_doc
 
-print("repository validation passed")
-
 source_health = j("data/source-health.v1.json")
 assert source_health["schema"] == "erzieherausbildung.source_health.v1"
 assert source_health["sourcePolicy"]["raw_text_committed"] is False
 assert source_health["sourcePolicy"]["diagnostic_metadata_only"] is True
 assert source_health["summary"]["sourceCount"] == len(source_health["sources"])
 assert "validate_source_health.py" in workflow_validate
+print("repository validation passed")
