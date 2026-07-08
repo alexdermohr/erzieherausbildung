@@ -10,6 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "data" / "excerpts"
 JSON_TARGET = ROOT / "data" / "pilot-index.v1.json"
 DOC_TARGET = ROOT / "docs" / "pilot-index-v1.md"
+LOCATOR_PLACEHOLDERS = {"unknown", "not-yet-located", "Seite oder Abschnitt falls bekannt"}
+
+
+def has_concrete_locator(item: dict) -> bool:
+    locator = item.get("sourceLocator", "")
+    return isinstance(locator, str) and bool(locator.strip()) and locator.strip() not in LOCATOR_PLACEHOLDERS
 
 
 def load_items() -> list[dict]:
@@ -30,7 +36,19 @@ def build_json(items: list[dict]) -> dict:
     by_claim = Counter(item["claimType"] for item in items)
     by_cluster = Counter(item["sourceCluster"] for item in items)
     concepts = Counter(concept for item in items for concept in item["concepts"])
-    source_titles = sorted({item["sourceTitle"] for item in items})
+    source_titles = sorted({item["sourceTitle"] for item in items if has_concrete_locator(item)})
+    unresolved_source_work = [
+        {
+            "id": item["id"],
+            "sourceTitle": item["sourceTitle"],
+            "sourceLocator": item["sourceLocator"],
+            "claimType": item["claimType"],
+            "reviewStatus": item["reviewStatus"],
+            "uncertainty": item["uncertainty"],
+        }
+        for item in items
+        if not has_concrete_locator(item)
+    ]
     return {
         "schema": "erzieherausbildung.pilot_index.v1",
         "source": "data/excerpts/*.jsonl",
@@ -40,10 +58,11 @@ def build_json(items: list[dict]) -> dict:
         "byClaimType": dict(sorted(by_claim.items())),
         "bySourceCluster": dict(sorted(by_cluster.items())),
         "sourceTitles": source_titles,
+        "unresolvedSourceWork": unresolved_source_work,
         "concepts": dict(sorted(concepts.items())),
         "knownLimits": [
             "nur Pilotstand",
-            "alle Einträge draft",
+            "needs-source-Einträge sind offene Quellenarbeit, keine Belege",
             "keine systematische Tiefenerschließung",
         ],
     }
@@ -69,6 +88,19 @@ def render_doc(index: dict) -> str:
         f"- Reviewstatus: {index['byReviewStatus']}",
         f"- Claim-Typen: {index['byClaimType']}",
         f"- Lernfelder/Cluster: {index['bySourceCluster']}",
+        "",
+        "## Offene Quellenarbeit",
+        "",
+    ]
+    unresolved = index.get("unresolvedSourceWork", [])
+    if unresolved:
+        lines.append("Diese Einträge sind Arbeitsfragen ohne konkrete Fundstelle; sie zählen nicht als Detailbelege.")
+        lines.append("")
+        for item in unresolved:
+            lines.append(f"- `{item['id']}` — {item['sourceTitle']} ({item['reviewStatus']}, Unsicherheit {item['uncertainty']})")
+    else:
+        lines.append("Keine offenen Quellenarbeits-Einträge.")
+    lines += [
         "",
         "## Quellen im Pilot",
         "",

@@ -50,9 +50,25 @@
     "Musik und Rhythmik.pdf / Hamburger Bildungsleitlinien.pdf",
     "S1_ Berufsrolle.pdf",
     "S1_ Berufsrolle.pdf / Lernfeld 1_ Professionelle Haltung.pdf",
-    "S4_ Informatik.pdf",
-    "S4_ Sprache und Kommunikation.pdf",
     "Sozialpädagogische Grundlagen / Handlungszyklus.pdf"
+  ],
+  "unresolvedSourceWork": [
+    {
+      "id": "doc-001-informatik-querschnittsfrage",
+      "sourceTitle": "S4_ Informatik.pdf",
+      "sourceLocator": "not-yet-located",
+      "claimType": "question",
+      "reviewStatus": "needs-source",
+      "uncertainty": 0.78
+    },
+    {
+      "id": "doc-002-sprache-kommunikation-querschnittsfrage",
+      "sourceTitle": "S4_ Sprache und Kommunikation.pdf",
+      "sourceLocator": "not-yet-located",
+      "claimType": "question",
+      "reviewStatus": "needs-source",
+      "uncertainty": 0.77
+    }
   ],
   "concepts": {
     "Alltagspädagogik": 1,
@@ -250,7 +266,7 @@
   },
   "knownLimits": [
     "nur Pilotstand",
-    "alle Einträge draft",
+    "needs-source-Einträge sind offene Quellenarbeit, keine Belege",
     "keine systematische Tiefenerschließung"
   ]
 }

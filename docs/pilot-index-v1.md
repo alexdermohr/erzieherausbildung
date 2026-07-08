@@ -17,6 +17,13 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Claim-Typen: {'excerpted': 44, 'question': 2}
 - Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 5, 'lernfeld 2': 10, 'lernfeld 3': 5, 'lernfeld 4': 14, 'lernfeld 5': 4, 'rahmen': 6}
 
+## Offene Quellenarbeit
+
+Diese Einträge sind Arbeitsfragen ohne konkrete Fundstelle; sie zählen nicht als Detailbelege.
+
+- `doc-001-informatik-querschnittsfrage` — S4_ Informatik.pdf (needs-source, Unsicherheit 0.78)
+- `doc-002-sprache-kommunikation-querschnittsfrage` — S4_ Sprache und Kommunikation.pdf (needs-source, Unsicherheit 0.77)
+
 ## Quellen im Pilot
 
 - B Ernährung und Gesundheit.pdf
@@ -46,8 +53,6 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Musik und Rhythmik.pdf / Hamburger Bildungsleitlinien.pdf
 - S1_ Berufsrolle.pdf
 - S1_ Berufsrolle.pdf / Lernfeld 1_ Professionelle Haltung.pdf
-- S4_ Informatik.pdf
-- S4_ Sprache und Kommunikation.pdf
 - Sozialpädagogische Grundlagen / Handlungszyklus.pdf
 
 ## Begriffe im Pilot
