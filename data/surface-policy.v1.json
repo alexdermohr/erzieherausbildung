@@ -18,7 +18,8 @@
         "data/learning-map.v1.json",
         "data/knowledge-network.v1.json",
         "data/source-summary.json",
-        "data/machine-readable-inventory.json"
+        "data/machine-readable-inventory.json",
+        "data/detail-bridge-index.v1.json"
       ],
       "outputs": ["README.md", "docs/*.md", "visuals/*.canvas", "index.html"],
       "guards": ["repository validation", "raw artifact scan", "doc-id Rückbindung"],
@@ -34,12 +35,13 @@
       "data_sources": [
         "data/learning-map.v1.json",
         "data/knowledge-network.v1.json",
-        "data/source-summary.json"
+        "data/source-summary.json",
+        "data/detail-bridge-index.v1.json"
       ],
       "outputs": ["index.html", "assets/app.js", "assets/styles.css"],
       "guards": ["static fetch allow-list", "source summary only", "no raw source material"],
       "risk": "Die Lesefläche kann durch Glätte Scheingenauigkeit erzeugen.",
-      "next_use": "Überblick, Filter, Clusterfokus und später Detailkarten."
+      "next_use": "Überblick, Filter, Clusterfokus, Detailcoverage und Brücken-Hubs als Lesefläche."
     },
     {
       "id": "obsidian",
@@ -52,7 +54,9 @@
         "visuals/learning-map-v1.canvas",
         "docs/learning-map-v1.md",
         "docs/knowledge-network-v1.md",
-        "docs/visualization-decision.md"
+        "docs/visualization-decision.md",
+        "docs/pilot-index-v1.md",
+        "docs/detail-bridge-index-v1.md"
       ],
       "outputs": ["~/vault-gewebe/schule/erzieherausbildung"],
       "guards": ["safe-list export", "manifest", "mirror warning", "target inside vault", "dirty-vault-stop", "temp-vault CI validation"],

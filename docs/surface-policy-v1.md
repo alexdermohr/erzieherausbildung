@@ -15,8 +15,8 @@ Synthese: Das Repo bleibt Kanon. Web ist Lesefläche, Obsidian Denkfläche, Scha
 | Organ | Funktion | Autorität |
 | --- | --- | --- |
 | Repo | Kanon, Contracts, Datenmodelle, Validatoren | kanonisch |
-| Web | Lesen, Filtern, Überblick | abgeleitet |
-| Obsidian | Denken, räumliches Ordnen, Navigation | abgeleitet |
+| Web | Lesen, Filtern, Überblick, Brücken-Hubs | abgeleitet |
+| Obsidian | Denken, räumliches Ordnen, Navigation, Brückenorientierung | abgeleitet |
 | Schauwerk/Miro | spätere gemeinsame Sortierung oder Präsentation | abgeleitet und geplant |
 | CI | Reproduzierbarkeit und Driftprüfung | prüfend |
 | Vault-Git-Status | Ampel für echten Obsidian-Sync | stoppend |
@@ -54,4 +54,4 @@ Hebel: Autorität trennen, bevor mehr Inhalt ergänzt wird.
 
 Entscheidung: Repo bleibt Kanon; Oberflächen bleiben abgeleitet.
 
-Nächste Aktion: Exzerpte und Detailkarten nur noch gegen diese Oberflächenpolitik erweitern.
+Nächste Aktion: Exzerpte, Detailkarten und abgeleitete Brückenflächen nur noch gegen diese Oberflächenpolitik erweitern.

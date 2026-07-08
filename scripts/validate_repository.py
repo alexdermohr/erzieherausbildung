@@ -193,7 +193,9 @@ for surface_id in surface_contract["derivedSurfaceIds"]:
 assert {item["role"] for item in surface["surfaces"]} == set(surface_contract["roles"])
 assert surface_by_id["repo"]["status"] == "active"
 assert surface_by_id["web"]["status"] == "active"
+assert "data/detail-bridge-index.v1.json" in surface_by_id["web"]["data_sources"]
 assert surface_by_id["obsidian"]["status"] == "active"
+assert "docs/detail-bridge-index-v1.md" in surface_by_id["obsidian"]["data_sources"]
 assert surface_by_id["schauwerk_miro"]["status"] == "planned"
 surface_alignment = {entry["render_id"]: entry["surface_id"] for entry in surface["surface_alignment"]}
 assert surface_alignment == surface_contract["surfaceAlignment"]
@@ -214,9 +216,10 @@ app_js = (root / "assets/app.js").read_text(encoding="utf-8")
 index_html = (root / "index.html").read_text(encoding="utf-8")
 assert "/data/learning-map.v1.json" in app_js
 assert "/data/knowledge-network.v1.json" in app_js
+assert "/data/detail-bridge-index.v1.json" in app_js
 for source in surface_by_id["web"]["data_sources"]:
     assert "/" + source in app_js
-for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list"]:
+for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list"]:
     assert element_id in index_html
 readme = (root / "README.md").read_text(encoding="utf-8")
 for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/detail-bridge-index-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
@@ -247,7 +250,7 @@ assert "refusing to write: vault git status is not clean" in obsidian_script
 for token in ["Repo bleibt kanonisch", "Vault", "Dry-Run", "kein gesamtes Repo", "machine-readable.local"]:
     assert token in obsidian_doc
 surface_doc = (root / "docs/surface-policy-v1.md").read_text(encoding="utf-8")
-for token in ["Repo bleibt Kanon", "Lesefläche", "Denkfläche", "Kollaborationsfläche", "Keine Prüfungsnutzenlogik"]:
+for token in ["Repo bleibt Kanon", "Lesefläche", "Denkfläche", "Kollaborationsfläche", "Brücken-Hubs", "Keine Prüfungsnutzenlogik"]:
     assert token in surface_doc
 assert "renderClusters" in app_js
 assert "bridgeRole" in app_js
@@ -290,6 +293,9 @@ assert detail_index["coverage"]["coverageStatus"] == "complete"
 assert "vollständige Erstabdeckung" in detail_index["coverage"]["epistemicEmpty"]
 assert "/data/details/index.v1.json" in app_js
 assert "detailCoverageLabel" in app_js
+assert "renderDetailBridgeIndex" in app_js
+assert "Detail-Brückenindex" in index_html
+assert "Orientierung, keine neue Quelle" in index_html
 assert "Detail offen" in app_js
 assert "Detail vorhanden" in app_js
 
