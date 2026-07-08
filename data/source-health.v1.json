@@ -210,25 +210,33 @@
       "status": "ok"
     }
   ],
-  "affectedBacklogEntries": [
+  "affectedBacklogEntries": [],
+  "affectedDetails": [
     {
+      "detailId": "detail-naturwissenschaft-v1",
       "topicId": "naturwissenschaft",
       "title": "Natur, Umwelt, Technik",
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "affectedSourceRefs": [
+      "status": "covered-by-background-source",
+      "emptyTopicSourceRefs": [
         "doc-018"
-      ]
+      ],
+      "committedSourceRefs": [
+        "doc-003"
+      ],
+      "note": "Lokaler Textplatzhalter doc-018 ist leer; die aktuelle Detailkarte nutzt belegte Rahmenstellen aus doc-003 statt den leeren SourceRef."
     },
     {
+      "detailId": "detail-theater-v1",
       "topicId": "theater",
       "title": "Theater",
-      "priority": "normal",
-      "status": "needs-excerpt",
-      "affectedSourceRefs": [
+      "status": "covered-by-background-source",
+      "emptyTopicSourceRefs": [
         "doc-025"
-      ]
+      ],
+      "committedSourceRefs": [
+        "doc-003"
+      ],
+      "note": "Lokaler Textplatzhalter doc-025 ist leer; die aktuelle Detailkarte nutzt belegte Rahmenstellen aus doc-003 statt den leeren SourceRef."
     }
-  ],
-  "affectedDetails": []
+  ]
 }
