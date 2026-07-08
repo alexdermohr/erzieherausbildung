@@ -20,13 +20,11 @@ for path in sorted((root / "data" / "excerpts").glob("*.jsonl")):
         if not isinstance(excerpt_id, str) or not excerpt_id:
             problems.append(f"{path}:{line_no}: excerpt id required")
             continue
-        locator_text = " ".join(
-            str(item.get(key, ""))
-            for key in ["id", "sourceLocator", "sourceTitle"]
-        )
-        docs = set(DOC.findall(locator_text))
-        if not docs:
-            problems.append(f"{path}:{line_no}: excerpt must expose at least one doc-XXX source reference")
+        source_locator = item.get("sourceLocator", "")
+        if not isinstance(source_locator, str):
+            problems.append(f"{path}:{line_no}: sourceLocator must be string")
+            source_locator = ""
+        docs = set(DOC.findall(source_locator))
         excerpts[excerpt_id] = docs
 
 for path in sorted((root / "data" / "details").glob("detail-*-v1.json")):
@@ -39,7 +37,10 @@ for path in sorted((root / "data" / "details").glob("detail-*-v1.json")):
         if excerpt_ref not in excerpts:
             problems.append(f"{detail_id}: unknown excerptRef {excerpt_ref}")
             continue
-        excerpt_docs |= excerpts[excerpt_ref]
+        docs = excerpts[excerpt_ref]
+        if not docs:
+            problems.append(f"{detail_id}: excerptRef {excerpt_ref} sourceLocator must expose at least one doc-XXX source reference")
+        excerpt_docs |= docs
     uncovered = sorted(source_refs - excerpt_docs)
     if uncovered:
         problems.append(
