@@ -59,6 +59,7 @@ VIEW_FILES = (
     ViewFile("visuals/learning-map-v1.canvas", "Lernlandkarte.canvas", "copy"),
     ViewFile("docs/learning-map-v1.md", "Lernlandkarte.md", "markdown"),
     ViewFile("docs/knowledge-network-v1.md", "Wissensnetz.md", "markdown"),
+    ViewFile("docs/pilot-index-v1.md", "Pilotindex.md", "markdown"),
     ViewFile("docs/visualization-decision.md", "Visualisierungsentscheidung.md", "markdown"),
 )
 GENERATED_FILES = ("Start hier.md", MANIFEST_NAME)
@@ -184,7 +185,8 @@ Status: Vault-Spiegel; kanonisch bleibt das Repo.
 2. [[Lernlandkarte.canvas]] – visuelle Lernachsen.
 3. [[Lernlandkarte]] – textliche Orientierung zu Achsen und Themen.
 4. [[Wissensnetz]] – Cluster, Brücken und Zusammenhangslogik.
-5. [[Visualisierungsentscheidung]] – warum Web, Canvas und spätere Kollaboration getrennte Rollen haben.
+5. [[Pilotindex]] – konkret lokalisierte Quellen und offene Quellenarbeit.
+6. [[Visualisierungsentscheidung]] – warum Web, Canvas und spätere Kollaboration getrennte Rollen haben.
 
 ## Regel
 
