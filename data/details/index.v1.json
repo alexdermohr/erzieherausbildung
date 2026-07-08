@@ -20,6 +20,42 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-arbeitsbedingungen-v1",
+      "title": "Arbeitsbedingungen",
+      "path": "/data/details/detail-arbeitsbedingungen-v1.json",
+      "topicIds": [
+        "arbeitsbedingungen"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "sourceRefs": [
+        "doc-006"
+      ],
+      "excerptRefs": [
+        "doc-006-arbeitsbedingungen-belastung-ressourcen-team"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-arbeitsfelder-v1",
+      "title": "Arbeitsfelder",
+      "path": "/data/details/detail-arbeitsfelder-v1.json",
+      "topicIds": [
+        "arbeitsfelder"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "sourceRefs": [
+        "doc-007"
+      ],
+      "excerptRefs": [
+        "doc-007-arbeitsfelder-einrichtungen-auftrag-rahmen"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-aufsichtspflicht-v1",
       "title": "Aufsichtspflicht",
       "path": "/data/details/detail-aufsichtspflicht-v1.json",
@@ -310,6 +346,43 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-professionelle-haltung-v1",
+      "title": "Professionelle Haltung",
+      "path": "/data/details/detail-professionelle-haltung-v1.json",
+      "topicIds": [
+        "professionelle-haltung"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "sourceRefs": [
+        "doc-005"
+      ],
+      "excerptRefs": [
+        "doc-005-professionelle-haltung-selbstreflexion-teamhaltung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-reflexion-v1",
+      "title": "Reflexion und Selbstverständnis",
+      "path": "/data/details/detail-reflexion-v1.json",
+      "topicIds": [
+        "reflexion"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "sourceRefs": [
+        "doc-004",
+        "doc-005"
+      ],
+      "excerptRefs": [
+        "doc-004-005-reflexion-professionelles-selbstverstaendnis"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-ressourcenorientierung-v1",
       "title": "Ressourcenorientierung",
       "path": "/data/details/detail-ressourcenorientierung-v1.json",
@@ -402,12 +475,14 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 22,
-    "detailedTopicCount": 22,
-    "missingTopicCount": 22,
-    "detailCoverageRatio": 0.5,
+    "detailCount": 26,
+    "detailedTopicCount": 26,
+    "missingTopicCount": 18,
+    "detailCoverageRatio": 0.591,
     "detailedTopicIds": [
       "anpassung-selbstbestimmung",
+      "arbeitsbedingungen",
+      "arbeitsfelder",
       "aufsichtspflicht",
       "beobachtung",
       "berufsrolle",
@@ -424,6 +499,8 @@
       "gespraechsanlaesse",
       "konflikte",
       "lernarrangements",
+      "professionelle-haltung",
+      "reflexion",
       "ressourcenorientierung",
       "selbstwirksamkeit",
       "sprachbildung",
@@ -431,8 +508,6 @@
       "uebergaenge"
     ],
     "missingTopicIds": [
-      "arbeitsbedingungen",
-      "arbeitsfelder",
       "bildungsleitlinien",
       "ethik",
       "gesundheit-ernaehrung",
@@ -445,9 +520,7 @@
       "naturwissenschaft",
       "partizipation",
       "politik",
-      "professionelle-haltung",
       "rechte",
-      "reflexion",
       "regeln-struktur",
       "religion-ethik",
       "sozialpaedagogische-grundlagen",
@@ -459,17 +532,16 @@
         "axisId": "professionalitaet",
         "title": "Professionelle Haltung und Berufsrolle",
         "topicCount": 5,
-        "detailedTopicCount": 1,
-        "detailCoverageRatio": 0.2,
+        "detailedTopicCount": 5,
+        "detailCoverageRatio": 1.0,
         "detailedTopicIds": [
-          "berufsrolle"
-        ],
-        "missingTopicIds": [
           "arbeitsbedingungen",
           "arbeitsfelder",
+          "berufsrolle",
           "professionelle-haltung",
           "reflexion"
-        ]
+        ],
+        "missingTopicIds": []
       },
       {
         "axisId": "beziehung-entwicklung",

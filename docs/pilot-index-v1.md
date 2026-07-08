@@ -12,13 +12,16 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 ## Stand
 
-- Einträge: 24
-- Reviewstatus: {'draft': 22, 'needs-source': 2}
-- Claim-Typen: {'excerpted': 22, 'question': 2}
-- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 1, 'lernfeld 2': 10, 'lernfeld 3': 5, 'lernfeld 4': 2, 'lernfeld 5': 4}
+- Einträge: 28
+- Reviewstatus: {'draft': 26, 'needs-source': 2}
+- Claim-Typen: {'excerpted': 26, 'question': 2}
+- Lernfelder/Cluster: {'kein lernfeld': 2, 'lernfeld 1': 5, 'lernfeld 2': 10, 'lernfeld 3': 5, 'lernfeld 4': 2, 'lernfeld 5': 4}
 
 ## Quellen im Pilot
 
+- Lernfeld 1_ Arbeitsbedingungen.pdf
+- Lernfeld 1_ Arbeitsfelder.pdf
+- Lernfeld 1_ Professionelle Haltung.pdf
 - Lernfeld 2_ Aufsichtspflicht vs. Selbstwirksamkeit.pdf
 - Lernfeld 2_ Eingewöhnung.pdf
 - Lernfeld 2_ Eingewöhnung und Bindung.pdf
@@ -30,6 +33,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Lernfeld 4_ stationaere Jugendhilfe.pdf
 - Lernfeld 5_ Elternkooperation.pdf
 - S1_ Berufsrolle.pdf
+- S1_ Berufsrolle.pdf / Lernfeld 1_ Professionelle Haltung.pdf
 - S4_ Informatik.pdf
 - S4_ Sprache und Kommunikation.pdf
 
@@ -37,12 +41,16 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 
 - Alltagssprache: 1
 - Anpassung: 1
+- Arbeitsbedingungen: 1
+- Arbeitsfelder: 1
 - Aufsichtspflicht: 1
+- Auftrag: 1
 - Augenhöhe: 1
 - Austausch: 1
 - Autonomie: 1
+- Belastung: 1
 - Beobachtung: 4
-- Berufsrolle: 1
+- Berufsrolle: 2
 - Beteiligung: 1
 - Bezugsperson: 1
 - Bilderbuchdialog: 1
@@ -55,6 +63,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Digitale Bildung: 1
 - Dokumentation: 1
 - Eingewöhnung: 2
+- Einrichtungen: 1
 - Elterngespräche: 1
 - Elternkooperation: 2
 - Ermutigung: 1
@@ -62,6 +71,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Erziehungspartnerschaft: 2
 - Erziehungspflicht: 1
 - Erzählen: 2
+- Fachwissen: 1
 - Fallverstehen: 2
 - Familienformen: 1
 - Familienperspektive: 2
@@ -72,7 +82,10 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Gefühlsregulation: 1
 - Gesprächsanlässe: 1
 - Gesprächsvorbereitung: 1
+- Grenzen: 1
+- Haltung: 1
 - Handlungserfahrung: 1
+- Handlungskonzepte: 1
 - Hypothesenbildung: 1
 - Informatik: 1
 - Interessen: 1
@@ -84,6 +97,7 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Konfliktbegleitung: 1
 - Konflikte: 1
 - Lebenslagen: 1
+- Leitung: 1
 - Lernarrangements: 1
 - Lerngeschichten: 2
 - Lernumgebung: 1
@@ -92,16 +106,19 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Perspektivübernahme: 1
 - Planung: 1
 - Portfolio: 1
-- Professionelle Haltung: 1
+- Professionelle Haltung: 2
 - Querschnitt: 2
-- Reflexion: 1
+- Rahmenbedingungen: 1
+- Reflexion: 2
 - Reformulieren: 1
-- Ressourcen: 1
+- Ressourcen: 2
 - Ressourcenorientierung: 3
 - Schriftkultur: 1
 - Schutz: 1
 - Selbstbestimmung: 1
+- Selbstreflexion: 1
 - Selbstständigkeit: 1
+- Selbstverständnis: 1
 - Selbstwirksamkeit: 1
 - Sicherheit: 2
 - Sprachbarriere: 1
@@ -110,10 +127,14 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - Sprache und Kommunikation: 1
 - Sprechfreude: 1
 - Stärken: 1
+- Team: 1
+- Teamreflexion: 2
 - Verantwortung: 1
 - Vertrauen: 2
 - Vorannahmen: 1
 - Wanddokumentation: 1
+- Wertschätzung: 1
+- Zielgruppe: 1
 - Zuhören: 1
 - Zutrauen: 1
 - aktives Zuhören: 2
@@ -122,7 +143,9 @@ Synthese: Der Index zeigt bewusst nur Aggregation, Status und Grenzen. Kanon ble
 - naechste Schritte: 1
 - nicht-situative Sprache: 1
 - nächste Schritte: 1
+- professioneller Konflikt: 1
 - professionelles Gespräch: 2
+- pädagogische Qualität: 1
 - sanfter Übergang: 1
 - sichere Basis: 1
 - Übergang: 1
