@@ -1,0 +1,77 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-regeln-struktur-v1",
+  "title": "Regeln und Struktur",
+  "topicIds": [
+    "regeln-struktur"
+  ],
+  "axisIds": [
+    "gruppe-institution-politik"
+  ],
+  "sourceRefs": [
+    "doc-013",
+    "doc-016",
+    "doc-017"
+  ],
+  "excerptRefs": [
+    "doc-013-016-017-regeln-struktur-alltag-gruppe"
+  ],
+  "summary": "Regeln und Struktur ordnen pädagogischen Alltag. Sie geben Sicherheit, Orientierung und Verlässlichkeit, können aber auch als Fremdbestimmung, Machtmittel oder ungerechte Begrenzung erlebt werden. Pädagogisch tragfähig sind Regeln, wenn sie begründet, transparent, überprüfbar und entwicklungsförderlich sind.",
+  "coreIdeas": [
+    "Struktur entlastet, weil sie Alltag vorhersehbar macht und nicht jede Situation neu ausgehandelt werden muss.",
+    "Regeln brauchen fachliche Begründung; reine Autorität erzeugt eher Widerstand als Einsicht.",
+    "In Gruppen wirken Regeln auf Einzelne und auf das Zusammenleben zugleich.",
+    "Struktur muss entwicklungsangemessen sein und darf Selbstbestimmung nicht unnötig beschneiden.",
+    "Konflikte um Regeln sind oft Konflikte um Fairness, Macht, Zugehörigkeit und Autonomie."
+  ],
+  "practiceAnchors": [
+    "Regeln mit Kindern und Jugendlichen so weit wie möglich besprechen und begründen.",
+    "Unterscheiden, ob eine Regel Schutz, Organisation, Gruppengerechtigkeit oder Kontrolle dient.",
+    "Tagesstruktur mit Freiräumen verbinden, damit sie nicht nur Anpassung erzeugt.",
+    "Regelkonflikte als Anlass nutzen, Beteiligung und Verantwortung zu üben.",
+    "Regeln regelmäßig im Team und mit der Gruppe prüfen."
+  ],
+  "commonMisunderstandings": [
+    "Viele Regeln bedeuten nicht automatisch gute Struktur.",
+    "Struktur ist nicht dasselbe wie Kontrolle.",
+    "Eine Regel ist nicht pädagogisch, nur weil sie institutionell üblich ist.",
+    "Partizipation macht Regeln nicht überflüssig.",
+    "Individuelle Ausnahmen sind nicht automatisch ungerecht, können aber erklärungsbedürftig sein."
+  ],
+  "bridges": [
+    {
+      "targetId": "wohngruppe",
+      "relation": "In Wohngruppen strukturieren Regeln den gemeinsamen Lebensalltag."
+    },
+    {
+      "targetId": "partizipation",
+      "relation": "Regeln werden tragfähiger, wenn Betroffene an ihrer Aushandlung beteiligt werden."
+    },
+    {
+      "targetId": "aufsichtspflicht",
+      "relation": "Ein Teil von Regeln dient Schutz und Aufsicht, darf aber Freiräume nicht unnötig ersticken."
+    },
+    {
+      "targetId": "anpassung-selbstbestimmung",
+      "relation": "Regeln markieren die Spannung zwischen gemeinsamer Ordnung und individueller Selbstbestimmung."
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "relation": "Wer Regeln setzt und durchsetzt, übt Macht aus und trägt Verantwortung."
+    }
+  ],
+  "openQuestions": [
+    "Soll später eine Unterscheidung zwischen Schutzregeln, Organisationsregeln und Aushandlungsregeln entstehen?",
+    "Welche Visualisierung zeigt die Spannung zwischen Orientierung und Kontrolle?",
+    "Wie werden Regelverletzungen ohne Straflogik pädagogisch bearbeitet?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.32,
+  "interpolation": 0.27,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-wohngruppe-v1",
+  "title": "Wohngruppe",
+  "topicIds": [
+    "wohngruppe"
+  ],
+  "axisIds": [
+    "gruppe-institution-politik"
+  ],
+  "sourceRefs": [
+    "doc-013",
+    "doc-016"
+  ],
+  "excerptRefs": [
+    "doc-013-016-wohngruppe-lebensraum-alltag-hilfe"
+  ],
+  "summary": "Die Wohngruppe ist ein pädagogischer Lebensraum, in dem Schutz, Alltag, Beziehung, Hilfeauftrag und Verselbstständigung zusammenkommen. Sie ist nicht einfach Ersatzfamilie und nicht nur Institution, sondern ein strukturierter Ort, an dem junge Menschen leben, sich orientieren, Konflikte austragen und Entwicklungsschritte erproben.",
+  "coreIdeas": [
+    "Wohngruppen bieten einen sicheren und verlässlichen Rahmen, wenn Familie zeitweise oder dauerhaft nicht ausreichend tragen kann.",
+    "Alltagspädagogik ist zentral: Essen, Zimmer, Gruppenabende, Konflikte, Schule, Freizeit und Übergänge werden zu Lern- und Beziehungssituationen.",
+    "Die Wohngruppe verbindet Schutz und Kontrolle mit Beziehung, Beteiligung und Verselbstständigung.",
+    "Jugendliche erleben Wohngruppe zugleich als Hilfe, Zuhause auf Zeit und institutionelle Zumutung.",
+    "Fachkräfte müssen individuelle Lebensgeschichte, Gruppendynamik und institutionellen Auftrag zugleich beachten."
+  ],
+  "practiceAnchors": [
+    "Alltagssituationen nicht als Nebensache, sondern als zentrale pädagogische Arbeitsfläche betrachten.",
+    "Für Jugendliche transparent machen, welche Regeln aus Schutz, Gruppe, Hilfeauftrag oder Organisation entstehen.",
+    "Gruppenabende, Einzelgespräche und Bezugsbetreuung als unterschiedliche Räume von Beziehung und Beteiligung nutzen.",
+    "Verselbstständigung früh mit konkreten Alltagskompetenzen verbinden.",
+    "Konflikte nicht nur individuell, sondern auch aus Gruppendynamik und institutioneller Lage lesen."
+  ],
+  "commonMisunderstandings": [
+    "Wohngruppe ist keine Familie, auch wenn sie familiäre Strukturen anbieten kann.",
+    "Ein sicherer Ort ist nicht automatisch ein konfliktfreier Ort.",
+    "Regeln allein erzeugen noch keine pädagogische Struktur.",
+    "Verselbstständigung beginnt nicht erst kurz vor dem Auszug.",
+    "Wohngruppe darf nicht nur als Defizitraum verstanden werden."
+  ],
+  "bridges": [
+    {
+      "targetId": "regeln-struktur",
+      "relation": "Wohngruppen brauchen Regeln und Routinen, damit Zusammenleben verlässlich wird."
+    },
+    {
+      "targetId": "partizipation",
+      "relation": "Mitbestimmung entscheidet darüber, ob die Wohngruppe nur verwaltet oder als Lebensraum mitgestaltet wird."
+    },
+    {
+      "targetId": "bindung-beziehung",
+      "relation": "Bezugsbetreuung und verlässliche Fachkräfte können Beziehungssicherheit ermöglichen."
+    },
+    {
+      "targetId": "uebergaenge",
+      "relation": "Aufnahme, Rückkehr, Verselbstständigung und Auszug sind zentrale Übergänge der Wohngruppe."
+    },
+    {
+      "targetId": "institutioneller-auftrag",
+      "relation": "Die Wohngruppe ist immer auch durch gesetzlichen und institutionellen Hilfeauftrag geprägt."
+    }
+  ],
+  "openQuestions": [
+    "Soll Wohngruppe später in Kita, Hort und stationäre Jugendhilfe als Arbeitsfeldmatrix eingebunden werden?",
+    "Wie werden Hilfeplanung und rechtliche Grundlagen als eigene Vertiefung ergänzt?",
+    "Welche Darstellung zeigt Wohngruppe als Lebensraum ohne Romantisierung?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.31,
+  "interpolation": 0.27,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

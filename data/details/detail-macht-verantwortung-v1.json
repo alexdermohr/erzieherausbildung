@@ -1,0 +1,77 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-macht-verantwortung-v1",
+  "title": "Macht und Verantwortung",
+  "topicIds": [
+    "macht-verantwortung"
+  ],
+  "axisIds": [
+    "gruppe-institution-politik"
+  ],
+  "sourceRefs": [
+    "doc-013",
+    "doc-015",
+    "doc-016"
+  ],
+  "excerptRefs": [
+    "doc-013-015-016-macht-verantwortung-fachkraft-beteiligung"
+  ],
+  "summary": "Macht und Verantwortung gehören zur pädagogischen Arbeit. Fachkräfte entscheiden, deuten, begrenzen, schützen und strukturieren. Gruppen üben ebenfalls Macht aus. Professionell wird Macht nicht dadurch, dass sie verschwiegen wird, sondern dadurch, dass sie reflektiert, begründet, begrenzt und mit Beteiligung verbunden wird.",
+  "coreIdeas": [
+    "Pädagogische Macht ist unvermeidbar, weil Fachkräfte Verantwortung für Schutz, Struktur und Entwicklung tragen.",
+    "Macht kann schützen, orientieren und ermöglichen, aber auch beschämen, kontrollieren oder ausschließen.",
+    "Gruppen entwickeln eigene Machtverhältnisse, die Fachkräfte beobachten und bearbeiten müssen.",
+    "Partizipation begrenzt Fachkraftmacht, hebt Verantwortung aber nicht auf.",
+    "Verantwortung heißt, eigene Entscheidungs- und Deutungsmacht transparent und korrigierbar zu machen."
+  ],
+  "practiceAnchors": [
+    "In Konflikten fragen: Wer kann hier entscheiden, wer wird gehört, wer hat welche Folgen zu tragen?",
+    "Sanktionen, Regeln und Eingriffe fachlich begründen und überprüfbar halten.",
+    "Gruppendynamiken beobachten: Wer dominiert, wer zieht sich zurück, wer wird ausgeschlossen?",
+    "Beteiligung auch dann ermöglichen, wenn Schutzgrenzen bestehen.",
+    "Eigene Machtposition im Team reflektieren, statt sie als bloße Normalität zu behandeln."
+  ],
+  "commonMisunderstandings": [
+    "Macht ist nicht nur negativ; sie muss aber verantwortet werden.",
+    "Kinder und Jugendliche zu beteiligen bedeutet nicht, Fachkraftverantwortung abzugeben.",
+    "Neutralität kann Machtverhältnisse verdecken.",
+    "Gruppenharmonie heißt nicht, dass Macht fair verteilt ist.",
+    "Professionelle Autorität ist nicht dasselbe wie autoritäres Handeln."
+  ],
+  "bridges": [
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Haltung zeigt sich daran, wie Fachkräfte mit eigener Macht umgehen."
+    },
+    {
+      "targetId": "partizipation",
+      "relation": "Partizipation ist ein Mittel, Macht zu teilen und Verantwortung lernbar zu machen."
+    },
+    {
+      "targetId": "kindeswohl",
+      "relation": "Schutzverantwortung kann Eingriffe legitimieren, muss aber fachlich begründet bleiben."
+    },
+    {
+      "targetId": "reflexion",
+      "relation": "Macht muss reflektiert werden, weil sie sonst leicht als Normalität unsichtbar bleibt."
+    },
+    {
+      "targetId": "regeln-struktur",
+      "relation": "Regeln materialisieren Macht; ihre Begründung und Durchsetzung sind daher zentral."
+    }
+  ],
+  "openQuestions": [
+    "Soll Macht später als Querschnitt mit Ethik, Kindeswohl und institutionellem Auftrag visualisiert werden?",
+    "Welche Beispiele zeigen legitime Schutzmacht gegenüber problematischer Kontrolle?",
+    "Wie werden Gruppenmacht und Fachkraftmacht gemeinsam dargestellt?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.33,
+  "interpolation": 0.29,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
