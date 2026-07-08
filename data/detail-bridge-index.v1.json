@@ -1,0 +1,5612 @@
+{
+  "schema": "erzieherausbildung.detail_bridge_index.v1",
+  "source": "data/details/*.json",
+  "purpose": "Abgeleitete Orientierungsfläche über Brücken zwischen Detailkarten; keine neue Inhaltsquelle und keine Rohtextablage.",
+  "totals": {
+    "details": 44,
+    "bridges": 205,
+    "targets": 45,
+    "axesWithIncomingBridges": 8
+  },
+  "hubs": [
+    {
+      "targetId": "beobachtung",
+      "targetTitle": "Beobachtung",
+      "incomingBridgeCount": 13
+    },
+    {
+      "targetId": "elternkooperation",
+      "targetTitle": "Elternkooperation",
+      "incomingBridgeCount": 11
+    },
+    {
+      "targetId": "professionelle-haltung",
+      "targetTitle": "Professionelle Haltung",
+      "incomingBridgeCount": 10
+    },
+    {
+      "targetId": "partizipation",
+      "targetTitle": "Partizipation",
+      "incomingBridgeCount": 8
+    },
+    {
+      "targetId": "fallverstehen",
+      "targetTitle": "Fallverstehen",
+      "incomingBridgeCount": 8
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "targetTitle": "Macht und Verantwortung",
+      "incomingBridgeCount": 8
+    },
+    {
+      "targetId": "bindung-beziehung",
+      "targetTitle": "Bindung und Beziehung",
+      "incomingBridgeCount": 7
+    },
+    {
+      "targetId": "selbstwirksamkeit",
+      "targetTitle": "Selbstwirksamkeit",
+      "incomingBridgeCount": 7
+    },
+    {
+      "targetId": "uebergaenge",
+      "targetTitle": "Übergänge",
+      "incomingBridgeCount": 7
+    },
+    {
+      "targetId": "ressourcenorientierung",
+      "targetTitle": "Ressourcenorientierung",
+      "incomingBridgeCount": 7
+    },
+    {
+      "targetId": "reflexion",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "incomingBridgeCount": 7
+    },
+    {
+      "targetId": "rechte",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "incomingBridgeCount": 7
+    }
+  ],
+  "byTargetAxis": [
+    {
+      "axisId": "beobachtung-fallverstehen",
+      "axisTitle": "Beobachtung, Fallverstehen und Dokumentation",
+      "incomingBridgeCount": 36
+    },
+    {
+      "axisId": "gruppe-institution-politik",
+      "axisTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "incomingBridgeCount": 29
+    },
+    {
+      "axisId": "eltern-kooperation",
+      "axisTitle": "Elternkooperation und Übergänge",
+      "incomingBridgeCount": 27
+    },
+    {
+      "axisId": "professionalitaet",
+      "axisTitle": "Professionelle Haltung und Berufsrolle",
+      "incomingBridgeCount": 26
+    },
+    {
+      "axisId": "beziehung-entwicklung",
+      "axisTitle": "Beziehung, Entwicklung und Selbstwirksamkeit",
+      "incomingBridgeCount": 25
+    },
+    {
+      "axisId": "rahmen-recht-ethik",
+      "axisTitle": "Rahmen, Recht, Schutz und Ethik",
+      "incomingBridgeCount": 25
+    },
+    {
+      "axisId": "bildungsbereiche",
+      "axisTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "incomingBridgeCount": 21
+    },
+    {
+      "axisId": "sprache-kommunikation",
+      "axisTitle": "Sprache, Kommunikation und Konflikte",
+      "incomingBridgeCount": 16
+    }
+  ],
+  "byTarget": {
+    "beobachtung": {
+      "targetId": "beobachtung",
+      "targetTitle": "Beobachtung",
+      "targetType": "topic",
+      "axisId": "beobachtung-fallverstehen",
+      "incomingBridgeCount": 13,
+      "sourceDetailIds": [
+        "detail-bindung-beziehung-v1",
+        "detail-dialogische-haltung-v1",
+        "detail-dokumentation-v1",
+        "detail-fallverstehen-v1",
+        "detail-foerderplanung-v1",
+        "detail-gespraechsanlaesse-v1",
+        "detail-kunst-aesthetik-v1",
+        "detail-lernarrangements-v1",
+        "detail-mathematik-v1",
+        "detail-ressourcenorientierung-v1",
+        "detail-selbstwirksamkeit-v1",
+        "detail-sprachbildung-v1",
+        "detail-sprache-kommunikation-v1"
+      ]
+    },
+    "elternkooperation": {
+      "targetId": "elternkooperation",
+      "targetTitle": "Elternkooperation",
+      "targetType": "topic",
+      "axisId": "eltern-kooperation",
+      "incomingBridgeCount": 11,
+      "sourceDetailIds": [
+        "detail-bildungsleitlinien-v1",
+        "detail-dokumentation-v1",
+        "detail-eingewoehnung-v1",
+        "detail-elterngespraeche-v1",
+        "detail-erziehungspartnerschaft-v1",
+        "detail-familienperspektive-v1",
+        "detail-gesundheit-ernaehrung-v1",
+        "detail-institutioneller-auftrag-v1",
+        "detail-professionelle-haltung-v1",
+        "detail-sprachbildung-v1",
+        "detail-uebergaenge-v1"
+      ]
+    },
+    "professionelle-haltung": {
+      "targetId": "professionelle-haltung",
+      "targetTitle": "Professionelle Haltung",
+      "targetType": "topic",
+      "axisId": "professionalitaet",
+      "incomingBridgeCount": 10,
+      "sourceDetailIds": [
+        "detail-anpassung-selbstbestimmung-v1",
+        "detail-arbeitsbedingungen-v1",
+        "detail-aufsichtspflicht-v1",
+        "detail-berufsrolle-v1",
+        "detail-bildungsleitlinien-v1",
+        "detail-ethik-v1",
+        "detail-macht-verantwortung-v1",
+        "detail-reflexion-v1",
+        "detail-religion-ethik-v1",
+        "detail-sozialpaedagogische-grundlagen-v1"
+      ]
+    },
+    "fallverstehen": {
+      "targetId": "fallverstehen",
+      "targetTitle": "Fallverstehen",
+      "targetType": "topic",
+      "axisId": "beobachtung-fallverstehen",
+      "incomingBridgeCount": 8,
+      "sourceDetailIds": [
+        "detail-beobachtung-v1",
+        "detail-dokumentation-v1",
+        "detail-foerderplanung-v1",
+        "detail-gespraechsanlaesse-v1",
+        "detail-konflikte-v1",
+        "detail-reflexion-v1",
+        "detail-ressourcenorientierung-v1",
+        "detail-sozialpaedagogische-grundlagen-v1"
+      ]
+    },
+    "macht-verantwortung": {
+      "targetId": "macht-verantwortung",
+      "targetTitle": "Macht und Verantwortung",
+      "targetType": "topic",
+      "axisId": "gruppe-institution-politik",
+      "incomingBridgeCount": 8,
+      "sourceDetailIds": [
+        "detail-ethik-v1",
+        "detail-kindeswohl-v1",
+        "detail-konflikte-v1",
+        "detail-partizipation-v1",
+        "detail-politik-v1",
+        "detail-rechte-v1",
+        "detail-reflexion-v1",
+        "detail-regeln-struktur-v1"
+      ]
+    },
+    "partizipation": {
+      "targetId": "partizipation",
+      "targetTitle": "Partizipation",
+      "targetType": "topic",
+      "axisId": "gruppe-institution-politik",
+      "incomingBridgeCount": 8,
+      "sourceDetailIds": [
+        "detail-anpassung-selbstbestimmung-v1",
+        "detail-konflikte-v1",
+        "detail-macht-verantwortung-v1",
+        "detail-naturwissenschaft-v1",
+        "detail-politik-v1",
+        "detail-rechte-v1",
+        "detail-regeln-struktur-v1",
+        "detail-wohngruppe-v1"
+      ]
+    },
+    "bindung-beziehung": {
+      "targetId": "bindung-beziehung",
+      "targetTitle": "Bindung und Beziehung",
+      "targetType": "topic",
+      "axisId": "beziehung-entwicklung",
+      "incomingBridgeCount": 7,
+      "sourceDetailIds": [
+        "detail-anpassung-selbstbestimmung-v1",
+        "detail-dialogische-haltung-v1",
+        "detail-eingewoehnung-v1",
+        "detail-sprache-kommunikation-v1",
+        "detail-uebergaenge-v1",
+        "detail-wohngruppe-v1"
+      ]
+    },
+    "rechte": {
+      "targetId": "rechte",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "targetType": "topic",
+      "axisId": "rahmen-recht-ethik",
+      "incomingBridgeCount": 7,
+      "sourceDetailIds": [
+        "detail-bildungsleitlinien-v1",
+        "detail-ethik-v1",
+        "detail-institutioneller-auftrag-v1",
+        "detail-kindeswohl-v1",
+        "detail-partizipation-v1",
+        "detail-politik-v1",
+        "detail-religion-ethik-v1"
+      ]
+    },
+    "reflexion": {
+      "targetId": "reflexion",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "targetType": "topic",
+      "axisId": "professionalitaet",
+      "incomingBridgeCount": 7,
+      "sourceDetailIds": [
+        "detail-berufsrolle-v1",
+        "detail-ethik-v1",
+        "detail-fallverstehen-v1",
+        "detail-familienperspektive-v1",
+        "detail-macht-verantwortung-v1",
+        "detail-professionelle-haltung-v1",
+        "detail-sozialpaedagogische-grundlagen-v1"
+      ]
+    },
+    "ressourcenorientierung": {
+      "targetId": "ressourcenorientierung",
+      "targetTitle": "Ressourcenorientierung",
+      "targetType": "topic",
+      "axisId": "beobachtung-fallverstehen",
+      "incomingBridgeCount": 7,
+      "sourceDetailIds": [
+        "detail-beobachtung-v1",
+        "detail-dokumentation-v1",
+        "detail-fallverstehen-v1",
+        "detail-foerderplanung-v1",
+        "detail-kunst-aesthetik-v1",
+        "detail-lernarrangements-v1",
+        "detail-selbstwirksamkeit-v1"
+      ]
+    },
+    "selbstwirksamkeit": {
+      "targetId": "selbstwirksamkeit",
+      "targetTitle": "Selbstwirksamkeit",
+      "targetType": "topic",
+      "axisId": "beziehung-entwicklung",
+      "incomingBridgeCount": 7,
+      "sourceDetailIds": [
+        "detail-anpassung-selbstbestimmung-v1",
+        "detail-aufsichtspflicht-v1",
+        "detail-gesundheit-ernaehrung-v1",
+        "detail-mathematik-v1",
+        "detail-naturwissenschaft-v1",
+        "detail-partizipation-v1",
+        "detail-theater-v1"
+      ]
+    },
+    "uebergaenge": {
+      "targetId": "uebergaenge",
+      "targetTitle": "Übergänge",
+      "targetType": "topic",
+      "axisId": "eltern-kooperation",
+      "incomingBridgeCount": 7,
+      "sourceDetailIds": [
+        "detail-arbeitsfelder-v1",
+        "detail-bindung-beziehung-v1",
+        "detail-eingewoehnung-v1",
+        "detail-elternkooperation-v1",
+        "detail-erziehungspartnerschaft-v1",
+        "detail-familienperspektive-v1",
+        "detail-wohngruppe-v1"
+      ]
+    },
+    "institutioneller-auftrag": {
+      "targetId": "institutioneller-auftrag",
+      "targetTitle": "Institutioneller Auftrag",
+      "targetType": "topic",
+      "axisId": "rahmen-recht-ethik",
+      "incomingBridgeCount": 6,
+      "sourceDetailIds": [
+        "detail-arbeitsbedingungen-v1",
+        "detail-arbeitsfelder-v1",
+        "detail-bildungsleitlinien-v1",
+        "detail-politik-v1",
+        "detail-sozialpaedagogische-grundlagen-v1",
+        "detail-wohngruppe-v1"
+      ]
+    },
+    "lernarrangements": {
+      "targetId": "lernarrangements",
+      "targetTitle": "Lernarrangements",
+      "targetType": "topic",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 6,
+      "sourceDetailIds": [
+        "detail-beobachtung-v1",
+        "detail-foerderplanung-v1",
+        "detail-mathematik-v1",
+        "detail-ressourcenorientierung-v1",
+        "detail-selbstwirksamkeit-v1",
+        "detail-sprachbildung-v1"
+      ]
+    },
+    "regeln-struktur": {
+      "targetId": "regeln-struktur",
+      "targetTitle": "Regeln und Struktur",
+      "targetType": "topic",
+      "axisId": "gruppe-institution-politik",
+      "incomingBridgeCount": 6,
+      "sourceDetailIds": [
+        "detail-aufsichtspflicht-v1",
+        "detail-konflikte-v1",
+        "detail-macht-verantwortung-v1",
+        "detail-partizipation-v1",
+        "detail-politik-v1",
+        "detail-wohngruppe-v1"
+      ]
+    },
+    "aufsichtspflicht": {
+      "targetId": "aufsichtspflicht",
+      "targetTitle": "Aufsichtspflicht",
+      "targetType": "topic",
+      "axisId": "beziehung-entwicklung",
+      "incomingBridgeCount": 5,
+      "sourceDetailIds": [
+        "detail-anpassung-selbstbestimmung-v1",
+        "detail-kindeswohl-v1",
+        "detail-professionelle-haltung-v1",
+        "detail-regeln-struktur-v1",
+        "detail-selbstwirksamkeit-v1"
+      ]
+    },
+    "bildungsleitlinien": {
+      "targetId": "bildungsleitlinien",
+      "targetTitle": "Bildungsleitlinien als Rahmen",
+      "targetType": "topic",
+      "axisId": "rahmen-recht-ethik",
+      "incomingBridgeCount": 5,
+      "sourceDetailIds": [
+        "detail-gesundheit-ernaehrung-v1",
+        "detail-institutioneller-auftrag-v1",
+        "detail-mathematik-v1",
+        "detail-naturwissenschaft-v1",
+        "detail-rechte-v1"
+      ]
+    },
+    "dialogische-haltung": {
+      "targetId": "dialogische-haltung",
+      "targetTitle": "Dialogische Haltung",
+      "targetType": "topic",
+      "axisId": "sprache-kommunikation",
+      "incomingBridgeCount": 5,
+      "sourceDetailIds": [
+        "detail-dokumentation-v1",
+        "detail-elterngespraeche-v1",
+        "detail-gespraechsanlaesse-v1",
+        "detail-professionelle-haltung-v1",
+        "detail-sprachbildung-v1"
+      ]
+    },
+    "familienperspektive": {
+      "targetId": "familienperspektive",
+      "targetTitle": "Familienperspektive",
+      "targetType": "topic",
+      "axisId": "eltern-kooperation",
+      "incomingBridgeCount": 5,
+      "sourceDetailIds": [
+        "detail-elterngespraeche-v1",
+        "detail-elternkooperation-v1",
+        "detail-erziehungspartnerschaft-v1",
+        "detail-reflexion-v1",
+        "detail-religion-ethik-v1"
+      ]
+    },
+    "kindeswohl": {
+      "targetId": "kindeswohl",
+      "targetTitle": "Kindeswohl und Schutz",
+      "targetType": "topic",
+      "axisId": "rahmen-recht-ethik",
+      "incomingBridgeCount": 5,
+      "sourceDetailIds": [
+        "detail-aufsichtspflicht-v1",
+        "detail-familienperspektive-v1",
+        "detail-gesundheit-ernaehrung-v1",
+        "detail-macht-verantwortung-v1",
+        "detail-rechte-v1"
+      ]
+    },
+    "sprache-kommunikation": {
+      "targetId": "sprache-kommunikation",
+      "targetTitle": "Sprache und Kommunikation",
+      "targetType": "topic",
+      "axisId": "sprache-kommunikation",
+      "incomingBridgeCount": 5,
+      "sourceDetailIds": [
+        "detail-dialogische-haltung-v1",
+        "detail-konflikte-v1",
+        "detail-musik-rhythmik-v1",
+        "detail-sprachbildung-v1",
+        "detail-theater-v1"
+      ]
+    },
+    "berufsrolle": {
+      "targetId": "berufsrolle",
+      "targetTitle": "Berufsrolle",
+      "targetType": "topic",
+      "axisId": "professionalitaet",
+      "incomingBridgeCount": 4,
+      "sourceDetailIds": [
+        "detail-arbeitsbedingungen-v1",
+        "detail-arbeitsfelder-v1",
+        "detail-professionelle-haltung-v1",
+        "detail-reflexion-v1"
+      ]
+    },
+    "bildungsbereiche": {
+      "targetId": "bildungsbereiche",
+      "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "targetType": "axis",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 4,
+      "sourceDetailIds": [
+        "detail-bildungsleitlinien-v1",
+        "detail-bindung-beziehung-v1",
+        "detail-lernarrangements-v1",
+        "detail-sprache-kommunikation-v1"
+      ]
+    },
+    "dokumentation": {
+      "targetId": "dokumentation",
+      "targetTitle": "Dokumentation",
+      "targetType": "topic",
+      "axisId": "beobachtung-fallverstehen",
+      "incomingBridgeCount": 4,
+      "sourceDetailIds": [
+        "detail-elterngespraeche-v1",
+        "detail-kindeswohl-v1",
+        "detail-kunst-aesthetik-v1",
+        "detail-musik-rhythmik-v1"
+      ]
+    },
+    "foerderplanung": {
+      "targetId": "foerderplanung",
+      "targetTitle": "Förderliche Schlüsse ziehen",
+      "targetType": "topic",
+      "axisId": "beobachtung-fallverstehen",
+      "incomingBridgeCount": 4,
+      "sourceDetailIds": [
+        "detail-dokumentation-v1",
+        "detail-fallverstehen-v1",
+        "detail-ressourcenorientierung-v1",
+        "detail-sozialpaedagogische-grundlagen-v1"
+      ]
+    },
+    "anpassung-selbstbestimmung": {
+      "targetId": "anpassung-selbstbestimmung",
+      "targetTitle": "Anpassung und Selbstbestimmung",
+      "targetType": "topic",
+      "axisId": "beziehung-entwicklung",
+      "incomingBridgeCount": 3,
+      "sourceDetailIds": [
+        "detail-aufsichtspflicht-v1",
+        "detail-regeln-struktur-v1",
+        "detail-selbstwirksamkeit-v1"
+      ]
+    },
+    "arbeitsbedingungen": {
+      "targetId": "arbeitsbedingungen",
+      "targetTitle": "Arbeitsbedingungen",
+      "targetType": "topic",
+      "axisId": "professionalitaet",
+      "incomingBridgeCount": 3,
+      "sourceDetailIds": [
+        "detail-arbeitsfelder-v1",
+        "detail-gesundheit-ernaehrung-v1",
+        "detail-institutioneller-auftrag-v1"
+      ]
+    },
+    "eingewoehnung": {
+      "targetId": "eingewoehnung",
+      "targetTitle": "Eingewöhnung",
+      "targetType": "topic",
+      "axisId": "beziehung-entwicklung",
+      "incomingBridgeCount": 3,
+      "sourceDetailIds": [
+        "detail-bindung-beziehung-v1",
+        "detail-elternkooperation-v1",
+        "detail-uebergaenge-v1"
+      ]
+    },
+    "politik": {
+      "targetId": "politik",
+      "targetTitle": "Politische Bildung",
+      "targetType": "topic",
+      "axisId": "gruppe-institution-politik",
+      "incomingBridgeCount": 3,
+      "sourceDetailIds": [
+        "detail-partizipation-v1",
+        "detail-rechte-v1",
+        "detail-religion-ethik-v1"
+      ]
+    },
+    "sprachbildung": {
+      "targetId": "sprachbildung",
+      "targetTitle": "Sprachbildung im Alltag",
+      "targetType": "topic",
+      "axisId": "sprache-kommunikation",
+      "incomingBridgeCount": 3,
+      "sourceDetailIds": [
+        "detail-dialogische-haltung-v1",
+        "detail-gespraechsanlaesse-v1",
+        "detail-sprache-kommunikation-v1"
+      ]
+    },
+    "arbeitsfelder": {
+      "targetId": "arbeitsfelder",
+      "targetTitle": "Arbeitsfelder",
+      "targetType": "topic",
+      "axisId": "professionalitaet",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-arbeitsbedingungen-v1",
+        "detail-institutioneller-auftrag-v1"
+      ]
+    },
+    "elterngespraeche": {
+      "targetId": "elterngespraeche",
+      "targetTitle": "Elterngespräche",
+      "targetType": "topic",
+      "axisId": "eltern-kooperation",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-erziehungspartnerschaft-v1",
+        "detail-familienperspektive-v1"
+      ]
+    },
+    "erziehungspartnerschaft": {
+      "targetId": "erziehungspartnerschaft",
+      "targetTitle": "Erziehungspartnerschaft",
+      "targetType": "topic",
+      "axisId": "eltern-kooperation",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-elterngespraeche-v1",
+        "detail-familienperspektive-v1"
+      ]
+    },
+    "ethik": {
+      "targetId": "ethik",
+      "targetTitle": "Ethik",
+      "targetType": "topic",
+      "axisId": "rahmen-recht-ethik",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-kindeswohl-v1",
+        "detail-religion-ethik-v1"
+      ]
+    },
+    "gespraechsanlaesse": {
+      "targetId": "gespraechsanlaesse",
+      "targetTitle": "Gesprächsanlässe",
+      "targetType": "topic",
+      "axisId": "sprache-kommunikation",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-dialogische-haltung-v1",
+        "detail-sprachbildung-v1"
+      ]
+    },
+    "gesundheit-ernaehrung": {
+      "targetId": "gesundheit-ernaehrung",
+      "targetTitle": "Gesundheit und Ernährung",
+      "targetType": "topic",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-arbeitsbedingungen-v1",
+        "detail-naturwissenschaft-v1"
+      ]
+    },
+    "gruppe-institution-politik": {
+      "targetId": "gruppe-institution-politik",
+      "targetTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "targetType": "axis",
+      "axisId": "gruppe-institution-politik",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-musik-rhythmik-v1",
+        "detail-theater-v1"
+      ]
+    },
+    "kunst-aesthetik": {
+      "targetId": "kunst-aesthetik",
+      "targetTitle": "Kunst und Ästhetik",
+      "targetType": "topic",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-musik-rhythmik-v1",
+        "detail-theater-v1"
+      ]
+    },
+    "musik-rhythmik": {
+      "targetId": "musik-rhythmik",
+      "targetTitle": "Musik und Rhythmik",
+      "targetType": "topic",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-kunst-aesthetik-v1",
+        "detail-theater-v1"
+      ]
+    },
+    "theater": {
+      "targetId": "theater",
+      "targetTitle": "Theater",
+      "targetType": "topic",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-kunst-aesthetik-v1",
+        "detail-musik-rhythmik-v1"
+      ]
+    },
+    "wohngruppe": {
+      "targetId": "wohngruppe",
+      "targetTitle": "Wohngruppe",
+      "targetType": "topic",
+      "axisId": "gruppe-institution-politik",
+      "incomingBridgeCount": 2,
+      "sourceDetailIds": [
+        "detail-arbeitsfelder-v1",
+        "detail-regeln-struktur-v1"
+      ]
+    },
+    "konflikte": {
+      "targetId": "konflikte",
+      "targetTitle": "Konflikte",
+      "targetType": "topic",
+      "axisId": "sprache-kommunikation",
+      "incomingBridgeCount": 1,
+      "sourceDetailIds": [
+        "detail-gespraechsanlaesse-v1"
+      ]
+    },
+    "mathematik": {
+      "targetId": "mathematik",
+      "targetTitle": "Frühkindliche Mathematik",
+      "targetType": "topic",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 1,
+      "sourceDetailIds": [
+        "detail-naturwissenschaft-v1"
+      ]
+    },
+    "naturwissenschaft": {
+      "targetId": "naturwissenschaft",
+      "targetTitle": "Natur, Umwelt, Technik",
+      "targetType": "topic",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 1,
+      "sourceDetailIds": [
+        "detail-mathematik-v1"
+      ]
+    },
+    "religion-ethik": {
+      "targetId": "religion-ethik",
+      "targetTitle": "Religion, Gesellschaft und Ethik",
+      "targetType": "topic",
+      "axisId": "bildungsbereiche",
+      "incomingBridgeCount": 1,
+      "sourceDetailIds": [
+        "detail-ethik-v1"
+      ]
+    }
+  },
+  "bySource": [
+    {
+      "detailId": "detail-anpassung-selbstbestimmung-v1",
+      "title": "Anpassung und Selbstbestimmung",
+      "topicIds": [
+        "anpassung-selbstbestimmung"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "bindung-beziehung",
+          "targetTitle": "Bindung und Beziehung",
+          "relation": "Sichere Beziehung erleichtert Selbstbestimmung, weil sie Halt bei Eigenständigkeit bietet."
+        },
+        {
+          "targetId": "selbstwirksamkeit",
+          "targetTitle": "Selbstwirksamkeit",
+          "relation": "Selbstbestimmung wird erfahrbar, wenn eigene Entscheidungen Folgen haben dürfen."
+        },
+        {
+          "targetId": "partizipation",
+          "targetTitle": "Partizipation",
+          "relation": "Beteiligung ist die institutionelle Form, Selbstbestimmung im Alltag ernst zu nehmen."
+        },
+        {
+          "targetId": "aufsichtspflicht",
+          "targetTitle": "Aufsichtspflicht",
+          "relation": "Aufsicht bestimmt mit, welche Freiräume tatsächlich möglich sind."
+        },
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Fachkräfte müssen zwischen Schutz, Kontrolle, Beteiligung und Autonomie reflektiert abwägen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-arbeitsbedingungen-v1",
+      "title": "Arbeitsbedingungen",
+      "topicIds": [
+        "arbeitsbedingungen"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Haltung braucht tragfähige Bedingungen, damit sie im Alltag erhalten bleibt."
+        },
+        {
+          "targetId": "berufsrolle",
+          "targetTitle": "Berufsrolle",
+          "relation": "Zur Berufsrolle gehört auch, Belastungsgrenzen und Rahmenbedingungen fachlich zu benennen."
+        },
+        {
+          "targetId": "arbeitsfelder",
+          "targetTitle": "Arbeitsfelder",
+          "relation": "Arbeitsbedingungen unterscheiden sich je nach Arbeitsfeld und institutionellem Auftrag."
+        },
+        {
+          "targetId": "institutioneller-auftrag",
+          "targetTitle": "Institutioneller Auftrag",
+          "relation": "Der Auftrag einer Einrichtung muss mit real verfügbaren Ressourcen vermittelt werden."
+        },
+        {
+          "targetId": "gesundheit-ernaehrung",
+          "targetTitle": "Gesundheit und Ernährung",
+          "relation": "Gesundheit betrifft auch Fachkräfte als Voraussetzung pädagogischer Handlungsfähigkeit."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-arbeitsfelder-v1",
+      "title": "Arbeitsfelder",
+      "topicIds": [
+        "arbeitsfelder"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "berufsrolle",
+          "targetTitle": "Berufsrolle",
+          "relation": "Die Berufsrolle wird im jeweiligen Arbeitsfeld konkret ausgestaltet."
+        },
+        {
+          "targetId": "arbeitsbedingungen",
+          "targetTitle": "Arbeitsbedingungen",
+          "relation": "Jedes Arbeitsfeld bringt eigene Rahmenbedingungen und Belastungen mit."
+        },
+        {
+          "targetId": "institutioneller-auftrag",
+          "targetTitle": "Institutioneller Auftrag",
+          "relation": "Arbeitsfelder unterscheiden sich wesentlich durch ihren institutionellen Auftrag."
+        },
+        {
+          "targetId": "wohngruppe",
+          "targetTitle": "Wohngruppe",
+          "relation": "Wohngruppen markieren ein spezifisches Arbeitsfeld stationärer oder teilstationärer Hilfen."
+        },
+        {
+          "targetId": "uebergaenge",
+          "targetTitle": "Übergänge",
+          "relation": "Übergänge zwischen Einrichtungen machen Arbeitsfeldgrenzen für Kinder und Familien praktisch relevant."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-aufsichtspflicht-v1",
+      "title": "Aufsichtspflicht",
+      "topicIds": [
+        "aufsichtspflicht"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "selbstwirksamkeit",
+          "targetTitle": "Selbstwirksamkeit",
+          "relation": "Aufsicht muss so gestaltet werden, dass Kinder eigene Handlungserfahrungen machen können."
+        },
+        {
+          "targetId": "kindeswohl",
+          "targetTitle": "Kindeswohl und Schutz",
+          "relation": "Schutzpflicht und Kindeswohl setzen Grenzen pädagogischer Freiräume."
+        },
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Professionelle Aufsicht verlangt begründete Abwägung statt Angst- oder Routinenhandeln."
+        },
+        {
+          "targetId": "anpassung-selbstbestimmung",
+          "targetTitle": "Anpassung und Selbstbestimmung",
+          "relation": "Aufsicht beeinflusst, wie viel Selbstbestimmung Kindern praktisch zugestanden wird."
+        },
+        {
+          "targetId": "regeln-struktur",
+          "targetTitle": "Regeln und Struktur",
+          "relation": "Regeln können Aufsicht transparent und nachvollziehbar machen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-beobachtung-v1",
+      "title": "Beobachtung",
+      "topicIds": [
+        "beobachtung"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "bridgeCount": 3,
+      "targets": [
+        {
+          "targetId": "ressourcenorientierung",
+          "targetTitle": "Ressourcenorientierung",
+          "relation": "Ressourcenorientierung bestimmt, worauf Beobachtung achtet."
+        },
+        {
+          "targetId": "fallverstehen",
+          "targetTitle": "Fallverstehen",
+          "relation": "Fallverstehen ordnet Beobachtungen zu pädagogischem Sinn."
+        },
+        {
+          "targetId": "lernarrangements",
+          "targetTitle": "Lernarrangements",
+          "relation": "Beobachtungen können Lernarrangements begründen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-berufsrolle-v1",
+      "title": "Berufsrolle",
+      "topicIds": [
+        "berufsrolle"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "bridgeCount": 2,
+      "targets": [
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Berufsrolle konkretisiert sich über professionelle Haltung."
+        },
+        {
+          "targetId": "reflexion",
+          "targetTitle": "Reflexion und Selbstverständnis",
+          "relation": "Reflexion macht Alltagshandeln begründbar."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-bildungsleitlinien-v1",
+      "title": "Bildungsleitlinien als Rahmen",
+      "topicIds": [
+        "bildungsleitlinien"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "institutioneller-auftrag",
+          "targetTitle": "Institutioneller Auftrag",
+          "relation": "Bildungsleitlinien konkretisieren, wie der Bildungsauftrag pädagogisch verstanden werden kann."
+        },
+        {
+          "targetId": "rechte",
+          "targetTitle": "Kinderrechte und Beteiligung",
+          "relation": "Kinderrechte sind ein Leitmotiv des Rahmens."
+        },
+        {
+          "targetId": "bildungsbereiche",
+          "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+          "relation": "Die Bildungsbereiche erhalten im Rahmen der Leitlinien eine gemeinsame Orientierung."
+        },
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Leitlinien können Haltung begründen, ersetzen aber nicht Selbstreflexion."
+        },
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Elternpartnerschaft wird als Bestandteil des Rahmens sichtbar."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-bindung-beziehung-v1",
+      "title": "Bindung und Beziehung",
+      "topicIds": [
+        "bindung-beziehung"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "bridgeCount": 4,
+      "targets": [
+        {
+          "targetId": "eingewoehnung",
+          "targetTitle": "Eingewöhnung",
+          "relation": "Eingewöhnung prüft konkret, ob Sicherheit in neuer Beziehung entstehen kann."
+        },
+        {
+          "targetId": "uebergaenge",
+          "targetTitle": "Übergänge",
+          "relation": "Übergänge brauchen Beziehungssicherheit und verlässliche Bezugspersonen."
+        },
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Beobachtung zeigt, wie ein Kind Nähe, Distanz, Trost und Exploration nutzt."
+        },
+        {
+          "targetId": "bildungsbereiche",
+          "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+          "relation": "Bildungsprozesse setzen emotionale Sicherheit und Beteiligung voraus."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-dialogische-haltung-v1",
+      "title": "Dialogische Haltung",
+      "topicIds": [
+        "dialogische-haltung"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "sprache-kommunikation",
+          "targetTitle": "Sprache und Kommunikation",
+          "relation": "Dialogische Haltung konkretisiert Sprache als Beziehungs- und Bildungsmedium."
+        },
+        {
+          "targetId": "sprachbildung",
+          "targetTitle": "Sprachbildung im Alltag",
+          "relation": "Sprachbildung wird alltagsintegriert, wenn Erwachsene kindliche Äußerungen erweitern und weiterführen."
+        },
+        {
+          "targetId": "bindung-beziehung",
+          "targetTitle": "Bindung und Beziehung",
+          "relation": "Zugewandte Antwortpraxis stärkt Sicherheit und Beteiligung im Gespräch."
+        },
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Dialog zeigt Interessen, Begriffe, Deutungen und Entwicklungsstände des Kindes."
+        },
+        {
+          "targetId": "gespraechsanlaesse",
+          "targetTitle": "Gesprächsanlässe",
+          "relation": "Gesprächsanlässe werden erst durch dialogische Reaktion pädagogisch fruchtbar."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-dokumentation-v1",
+      "title": "Dokumentation",
+      "topicIds": [
+        "dokumentation"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "bridgeCount": 6,
+      "targets": [
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Dokumentation hält Beobachtungen fest und macht sie später überprüfbar und besprechbar."
+        },
+        {
+          "targetId": "fallverstehen",
+          "targetTitle": "Fallverstehen",
+          "relation": "Erst dokumentierte Situationen ermöglichen es, Deutungen mit Kontext und mehreren Perspektiven abzugleichen."
+        },
+        {
+          "targetId": "foerderplanung",
+          "targetTitle": "Förderliche Schlüsse ziehen",
+          "relation": "Nächste Schritte werden belastbarer, wenn sie aus dokumentierten Lernwegen und Interessen abgeleitet sind."
+        },
+        {
+          "targetId": "ressourcenorientierung",
+          "targetTitle": "Ressourcenorientierung",
+          "relation": "Dokumentation kann Stärken und Fortschritte sichtbar machen, statt nur Abweichungen zu sammeln."
+        },
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Dokumentierte Alltagssituationen schaffen konkrete Gesprächsanlässe mit Eltern."
+        },
+        {
+          "targetId": "dialogische-haltung",
+          "targetTitle": "Dialogische Haltung",
+          "relation": "Wenn Kinder in Dokumentation einbezogen werden, entsteht Austausch über ihre eigene Sicht auf Lernen und Alltag."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-eingewoehnung-v1",
+      "title": "Eingewöhnung",
+      "topicIds": [
+        "eingewoehnung"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "bridgeCount": 3,
+      "targets": [
+        {
+          "targetId": "bindung-beziehung",
+          "targetTitle": "Bindung und Beziehung",
+          "relation": "Eingewöhnung ist ein konkreter Prüfstein für Bindungs- und Beziehungsgestaltung."
+        },
+        {
+          "targetId": "uebergaenge",
+          "targetTitle": "Übergänge",
+          "relation": "Eingewöhnung ist ein Übergang zwischen Familie und Institution."
+        },
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Elternkooperation stabilisiert den Übergangsprozess."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-elterngespraeche-v1",
+      "title": "Elterngespräche",
+      "topicIds": [
+        "elterngespraeche"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Elterngespräche sind eine konkrete Form, in der Kooperation praktisch wird."
+        },
+        {
+          "targetId": "erziehungspartnerschaft",
+          "targetTitle": "Erziehungspartnerschaft",
+          "relation": "Gespräche auf Augenhöhe stützen die gemeinsame Verantwortung für das Kind."
+        },
+        {
+          "targetId": "familienperspektive",
+          "targetTitle": "Familienperspektive",
+          "relation": "Gute Gespräche berücksichtigen Lebenslage, Erwartungen und Ressourcen der Familie."
+        },
+        {
+          "targetId": "dokumentation",
+          "targetTitle": "Dokumentation",
+          "relation": "Dokumentierte Beobachtungen geben Gesprächen konkrete Grundlage statt bloßer Zuschreibung."
+        },
+        {
+          "targetId": "dialogische-haltung",
+          "targetTitle": "Dialogische Haltung",
+          "relation": "Elterngespräche brauchen Zuhören, Nachfragen und ernsthaftes Aufgreifen der Elternsicht."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-elternkooperation-v1",
+      "title": "Elternkooperation",
+      "topicIds": [
+        "elternkooperation"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "bridgeCount": 3,
+      "targets": [
+        {
+          "targetId": "eingewoehnung",
+          "targetTitle": "Eingewöhnung",
+          "relation": "Elternkooperation stabilisiert Eingewöhnung und Übergänge."
+        },
+        {
+          "targetId": "uebergaenge",
+          "targetTitle": "Übergänge",
+          "relation": "Übergänge brauchen abgestimmte Kommunikation."
+        },
+        {
+          "targetId": "familienperspektive",
+          "targetTitle": "Familienperspektive",
+          "relation": "Familienperspektive erweitert das Fallverstehen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-erziehungspartnerschaft-v1",
+      "title": "Erziehungspartnerschaft",
+      "topicIds": [
+        "erziehungspartnerschaft"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "bridgeCount": 4,
+      "targets": [
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Erziehungspartnerschaft konkretisiert Elternkooperation als gemeinsame Verantwortung für das Kind."
+        },
+        {
+          "targetId": "familienperspektive",
+          "targetTitle": "Familienperspektive",
+          "relation": "Die Perspektive der Familie muss verstanden werden, bevor Verhalten der Eltern bewertet wird."
+        },
+        {
+          "targetId": "elterngespraeche",
+          "targetTitle": "Elterngespräche",
+          "relation": "Gespräche sind ein zentrales Werkzeug der Erziehungspartnerschaft."
+        },
+        {
+          "targetId": "uebergaenge",
+          "targetTitle": "Übergänge",
+          "relation": "Übergänge gelingen eher, wenn Eltern und Fachkräfte kooperieren und Vertrauen aufbauen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-ethik-v1",
+      "title": "Ethik",
+      "topicIds": [
+        "ethik"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "religion-ethik",
+          "targetTitle": "Religion, Gesellschaft und Ethik",
+          "relation": "Ethik verbindet sich mit religiösen und weltanschaulichen Bildungsanlässen."
+        },
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Haltung muss ethisch reflektiert werden, wenn Werte wirksam werden."
+        },
+        {
+          "targetId": "rechte",
+          "targetTitle": "Kinderrechte und Beteiligung",
+          "relation": "Rechte setzen ethische und rechtliche Grenzen pädagogischen Handelns."
+        },
+        {
+          "targetId": "macht-verantwortung",
+          "targetTitle": "Macht und Verantwortung",
+          "relation": "Machtfragen sind immer auch ethische Verantwortungsfragen."
+        },
+        {
+          "targetId": "reflexion",
+          "targetTitle": "Reflexion und Selbstverständnis",
+          "relation": "Ethisches Handeln braucht Reflexion eigener Werte und Deutungen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-fallverstehen-v1",
+      "title": "Fallverstehen",
+      "topicIds": [
+        "fallverstehen"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "bridgeCount": 4,
+      "targets": [
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Beobachtung liefert das Material für Fallverstehen."
+        },
+        {
+          "targetId": "ressourcenorientierung",
+          "targetTitle": "Ressourcenorientierung",
+          "relation": "Ressourcenorientierung beeinflusst, welche Deutungen und Anschlussmöglichkeiten sichtbar werden."
+        },
+        {
+          "targetId": "foerderplanung",
+          "targetTitle": "Förderliche Schlüsse ziehen",
+          "relation": "Fallverstehen begründet nächste pädagogische Schritte."
+        },
+        {
+          "targetId": "reflexion",
+          "targetTitle": "Reflexion und Selbstverständnis",
+          "relation": "Reflexion prüft eigene Zuschreibungen und professionelle Reaktionen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-familienperspektive-v1",
+      "title": "Familienperspektive",
+      "topicIds": [
+        "familienperspektive"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "bridgeCount": 6,
+      "targets": [
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Kooperation braucht ein Verständnis der familiären Lage und Sichtweise."
+        },
+        {
+          "targetId": "elterngespraeche",
+          "targetTitle": "Elterngespräche",
+          "relation": "Elterngespräche werden tragfähiger, wenn Erwartungen, Ressourcen und Unsicherheiten der Familie mitgedacht werden."
+        },
+        {
+          "targetId": "erziehungspartnerschaft",
+          "targetTitle": "Erziehungspartnerschaft",
+          "relation": "Partnerschaft entsteht eher, wenn Familie nicht als Störgröße, sondern als Bezugssystem des Kindes gesehen wird."
+        },
+        {
+          "targetId": "uebergaenge",
+          "targetTitle": "Übergänge",
+          "relation": "Übergänge berühren immer auch familiäre Routinen, Sorgen und Erwartungen."
+        },
+        {
+          "targetId": "reflexion",
+          "targetTitle": "Reflexion und Selbstverständnis",
+          "relation": "Familienperspektive verlangt Reflexion eigener Bilder, Vorannahmen und Teamnarrative über Eltern."
+        },
+        {
+          "targetId": "kindeswohl",
+          "targetTitle": "Kindeswohl und Schutz",
+          "relation": "Familienperspektive muss später mit Schutzauftrag und Kindeswohlgrenzen verbunden werden."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-foerderplanung-v1",
+      "title": "Förderliche Schlüsse ziehen",
+      "topicIds": [
+        "foerderplanung"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "bridgeCount": 4,
+      "targets": [
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Beobachtung liefert die Grundlage der Förderplanung."
+        },
+        {
+          "targetId": "fallverstehen",
+          "targetTitle": "Fallverstehen",
+          "relation": "Fallverstehen begründet, warum ein bestimmter nächster Schritt sinnvoll ist."
+        },
+        {
+          "targetId": "ressourcenorientierung",
+          "targetTitle": "Ressourcenorientierung",
+          "relation": "Ressourcenorientierung bestimmt, woran Förderung anschließen soll."
+        },
+        {
+          "targetId": "lernarrangements",
+          "targetTitle": "Lernarrangements",
+          "relation": "Lernarrangements können konkrete Formen geplanter nächster Schritte sein."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-gespraechsanlaesse-v1",
+      "title": "Gesprächsanlässe",
+      "topicIds": [
+        "gespraechsanlaesse"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "dialogische-haltung",
+          "targetTitle": "Dialogische Haltung",
+          "relation": "Gesprächsanlässe brauchen dialogische Reaktion, damit sie nicht zu Abfrage oder Belehrung werden."
+        },
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Gesprächsanlässe entstehen häufig aus beobachteten Interessen, Gefühlen oder Situationen."
+        },
+        {
+          "targetId": "fallverstehen",
+          "targetTitle": "Fallverstehen",
+          "relation": "Wiederkehrende Gesprächsanlässe können Hinweise auf Themen, Belastungen oder soziale Rollen geben."
+        },
+        {
+          "targetId": "sprachbildung",
+          "targetTitle": "Sprachbildung im Alltag",
+          "relation": "Alltagssituationen bieten natürliche Gelegenheiten für Wortschatz, Erzählung, Fragebildung und Bedeutungsverhandlung."
+        },
+        {
+          "targetId": "konflikte",
+          "targetTitle": "Konflikte",
+          "relation": "Konflikte können Gesprächsanlässe sein, wenn Gefühle und Perspektiven sprachlich bearbeitet werden."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-gesundheit-ernaehrung-v1",
+      "title": "Gesundheit und Ernährung",
+      "topicIds": [
+        "gesundheit-ernaehrung"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "kindeswohl",
+          "targetTitle": "Kindeswohl und Schutz",
+          "relation": "Gesundheit ist Teil von Schutz, Wohlbefinden und Entwicklung."
+        },
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Ernährung und Gesundheit berühren familiäre Routinen und Erwartungen."
+        },
+        {
+          "targetId": "selbstwirksamkeit",
+          "targetTitle": "Selbstwirksamkeit",
+          "relation": "Kinder erleben Wirksamkeit, wenn sie Körperbedürfnisse wahrnehmen und Entscheidungen mittragen."
+        },
+        {
+          "targetId": "arbeitsbedingungen",
+          "targetTitle": "Arbeitsbedingungen",
+          "relation": "Gesundheitsförderliche Praxis braucht Personal, Zeit und Routinen."
+        },
+        {
+          "targetId": "bildungsleitlinien",
+          "targetTitle": "Bildungsleitlinien als Rahmen",
+          "relation": "Gesundheit ist als Bildungsbereich im Rahmen verankert."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-institutioneller-auftrag-v1",
+      "title": "Institutioneller Auftrag",
+      "topicIds": [
+        "institutioneller-auftrag"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "bildungsleitlinien",
+          "targetTitle": "Bildungsleitlinien als Rahmen",
+          "relation": "Bildungsleitlinien geben dem institutionellen Bildungsauftrag fachliche Gestalt."
+        },
+        {
+          "targetId": "arbeitsfelder",
+          "targetTitle": "Arbeitsfelder",
+          "relation": "Der Auftrag unterscheidet sich je nach Arbeitsfeld und Einrichtungstyp."
+        },
+        {
+          "targetId": "arbeitsbedingungen",
+          "targetTitle": "Arbeitsbedingungen",
+          "relation": "Auftrag und reale Ressourcen müssen zusammen betrachtet werden."
+        },
+        {
+          "targetId": "rechte",
+          "targetTitle": "Kinderrechte und Beteiligung",
+          "relation": "Kinderrechte begrenzen und orientieren den Auftrag."
+        },
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Zusammenarbeit mit Familien ist Teil des institutionellen Auftrags."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-kindeswohl-v1",
+      "title": "Kindeswohl und Schutz",
+      "topicIds": [
+        "kindeswohl"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "rechte",
+          "targetTitle": "Kinderrechte und Beteiligung",
+          "relation": "Kinderrechte geben Kindeswohl und Schutz einen normativen Rahmen."
+        },
+        {
+          "targetId": "aufsichtspflicht",
+          "targetTitle": "Aufsichtspflicht",
+          "relation": "Aufsichtspflicht konkretisiert Schutz im pädagogischen Alltag."
+        },
+        {
+          "targetId": "macht-verantwortung",
+          "targetTitle": "Macht und Verantwortung",
+          "relation": "Schutzentscheidungen enthalten Macht und müssen verantwortlich begründet werden."
+        },
+        {
+          "targetId": "dokumentation",
+          "targetTitle": "Dokumentation",
+          "relation": "Kindeswohlbezogene Beobachtungen brauchen nachvollziehbare Dokumentation."
+        },
+        {
+          "targetId": "ethik",
+          "targetTitle": "Ethik",
+          "relation": "Schutzentscheidungen enthalten ethische Abwägungen zwischen Freiheit, Risiko und Verantwortung."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-konflikte-v1",
+      "title": "Konflikte",
+      "topicIds": [
+        "konflikte"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "sprache-kommunikation",
+          "targetTitle": "Sprache und Kommunikation",
+          "relation": "Konfliktbearbeitung braucht Sprache, damit Gefühle, Interessen und Lösungen aushandelbar werden."
+        },
+        {
+          "targetId": "fallverstehen",
+          "targetTitle": "Fallverstehen",
+          "relation": "Wiederkehrende Konflikte können Hinweise auf Bedürfnisse, Rollen oder institutionelle Spannungen geben."
+        },
+        {
+          "targetId": "partizipation",
+          "targetTitle": "Partizipation",
+          "relation": "Faire Konfliktlösung verlangt Beteiligung der Kinder, nicht nur erwachsene Entscheidung."
+        },
+        {
+          "targetId": "regeln-struktur",
+          "targetTitle": "Regeln und Struktur",
+          "relation": "Regeln geben Orientierung, müssen aber in konkreten Situationen pädagogisch ausgelegt werden."
+        },
+        {
+          "targetId": "macht-verantwortung",
+          "targetTitle": "Macht und Verantwortung",
+          "relation": "Fachkräfte entscheiden über Schutz, Gesprächsraum und Deutung; diese Macht muss reflektiert werden."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-kunst-aesthetik-v1",
+      "title": "Kunst und Ästhetik",
+      "topicIds": [
+        "kunst-aesthetik"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "dokumentation",
+          "targetTitle": "Dokumentation",
+          "relation": "Ästhetische Prozesse lassen sich über Bilder, Werke und Beobachtungen sichtbar machen."
+        },
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Wahrnehmendes Beobachten hilft, den Ausdruck des Kindes zu verstehen."
+        },
+        {
+          "targetId": "musik-rhythmik",
+          "targetTitle": "Musik und Rhythmik",
+          "relation": "Musik und Kunst teilen Wahrnehmung, Ausdruck und Gestaltung."
+        },
+        {
+          "targetId": "theater",
+          "targetTitle": "Theater",
+          "relation": "Theater erweitert ästhetische Bildung um Rolle, Körper und Szene."
+        },
+        {
+          "targetId": "ressourcenorientierung",
+          "targetTitle": "Ressourcenorientierung",
+          "relation": "Ästhetik macht individuelle Zugänge und Stärken sichtbar."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-lernarrangements-v1",
+      "title": "Lernarrangements",
+      "topicIds": [
+        "lernarrangements"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 3,
+      "targets": [
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Beobachtung liefert Hinweise auf Bildungsthemen und Interessen."
+        },
+        {
+          "targetId": "ressourcenorientierung",
+          "targetTitle": "Ressourcenorientierung",
+          "relation": "Ressourcenorientierung bestimmt die Anschlussfähigkeit des Arrangements."
+        },
+        {
+          "targetId": "bildungsbereiche",
+          "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+          "relation": "Bildungsbereiche geben mögliche fachliche Rahmungen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-macht-verantwortung-v1",
+      "title": "Macht und Verantwortung",
+      "topicIds": [
+        "macht-verantwortung"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Haltung zeigt sich daran, wie Fachkräfte mit eigener Macht umgehen."
+        },
+        {
+          "targetId": "partizipation",
+          "targetTitle": "Partizipation",
+          "relation": "Partizipation ist ein Mittel, Macht zu teilen und Verantwortung lernbar zu machen."
+        },
+        {
+          "targetId": "kindeswohl",
+          "targetTitle": "Kindeswohl und Schutz",
+          "relation": "Schutzverantwortung kann Eingriffe legitimieren, muss aber fachlich begründet bleiben."
+        },
+        {
+          "targetId": "reflexion",
+          "targetTitle": "Reflexion und Selbstverständnis",
+          "relation": "Macht muss reflektiert werden, weil sie sonst leicht als Normalität unsichtbar bleibt."
+        },
+        {
+          "targetId": "regeln-struktur",
+          "targetTitle": "Regeln und Struktur",
+          "relation": "Regeln materialisieren Macht; ihre Begründung und Durchsetzung sind daher zentral."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-mathematik-v1",
+      "title": "Frühkindliche Mathematik",
+      "topicIds": [
+        "mathematik"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "naturwissenschaft",
+          "targetTitle": "Natur, Umwelt, Technik",
+          "relation": "Messen, Vergleichen und Daten verbinden Mathematik mit Natur/Technik."
+        },
+        {
+          "targetId": "lernarrangements",
+          "targetTitle": "Lernarrangements",
+          "relation": "Material und Raumgestaltung eröffnen mathematische Erfahrung."
+        },
+        {
+          "targetId": "selbstwirksamkeit",
+          "targetTitle": "Selbstwirksamkeit",
+          "relation": "Kinder erleben, dass Ordnen und Vergleichen Probleme lösbar macht."
+        },
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Beobachtung zeigt, welche mathematischen Strategien Kinder bereits nutzen."
+        },
+        {
+          "targetId": "bildungsleitlinien",
+          "targetTitle": "Bildungsleitlinien als Rahmen",
+          "relation": "Mathematik ist als Bildungsbereich rahmend verankert."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-musik-rhythmik-v1",
+      "title": "Musik und Rhythmik",
+      "topicIds": [
+        "musik-rhythmik"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "kunst-aesthetik",
+          "targetTitle": "Kunst und Ästhetik",
+          "relation": "Musik ist Teil ästhetischer Bildung."
+        },
+        {
+          "targetId": "theater",
+          "targetTitle": "Theater",
+          "relation": "Musik, Rhythmus und Szene greifen im Theaterspiel ineinander."
+        },
+        {
+          "targetId": "sprache-kommunikation",
+          "targetTitle": "Sprache und Kommunikation",
+          "relation": "Lieder, Rhythmus und Stimme unterstützen sprachliche und kommunikative Erfahrung."
+        },
+        {
+          "targetId": "gruppe-institution-politik",
+          "targetTitle": "Gruppe, Institution, Wohngruppe und Politik",
+          "relation": "Gemeinsames Musizieren erzeugt Gruppe, Rollen und Verantwortung."
+        },
+        {
+          "targetId": "dokumentation",
+          "targetTitle": "Dokumentation",
+          "relation": "Musikalisches Verhalten kann beobachtet und für Anschlussimpulse genutzt werden."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-naturwissenschaft-v1",
+      "title": "Natur, Umwelt und Technik",
+      "topicIds": [
+        "naturwissenschaft"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "mathematik",
+          "targetTitle": "Frühkindliche Mathematik",
+          "relation": "Messen, Sortieren und Vergleichen verbinden Naturerfahrung mit Mathematik."
+        },
+        {
+          "targetId": "gesundheit-ernaehrung",
+          "targetTitle": "Gesundheit und Ernährung",
+          "relation": "Körper, Natur und Wohlbefinden sind in Alltagserfahrungen verbunden."
+        },
+        {
+          "targetId": "partizipation",
+          "targetTitle": "Partizipation",
+          "relation": "Nachhaltigkeit wird bedeutsam, wenn Kinder Handlungsmöglichkeiten erleben."
+        },
+        {
+          "targetId": "selbstwirksamkeit",
+          "targetTitle": "Selbstwirksamkeit",
+          "relation": "Kinder erleben Wirksamkeit, wenn sie Natur und Technik handelnd verstehen."
+        },
+        {
+          "targetId": "bildungsleitlinien",
+          "targetTitle": "Bildungsleitlinien als Rahmen",
+          "relation": "Natur/Umwelt/Technik ist als Bildungsbereich rahmend verankert."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-partizipation-v1",
+      "title": "Partizipation",
+      "topicIds": [
+        "partizipation"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "rechte",
+          "targetTitle": "Kinderrechte und Beteiligung",
+          "relation": "Partizipation ist eng mit Kinderrechten und Beteiligungsrechten verbunden."
+        },
+        {
+          "targetId": "selbstwirksamkeit",
+          "targetTitle": "Selbstwirksamkeit",
+          "relation": "Mitentscheidung lässt Kinder erleben, dass ihr Handeln und Sprechen Wirkung hat."
+        },
+        {
+          "targetId": "politik",
+          "targetTitle": "Politische Bildung",
+          "relation": "Partizipation ist eine konkrete Praxis demokratischer und politischer Bildung."
+        },
+        {
+          "targetId": "regeln-struktur",
+          "targetTitle": "Regeln und Struktur",
+          "relation": "Regeln werden zu Lernfeldern, wenn sie gemeinsam ausgehandelt oder geprüft werden."
+        },
+        {
+          "targetId": "macht-verantwortung",
+          "targetTitle": "Macht und Verantwortung",
+          "relation": "Partizipation verändert Machtverhältnisse und verlangt verantwortliche Begrenzung von Fachkraftmacht."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-politik-v1",
+      "title": "Politische Bildung",
+      "topicIds": [
+        "politik"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "partizipation",
+          "targetTitle": "Partizipation",
+          "relation": "Partizipation ist der zentrale Praxisort politischer Bildung."
+        },
+        {
+          "targetId": "rechte",
+          "targetTitle": "Kinderrechte und Beteiligung",
+          "relation": "Kinderrechte geben politischer Bildung einen normativen Rahmen."
+        },
+        {
+          "targetId": "macht-verantwortung",
+          "targetTitle": "Macht und Verantwortung",
+          "relation": "Politische Bildung macht Machtverhältnisse und Verantwortung besprechbar."
+        },
+        {
+          "targetId": "regeln-struktur",
+          "targetTitle": "Regeln und Struktur",
+          "relation": "Regeln sind politische Alltagsobjekte, wenn sie gemeinsam begründet und verändert werden können."
+        },
+        {
+          "targetId": "institutioneller-auftrag",
+          "targetTitle": "Institutioneller Auftrag",
+          "relation": "Einrichtungen müssen klären, wie Demokratiebildung in ihrem Auftrag praktisch wird."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-professionelle-haltung-v1",
+      "title": "Professionelle Haltung",
+      "topicIds": [
+        "professionelle-haltung"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "berufsrolle",
+          "targetTitle": "Berufsrolle",
+          "relation": "Die Berufsrolle braucht Haltung, damit Aufgaben fachlich und nicht nur persönlich ausgefüllt werden."
+        },
+        {
+          "targetId": "reflexion",
+          "targetTitle": "Reflexion und Selbstverständnis",
+          "relation": "Haltung wird professionell, wenn sie regelmäßig reflektiert und korrigierbar bleibt."
+        },
+        {
+          "targetId": "dialogische-haltung",
+          "targetTitle": "Dialogische Haltung",
+          "relation": "Dialogische Haltung ist eine konkrete Ausprägung professioneller Haltung in Kommunikation."
+        },
+        {
+          "targetId": "aufsichtspflicht",
+          "targetTitle": "Aufsichtspflicht",
+          "relation": "Auch Schutz und Grenzen brauchen eine begründete professionelle Haltung."
+        },
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Eltern erleben Professionalität wesentlich über Haltung, Sprache und Verlässlichkeit."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-rechte-v1",
+      "title": "Kinderrechte und Beteiligung",
+      "topicIds": [
+        "rechte"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "partizipation",
+          "targetTitle": "Partizipation",
+          "relation": "Partizipation ist die Alltagspraxis von Beteiligungsrechten."
+        },
+        {
+          "targetId": "kindeswohl",
+          "targetTitle": "Kindeswohl und Schutz",
+          "relation": "Der Vorrang des Kindeswohls ist ein zentrales Kinderrechtsprinzip."
+        },
+        {
+          "targetId": "politik",
+          "targetTitle": "Politische Bildung",
+          "relation": "Kinderrechte und Beteiligung sind Grundlage demokratischer Bildung."
+        },
+        {
+          "targetId": "macht-verantwortung",
+          "targetTitle": "Macht und Verantwortung",
+          "relation": "Rechte begrenzen Fachkraftmacht und machen Verantwortung überprüfbar."
+        },
+        {
+          "targetId": "bildungsleitlinien",
+          "targetTitle": "Bildungsleitlinien als Rahmen",
+          "relation": "Kinderrechte sind ein Leitmotiv der Bildungsleitlinien."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-reflexion-v1",
+      "title": "Reflexion und Selbstverständnis",
+      "topicIds": [
+        "reflexion"
+      ],
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Haltung braucht Reflexion, damit sie nicht zur ungeprüften persönlichen Überzeugung wird."
+        },
+        {
+          "targetId": "berufsrolle",
+          "targetTitle": "Berufsrolle",
+          "relation": "Reflexion klärt, was aus der Berufsrolle heraus geboten ist."
+        },
+        {
+          "targetId": "fallverstehen",
+          "targetTitle": "Fallverstehen",
+          "relation": "Fallverstehen verlangt Reflexion eigener Deutungen und Hypothesen."
+        },
+        {
+          "targetId": "familienperspektive",
+          "targetTitle": "Familienperspektive",
+          "relation": "Reflexion schützt vor festen Bildern über Eltern und Familien."
+        },
+        {
+          "targetId": "macht-verantwortung",
+          "targetTitle": "Macht und Verantwortung",
+          "relation": "Macht in pädagogischen Beziehungen muss reflektiert werden, um verantwortlich eingesetzt zu werden."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-regeln-struktur-v1",
+      "title": "Regeln und Struktur",
+      "topicIds": [
+        "regeln-struktur"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "wohngruppe",
+          "targetTitle": "Wohngruppe",
+          "relation": "In Wohngruppen strukturieren Regeln den gemeinsamen Lebensalltag."
+        },
+        {
+          "targetId": "partizipation",
+          "targetTitle": "Partizipation",
+          "relation": "Regeln werden tragfähiger, wenn Betroffene an ihrer Aushandlung beteiligt werden."
+        },
+        {
+          "targetId": "aufsichtspflicht",
+          "targetTitle": "Aufsichtspflicht",
+          "relation": "Ein Teil von Regeln dient Schutz und Aufsicht, darf aber Freiräume nicht unnötig ersticken."
+        },
+        {
+          "targetId": "anpassung-selbstbestimmung",
+          "targetTitle": "Anpassung und Selbstbestimmung",
+          "relation": "Regeln markieren die Spannung zwischen gemeinsamer Ordnung und individueller Selbstbestimmung."
+        },
+        {
+          "targetId": "macht-verantwortung",
+          "targetTitle": "Macht und Verantwortung",
+          "relation": "Wer Regeln setzt und durchsetzt, übt Macht aus und trägt Verantwortung."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-religion-ethik-v1",
+      "title": "Religion, Gesellschaft und Ethik",
+      "topicIds": [
+        "religion-ethik"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "ethik",
+          "targetTitle": "Ethik",
+          "relation": "Der Bildungsbereich konkretisiert ethische Reflexion in Alltagsthemen."
+        },
+        {
+          "targetId": "familienperspektive",
+          "targetTitle": "Familienperspektive",
+          "relation": "Religion und Werte sind oft Teil familiärer Lebenswelten."
+        },
+        {
+          "targetId": "rechte",
+          "targetTitle": "Kinderrechte und Beteiligung",
+          "relation": "Kinderrechte rahmen Respekt, Beteiligung und Schutz."
+        },
+        {
+          "targetId": "politik",
+          "targetTitle": "Politische Bildung",
+          "relation": "Gesellschaftliche Fragen verbinden Religion/Ethik mit demokratischer Bildung."
+        },
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Fachkräfte müssen eigene Werte professionell reflektieren."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-ressourcenorientierung-v1",
+      "title": "Ressourcenorientierung",
+      "topicIds": [
+        "ressourcenorientierung"
+      ],
+      "axisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "bridgeCount": 4,
+      "targets": [
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Beobachtung liefert die konkreten Hinweise auf Ressourcen."
+        },
+        {
+          "targetId": "fallverstehen",
+          "targetTitle": "Fallverstehen",
+          "relation": "Fallverstehen ordnet Ressourcen, Bedürfnisse und Kontexte zusammen."
+        },
+        {
+          "targetId": "foerderplanung",
+          "targetTitle": "Förderliche Schlüsse ziehen",
+          "relation": "Förderplanung soll an vorhandenen Ressourcen anschließen."
+        },
+        {
+          "targetId": "lernarrangements",
+          "targetTitle": "Lernarrangements",
+          "relation": "Lernarrangements werden passender, wenn sie Interessen und Stärken aufnehmen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-selbstwirksamkeit-v1",
+      "title": "Selbstwirksamkeit",
+      "topicIds": [
+        "selbstwirksamkeit"
+      ],
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "aufsichtspflicht",
+          "targetTitle": "Aufsichtspflicht",
+          "relation": "Aufsicht muss Freiräume ermöglichen, in denen Selbstwirksamkeit erfahrbar wird."
+        },
+        {
+          "targetId": "ressourcenorientierung",
+          "targetTitle": "Ressourcenorientierung",
+          "relation": "Selbstwirksamkeit baut auf sichtbaren Stärken und Handlungsmöglichkeiten des Kindes auf."
+        },
+        {
+          "targetId": "lernarrangements",
+          "targetTitle": "Lernarrangements",
+          "relation": "Räume und Angebote können so gestaltet werden, dass Kinder eigenständig handeln und Folgen erleben."
+        },
+        {
+          "targetId": "anpassung-selbstbestimmung",
+          "targetTitle": "Anpassung und Selbstbestimmung",
+          "relation": "Selbstwirksamkeit verlangt eigene Wahl- und Entscheidungsspielräume."
+        },
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Beobachtung zeigt, wo Kinder Initiative, Ausdauer und Zutrauen entwickeln."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-sozialpaedagogische-grundlagen-v1",
+      "title": "Sozialpädagogische Grundlagen",
+      "topicIds": [
+        "sozialpaedagogische-grundlagen"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "fallverstehen",
+          "targetTitle": "Fallverstehen",
+          "relation": "Sozialpädagogische Grundlagen stützen die Deutung konkreter Situationen."
+        },
+        {
+          "targetId": "foerderplanung",
+          "targetTitle": "Förderliche Schlüsse ziehen",
+          "relation": "Ziele und Planung entstehen aus fachlich begründetem Verstehen."
+        },
+        {
+          "targetId": "professionelle-haltung",
+          "targetTitle": "Professionelle Haltung",
+          "relation": "Handeln braucht reflektierte Haltung und Fachbegründung."
+        },
+        {
+          "targetId": "institutioneller-auftrag",
+          "targetTitle": "Institutioneller Auftrag",
+          "relation": "Sozialpädagogisches Handeln findet innerhalb eines Auftrags statt."
+        },
+        {
+          "targetId": "reflexion",
+          "targetTitle": "Reflexion und Selbstverständnis",
+          "relation": "Reflexion prüft Annahmen, Ziele und Wirkungen."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-sprachbildung-v1",
+      "title": "Sprachbildung im Alltag",
+      "topicIds": [
+        "sprachbildung"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "bridgeCount": 6,
+      "targets": [
+        {
+          "targetId": "dialogische-haltung",
+          "targetTitle": "Dialogische Haltung",
+          "relation": "Sprachbildung gelingt alltagsintegriert, wenn Fachkräfte kindliche Beiträge dialogisch aufnehmen und erweitern."
+        },
+        {
+          "targetId": "gespraechsanlaesse",
+          "targetTitle": "Gesprächsanlässe",
+          "relation": "Gesprächsanlässe sind der konkrete Ort, an dem Alltag zur Sprachbildung wird."
+        },
+        {
+          "targetId": "sprache-kommunikation",
+          "targetTitle": "Sprache und Kommunikation",
+          "relation": "Sprachbildung operationalisiert Sprache und Kommunikation als Bildungsmedium."
+        },
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Sprachliche Äußerungen zeigen Interessen, Begriffe, Deutungen und Entwicklungsstände."
+        },
+        {
+          "targetId": "lernarrangements",
+          "targetTitle": "Lernarrangements",
+          "relation": "Sprachreiche Räume, Bücher, Beschriftungen und Erzählanlässe machen Sprachbildung gestaltbar."
+        },
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Familiäre Sprach- und Literacy-Erfahrungen können in der Zusammenarbeit mit Eltern wertschätzend aufgegriffen werden."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-sprache-kommunikation-v1",
+      "title": "Sprache und Kommunikation",
+      "topicIds": [
+        "sprache-kommunikation"
+      ],
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "bridgeCount": 4,
+      "targets": [
+        {
+          "targetId": "bindung-beziehung",
+          "targetTitle": "Bindung und Beziehung",
+          "relation": "Dialogische Kommunikation ist eine Form von Beziehungsgestaltung."
+        },
+        {
+          "targetId": "bildungsbereiche",
+          "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+          "relation": "Sprache erschließt Themen, Bedeutungen und gemeinsames Denken."
+        },
+        {
+          "targetId": "beobachtung",
+          "targetTitle": "Beobachtung",
+          "relation": "Sprachliche Beiträge zeigen Interessen, Deutungen und Entwicklungsstände."
+        },
+        {
+          "targetId": "sprachbildung",
+          "targetTitle": "Sprachbildung im Alltag",
+          "relation": "Literacy verbindet Sprache, Schrift, Bilder und Erzählkultur."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-theater-v1",
+      "title": "Theater",
+      "topicIds": [
+        "theater"
+      ],
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "kunst-aesthetik",
+          "targetTitle": "Kunst und Ästhetik",
+          "relation": "Theater ist Teil ästhetischer Bildung."
+        },
+        {
+          "targetId": "musik-rhythmik",
+          "targetTitle": "Musik und Rhythmik",
+          "relation": "Musik, Rhythmus und Bewegung können Szenen tragen."
+        },
+        {
+          "targetId": "sprache-kommunikation",
+          "targetTitle": "Sprache und Kommunikation",
+          "relation": "Theater nutzt Sprache, Stimme, Erzählung und nonverbale Kommunikation."
+        },
+        {
+          "targetId": "selbstwirksamkeit",
+          "targetTitle": "Selbstwirksamkeit",
+          "relation": "Kinder erleben Wirkung, wenn ihre Rollen und Szenen Resonanz erzeugen."
+        },
+        {
+          "targetId": "gruppe-institution-politik",
+          "targetTitle": "Gruppe, Institution, Wohngruppe und Politik",
+          "relation": "Theater macht Rollen, Konflikte und Gruppenbeziehungen spielerisch bearbeitbar."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-uebergaenge-v1",
+      "title": "Übergänge",
+      "topicIds": [
+        "uebergaenge"
+      ],
+      "axisIds": [
+        "eltern-kooperation"
+      ],
+      "bridgeCount": 4,
+      "targets": [
+        {
+          "targetId": "eingewoehnung",
+          "targetTitle": "Eingewöhnung",
+          "relation": "Eingewöhnung ist ein zentraler Übergang in die Einrichtung."
+        },
+        {
+          "targetId": "bindung-beziehung",
+          "targetTitle": "Bindung und Beziehung",
+          "relation": "Beziehungssicherheit trägt Übergänge."
+        },
+        {
+          "targetId": "elternkooperation",
+          "targetTitle": "Elternkooperation",
+          "relation": "Elternkooperation stabilisiert Übergänge zwischen Familie und Einrichtung."
+        },
+        {
+          "targetId": "bindung-beziehung",
+          "targetTitle": "Bindung und Beziehung",
+          "relation": "Sicherheit ist die zentrale Bedingung für Orientierung und Exploration im Übergang."
+        }
+      ]
+    },
+    {
+      "detailId": "detail-wohngruppe-v1",
+      "title": "Wohngruppe",
+      "topicIds": [
+        "wohngruppe"
+      ],
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "bridgeCount": 5,
+      "targets": [
+        {
+          "targetId": "regeln-struktur",
+          "targetTitle": "Regeln und Struktur",
+          "relation": "Wohngruppen brauchen Regeln und Routinen, damit Zusammenleben verlässlich wird."
+        },
+        {
+          "targetId": "partizipation",
+          "targetTitle": "Partizipation",
+          "relation": "Mitbestimmung entscheidet darüber, ob die Wohngruppe nur verwaltet oder als Lebensraum mitgestaltet wird."
+        },
+        {
+          "targetId": "bindung-beziehung",
+          "targetTitle": "Bindung und Beziehung",
+          "relation": "Bezugsbetreuung und verlässliche Fachkräfte können Beziehungssicherheit ermöglichen."
+        },
+        {
+          "targetId": "uebergaenge",
+          "targetTitle": "Übergänge",
+          "relation": "Aufnahme, Rückkehr, Verselbstständigung und Auszug sind zentrale Übergänge der Wohngruppe."
+        },
+        {
+          "targetId": "institutioneller-auftrag",
+          "targetTitle": "Institutioneller Auftrag",
+          "relation": "Die Wohngruppe ist immer auch durch gesetzlichen und institutionellen Hilfeauftrag geprägt."
+        }
+      ]
+    }
+  ],
+  "bridges": [
+    {
+      "id": "detail-anpassung-selbstbestimmung-v1--01--bindung-beziehung",
+      "sourceDetailId": "detail-anpassung-selbstbestimmung-v1",
+      "sourceTitle": "Anpassung und Selbstbestimmung",
+      "sourceTopicIds": [
+        "anpassung-selbstbestimmung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "bindung-beziehung",
+      "targetType": "topic",
+      "targetTitle": "Bindung und Beziehung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Sichere Beziehung erleichtert Selbstbestimmung, weil sie Halt bei Eigenständigkeit bietet."
+    },
+    {
+      "id": "detail-anpassung-selbstbestimmung-v1--02--selbstwirksamkeit",
+      "sourceDetailId": "detail-anpassung-selbstbestimmung-v1",
+      "sourceTitle": "Anpassung und Selbstbestimmung",
+      "sourceTopicIds": [
+        "anpassung-selbstbestimmung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "selbstwirksamkeit",
+      "targetType": "topic",
+      "targetTitle": "Selbstwirksamkeit",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Selbstbestimmung wird erfahrbar, wenn eigene Entscheidungen Folgen haben dürfen."
+    },
+    {
+      "id": "detail-anpassung-selbstbestimmung-v1--03--partizipation",
+      "sourceDetailId": "detail-anpassung-selbstbestimmung-v1",
+      "sourceTitle": "Anpassung und Selbstbestimmung",
+      "sourceTopicIds": [
+        "anpassung-selbstbestimmung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "partizipation",
+      "targetType": "topic",
+      "targetTitle": "Partizipation",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Beteiligung ist die institutionelle Form, Selbstbestimmung im Alltag ernst zu nehmen."
+    },
+    {
+      "id": "detail-anpassung-selbstbestimmung-v1--04--aufsichtspflicht",
+      "sourceDetailId": "detail-anpassung-selbstbestimmung-v1",
+      "sourceTitle": "Anpassung und Selbstbestimmung",
+      "sourceTopicIds": [
+        "anpassung-selbstbestimmung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "aufsichtspflicht",
+      "targetType": "topic",
+      "targetTitle": "Aufsichtspflicht",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Aufsicht bestimmt mit, welche Freiräume tatsächlich möglich sind."
+    },
+    {
+      "id": "detail-anpassung-selbstbestimmung-v1--05--professionelle-haltung",
+      "sourceDetailId": "detail-anpassung-selbstbestimmung-v1",
+      "sourceTitle": "Anpassung und Selbstbestimmung",
+      "sourceTopicIds": [
+        "anpassung-selbstbestimmung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Fachkräfte müssen zwischen Schutz, Kontrolle, Beteiligung und Autonomie reflektiert abwägen."
+    },
+    {
+      "id": "detail-arbeitsbedingungen-v1--01--professionelle-haltung",
+      "sourceDetailId": "detail-arbeitsbedingungen-v1",
+      "sourceTitle": "Arbeitsbedingungen",
+      "sourceTopicIds": [
+        "arbeitsbedingungen"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Haltung braucht tragfähige Bedingungen, damit sie im Alltag erhalten bleibt."
+    },
+    {
+      "id": "detail-arbeitsbedingungen-v1--02--berufsrolle",
+      "sourceDetailId": "detail-arbeitsbedingungen-v1",
+      "sourceTitle": "Arbeitsbedingungen",
+      "sourceTopicIds": [
+        "arbeitsbedingungen"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "berufsrolle",
+      "targetType": "topic",
+      "targetTitle": "Berufsrolle",
+      "targetAxisId": "professionalitaet",
+      "relation": "Zur Berufsrolle gehört auch, Belastungsgrenzen und Rahmenbedingungen fachlich zu benennen."
+    },
+    {
+      "id": "detail-arbeitsbedingungen-v1--03--arbeitsfelder",
+      "sourceDetailId": "detail-arbeitsbedingungen-v1",
+      "sourceTitle": "Arbeitsbedingungen",
+      "sourceTopicIds": [
+        "arbeitsbedingungen"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "arbeitsfelder",
+      "targetType": "topic",
+      "targetTitle": "Arbeitsfelder",
+      "targetAxisId": "professionalitaet",
+      "relation": "Arbeitsbedingungen unterscheiden sich je nach Arbeitsfeld und institutionellem Auftrag."
+    },
+    {
+      "id": "detail-arbeitsbedingungen-v1--04--institutioneller-auftrag",
+      "sourceDetailId": "detail-arbeitsbedingungen-v1",
+      "sourceTitle": "Arbeitsbedingungen",
+      "sourceTopicIds": [
+        "arbeitsbedingungen"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "institutioneller-auftrag",
+      "targetType": "topic",
+      "targetTitle": "Institutioneller Auftrag",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Der Auftrag einer Einrichtung muss mit real verfügbaren Ressourcen vermittelt werden."
+    },
+    {
+      "id": "detail-arbeitsbedingungen-v1--05--gesundheit-ernaehrung",
+      "sourceDetailId": "detail-arbeitsbedingungen-v1",
+      "sourceTitle": "Arbeitsbedingungen",
+      "sourceTopicIds": [
+        "arbeitsbedingungen"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "gesundheit-ernaehrung",
+      "targetType": "topic",
+      "targetTitle": "Gesundheit und Ernährung",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Gesundheit betrifft auch Fachkräfte als Voraussetzung pädagogischer Handlungsfähigkeit."
+    },
+    {
+      "id": "detail-arbeitsfelder-v1--01--berufsrolle",
+      "sourceDetailId": "detail-arbeitsfelder-v1",
+      "sourceTitle": "Arbeitsfelder",
+      "sourceTopicIds": [
+        "arbeitsfelder"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "berufsrolle",
+      "targetType": "topic",
+      "targetTitle": "Berufsrolle",
+      "targetAxisId": "professionalitaet",
+      "relation": "Die Berufsrolle wird im jeweiligen Arbeitsfeld konkret ausgestaltet."
+    },
+    {
+      "id": "detail-arbeitsfelder-v1--02--arbeitsbedingungen",
+      "sourceDetailId": "detail-arbeitsfelder-v1",
+      "sourceTitle": "Arbeitsfelder",
+      "sourceTopicIds": [
+        "arbeitsfelder"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "arbeitsbedingungen",
+      "targetType": "topic",
+      "targetTitle": "Arbeitsbedingungen",
+      "targetAxisId": "professionalitaet",
+      "relation": "Jedes Arbeitsfeld bringt eigene Rahmenbedingungen und Belastungen mit."
+    },
+    {
+      "id": "detail-arbeitsfelder-v1--03--institutioneller-auftrag",
+      "sourceDetailId": "detail-arbeitsfelder-v1",
+      "sourceTitle": "Arbeitsfelder",
+      "sourceTopicIds": [
+        "arbeitsfelder"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "institutioneller-auftrag",
+      "targetType": "topic",
+      "targetTitle": "Institutioneller Auftrag",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Arbeitsfelder unterscheiden sich wesentlich durch ihren institutionellen Auftrag."
+    },
+    {
+      "id": "detail-arbeitsfelder-v1--04--wohngruppe",
+      "sourceDetailId": "detail-arbeitsfelder-v1",
+      "sourceTitle": "Arbeitsfelder",
+      "sourceTopicIds": [
+        "arbeitsfelder"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "wohngruppe",
+      "targetType": "topic",
+      "targetTitle": "Wohngruppe",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Wohngruppen markieren ein spezifisches Arbeitsfeld stationärer oder teilstationärer Hilfen."
+    },
+    {
+      "id": "detail-arbeitsfelder-v1--05--uebergaenge",
+      "sourceDetailId": "detail-arbeitsfelder-v1",
+      "sourceTitle": "Arbeitsfelder",
+      "sourceTopicIds": [
+        "arbeitsfelder"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "uebergaenge",
+      "targetType": "topic",
+      "targetTitle": "Übergänge",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Übergänge zwischen Einrichtungen machen Arbeitsfeldgrenzen für Kinder und Familien praktisch relevant."
+    },
+    {
+      "id": "detail-aufsichtspflicht-v1--01--selbstwirksamkeit",
+      "sourceDetailId": "detail-aufsichtspflicht-v1",
+      "sourceTitle": "Aufsichtspflicht",
+      "sourceTopicIds": [
+        "aufsichtspflicht"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "selbstwirksamkeit",
+      "targetType": "topic",
+      "targetTitle": "Selbstwirksamkeit",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Aufsicht muss so gestaltet werden, dass Kinder eigene Handlungserfahrungen machen können."
+    },
+    {
+      "id": "detail-aufsichtspflicht-v1--02--kindeswohl",
+      "sourceDetailId": "detail-aufsichtspflicht-v1",
+      "sourceTitle": "Aufsichtspflicht",
+      "sourceTopicIds": [
+        "aufsichtspflicht"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "kindeswohl",
+      "targetType": "topic",
+      "targetTitle": "Kindeswohl und Schutz",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Schutzpflicht und Kindeswohl setzen Grenzen pädagogischer Freiräume."
+    },
+    {
+      "id": "detail-aufsichtspflicht-v1--03--professionelle-haltung",
+      "sourceDetailId": "detail-aufsichtspflicht-v1",
+      "sourceTitle": "Aufsichtspflicht",
+      "sourceTopicIds": [
+        "aufsichtspflicht"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Professionelle Aufsicht verlangt begründete Abwägung statt Angst- oder Routinenhandeln."
+    },
+    {
+      "id": "detail-aufsichtspflicht-v1--04--anpassung-selbstbestimmung",
+      "sourceDetailId": "detail-aufsichtspflicht-v1",
+      "sourceTitle": "Aufsichtspflicht",
+      "sourceTopicIds": [
+        "aufsichtspflicht"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "anpassung-selbstbestimmung",
+      "targetType": "topic",
+      "targetTitle": "Anpassung und Selbstbestimmung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Aufsicht beeinflusst, wie viel Selbstbestimmung Kindern praktisch zugestanden wird."
+    },
+    {
+      "id": "detail-aufsichtspflicht-v1--05--regeln-struktur",
+      "sourceDetailId": "detail-aufsichtspflicht-v1",
+      "sourceTitle": "Aufsichtspflicht",
+      "sourceTopicIds": [
+        "aufsichtspflicht"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "regeln-struktur",
+      "targetType": "topic",
+      "targetTitle": "Regeln und Struktur",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Regeln können Aufsicht transparent und nachvollziehbar machen."
+    },
+    {
+      "id": "detail-beobachtung-v1--01--ressourcenorientierung",
+      "sourceDetailId": "detail-beobachtung-v1",
+      "sourceTitle": "Beobachtung",
+      "sourceTopicIds": [
+        "beobachtung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "ressourcenorientierung",
+      "targetType": "topic",
+      "targetTitle": "Ressourcenorientierung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Ressourcenorientierung bestimmt, worauf Beobachtung achtet."
+    },
+    {
+      "id": "detail-beobachtung-v1--02--fallverstehen",
+      "sourceDetailId": "detail-beobachtung-v1",
+      "sourceTitle": "Beobachtung",
+      "sourceTopicIds": [
+        "beobachtung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "fallverstehen",
+      "targetType": "topic",
+      "targetTitle": "Fallverstehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Fallverstehen ordnet Beobachtungen zu pädagogischem Sinn."
+    },
+    {
+      "id": "detail-beobachtung-v1--03--lernarrangements",
+      "sourceDetailId": "detail-beobachtung-v1",
+      "sourceTitle": "Beobachtung",
+      "sourceTopicIds": [
+        "beobachtung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "lernarrangements",
+      "targetType": "topic",
+      "targetTitle": "Lernarrangements",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Beobachtungen können Lernarrangements begründen."
+    },
+    {
+      "id": "detail-berufsrolle-v1--01--professionelle-haltung",
+      "sourceDetailId": "detail-berufsrolle-v1",
+      "sourceTitle": "Berufsrolle",
+      "sourceTopicIds": [
+        "berufsrolle"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Berufsrolle konkretisiert sich über professionelle Haltung."
+    },
+    {
+      "id": "detail-berufsrolle-v1--02--reflexion",
+      "sourceDetailId": "detail-berufsrolle-v1",
+      "sourceTitle": "Berufsrolle",
+      "sourceTopicIds": [
+        "berufsrolle"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "reflexion",
+      "targetType": "topic",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "targetAxisId": "professionalitaet",
+      "relation": "Reflexion macht Alltagshandeln begründbar."
+    },
+    {
+      "id": "detail-bildungsleitlinien-v1--01--institutioneller-auftrag",
+      "sourceDetailId": "detail-bildungsleitlinien-v1",
+      "sourceTitle": "Bildungsleitlinien als Rahmen",
+      "sourceTopicIds": [
+        "bildungsleitlinien"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "institutioneller-auftrag",
+      "targetType": "topic",
+      "targetTitle": "Institutioneller Auftrag",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Bildungsleitlinien konkretisieren, wie der Bildungsauftrag pädagogisch verstanden werden kann."
+    },
+    {
+      "id": "detail-bildungsleitlinien-v1--02--rechte",
+      "sourceDetailId": "detail-bildungsleitlinien-v1",
+      "sourceTitle": "Bildungsleitlinien als Rahmen",
+      "sourceTopicIds": [
+        "bildungsleitlinien"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "rechte",
+      "targetType": "topic",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Kinderrechte sind ein Leitmotiv des Rahmens."
+    },
+    {
+      "id": "detail-bildungsleitlinien-v1--03--bildungsbereiche",
+      "sourceDetailId": "detail-bildungsleitlinien-v1",
+      "sourceTitle": "Bildungsleitlinien als Rahmen",
+      "sourceTopicIds": [
+        "bildungsleitlinien"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "bildungsbereiche",
+      "targetType": "axis",
+      "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Die Bildungsbereiche erhalten im Rahmen der Leitlinien eine gemeinsame Orientierung."
+    },
+    {
+      "id": "detail-bildungsleitlinien-v1--04--professionelle-haltung",
+      "sourceDetailId": "detail-bildungsleitlinien-v1",
+      "sourceTitle": "Bildungsleitlinien als Rahmen",
+      "sourceTopicIds": [
+        "bildungsleitlinien"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Leitlinien können Haltung begründen, ersetzen aber nicht Selbstreflexion."
+    },
+    {
+      "id": "detail-bildungsleitlinien-v1--05--elternkooperation",
+      "sourceDetailId": "detail-bildungsleitlinien-v1",
+      "sourceTitle": "Bildungsleitlinien als Rahmen",
+      "sourceTopicIds": [
+        "bildungsleitlinien"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Elternpartnerschaft wird als Bestandteil des Rahmens sichtbar."
+    },
+    {
+      "id": "detail-bindung-beziehung-v1--01--eingewoehnung",
+      "sourceDetailId": "detail-bindung-beziehung-v1",
+      "sourceTitle": "Bindung und Beziehung",
+      "sourceTopicIds": [
+        "bindung-beziehung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "eingewoehnung",
+      "targetType": "topic",
+      "targetTitle": "Eingewöhnung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Eingewöhnung prüft konkret, ob Sicherheit in neuer Beziehung entstehen kann."
+    },
+    {
+      "id": "detail-bindung-beziehung-v1--02--uebergaenge",
+      "sourceDetailId": "detail-bindung-beziehung-v1",
+      "sourceTitle": "Bindung und Beziehung",
+      "sourceTopicIds": [
+        "bindung-beziehung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "uebergaenge",
+      "targetType": "topic",
+      "targetTitle": "Übergänge",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Übergänge brauchen Beziehungssicherheit und verlässliche Bezugspersonen."
+    },
+    {
+      "id": "detail-bindung-beziehung-v1--03--beobachtung",
+      "sourceDetailId": "detail-bindung-beziehung-v1",
+      "sourceTitle": "Bindung und Beziehung",
+      "sourceTopicIds": [
+        "bindung-beziehung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Beobachtung zeigt, wie ein Kind Nähe, Distanz, Trost und Exploration nutzt."
+    },
+    {
+      "id": "detail-bindung-beziehung-v1--04--bildungsbereiche",
+      "sourceDetailId": "detail-bindung-beziehung-v1",
+      "sourceTitle": "Bindung und Beziehung",
+      "sourceTopicIds": [
+        "bindung-beziehung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "bildungsbereiche",
+      "targetType": "axis",
+      "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Bildungsprozesse setzen emotionale Sicherheit und Beteiligung voraus."
+    },
+    {
+      "id": "detail-dialogische-haltung-v1--01--sprache-kommunikation",
+      "sourceDetailId": "detail-dialogische-haltung-v1",
+      "sourceTitle": "Dialogische Haltung",
+      "sourceTopicIds": [
+        "dialogische-haltung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "sprache-kommunikation",
+      "targetType": "topic",
+      "targetTitle": "Sprache und Kommunikation",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Dialogische Haltung konkretisiert Sprache als Beziehungs- und Bildungsmedium."
+    },
+    {
+      "id": "detail-dialogische-haltung-v1--02--sprachbildung",
+      "sourceDetailId": "detail-dialogische-haltung-v1",
+      "sourceTitle": "Dialogische Haltung",
+      "sourceTopicIds": [
+        "dialogische-haltung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "sprachbildung",
+      "targetType": "topic",
+      "targetTitle": "Sprachbildung im Alltag",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Sprachbildung wird alltagsintegriert, wenn Erwachsene kindliche Äußerungen erweitern und weiterführen."
+    },
+    {
+      "id": "detail-dialogische-haltung-v1--03--bindung-beziehung",
+      "sourceDetailId": "detail-dialogische-haltung-v1",
+      "sourceTitle": "Dialogische Haltung",
+      "sourceTopicIds": [
+        "dialogische-haltung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "bindung-beziehung",
+      "targetType": "topic",
+      "targetTitle": "Bindung und Beziehung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Zugewandte Antwortpraxis stärkt Sicherheit und Beteiligung im Gespräch."
+    },
+    {
+      "id": "detail-dialogische-haltung-v1--04--beobachtung",
+      "sourceDetailId": "detail-dialogische-haltung-v1",
+      "sourceTitle": "Dialogische Haltung",
+      "sourceTopicIds": [
+        "dialogische-haltung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Dialog zeigt Interessen, Begriffe, Deutungen und Entwicklungsstände des Kindes."
+    },
+    {
+      "id": "detail-dialogische-haltung-v1--05--gespraechsanlaesse",
+      "sourceDetailId": "detail-dialogische-haltung-v1",
+      "sourceTitle": "Dialogische Haltung",
+      "sourceTopicIds": [
+        "dialogische-haltung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "gespraechsanlaesse",
+      "targetType": "topic",
+      "targetTitle": "Gesprächsanlässe",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Gesprächsanlässe werden erst durch dialogische Reaktion pädagogisch fruchtbar."
+    },
+    {
+      "id": "detail-dokumentation-v1--01--beobachtung",
+      "sourceDetailId": "detail-dokumentation-v1",
+      "sourceTitle": "Dokumentation",
+      "sourceTopicIds": [
+        "dokumentation"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Dokumentation hält Beobachtungen fest und macht sie später überprüfbar und besprechbar."
+    },
+    {
+      "id": "detail-dokumentation-v1--02--fallverstehen",
+      "sourceDetailId": "detail-dokumentation-v1",
+      "sourceTitle": "Dokumentation",
+      "sourceTopicIds": [
+        "dokumentation"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "fallverstehen",
+      "targetType": "topic",
+      "targetTitle": "Fallverstehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Erst dokumentierte Situationen ermöglichen es, Deutungen mit Kontext und mehreren Perspektiven abzugleichen."
+    },
+    {
+      "id": "detail-dokumentation-v1--03--foerderplanung",
+      "sourceDetailId": "detail-dokumentation-v1",
+      "sourceTitle": "Dokumentation",
+      "sourceTopicIds": [
+        "dokumentation"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "foerderplanung",
+      "targetType": "topic",
+      "targetTitle": "Förderliche Schlüsse ziehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Nächste Schritte werden belastbarer, wenn sie aus dokumentierten Lernwegen und Interessen abgeleitet sind."
+    },
+    {
+      "id": "detail-dokumentation-v1--04--ressourcenorientierung",
+      "sourceDetailId": "detail-dokumentation-v1",
+      "sourceTitle": "Dokumentation",
+      "sourceTopicIds": [
+        "dokumentation"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "ressourcenorientierung",
+      "targetType": "topic",
+      "targetTitle": "Ressourcenorientierung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Dokumentation kann Stärken und Fortschritte sichtbar machen, statt nur Abweichungen zu sammeln."
+    },
+    {
+      "id": "detail-dokumentation-v1--05--elternkooperation",
+      "sourceDetailId": "detail-dokumentation-v1",
+      "sourceTitle": "Dokumentation",
+      "sourceTopicIds": [
+        "dokumentation"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Dokumentierte Alltagssituationen schaffen konkrete Gesprächsanlässe mit Eltern."
+    },
+    {
+      "id": "detail-dokumentation-v1--06--dialogische-haltung",
+      "sourceDetailId": "detail-dokumentation-v1",
+      "sourceTitle": "Dokumentation",
+      "sourceTopicIds": [
+        "dokumentation"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "dialogische-haltung",
+      "targetType": "topic",
+      "targetTitle": "Dialogische Haltung",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Wenn Kinder in Dokumentation einbezogen werden, entsteht Austausch über ihre eigene Sicht auf Lernen und Alltag."
+    },
+    {
+      "id": "detail-eingewoehnung-v1--01--bindung-beziehung",
+      "sourceDetailId": "detail-eingewoehnung-v1",
+      "sourceTitle": "Eingewöhnung",
+      "sourceTopicIds": [
+        "eingewoehnung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "bindung-beziehung",
+      "targetType": "topic",
+      "targetTitle": "Bindung und Beziehung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Eingewöhnung ist ein konkreter Prüfstein für Bindungs- und Beziehungsgestaltung."
+    },
+    {
+      "id": "detail-eingewoehnung-v1--02--uebergaenge",
+      "sourceDetailId": "detail-eingewoehnung-v1",
+      "sourceTitle": "Eingewöhnung",
+      "sourceTopicIds": [
+        "eingewoehnung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "uebergaenge",
+      "targetType": "topic",
+      "targetTitle": "Übergänge",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Eingewöhnung ist ein Übergang zwischen Familie und Institution."
+    },
+    {
+      "id": "detail-eingewoehnung-v1--03--elternkooperation",
+      "sourceDetailId": "detail-eingewoehnung-v1",
+      "sourceTitle": "Eingewöhnung",
+      "sourceTopicIds": [
+        "eingewoehnung"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Elternkooperation stabilisiert den Übergangsprozess."
+    },
+    {
+      "id": "detail-elterngespraeche-v1--01--elternkooperation",
+      "sourceDetailId": "detail-elterngespraeche-v1",
+      "sourceTitle": "Elterngespräche",
+      "sourceTopicIds": [
+        "elterngespraeche"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Elterngespräche sind eine konkrete Form, in der Kooperation praktisch wird."
+    },
+    {
+      "id": "detail-elterngespraeche-v1--02--erziehungspartnerschaft",
+      "sourceDetailId": "detail-elterngespraeche-v1",
+      "sourceTitle": "Elterngespräche",
+      "sourceTopicIds": [
+        "elterngespraeche"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "erziehungspartnerschaft",
+      "targetType": "topic",
+      "targetTitle": "Erziehungspartnerschaft",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Gespräche auf Augenhöhe stützen die gemeinsame Verantwortung für das Kind."
+    },
+    {
+      "id": "detail-elterngespraeche-v1--03--familienperspektive",
+      "sourceDetailId": "detail-elterngespraeche-v1",
+      "sourceTitle": "Elterngespräche",
+      "sourceTopicIds": [
+        "elterngespraeche"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "familienperspektive",
+      "targetType": "topic",
+      "targetTitle": "Familienperspektive",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Gute Gespräche berücksichtigen Lebenslage, Erwartungen und Ressourcen der Familie."
+    },
+    {
+      "id": "detail-elterngespraeche-v1--04--dokumentation",
+      "sourceDetailId": "detail-elterngespraeche-v1",
+      "sourceTitle": "Elterngespräche",
+      "sourceTopicIds": [
+        "elterngespraeche"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "dokumentation",
+      "targetType": "topic",
+      "targetTitle": "Dokumentation",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Dokumentierte Beobachtungen geben Gesprächen konkrete Grundlage statt bloßer Zuschreibung."
+    },
+    {
+      "id": "detail-elterngespraeche-v1--05--dialogische-haltung",
+      "sourceDetailId": "detail-elterngespraeche-v1",
+      "sourceTitle": "Elterngespräche",
+      "sourceTopicIds": [
+        "elterngespraeche"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "dialogische-haltung",
+      "targetType": "topic",
+      "targetTitle": "Dialogische Haltung",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Elterngespräche brauchen Zuhören, Nachfragen und ernsthaftes Aufgreifen der Elternsicht."
+    },
+    {
+      "id": "detail-elternkooperation-v1--01--eingewoehnung",
+      "sourceDetailId": "detail-elternkooperation-v1",
+      "sourceTitle": "Elternkooperation",
+      "sourceTopicIds": [
+        "elternkooperation"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "eingewoehnung",
+      "targetType": "topic",
+      "targetTitle": "Eingewöhnung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Elternkooperation stabilisiert Eingewöhnung und Übergänge."
+    },
+    {
+      "id": "detail-elternkooperation-v1--02--uebergaenge",
+      "sourceDetailId": "detail-elternkooperation-v1",
+      "sourceTitle": "Elternkooperation",
+      "sourceTopicIds": [
+        "elternkooperation"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "uebergaenge",
+      "targetType": "topic",
+      "targetTitle": "Übergänge",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Übergänge brauchen abgestimmte Kommunikation."
+    },
+    {
+      "id": "detail-elternkooperation-v1--03--familienperspektive",
+      "sourceDetailId": "detail-elternkooperation-v1",
+      "sourceTitle": "Elternkooperation",
+      "sourceTopicIds": [
+        "elternkooperation"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "familienperspektive",
+      "targetType": "topic",
+      "targetTitle": "Familienperspektive",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Familienperspektive erweitert das Fallverstehen."
+    },
+    {
+      "id": "detail-erziehungspartnerschaft-v1--01--elternkooperation",
+      "sourceDetailId": "detail-erziehungspartnerschaft-v1",
+      "sourceTitle": "Erziehungspartnerschaft",
+      "sourceTopicIds": [
+        "erziehungspartnerschaft"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Erziehungspartnerschaft konkretisiert Elternkooperation als gemeinsame Verantwortung für das Kind."
+    },
+    {
+      "id": "detail-erziehungspartnerschaft-v1--02--familienperspektive",
+      "sourceDetailId": "detail-erziehungspartnerschaft-v1",
+      "sourceTitle": "Erziehungspartnerschaft",
+      "sourceTopicIds": [
+        "erziehungspartnerschaft"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "familienperspektive",
+      "targetType": "topic",
+      "targetTitle": "Familienperspektive",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Die Perspektive der Familie muss verstanden werden, bevor Verhalten der Eltern bewertet wird."
+    },
+    {
+      "id": "detail-erziehungspartnerschaft-v1--03--elterngespraeche",
+      "sourceDetailId": "detail-erziehungspartnerschaft-v1",
+      "sourceTitle": "Erziehungspartnerschaft",
+      "sourceTopicIds": [
+        "erziehungspartnerschaft"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "elterngespraeche",
+      "targetType": "topic",
+      "targetTitle": "Elterngespräche",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Gespräche sind ein zentrales Werkzeug der Erziehungspartnerschaft."
+    },
+    {
+      "id": "detail-erziehungspartnerschaft-v1--04--uebergaenge",
+      "sourceDetailId": "detail-erziehungspartnerschaft-v1",
+      "sourceTitle": "Erziehungspartnerschaft",
+      "sourceTopicIds": [
+        "erziehungspartnerschaft"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "uebergaenge",
+      "targetType": "topic",
+      "targetTitle": "Übergänge",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Übergänge gelingen eher, wenn Eltern und Fachkräfte kooperieren und Vertrauen aufbauen."
+    },
+    {
+      "id": "detail-ethik-v1--01--religion-ethik",
+      "sourceDetailId": "detail-ethik-v1",
+      "sourceTitle": "Ethik",
+      "sourceTopicIds": [
+        "ethik"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "religion-ethik",
+      "targetType": "topic",
+      "targetTitle": "Religion, Gesellschaft und Ethik",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Ethik verbindet sich mit religiösen und weltanschaulichen Bildungsanlässen."
+    },
+    {
+      "id": "detail-ethik-v1--02--professionelle-haltung",
+      "sourceDetailId": "detail-ethik-v1",
+      "sourceTitle": "Ethik",
+      "sourceTopicIds": [
+        "ethik"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Haltung muss ethisch reflektiert werden, wenn Werte wirksam werden."
+    },
+    {
+      "id": "detail-ethik-v1--03--rechte",
+      "sourceDetailId": "detail-ethik-v1",
+      "sourceTitle": "Ethik",
+      "sourceTopicIds": [
+        "ethik"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "rechte",
+      "targetType": "topic",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Rechte setzen ethische und rechtliche Grenzen pädagogischen Handelns."
+    },
+    {
+      "id": "detail-ethik-v1--04--macht-verantwortung",
+      "sourceDetailId": "detail-ethik-v1",
+      "sourceTitle": "Ethik",
+      "sourceTopicIds": [
+        "ethik"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "macht-verantwortung",
+      "targetType": "topic",
+      "targetTitle": "Macht und Verantwortung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Machtfragen sind immer auch ethische Verantwortungsfragen."
+    },
+    {
+      "id": "detail-ethik-v1--05--reflexion",
+      "sourceDetailId": "detail-ethik-v1",
+      "sourceTitle": "Ethik",
+      "sourceTopicIds": [
+        "ethik"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "reflexion",
+      "targetType": "topic",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "targetAxisId": "professionalitaet",
+      "relation": "Ethisches Handeln braucht Reflexion eigener Werte und Deutungen."
+    },
+    {
+      "id": "detail-fallverstehen-v1--01--beobachtung",
+      "sourceDetailId": "detail-fallverstehen-v1",
+      "sourceTitle": "Fallverstehen",
+      "sourceTopicIds": [
+        "fallverstehen"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Beobachtung liefert das Material für Fallverstehen."
+    },
+    {
+      "id": "detail-fallverstehen-v1--02--ressourcenorientierung",
+      "sourceDetailId": "detail-fallverstehen-v1",
+      "sourceTitle": "Fallverstehen",
+      "sourceTopicIds": [
+        "fallverstehen"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "ressourcenorientierung",
+      "targetType": "topic",
+      "targetTitle": "Ressourcenorientierung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Ressourcenorientierung beeinflusst, welche Deutungen und Anschlussmöglichkeiten sichtbar werden."
+    },
+    {
+      "id": "detail-fallverstehen-v1--03--foerderplanung",
+      "sourceDetailId": "detail-fallverstehen-v1",
+      "sourceTitle": "Fallverstehen",
+      "sourceTopicIds": [
+        "fallverstehen"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "foerderplanung",
+      "targetType": "topic",
+      "targetTitle": "Förderliche Schlüsse ziehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Fallverstehen begründet nächste pädagogische Schritte."
+    },
+    {
+      "id": "detail-fallverstehen-v1--04--reflexion",
+      "sourceDetailId": "detail-fallverstehen-v1",
+      "sourceTitle": "Fallverstehen",
+      "sourceTopicIds": [
+        "fallverstehen"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "reflexion",
+      "targetType": "topic",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "targetAxisId": "professionalitaet",
+      "relation": "Reflexion prüft eigene Zuschreibungen und professionelle Reaktionen."
+    },
+    {
+      "id": "detail-familienperspektive-v1--01--elternkooperation",
+      "sourceDetailId": "detail-familienperspektive-v1",
+      "sourceTitle": "Familienperspektive",
+      "sourceTopicIds": [
+        "familienperspektive"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Kooperation braucht ein Verständnis der familiären Lage und Sichtweise."
+    },
+    {
+      "id": "detail-familienperspektive-v1--02--elterngespraeche",
+      "sourceDetailId": "detail-familienperspektive-v1",
+      "sourceTitle": "Familienperspektive",
+      "sourceTopicIds": [
+        "familienperspektive"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "elterngespraeche",
+      "targetType": "topic",
+      "targetTitle": "Elterngespräche",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Elterngespräche werden tragfähiger, wenn Erwartungen, Ressourcen und Unsicherheiten der Familie mitgedacht werden."
+    },
+    {
+      "id": "detail-familienperspektive-v1--03--erziehungspartnerschaft",
+      "sourceDetailId": "detail-familienperspektive-v1",
+      "sourceTitle": "Familienperspektive",
+      "sourceTopicIds": [
+        "familienperspektive"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "erziehungspartnerschaft",
+      "targetType": "topic",
+      "targetTitle": "Erziehungspartnerschaft",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Partnerschaft entsteht eher, wenn Familie nicht als Störgröße, sondern als Bezugssystem des Kindes gesehen wird."
+    },
+    {
+      "id": "detail-familienperspektive-v1--04--uebergaenge",
+      "sourceDetailId": "detail-familienperspektive-v1",
+      "sourceTitle": "Familienperspektive",
+      "sourceTopicIds": [
+        "familienperspektive"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "uebergaenge",
+      "targetType": "topic",
+      "targetTitle": "Übergänge",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Übergänge berühren immer auch familiäre Routinen, Sorgen und Erwartungen."
+    },
+    {
+      "id": "detail-familienperspektive-v1--05--reflexion",
+      "sourceDetailId": "detail-familienperspektive-v1",
+      "sourceTitle": "Familienperspektive",
+      "sourceTopicIds": [
+        "familienperspektive"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "reflexion",
+      "targetType": "topic",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "targetAxisId": "professionalitaet",
+      "relation": "Familienperspektive verlangt Reflexion eigener Bilder, Vorannahmen und Teamnarrative über Eltern."
+    },
+    {
+      "id": "detail-familienperspektive-v1--06--kindeswohl",
+      "sourceDetailId": "detail-familienperspektive-v1",
+      "sourceTitle": "Familienperspektive",
+      "sourceTopicIds": [
+        "familienperspektive"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "kindeswohl",
+      "targetType": "topic",
+      "targetTitle": "Kindeswohl und Schutz",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Familienperspektive muss später mit Schutzauftrag und Kindeswohlgrenzen verbunden werden."
+    },
+    {
+      "id": "detail-foerderplanung-v1--01--beobachtung",
+      "sourceDetailId": "detail-foerderplanung-v1",
+      "sourceTitle": "Förderliche Schlüsse ziehen",
+      "sourceTopicIds": [
+        "foerderplanung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Beobachtung liefert die Grundlage der Förderplanung."
+    },
+    {
+      "id": "detail-foerderplanung-v1--02--fallverstehen",
+      "sourceDetailId": "detail-foerderplanung-v1",
+      "sourceTitle": "Förderliche Schlüsse ziehen",
+      "sourceTopicIds": [
+        "foerderplanung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "fallverstehen",
+      "targetType": "topic",
+      "targetTitle": "Fallverstehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Fallverstehen begründet, warum ein bestimmter nächster Schritt sinnvoll ist."
+    },
+    {
+      "id": "detail-foerderplanung-v1--03--ressourcenorientierung",
+      "sourceDetailId": "detail-foerderplanung-v1",
+      "sourceTitle": "Förderliche Schlüsse ziehen",
+      "sourceTopicIds": [
+        "foerderplanung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "ressourcenorientierung",
+      "targetType": "topic",
+      "targetTitle": "Ressourcenorientierung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Ressourcenorientierung bestimmt, woran Förderung anschließen soll."
+    },
+    {
+      "id": "detail-foerderplanung-v1--04--lernarrangements",
+      "sourceDetailId": "detail-foerderplanung-v1",
+      "sourceTitle": "Förderliche Schlüsse ziehen",
+      "sourceTopicIds": [
+        "foerderplanung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "lernarrangements",
+      "targetType": "topic",
+      "targetTitle": "Lernarrangements",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Lernarrangements können konkrete Formen geplanter nächster Schritte sein."
+    },
+    {
+      "id": "detail-gespraechsanlaesse-v1--01--dialogische-haltung",
+      "sourceDetailId": "detail-gespraechsanlaesse-v1",
+      "sourceTitle": "Gesprächsanlässe",
+      "sourceTopicIds": [
+        "gespraechsanlaesse"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "dialogische-haltung",
+      "targetType": "topic",
+      "targetTitle": "Dialogische Haltung",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Gesprächsanlässe brauchen dialogische Reaktion, damit sie nicht zu Abfrage oder Belehrung werden."
+    },
+    {
+      "id": "detail-gespraechsanlaesse-v1--02--beobachtung",
+      "sourceDetailId": "detail-gespraechsanlaesse-v1",
+      "sourceTitle": "Gesprächsanlässe",
+      "sourceTopicIds": [
+        "gespraechsanlaesse"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Gesprächsanlässe entstehen häufig aus beobachteten Interessen, Gefühlen oder Situationen."
+    },
+    {
+      "id": "detail-gespraechsanlaesse-v1--03--fallverstehen",
+      "sourceDetailId": "detail-gespraechsanlaesse-v1",
+      "sourceTitle": "Gesprächsanlässe",
+      "sourceTopicIds": [
+        "gespraechsanlaesse"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "fallverstehen",
+      "targetType": "topic",
+      "targetTitle": "Fallverstehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Wiederkehrende Gesprächsanlässe können Hinweise auf Themen, Belastungen oder soziale Rollen geben."
+    },
+    {
+      "id": "detail-gespraechsanlaesse-v1--04--sprachbildung",
+      "sourceDetailId": "detail-gespraechsanlaesse-v1",
+      "sourceTitle": "Gesprächsanlässe",
+      "sourceTopicIds": [
+        "gespraechsanlaesse"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "sprachbildung",
+      "targetType": "topic",
+      "targetTitle": "Sprachbildung im Alltag",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Alltagssituationen bieten natürliche Gelegenheiten für Wortschatz, Erzählung, Fragebildung und Bedeutungsverhandlung."
+    },
+    {
+      "id": "detail-gespraechsanlaesse-v1--05--konflikte",
+      "sourceDetailId": "detail-gespraechsanlaesse-v1",
+      "sourceTitle": "Gesprächsanlässe",
+      "sourceTopicIds": [
+        "gespraechsanlaesse"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "konflikte",
+      "targetType": "topic",
+      "targetTitle": "Konflikte",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Konflikte können Gesprächsanlässe sein, wenn Gefühle und Perspektiven sprachlich bearbeitet werden."
+    },
+    {
+      "id": "detail-gesundheit-ernaehrung-v1--01--kindeswohl",
+      "sourceDetailId": "detail-gesundheit-ernaehrung-v1",
+      "sourceTitle": "Gesundheit und Ernährung",
+      "sourceTopicIds": [
+        "gesundheit-ernaehrung"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "kindeswohl",
+      "targetType": "topic",
+      "targetTitle": "Kindeswohl und Schutz",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Gesundheit ist Teil von Schutz, Wohlbefinden und Entwicklung."
+    },
+    {
+      "id": "detail-gesundheit-ernaehrung-v1--02--elternkooperation",
+      "sourceDetailId": "detail-gesundheit-ernaehrung-v1",
+      "sourceTitle": "Gesundheit und Ernährung",
+      "sourceTopicIds": [
+        "gesundheit-ernaehrung"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Ernährung und Gesundheit berühren familiäre Routinen und Erwartungen."
+    },
+    {
+      "id": "detail-gesundheit-ernaehrung-v1--03--selbstwirksamkeit",
+      "sourceDetailId": "detail-gesundheit-ernaehrung-v1",
+      "sourceTitle": "Gesundheit und Ernährung",
+      "sourceTopicIds": [
+        "gesundheit-ernaehrung"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "selbstwirksamkeit",
+      "targetType": "topic",
+      "targetTitle": "Selbstwirksamkeit",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Kinder erleben Wirksamkeit, wenn sie Körperbedürfnisse wahrnehmen und Entscheidungen mittragen."
+    },
+    {
+      "id": "detail-gesundheit-ernaehrung-v1--04--arbeitsbedingungen",
+      "sourceDetailId": "detail-gesundheit-ernaehrung-v1",
+      "sourceTitle": "Gesundheit und Ernährung",
+      "sourceTopicIds": [
+        "gesundheit-ernaehrung"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "arbeitsbedingungen",
+      "targetType": "topic",
+      "targetTitle": "Arbeitsbedingungen",
+      "targetAxisId": "professionalitaet",
+      "relation": "Gesundheitsförderliche Praxis braucht Personal, Zeit und Routinen."
+    },
+    {
+      "id": "detail-gesundheit-ernaehrung-v1--05--bildungsleitlinien",
+      "sourceDetailId": "detail-gesundheit-ernaehrung-v1",
+      "sourceTitle": "Gesundheit und Ernährung",
+      "sourceTopicIds": [
+        "gesundheit-ernaehrung"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "bildungsleitlinien",
+      "targetType": "topic",
+      "targetTitle": "Bildungsleitlinien als Rahmen",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Gesundheit ist als Bildungsbereich im Rahmen verankert."
+    },
+    {
+      "id": "detail-institutioneller-auftrag-v1--01--bildungsleitlinien",
+      "sourceDetailId": "detail-institutioneller-auftrag-v1",
+      "sourceTitle": "Institutioneller Auftrag",
+      "sourceTopicIds": [
+        "institutioneller-auftrag"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "bildungsleitlinien",
+      "targetType": "topic",
+      "targetTitle": "Bildungsleitlinien als Rahmen",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Bildungsleitlinien geben dem institutionellen Bildungsauftrag fachliche Gestalt."
+    },
+    {
+      "id": "detail-institutioneller-auftrag-v1--02--arbeitsfelder",
+      "sourceDetailId": "detail-institutioneller-auftrag-v1",
+      "sourceTitle": "Institutioneller Auftrag",
+      "sourceTopicIds": [
+        "institutioneller-auftrag"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "arbeitsfelder",
+      "targetType": "topic",
+      "targetTitle": "Arbeitsfelder",
+      "targetAxisId": "professionalitaet",
+      "relation": "Der Auftrag unterscheidet sich je nach Arbeitsfeld und Einrichtungstyp."
+    },
+    {
+      "id": "detail-institutioneller-auftrag-v1--03--arbeitsbedingungen",
+      "sourceDetailId": "detail-institutioneller-auftrag-v1",
+      "sourceTitle": "Institutioneller Auftrag",
+      "sourceTopicIds": [
+        "institutioneller-auftrag"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "arbeitsbedingungen",
+      "targetType": "topic",
+      "targetTitle": "Arbeitsbedingungen",
+      "targetAxisId": "professionalitaet",
+      "relation": "Auftrag und reale Ressourcen müssen zusammen betrachtet werden."
+    },
+    {
+      "id": "detail-institutioneller-auftrag-v1--04--rechte",
+      "sourceDetailId": "detail-institutioneller-auftrag-v1",
+      "sourceTitle": "Institutioneller Auftrag",
+      "sourceTopicIds": [
+        "institutioneller-auftrag"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "rechte",
+      "targetType": "topic",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Kinderrechte begrenzen und orientieren den Auftrag."
+    },
+    {
+      "id": "detail-institutioneller-auftrag-v1--05--elternkooperation",
+      "sourceDetailId": "detail-institutioneller-auftrag-v1",
+      "sourceTitle": "Institutioneller Auftrag",
+      "sourceTopicIds": [
+        "institutioneller-auftrag"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Zusammenarbeit mit Familien ist Teil des institutionellen Auftrags."
+    },
+    {
+      "id": "detail-kindeswohl-v1--01--rechte",
+      "sourceDetailId": "detail-kindeswohl-v1",
+      "sourceTitle": "Kindeswohl und Schutz",
+      "sourceTopicIds": [
+        "kindeswohl"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "rechte",
+      "targetType": "topic",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Kinderrechte geben Kindeswohl und Schutz einen normativen Rahmen."
+    },
+    {
+      "id": "detail-kindeswohl-v1--02--aufsichtspflicht",
+      "sourceDetailId": "detail-kindeswohl-v1",
+      "sourceTitle": "Kindeswohl und Schutz",
+      "sourceTopicIds": [
+        "kindeswohl"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "aufsichtspflicht",
+      "targetType": "topic",
+      "targetTitle": "Aufsichtspflicht",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Aufsichtspflicht konkretisiert Schutz im pädagogischen Alltag."
+    },
+    {
+      "id": "detail-kindeswohl-v1--03--macht-verantwortung",
+      "sourceDetailId": "detail-kindeswohl-v1",
+      "sourceTitle": "Kindeswohl und Schutz",
+      "sourceTopicIds": [
+        "kindeswohl"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "macht-verantwortung",
+      "targetType": "topic",
+      "targetTitle": "Macht und Verantwortung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Schutzentscheidungen enthalten Macht und müssen verantwortlich begründet werden."
+    },
+    {
+      "id": "detail-kindeswohl-v1--04--dokumentation",
+      "sourceDetailId": "detail-kindeswohl-v1",
+      "sourceTitle": "Kindeswohl und Schutz",
+      "sourceTopicIds": [
+        "kindeswohl"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "dokumentation",
+      "targetType": "topic",
+      "targetTitle": "Dokumentation",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Kindeswohlbezogene Beobachtungen brauchen nachvollziehbare Dokumentation."
+    },
+    {
+      "id": "detail-kindeswohl-v1--05--ethik",
+      "sourceDetailId": "detail-kindeswohl-v1",
+      "sourceTitle": "Kindeswohl und Schutz",
+      "sourceTopicIds": [
+        "kindeswohl"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "ethik",
+      "targetType": "topic",
+      "targetTitle": "Ethik",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Schutzentscheidungen enthalten ethische Abwägungen zwischen Freiheit, Risiko und Verantwortung."
+    },
+    {
+      "id": "detail-konflikte-v1--01--sprache-kommunikation",
+      "sourceDetailId": "detail-konflikte-v1",
+      "sourceTitle": "Konflikte",
+      "sourceTopicIds": [
+        "konflikte"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "sprache-kommunikation",
+      "targetType": "topic",
+      "targetTitle": "Sprache und Kommunikation",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Konfliktbearbeitung braucht Sprache, damit Gefühle, Interessen und Lösungen aushandelbar werden."
+    },
+    {
+      "id": "detail-konflikte-v1--02--fallverstehen",
+      "sourceDetailId": "detail-konflikte-v1",
+      "sourceTitle": "Konflikte",
+      "sourceTopicIds": [
+        "konflikte"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "fallverstehen",
+      "targetType": "topic",
+      "targetTitle": "Fallverstehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Wiederkehrende Konflikte können Hinweise auf Bedürfnisse, Rollen oder institutionelle Spannungen geben."
+    },
+    {
+      "id": "detail-konflikte-v1--03--partizipation",
+      "sourceDetailId": "detail-konflikte-v1",
+      "sourceTitle": "Konflikte",
+      "sourceTopicIds": [
+        "konflikte"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "partizipation",
+      "targetType": "topic",
+      "targetTitle": "Partizipation",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Faire Konfliktlösung verlangt Beteiligung der Kinder, nicht nur erwachsene Entscheidung."
+    },
+    {
+      "id": "detail-konflikte-v1--04--regeln-struktur",
+      "sourceDetailId": "detail-konflikte-v1",
+      "sourceTitle": "Konflikte",
+      "sourceTopicIds": [
+        "konflikte"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "regeln-struktur",
+      "targetType": "topic",
+      "targetTitle": "Regeln und Struktur",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Regeln geben Orientierung, müssen aber in konkreten Situationen pädagogisch ausgelegt werden."
+    },
+    {
+      "id": "detail-konflikte-v1--05--macht-verantwortung",
+      "sourceDetailId": "detail-konflikte-v1",
+      "sourceTitle": "Konflikte",
+      "sourceTopicIds": [
+        "konflikte"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "macht-verantwortung",
+      "targetType": "topic",
+      "targetTitle": "Macht und Verantwortung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Fachkräfte entscheiden über Schutz, Gesprächsraum und Deutung; diese Macht muss reflektiert werden."
+    },
+    {
+      "id": "detail-kunst-aesthetik-v1--01--dokumentation",
+      "sourceDetailId": "detail-kunst-aesthetik-v1",
+      "sourceTitle": "Kunst und Ästhetik",
+      "sourceTopicIds": [
+        "kunst-aesthetik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "dokumentation",
+      "targetType": "topic",
+      "targetTitle": "Dokumentation",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Ästhetische Prozesse lassen sich über Bilder, Werke und Beobachtungen sichtbar machen."
+    },
+    {
+      "id": "detail-kunst-aesthetik-v1--02--beobachtung",
+      "sourceDetailId": "detail-kunst-aesthetik-v1",
+      "sourceTitle": "Kunst und Ästhetik",
+      "sourceTopicIds": [
+        "kunst-aesthetik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Wahrnehmendes Beobachten hilft, den Ausdruck des Kindes zu verstehen."
+    },
+    {
+      "id": "detail-kunst-aesthetik-v1--03--musik-rhythmik",
+      "sourceDetailId": "detail-kunst-aesthetik-v1",
+      "sourceTitle": "Kunst und Ästhetik",
+      "sourceTopicIds": [
+        "kunst-aesthetik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "musik-rhythmik",
+      "targetType": "topic",
+      "targetTitle": "Musik und Rhythmik",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Musik und Kunst teilen Wahrnehmung, Ausdruck und Gestaltung."
+    },
+    {
+      "id": "detail-kunst-aesthetik-v1--04--theater",
+      "sourceDetailId": "detail-kunst-aesthetik-v1",
+      "sourceTitle": "Kunst und Ästhetik",
+      "sourceTopicIds": [
+        "kunst-aesthetik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "theater",
+      "targetType": "topic",
+      "targetTitle": "Theater",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Theater erweitert ästhetische Bildung um Rolle, Körper und Szene."
+    },
+    {
+      "id": "detail-kunst-aesthetik-v1--05--ressourcenorientierung",
+      "sourceDetailId": "detail-kunst-aesthetik-v1",
+      "sourceTitle": "Kunst und Ästhetik",
+      "sourceTopicIds": [
+        "kunst-aesthetik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "ressourcenorientierung",
+      "targetType": "topic",
+      "targetTitle": "Ressourcenorientierung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Ästhetik macht individuelle Zugänge und Stärken sichtbar."
+    },
+    {
+      "id": "detail-lernarrangements-v1--01--beobachtung",
+      "sourceDetailId": "detail-lernarrangements-v1",
+      "sourceTitle": "Lernarrangements",
+      "sourceTopicIds": [
+        "lernarrangements"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Beobachtung liefert Hinweise auf Bildungsthemen und Interessen."
+    },
+    {
+      "id": "detail-lernarrangements-v1--02--ressourcenorientierung",
+      "sourceDetailId": "detail-lernarrangements-v1",
+      "sourceTitle": "Lernarrangements",
+      "sourceTopicIds": [
+        "lernarrangements"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "ressourcenorientierung",
+      "targetType": "topic",
+      "targetTitle": "Ressourcenorientierung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Ressourcenorientierung bestimmt die Anschlussfähigkeit des Arrangements."
+    },
+    {
+      "id": "detail-lernarrangements-v1--03--bildungsbereiche",
+      "sourceDetailId": "detail-lernarrangements-v1",
+      "sourceTitle": "Lernarrangements",
+      "sourceTopicIds": [
+        "lernarrangements"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "bildungsbereiche",
+      "targetType": "axis",
+      "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Bildungsbereiche geben mögliche fachliche Rahmungen."
+    },
+    {
+      "id": "detail-macht-verantwortung-v1--01--professionelle-haltung",
+      "sourceDetailId": "detail-macht-verantwortung-v1",
+      "sourceTitle": "Macht und Verantwortung",
+      "sourceTopicIds": [
+        "macht-verantwortung"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Haltung zeigt sich daran, wie Fachkräfte mit eigener Macht umgehen."
+    },
+    {
+      "id": "detail-macht-verantwortung-v1--02--partizipation",
+      "sourceDetailId": "detail-macht-verantwortung-v1",
+      "sourceTitle": "Macht und Verantwortung",
+      "sourceTopicIds": [
+        "macht-verantwortung"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "partizipation",
+      "targetType": "topic",
+      "targetTitle": "Partizipation",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Partizipation ist ein Mittel, Macht zu teilen und Verantwortung lernbar zu machen."
+    },
+    {
+      "id": "detail-macht-verantwortung-v1--03--kindeswohl",
+      "sourceDetailId": "detail-macht-verantwortung-v1",
+      "sourceTitle": "Macht und Verantwortung",
+      "sourceTopicIds": [
+        "macht-verantwortung"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "kindeswohl",
+      "targetType": "topic",
+      "targetTitle": "Kindeswohl und Schutz",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Schutzverantwortung kann Eingriffe legitimieren, muss aber fachlich begründet bleiben."
+    },
+    {
+      "id": "detail-macht-verantwortung-v1--04--reflexion",
+      "sourceDetailId": "detail-macht-verantwortung-v1",
+      "sourceTitle": "Macht und Verantwortung",
+      "sourceTopicIds": [
+        "macht-verantwortung"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "reflexion",
+      "targetType": "topic",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "targetAxisId": "professionalitaet",
+      "relation": "Macht muss reflektiert werden, weil sie sonst leicht als Normalität unsichtbar bleibt."
+    },
+    {
+      "id": "detail-macht-verantwortung-v1--05--regeln-struktur",
+      "sourceDetailId": "detail-macht-verantwortung-v1",
+      "sourceTitle": "Macht und Verantwortung",
+      "sourceTopicIds": [
+        "macht-verantwortung"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "regeln-struktur",
+      "targetType": "topic",
+      "targetTitle": "Regeln und Struktur",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Regeln materialisieren Macht; ihre Begründung und Durchsetzung sind daher zentral."
+    },
+    {
+      "id": "detail-mathematik-v1--01--naturwissenschaft",
+      "sourceDetailId": "detail-mathematik-v1",
+      "sourceTitle": "Frühkindliche Mathematik",
+      "sourceTopicIds": [
+        "mathematik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "naturwissenschaft",
+      "targetType": "topic",
+      "targetTitle": "Natur, Umwelt, Technik",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Messen, Vergleichen und Daten verbinden Mathematik mit Natur/Technik."
+    },
+    {
+      "id": "detail-mathematik-v1--02--lernarrangements",
+      "sourceDetailId": "detail-mathematik-v1",
+      "sourceTitle": "Frühkindliche Mathematik",
+      "sourceTopicIds": [
+        "mathematik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "lernarrangements",
+      "targetType": "topic",
+      "targetTitle": "Lernarrangements",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Material und Raumgestaltung eröffnen mathematische Erfahrung."
+    },
+    {
+      "id": "detail-mathematik-v1--03--selbstwirksamkeit",
+      "sourceDetailId": "detail-mathematik-v1",
+      "sourceTitle": "Frühkindliche Mathematik",
+      "sourceTopicIds": [
+        "mathematik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "selbstwirksamkeit",
+      "targetType": "topic",
+      "targetTitle": "Selbstwirksamkeit",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Kinder erleben, dass Ordnen und Vergleichen Probleme lösbar macht."
+    },
+    {
+      "id": "detail-mathematik-v1--04--beobachtung",
+      "sourceDetailId": "detail-mathematik-v1",
+      "sourceTitle": "Frühkindliche Mathematik",
+      "sourceTopicIds": [
+        "mathematik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Beobachtung zeigt, welche mathematischen Strategien Kinder bereits nutzen."
+    },
+    {
+      "id": "detail-mathematik-v1--05--bildungsleitlinien",
+      "sourceDetailId": "detail-mathematik-v1",
+      "sourceTitle": "Frühkindliche Mathematik",
+      "sourceTopicIds": [
+        "mathematik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "bildungsleitlinien",
+      "targetType": "topic",
+      "targetTitle": "Bildungsleitlinien als Rahmen",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Mathematik ist als Bildungsbereich rahmend verankert."
+    },
+    {
+      "id": "detail-musik-rhythmik-v1--01--kunst-aesthetik",
+      "sourceDetailId": "detail-musik-rhythmik-v1",
+      "sourceTitle": "Musik und Rhythmik",
+      "sourceTopicIds": [
+        "musik-rhythmik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "kunst-aesthetik",
+      "targetType": "topic",
+      "targetTitle": "Kunst und Ästhetik",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Musik ist Teil ästhetischer Bildung."
+    },
+    {
+      "id": "detail-musik-rhythmik-v1--02--theater",
+      "sourceDetailId": "detail-musik-rhythmik-v1",
+      "sourceTitle": "Musik und Rhythmik",
+      "sourceTopicIds": [
+        "musik-rhythmik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "theater",
+      "targetType": "topic",
+      "targetTitle": "Theater",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Musik, Rhythmus und Szene greifen im Theaterspiel ineinander."
+    },
+    {
+      "id": "detail-musik-rhythmik-v1--03--sprache-kommunikation",
+      "sourceDetailId": "detail-musik-rhythmik-v1",
+      "sourceTitle": "Musik und Rhythmik",
+      "sourceTopicIds": [
+        "musik-rhythmik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "sprache-kommunikation",
+      "targetType": "topic",
+      "targetTitle": "Sprache und Kommunikation",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Lieder, Rhythmus und Stimme unterstützen sprachliche und kommunikative Erfahrung."
+    },
+    {
+      "id": "detail-musik-rhythmik-v1--04--gruppe-institution-politik",
+      "sourceDetailId": "detail-musik-rhythmik-v1",
+      "sourceTitle": "Musik und Rhythmik",
+      "sourceTopicIds": [
+        "musik-rhythmik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "gruppe-institution-politik",
+      "targetType": "axis",
+      "targetTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Gemeinsames Musizieren erzeugt Gruppe, Rollen und Verantwortung."
+    },
+    {
+      "id": "detail-musik-rhythmik-v1--05--dokumentation",
+      "sourceDetailId": "detail-musik-rhythmik-v1",
+      "sourceTitle": "Musik und Rhythmik",
+      "sourceTopicIds": [
+        "musik-rhythmik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "dokumentation",
+      "targetType": "topic",
+      "targetTitle": "Dokumentation",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Musikalisches Verhalten kann beobachtet und für Anschlussimpulse genutzt werden."
+    },
+    {
+      "id": "detail-naturwissenschaft-v1--01--mathematik",
+      "sourceDetailId": "detail-naturwissenschaft-v1",
+      "sourceTitle": "Natur, Umwelt und Technik",
+      "sourceTopicIds": [
+        "naturwissenschaft"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "mathematik",
+      "targetType": "topic",
+      "targetTitle": "Frühkindliche Mathematik",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Messen, Sortieren und Vergleichen verbinden Naturerfahrung mit Mathematik."
+    },
+    {
+      "id": "detail-naturwissenschaft-v1--02--gesundheit-ernaehrung",
+      "sourceDetailId": "detail-naturwissenschaft-v1",
+      "sourceTitle": "Natur, Umwelt und Technik",
+      "sourceTopicIds": [
+        "naturwissenschaft"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "gesundheit-ernaehrung",
+      "targetType": "topic",
+      "targetTitle": "Gesundheit und Ernährung",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Körper, Natur und Wohlbefinden sind in Alltagserfahrungen verbunden."
+    },
+    {
+      "id": "detail-naturwissenschaft-v1--03--partizipation",
+      "sourceDetailId": "detail-naturwissenschaft-v1",
+      "sourceTitle": "Natur, Umwelt und Technik",
+      "sourceTopicIds": [
+        "naturwissenschaft"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "partizipation",
+      "targetType": "topic",
+      "targetTitle": "Partizipation",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Nachhaltigkeit wird bedeutsam, wenn Kinder Handlungsmöglichkeiten erleben."
+    },
+    {
+      "id": "detail-naturwissenschaft-v1--04--selbstwirksamkeit",
+      "sourceDetailId": "detail-naturwissenschaft-v1",
+      "sourceTitle": "Natur, Umwelt und Technik",
+      "sourceTopicIds": [
+        "naturwissenschaft"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "selbstwirksamkeit",
+      "targetType": "topic",
+      "targetTitle": "Selbstwirksamkeit",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Kinder erleben Wirksamkeit, wenn sie Natur und Technik handelnd verstehen."
+    },
+    {
+      "id": "detail-naturwissenschaft-v1--05--bildungsleitlinien",
+      "sourceDetailId": "detail-naturwissenschaft-v1",
+      "sourceTitle": "Natur, Umwelt und Technik",
+      "sourceTopicIds": [
+        "naturwissenschaft"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "bildungsleitlinien",
+      "targetType": "topic",
+      "targetTitle": "Bildungsleitlinien als Rahmen",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Natur/Umwelt/Technik ist als Bildungsbereich rahmend verankert."
+    },
+    {
+      "id": "detail-partizipation-v1--01--rechte",
+      "sourceDetailId": "detail-partizipation-v1",
+      "sourceTitle": "Partizipation",
+      "sourceTopicIds": [
+        "partizipation"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "rechte",
+      "targetType": "topic",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Partizipation ist eng mit Kinderrechten und Beteiligungsrechten verbunden."
+    },
+    {
+      "id": "detail-partizipation-v1--02--selbstwirksamkeit",
+      "sourceDetailId": "detail-partizipation-v1",
+      "sourceTitle": "Partizipation",
+      "sourceTopicIds": [
+        "partizipation"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "selbstwirksamkeit",
+      "targetType": "topic",
+      "targetTitle": "Selbstwirksamkeit",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Mitentscheidung lässt Kinder erleben, dass ihr Handeln und Sprechen Wirkung hat."
+    },
+    {
+      "id": "detail-partizipation-v1--03--politik",
+      "sourceDetailId": "detail-partizipation-v1",
+      "sourceTitle": "Partizipation",
+      "sourceTopicIds": [
+        "partizipation"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "politik",
+      "targetType": "topic",
+      "targetTitle": "Politische Bildung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Partizipation ist eine konkrete Praxis demokratischer und politischer Bildung."
+    },
+    {
+      "id": "detail-partizipation-v1--04--regeln-struktur",
+      "sourceDetailId": "detail-partizipation-v1",
+      "sourceTitle": "Partizipation",
+      "sourceTopicIds": [
+        "partizipation"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "regeln-struktur",
+      "targetType": "topic",
+      "targetTitle": "Regeln und Struktur",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Regeln werden zu Lernfeldern, wenn sie gemeinsam ausgehandelt oder geprüft werden."
+    },
+    {
+      "id": "detail-partizipation-v1--05--macht-verantwortung",
+      "sourceDetailId": "detail-partizipation-v1",
+      "sourceTitle": "Partizipation",
+      "sourceTopicIds": [
+        "partizipation"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "macht-verantwortung",
+      "targetType": "topic",
+      "targetTitle": "Macht und Verantwortung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Partizipation verändert Machtverhältnisse und verlangt verantwortliche Begrenzung von Fachkraftmacht."
+    },
+    {
+      "id": "detail-politik-v1--01--partizipation",
+      "sourceDetailId": "detail-politik-v1",
+      "sourceTitle": "Politische Bildung",
+      "sourceTopicIds": [
+        "politik"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "partizipation",
+      "targetType": "topic",
+      "targetTitle": "Partizipation",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Partizipation ist der zentrale Praxisort politischer Bildung."
+    },
+    {
+      "id": "detail-politik-v1--02--rechte",
+      "sourceDetailId": "detail-politik-v1",
+      "sourceTitle": "Politische Bildung",
+      "sourceTopicIds": [
+        "politik"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "rechte",
+      "targetType": "topic",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Kinderrechte geben politischer Bildung einen normativen Rahmen."
+    },
+    {
+      "id": "detail-politik-v1--03--macht-verantwortung",
+      "sourceDetailId": "detail-politik-v1",
+      "sourceTitle": "Politische Bildung",
+      "sourceTopicIds": [
+        "politik"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "macht-verantwortung",
+      "targetType": "topic",
+      "targetTitle": "Macht und Verantwortung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Politische Bildung macht Machtverhältnisse und Verantwortung besprechbar."
+    },
+    {
+      "id": "detail-politik-v1--04--regeln-struktur",
+      "sourceDetailId": "detail-politik-v1",
+      "sourceTitle": "Politische Bildung",
+      "sourceTopicIds": [
+        "politik"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "regeln-struktur",
+      "targetType": "topic",
+      "targetTitle": "Regeln und Struktur",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Regeln sind politische Alltagsobjekte, wenn sie gemeinsam begründet und verändert werden können."
+    },
+    {
+      "id": "detail-politik-v1--05--institutioneller-auftrag",
+      "sourceDetailId": "detail-politik-v1",
+      "sourceTitle": "Politische Bildung",
+      "sourceTopicIds": [
+        "politik"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "institutioneller-auftrag",
+      "targetType": "topic",
+      "targetTitle": "Institutioneller Auftrag",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Einrichtungen müssen klären, wie Demokratiebildung in ihrem Auftrag praktisch wird."
+    },
+    {
+      "id": "detail-professionelle-haltung-v1--01--berufsrolle",
+      "sourceDetailId": "detail-professionelle-haltung-v1",
+      "sourceTitle": "Professionelle Haltung",
+      "sourceTopicIds": [
+        "professionelle-haltung"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "berufsrolle",
+      "targetType": "topic",
+      "targetTitle": "Berufsrolle",
+      "targetAxisId": "professionalitaet",
+      "relation": "Die Berufsrolle braucht Haltung, damit Aufgaben fachlich und nicht nur persönlich ausgefüllt werden."
+    },
+    {
+      "id": "detail-professionelle-haltung-v1--02--reflexion",
+      "sourceDetailId": "detail-professionelle-haltung-v1",
+      "sourceTitle": "Professionelle Haltung",
+      "sourceTopicIds": [
+        "professionelle-haltung"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "reflexion",
+      "targetType": "topic",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "targetAxisId": "professionalitaet",
+      "relation": "Haltung wird professionell, wenn sie regelmäßig reflektiert und korrigierbar bleibt."
+    },
+    {
+      "id": "detail-professionelle-haltung-v1--03--dialogische-haltung",
+      "sourceDetailId": "detail-professionelle-haltung-v1",
+      "sourceTitle": "Professionelle Haltung",
+      "sourceTopicIds": [
+        "professionelle-haltung"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "dialogische-haltung",
+      "targetType": "topic",
+      "targetTitle": "Dialogische Haltung",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Dialogische Haltung ist eine konkrete Ausprägung professioneller Haltung in Kommunikation."
+    },
+    {
+      "id": "detail-professionelle-haltung-v1--04--aufsichtspflicht",
+      "sourceDetailId": "detail-professionelle-haltung-v1",
+      "sourceTitle": "Professionelle Haltung",
+      "sourceTopicIds": [
+        "professionelle-haltung"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "aufsichtspflicht",
+      "targetType": "topic",
+      "targetTitle": "Aufsichtspflicht",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Auch Schutz und Grenzen brauchen eine begründete professionelle Haltung."
+    },
+    {
+      "id": "detail-professionelle-haltung-v1--05--elternkooperation",
+      "sourceDetailId": "detail-professionelle-haltung-v1",
+      "sourceTitle": "Professionelle Haltung",
+      "sourceTopicIds": [
+        "professionelle-haltung"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Eltern erleben Professionalität wesentlich über Haltung, Sprache und Verlässlichkeit."
+    },
+    {
+      "id": "detail-rechte-v1--01--partizipation",
+      "sourceDetailId": "detail-rechte-v1",
+      "sourceTitle": "Kinderrechte und Beteiligung",
+      "sourceTopicIds": [
+        "rechte"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "partizipation",
+      "targetType": "topic",
+      "targetTitle": "Partizipation",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Partizipation ist die Alltagspraxis von Beteiligungsrechten."
+    },
+    {
+      "id": "detail-rechte-v1--02--kindeswohl",
+      "sourceDetailId": "detail-rechte-v1",
+      "sourceTitle": "Kinderrechte und Beteiligung",
+      "sourceTopicIds": [
+        "rechte"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "kindeswohl",
+      "targetType": "topic",
+      "targetTitle": "Kindeswohl und Schutz",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Der Vorrang des Kindeswohls ist ein zentrales Kinderrechtsprinzip."
+    },
+    {
+      "id": "detail-rechte-v1--03--politik",
+      "sourceDetailId": "detail-rechte-v1",
+      "sourceTitle": "Kinderrechte und Beteiligung",
+      "sourceTopicIds": [
+        "rechte"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "politik",
+      "targetType": "topic",
+      "targetTitle": "Politische Bildung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Kinderrechte und Beteiligung sind Grundlage demokratischer Bildung."
+    },
+    {
+      "id": "detail-rechte-v1--04--macht-verantwortung",
+      "sourceDetailId": "detail-rechte-v1",
+      "sourceTitle": "Kinderrechte und Beteiligung",
+      "sourceTopicIds": [
+        "rechte"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "macht-verantwortung",
+      "targetType": "topic",
+      "targetTitle": "Macht und Verantwortung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Rechte begrenzen Fachkraftmacht und machen Verantwortung überprüfbar."
+    },
+    {
+      "id": "detail-rechte-v1--05--bildungsleitlinien",
+      "sourceDetailId": "detail-rechte-v1",
+      "sourceTitle": "Kinderrechte und Beteiligung",
+      "sourceTopicIds": [
+        "rechte"
+      ],
+      "sourceAxisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "targetId": "bildungsleitlinien",
+      "targetType": "topic",
+      "targetTitle": "Bildungsleitlinien als Rahmen",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Kinderrechte sind ein Leitmotiv der Bildungsleitlinien."
+    },
+    {
+      "id": "detail-reflexion-v1--01--professionelle-haltung",
+      "sourceDetailId": "detail-reflexion-v1",
+      "sourceTitle": "Reflexion und Selbstverständnis",
+      "sourceTopicIds": [
+        "reflexion"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Haltung braucht Reflexion, damit sie nicht zur ungeprüften persönlichen Überzeugung wird."
+    },
+    {
+      "id": "detail-reflexion-v1--02--berufsrolle",
+      "sourceDetailId": "detail-reflexion-v1",
+      "sourceTitle": "Reflexion und Selbstverständnis",
+      "sourceTopicIds": [
+        "reflexion"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "berufsrolle",
+      "targetType": "topic",
+      "targetTitle": "Berufsrolle",
+      "targetAxisId": "professionalitaet",
+      "relation": "Reflexion klärt, was aus der Berufsrolle heraus geboten ist."
+    },
+    {
+      "id": "detail-reflexion-v1--03--fallverstehen",
+      "sourceDetailId": "detail-reflexion-v1",
+      "sourceTitle": "Reflexion und Selbstverständnis",
+      "sourceTopicIds": [
+        "reflexion"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "fallverstehen",
+      "targetType": "topic",
+      "targetTitle": "Fallverstehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Fallverstehen verlangt Reflexion eigener Deutungen und Hypothesen."
+    },
+    {
+      "id": "detail-reflexion-v1--04--familienperspektive",
+      "sourceDetailId": "detail-reflexion-v1",
+      "sourceTitle": "Reflexion und Selbstverständnis",
+      "sourceTopicIds": [
+        "reflexion"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "familienperspektive",
+      "targetType": "topic",
+      "targetTitle": "Familienperspektive",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Reflexion schützt vor festen Bildern über Eltern und Familien."
+    },
+    {
+      "id": "detail-reflexion-v1--05--macht-verantwortung",
+      "sourceDetailId": "detail-reflexion-v1",
+      "sourceTitle": "Reflexion und Selbstverständnis",
+      "sourceTopicIds": [
+        "reflexion"
+      ],
+      "sourceAxisIds": [
+        "professionalitaet"
+      ],
+      "targetId": "macht-verantwortung",
+      "targetType": "topic",
+      "targetTitle": "Macht und Verantwortung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Macht in pädagogischen Beziehungen muss reflektiert werden, um verantwortlich eingesetzt zu werden."
+    },
+    {
+      "id": "detail-regeln-struktur-v1--01--wohngruppe",
+      "sourceDetailId": "detail-regeln-struktur-v1",
+      "sourceTitle": "Regeln und Struktur",
+      "sourceTopicIds": [
+        "regeln-struktur"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "wohngruppe",
+      "targetType": "topic",
+      "targetTitle": "Wohngruppe",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "In Wohngruppen strukturieren Regeln den gemeinsamen Lebensalltag."
+    },
+    {
+      "id": "detail-regeln-struktur-v1--02--partizipation",
+      "sourceDetailId": "detail-regeln-struktur-v1",
+      "sourceTitle": "Regeln und Struktur",
+      "sourceTopicIds": [
+        "regeln-struktur"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "partizipation",
+      "targetType": "topic",
+      "targetTitle": "Partizipation",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Regeln werden tragfähiger, wenn Betroffene an ihrer Aushandlung beteiligt werden."
+    },
+    {
+      "id": "detail-regeln-struktur-v1--03--aufsichtspflicht",
+      "sourceDetailId": "detail-regeln-struktur-v1",
+      "sourceTitle": "Regeln und Struktur",
+      "sourceTopicIds": [
+        "regeln-struktur"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "aufsichtspflicht",
+      "targetType": "topic",
+      "targetTitle": "Aufsichtspflicht",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Ein Teil von Regeln dient Schutz und Aufsicht, darf aber Freiräume nicht unnötig ersticken."
+    },
+    {
+      "id": "detail-regeln-struktur-v1--04--anpassung-selbstbestimmung",
+      "sourceDetailId": "detail-regeln-struktur-v1",
+      "sourceTitle": "Regeln und Struktur",
+      "sourceTopicIds": [
+        "regeln-struktur"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "anpassung-selbstbestimmung",
+      "targetType": "topic",
+      "targetTitle": "Anpassung und Selbstbestimmung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Regeln markieren die Spannung zwischen gemeinsamer Ordnung und individueller Selbstbestimmung."
+    },
+    {
+      "id": "detail-regeln-struktur-v1--05--macht-verantwortung",
+      "sourceDetailId": "detail-regeln-struktur-v1",
+      "sourceTitle": "Regeln und Struktur",
+      "sourceTopicIds": [
+        "regeln-struktur"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "macht-verantwortung",
+      "targetType": "topic",
+      "targetTitle": "Macht und Verantwortung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Wer Regeln setzt und durchsetzt, übt Macht aus und trägt Verantwortung."
+    },
+    {
+      "id": "detail-religion-ethik-v1--01--ethik",
+      "sourceDetailId": "detail-religion-ethik-v1",
+      "sourceTitle": "Religion, Gesellschaft und Ethik",
+      "sourceTopicIds": [
+        "religion-ethik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "ethik",
+      "targetType": "topic",
+      "targetTitle": "Ethik",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Der Bildungsbereich konkretisiert ethische Reflexion in Alltagsthemen."
+    },
+    {
+      "id": "detail-religion-ethik-v1--02--familienperspektive",
+      "sourceDetailId": "detail-religion-ethik-v1",
+      "sourceTitle": "Religion, Gesellschaft und Ethik",
+      "sourceTopicIds": [
+        "religion-ethik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "familienperspektive",
+      "targetType": "topic",
+      "targetTitle": "Familienperspektive",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Religion und Werte sind oft Teil familiärer Lebenswelten."
+    },
+    {
+      "id": "detail-religion-ethik-v1--03--rechte",
+      "sourceDetailId": "detail-religion-ethik-v1",
+      "sourceTitle": "Religion, Gesellschaft und Ethik",
+      "sourceTopicIds": [
+        "religion-ethik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "rechte",
+      "targetType": "topic",
+      "targetTitle": "Kinderrechte und Beteiligung",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Kinderrechte rahmen Respekt, Beteiligung und Schutz."
+    },
+    {
+      "id": "detail-religion-ethik-v1--04--politik",
+      "sourceDetailId": "detail-religion-ethik-v1",
+      "sourceTitle": "Religion, Gesellschaft und Ethik",
+      "sourceTopicIds": [
+        "religion-ethik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "politik",
+      "targetType": "topic",
+      "targetTitle": "Politische Bildung",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Gesellschaftliche Fragen verbinden Religion/Ethik mit demokratischer Bildung."
+    },
+    {
+      "id": "detail-religion-ethik-v1--05--professionelle-haltung",
+      "sourceDetailId": "detail-religion-ethik-v1",
+      "sourceTitle": "Religion, Gesellschaft und Ethik",
+      "sourceTopicIds": [
+        "religion-ethik"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Fachkräfte müssen eigene Werte professionell reflektieren."
+    },
+    {
+      "id": "detail-ressourcenorientierung-v1--01--beobachtung",
+      "sourceDetailId": "detail-ressourcenorientierung-v1",
+      "sourceTitle": "Ressourcenorientierung",
+      "sourceTopicIds": [
+        "ressourcenorientierung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Beobachtung liefert die konkreten Hinweise auf Ressourcen."
+    },
+    {
+      "id": "detail-ressourcenorientierung-v1--02--fallverstehen",
+      "sourceDetailId": "detail-ressourcenorientierung-v1",
+      "sourceTitle": "Ressourcenorientierung",
+      "sourceTopicIds": [
+        "ressourcenorientierung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "fallverstehen",
+      "targetType": "topic",
+      "targetTitle": "Fallverstehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Fallverstehen ordnet Ressourcen, Bedürfnisse und Kontexte zusammen."
+    },
+    {
+      "id": "detail-ressourcenorientierung-v1--03--foerderplanung",
+      "sourceDetailId": "detail-ressourcenorientierung-v1",
+      "sourceTitle": "Ressourcenorientierung",
+      "sourceTopicIds": [
+        "ressourcenorientierung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "foerderplanung",
+      "targetType": "topic",
+      "targetTitle": "Förderliche Schlüsse ziehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Förderplanung soll an vorhandenen Ressourcen anschließen."
+    },
+    {
+      "id": "detail-ressourcenorientierung-v1--04--lernarrangements",
+      "sourceDetailId": "detail-ressourcenorientierung-v1",
+      "sourceTitle": "Ressourcenorientierung",
+      "sourceTopicIds": [
+        "ressourcenorientierung"
+      ],
+      "sourceAxisIds": [
+        "beobachtung-fallverstehen"
+      ],
+      "targetId": "lernarrangements",
+      "targetType": "topic",
+      "targetTitle": "Lernarrangements",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Lernarrangements werden passender, wenn sie Interessen und Stärken aufnehmen."
+    },
+    {
+      "id": "detail-selbstwirksamkeit-v1--01--aufsichtspflicht",
+      "sourceDetailId": "detail-selbstwirksamkeit-v1",
+      "sourceTitle": "Selbstwirksamkeit",
+      "sourceTopicIds": [
+        "selbstwirksamkeit"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "aufsichtspflicht",
+      "targetType": "topic",
+      "targetTitle": "Aufsichtspflicht",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Aufsicht muss Freiräume ermöglichen, in denen Selbstwirksamkeit erfahrbar wird."
+    },
+    {
+      "id": "detail-selbstwirksamkeit-v1--02--ressourcenorientierung",
+      "sourceDetailId": "detail-selbstwirksamkeit-v1",
+      "sourceTitle": "Selbstwirksamkeit",
+      "sourceTopicIds": [
+        "selbstwirksamkeit"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "ressourcenorientierung",
+      "targetType": "topic",
+      "targetTitle": "Ressourcenorientierung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Selbstwirksamkeit baut auf sichtbaren Stärken und Handlungsmöglichkeiten des Kindes auf."
+    },
+    {
+      "id": "detail-selbstwirksamkeit-v1--03--lernarrangements",
+      "sourceDetailId": "detail-selbstwirksamkeit-v1",
+      "sourceTitle": "Selbstwirksamkeit",
+      "sourceTopicIds": [
+        "selbstwirksamkeit"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "lernarrangements",
+      "targetType": "topic",
+      "targetTitle": "Lernarrangements",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Räume und Angebote können so gestaltet werden, dass Kinder eigenständig handeln und Folgen erleben."
+    },
+    {
+      "id": "detail-selbstwirksamkeit-v1--04--anpassung-selbstbestimmung",
+      "sourceDetailId": "detail-selbstwirksamkeit-v1",
+      "sourceTitle": "Selbstwirksamkeit",
+      "sourceTopicIds": [
+        "selbstwirksamkeit"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "anpassung-selbstbestimmung",
+      "targetType": "topic",
+      "targetTitle": "Anpassung und Selbstbestimmung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Selbstwirksamkeit verlangt eigene Wahl- und Entscheidungsspielräume."
+    },
+    {
+      "id": "detail-selbstwirksamkeit-v1--05--beobachtung",
+      "sourceDetailId": "detail-selbstwirksamkeit-v1",
+      "sourceTitle": "Selbstwirksamkeit",
+      "sourceTopicIds": [
+        "selbstwirksamkeit"
+      ],
+      "sourceAxisIds": [
+        "beziehung-entwicklung"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Beobachtung zeigt, wo Kinder Initiative, Ausdauer und Zutrauen entwickeln."
+    },
+    {
+      "id": "detail-sozialpaedagogische-grundlagen-v1--01--fallverstehen",
+      "sourceDetailId": "detail-sozialpaedagogische-grundlagen-v1",
+      "sourceTitle": "Sozialpädagogische Grundlagen",
+      "sourceTopicIds": [
+        "sozialpaedagogische-grundlagen"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "fallverstehen",
+      "targetType": "topic",
+      "targetTitle": "Fallverstehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Sozialpädagogische Grundlagen stützen die Deutung konkreter Situationen."
+    },
+    {
+      "id": "detail-sozialpaedagogische-grundlagen-v1--02--foerderplanung",
+      "sourceDetailId": "detail-sozialpaedagogische-grundlagen-v1",
+      "sourceTitle": "Sozialpädagogische Grundlagen",
+      "sourceTopicIds": [
+        "sozialpaedagogische-grundlagen"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "foerderplanung",
+      "targetType": "topic",
+      "targetTitle": "Förderliche Schlüsse ziehen",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Ziele und Planung entstehen aus fachlich begründetem Verstehen."
+    },
+    {
+      "id": "detail-sozialpaedagogische-grundlagen-v1--03--professionelle-haltung",
+      "sourceDetailId": "detail-sozialpaedagogische-grundlagen-v1",
+      "sourceTitle": "Sozialpädagogische Grundlagen",
+      "sourceTopicIds": [
+        "sozialpaedagogische-grundlagen"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "professionelle-haltung",
+      "targetType": "topic",
+      "targetTitle": "Professionelle Haltung",
+      "targetAxisId": "professionalitaet",
+      "relation": "Handeln braucht reflektierte Haltung und Fachbegründung."
+    },
+    {
+      "id": "detail-sozialpaedagogische-grundlagen-v1--04--institutioneller-auftrag",
+      "sourceDetailId": "detail-sozialpaedagogische-grundlagen-v1",
+      "sourceTitle": "Sozialpädagogische Grundlagen",
+      "sourceTopicIds": [
+        "sozialpaedagogische-grundlagen"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "institutioneller-auftrag",
+      "targetType": "topic",
+      "targetTitle": "Institutioneller Auftrag",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Sozialpädagogisches Handeln findet innerhalb eines Auftrags statt."
+    },
+    {
+      "id": "detail-sozialpaedagogische-grundlagen-v1--05--reflexion",
+      "sourceDetailId": "detail-sozialpaedagogische-grundlagen-v1",
+      "sourceTitle": "Sozialpädagogische Grundlagen",
+      "sourceTopicIds": [
+        "sozialpaedagogische-grundlagen"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "reflexion",
+      "targetType": "topic",
+      "targetTitle": "Reflexion und Selbstverständnis",
+      "targetAxisId": "professionalitaet",
+      "relation": "Reflexion prüft Annahmen, Ziele und Wirkungen."
+    },
+    {
+      "id": "detail-sprachbildung-v1--01--dialogische-haltung",
+      "sourceDetailId": "detail-sprachbildung-v1",
+      "sourceTitle": "Sprachbildung im Alltag",
+      "sourceTopicIds": [
+        "sprachbildung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "dialogische-haltung",
+      "targetType": "topic",
+      "targetTitle": "Dialogische Haltung",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Sprachbildung gelingt alltagsintegriert, wenn Fachkräfte kindliche Beiträge dialogisch aufnehmen und erweitern."
+    },
+    {
+      "id": "detail-sprachbildung-v1--02--gespraechsanlaesse",
+      "sourceDetailId": "detail-sprachbildung-v1",
+      "sourceTitle": "Sprachbildung im Alltag",
+      "sourceTopicIds": [
+        "sprachbildung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "gespraechsanlaesse",
+      "targetType": "topic",
+      "targetTitle": "Gesprächsanlässe",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Gesprächsanlässe sind der konkrete Ort, an dem Alltag zur Sprachbildung wird."
+    },
+    {
+      "id": "detail-sprachbildung-v1--03--sprache-kommunikation",
+      "sourceDetailId": "detail-sprachbildung-v1",
+      "sourceTitle": "Sprachbildung im Alltag",
+      "sourceTopicIds": [
+        "sprachbildung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "sprache-kommunikation",
+      "targetType": "topic",
+      "targetTitle": "Sprache und Kommunikation",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Sprachbildung operationalisiert Sprache und Kommunikation als Bildungsmedium."
+    },
+    {
+      "id": "detail-sprachbildung-v1--04--beobachtung",
+      "sourceDetailId": "detail-sprachbildung-v1",
+      "sourceTitle": "Sprachbildung im Alltag",
+      "sourceTopicIds": [
+        "sprachbildung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Sprachliche Äußerungen zeigen Interessen, Begriffe, Deutungen und Entwicklungsstände."
+    },
+    {
+      "id": "detail-sprachbildung-v1--05--lernarrangements",
+      "sourceDetailId": "detail-sprachbildung-v1",
+      "sourceTitle": "Sprachbildung im Alltag",
+      "sourceTopicIds": [
+        "sprachbildung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "lernarrangements",
+      "targetType": "topic",
+      "targetTitle": "Lernarrangements",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Sprachreiche Räume, Bücher, Beschriftungen und Erzählanlässe machen Sprachbildung gestaltbar."
+    },
+    {
+      "id": "detail-sprachbildung-v1--06--elternkooperation",
+      "sourceDetailId": "detail-sprachbildung-v1",
+      "sourceTitle": "Sprachbildung im Alltag",
+      "sourceTopicIds": [
+        "sprachbildung"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Familiäre Sprach- und Literacy-Erfahrungen können in der Zusammenarbeit mit Eltern wertschätzend aufgegriffen werden."
+    },
+    {
+      "id": "detail-sprache-kommunikation-v1--01--bindung-beziehung",
+      "sourceDetailId": "detail-sprache-kommunikation-v1",
+      "sourceTitle": "Sprache und Kommunikation",
+      "sourceTopicIds": [
+        "sprache-kommunikation"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "bindung-beziehung",
+      "targetType": "topic",
+      "targetTitle": "Bindung und Beziehung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Dialogische Kommunikation ist eine Form von Beziehungsgestaltung."
+    },
+    {
+      "id": "detail-sprache-kommunikation-v1--02--bildungsbereiche",
+      "sourceDetailId": "detail-sprache-kommunikation-v1",
+      "sourceTitle": "Sprache und Kommunikation",
+      "sourceTopicIds": [
+        "sprache-kommunikation"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "bildungsbereiche",
+      "targetType": "axis",
+      "targetTitle": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Sprache erschließt Themen, Bedeutungen und gemeinsames Denken."
+    },
+    {
+      "id": "detail-sprache-kommunikation-v1--03--beobachtung",
+      "sourceDetailId": "detail-sprache-kommunikation-v1",
+      "sourceTitle": "Sprache und Kommunikation",
+      "sourceTopicIds": [
+        "sprache-kommunikation"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "beobachtung",
+      "targetType": "topic",
+      "targetTitle": "Beobachtung",
+      "targetAxisId": "beobachtung-fallverstehen",
+      "relation": "Sprachliche Beiträge zeigen Interessen, Deutungen und Entwicklungsstände."
+    },
+    {
+      "id": "detail-sprache-kommunikation-v1--04--sprachbildung",
+      "sourceDetailId": "detail-sprache-kommunikation-v1",
+      "sourceTitle": "Sprache und Kommunikation",
+      "sourceTopicIds": [
+        "sprache-kommunikation"
+      ],
+      "sourceAxisIds": [
+        "sprache-kommunikation"
+      ],
+      "targetId": "sprachbildung",
+      "targetType": "topic",
+      "targetTitle": "Sprachbildung im Alltag",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Literacy verbindet Sprache, Schrift, Bilder und Erzählkultur."
+    },
+    {
+      "id": "detail-theater-v1--01--kunst-aesthetik",
+      "sourceDetailId": "detail-theater-v1",
+      "sourceTitle": "Theater",
+      "sourceTopicIds": [
+        "theater"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "kunst-aesthetik",
+      "targetType": "topic",
+      "targetTitle": "Kunst und Ästhetik",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Theater ist Teil ästhetischer Bildung."
+    },
+    {
+      "id": "detail-theater-v1--02--musik-rhythmik",
+      "sourceDetailId": "detail-theater-v1",
+      "sourceTitle": "Theater",
+      "sourceTopicIds": [
+        "theater"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "musik-rhythmik",
+      "targetType": "topic",
+      "targetTitle": "Musik und Rhythmik",
+      "targetAxisId": "bildungsbereiche",
+      "relation": "Musik, Rhythmus und Bewegung können Szenen tragen."
+    },
+    {
+      "id": "detail-theater-v1--03--sprache-kommunikation",
+      "sourceDetailId": "detail-theater-v1",
+      "sourceTitle": "Theater",
+      "sourceTopicIds": [
+        "theater"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "sprache-kommunikation",
+      "targetType": "topic",
+      "targetTitle": "Sprache und Kommunikation",
+      "targetAxisId": "sprache-kommunikation",
+      "relation": "Theater nutzt Sprache, Stimme, Erzählung und nonverbale Kommunikation."
+    },
+    {
+      "id": "detail-theater-v1--04--selbstwirksamkeit",
+      "sourceDetailId": "detail-theater-v1",
+      "sourceTitle": "Theater",
+      "sourceTopicIds": [
+        "theater"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "selbstwirksamkeit",
+      "targetType": "topic",
+      "targetTitle": "Selbstwirksamkeit",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Kinder erleben Wirkung, wenn ihre Rollen und Szenen Resonanz erzeugen."
+    },
+    {
+      "id": "detail-theater-v1--05--gruppe-institution-politik",
+      "sourceDetailId": "detail-theater-v1",
+      "sourceTitle": "Theater",
+      "sourceTopicIds": [
+        "theater"
+      ],
+      "sourceAxisIds": [
+        "bildungsbereiche"
+      ],
+      "targetId": "gruppe-institution-politik",
+      "targetType": "axis",
+      "targetTitle": "Gruppe, Institution, Wohngruppe und Politik",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Theater macht Rollen, Konflikte und Gruppenbeziehungen spielerisch bearbeitbar."
+    },
+    {
+      "id": "detail-uebergaenge-v1--01--eingewoehnung",
+      "sourceDetailId": "detail-uebergaenge-v1",
+      "sourceTitle": "Übergänge",
+      "sourceTopicIds": [
+        "uebergaenge"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "eingewoehnung",
+      "targetType": "topic",
+      "targetTitle": "Eingewöhnung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Eingewöhnung ist ein zentraler Übergang in die Einrichtung."
+    },
+    {
+      "id": "detail-uebergaenge-v1--02--bindung-beziehung",
+      "sourceDetailId": "detail-uebergaenge-v1",
+      "sourceTitle": "Übergänge",
+      "sourceTopicIds": [
+        "uebergaenge"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "bindung-beziehung",
+      "targetType": "topic",
+      "targetTitle": "Bindung und Beziehung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Beziehungssicherheit trägt Übergänge."
+    },
+    {
+      "id": "detail-uebergaenge-v1--03--elternkooperation",
+      "sourceDetailId": "detail-uebergaenge-v1",
+      "sourceTitle": "Übergänge",
+      "sourceTopicIds": [
+        "uebergaenge"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "elternkooperation",
+      "targetType": "topic",
+      "targetTitle": "Elternkooperation",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Elternkooperation stabilisiert Übergänge zwischen Familie und Einrichtung."
+    },
+    {
+      "id": "detail-uebergaenge-v1--04--bindung-beziehung",
+      "sourceDetailId": "detail-uebergaenge-v1",
+      "sourceTitle": "Übergänge",
+      "sourceTopicIds": [
+        "uebergaenge"
+      ],
+      "sourceAxisIds": [
+        "eltern-kooperation"
+      ],
+      "targetId": "bindung-beziehung",
+      "targetType": "topic",
+      "targetTitle": "Bindung und Beziehung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Sicherheit ist die zentrale Bedingung für Orientierung und Exploration im Übergang."
+    },
+    {
+      "id": "detail-wohngruppe-v1--01--regeln-struktur",
+      "sourceDetailId": "detail-wohngruppe-v1",
+      "sourceTitle": "Wohngruppe",
+      "sourceTopicIds": [
+        "wohngruppe"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "regeln-struktur",
+      "targetType": "topic",
+      "targetTitle": "Regeln und Struktur",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Wohngruppen brauchen Regeln und Routinen, damit Zusammenleben verlässlich wird."
+    },
+    {
+      "id": "detail-wohngruppe-v1--02--partizipation",
+      "sourceDetailId": "detail-wohngruppe-v1",
+      "sourceTitle": "Wohngruppe",
+      "sourceTopicIds": [
+        "wohngruppe"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "partizipation",
+      "targetType": "topic",
+      "targetTitle": "Partizipation",
+      "targetAxisId": "gruppe-institution-politik",
+      "relation": "Mitbestimmung entscheidet darüber, ob die Wohngruppe nur verwaltet oder als Lebensraum mitgestaltet wird."
+    },
+    {
+      "id": "detail-wohngruppe-v1--03--bindung-beziehung",
+      "sourceDetailId": "detail-wohngruppe-v1",
+      "sourceTitle": "Wohngruppe",
+      "sourceTopicIds": [
+        "wohngruppe"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "bindung-beziehung",
+      "targetType": "topic",
+      "targetTitle": "Bindung und Beziehung",
+      "targetAxisId": "beziehung-entwicklung",
+      "relation": "Bezugsbetreuung und verlässliche Fachkräfte können Beziehungssicherheit ermöglichen."
+    },
+    {
+      "id": "detail-wohngruppe-v1--04--uebergaenge",
+      "sourceDetailId": "detail-wohngruppe-v1",
+      "sourceTitle": "Wohngruppe",
+      "sourceTopicIds": [
+        "wohngruppe"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "uebergaenge",
+      "targetType": "topic",
+      "targetTitle": "Übergänge",
+      "targetAxisId": "eltern-kooperation",
+      "relation": "Aufnahme, Rückkehr, Verselbstständigung und Auszug sind zentrale Übergänge der Wohngruppe."
+    },
+    {
+      "id": "detail-wohngruppe-v1--05--institutioneller-auftrag",
+      "sourceDetailId": "detail-wohngruppe-v1",
+      "sourceTitle": "Wohngruppe",
+      "sourceTopicIds": [
+        "wohngruppe"
+      ],
+      "sourceAxisIds": [
+        "gruppe-institution-politik"
+      ],
+      "targetId": "institutioneller-auftrag",
+      "targetType": "topic",
+      "targetTitle": "Institutioneller Auftrag",
+      "targetAxisId": "rahmen-recht-ethik",
+      "relation": "Die Wohngruppe ist immer auch durch gesetzlichen und institutionellen Hilfeauftrag geprägt."
+    }
+  ],
+  "limits": [
+    "Brücken sind aus Detailkarten abgeleitet und nicht eigenständig belegt.",
+    "Ein hoher Eingangswert zeigt Orientierungsknoten, nicht automatisch Wichtigkeit im Ausbildungsplan.",
+    "Relationstexte bleiben Kurzsynthesen und ersetzen keine Detailkarte."
+  ]
+}

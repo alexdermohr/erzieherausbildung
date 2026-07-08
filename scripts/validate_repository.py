@@ -30,12 +30,14 @@ required = [
     "data/machine-readable-inventory.json",
     "data/learning-map.v1.json",
     "data/pilot-index.v1.json",
+    "data/detail-bridge-index.v1.json",
     "data/details/index.v1.json",
     "data/details/backlog.v1.json",
     "data/surface-policy.v1.json",
     "docs/implementation-plan.md",
     "docs/learning-map-v1.md",
     "docs/pilot-index-v1.md",
+    "docs/detail-bridge-index-v1.md",
     "docs/surface-policy-v1.md",
     "schemas/learning-map.v1.schema.json",
     "schemas/detail.v1.schema.json",
@@ -44,6 +46,7 @@ required = [
     "visuals/learning-map-v1.canvas",
     "scripts/obsidian_views.py",
     "scripts/build_pilot_index.py",
+    "scripts/build_detail_bridge_index.py",
     "scripts/validate_details.py",
     "scripts/validate_detail_source_alignment.py",
     "scripts/validate_detail_backlog.py",
@@ -216,7 +219,7 @@ for source in surface_by_id["web"]["data_sources"]:
 for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list"]:
     assert element_id in index_html
 readme = (root / "README.md").read_text(encoding="utf-8")
-for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
+for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/detail-bridge-index-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
     assert token in readme
 
 obsidian_script = (root / "scripts/obsidian_views.py").read_text(encoding="utf-8")
@@ -331,6 +334,22 @@ assert all(item["reviewStatus"] == "needs-source" for item in pilot_index["unres
 assert all(item["claimType"] in {"question", "title-derived"} for item in pilot_index["unresolvedSourceWork"])
 assert "Konkret lokalisierte Quellen im Pilot" in expected_pilot_doc
 assert "Offene Quellenarbeit" in expected_pilot_doc
+
+bridge_spec = importlib.util.spec_from_file_location("detail_bridge_index_builder", root / "scripts/build_detail_bridge_index.py")
+bridge_index_builder = importlib.util.module_from_spec(bridge_spec)
+assert bridge_spec.loader is not None
+sys.modules[bridge_spec.name] = bridge_index_builder
+bridge_spec.loader.exec_module(bridge_index_builder)
+expected_bridge_json, expected_bridge_doc = bridge_index_builder.build_outputs()
+assert (root / "data/detail-bridge-index.v1.json").read_text(encoding="utf-8") == expected_bridge_json
+assert (root / "docs/detail-bridge-index-v1.md").read_text(encoding="utf-8") == expected_bridge_doc
+bridge_index = json.loads(expected_bridge_json)
+assert bridge_index["totals"]["details"] == len(detail_index["details"])
+assert bridge_index["totals"]["bridges"] == sum(len(j(entry["path"].lstrip("/")).get("bridges", [])) for entry in detail_index["details"])
+assert bridge_index["hubs"]
+assert "Detail-Brückenindex v1" in expected_bridge_doc
+assert "Orientierung, keine neue Quelle" in expected_bridge_doc
+assert "python3 scripts/build_detail_bridge_index.py --check" in workflow_validate
 
 
 for view_file in obsidian_views.VIEW_FILES:
