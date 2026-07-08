@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-sozialpaedagogische-grundlagen-v1",
+  "title": "Sozialpädagogische Grundlagen",
+  "topicIds": [
+    "sozialpaedagogische-grundlagen"
+  ],
+  "axisIds": [
+    "bildungsbereiche"
+  ],
+  "sourceRefs": [
+    "doc-022",
+    "doc-027"
+  ],
+  "excerptRefs": [
+    "doc-022-027-sozialpaedagogische-grundlagen-bildung-handlung"
+  ],
+  "summary": "Sozialpädagogische Grundlagen beschreiben, wie pädagogisches Handeln fachlich begründet wird: Bildungsverständnis, Lebenswelt, Beobachtung, Fallverstehen, Ziele, Planung, Handlungsalternativen und Reflexion greifen ineinander. Sie bilden die methodische Grundstruktur professioneller Praxis.",
+  "coreIdeas": [
+    "Bildung wird als aktiver, sozialer und lebensweltbezogener Prozess verstanden.",
+    "Sozialpädagogisches Handeln braucht Analyse, Zielklärung, Planung, Durchführung und Überprüfung.",
+    "Lebenswelt und Beziehungen beeinflussen, welche Handlung fachlich sinnvoll ist.",
+    "Fachliche Grundlagen verhindern, dass Praxis nur aus Intuition oder Routine besteht.",
+    "Der Handlungszyklus verbindet Fallverstehen, Förderung, Reflexion und professionelle Verantwortung."
+  ],
+  "practiceAnchors": [
+    "In Situationen trennen: Was ist beobachtet, was gedeutet, was fachlich begründet?",
+    "Ziele so formulieren, dass sie aus Fallverstehen und Einflussbereich hervorgehen.",
+    "Handlungsalternativen entwickeln, statt nur eine spontane Lösung zu wählen.",
+    "Lebenswelt, Familie, Gruppe und Institution in die Analyse einbeziehen.",
+    "Nach dem Handeln prüfen, was Wirkung hatte und was angepasst werden muss."
+  ],
+  "commonMisunderstandings": [
+    "Sozialpädagogische Grundlagen sind nicht bloß Theorie vor der Praxis.",
+    "Ein Ziel ist nicht automatisch fachlich, nur weil es gut klingt.",
+    "Handlungsplanung ersetzt nicht Beziehungsgestaltung.",
+    "Lebensweltorientierung bedeutet nicht, alles zu akzeptieren.",
+    "Reflexion gehört zum Handeln, nicht nur an sein Ende."
+  ],
+  "bridges": [
+    {
+      "targetId": "fallverstehen",
+      "relation": "Sozialpädagogische Grundlagen stützen die Deutung konkreter Situationen."
+    },
+    {
+      "targetId": "foerderplanung",
+      "relation": "Ziele und Planung entstehen aus fachlich begründetem Verstehen."
+    },
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Handeln braucht reflektierte Haltung und Fachbegründung."
+    },
+    {
+      "targetId": "institutioneller-auftrag",
+      "relation": "Sozialpädagogisches Handeln findet innerhalb eines Auftrags statt."
+    },
+    {
+      "targetId": "reflexion",
+      "relation": "Reflexion prüft Annahmen, Ziele und Wirkungen."
+    }
+  ],
+  "openQuestions": [
+    "Soll der sozialpädagogische Handlungszyklus als eigene Prozessvisualisierung entstehen?",
+    "Wie wird Theorie-Praxis-Verbindung ohne Prüfungslogik dargestellt?",
+    "Welche Begriffe brauchen Glossarstatus?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.35,
+  "interpolation": 0.3,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

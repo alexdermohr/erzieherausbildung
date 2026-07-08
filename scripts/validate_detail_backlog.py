@@ -57,8 +57,10 @@ for key in ['topicCount', 'detailedTopicCount', 'missingTopicCount', 'detailCove
     if coverage.get(key) != detail_index['coverage'].get(key):
         problems.append(f'coverageSnapshot mismatch {key}')
 entries = backlog.get('entries')
-if not isinstance(entries, list) or not entries:
-    problems.append('entries must be non-empty list')
+if not isinstance(entries, list):
+    problems.append('entries must be list')
+elif not entries and missing_topics:
+    problems.append('entries must be non-empty while missing detail topics exist')
 else:
     seen = set()
     topic_ids = []
