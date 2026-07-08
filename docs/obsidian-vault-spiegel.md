@@ -8,7 +8,7 @@ These: Die vorhandenen Markdown- und Canvas-Views gehören in Obsidian, weil sie
 
 Antithese: Ein unkontrollierter Vault-Spiegel erzeugt eine zweite Wahrheit, Drift und versehentlich versionierte Rohmaterialien.
 
-Synthese: Der Export ist deterministisch und Safe-List-basiert. Das Repo bleibt kanonisch; der Vault enthält nur abgeleitete View-Dateien. Der Pilotindex ist dabei eine Status- und Quellenarbeitsfläche, keine Rohquellenablage.
+Synthese: Der Export ist deterministisch und Safe-List-basiert. Das Repo bleibt kanonisch; der Vault enthält nur abgeleitete View-Dateien. Pilotindex und Detail-Brückenindex sind Status-, Quellenarbeits- und Orientierungsflächen, keine Rohquellenablage.
 
 ## Zielpfad
 
@@ -29,6 +29,7 @@ Nur diese Repo-Dateien werden gespiegelt:
 - `docs/learning-map-v1.md` -> `Lernlandkarte.md`
 - `docs/knowledge-network-v1.md` -> `Wissensnetz.md`
 - `docs/pilot-index-v1.md` -> `Pilotindex.md`
+- `docs/detail-bridge-index-v1.md` -> `Detail-Brückenindex.md`
 - `docs/visualization-decision.md` -> `Visualisierungsentscheidung.md`
 
 Zusätzlich werden erzeugt:
