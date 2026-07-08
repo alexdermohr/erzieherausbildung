@@ -73,6 +73,8 @@ def validate_item(item: dict, where: str) -> list[str]:
         problems.append(f"{where}: checked requires excerpted or interpreted claimType")
     if status == "checked" and not has_concrete_locator(item):
         problems.append(f"{where}: checked requires concrete sourceLocator")
+    if not has_concrete_locator(item) and status != "needs-source":
+        problems.append(f"{where}: sourceLocator placeholder requires needs-source reviewStatus")
     return problems
 
 
