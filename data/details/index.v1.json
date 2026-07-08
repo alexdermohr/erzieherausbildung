@@ -110,6 +110,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-bildungsleitlinien-v1",
+      "title": "Bildungsleitlinien als Rahmen",
+      "path": "/data/details/detail-bildungsleitlinien-v1.json",
+      "topicIds": [
+        "bildungsleitlinien"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "sourceRefs": [
+        "doc-003"
+      ],
+      "excerptRefs": [
+        "doc-003-bildungsleitlinien-rahmen-orientierung-kinderperspektive"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-bindung-beziehung-v1",
       "title": "Bindung und Beziehung",
       "path": "/data/details/detail-bindung-beziehung-v1.json",
@@ -238,6 +256,24 @@
       "detailStatus": "draft"
     },
     {
+      "id": "detail-ethik-v1",
+      "title": "Ethik",
+      "path": "/data/details/detail-ethik-v1.json",
+      "topicIds": [
+        "ethik"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "sourceRefs": [
+        "doc-028"
+      ],
+      "excerptRefs": [
+        "doc-028-ethik-werte-dilemma-verantwortung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
       "id": "detail-fallverstehen-v1",
       "title": "Fallverstehen",
       "path": "/data/details/detail-fallverstehen-v1.json",
@@ -306,6 +342,43 @@
       ],
       "excerptRefs": [
         "doc-009-gespraechsanlaesse-kindperspektive-aktuelles"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-institutioneller-auftrag-v1",
+      "title": "Institutioneller Auftrag",
+      "path": "/data/details/detail-institutioneller-auftrag-v1.json",
+      "topicIds": [
+        "institutioneller-auftrag"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "sourceRefs": [
+        "doc-003"
+      ],
+      "excerptRefs": [
+        "doc-003-institutioneller-auftrag-bildung-betreuung-erziehung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-kindeswohl-v1",
+      "title": "Kindeswohl und Schutz",
+      "path": "/data/details/detail-kindeswohl-v1.json",
+      "topicIds": [
+        "kindeswohl"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "sourceRefs": [
+        "doc-003",
+        "doc-010"
+      ],
+      "excerptRefs": [
+        "doc-003-010-kindeswohl-schutz-auftrag-aufsicht"
       ],
       "detailStatus": "draft"
     },
@@ -417,6 +490,25 @@
       ],
       "excerptRefs": [
         "doc-005-professionelle-haltung-selbstreflexion-teamhaltung"
+      ],
+      "detailStatus": "draft"
+    },
+    {
+      "id": "detail-rechte-v1",
+      "title": "Kinderrechte und Beteiligung",
+      "path": "/data/details/detail-rechte-v1.json",
+      "topicIds": [
+        "rechte"
+      ],
+      "axisIds": [
+        "rahmen-recht-ethik"
+      ],
+      "sourceRefs": [
+        "doc-003",
+        "doc-015"
+      ],
+      "excerptRefs": [
+        "doc-003-015-rechte-kinderrechte-beteiligung"
       ],
       "detailStatus": "draft"
     },
@@ -570,10 +662,10 @@
   ],
   "coverage": {
     "topicCount": 44,
-    "detailCount": 31,
-    "detailedTopicCount": 31,
-    "missingTopicCount": 13,
-    "detailCoverageRatio": 0.705,
+    "detailCount": 36,
+    "detailedTopicCount": 36,
+    "missingTopicCount": 8,
+    "detailCoverageRatio": 0.818,
     "detailedTopicIds": [
       "anpassung-selbstbestimmung",
       "arbeitsbedingungen",
@@ -581,6 +673,7 @@
       "aufsichtspflicht",
       "beobachtung",
       "berufsrolle",
+      "bildungsleitlinien",
       "bindung-beziehung",
       "dialogische-haltung",
       "dokumentation",
@@ -588,16 +681,20 @@
       "elterngespraeche",
       "elternkooperation",
       "erziehungspartnerschaft",
+      "ethik",
       "fallverstehen",
       "familienperspektive",
       "foerderplanung",
       "gespraechsanlaesse",
+      "institutioneller-auftrag",
+      "kindeswohl",
       "konflikte",
       "lernarrangements",
       "macht-verantwortung",
       "partizipation",
       "politik",
       "professionelle-haltung",
+      "rechte",
       "reflexion",
       "regeln-struktur",
       "ressourcenorientierung",
@@ -608,16 +705,11 @@
       "wohngruppe"
     ],
     "missingTopicIds": [
-      "bildungsleitlinien",
-      "ethik",
       "gesundheit-ernaehrung",
-      "institutioneller-auftrag",
-      "kindeswohl",
       "kunst-aesthetik",
       "mathematik",
       "musik-rhythmik",
       "naturwissenschaft",
-      "rechte",
       "religion-ethik",
       "sozialpaedagogische-grundlagen",
       "theater"
@@ -737,16 +829,16 @@
         "axisId": "rahmen-recht-ethik",
         "title": "Rahmen, Recht, Schutz und Ethik",
         "topicCount": 5,
-        "detailedTopicCount": 0,
-        "detailCoverageRatio": 0.0,
-        "detailedTopicIds": [],
-        "missingTopicIds": [
+        "detailedTopicCount": 5,
+        "detailCoverageRatio": 1.0,
+        "detailedTopicIds": [
           "bildungsleitlinien",
           "ethik",
           "institutioneller-auftrag",
           "kindeswohl",
           "rechte"
-        ]
+        ],
+        "missingTopicIds": []
       }
     ],
     "coverageStatus": "pilot-partial",

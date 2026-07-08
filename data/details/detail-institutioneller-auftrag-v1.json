@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-institutioneller-auftrag-v1",
+  "title": "Institutioneller Auftrag",
+  "topicIds": [
+    "institutioneller-auftrag"
+  ],
+  "axisIds": [
+    "rahmen-recht-ethik"
+  ],
+  "sourceRefs": [
+    "doc-003"
+  ],
+  "excerptRefs": [
+    "doc-003-institutioneller-auftrag-bildung-betreuung-erziehung"
+  ],
+  "summary": "Der institutionelle Auftrag beschreibt, wofür eine pädagogische Einrichtung fachlich und rechtlich steht. Er verbindet Bildung, Betreuung, Erziehung, Schutz, Teilhabe, Übergänge, Elternpartnerschaft und Qualitätsentwicklung. Dadurch rahmt er, welche Verantwortung Fachkräfte im Alltag tragen.",
+  "coreIdeas": [
+    "Pädagogische Einrichtungen handeln nicht beliebig, sondern innerhalb eines gesellschaftlichen und rechtlichen Auftrags.",
+    "Der Auftrag verbindet Förderung des Kindes mit Teilhabe, Schutz, Bildung und Zusammenarbeit mit Familien.",
+    "Fachkräfte füllen den Auftrag im Alltag konkret aus, etwa in Raumgestaltung, Gesprächen, Beobachtung und Entscheidungen.",
+    "Der Auftrag kann Spannungen erzeugen: individuelle Bedürfnisse, Gruppenerfordernisse, Elternperspektiven und institutionelle Vorgaben treffen aufeinander.",
+    "Institutioneller Auftrag macht deutlich, dass Professionalität mehr ist als persönliche Beziehungsgestaltung."
+  ],
+  "practiceAnchors": [
+    "Bei unklaren Entscheidungen fragen: Aus welchem Auftrag heraus handeln wir hier?",
+    "Eltern, Kinder und Team transparent machen, welche Verantwortung die Einrichtung übernimmt.",
+    "Konzeption, Leitlinien und Alltagspraxis auf Widersprüche prüfen.",
+    "Arbeitsfeld und Auftrag gemeinsam betrachten, weil der Auftrag je nach Einrichtung anders konkret wird.",
+    "Strukturelle Grenzen benennen, wenn Auftrag und Ressourcen auseinanderfallen."
+  ],
+  "commonMisunderstandings": [
+    "Institutioneller Auftrag ist nicht nur Verwaltungssprache.",
+    "Der Auftrag ersetzt nicht Beziehung und Fallverstehen, sondern rahmt sie.",
+    "Fachkräfte handeln nicht nur privat oder intuitiv.",
+    "Ein allgemeiner Auftrag wird erst in konkreter Praxis wirksam.",
+    "Auftrag und Elternwunsch sind nicht immer identisch."
+  ],
+  "bridges": [
+    {
+      "targetId": "bildungsleitlinien",
+      "relation": "Bildungsleitlinien geben dem institutionellen Bildungsauftrag fachliche Gestalt."
+    },
+    {
+      "targetId": "arbeitsfelder",
+      "relation": "Der Auftrag unterscheidet sich je nach Arbeitsfeld und Einrichtungstyp."
+    },
+    {
+      "targetId": "arbeitsbedingungen",
+      "relation": "Auftrag und reale Ressourcen müssen zusammen betrachtet werden."
+    },
+    {
+      "targetId": "rechte",
+      "relation": "Kinderrechte begrenzen und orientieren den Auftrag."
+    },
+    {
+      "targetId": "elternkooperation",
+      "relation": "Zusammenarbeit mit Familien ist Teil des institutionellen Auftrags."
+    }
+  ],
+  "openQuestions": [
+    "Soll der institutionelle Auftrag später pro Arbeitsfeld differenziert werden?",
+    "Welche Rolle spielen Konzeption, Träger und Landesrahmenvertrag in der Karte?",
+    "Wie werden Auftrag-Ressourcen-Spannungen visualisiert?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.36,
+  "interpolation": 0.31,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

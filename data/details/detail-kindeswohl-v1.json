@@ -1,0 +1,76 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-kindeswohl-v1",
+  "title": "Kindeswohl und Schutz",
+  "topicIds": [
+    "kindeswohl"
+  ],
+  "axisIds": [
+    "rahmen-recht-ethik"
+  ],
+  "sourceRefs": [
+    "doc-003",
+    "doc-010"
+  ],
+  "excerptRefs": [
+    "doc-003-010-kindeswohl-schutz-auftrag-aufsicht"
+  ],
+  "summary": "Kindeswohl und Schutz markieren eine verbindliche Grenze pädagogischen Handelns. Kinder haben Rechte auf Schutz, Beteiligung, Bildung und Beschwerde. Fachkräfte müssen Gefährdungen wahrnehmen, Schutz sichern und zugleich Entwicklung, Selbstständigkeit und Freiraum ermöglichen.",
+  "coreIdeas": [
+    "Kindeswohl ist kein Gefühl der Fachkraft, sondern ein Schutz- und Abwägungsbegriff.",
+    "Schutz vor Gewalt, Vernachlässigung und Gefährdung gehört zum Kern pädagogischer Verantwortung.",
+    "Kinderrechte und Kinderschutz gehören zusammen: Schutz darf Beteiligung nicht unnötig ausschalten.",
+    "Aufsichtspflicht zeigt die praktische Spannung zwischen Schutz und Entwicklungsfreiraum.",
+    "Kindeswohlentscheidungen brauchen Dokumentation, Reflexion und institutionelle Verfahren."
+  ],
+  "practiceAnchors": [
+    "Bei Sorge um ein Kind Beobachtungen konkret dokumentieren und nicht vorschnell etikettieren.",
+    "Schutzgrenzen klar setzen, aber Beteiligung und Erklärung nicht vergessen.",
+    "Bei Risiken prüfen: Welche Gefahr besteht konkret, welche Entwicklungschance ist pädagogisch vertretbar?",
+    "Team und institutionelle Schutzverfahren nutzen, statt allein zu entscheiden.",
+    "Beschwerde- und Beteiligungsmöglichkeiten als Teil von Schutz verstehen."
+  ],
+  "commonMisunderstandings": [
+    "Kindeswohl bedeutet nicht maximale Kontrolle.",
+    "Schutzauftrag ist nicht nur Reaktion auf Extremfälle.",
+    "Beteiligung endet nicht automatisch, wenn Schutz relevant wird.",
+    "Aufsichtspflicht ist kein Freibrief für Entwicklungsblockade.",
+    "Kinderschutz darf nicht ausschließlich als individuelles Familienproblem gelesen werden."
+  ],
+  "bridges": [
+    {
+      "targetId": "rechte",
+      "relation": "Kinderrechte geben Kindeswohl und Schutz einen normativen Rahmen."
+    },
+    {
+      "targetId": "aufsichtspflicht",
+      "relation": "Aufsichtspflicht konkretisiert Schutz im pädagogischen Alltag."
+    },
+    {
+      "targetId": "macht-verantwortung",
+      "relation": "Schutzentscheidungen enthalten Macht und müssen verantwortlich begründet werden."
+    },
+    {
+      "targetId": "dokumentation",
+      "relation": "Kindeswohlbezogene Beobachtungen brauchen nachvollziehbare Dokumentation."
+    },
+    {
+      "targetId": "ethik",
+      "relation": "Schutzentscheidungen enthalten ethische Abwägungen zwischen Freiheit, Risiko und Verantwortung."
+    }
+  ],
+  "openQuestions": [
+    "Wie detailliert soll § 8a/SGB VIII später ausgearbeitet werden?",
+    "Welche Schutzprozesse brauchen eigene Ablaufkarten?",
+    "Wie wird Schutz sichtbar, ohne die Karte defizitorientiert zu machen?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.33,
+  "interpolation": 0.28,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}

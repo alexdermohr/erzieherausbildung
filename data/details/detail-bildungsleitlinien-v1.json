@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-bildungsleitlinien-v1",
+  "title": "Bildungsleitlinien als Rahmen",
+  "topicIds": [
+    "bildungsleitlinien"
+  ],
+  "axisIds": [
+    "rahmen-recht-ethik"
+  ],
+  "sourceRefs": [
+    "doc-003"
+  ],
+  "excerptRefs": [
+    "doc-003-bildungsleitlinien-rahmen-orientierung-kinderperspektive"
+  ],
+  "summary": "Bildungsleitlinien sind ein fachlicher Orientierungsrahmen. Sie bündeln Kinderperspektive, Bildungsverständnis, Bildungsbereiche, Übergänge, Elternpartnerschaft und Leitmotive wie Kinderrechte und Inklusion. Für die Wissenskarte sind sie Rahmen und Bezugspunkt, nicht Zentrum aller Inhalte.",
+  "coreIdeas": [
+    "Bildungsleitlinien geben Orientierung für Qualität, Begründung und Reflexion pädagogischer Praxis.",
+    "Sie verbinden Bildungsbereiche mit Leitmotiven wie Kinderrechten, Inklusion, Nachhaltigkeit und Umgang mit Veränderungen.",
+    "Der Perspektivwechsel zum Kind ist zentral: Bildung wird aus Sicht kindlicher Lebensrealitäten und Zugänge betrachtet.",
+    "Leitlinien ordnen Praxis, ersetzen aber nicht konkretes Fallverstehen, Beziehungsarbeit oder didaktische Gestaltung.",
+    "In der Wissenslandkarte dienen sie als Rahmen, der Inhalte verbindet, nicht als alleiniger Sortierkern."
+  ],
+  "practiceAnchors": [
+    "Bei Praxisfragen prüfen, welcher Leitgedanke der Bildungsleitlinien Orientierung geben kann.",
+    "Bildungsbereiche nicht isoliert lesen, sondern mit Kinderperspektive, Beteiligung und Alltag verbinden.",
+    "Leitlinien nutzen, um pädagogische Entscheidungen zu begründen und zu reflektieren.",
+    "Nicht jede Karte aus den Leitlinien ableiten; Fachinhalte behalten eigene Logik.",
+    "Rahmenbezüge sichtbar machen, wenn sie Brücken zwischen Themen erklären."
+  ],
+  "commonMisunderstandings": [
+    "Bildungsleitlinien sind kein Unterrichtsplan.",
+    "Ein Rahmen ersetzt keine Beobachtung des konkreten Kindes.",
+    "Bildungsbereiche sind nicht voneinander abgeschottet.",
+    "Leitlinien sind nicht nur Verwaltungstext, sondern fachlicher Orientierungsraum.",
+    "Der Rahmen darf die Wissenskarte nicht dominieren."
+  ],
+  "bridges": [
+    {
+      "targetId": "institutioneller-auftrag",
+      "relation": "Bildungsleitlinien konkretisieren, wie der Bildungsauftrag pädagogisch verstanden werden kann."
+    },
+    {
+      "targetId": "rechte",
+      "relation": "Kinderrechte sind ein Leitmotiv des Rahmens."
+    },
+    {
+      "targetId": "bildungsbereiche",
+      "relation": "Die Bildungsbereiche erhalten im Rahmen der Leitlinien eine gemeinsame Orientierung."
+    },
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Leitlinien können Haltung begründen, ersetzen aber nicht Selbstreflexion."
+    },
+    {
+      "targetId": "elternkooperation",
+      "relation": "Elternpartnerschaft wird als Bestandteil des Rahmens sichtbar."
+    }
+  ],
+  "openQuestions": [
+    "Soll später eine eigene Rahmenvisualisierung entstehen, die Leitlinien nur als Hintergrundring zeigt?",
+    "Welche Leitmotive sollen als Querschnittskanten in die Karte eingehen?",
+    "Wie bleibt die Karte erkenntnisorientiert und nicht leitlinienzentriert?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.35,
+  "interpolation": 0.3,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
