@@ -15,6 +15,7 @@ jobs:
       - run: python3 scripts/validate_repository.py
       - run: python3 scripts/validate_excerpts.py
       - run: python3 scripts/validate_details.py
+      - run: python3 scripts/validate_detail_source_alignment.py
       - run: python3 scripts/validate_detail_backlog.py
       - run: python3 scripts/validate_view_export.py
       - run: python3 scripts/validate_source_health.py
