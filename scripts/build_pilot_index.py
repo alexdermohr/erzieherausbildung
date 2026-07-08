@@ -44,7 +44,7 @@ def build_json(items: list[dict]) -> dict:
     by_claim = Counter(item["claimType"] for item in items)
     by_cluster = Counter(item["sourceCluster"] for item in items)
     concepts = Counter(concept for item in items for concept in item["concepts"])
-    source_titles = sorted({item["sourceTitle"] for item in items if has_concrete_locator(item)})
+    concrete_source_titles = sorted({item["sourceTitle"] for item in items if has_concrete_locator(item)})
     unresolved_source_work = [
         {
             "id": item["id"],
@@ -65,7 +65,7 @@ def build_json(items: list[dict]) -> dict:
         "byReviewStatus": dict(sorted(by_status.items())),
         "byClaimType": dict(sorted(by_claim.items())),
         "bySourceCluster": dict(sorted(by_cluster.items())),
-        "sourceTitles": source_titles,
+        "concreteSourceTitles": concrete_source_titles,
         "unresolvedSourceWork": unresolved_source_work,
         "concepts": dict(sorted(concepts.items())),
         "knownLimits": [
@@ -110,10 +110,10 @@ def render_doc(index: dict) -> str:
         lines.append("Keine offenen Quellenarbeits-Einträge.")
     lines += [
         "",
-        "## Quellen im Pilot",
+        "## Konkret lokalisierte Quellen im Pilot",
         "",
     ]
-    for title in index["sourceTitles"]:
+    for title in index["concreteSourceTitles"]:
         lines.append(f"- {title}")
     lines += ["", "## Begriffe im Pilot", ""]
     for concept, count in index["concepts"].items():
