@@ -1,0 +1,75 @@
+{
+  "schema": "erzieherausbildung.detail.v1",
+  "id": "detail-anpassung-selbstbestimmung-v1",
+  "title": "Anpassung und Selbstbestimmung",
+  "topicIds": [
+    "anpassung-selbstbestimmung"
+  ],
+  "axisIds": [
+    "beziehung-entwicklung"
+  ],
+  "sourceRefs": [
+    "doc-016"
+  ],
+  "excerptRefs": [
+    "doc-016-anpassung-selbstbestimmung-bindung-freiraum"
+  ],
+  "summary": "Anpassung und Selbstbestimmung markieren eine Grundspannung pädagogischer Arbeit: Kinder und Jugendliche brauchen Halt, Regeln, Beziehung und Orientierung, sollen aber zugleich eigene Bedürfnisse, Entscheidungen und Verantwortung entwickeln. Pädagogisches Handeln muss deshalb zwischen Struktur und Autonomie abwägen.",
+  "coreIdeas": [
+    "Anpassung ist pädagogisch nur tragfähig, wenn sie nicht bloß Unterordnung meint, sondern Orientierung und Zusammenleben ermöglicht.",
+    "Selbstbestimmung braucht Beziehungssicherheit, Freiraum, Beteiligung und altersangemessene Verantwortung.",
+    "Kinder und Jugendliche können gleichzeitig Nähe und Freiheit, Schutz und Eigenständigkeit, Zugehörigkeit und Abgrenzung brauchen.",
+    "Pädagogische Strukturen müssen Entwicklungsstand, Bedürfnisse und konkrete Lebenslage berücksichtigen.",
+    "Das Ziel ist nicht reibungslose Anpassung, sondern zunehmend verantwortliche Selbstgestaltung in Beziehung zu anderen."
+  ],
+  "practiceAnchors": [
+    "Bei Regelkonflikten fragen: Welche Funktion hat die Regel, und welche Autonomie wird dadurch begrenzt?",
+    "Kinder und Jugendliche an Entscheidungen beteiligen, die ihren Alltag betreffen.",
+    "Freiräume nicht nur gewähren, sondern mit Reflexion über Folgen und Verantwortung verbinden.",
+    "Nähe, Sicherheit und Beziehung anbieten, ohne Selbstständigkeit zu blockieren.",
+    "Individuelle Entwicklungsaufgaben wahrnehmen, statt Verhalten nur als angepasst oder unangepasst zu bewerten."
+  ],
+  "commonMisunderstandings": [
+    "Selbstbestimmung bedeutet nicht Beliebigkeit.",
+    "Anpassung ist nicht automatisch pädagogischer Erfolg.",
+    "Grenzen setzen und Beteiligung schließen sich nicht aus.",
+    "Widerstand kann ein Hinweis auf Autonomiebedürfnis, Überforderung oder Beziehungserfahrung sein.",
+    "Freiraum ohne Beziehung und Orientierung kann Kinder überfordern."
+  ],
+  "bridges": [
+    {
+      "targetId": "bindung-beziehung",
+      "relation": "Sichere Beziehung erleichtert Selbstbestimmung, weil sie Halt bei Eigenständigkeit bietet."
+    },
+    {
+      "targetId": "selbstwirksamkeit",
+      "relation": "Selbstbestimmung wird erfahrbar, wenn eigene Entscheidungen Folgen haben dürfen."
+    },
+    {
+      "targetId": "partizipation",
+      "relation": "Beteiligung ist die institutionelle Form, Selbstbestimmung im Alltag ernst zu nehmen."
+    },
+    {
+      "targetId": "aufsichtspflicht",
+      "relation": "Aufsicht bestimmt mit, welche Freiräume tatsächlich möglich sind."
+    },
+    {
+      "targetId": "professionelle-haltung",
+      "relation": "Fachkräfte müssen zwischen Schutz, Kontrolle, Beteiligung und Autonomie reflektiert abwägen."
+    }
+  ],
+  "openQuestions": [
+    "Wie wird diese Spannung später mit Macht, Regeln und Partizipation verbunden?",
+    "Welche Unterschiede zwischen Kita, Hort und stationärer Jugendhilfe müssen sichtbar werden?",
+    "Wie lassen sich Autonomiebedürfnisse von Schutzbedarf unterscheiden, ohne Kinder zu pathologisieren?"
+  ],
+  "detailStatus": "draft",
+  "uncertainty": 0.34,
+  "interpolation": 0.31,
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "no_direct_citation": true,
+    "local_origin_material_only": true
+  }
+}
