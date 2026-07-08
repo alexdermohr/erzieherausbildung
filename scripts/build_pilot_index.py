@@ -10,7 +10,15 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "data" / "excerpts"
 JSON_TARGET = ROOT / "data" / "pilot-index.v1.json"
 DOC_TARGET = ROOT / "docs" / "pilot-index-v1.md"
-LOCATOR_PLACEHOLDERS = {"unknown", "not-yet-located", "Seite oder Abschnitt falls bekannt"}
+EXCERPT_SCHEMA = ROOT / "schemas" / "excerpt.v1.schema.json"
+
+
+def source_locator_placeholders() -> set[str]:
+    schema = json.loads(EXCERPT_SCHEMA.read_text(encoding="utf-8"))
+    return {str(value).strip() for value in schema.get("sourceLocatorPlaceholders", [])}
+
+
+LOCATOR_PLACEHOLDERS = source_locator_placeholders()
 
 
 def has_concrete_locator(item: dict) -> bool:
