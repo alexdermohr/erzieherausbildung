@@ -322,6 +322,28 @@ spec.loader.exec_module(pilot_index_builder)
 expected_pilot_json, expected_pilot_doc = pilot_index_builder.build_outputs()
 assert (root / "data/pilot-index.v1.json").read_text(encoding="utf-8") == expected_pilot_json
 assert (root / "docs/pilot-index-v1.md").read_text(encoding="utf-8") == expected_pilot_doc
+pilot_index = json.loads(expected_pilot_json)
+pilot_items = pilot_index_builder.load_items()
+concrete_source_titles = sorted({item["sourceTitle"] for item in pilot_items if pilot_index_builder.has_concrete_locator(item)})
+unresolved_source_work = [
+    {
+        "id": item["id"],
+        "sourceTitle": item["sourceTitle"],
+        "sourceLocator": item["sourceLocator"],
+        "claimType": item["claimType"],
+        "reviewStatus": item["reviewStatus"],
+        "uncertainty": item["uncertainty"],
+    }
+    for item in pilot_items
+    if not pilot_index_builder.has_concrete_locator(item)
+]
+assert "sourceTitles" not in pilot_index
+assert pilot_index["concreteSourceTitles"] == concrete_source_titles
+assert pilot_index["unresolvedSourceWork"] == unresolved_source_work
+assert all(item["reviewStatus"] == "needs-source" for item in pilot_index["unresolvedSourceWork"])
+assert all(item["claimType"] in {"question", "title-derived"} for item in pilot_index["unresolvedSourceWork"])
+assert "Konkret lokalisierte Quellen im Pilot" in expected_pilot_doc
+assert "Offene Quellenarbeit" in expected_pilot_doc
 
 print("repository validation passed")
 
