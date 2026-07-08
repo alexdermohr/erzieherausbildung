@@ -94,6 +94,10 @@ def validate_with_temp_home(home: Path) -> None:
     pilot_text = (target / "Pilotindex.md").read_text(encoding="utf-8")
     assert "Offene Quellenarbeit" in pilot_text
     assert "Konkret lokalisierte Quellen im Pilot" in pilot_text
+    bridge_text = (target / "Detail-Brückenindex.md").read_text(encoding="utf-8")
+    assert "Detail-Brückenindex v1" in bridge_text
+    assert "stärkste Verbindungsknoten" in bridge_text
+    assert "Orientierung, keine neue Quelle" in bridge_text
 
     (vault / "dirty.md").write_text("dirty\n", encoding="utf-8")
     dirty = run([sys.executable, str(SCRIPT)], env=env, check=False)

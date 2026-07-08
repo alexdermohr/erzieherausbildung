@@ -60,6 +60,7 @@ VIEW_FILES = (
     ViewFile("docs/learning-map-v1.md", "Lernlandkarte.md", "markdown"),
     ViewFile("docs/knowledge-network-v1.md", "Wissensnetz.md", "markdown"),
     ViewFile("docs/pilot-index-v1.md", "Pilotindex.md", "markdown"),
+    ViewFile("docs/detail-bridge-index-v1.md", "Detail-Brückenindex.md", "markdown"),
     ViewFile("docs/visualization-decision.md", "Visualisierungsentscheidung.md", "markdown"),
 )
 GENERATED_FILES = ("Start hier.md", MANIFEST_NAME)
@@ -186,7 +187,8 @@ Status: Vault-Spiegel; kanonisch bleibt das Repo.
 3. [[Lernlandkarte]] – textliche Orientierung zu Achsen und Themen.
 4. [[Wissensnetz]] – Cluster, Brücken und Zusammenhangslogik.
 5. [[Pilotindex]] – konkret lokalisierte Quellen und offene Quellenarbeit.
-6. [[Visualisierungsentscheidung]] – warum Web, Canvas und spätere Kollaboration getrennte Rollen haben.
+6. [[Detail-Brückenindex]] – Verbindungsknoten, Zielachsen und Brücken zwischen Detailkarten.
+7. [[Visualisierungsentscheidung]] – warum Web, Canvas und spätere Kollaboration getrennte Rollen haben.
 
 ## Regel
 
