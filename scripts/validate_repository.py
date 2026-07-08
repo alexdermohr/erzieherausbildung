@@ -44,6 +44,7 @@ required = [
     "scripts/obsidian_views.py",
     "scripts/build_pilot_index.py",
     "scripts/validate_details.py",
+    "scripts/validate_detail_source_alignment.py",
     "scripts/validate_detail_backlog.py",
     "scripts/validate_view_export.py",
     "scripts/validate_source_health.py",
@@ -290,6 +291,7 @@ for entry in detail_index["details"]:
     assert detail["sourceRefs"]
     assert detail["excerptRefs"]
 assert "validate_details.py" in (root / ".github/workflows/validate.yml").read_text(encoding="utf-8")
+assert "validate_detail_source_alignment.py" in (root / ".github/workflows/validate.yml").read_text(encoding="utf-8")
 
 assert detail_index["coverage"]["topicCount"] == len(learning_topics)
 assert detail_index["coverage"]["detailedTopicCount"] == len({topic for entry in detail_index["details"] for topic in entry["topicIds"]})
