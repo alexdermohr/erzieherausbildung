@@ -295,6 +295,8 @@ assert "vollständige Erstabdeckung" in detail_index["coverage"]["epistemicEmpty
 assert "/data/details/index.v1.json" in app_js
 assert "detailCoverageLabel" in app_js
 assert "renderDetailBridgeIndex" in app_js
+assert "renderDetailBridgeAxisFilter" in app_js
+assert "detail-bridge-axis-filter" in index_html
 assert "detailBacklogUrl" not in app_js
 assert "Detail-Brückenindex" in index_html
 assert "Orientierung, keine neue Quelle" in index_html

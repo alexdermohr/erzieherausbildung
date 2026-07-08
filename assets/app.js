@@ -36,6 +36,7 @@ const state = {
   detailBridgeIndex: null,
   activeAxis: "all",
   activeCluster: "all",
+  activeDetailBridgeAxis: "all",
   canvas: {
     activeView: canvasViews[0].id,
     data: null,
@@ -252,6 +253,36 @@ function renderRelations() {
   });
 }
 
+function targetAxisForHub(index, hub) {
+  return index.byTarget?.[hub.targetId]?.axisId ?? "";
+}
+
+function activeDetailBridgeAxisTitle(index) {
+  if (state.activeDetailBridgeAxis === "all") return "alle Zielachsen";
+  return (index.byTargetAxis ?? []).find((axis) => axis.axisId === state.activeDetailBridgeAxis)?.axisTitle ?? state.activeDetailBridgeAxis;
+}
+
+function renderDetailBridgeAxisFilter() {
+  const select = document.querySelector("#detail-bridge-axis-filter");
+  if (!select || !state.detailBridgeIndex) return;
+  const current = select.value || state.activeDetailBridgeAxis;
+  select.innerHTML = "";
+  const allOption = el("option", "", "Alle Zielachsen");
+  allOption.value = "all";
+  select.append(allOption);
+  (state.detailBridgeIndex.byTargetAxis ?? []).forEach((axis) => {
+    const option = el("option", "", `${axis.axisTitle} (${axis.incomingBridgeCount})`);
+    option.value = axis.axisId;
+    select.append(option);
+  });
+  state.activeDetailBridgeAxis = [...select.options].some((option) => option.value === current) ? current : "all";
+  select.value = state.activeDetailBridgeAxis;
+  select.onchange = () => {
+    state.activeDetailBridgeAxis = select.value;
+    renderDetailBridgeIndex();
+  };
+}
+
 function renderDetailBridgeIndex() {
   const summary = document.querySelector("#detail-bridge-summary");
   const hubsTarget = document.querySelector("#detail-bridge-hub-list");
@@ -266,9 +297,17 @@ function renderDetailBridgeIndex() {
     return;
   }
 
-  summary.textContent = `${index.totals.details} Detailkarten erzeugen ${index.totals.bridges} Brücken zu ${index.totals.targets} Zielknoten. Ein hoher Eingangswert markiert Orientierungsknoten, nicht automatisch Wichtigkeit im Ausbildungsplan.`;
+  const activeAxis = state.activeDetailBridgeAxis;
+  const hubs = (index.hubs ?? []).filter((hub) => activeAxis === "all" || targetAxisForHub(index, hub) === activeAxis).slice(0, 8);
+  const axes = activeAxis === "all" ? (index.byTargetAxis ?? []) : (index.byTargetAxis ?? []).filter((axis) => axis.axisId === activeAxis);
+  const axisTitle = activeDetailBridgeAxisTitle(index);
+  summary.textContent = `${index.totals.details} Detailkarten erzeugen ${index.totals.bridges} Brücken zu ${index.totals.targets} Zielknoten. Filter: ${axisTitle}. Ein hoher Eingangswert markiert Orientierungsknoten, nicht automatisch Wichtigkeit im Ausbildungsplan.`;
 
-  (index.hubs ?? []).slice(0, 8).forEach((hub) => {
+  if (!hubs.length) {
+    hubsTarget.append(el("p", "fineprint", "Für diesen Filter wurden keine Hub-Knoten gefunden."));
+  }
+
+  hubs.forEach((hub) => {
     const card = el("article", "relation-card network");
     const roleLine = el("p", "bridge-role");
     roleLine.append(el("span", "bridge-role-badge", "Hub"));
@@ -279,7 +318,7 @@ function renderDetailBridgeIndex() {
     hubsTarget.append(card);
   });
 
-  (index.byTargetAxis ?? []).forEach((axis) => {
+  axes.forEach((axis) => {
     const card = el("article", "visual-card");
     card.append(el("h3", "", axis.axisTitle));
     card.append(el("p", "", `${axis.incomingBridgeCount} eingehende Detail-Brücken`));
@@ -751,6 +790,7 @@ async function boot() {
   renderClusters();
   renderTopics();
   renderRelations();
+  renderDetailBridgeAxisFilter();
   renderDetailBridgeIndex();
   renderCoverage();
   renderSurfaces();
