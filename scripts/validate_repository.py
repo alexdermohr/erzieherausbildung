@@ -217,8 +217,9 @@ index_html = (root / "index.html").read_text(encoding="utf-8")
 assert "/data/learning-map.v1.json" in app_js
 assert "/data/knowledge-network.v1.json" in app_js
 assert "/data/detail-bridge-index.v1.json" in app_js
-for source in surface_by_id["web"]["data_sources"]:
-    assert "/" + source in app_js
+app_data_urls = set(re.findall(r'"(/data/[^"\n]+)"', app_js))
+policy_web_urls = {"/" + source for source in surface_by_id["web"]["data_sources"]}
+assert app_data_urls == policy_web_urls
 for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list"]:
     assert element_id in index_html
 readme = (root / "README.md").read_text(encoding="utf-8")
@@ -294,6 +295,7 @@ assert "vollständige Erstabdeckung" in detail_index["coverage"]["epistemicEmpty
 assert "/data/details/index.v1.json" in app_js
 assert "detailCoverageLabel" in app_js
 assert "renderDetailBridgeIndex" in app_js
+assert "detailBacklogUrl" not in app_js
 assert "Detail-Brückenindex" in index_html
 assert "Orientierung, keine neue Quelle" in index_html
 assert "Detail offen" in app_js

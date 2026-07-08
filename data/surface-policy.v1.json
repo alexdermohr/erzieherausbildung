@@ -36,6 +36,8 @@
         "data/learning-map.v1.json",
         "data/knowledge-network.v1.json",
         "data/source-summary.json",
+        "data/excerpts/pilot-v1.jsonl",
+        "data/details/index.v1.json",
         "data/detail-bridge-index.v1.json"
       ],
       "outputs": ["index.html", "assets/app.js", "assets/styles.css"],
