@@ -4,6 +4,7 @@ const sourceSummaryUrl = "/data/source-summary.json";
 const excerptIndexUrl = "/data/excerpts/pilot-v1.jsonl";
 const detailIndexUrl = "/data/details/index.v1.json";
 const detailBacklogUrl = "/data/details/backlog.v1.json";
+const detailBridgeIndexUrl = "/data/detail-bridge-index.v1.json";
 
 const canvasViews = [
   {
@@ -33,6 +34,7 @@ const state = {
   details: [],
   detailCoverage: null,
   detailBacklog: null,
+  detailBridgeIndex: null,
   activeAxis: "all",
   activeCluster: "all",
   canvas: {
@@ -101,6 +103,7 @@ function rerenderFocusViews() {
   renderClusters();
   renderTopics();
   renderRelations();
+  renderDetailBridgeIndex();
   renderCoverage();
 }
 
@@ -247,6 +250,42 @@ function renderRelations() {
     card.append(el("h3", "", `${clusterById.get(bridge.from)} → ${clusterById.get(bridge.to)}`));
     card.append(el("p", "", bridge.relation));
     target.append(card);
+  });
+}
+
+function renderDetailBridgeIndex() {
+  const summary = document.querySelector("#detail-bridge-summary");
+  const hubsTarget = document.querySelector("#detail-bridge-hub-list");
+  const axesTarget = document.querySelector("#detail-bridge-axis-list");
+  if (!summary || !hubsTarget || !axesTarget) return;
+  hubsTarget.innerHTML = "";
+  axesTarget.innerHTML = "";
+
+  const index = state.detailBridgeIndex;
+  if (!index) {
+    summary.textContent = "Detail-Brückenindex konnte nicht geladen werden.";
+    return;
+  }
+
+  summary.textContent = `${index.totals.details} Detailkarten erzeugen ${index.totals.bridges} Brücken zu ${index.totals.targets} Zielknoten. Ein hoher Eingangswert markiert Orientierungsknoten, nicht automatisch Wichtigkeit im Ausbildungsplan.`;
+
+  (index.hubs ?? []).slice(0, 8).forEach((hub) => {
+    const card = el("article", "relation-card network");
+    const roleLine = el("p", "bridge-role");
+    roleLine.append(el("span", "bridge-role-badge", "Hub"));
+    roleLine.append(el("span", "bridge-type", `${hub.incomingBridgeCount} eingehende Brücken`));
+    card.append(roleLine);
+    card.append(el("h3", "", hub.targetTitle));
+    card.append(el("p", "fineprint", hub.targetId));
+    hubsTarget.append(card);
+  });
+
+  (index.byTargetAxis ?? []).forEach((axis) => {
+    const card = el("article", "visual-card");
+    card.append(el("h3", "", axis.axisTitle));
+    card.append(el("p", "", `${axis.incomingBridgeCount} eingehende Detail-Brücken`));
+    card.append(el("p", "fineprint", axis.axisId));
+    axesTarget.append(card);
   });
 }
 
@@ -691,15 +730,17 @@ function renderCanvasSurface() {
 }
 
 async function boot() {
-  const [map, network, sourceSummary, excerpts, details] = await Promise.all([
+  const [map, network, detailBridgeIndex, sourceSummary, excerpts, details] = await Promise.all([
     fetch(learningMapUrl).then((res) => res.json()),
     fetch(knowledgeNetworkUrl).then((res) => res.json()),
+    fetch(detailBridgeIndexUrl).then((res) => res.json()),
     fetch(sourceSummaryUrl).then((res) => res.json()).catch(() => null),
     loadExcerpts(),
     loadDetails(),
   ]);
   state.map = map;
   state.network = network;
+  state.detailBridgeIndex = detailBridgeIndex;
   state.excerpts = excerpts;
   state.details = details;
   renderSourceSummary(sourceSummary);
@@ -711,6 +752,7 @@ async function boot() {
   renderClusters();
   renderTopics();
   renderRelations();
+  renderDetailBridgeIndex();
   renderCoverage();
   renderSurfaces();
 }
