@@ -214,11 +214,16 @@ assert any("Bildungsleitlinien" in invariant for invariant in surface["invariant
 
 app_js = (root / "assets/app.js").read_text(encoding="utf-8")
 index_html = (root / "index.html").read_text(encoding="utf-8")
-assert "/data/learning-map.v1.json" in app_js
-assert "/data/knowledge-network.v1.json" in app_js
-assert "/data/detail-bridge-index.v1.json" in app_js
-app_data_urls = set(re.findall(r'"(/data/[^"\n]+)"', app_js))
-policy_web_urls = {"/" + source for source in surface_by_id["web"]["data_sources"]}
+assert "sitePath" in app_js
+assert 'href="assets/styles.css"' in index_html
+assert 'src="assets/app.js"' in index_html
+assert 'sitePath("/data/learning-map.v1.json")' in app_js
+assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
+assert 'sitePath("/data/detail-bridge-index.v1.json")' in app_js
+assert "fetch(sitePath(entry.path))" in app_js
+assert (root / ".nojekyll").exists()
+app_data_urls = {value.lstrip("/") for value in re.findall(r'"(/?data/[^"\n]+)"', app_js)}
+policy_web_urls = set(surface_by_id["web"]["data_sources"])
 assert app_data_urls == policy_web_urls
 for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list"]:
     assert element_id in index_html
