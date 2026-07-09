@@ -357,6 +357,10 @@ assert "Im Themenbereich zeigen" in app_js
 assert "Themen dieser Achse zeigen" in app_js
 assert "Themen dieses Lernwegs zeigen" in app_js
 assert "Detailkarte lesen" in app_js
+assert 'scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })' in app_js
+assert "topicExact" in app_js
+assert "score += 100" in app_js
+assert "score += 1" in app_js
 assert "aria-pressed" in app_js
 assert "hub-title" in app_js
 assert "detail-bridge-axis-filter" in index_html
@@ -369,6 +373,15 @@ assert "Stand, Quellen und Grenzen" in index_html
 assert "Orientierung, keine neue Quelle" in index_html
 assert "Detail offen" in app_js
 assert "Detail vorhanden" in app_js
+# Regression guard for shared sourceRefs: doc-008 is used by multiple detail cards.
+# Exact topicId must win over source-only matches so the Canvas node "Übergänge"
+# does not render "Bindung und Beziehung" as its first detail card.
+uebergaenge_detail = next(detail for detail in detail_index["details"] if "uebergaenge" in detail["topicIds"])
+bindung_detail = next(detail for detail in detail_index["details"] if "bindung-beziehung" in detail["topicIds"])
+assert uebergaenge_detail["id"] == "detail-uebergaenge-v1"
+assert bindung_detail["id"] == "detail-bindung-beziehung-v1"
+assert set(uebergaenge_detail["sourceRefs"]) & set(bindung_detail["sourceRefs"])
+assert "right.score - left.score" in app_js
 
 detail_backlog_schema = j("schemas/detail-backlog.v1.schema.json")
 detail_backlog = j("data/details/backlog.v1.json")
