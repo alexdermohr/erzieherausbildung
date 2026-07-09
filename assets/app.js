@@ -117,11 +117,14 @@ function topicByTitle(title) {
   return allTopics().find((topic) => normalizeText(topic.title) === titleNorm) ?? null;
 }
 
-function setAxisFilter(axisId) {
+function setAxisFilter(axisId, { clearCluster = true } = {}) {
   state.activeAxis = axisId;
+  if (clearCluster) state.activeCluster = "all";
   const select = document.querySelector("#axis-filter");
   if (select && [...select.options].some((option) => option.value === axisId)) select.value = axisId;
+  renderClusters();
   renderTopics();
+  renderRelations();
 }
 
 function openAxis(axisId, { showInMap = false } = {}) {
@@ -142,7 +145,7 @@ function detailForTopic(topic) {
 function openTopic(topicId, { showInMap = false, showDetail = false } = {}) {
   const topic = topicById(topicId);
   if (!topic) return;
-  setAxisFilter(topic.axisId);
+  setAxisFilter(topic.axisId, { clearCluster: true });
   const topicCard = document.querySelector(`#${topicAnchorId(topic.id)}`);
   if (showInMap) {
     openCanvasNode(`topic-${topic.id}`);
@@ -164,6 +167,9 @@ function openTopicByTitle(title) {
 
 function focusCluster(clusterId) {
   state.activeCluster = clusterId;
+  state.activeAxis = "all";
+  const select = document.querySelector("#axis-filter");
+  if (select) select.value = "all";
   rerenderFocusViews();
   scrollToSection("index");
 }
@@ -213,21 +219,14 @@ function renderSourceSummary(summary) {
 
 function renderStats() {
   const target = document.querySelector("#map-stats");
+  if (!target) return;
   const topics = allTopics();
   target.innerHTML = "";
-  const statLinks = {
-    Sinnachsen: "#achsen",
-    Themen: "#index",
-    Details: "#verbindungen",
-    Cluster: "#index",
-    Brücken: "#verbindungen",
-  };
-  [["Sinnachsen", state.map.axes.length], ["Themen", topics.length], ["Details", detailCoverageLabel()], ["Cluster", state.network.clusters.length], ["Brücken", state.network.bridges.length]].forEach(([label, value]) => {
-    const card = el("a", "stat-card stat-link");
-    card.href = statLinks[label] ?? "#status";
-    card.append(el("strong", "", String(value)));
-    card.append(el("span", "", label));
-    target.append(card);
+  [["Sinnachsen", state.map.axes.length], ["Themen", topics.length], ["Details", detailCoverageLabel()], ["Lernwege", state.network.clusters.length], ["Clusterbrücken", state.network.bridges.length]].forEach(([label, value]) => {
+    const item = el("span", "meta-stat");
+    item.append(el("strong", "", String(value)));
+    item.append(el("span", "", label));
+    target.append(item);
   });
 }
 
@@ -239,10 +238,7 @@ function renderAxisFilter() {
     option.value = axis.id;
     select.appendChild(option);
   });
-  select.addEventListener("change", () => {
-    state.activeAxis = select.value;
-    renderTopics();
-  });
+  select.addEventListener("change", () => setAxisFilter(select.value));
 }
 
 function renderAxes() {
@@ -256,11 +252,11 @@ function renderAxes() {
     card.append(el("p", "", axis.summary));
     card.append(el("p", "source-line", `Quellen: ${axis.sources.join(", ")}`));
     const actions = el("div", "action-row");
-    actions.append(actionButton("Themen anzeigen", () => {
+    actions.append(actionButton("Themen zeigen", () => {
       setAxisFilter(axis.id);
       scrollToSection("index");
     }, "link-action"));
-    actions.append(actionButton("In Karte öffnen", () => openAxis(axis.id, { showInMap: true }), "link-action"));
+    actions.append(actionButton("Auf Karte zeigen", () => openAxis(axis.id, { showInMap: true }), "link-action"));
     card.append(actions);
     target.append(card);
   });
@@ -279,9 +275,9 @@ function renderClusters() {
 
   const allCard = el("article", `cluster-card ${state.activeCluster === "all" ? "active" : ""}`);
   allCard.append(el("p", "module-meta", "Gesamtblick"));
-  allCard.append(el("h3", "", "Alle Cluster"));
-  allCard.append(el("p", "", "Zeigt alle Themen und alle Brücken des Wissensnetzes."));
-  appendClusterButton(allCard, "all", "Gesamtblick anzeigen");
+  allCard.append(el("h3", "", "Alle Lernwege"));
+  allCard.append(el("p", "", "Zeigt alle Themen ohne Lernweg-Filter."));
+  appendClusterButton(allCard, "all", "Alle Themen zeigen");
   target.append(allCard);
 
   state.network.clusters.forEach((cluster) => {
@@ -289,10 +285,10 @@ function renderClusters() {
     card.append(el("p", "module-meta", `${cluster.topics.length} Themen · ${cluster.sources.length} Quellen`));
     card.append(el("h3", "", cluster.title));
     card.append(el("p", "", cluster.insight));
-    appendClusterButton(card, cluster.id, "Cluster fokussieren");
+    appendClusterButton(card, cluster.id, "Themen dieses Lernwegs zeigen");
     const details = document.createElement("details");
     const summary = document.createElement("summary");
-    summary.textContent = "Themen anzeigen";
+    summary.textContent = "Themen dieses Lernwegs";
     details.append(summary);
     const topicList = el("ul", "compact-list");
     cluster.topics.forEach((topic) => {
@@ -326,10 +322,9 @@ function renderTopics() {
         topic.sources.forEach((source) => tags.append(el("span", "tag muted-tag", source)));
         card.append(tags);
         const actions = el("div", "action-row");
-        actions.append(actionButton("In Karte öffnen", () => openTopic(topic.id, { showInMap: true }), "link-action"));
-        actions.append(actionButton("Achse anzeigen", () => openAxis(axis.id), "link-action"));
+        actions.append(actionButton("Auf Karte zeigen", () => openTopic(topic.id, { showInMap: true }), "link-action"));
         const detail = detailForTopic({ ...topic, axisId: axis.id, axisTitle: axis.title });
-        if (detail) actions.append(actionButton("Detail öffnen", () => openStandaloneDetailCard(detail.id), "link-action"));
+        if (detail) actions.append(actionButton("Detailkarte lesen", () => openStandaloneDetailCard(detail.id), "link-action"));
         card.append(actions);
         grid.append(card);
       });
@@ -366,8 +361,8 @@ function renderRelations() {
     card.append(el("h3", "", `${clusterById.get(bridge.from)} → ${clusterById.get(bridge.to)}`));
     card.append(el("p", "", bridge.relation));
     const actions = el("div", "action-row");
-    actions.append(actionButton("Ausgangscluster öffnen", () => focusCluster(bridge.from), "link-action"));
-    actions.append(actionButton("Zielcluster öffnen", () => focusCluster(bridge.to), "link-action"));
+    actions.append(actionButton("Ersten Lernweg zeigen", () => focusCluster(bridge.from), "link-action"));
+    actions.append(actionButton("Zweiten Lernweg zeigen", () => focusCluster(bridge.to), "link-action"));
     card.append(actions);
     target.append(card);
   });
@@ -567,13 +562,8 @@ function renderCoverage() {
 
 function renderSurfaces() {
   const target = document.querySelector("#surface-list");
+  if (!target) return;
   target.innerHTML = "";
-  state.map.planned_renders.forEach((surface) => {
-    const card = el("article", "visual-card");
-    card.append(el("h3", "", surface));
-    card.append(el("p", "", surface === "obsidian_canvas" ? "Denkfläche" : surface === "prepp_style_homepage" ? "Lesefläche" : "Kollaborationsfläche"));
-    target.append(card);
-  });
 }
 
 function parseJsonl(text) {
@@ -837,13 +827,13 @@ function renderCanvasDetail(node) {
   appendSourceTags(target, sources);
   const actions = el("div", "action-row");
   if (context.topic) {
-    actions.append(actionButton("Im Index öffnen", () => openTopic(context.topic.id), "link-action"));
+    actions.append(actionButton("Im Themenbereich zeigen", () => openTopic(context.topic.id), "link-action"));
     const detail = detailForTopic(context.topic);
-    if (detail) actions.append(actionButton("Detail öffnen", () => openStandaloneDetailCard(detail.id), "link-action"));
+    if (detail) actions.append(actionButton("Detailkarte lesen", () => openStandaloneDetailCard(detail.id), "link-action"));
   }
   if (context.axis) {
-    actions.append(actionButton("Achse anzeigen", () => openAxis(context.axis.id), "link-action"));
-    actions.append(actionButton("Themen dieser Achse", () => {
+    actions.append(actionButton("Achse im Überblick zeigen", () => openAxis(context.axis.id), "link-action"));
+    actions.append(actionButton("Themen dieser Achse zeigen", () => {
       setAxisFilter(context.axis.id);
       scrollToSection("index");
     }, "link-action"));

@@ -246,9 +246,14 @@ index_html = (root / "index.html").read_text(encoding="utf-8")
 assert "sitePath" in app_js
 assert 'href="assets/styles.css"' in index_html
 assert 'src="assets/app.js"' in index_html
+html_ids = set(re.findall(r'id="([^"]+)"', index_html))
+for href in re.findall(r'href="#([^"]+)"', index_html):
+    assert href in html_ids, f"broken in-page href: #{href}"
 for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verbindungen", "#index", 'id="karte"', 'id="achsen"', 'id="verbindungen"', 'id="index"', 'id="status"']:
     assert token in index_html
-for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "stat-link", "link-highlight"]:
+for token in ['<a href="#status">Status</a>', 'id="surface-list"', "Status und Abdeckung"]:
+    assert token not in index_html
+for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight"]:
     assert token in (root / "assets/styles.css").read_text(encoding="utf-8")
 assert 'sitePath("/data/learning-map.v1.json")' in app_js
 assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
@@ -258,7 +263,7 @@ assert (root / ".nojekyll").exists()
 app_data_urls = {value.lstrip("/") for value in re.findall(r'"(/?data/[^"\n]+)"', app_js)}
 policy_web_urls = set(surface_by_id["web"]["data_sources"])
 assert app_data_urls == policy_web_urls
-for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list", "surface-list", "coverage-note"]:
+for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list", "coverage-note", "map-stats"]:
     assert element_id in index_html
 for stale_section in ['id="cluster"', 'id="themen"', 'id="bruecken"', 'id="netzbruecken"', 'id="abdeckung"']:
     assert stale_section not in index_html
@@ -346,10 +351,12 @@ assert "openAxis" in app_js
 assert "openDetailBridgeTarget" in app_js
 assert "openStandaloneDetailCard" in app_js
 assert "Detailkarte anzeigen" in app_js
-assert "In Karte öffnen" in app_js
+assert "Auf Karte zeigen" in app_js
 assert "Ziel öffnen" in app_js
-assert "Im Index öffnen" in app_js
-assert "Themen dieser Achse" in app_js
+assert "Im Themenbereich zeigen" in app_js
+assert "Themen dieser Achse zeigen" in app_js
+assert "Themen dieses Lernwegs zeigen" in app_js
+assert "Detailkarte lesen" in app_js
 assert "aria-pressed" in app_js
 assert "hub-title" in app_js
 assert "detail-bridge-axis-filter" in index_html
@@ -357,6 +364,8 @@ assert "detail-bridge-incoming-list" in index_html
 assert "detail-bridge-detail-card" in index_html
 assert "detailBacklogUrl" not in app_js
 assert "Detail- und Clusterverbindungen" in index_html
+assert "Lernwege und Themen" in index_html
+assert "Stand, Quellen und Grenzen" in index_html
 assert "Orientierung, keine neue Quelle" in index_html
 assert "Detail offen" in app_js
 assert "Detail vorhanden" in app_js

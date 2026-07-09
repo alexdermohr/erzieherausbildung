@@ -13,9 +13,8 @@
       <div class="nav-links">
         <a href="#karte">Karte</a>
         <a href="#achsen">Achsen</a>
+        <a href="#index">Themen</a>
         <a href="#verbindungen">Verbindungen</a>
-        <a href="#index">Index</a>
-        <a href="#status">Status</a>
       </div>
     </nav>
 
@@ -27,36 +26,21 @@
           <p class="lede">Eine klare Oberfläche für Wissensinhalte, Begriffe, Zusammenhänge und Detailkarten. Rohmaterial bleibt lokal; sichtbar wird die geordnete Struktur.</p>
           <div class="hero-actions" aria-label="Schnelleinstiege">
             <a class="primary-action" href="#karte">Karte öffnen</a>
-            <a class="secondary-action" href="#verbindungen">Verbindungen erkunden</a>
+            <a class="secondary-action" href="#index">Thema finden</a>
           </div>
         </div>
         <aside class="orientation-card" aria-label="Orientierung">
           <p class="eyebrow">So lesen</p>
           <ol class="step-list">
-            <li><strong>Karte:</strong> räumlich orientieren und Knoten anklicken.</li>
-            <li><strong>Achsen:</strong> Wissensbereiche nach Themen filtern.</li>
-            <li><strong>Verbindungen:</strong> Detail- und Clusterverbindungen öffnen.</li>
+            <li><strong>Karte:</strong> Überblick gewinnen und Knoten anklicken.</li>
+            <li><strong>Themen:</strong> konkrete Inhalte finden und Detailkarten öffnen.</li>
+            <li><strong>Verbindungen:</strong> Zusammenhänge zwischen Themen nachvollziehen.</li>
           </ol>
         </aside>
       </div>
     </header>
 
     <main id="inhalt">
-      <section id="status" class="panel warning anchored-section">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Status</p>
-            <h2>Status und Abdeckung</h2>
-            <p class="fineprint">Ein kompakter Kontrollbereich für Vollständigkeit, Quellenlage, Modellgrenzen und sichtbare Oberflächen.</p>
-          </div>
-        </div>
-        <p id="source-note">Lade Quellenstatus…</p>
-        <p id="source-detail" class="fineprint"></p>
-        <p id="coverage-note"></p>
-        <div id="map-stats" class="stat-grid"></div>
-        <div id="surface-list" class="visuals-list status-surface-list"></div>
-      </section>
-
       <section id="karte" class="panel canvas-panel anchored-section">
         <div class="section-head">
           <div>
@@ -94,16 +78,16 @@
       </section>
 
       <section id="index" class="panel anchored-section">
-        <p class="eyebrow">Index</p>
-        <h2>Cluster und Themen</h2>
-        <p class="fineprint">Der Index ist die Listenansicht zur Karte: erst die Erkenntniscluster, danach die konkreten Themenknoten mit Quellen- und Detailstatus.</p>
+        <p class="eyebrow">Themen</p>
+        <h2>Lernwege und Themen</h2>
+        <p class="fineprint">Links stehen Lernwege als Einstieg. Rechts erscheinen die passenden Themen. Ein Klick auf ein Thema öffnet Karte oder Detailkarte.</p>
         <div class="index-layout">
           <div>
-            <h3>Erkenntniscluster</h3>
+            <h3>Lernwege</h3>
             <div id="cluster-list" class="cluster-list"></div>
           </div>
           <div>
-            <h3>Themenknoten</h3>
+            <h3>Passende Themen</h3>
             <div id="topic-grid" class="topic-grid"></div>
           </div>
         </div>
@@ -141,6 +125,16 @@
           <div id="relation-list" class="relation-list"></div>
         </div>
       </section>
+
+      <details id="status" class="meta-panel anchored-section">
+        <summary>Stand, Quellen und Grenzen</summary>
+        <div class="meta-panel-body">
+          <p id="source-note">Lade Quellenstatus…</p>
+          <p id="source-detail" class="fineprint"></p>
+          <p id="coverage-note" class="fineprint"></p>
+          <div id="map-stats" class="meta-stats"></div>
+        </div>
+      </details>
     </main>
 
     <script type="module" src="assets/app.js"></script>
