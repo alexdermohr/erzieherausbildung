@@ -372,6 +372,36 @@ function targetAxisForHub(index, hub) {
   return index.byTarget?.[hub.targetId]?.axisId ?? "";
 }
 
+function bridgeTargetMeta(index, targetId) {
+  return index?.byTarget?.[targetId] ?? null;
+}
+
+function bridgeTargetTitle(index, targetId) {
+  return bridgeTargetMeta(index, targetId)?.targetTitle ?? targetId;
+}
+
+function bridgeTargetHub(index, targetId) {
+  const existing = (index.hubs ?? []).find((hub) => hub.targetId === targetId);
+  if (existing) return existing;
+  const meta = bridgeTargetMeta(index, targetId);
+  if (!meta) return null;
+  return {
+    targetId,
+    targetTitle: meta.targetTitle ?? targetId,
+    incomingBridgeCount: meta.incomingBridgeCount ?? bridgeIncomingForTarget(index, targetId).length,
+  };
+}
+
+function visibleDetailBridgeHubs(index, activeAxis, activeTargetId) {
+  const matching = (index.hubs ?? []).filter((hub) => activeAxis === "all" || targetAxisForHub(index, hub) === activeAxis);
+  const visible = matching.slice(0, 8);
+  const activeHub = bridgeTargetHub(index, activeTargetId);
+  if (activeHub && (activeAxis === "all" || targetAxisForHub(index, activeHub) === activeAxis) && !visible.some((hub) => hub.targetId === activeHub.targetId)) {
+    visible.push(activeHub);
+  }
+  return visible;
+}
+
 function activeDetailBridgeAxisTitle(index) {
   if (state.activeDetailBridgeAxis === "all") return "alle Zielachsen";
   return (index.byTargetAxis ?? []).find((axis) => axis.axisId === state.activeDetailBridgeAxis)?.axisTitle ?? state.activeDetailBridgeAxis;
@@ -405,13 +435,15 @@ function bridgeIncomingForTarget(index, targetId) {
 
 function openDetailBridgeTarget(targetId) {
   const index = state.detailBridgeIndex;
-  if (!index?.byTarget?.[targetId]) return;
-  state.activeDetailBridgeAxis = index.byTarget[targetId].axisId ?? "all";
+  const meta = bridgeTargetMeta(index, targetId);
+  if (!meta) return;
+  state.activeDetailBridgeAxis = meta.axisId ?? "all";
   state.activeDetailBridgeTarget = targetId;
   state.activeDetailBridgeDetail = "";
   renderDetailBridgeAxisFilter();
   renderDetailBridgeIndex();
   scrollToSection("verbindungen");
+  setTimeout(() => flashElement(document.querySelector("#detail-bridge-incoming-list")), 120);
 }
 
 function openStandaloneDetailCard(detailId) {
@@ -463,7 +495,7 @@ function renderIncomingBridgeDetails(index, targetId) {
   if (!bridges.some((bridge) => bridge.sourceDetailId === state.activeDetailBridgeDetail)) {
     state.activeDetailBridgeDetail = bridges[0]?.sourceDetailId ?? "";
   }
-  const heading = el("h4", "", `Eingehend zu ${targetMeta?.targetTitle ?? targetId}`);
+  const heading = el("h4", "", `Eingehend zu ${bridgeTargetTitle(index, targetId)}`);
   target.append(heading);
   target.append(el("p", "fineprint", `${bridges.length} Detail-Brücken. Diese Relationstexte sind aus Detailkarten abgeleitet.`));
 
@@ -471,7 +503,7 @@ function renderIncomingBridgeDetails(index, targetId) {
     const card = el("article", "incoming-bridge-card");
     card.append(el("h5", "", bridge.sourceTitle));
     card.append(el("p", "", bridge.relation));
-    card.append(el("p", "fineprint", `${bridge.sourceDetailId} → ${bridge.targetId}`));
+    card.append(el("p", "fineprint", `${bridge.sourceDetailId} → ${bridgeTargetTitle(index, bridge.targetId)}`));
     const button = el("button", `inline-action ${bridge.sourceDetailId === state.activeDetailBridgeDetail ? "active" : ""}`, "Detailkarte anzeigen");
     button.type = "button";
     button.onclick = () => openBridgeDetailCard(bridge.sourceDetailId);
@@ -498,11 +530,12 @@ function renderDetailBridgeIndex() {
   }
 
   const activeAxis = state.activeDetailBridgeAxis;
-  const hubs = (index.hubs ?? []).filter((hub) => activeAxis === "all" || targetAxisForHub(index, hub) === activeAxis).slice(0, 8);
   const axes = activeAxis === "all" ? (index.byTargetAxis ?? []) : (index.byTargetAxis ?? []).filter((axis) => axis.axisId === activeAxis);
+  let hubs = visibleDetailBridgeHubs(index, activeAxis, state.activeDetailBridgeTarget);
   if (!hubs.some((hub) => hub.targetId === state.activeDetailBridgeTarget)) {
     state.activeDetailBridgeTarget = hubs[0]?.targetId ?? "";
     state.activeDetailBridgeDetail = "";
+    hubs = visibleDetailBridgeHubs(index, activeAxis, state.activeDetailBridgeTarget);
   }
   const axisTitle = activeDetailBridgeAxisTitle(index);
   summary.textContent = `${index.totals.details} Detailkarten erzeugen ${index.totals.bridges} Brücken zu ${index.totals.targets} Zielknoten. Filter: ${axisTitle}. Ein hoher Eingangswert markiert Orientierungsknoten, nicht automatisch Wichtigkeit im Ausbildungsplan.`;
@@ -525,7 +558,7 @@ function renderDetailBridgeIndex() {
     roleLine.append(el("span", "bridge-type", `${hub.incomingBridgeCount} eingehende Brücken`));
     card.append(roleLine);
     card.append(el("span", "hub-title", hub.targetTitle));
-    card.append(el("span", "fineprint hub-id", hub.targetId));
+    card.append(el("span", "fineprint hub-id", `Ziel-ID: ${hub.targetId}`));
     hubsTarget.append(card);
   });
 
@@ -670,7 +703,10 @@ function renderKnowledgeDetail(target, detail) {
     section.append(el("h5", "", "Brücken"));
     detail.bridges.forEach((bridge) => {
       const item = el("div", "bridge-target-row");
-      item.append(el("span", "", `${bridge.targetId}: ${bridge.relation}`));
+      const label = el("span");
+      label.append(el("strong", "", bridgeTargetTitle(state.detailBridgeIndex, bridge.targetId)));
+      label.append(document.createTextNode(`: ${bridge.relation}`));
+      item.append(label);
       item.append(actionButton("Ziel öffnen", () => openDetailBridgeTarget(bridge.targetId), "text-link-action"));
       section.append(item);
     });
