@@ -156,7 +156,7 @@ function openTopic(topicId, { showInMap = false, showDetail = false } = {}) {
     if (detail) openStandaloneDetailCard(detail.id);
     return;
   }
-  scrollToSection("index");
+  topicCard?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
   setTimeout(() => flashElement(topicCard), 120);
 }
 
@@ -628,13 +628,22 @@ function matchingDetails(sources, title, topicId = "", axisId = "") {
   const titleNorm = normalizeText(title);
   const topicNorm = normalizeText(topicId);
   const axisNorm = normalizeText(axisId);
-  return state.details.filter((detail) => {
+  const scored = state.details.map((detail) => {
+    const topicExact = Boolean(topicNorm) && (detail.topicIds ?? []).some((topic) => normalizeText(topic) === topicNorm);
+    const topicTitle = (detail.topicIds ?? []).some((topic) => normalizeText(topic) === titleNorm);
+    const titleMatch = Boolean(titleNorm) && (normalizeText(detail.title).includes(titleNorm) || titleNorm.includes(normalizeText(detail.title)));
+    const axisMatch = Boolean(axisNorm) && (detail.axisIds ?? []).some((axis) => normalizeText(axis) === axisNorm);
     const sourceMatch = (detail.sourceRefs ?? []).some((source) => sourceSet.has(String(source)));
-    const topicMatch = (detail.topicIds ?? []).some((topic) => normalizeText(topic) === topicNorm || normalizeText(topic) === titleNorm);
-    const axisMatch = axisNorm && (detail.axisIds ?? []).some((axis) => normalizeText(axis) === axisNorm);
-    const titleMatch = normalizeText(detail.title).includes(titleNorm) || titleNorm.includes(normalizeText(detail.title));
-    return sourceMatch || topicMatch || axisMatch || titleMatch;
-  });
+    let score = 0;
+    if (topicExact) score += 100;
+    if (topicTitle) score += 60;
+    if (titleMatch) score += 50;
+    if (axisMatch) score += 10;
+    if (sourceMatch) score += 1;
+    return { detail, score };
+  }).filter((entry) => entry.score > 0);
+  scored.sort((left, right) => right.score - left.score || left.detail.title.localeCompare(right.detail.title, "de"));
+  return scored.map((entry) => entry.detail);
 }
 
 function appendListSection(target, title, items) {
