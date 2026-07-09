@@ -74,12 +74,98 @@ function firstLine(value) {
   return String(value ?? "").split(/\r?\n/).find((line) => line.trim())?.trim() ?? "";
 }
 
+function topicAnchorId(topicId) {
+  return `topic-${normalizeText(topicId)}`;
+}
+
+function axisAnchorId(axisId) {
+  return `axis-${normalizeText(axisId)}`;
+}
+
+function scrollToSection(id) {
+  document.querySelector(`#${id}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function flashElement(element) {
+  if (!element) return;
+  element.classList.remove("link-highlight");
+  void element.offsetWidth;
+  element.classList.add("link-highlight");
+}
+
+function actionButton(text, onClick, className = "inline-action") {
+  const button = el("button", className, text);
+  button.type = "button";
+  button.addEventListener("click", onClick);
+  return button;
+}
+
 function topicCount(axis) {
   return axis.topics?.length ?? 0;
 }
 
 function allTopics() {
   return state.map.axes.flatMap((axis) => axis.topics.map((topic) => ({ ...topic, axisId: axis.id, axisTitle: axis.title })));
+}
+
+function topicById(topicId) {
+  return allTopics().find((topic) => topic.id === topicId) ?? null;
+}
+
+function topicByTitle(title) {
+  const titleNorm = normalizeText(title);
+  return allTopics().find((topic) => normalizeText(topic.title) === titleNorm) ?? null;
+}
+
+function setAxisFilter(axisId) {
+  state.activeAxis = axisId;
+  const select = document.querySelector("#axis-filter");
+  if (select && [...select.options].some((option) => option.value === axisId)) select.value = axisId;
+  renderTopics();
+}
+
+function openAxis(axisId, { showInMap = false } = {}) {
+  setAxisFilter(axisId);
+  if (showInMap) {
+    openCanvasNode(`axis-${axisId}`);
+    return;
+  }
+  const axisCard = document.querySelector(`#${axisAnchorId(axisId)}`);
+  scrollToSection("achsen");
+  setTimeout(() => flashElement(axisCard), 120);
+}
+
+function detailForTopic(topic) {
+  return state.details.find((detail) => (detail.topicIds ?? []).includes(topic.id)) ?? matchingDetails(topic.sources, topic.title, topic.id, topic.axisId)[0] ?? null;
+}
+
+function openTopic(topicId, { showInMap = false, showDetail = false } = {}) {
+  const topic = topicById(topicId);
+  if (!topic) return;
+  setAxisFilter(topic.axisId);
+  const topicCard = document.querySelector(`#${topicAnchorId(topic.id)}`);
+  if (showInMap) {
+    openCanvasNode(`topic-${topic.id}`);
+    return;
+  }
+  if (showDetail) {
+    const detail = detailForTopic(topic);
+    if (detail) openStandaloneDetailCard(detail.id);
+    return;
+  }
+  scrollToSection("index");
+  setTimeout(() => flashElement(topicCard), 120);
+}
+
+function openTopicByTitle(title) {
+  const topic = topicByTitle(title);
+  if (topic) openTopic(topic.id);
+}
+
+function focusCluster(clusterId) {
+  state.activeCluster = clusterId;
+  rerenderFocusViews();
+  scrollToSection("index");
 }
 
 function selectedCluster() {
@@ -129,8 +215,16 @@ function renderStats() {
   const target = document.querySelector("#map-stats");
   const topics = allTopics();
   target.innerHTML = "";
+  const statLinks = {
+    Sinnachsen: "#achsen",
+    Themen: "#index",
+    Details: "#verbindungen",
+    Cluster: "#index",
+    Brücken: "#verbindungen",
+  };
   [["Sinnachsen", state.map.axes.length], ["Themen", topics.length], ["Details", detailCoverageLabel()], ["Cluster", state.network.clusters.length], ["Brücken", state.network.bridges.length]].forEach(([label, value]) => {
-    const card = el("article", "stat-card");
+    const card = el("a", "stat-card stat-link");
+    card.href = statLinks[label] ?? "#status";
     card.append(el("strong", "", String(value)));
     card.append(el("span", "", label));
     target.append(card);
@@ -156,10 +250,18 @@ function renderAxes() {
   target.innerHTML = "";
   state.map.axes.forEach((axis) => {
     const card = el("article", `axis-card ${axis.status}`);
+    card.id = axisAnchorId(axis.id);
     card.append(el("p", "module-meta", `${topicCount(axis)} Themen · ${axis.status}`));
     card.append(el("h3", "", axis.title));
     card.append(el("p", "", axis.summary));
     card.append(el("p", "source-line", `Quellen: ${axis.sources.join(", ")}`));
+    const actions = el("div", "action-row");
+    actions.append(actionButton("Themen anzeigen", () => {
+      setAxisFilter(axis.id);
+      scrollToSection("index");
+    }, "link-action"));
+    actions.append(actionButton("In Karte öffnen", () => openAxis(axis.id, { showInMap: true }), "link-action"));
+    card.append(actions);
     target.append(card);
   });
 }
@@ -167,10 +269,7 @@ function renderAxes() {
 function appendClusterButton(card, clusterId, text) {
   const button = el("button", "cluster-action", text);
   button.type = "button";
-  button.addEventListener("click", () => {
-    state.activeCluster = clusterId;
-    rerenderFocusViews();
-  });
+  button.addEventListener("click", () => focusCluster(clusterId));
   card.append(button);
 }
 
@@ -196,7 +295,11 @@ function renderClusters() {
     summary.textContent = "Themen anzeigen";
     details.append(summary);
     const topicList = el("ul", "compact-list");
-    cluster.topics.forEach((topic) => topicList.append(el("li", "", topic)));
+    cluster.topics.forEach((topic) => {
+      const item = el("li");
+      item.append(actionButton(topic, () => openTopicByTitle(topic), "text-link-action"));
+      topicList.append(item);
+    });
     details.append(topicList);
     card.append(details);
     target.append(card);
@@ -214,6 +317,7 @@ function renderTopics() {
       .filter((topic) => !focusTopics || focusTopics.has(topic.title))
       .forEach((topic) => {
         const card = el("article", `topic-card ${topic.status}`);
+        card.id = topicAnchorId(topic.id);
         card.append(el("p", "module-meta", axis.title));
         card.append(el("h3", "", topic.title));
         const tags = el("div", "tag-row");
@@ -221,6 +325,12 @@ function renderTopics() {
         tags.append(el("span", `tag ${detailTopics.has(topic.id) ? "detail-ready-tag" : "detail-missing-tag"}`, detailTopics.has(topic.id) ? "Detail vorhanden" : "Detail offen"));
         topic.sources.forEach((source) => tags.append(el("span", "tag muted-tag", source)));
         card.append(tags);
+        const actions = el("div", "action-row");
+        actions.append(actionButton("In Karte öffnen", () => openTopic(topic.id, { showInMap: true }), "link-action"));
+        actions.append(actionButton("Achse anzeigen", () => openAxis(axis.id), "link-action"));
+        const detail = detailForTopic({ ...topic, axisId: axis.id, axisTitle: axis.title });
+        if (detail) actions.append(actionButton("Detail öffnen", () => openStandaloneDetailCard(detail.id), "link-action"));
+        card.append(actions);
         grid.append(card);
       });
   });
@@ -255,6 +365,10 @@ function renderRelations() {
     card.append(roleLine);
     card.append(el("h3", "", `${clusterById.get(bridge.from)} → ${clusterById.get(bridge.to)}`));
     card.append(el("p", "", bridge.relation));
+    const actions = el("div", "action-row");
+    actions.append(actionButton("Ausgangscluster öffnen", () => focusCluster(bridge.from), "link-action"));
+    actions.append(actionButton("Zielcluster öffnen", () => focusCluster(bridge.to), "link-action"));
+    card.append(actions);
     target.append(card);
   });
 }
@@ -292,6 +406,24 @@ function renderDetailBridgeAxisFilter() {
 
 function bridgeIncomingForTarget(index, targetId) {
   return (index.bridges ?? []).filter((bridge) => bridge.targetId === targetId);
+}
+
+function openDetailBridgeTarget(targetId) {
+  const index = state.detailBridgeIndex;
+  if (!index?.byTarget?.[targetId]) return;
+  state.activeDetailBridgeAxis = index.byTarget[targetId].axisId ?? "all";
+  state.activeDetailBridgeTarget = targetId;
+  state.activeDetailBridgeDetail = "";
+  renderDetailBridgeAxisFilter();
+  renderDetailBridgeIndex();
+  scrollToSection("verbindungen");
+}
+
+function openStandaloneDetailCard(detailId) {
+  state.activeDetailBridgeDetail = detailId;
+  renderBridgeDetailCard(detailId);
+  scrollToSection("verbindungen");
+  setTimeout(() => flashElement(document.querySelector("#detail-bridge-detail-card")), 120);
 }
 
 function detailById(detailId) {
@@ -407,6 +539,12 @@ function renderDetailBridgeIndex() {
     card.append(el("h3", "", axis.axisTitle));
     card.append(el("p", "", `${axis.incomingBridgeCount} eingehende Detail-Brücken`));
     card.append(el("p", "fineprint", axis.axisId));
+    card.append(actionButton("Diese Zielachse filtern", () => {
+      state.activeDetailBridgeAxis = axis.axisId;
+      state.activeDetailBridgeTarget = "";
+      renderDetailBridgeAxisFilter();
+      renderDetailBridgeIndex();
+    }, "link-action"));
     axesTarget.append(card);
   });
 
@@ -529,8 +667,15 @@ function renderKnowledgeDetail(target, detail) {
   appendListSection(card, "Typische Fehlannahmen", detail.commonMisunderstandings);
   appendListSection(card, "Offene Fragen", detail.openQuestions);
   if (detail.bridges?.length) {
-    const bridgeList = detail.bridges.map((bridge) => `${bridge.targetId}: ${bridge.relation}`);
-    appendListSection(card, "Brücken", bridgeList);
+    const section = el("div", "detail-subsection");
+    section.append(el("h5", "", "Brücken"));
+    detail.bridges.forEach((bridge) => {
+      const item = el("div", "bridge-target-row");
+      item.append(el("span", "", `${bridge.targetId}: ${bridge.relation}`));
+      item.append(actionButton("Ziel öffnen", () => openDetailBridgeTarget(bridge.targetId), "text-link-action"));
+      section.append(item);
+    });
+    card.append(section);
   }
   card.append(el("p", "fineprint", `Beleganker: ${(detail.sourceRefs ?? []).join(", ")} · Exzerpte: ${(detail.excerptRefs ?? []).join(", ")}`));
   target.append(card);
@@ -690,6 +835,20 @@ function renderCanvasDetail(node) {
   if (context.topic?.axisTitle) target.append(el("p", "fineprint", `Achse: ${context.topic.axisTitle}`));
   target.append(el("p", "", summary));
   appendSourceTags(target, sources);
+  const actions = el("div", "action-row");
+  if (context.topic) {
+    actions.append(actionButton("Im Index öffnen", () => openTopic(context.topic.id), "link-action"));
+    const detail = detailForTopic(context.topic);
+    if (detail) actions.append(actionButton("Detail öffnen", () => openStandaloneDetailCard(detail.id), "link-action"));
+  }
+  if (context.axis) {
+    actions.append(actionButton("Achse anzeigen", () => openAxis(context.axis.id), "link-action"));
+    actions.append(actionButton("Themen dieser Achse", () => {
+      setAxisFilter(context.axis.id);
+      scrollToSection("index");
+    }, "link-action"));
+  }
+  if (actions.children.length) target.append(actions);
 
   const detailBlock = el("article", "detail-note");
   detailBlock.append(el("h4", "", "Detailaufbereitung"));
@@ -721,6 +880,20 @@ function renderCanvasDetail(node) {
     excerptBlock.append(el("p", "", "Noch kein passendes Pilotexzerpt gefunden. Das ist kein Fehler, sondern die sichtbare Grenze der bisherigen Tiefenerschließung."));
   }
   target.append(excerptBlock);
+}
+
+async function openCanvasNode(nodeId) {
+  const needsLoad = state.canvas.activeView !== "learning-map" || !state.canvas.data?.nodes?.length;
+  state.canvas.activeView = "learning-map";
+  const select = document.querySelector("#canvas-view-select");
+  if (select) select.value = state.canvas.activeView;
+  if (needsLoad) await loadCanvasView();
+  const node = state.canvas.data?.nodes?.find((item) => item.id === nodeId);
+  if (!node) return;
+  state.canvas.activeNodeId = node.id;
+  renderCanvasSurface();
+  renderCanvasDetail(node);
+  scrollToSection("karte");
 }
 
 async function loadCanvasView() {
