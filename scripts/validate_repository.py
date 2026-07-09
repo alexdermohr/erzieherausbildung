@@ -248,7 +248,7 @@ assert 'href="assets/styles.css"' in index_html
 assert 'src="assets/app.js"' in index_html
 for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verbindungen", "#index", 'id="karte"', 'id="achsen"', 'id="verbindungen"', 'id="index"', 'id="status"']:
     assert token in index_html
-for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)"]:
+for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "stat-link", "link-highlight"]:
     assert token in (root / "assets/styles.css").read_text(encoding="utf-8")
 assert 'sitePath("/data/learning-map.v1.json")' in app_js
 assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
@@ -340,7 +340,16 @@ assert "renderIncomingBridgeDetails" in app_js
 assert "bridgeIncomingForTarget" in app_js
 assert "renderBridgeDetailCard" in app_js
 assert "openBridgeDetailCard" in app_js
+assert "openCanvasNode" in app_js
+assert "openTopic" in app_js
+assert "openAxis" in app_js
+assert "openDetailBridgeTarget" in app_js
+assert "openStandaloneDetailCard" in app_js
 assert "Detailkarte anzeigen" in app_js
+assert "In Karte öffnen" in app_js
+assert "Ziel öffnen" in app_js
+assert "Im Index öffnen" in app_js
+assert "Themen dieser Achse" in app_js
 assert "aria-pressed" in app_js
 assert "hub-title" in app_js
 assert "detail-bridge-axis-filter" in index_html
