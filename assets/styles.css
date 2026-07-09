@@ -97,6 +97,9 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
 .incoming-bridge-card { border-left: 3px solid rgba(15, 23, 42, .24); padding: 10px 0 10px 14px; }
 .incoming-bridge-card h5 { margin: 0 0 6px; font-size: .98rem; }
 .incoming-bridge-card p { margin: 0 0 6px; }
+.bridge-detail-card-target { margin-top: 18px; scroll-margin-top: 24px; }
+.inline-action { border: 1px solid var(--accent); border-radius: 999px; padding: 7px 10px; margin-top: 4px; color: var(--accent); background: transparent; cursor: pointer; }
+.inline-action.active { background: var(--accent-soft); }
 .topic-card h3, .relation-card h3 { margin: 0 0 10px; font-size: 1.05rem; }
 .source-line { margin-top: 12px; font-size: .82rem; color: var(--muted); }
 .muted-tag { background: transparent; border: 1px solid var(--line); color: var(--muted); }

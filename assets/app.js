@@ -38,6 +38,7 @@ const state = {
   activeCluster: "all",
   activeDetailBridgeAxis: "all",
   activeDetailBridgeTarget: "",
+  activeDetailBridgeDetail: "",
   canvas: {
     activeView: canvasViews[0].id,
     data: null,
@@ -289,17 +290,48 @@ function bridgeIncomingForTarget(index, targetId) {
   return (index.bridges ?? []).filter((bridge) => bridge.targetId === targetId);
 }
 
+function detailById(detailId) {
+  return state.details.find((detail) => detail.id === detailId) ?? null;
+}
+
+function renderBridgeDetailCard(detailId) {
+  const target = document.querySelector("#detail-bridge-detail-card");
+  if (!target) return;
+  target.innerHTML = "";
+  if (!detailId) {
+    target.append(el("p", "fineprint", "Detailkarte auswählen, um sie hier direkt zu lesen."));
+    return;
+  }
+  const detail = detailById(detailId);
+  if (!detail) {
+    target.append(el("p", "fineprint", `Detailkarte ${detailId} konnte nicht geladen werden.`));
+    return;
+  }
+  target.append(el("h4", "", "Geöffnete Detailkarte"));
+  renderKnowledgeDetail(target, detail);
+}
+
+function openBridgeDetailCard(detailId) {
+  state.activeDetailBridgeDetail = detailId;
+  renderDetailBridgeIndex();
+  document.querySelector("#detail-bridge-detail-card")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
 function renderIncomingBridgeDetails(index, targetId) {
   const target = document.querySelector("#detail-bridge-incoming-list");
   if (!target) return;
   target.innerHTML = "";
   if (!targetId) {
     target.append(el("p", "fineprint", "Hub auswählen, um eingehende Detailkarten und Relationstexte zu sehen."));
+    renderBridgeDetailCard("");
     return;
   }
 
   const targetMeta = index.byTarget?.[targetId];
   const bridges = bridgeIncomingForTarget(index, targetId);
+  if (!bridges.some((bridge) => bridge.sourceDetailId === state.activeDetailBridgeDetail)) {
+    state.activeDetailBridgeDetail = bridges[0]?.sourceDetailId ?? "";
+  }
   const heading = el("h4", "", `Eingehend zu ${targetMeta?.targetTitle ?? targetId}`);
   target.append(heading);
   target.append(el("p", "fineprint", `${bridges.length} Detail-Brücken. Diese Relationstexte sind aus Detailkarten abgeleitet.`));
@@ -309,6 +341,10 @@ function renderIncomingBridgeDetails(index, targetId) {
     card.append(el("h5", "", bridge.sourceTitle));
     card.append(el("p", "", bridge.relation));
     card.append(el("p", "fineprint", `${bridge.sourceDetailId} → ${bridge.targetId}`));
+    const button = el("button", `inline-action ${bridge.sourceDetailId === state.activeDetailBridgeDetail ? "active" : ""}`, "Detailkarte anzeigen");
+    button.type = "button";
+    button.onclick = () => openBridgeDetailCard(bridge.sourceDetailId);
+    card.append(button);
     target.append(card);
   });
   if (bridges.length > 16) {
@@ -335,6 +371,7 @@ function renderDetailBridgeIndex() {
   const axes = activeAxis === "all" ? (index.byTargetAxis ?? []) : (index.byTargetAxis ?? []).filter((axis) => axis.axisId === activeAxis);
   if (!hubs.some((hub) => hub.targetId === state.activeDetailBridgeTarget)) {
     state.activeDetailBridgeTarget = hubs[0]?.targetId ?? "";
+    state.activeDetailBridgeDetail = "";
   }
   const axisTitle = activeDetailBridgeAxisTitle(index);
   summary.textContent = `${index.totals.details} Detailkarten erzeugen ${index.totals.bridges} Brücken zu ${index.totals.targets} Zielknoten. Filter: ${axisTitle}. Ein hoher Eingangswert markiert Orientierungsknoten, nicht automatisch Wichtigkeit im Ausbildungsplan.`;
@@ -349,6 +386,7 @@ function renderDetailBridgeIndex() {
     card.setAttribute("aria-pressed", hub.targetId === state.activeDetailBridgeTarget ? "true" : "false");
     card.onclick = () => {
       state.activeDetailBridgeTarget = hub.targetId;
+      state.activeDetailBridgeDetail = "";
       renderDetailBridgeIndex();
     };
     const roleLine = el("span", "bridge-role");
@@ -369,6 +407,7 @@ function renderDetailBridgeIndex() {
   });
 
   renderIncomingBridgeDetails(index, state.activeDetailBridgeTarget);
+  renderBridgeDetailCard(state.activeDetailBridgeDetail);
 }
 
 function renderCoverage() {
