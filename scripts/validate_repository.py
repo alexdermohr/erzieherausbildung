@@ -298,10 +298,14 @@ assert "renderDetailBridgeIndex" in app_js
 assert "renderDetailBridgeAxisFilter" in app_js
 assert "renderIncomingBridgeDetails" in app_js
 assert "bridgeIncomingForTarget" in app_js
+assert "renderBridgeDetailCard" in app_js
+assert "openBridgeDetailCard" in app_js
+assert "Detailkarte anzeigen" in app_js
 assert "aria-pressed" in app_js
 assert "hub-title" in app_js
 assert "detail-bridge-axis-filter" in index_html
 assert "detail-bridge-incoming-list" in index_html
+assert "detail-bridge-detail-card" in index_html
 assert "detailBacklogUrl" not in app_js
 assert "Detail-Brückenindex" in index_html
 assert "Orientierung, keine neue Quelle" in index_html
