@@ -1,27 +1,31 @@
-const learningMapUrl = "/data/learning-map.v1.json";
-const knowledgeNetworkUrl = "/data/knowledge-network.v1.json";
-const sourceSummaryUrl = "/data/source-summary.json";
-const excerptIndexUrl = "/data/excerpts/pilot-v1.jsonl";
-const detailIndexUrl = "/data/details/index.v1.json";
-const detailBridgeIndexUrl = "/data/detail-bridge-index.v1.json";
+function sitePath(path) {
+  return String(path).replace(/^\/+/, "");
+}
+
+const learningMapUrl = sitePath("/data/learning-map.v1.json");
+const knowledgeNetworkUrl = sitePath("/data/knowledge-network.v1.json");
+const sourceSummaryUrl = sitePath("/data/source-summary.json");
+const excerptIndexUrl = sitePath("/data/excerpts/pilot-v1.jsonl");
+const detailIndexUrl = sitePath("/data/details/index.v1.json");
+const detailBridgeIndexUrl = sitePath("/data/detail-bridge-index.v1.json");
 
 const canvasViews = [
   {
     id: "learning-map",
     label: "Lernlandkarte",
-    url: "/visuals/learning-map-v1.canvas",
+    url: sitePath("/visuals/learning-map-v1.canvas"),
     role: "Denkfläche",
   },
   {
     id: "system-map",
     label: "Systemkarte",
-    url: "/visuals/erzieherausbildung-systemkarte.canvas",
+    url: sitePath("/visuals/erzieherausbildung-systemkarte.canvas"),
     role: "Pipeline und Oberflächen",
   },
   {
     id: "lernfeld-4",
     label: "Lernfeld 4 – Bildungsbereiche",
-    url: "/visuals/lernfeld-4-bildungsbereiche.canvas",
+    url: sitePath("/visuals/lernfeld-4-bildungsbereiche.canvas"),
     role: "Fokuskarte",
   },
 ];
@@ -468,7 +472,7 @@ async function loadDetails() {
     state.detailCoverage = index.coverage ?? null;
     return Promise.all(entries.map(async (entry) => {
       try {
-        const detailResponse = await fetch(entry.path);
+        const detailResponse = await fetch(sitePath(entry.path));
         if (!detailResponse.ok) return null;
         return await detailResponse.json();
       } catch {
