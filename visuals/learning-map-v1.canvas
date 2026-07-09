@@ -12,7 +12,7 @@
     {
       "id": "axis-professionalitaet",
       "type": "text",
-      "text": "Professionelle Haltung und Berufsrolle\n\nRolle, Verantwortung, Arbeitsfelder, professionelle Haltung und Reflexion.\n\nQuellen: doc-004, doc-005, doc-006, doc-007",
+      "text": "Professionelle Haltung und Berufsrolle\n\nRolle, Verantwortung, Arbeitsfelder, professionelle Haltung und Reflexion.",
       "x": -850,
       "y": -720,
       "width": 430,
@@ -21,7 +21,7 @@
     {
       "id": "topic-berufsrolle",
       "type": "text",
-      "text": "Berufsrolle\ndoc-004",
+      "text": "Berufsrolle",
       "x": -850,
       "y": -470,
       "width": 210,
@@ -30,7 +30,7 @@
     {
       "id": "topic-professionelle-haltung",
       "type": "text",
-      "text": "Professionelle Haltung\ndoc-005",
+      "text": "Professionelle Haltung",
       "x": -620,
       "y": -470,
       "width": 210,
@@ -39,7 +39,7 @@
     {
       "id": "topic-arbeitsbedingungen",
       "type": "text",
-      "text": "Arbeitsbedingungen\ndoc-006",
+      "text": "Arbeitsbedingungen",
       "x": -850,
       "y": -365,
       "width": 210,
@@ -48,7 +48,7 @@
     {
       "id": "topic-arbeitsfelder",
       "type": "text",
-      "text": "Arbeitsfelder\ndoc-007",
+      "text": "Arbeitsfelder",
       "x": -620,
       "y": -365,
       "width": 210,
@@ -57,7 +57,7 @@
     {
       "id": "topic-reflexion",
       "type": "text",
-      "text": "Reflexion und Selbstverständnis\ndoc-004, doc-005",
+      "text": "Reflexion und Selbstverständnis",
       "x": -850,
       "y": -260,
       "width": 210,
@@ -66,7 +66,7 @@
     {
       "id": "axis-beziehung-entwicklung",
       "type": "text",
-      "text": "Beziehung, Entwicklung und Selbstwirksamkeit\n\nEingewöhnung, Bindung, Entwicklung, Selbstwirksamkeit und pädagogische Begleitung.\n\nQuellen: doc-008, doc-010, doc-016",
+      "text": "Beziehung, Entwicklung und Selbstwirksamkeit\n\nEingewöhnung, Bindung, Selbstwirksamkeit, Aufsicht und pädagogische Begleitung.",
       "x": -150,
       "y": -820,
       "width": 430,
@@ -75,7 +75,7 @@
     {
       "id": "topic-eingewoehnung",
       "type": "text",
-      "text": "Eingewöhnung\ndoc-008",
+      "text": "Eingewöhnung",
       "x": -150,
       "y": -570,
       "width": 210,
@@ -84,7 +84,7 @@
     {
       "id": "topic-bindung-beziehung",
       "type": "text",
-      "text": "Bindung und Beziehung\ndoc-008, doc-016",
+      "text": "Bindung und Beziehung",
       "x": 80,
       "y": -570,
       "width": 210,
@@ -93,7 +93,7 @@
     {
       "id": "topic-selbstwirksamkeit",
       "type": "text",
-      "text": "Selbstwirksamkeit\ndoc-010",
+      "text": "Selbstwirksamkeit",
       "x": -150,
       "y": -465,
       "width": 210,
@@ -102,7 +102,7 @@
     {
       "id": "topic-anpassung-selbstbestimmung",
       "type": "text",
-      "text": "Anpassung und Selbstbestimmung\ndoc-016",
+      "text": "Anpassung und Selbstbestimmung",
       "x": 80,
       "y": -465,
       "width": 210,
@@ -111,7 +111,7 @@
     {
       "id": "topic-aufsichtspflicht",
       "type": "text",
-      "text": "Aufsichtspflicht\ndoc-010",
+      "text": "Aufsichtspflicht",
       "x": -150,
       "y": -360,
       "width": 210,
@@ -120,7 +120,7 @@
     {
       "id": "axis-sprache-kommunikation",
       "type": "text",
-      "text": "Sprache, Kommunikation und Konflikte\n\nSprachbildung, Gesprächsanlässe, Konfliktverstehen und kommunikative Alltagspraxis.\n\nQuellen: doc-002, doc-009, doc-011, doc-012",
+      "text": "Sprache, Kommunikation und Konflikte\n\nSprachbildung, Gesprächsanlässe, Konfliktverstehen und dialogische Alltagspraxis.",
       "x": 550,
       "y": -720,
       "width": 430,
@@ -129,7 +129,7 @@
     {
       "id": "topic-sprache-kommunikation",
       "type": "text",
-      "text": "Sprache und Kommunikation\ndoc-002, doc-011",
+      "text": "Sprache und Kommunikation",
       "x": 550,
       "y": -470,
       "width": 210,
@@ -138,7 +138,7 @@
     {
       "id": "topic-sprachbildung",
       "type": "text",
-      "text": "Sprachbildung im Alltag\ndoc-011",
+      "text": "Sprachbildung im Alltag",
       "x": 780,
       "y": -470,
       "width": 210,
@@ -147,7 +147,7 @@
     {
       "id": "topic-gespraechsanlaesse",
       "type": "text",
-      "text": "Gesprächsanlässe\ndoc-009",
+      "text": "Gesprächsanlässe",
       "x": 550,
       "y": -365,
       "width": 210,
@@ -156,7 +156,7 @@
     {
       "id": "topic-konflikte",
       "type": "text",
-      "text": "Konflikte\ndoc-012",
+      "text": "Konflikte",
       "x": 780,
       "y": -365,
       "width": 210,
@@ -165,7 +165,7 @@
     {
       "id": "topic-dialogische-haltung",
       "type": "text",
-      "text": "Dialogische Haltung\ndoc-009, doc-011",
+      "text": "Dialogische Haltung",
       "x": 550,
       "y": -260,
       "width": 210,
@@ -174,7 +174,7 @@
     {
       "id": "axis-beobachtung-fallverstehen",
       "type": "text",
-      "text": "Beobachtung, Fallverstehen und Dokumentation\n\nRessourcenorientierte Beobachtung, Dokumentation, Analyse und pädagogische Folgerungen.\n\nQuellen: doc-014",
+      "text": "Beobachtung, Fallverstehen und Dokumentation\n\nRessourcenorientierte Beobachtung, Dokumentation, Analyse und pädagogische Folgerungen.",
       "x": -850,
       "y": 0,
       "width": 430,
@@ -183,7 +183,7 @@
     {
       "id": "topic-ressourcenorientierung",
       "type": "text",
-      "text": "Ressourcenorientierung\ndoc-014",
+      "text": "Ressourcenorientierung",
       "x": -850,
       "y": 250,
       "width": 210,
@@ -192,7 +192,7 @@
     {
       "id": "topic-beobachtung",
       "type": "text",
-      "text": "Beobachtung\ndoc-014",
+      "text": "Beobachtung",
       "x": -620,
       "y": 250,
       "width": 210,
@@ -201,7 +201,7 @@
     {
       "id": "topic-dokumentation",
       "type": "text",
-      "text": "Dokumentation\ndoc-014",
+      "text": "Dokumentation",
       "x": -850,
       "y": 355,
       "width": 210,
@@ -210,7 +210,7 @@
     {
       "id": "topic-fallverstehen",
       "type": "text",
-      "text": "Fallverstehen\ndoc-014",
+      "text": "Fallverstehen",
       "x": -620,
       "y": 355,
       "width": 210,
@@ -219,7 +219,7 @@
     {
       "id": "topic-foerderplanung",
       "type": "text",
-      "text": "Förderliche Schlüsse ziehen\ndoc-014",
+      "text": "Förderliche Schlüsse ziehen",
       "x": -850,
       "y": 460,
       "width": 210,
@@ -228,7 +228,7 @@
     {
       "id": "axis-gruppe-institution-politik",
       "type": "text",
-      "text": "Gruppe, Institution, Wohngruppe und Politik\n\nWohngruppe, Regeln, Partizipation, politische Bildung und institutionelle Verantwortung.\n\nQuellen: doc-013, doc-015, doc-016, doc-017",
+      "text": "Gruppe, Institution, Wohngruppe und Politik\n\nWohngruppe, Regeln, Partizipation, politische Bildung und Verantwortung.",
       "x": 550,
       "y": 0,
       "width": 430,
@@ -237,7 +237,7 @@
     {
       "id": "topic-wohngruppe",
       "type": "text",
-      "text": "Wohngruppe\ndoc-013, doc-017",
+      "text": "Wohngruppe",
       "x": 550,
       "y": 250,
       "width": 210,
@@ -246,7 +246,7 @@
     {
       "id": "topic-regeln-struktur",
       "type": "text",
-      "text": "Regeln und Struktur\ndoc-013, doc-017",
+      "text": "Regeln und Struktur",
       "x": 780,
       "y": 250,
       "width": 210,
@@ -255,7 +255,7 @@
     {
       "id": "topic-partizipation",
       "type": "text",
-      "text": "Partizipation\ndoc-015, doc-016",
+      "text": "Partizipation",
       "x": 550,
       "y": 355,
       "width": 210,
@@ -264,7 +264,7 @@
     {
       "id": "topic-politik",
       "type": "text",
-      "text": "Politische Bildung\ndoc-015",
+      "text": "Politische Bildung",
       "x": 780,
       "y": 355,
       "width": 210,
@@ -273,7 +273,7 @@
     {
       "id": "topic-macht-verantwortung",
       "type": "text",
-      "text": "Macht und Verantwortung\ndoc-015, doc-016",
+      "text": "Macht und Verantwortung",
       "x": 550,
       "y": 460,
       "width": 210,
@@ -282,7 +282,7 @@
     {
       "id": "axis-bildungsbereiche",
       "type": "text",
-      "text": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis\n\nMathematik, Naturwissenschaft, Kunst, Musik, Theater, Religion, Gesundheit und Ernährung.\n\nQuellen: doc-018, doc-019, doc-020, doc-021, doc-023, doc-024, doc-025, doc-026, doc-027, doc-028",
+      "text": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis\n\nÄsthetische, mathematische, naturwissenschaftliche, musikalische und theatrale Bildungszugänge.",
       "x": -850,
       "y": 720,
       "width": 430,
@@ -291,7 +291,7 @@
     {
       "id": "topic-mathematik",
       "type": "text",
-      "text": "Frühkindliche Mathematik\ndoc-019, doc-024",
+      "text": "Frühkindliche Mathematik",
       "x": -850,
       "y": 970,
       "width": 210,
@@ -300,7 +300,7 @@
     {
       "id": "topic-naturwissenschaft",
       "type": "text",
-      "text": "Natur, Umwelt, Technik\ndoc-018",
+      "text": "Natur, Umwelt, Technik",
       "x": -620,
       "y": 970,
       "width": 210,
@@ -309,7 +309,7 @@
     {
       "id": "topic-kunst-aesthetik",
       "type": "text",
-      "text": "Kunst und Ästhetik\ndoc-020",
+      "text": "Kunst und Ästhetik",
       "x": -850,
       "y": 1075,
       "width": 210,
@@ -318,7 +318,7 @@
     {
       "id": "topic-musik-rhythmik",
       "type": "text",
-      "text": "Musik und Rhythmik\ndoc-023",
+      "text": "Musik und Rhythmik",
       "x": -620,
       "y": 1075,
       "width": 210,
@@ -327,7 +327,7 @@
     {
       "id": "topic-theater",
       "type": "text",
-      "text": "Theater\ndoc-025",
+      "text": "Theater",
       "x": -850,
       "y": 1180,
       "width": 210,
@@ -336,7 +336,7 @@
     {
       "id": "axis-eltern-kooperation",
       "type": "text",
-      "text": "Elternkooperation und Übergänge\n\nZusammenarbeit mit Eltern, Gesprächsführung, Erziehungspartnerschaft und Übergänge.\n\nQuellen: doc-029",
+      "text": "Elternkooperation und Übergänge\n\nElternkooperation, Erziehungspartnerschaft, Elterngespräche, Übergänge und Familienperspektive.",
       "x": -150,
       "y": 720,
       "width": 430,
@@ -345,7 +345,7 @@
     {
       "id": "topic-elternkooperation",
       "type": "text",
-      "text": "Elternkooperation\ndoc-029",
+      "text": "Elternkooperation",
       "x": -150,
       "y": 970,
       "width": 210,
@@ -354,7 +354,7 @@
     {
       "id": "topic-erziehungspartnerschaft",
       "type": "text",
-      "text": "Erziehungspartnerschaft\ndoc-029",
+      "text": "Erziehungspartnerschaft",
       "x": 80,
       "y": 970,
       "width": 210,
@@ -363,7 +363,7 @@
     {
       "id": "topic-elterngespraeche",
       "type": "text",
-      "text": "Elterngespräche\ndoc-029",
+      "text": "Elterngespräche",
       "x": -150,
       "y": 1075,
       "width": 210,
@@ -372,7 +372,7 @@
     {
       "id": "topic-uebergaenge",
       "type": "text",
-      "text": "Übergänge\ndoc-029, doc-008",
+      "text": "Übergänge",
       "x": 80,
       "y": 1075,
       "width": 210,
@@ -381,7 +381,7 @@
     {
       "id": "topic-familienperspektive",
       "type": "text",
-      "text": "Familienperspektive\ndoc-029",
+      "text": "Familienperspektive",
       "x": -150,
       "y": 1180,
       "width": 210,
@@ -390,7 +390,7 @@
     {
       "id": "axis-rahmen-recht-ethik",
       "type": "text",
-      "text": "Rahmen, Recht, Schutz und Ethik\n\nBildungsleitlinien, Schutzauftrag, Aufsicht, Rechte, Ethik und institutioneller Rahmen.\n\nQuellen: doc-003, doc-010, doc-015, doc-028",
+      "text": "Rahmen, Recht, Schutz und Ethik\n\nRechtliche, institutionelle und ethische Rahmungen pädagogischen Handelns.",
       "x": 550,
       "y": 720,
       "width": 430,
@@ -399,7 +399,7 @@
     {
       "id": "topic-bildungsleitlinien",
       "type": "text",
-      "text": "Bildungsleitlinien als Rahmen\ndoc-003",
+      "text": "Bildungsleitlinien als Rahmen",
       "x": 550,
       "y": 970,
       "width": 210,
@@ -408,7 +408,7 @@
     {
       "id": "topic-kindeswohl",
       "type": "text",
-      "text": "Kindeswohl und Schutz\ndoc-003, doc-010",
+      "text": "Kindeswohl und Schutz",
       "x": 780,
       "y": 970,
       "width": 210,
@@ -417,7 +417,7 @@
     {
       "id": "topic-rechte",
       "type": "text",
-      "text": "Kinderrechte und Beteiligung\ndoc-003, doc-015",
+      "text": "Kinderrechte und Beteiligung",
       "x": 550,
       "y": 1075,
       "width": 210,
@@ -426,7 +426,7 @@
     {
       "id": "topic-ethik",
       "type": "text",
-      "text": "Ethik\ndoc-028",
+      "text": "Ethik",
       "x": 780,
       "y": 1075,
       "width": 210,
@@ -435,7 +435,7 @@
     {
       "id": "topic-institutioneller-auftrag",
       "type": "text",
-      "text": "Institutioneller Auftrag\ndoc-003",
+      "text": "Institutioneller Auftrag",
       "x": 550,
       "y": 1180,
       "width": 210,

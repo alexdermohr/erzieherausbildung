@@ -91,7 +91,7 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
 @media (max-width: 760px) {
   .top-nav { position: static; align-items: flex-start; border-radius: 24px; flex-direction: column; }
   .nav-links { justify-content: flex-start; }
-  .hero-grid, .section-head, .two-col { display: block; }
+  .hero-grid, .section-head, .two-col, .index-layout, .bridge-index-layout { display: block; }
   .orientation-card { margin-top: 22px; }
   .filter-label { margin: 18px 0; min-width: auto; }
   .limits { columns: 1; }
@@ -119,6 +119,9 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
 .incoming-bridge-card { border-left: 3px solid rgba(15, 23, 42, .24); padding: 10px 0 10px 14px; }
 .incoming-bridge-card h5 { margin: 0 0 6px; font-size: .98rem; }
 .incoming-bridge-card p { margin: 0 0 6px; }
+.connection-subsection { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 22px; }
+.status-surface-list { margin-top: 16px; }
+.index-layout .topic-grid { max-height: 820px; overflow: auto; padding-right: 4px; }
 .bridge-detail-card-target { margin-top: 18px; scroll-margin-top: 24px; }
 .inline-action { border: 1px solid var(--accent); border-radius: 999px; padding: 7px 10px; margin-top: 4px; color: var(--accent); background: transparent; cursor: pointer; }
 .inline-action.active { background: var(--accent-soft); }

@@ -157,6 +157,14 @@ for canvas_path in ["visuals/learning-map-v1.canvas", "visuals/erzieherausbildun
                 and left["y"] + left["h"] > right["y"]
             )
             assert not overlap, f"canvas node overlap in {canvas_path}: {left['id']} / {right['id']}"
+lf4_canvas = j("visuals/lernfeld-4-bildungsbereiche.canvas")
+lf4_node_ids = {node["id"] for node in lf4_canvas["nodes"]}
+for required_lf4_node in ["lf4-center", "lf4-prinzipien", "lf4-beobachtung", "topic-mathematik", "topic-naturwissenschaft", "topic-kunst-aesthetik", "topic-musik-rhythmik", "topic-theater", "lf4-reflexion"]:
+    assert required_lf4_node in lf4_node_ids
+assert len(lf4_canvas["nodes"]) >= 10
+assert len(lf4_canvas["edges"]) >= 10
+for node in j("visuals/learning-map-v1.canvas")["nodes"]:
+    assert "doc-" not in node.get("text", "")
 system_canvas = j("visuals/erzieherausbildung-systemkarte.canvas")
 required_system_nodes = {"source-boundary", "source-ids", "learning-map", "knowledge-network", "web-surface", "canvas-surface", "miro-surface", "docs-review", "validation"}
 system_node_ids = {node["id"] for node in system_canvas["nodes"]}
@@ -238,7 +246,7 @@ index_html = (root / "index.html").read_text(encoding="utf-8")
 assert "sitePath" in app_js
 assert 'href="assets/styles.css"' in index_html
 assert 'src="assets/app.js"' in index_html
-for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#bruecken", 'id="karte"', 'id="achsen"', 'id="cluster"', 'id="themen"', 'id="status"']:
+for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verbindungen", "#index", 'id="karte"', 'id="achsen"', 'id="verbindungen"', 'id="index"', 'id="status"']:
     assert token in index_html
 for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)"]:
     assert token in (root / "assets/styles.css").read_text(encoding="utf-8")
@@ -250,8 +258,10 @@ assert (root / ".nojekyll").exists()
 app_data_urls = {value.lstrip("/") for value in re.findall(r'"(/?data/[^"\n]+)"', app_js)}
 policy_web_urls = set(surface_by_id["web"]["data_sources"])
 assert app_data_urls == policy_web_urls
-for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list"]:
+for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list", "surface-list", "coverage-note"]:
     assert element_id in index_html
+for stale_section in ['id="cluster"', 'id="themen"', 'id="bruecken"', 'id="netzbruecken"', 'id="abdeckung"']:
+    assert stale_section not in index_html
 readme = (root / "README.md").read_text(encoding="utf-8")
 for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/detail-bridge-index-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
     assert token in readme
@@ -337,7 +347,7 @@ assert "detail-bridge-axis-filter" in index_html
 assert "detail-bridge-incoming-list" in index_html
 assert "detail-bridge-detail-card" in index_html
 assert "detailBacklogUrl" not in app_js
-assert "Detail-Brückenindex" in index_html
+assert "Detail- und Clusterverbindungen" in index_html
 assert "Orientierung, keine neue Quelle" in index_html
 assert "Detail offen" in app_js
 assert "Detail vorhanden" in app_js
