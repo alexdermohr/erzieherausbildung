@@ -136,6 +136,27 @@ assert coverage["linked_doc_ids"] == sorted(topic_sources)
 canvas = j("visuals/learning-map-v1.canvas")
 assert len(canvas["nodes"]) >= 40
 assert len(canvas["edges"]) >= 8
+for canvas_path in ["visuals/learning-map-v1.canvas", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/lernfeld-4-bildungsbereiche.canvas"]:
+    canvas_layout = j(canvas_path)
+    rects = [
+        {
+            "id": node["id"],
+            "x": float(node.get("x", 0)),
+            "y": float(node.get("y", 0)),
+            "w": float(node.get("width", 260)),
+            "h": float(node.get("height", 120)),
+        }
+        for node in canvas_layout.get("nodes", [])
+    ]
+    for index, left in enumerate(rects):
+        for right in rects[index + 1:]:
+            overlap = (
+                left["x"] < right["x"] + right["w"]
+                and left["x"] + left["w"] > right["x"]
+                and left["y"] < right["y"] + right["h"]
+                and left["y"] + left["h"] > right["y"]
+            )
+            assert not overlap, f"canvas node overlap in {canvas_path}: {left['id']} / {right['id']}"
 system_canvas = j("visuals/erzieherausbildung-systemkarte.canvas")
 required_system_nodes = {"source-boundary", "source-ids", "learning-map", "knowledge-network", "web-surface", "canvas-surface", "miro-surface", "docs-review", "validation"}
 system_node_ids = {node["id"] for node in system_canvas["nodes"]}
