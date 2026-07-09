@@ -7,26 +7,61 @@
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <p class="eyebrow">Wissenslandkarte</p>
-      <h1>Erzieherausbildung</h1>
-      <p class="lede">Eine übersichtliche Karte der Wissensinhalte, Begriffe und Zusammenhänge. Rohmaterial bleibt lokal; sichtbar wird die geordnete Struktur.</p>
+    <a class="skip-link" href="#karte">Zur Karte springen</a>
+    <nav class="top-nav" aria-label="Hauptnavigation">
+      <a class="brand-link" href="#start">Erzieherausbildung</a>
+      <div class="nav-links">
+        <a href="#karte">Karte</a>
+        <a href="#achsen">Achsen</a>
+        <a href="#cluster">Cluster</a>
+        <a href="#themen">Themen</a>
+        <a href="#bruecken">Brücken</a>
+        <a href="#status">Status</a>
+      </div>
+    </nav>
+
+    <header id="start" class="hero">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Wissenslandkarte</p>
+          <h1>Erzieherausbildung</h1>
+          <p class="lede">Eine klare Oberfläche für Wissensinhalte, Begriffe, Zusammenhänge und Detailkarten. Rohmaterial bleibt lokal; sichtbar wird die geordnete Struktur.</p>
+          <div class="hero-actions" aria-label="Schnelleinstiege">
+            <a class="primary-action" href="#karte">Karte öffnen</a>
+            <a class="secondary-action" href="#bruecken">Brücken erkunden</a>
+          </div>
+        </div>
+        <aside class="orientation-card" aria-label="Orientierung">
+          <p class="eyebrow">So lesen</p>
+          <ol class="step-list">
+            <li><strong>Karte:</strong> räumlich orientieren und Knoten anklicken.</li>
+            <li><strong>Achsen:</strong> Wissensbereiche nach Themen filtern.</li>
+            <li><strong>Brücken:</strong> Verbindungsknoten öffnen und Detailkarten lesen.</li>
+          </ol>
+        </aside>
+      </div>
     </header>
 
-    <main>
-      <section class="panel warning">
-        <h2>Quellen- und Kartenstatus</h2>
+    <main id="inhalt">
+      <section id="status" class="panel warning anchored-section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Status</p>
+            <h2>Quellen- und Kartenstatus</h2>
+            <p class="fineprint">Zeigt, wie vollständig die aktuelle Karte ist und welche Quellen- oder Modellgrenzen gelten.</p>
+          </div>
+        </div>
         <p id="source-note">Lade Quellenstatus…</p>
         <p id="source-detail" class="fineprint"></p>
         <div id="map-stats" class="stat-grid"></div>
       </section>
 
-      <section class="panel canvas-panel">
+      <section id="karte" class="panel canvas-panel anchored-section">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Canvas in der Homepage</p>
+            <p class="eyebrow">Interaktive Karte</p>
             <h2>Räumliche Lernlandkarte</h2>
-            <p class="fineprint">Die Homepage rendert die vorhandenen Obsidian-Canvas-Dateien read-only. Klick auf einen Knoten zeigt Quellenanker, Status und vorhandene Exzerpte.</p>
+            <p class="fineprint">Wähle eine Karte, klicke einen Knoten und lies rechts die Rückbindung: Achse, Thema, Quellenanker, Exzerpte und Detailkarten.</p>
           </div>
           <label class="filter-label">Canvas wählen
             <select id="canvas-view-select"></select>
@@ -41,11 +76,12 @@
         </div>
       </section>
 
-      <section class="panel">
+      <section id="achsen" class="panel anchored-section">
         <div class="section-head">
           <div>
             <p class="eyebrow">Sinnachsen</p>
             <h2>Wissensbereiche im Überblick</h2>
+            <p class="fineprint">Nutze diesen Bereich, um vom großen Rahmen zu einzelnen Themenfeldern zu wechseln.</p>
           </div>
           <label class="filter-label">Themen filtern
             <select id="axis-filter">
@@ -56,19 +92,21 @@
         <div id="axis-list" class="axis-list"></div>
       </section>
 
-      <section class="panel">
+      <section id="cluster" class="panel anchored-section">
         <p class="eyebrow">Erkenntniscluster</p>
         <h2>Wissensinhalte als Netz</h2>
+        <p class="fineprint">Cluster bündeln Themen nach Erkenntniszusammenhängen. Ein Fokus reduziert Themen und Brücken auf den gewählten Zusammenhang.</p>
         <div id="cluster-list" class="cluster-list"></div>
       </section>
 
-      <section class="panel">
+      <section id="themen" class="panel anchored-section">
         <p class="eyebrow">Themenknoten</p>
         <h2>Alle sichtbaren Wissensinhalte</h2>
+        <p class="fineprint">Hier stehen die konkreten Themen. Tags zeigen Status, Quellenanker und ob eine Detailkarte vorhanden ist.</p>
         <div id="topic-grid" class="topic-grid"></div>
       </section>
 
-      <section class="panel">
+      <section id="bruecken" class="panel anchored-section">
         <p class="eyebrow">Detail-Brückenindex</p>
         <h2>Verbindungsknoten zwischen Detailkarten</h2>
         <div class="section-head compact-section-head">
@@ -94,16 +132,16 @@
         </div>
       </section>
 
-      <section class="panel two-col">
+      <section id="netzbruecken" class="panel two-col anchored-section">
         <div>
           <p class="eyebrow">Zusammenhänge</p>
-          <h2>Bruecken zwischen Erkenntnisclustern</h2>
-          <p>Die Karte zeigt nicht nur Einzelthemen, sondern Bruecken zwischen Sinnzusammenhaengen.</p>
+          <h2>Brücken zwischen Erkenntnisclustern</h2>
+          <p>Diese Liste zeigt, wie Cluster miteinander verbunden sind. Sie ergänzt den Detail-Brückenindex um die gröbere Netzsicht.</p>
         </div>
         <div id="relation-list" class="relation-list"></div>
       </section>
 
-      <section class="panel two-col">
+      <section id="abdeckung" class="panel two-col anchored-section">
         <div>
           <p class="eyebrow">Abdeckung</p>
           <h2>Was diese Karte zeigt</h2>
