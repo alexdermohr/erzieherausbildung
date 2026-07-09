@@ -13,9 +13,8 @@
       <div class="nav-links">
         <a href="#karte">Karte</a>
         <a href="#achsen">Achsen</a>
-        <a href="#cluster">Cluster</a>
-        <a href="#themen">Themen</a>
-        <a href="#bruecken">Brücken</a>
+        <a href="#verbindungen">Verbindungen</a>
+        <a href="#index">Index</a>
         <a href="#status">Status</a>
       </div>
     </nav>
@@ -28,7 +27,7 @@
           <p class="lede">Eine klare Oberfläche für Wissensinhalte, Begriffe, Zusammenhänge und Detailkarten. Rohmaterial bleibt lokal; sichtbar wird die geordnete Struktur.</p>
           <div class="hero-actions" aria-label="Schnelleinstiege">
             <a class="primary-action" href="#karte">Karte öffnen</a>
-            <a class="secondary-action" href="#bruecken">Brücken erkunden</a>
+            <a class="secondary-action" href="#verbindungen">Verbindungen erkunden</a>
           </div>
         </div>
         <aside class="orientation-card" aria-label="Orientierung">
@@ -36,7 +35,7 @@
           <ol class="step-list">
             <li><strong>Karte:</strong> räumlich orientieren und Knoten anklicken.</li>
             <li><strong>Achsen:</strong> Wissensbereiche nach Themen filtern.</li>
-            <li><strong>Brücken:</strong> Verbindungsknoten öffnen und Detailkarten lesen.</li>
+            <li><strong>Verbindungen:</strong> Detail- und Clusterverbindungen öffnen.</li>
           </ol>
         </aside>
       </div>
@@ -47,13 +46,15 @@
         <div class="section-head">
           <div>
             <p class="eyebrow">Status</p>
-            <h2>Quellen- und Kartenstatus</h2>
-            <p class="fineprint">Zeigt, wie vollständig die aktuelle Karte ist und welche Quellen- oder Modellgrenzen gelten.</p>
+            <h2>Status und Abdeckung</h2>
+            <p class="fineprint">Ein kompakter Kontrollbereich für Vollständigkeit, Quellenlage, Modellgrenzen und sichtbare Oberflächen.</p>
           </div>
         </div>
         <p id="source-note">Lade Quellenstatus…</p>
         <p id="source-detail" class="fineprint"></p>
+        <p id="coverage-note"></p>
         <div id="map-stats" class="stat-grid"></div>
+        <div id="surface-list" class="visuals-list status-surface-list"></div>
       </section>
 
       <section id="karte" class="panel canvas-panel anchored-section">
@@ -92,23 +93,25 @@
         <div id="axis-list" class="axis-list"></div>
       </section>
 
-      <section id="cluster" class="panel anchored-section">
-        <p class="eyebrow">Erkenntniscluster</p>
-        <h2>Wissensinhalte als Netz</h2>
-        <p class="fineprint">Cluster bündeln Themen nach Erkenntniszusammenhängen. Ein Fokus reduziert Themen und Brücken auf den gewählten Zusammenhang.</p>
-        <div id="cluster-list" class="cluster-list"></div>
+      <section id="index" class="panel anchored-section">
+        <p class="eyebrow">Index</p>
+        <h2>Cluster und Themen</h2>
+        <p class="fineprint">Der Index ist die Listenansicht zur Karte: erst die Erkenntniscluster, danach die konkreten Themenknoten mit Quellen- und Detailstatus.</p>
+        <div class="index-layout">
+          <div>
+            <h3>Erkenntniscluster</h3>
+            <div id="cluster-list" class="cluster-list"></div>
+          </div>
+          <div>
+            <h3>Themenknoten</h3>
+            <div id="topic-grid" class="topic-grid"></div>
+          </div>
+        </div>
       </section>
 
-      <section id="themen" class="panel anchored-section">
-        <p class="eyebrow">Themenknoten</p>
-        <h2>Alle sichtbaren Wissensinhalte</h2>
-        <p class="fineprint">Hier stehen die konkreten Themen. Tags zeigen Status, Quellenanker und ob eine Detailkarte vorhanden ist.</p>
-        <div id="topic-grid" class="topic-grid"></div>
-      </section>
-
-      <section id="bruecken" class="panel anchored-section">
-        <p class="eyebrow">Detail-Brückenindex</p>
-        <h2>Verbindungsknoten zwischen Detailkarten</h2>
+      <section id="verbindungen" class="panel anchored-section">
+        <p class="eyebrow">Verbindungen</p>
+        <h2>Detail- und Clusterverbindungen</h2>
         <div class="section-head compact-section-head">
           <p class="fineprint">Diese Lesefläche zeigt die aus Detailkarten abgeleiteten Brücken. Sie ist Orientierung, keine neue Quelle.</p>
           <label class="filter-label">Zielachse filtern
@@ -120,7 +123,8 @@
         <div id="detail-bridge-summary" class="fineprint"></div>
         <div class="bridge-index-layout">
           <div>
-            <h3>Stärkste Verbindungsknoten</h3>
+            <h3>Detailverbindungen</h3>
+            <p class="fineprint">Aus Detailkarten abgeleitete Hubs. Ein Klick zeigt eingehende Detailkarten und Relationstexte.</p>
             <div id="detail-bridge-hub-list" class="relation-list"></div>
             <div id="detail-bridge-incoming-list" class="incoming-bridge-list"></div>
             <div id="detail-bridge-detail-card" class="bridge-detail-card-target"></div>
@@ -130,24 +134,12 @@
             <div id="detail-bridge-axis-list" class="visuals-list"></div>
           </div>
         </div>
-      </section>
-
-      <section id="netzbruecken" class="panel two-col anchored-section">
-        <div>
-          <p class="eyebrow">Zusammenhänge</p>
-          <h2>Brücken zwischen Erkenntnisclustern</h2>
-          <p>Diese Liste zeigt, wie Cluster miteinander verbunden sind. Sie ergänzt den Detail-Brückenindex um die gröbere Netzsicht.</p>
+        <div class="connection-subsection">
+          <p class="eyebrow">Clusterverbindungen</p>
+          <h3>Brücken zwischen Erkenntnisclustern</h3>
+          <p class="fineprint">Die gröbere Netzsicht: Welche Erkenntniscluster stehen miteinander in Beziehung?</p>
+          <div id="relation-list" class="relation-list"></div>
         </div>
-        <div id="relation-list" class="relation-list"></div>
-      </section>
-
-      <section id="abdeckung" class="panel two-col anchored-section">
-        <div>
-          <p class="eyebrow">Abdeckung</p>
-          <h2>Was diese Karte zeigt</h2>
-          <p id="coverage-note"></p>
-        </div>
-        <div id="surface-list" class="visuals-list"></div>
       </section>
     </main>
 

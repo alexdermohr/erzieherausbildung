@@ -24,9 +24,9 @@ const canvasViews = [
   },
   {
     id: "lernfeld-4",
-    label: "Lernfeld 4 – Bildungsbereiche",
+    label: "Lernfeld 4 – Fokuskarte",
     url: sitePath("/visuals/lernfeld-4-bildungsbereiche.canvas"),
-    role: "Fokuskarte",
+    role: "ausgebaute Fokuskarte",
   },
 ];
 
@@ -352,7 +352,7 @@ function renderIncomingBridgeDetails(index, targetId) {
     target.append(card);
   });
   if (bridges.length > 16) {
-    target.append(el("p", "fineprint", `${bridges.length - 16} weitere eingehende Brücken sind im generierten Detail-Brückenindex dokumentiert.`));
+    target.append(el("p", "fineprint", `${bridges.length - 16} weitere eingehende Brücken sind im generierten Verbindungsindex dokumentiert.`));
   }
 }
 
@@ -366,7 +366,7 @@ function renderDetailBridgeIndex() {
 
   const index = state.detailBridgeIndex;
   if (!index) {
-    summary.textContent = "Detail-Brückenindex konnte nicht geladen werden.";
+    summary.textContent = "Verbindungsindex konnte nicht geladen werden.";
     return;
   }
 
