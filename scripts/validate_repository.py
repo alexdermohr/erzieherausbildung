@@ -217,6 +217,10 @@ index_html = (root / "index.html").read_text(encoding="utf-8")
 assert "sitePath" in app_js
 assert 'href="assets/styles.css"' in index_html
 assert 'src="assets/app.js"' in index_html
+for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#bruecken", 'id="karte"', 'id="achsen"', 'id="cluster"', 'id="themen"', 'id="status"']:
+    assert token in index_html
+for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card"]:
+    assert token in (root / "assets/styles.css").read_text(encoding="utf-8")
 assert 'sitePath("/data/learning-map.v1.json")' in app_js
 assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
 assert 'sitePath("/data/detail-bridge-index.v1.json")' in app_js
