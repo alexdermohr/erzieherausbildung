@@ -349,6 +349,11 @@ assert "openCanvasNode" in app_js
 assert "openTopic" in app_js
 assert "openAxis" in app_js
 assert "openDetailBridgeTarget" in app_js
+assert "bridgeTargetTitle" in app_js
+assert "visibleDetailBridgeHubs" in app_js
+assert "bridgeTargetHub" in app_js
+assert "Ziel-ID:" in app_js
+assert "${bridge.targetId}:" not in app_js
 assert "openStandaloneDetailCard" in app_js
 assert "Detailkarte anzeigen" in app_js
 assert "Auf Karte zeigen" in app_js
@@ -437,6 +442,14 @@ bridge_index = json.loads(expected_bridge_json)
 assert bridge_index["totals"]["details"] == len(detail_index["details"])
 assert bridge_index["totals"]["bridges"] == sum(len(j(entry["path"].lstrip("/")).get("bridges", [])) for entry in detail_index["details"])
 assert bridge_index["hubs"]
+bridge_targets = set(bridge_index["byTarget"])
+bridge_hub_targets = {hub["targetId"] for hub in bridge_index["hubs"]}
+assert bridge_targets - bridge_hub_targets, "expected at least one non-hub bridge target to exercise synthetic hub handling"
+for detail_entry in detail_index["details"]:
+    detail_payload = j(detail_entry["path"].lstrip("/"))
+    for bridge in detail_payload.get("bridges", []):
+        assert bridge["targetId"] in bridge_targets, f"unknown detail bridge target: {detail_entry['id']} -> {bridge['targetId']}"
+        assert bridge_index["byTarget"][bridge["targetId"]].get("targetTitle"), f"missing bridge target title: {bridge['targetId']}"
 assert "Detail-Brückenindex v1" in expected_bridge_doc
 assert "Orientierung, keine neue Quelle" in expected_bridge_doc
 assert "python3 scripts/build_detail_bridge_index.py --check" in workflow_validate
