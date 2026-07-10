@@ -15,7 +15,7 @@ Synthese: Das Repo bleibt Kanon. Web ist Lesefläche, Obsidian Denkfläche, Scha
 | Organ | Funktion | Autorität |
 | --- | --- | --- |
 | Repo | Kanon, Contracts, Datenmodelle, Validatoren | kanonisch |
-| Web | Lesen, Filtern, Überblick, Brücken-Hubs | abgeleitet |
+| Web | Lesen, Filtern, Überblick, Theorien vergleichen, Zusammenhänge erschließen | abgeleitet |
 | Obsidian | Denken, räumliches Ordnen, Navigation, Brückenorientierung | abgeleitet |
 | Schauwerk/Miro | spätere gemeinsame Sortierung oder Präsentation | abgeleitet und geplant |
 | CI | Reproduzierbarkeit und Driftprüfung | prüfend |
@@ -38,7 +38,7 @@ Deutung B: Die Oberflächen sind Erkenntnisorgane. Dann muss ihre Autorität exp
 
 ## Risiko und Nutzen
 
-Nutzen: klare Zuständigkeit, weniger Drift, bessere spätere Erweiterbarkeit und bessere Trennung von Kanon, Denkraum und Lesefläche. Die Web-Lesefläche darf nur deklarierte Struktur-, Exzerpt-, Detail- und Brückenindexdaten laden.
+Nutzen: klare Zuständigkeit, weniger Drift, bessere spätere Erweiterbarkeit und bessere Trennung von Kanon, Denkraum und Lesefläche. Die Web-Lesefläche darf nur deklarierte Struktur-, Exzerpt-, Detail-, Theorie- und Brückenindexdaten laden.
 
 Risiko: Der Contract kann bürokratisch wirken. Gegenmittel: klein halten, mit `data/surface-policy.v1.json` maschinenprüfbar machen und nicht zum Ersatz für Inhalte aufblasen.
 
@@ -54,4 +54,4 @@ Hebel: Autorität trennen, bevor mehr Inhalt ergänzt wird.
 
 Entscheidung: Repo bleibt Kanon; Oberflächen bleiben abgeleitet.
 
-Nächste Aktion: Exzerpte, Detailkarten und abgeleitete Brückenflächen nur noch gegen diese Oberflächenpolitik erweitern.
+Nächste Aktion: Exzerpte, Detailkarten, Theoriekatalog und abgeleitete Zusammenhangsflächen nur noch gegen diese Oberflächenpolitik erweitern.

@@ -1,0 +1,3538 @@
+{
+  "schema": "erzieherausbildung.theory_catalog.v1",
+  "purpose": "Korpusweite, quellengebundene Inventur der in den Ausbildungsmaterialien erklärten, angewandten oder nur genannten Theorien, Modelle, theoretischen Kernkonzepte und pädagogischen Ansätze.",
+  "method": {
+    "documentsScanned": 29,
+    "scanBasis": "Lokal erschlossene Textfassungen gemäß data/machine-readable-inventory.json; Rohtexte und lokale Dateipfade bleiben außerhalb des Repos.",
+    "searchStrategy": [
+      "Korpusweite Suche nach Theorie-, Modell-, Ansatz- und Konzeptbezeichnungen.",
+      "Namenssuche nach theoretischen Bezugspersonen.",
+      "Kontextprüfung jeder aufgenommenen Fundstelle.",
+      "Trennung zwischen erklärt, angewandt und nur genannt."
+    ],
+    "inclusionRule": "Aufgenommen werden ausdrücklich benannte Theorien sowie theoriegestützte Modelle, Kernkonzepte und pädagogische Ansätze, sofern sie im Korpus erklärt, angewandt oder eindeutig als fachlicher Bezug genannt werden.",
+    "exclusionRule": "Nicht aufgenommen werden Gerätemodelle, bloße Einrichtungs- oder Schutzkonzepte, Unterrichtsaufträge ohne fachlichen Bezug, allgemeine Verwendung des Wortes Theorie sowie reine Literaturspuren ohne erkennbare fachliche Position; Grenzfälle werden nicht inhaltlich ergänzt.",
+    "limits": [
+      "OCR- und Extraktionsfehler können einzelne Nennungen verdecken.",
+      "Die Kurzsynthesen geben den im Korpus belegten Ausschnitt wieder und ersetzen keine vollständige Theoriegeschichte.",
+      "Named-only-Einträge dürfen nicht als im Korpus erklärte Theorien gelesen werden."
+    ]
+  },
+  "vocabulary": {
+    "kinds": {
+      "theory": "Theorie",
+      "model": "Modell",
+      "approach": "Pädagogischer Ansatz",
+      "concept": "Theoretisches Kernkonzept"
+    },
+    "evidenceStatuses": {
+      "explained": "im Korpus erklärt",
+      "applied": "im Korpus angewandt oder knapp eingeordnet",
+      "named-only": "genannt, im Korpus nicht erklärt"
+    },
+    "axes": {
+      "professionalitaet": "Professionelle Haltung und Berufsrolle",
+      "beziehung-entwicklung": "Beziehung, Entwicklung und Selbstwirksamkeit",
+      "sprache-kommunikation": "Sprache, Kommunikation und Konflikte",
+      "beobachtung-fallverstehen": "Beobachtung, Fallverstehen und Dokumentation",
+      "gruppe-institution-politik": "Gruppe, Institution, Wohngruppe und Politik",
+      "bildungsbereiche": "Bildungsbereiche und ästhetisch-naturwissenschaftliche Praxis",
+      "eltern-kooperation": "Elternkooperation und Übergänge",
+      "rahmen-recht-ethik": "Rahmen, Recht, Schutz und Ethik"
+    }
+  },
+  "coverage": {
+    "entries": 78,
+    "explained": 59,
+    "applied": 9,
+    "namedOnly": 10,
+    "sourceDocumentsWithFindings": 21,
+    "sourceDocumentIds": [
+      "doc-001",
+      "doc-002",
+      "doc-003",
+      "doc-005",
+      "doc-006",
+      "doc-008",
+      "doc-009",
+      "doc-010",
+      "doc-011",
+      "doc-012",
+      "doc-013",
+      "doc-014",
+      "doc-015",
+      "doc-016",
+      "doc-017",
+      "doc-018",
+      "doc-019",
+      "doc-020",
+      "doc-023",
+      "doc-025",
+      "doc-027"
+    ]
+  },
+  "entries": [
+    {
+      "id": "widerstandsressourcen",
+      "title": "Generalisierte Widerstandsressourcen",
+      "kind": "concept",
+      "axisIds": [
+        "professionalitaet",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Aaron Antonovsky"
+      ],
+      "aliases": [],
+      "summary": "Widerstandsressourcen sind persönliche, soziale und materielle Mittel, mit denen Belastungen bearbeitet und Gesundheit geschützt werden kann.",
+      "coreIdeas": [
+        "Ressourcen liegen nicht nur im Individuum, sondern auch in Beziehungen und Lebensbedingungen.",
+        "Ihre Nutzbarkeit hängt mit dem Kohärenzgefühl zusammen."
+      ],
+      "pedagogicalRelevance": [
+        "Gesundheitsförderung fragt nach vorhandenen Stärken und nach strukturell fehlenden Ressourcen."
+      ],
+      "cautions": [
+        "Ressourcenorientierung darf reale Risiken und Überforderung nicht verharmlosen."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-006",
+          "startLine": 121,
+          "endLine": 168,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Widerstandsressourcen",
+            "Ressourcen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "salutogenese",
+        "kohaerenzgefuehl"
+      ]
+    },
+    {
+      "id": "kohaerenzgefuehl",
+      "title": "Kohärenzgefühl",
+      "kind": "concept",
+      "axisIds": [
+        "professionalitaet",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Aaron Antonovsky"
+      ],
+      "aliases": [],
+      "summary": "Kohärenzgefühl bezeichnet eine grundlegende Orientierung, Anforderungen als verstehbar, handhabbar und sinnvoll zu erleben.",
+      "coreIdeas": [
+        "Verstehbarkeit ordnet Erfahrungen.",
+        "Handhabbarkeit bezieht verfügbare Ressourcen ein.",
+        "Sinnhaftigkeit macht Anstrengung subjektiv bedeutsam."
+      ],
+      "pedagogicalRelevance": [
+        "Pädagogische und berufliche Settings können Orientierung, Beteiligung und realistische Bewältigungsmöglichkeiten stärken."
+      ],
+      "cautions": [
+        "Es ist keine individuelle Pflicht zum positiven Denken; Bedingungen und Ressourcen bleiben entscheidend."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-006",
+          "startLine": 169,
+          "endLine": 211,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Kohärenzgefühl",
+            "Verstehbarkeit"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "salutogenese",
+        "widerstandsressourcen"
+      ]
+    },
+    {
+      "id": "salutogenese",
+      "title": "Salutogenese",
+      "kind": "theory",
+      "axisIds": [
+        "professionalitaet",
+        "beziehung-entwicklung",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Aaron Antonovsky"
+      ],
+      "aliases": [],
+      "summary": "Salutogenese fragt danach, wie Gesundheit trotz Belastungen entsteht und erhalten bleibt, statt ausschließlich Ursachen von Krankheit zu suchen.",
+      "coreIdeas": [
+        "Gesundheit und Krankheit bilden ein Kontinuum.",
+        "Ressourcen und Kohärenzgefühl beeinflussen die Bewegung auf diesem Kontinuum."
+      ],
+      "pedagogicalRelevance": [
+        "Gesundheitsförderung richtet sich auf verstehbare, handhabbare und sinnvolle Lebens- und Arbeitsbedingungen."
+      ],
+      "cautions": [
+        "Der Ansatz ergänzt pathogenetische Diagnostik, ersetzt sie aber nicht."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-006",
+          "startLine": 52,
+          "endLine": 115,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Antonovsky",
+            "Salutogenese"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 11551,
+          "endLine": 11563,
+          "evidenceRole": "summarizes",
+          "evidenceTerms": [
+            "Salutogenese",
+            "Kontinuums"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "kohaerenzgefuehl",
+        "widerstandsressourcen",
+        "setting-ansatz"
+      ]
+    },
+    {
+      "id": "setting-ansatz",
+      "title": "Setting-Ansatz der Gesundheitsförderung",
+      "kind": "approach",
+      "axisIds": [
+        "professionalitaet",
+        "gruppe-institution-politik",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Gesundheitsförderung richtet sich nicht nur an individuelles Verhalten, sondern verändert die sozialen und organisatorischen Bedingungen des Lebensortes Kita.",
+      "coreIdeas": [
+        "Organisation, Räume, Abläufe und Beteiligung sind Gesundheitsbedingungen.",
+        "Verhältnisprävention ergänzt individuelle Angebote."
+      ],
+      "pedagogicalRelevance": [
+        "Team- und Organisationsentwicklung werden Teil pädagogischer Gesundheitsarbeit."
+      ],
+      "cautions": [
+        "Der Korpus verwendet Setting- und Lebensweltperspektive eng; eine detaillierte theoretische Abgrenzung fehlt."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 11135,
+          "endLine": 11145,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Setting-Ansatz",
+            "Arbeitsbedingungen"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 2540,
+          "endLine": 2550,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Setting-Ansatz",
+            "Institution"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "salutogenese"
+      ]
+    },
+    {
+      "id": "stress-belastungs-modell",
+      "title": "Stress-Belastungs-Modell",
+      "kind": "model",
+      "axisIds": [
+        "professionalitaet"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das im Korpus verwendete Modell erklärt Erschöpfung als Folge dauerhaft höherer Anforderungen gegenüber verfügbaren Ressourcen.",
+      "coreIdeas": [
+        "Belastung entsteht aus einem Missverhältnis von Anforderungen und Bewältigungsmöglichkeiten.",
+        "Dauerhafte Überforderung kann Gereiztheit und Empathieverlust fördern."
+      ],
+      "pedagogicalRelevance": [
+        "Entlastung muss Arbeitsorganisation, Personal, Pausen und Überstunden einbeziehen."
+      ],
+      "cautions": [
+        "Der Quelltext nennt keine eindeutige theoretische Urheberschaft; die Position wird deshalb als quelleninternes Modell geführt."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-006",
+          "startLine": 23,
+          "endLine": 28,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Stress-Belastungs-Modell",
+            "Ressourcen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "salutogenese",
+        "widerstandsressourcen"
+      ]
+    },
+    {
+      "id": "wertequadrat",
+      "title": "Werte- und Entwicklungsquadrat",
+      "kind": "model",
+      "axisIds": [
+        "professionalitaet",
+        "sprache-kommunikation",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Friedemann Schulz von Thun"
+      ],
+      "aliases": [],
+      "summary": "Das Modell ordnet einen Wert mit einer ergänzenden Schwestertugend und zeigt, wie beide ohne Ausgleich in entwertende Übertreibungen kippen können.",
+      "coreIdeas": [
+        "Ein Wert gewinnt Qualität durch Balance mit einem Gegenwert.",
+        "Entwicklung zielt nicht auf das Gegenteil, sondern auf eine ergänzende Tugend."
+      ],
+      "pedagogicalRelevance": [
+        "Haltungs- und Teamkonflikte lassen sich differenzieren, ohne eine Seite pauschal abzuwerten."
+      ],
+      "cautions": [
+        "Das Modell strukturiert Reflexion, beweist aber nicht, welche Werte in einer Situation angemessen sind."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-015",
+          "startLine": 722,
+          "endLine": 755,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Schulz von Thun",
+            "Wertequadrat"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "autoritativ-erziehungsstil",
+      "title": "Autoritativer Erziehungsstil",
+      "kind": "model",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Als Erziehungsstil mit Kommunikationsmerkmalen und Wirkungen auf Kinder abgefragt.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-009",
+          "startLine": 45,
+          "endLine": 51,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "autoritative"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "berliner-eingewoehnungsmodell",
+      "title": "Berliner Eingewöhnungsmodell nach infans",
+      "kind": "model",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Hans-Joachim Laewen",
+        "Beate Andres",
+        "Éva Hédervári"
+      ],
+      "aliases": [],
+      "summary": "Das bindungstheoretisch begründete Modell gestaltet den Übergang in Tagesbetreuung schrittweise und richtet Dauer und Trennung an den beobachtbaren Reaktionen des Kindes aus.",
+      "coreIdeas": [
+        "Eine vertraute Bezugsperson bildet anfangs die sichere Basis.",
+        "Trennungsversuche werden beobachtet und individuell ausgewertet.",
+        "Die Fachkraft baut eine tragfähige Beziehung auf, bevor die Begleitung vollständig endet."
+      ],
+      "pedagogicalRelevance": [
+        "Es bietet einen überprüfbaren Rahmen für Absprachen mit Familien und kindbezogene Anpassungen."
+      ],
+      "cautions": [
+        "Der Quelltext warnt davor, den Ablauf schematisch gegen Signale des Kindes anzuwenden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 98,
+          "endLine": 164,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Berliner Eingewöhnungsmodell",
+            "Bindungstheorie"
+          ]
+        },
+        {
+          "docId": "doc-008",
+          "startLine": 187,
+          "endLine": 216,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "sechs Schritte",
+            "bindungsähnliche Beziehung"
+          ]
+        },
+        {
+          "docId": "doc-008",
+          "startLine": 436,
+          "endLine": 454,
+          "evidenceRole": "summarizes",
+          "evidenceTerms": [
+            "Grundlage der Bindungstheorie",
+            "Kindertagesbetreuung"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie",
+        "partizipatorische-eingewoehnung",
+        "muenchener-eingewoehnungsmodell",
+        "tuebinger-peer-eingewoehnung"
+      ]
+    },
+    {
+      "id": "bindungshierarchie",
+      "title": "Bindungshierarchie",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "John Bowlby"
+      ],
+      "aliases": [],
+      "summary": "Kinder können mehrere Bindungsbeziehungen aufbauen und diese nach Kontinuität, Zuwendungsqualität und emotionalem Engagement unterschiedlich gewichten.",
+      "coreIdeas": [
+        "Bindung ist nicht auf eine einzige Mutter-Kind-Dyade begrenzt.",
+        "Zu verschiedenen Bezugspersonen können unterschiedliche Beziehungserwartungen und Bindungsstile entstehen."
+      ],
+      "pedagogicalRelevance": [
+        "Mehrere verlässliche Bezugspersonen können Sicherheit erweitern, ohne Beziehungen beliebig austauschbar zu machen."
+      ],
+      "cautions": [
+        "Hierarchie bedeutet keine starre Rangliste; Bedeutung und Verfügbarkeit von Bezugspersonen verändern sich mit Erfahrungen und Kontexten."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 632,
+          "endLine": 645,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Bindungshierarchie",
+            "hierarchisch"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie",
+        "innere-arbeitsmodelle"
+      ]
+    },
+    {
+      "id": "bindungsmuster-ainsworth",
+      "title": "Bindungsmuster nach Ainsworth",
+      "kind": "model",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "beobachtung-fallverstehen"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Mary Ainsworth"
+      ],
+      "aliases": [],
+      "summary": "Der Korpus unterscheidet sichere, unsicher-vermeidende, unsicher-ambivalente und desorganisierte Reaktionsmuster in Trennungs- und Wiedervereinigungssituationen.",
+      "coreIdeas": [
+        "Sichere Bindung zeigt sich in aktiver Nutzung der Bezugsperson zur Beruhigung und anschließender Exploration.",
+        "Vermeidende und ambivalente Muster organisieren Nähe unter wiederkehrend ungünstigen Beziehungserfahrungen unterschiedlich.",
+        "Desorganisierte Reaktionen zeigen keine durchgängig erkennbare Strategie."
+      ],
+      "pedagogicalRelevance": [
+        "Muster können Beobachtungen strukturieren und auf Unterstützungsbedarfe hinweisen, dürfen aber nicht als Charakteretiketten verwendet werden."
+      ],
+      "cautions": [
+        "Der Quelltext betont gemischte Befunde zur lebenslangen Kontinuität und warnt ausdrücklich vor Abschreiben und Stigmatisieren."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 691,
+          "endLine": 807,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "ambivalent - unsicher",
+            "desorganisiert",
+            "Kritik"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie",
+        "fremde-situations-test",
+        "innere-arbeitsmodelle"
+      ]
+    },
+    {
+      "id": "bindungstheorie",
+      "title": "Bindungstheorie",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "John Bowlby",
+        "Mary Ainsworth"
+      ],
+      "aliases": [],
+      "summary": "Bindung wird als biologisch verankertes Bedürfnis nach Schutz und emotionaler Sicherheit verstanden, das Exploration über eine sichere Basis ermöglicht.",
+      "coreIdeas": [
+        "Nähe- und Explorationssystem stehen in einem dynamischen Verhältnis.",
+        "Frühe Erfahrungen prägen Erwartungen an Beziehungen.",
+        "Bindungsqualität zeigt sich besonders unter Belastung und Trennung."
+      ],
+      "pedagogicalRelevance": [
+        "Eingewöhnung, Feinfühligkeit und verlässliche Bezugspersonen werden als Beziehungsaufgaben verstanden."
+      ],
+      "cautions": [
+        "Bindungsmuster sind keine unveränderlichen Etiketten und dürfen nicht ohne sorgfältige Beobachtung zugeschrieben werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 98,
+          "endLine": 164,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Bindungstheorie",
+            "Bowlby"
+          ]
+        },
+        {
+          "docId": "doc-008",
+          "startLine": 608,
+          "endLine": 627,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Ainsworth",
+            "sichere Basis"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 11290,
+          "endLine": 11318,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Bindung",
+            "Exploration"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "innere-arbeitsmodelle",
+        "feinfuehligkeit-ainsworth",
+        "berliner-eingewoehnungsmodell",
+        "bindungshierarchie",
+        "bindungsentwicklung-phasen",
+        "fremde-situations-test",
+        "bindungsmuster-ainsworth",
+        "kreis-der-sicherheit"
+      ]
+    },
+    {
+      "id": "entwicklungsaufgaben-ansatz",
+      "title": "Entwicklungsaufgabenansatz",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Im Korpus als fachlicher Erklärungsbezug und als Beispiel für Quellenwiedergabe genannt, ohne geschlossenes Modell.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-016",
+          "startLine": 820,
+          "endLine": 826,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Entwicklungsaufgaben"
+          ]
+        },
+        {
+          "docId": "doc-027",
+          "startLine": 823,
+          "endLine": 836,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Entwicklungsaufgaben",
+            "Hurrelmann"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "psychosoziale-entwicklung-erikson",
+      "title": "Eriksons Theorie der psychosozialen Entwicklung",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "beobachtung-fallverstehen"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Erik H. Erikson"
+      ],
+      "aliases": [],
+      "summary": "Entwicklung wird als lebenslange Folge psychosozialer Spannungsfelder beschrieben, deren Bearbeitung neue Fähigkeiten und Identitätsanteile eröffnet.",
+      "coreIdeas": [
+        "Jede Phase verbindet eine Entwicklungsaufgabe mit einem möglichen Gegenpol.",
+        "Frühere Erfahrungen wirken weiter, ohne spätere Entwicklung vollständig festzulegen."
+      ],
+      "pedagogicalRelevance": [
+        "Verhalten kann im Verhältnis zu Autonomie, Initiative, Werksinn, Identität und Beziehung verstanden werden."
+      ],
+      "cautions": [
+        "Stufen dürfen nicht als starre Altersnorm oder monokausale Erklärung einzelner Konflikte verwendet werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-014",
+          "startLine": 1915,
+          "endLine": 1946,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Urvertrauen",
+            "Identität"
+          ]
+        },
+        {
+          "docId": "doc-012",
+          "startLine": 378,
+          "endLine": 385,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Erikson",
+            "Initiative"
+          ]
+        },
+        {
+          "docId": "doc-014",
+          "startLine": 1958,
+          "endLine": 1999,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Eriksons Stufen",
+            "Patchworkbiografien"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "feinfuehligkeit-ainsworth",
+      "title": "Feinfühligkeitskonzept nach Ainsworth",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Mary Ainsworth"
+      ],
+      "aliases": [],
+      "summary": "Feinfühligkeit bezeichnet das Wahrnehmen, richtige Deuten sowie angemessene und prompte Beantworten kindlicher Signale.",
+      "coreIdeas": [
+        "Die Perspektive des Kindes ist Ausgangspunkt der Reaktion.",
+        "Zeitnahe und passende Antworten unterstützen Sicherheit."
+      ],
+      "pedagogicalRelevance": [
+        "Die vier Merkmale bieten Beobachtungsfragen für Interaktionen mit Kindern und Eltern."
+      ],
+      "cautions": [
+        "Feinfühligkeit ist kontextabhängig und darf nicht als einfache Persönlichkeitsbewertung verwendet werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 11435,
+          "endLine": 11454,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Ainsworth",
+            "Feinfühligkeit"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie"
+      ]
+    },
+    {
+      "id": "fremde-situations-test",
+      "title": "Fremde-Situations-Test",
+      "kind": "model",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "beobachtung-fallverstehen"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Mary Ainsworth"
+      ],
+      "aliases": [],
+      "summary": "Die standardisierte Beobachtung variiert Trennung, Fremdkontakt und Wiedervereinigung, um die Nutzung einer Bezugsperson als sichere Basis und sicheren Hafen zu untersuchen.",
+      "coreIdeas": [
+        "Acht Episoden erzeugen vergleichbare Belastungs- und Wiedervereinigungssituationen.",
+        "Entscheidend ist nicht nur sichtbarer Kummer, sondern besonders das Verhalten bei Rückkehr der Bezugsperson."
+      ],
+      "pedagogicalRelevance": [
+        "Das Verfahren erklärt, warum Bindungsqualität unter Belastung und nicht im beliebigen Alltagseindruck beurteilt wird."
+      ],
+      "cautions": [
+        "Es ist ein Forschungsverfahren für definierte Bedingungen und keine Vorlage für informelle Tests in pädagogischen Einrichtungen."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 617,
+          "endLine": 618,
+          "evidenceRole": "attributes",
+          "evidenceTerms": [
+            "Ainsworth"
+          ]
+        },
+        {
+          "docId": "doc-008",
+          "startLine": 670,
+          "endLine": 690,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "standardisierte Episoden",
+            "Bindungsqualität"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie",
+        "bindungsmuster-ainsworth"
+      ]
+    },
+    {
+      "id": "innere-arbeitsmodelle",
+      "title": "Innere Arbeitsmodelle der Bindung",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "John Bowlby"
+      ],
+      "aliases": [],
+      "summary": "Aus wiederkehrenden Bindungserfahrungen entstehen Erwartungen darüber, ob Bezugspersonen verfügbar und verlässlich sind und wie Beziehungen funktionieren.",
+      "coreIdeas": [
+        "Arbeitsmodelle steuern Wahrnehmung, Erwartung und eigenes Beziehungsverhalten.",
+        "Sie können für verschiedene Bezugspersonen unterschiedlich ausfallen.",
+        "Auch elterliche Bindungsrepräsentationen beeinflussen Wahrnehmung und Reaktion; Reflexion kann transgenerationale Weitergabe verändern."
+      ],
+      "pedagogicalRelevance": [
+        "Verlässliche neue Beziehungserfahrungen können bestehende Erwartungen irritieren und erweitern."
+      ],
+      "cautions": [
+        "Das Konzept erklärt Wahrscheinlichkeiten, nicht ein festgelegtes späteres Schicksal."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 760,
+          "endLine": 768,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Arbeitsmodelle",
+            "Bezugsperson"
+          ]
+        },
+        {
+          "docId": "doc-008",
+          "startLine": 544,
+          "endLine": 557,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Bindungsrepräsentationen",
+            "Transgenerationale Weitergabe"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie",
+        "bindungshierarchie",
+        "bindungsmuster-ainsworth"
+      ]
+    },
+    {
+      "id": "konstruktivismus",
+      "title": "Konstruktivismus",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Wissen gilt nicht als einfache Abbildung einer objektiven Welt, sondern als aktive, erfahrungsabhängige Konstruktion von Bedeutung.",
+      "coreIdeas": [
+        "Lernende interpretieren Erfahrungen vor dem Hintergrund vorhandener Vorstellungen.",
+        "Unterschiedliche Menschen können dieselbe Situation verschieden deuten."
+      ],
+      "pedagogicalRelevance": [
+        "Fachkräfte erkunden kindliche Vorstellungen und schaffen Erfahrungen, an denen diese weiterentwickelt werden können."
+      ],
+      "cautions": [
+        "Konstruktion bedeutet nicht Beliebigkeit; Deutungen werden an Erfahrung, Austausch und Wirkungen geprüft."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-018",
+          "startLine": 383,
+          "endLine": 403,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Konstruktivismus",
+            "interpretieren"
+          ]
+        },
+        {
+          "docId": "doc-025",
+          "startLine": 713,
+          "endLine": 723,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Konstruktionsprozess",
+            "konstruktivistisches Verständnis"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "sozialer-konstruktivismus",
+        "ko-konstruktion",
+        "aktive-theoriebildung"
+      ]
+    },
+    {
+      "id": "kreis-der-sicherheit",
+      "title": "Kreis der Sicherheit",
+      "kind": "model",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Der Begriff dient im Korpus als Gliederung für Bindungs- und Explorationssystem, Feinfühligkeit, Gefühlsbegleitung, Grenzen und Selbstfürsorge.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt und skizziert Bestandteile, erklärt das Modell aber nicht zusammenhängend genug für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 827,
+          "endLine": 857,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Kreis der Sicherheit",
+            "Bindungsverhaltenssystem"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie"
+      ]
+    },
+    {
+      "id": "mentalisierung",
+      "title": "Mentalisierung",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "beobachtung-fallverstehen"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Mentalisierung ist die Fähigkeit, eigenes und fremdes Verhalten auf Gedanken, Gefühle, Wünsche und Absichten zu beziehen.",
+      "coreIdeas": [
+        "Mentale Zustände sind nicht direkt sichtbar und müssen vorsichtig erschlossen werden.",
+        "Die Fähigkeit entwickelt sich in Beziehungen und unterstützt Emotionsregulation."
+      ],
+      "pedagogicalRelevance": [
+        "Fachkräfte können Verhalten verstehend befragen, statt vorschnell Absichten zu unterstellen."
+      ],
+      "cautions": [
+        "Deutungen bleiben Hypothesen und müssen mit Beobachtung und Dialog abgeglichen werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 573,
+          "endLine": 605,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Mentalisierung",
+            "mentale Zustände"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie",
+        "verhalten-als-kommunikation",
+        "theory-of-mind"
+      ]
+    },
+    {
+      "id": "kognitive-entwicklung-piaget",
+      "title": "Piagets Theorie der kognitiven Entwicklung",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Jean Piaget"
+      ],
+      "aliases": [],
+      "summary": "Kognitive Entwicklung wird als qualitative Veränderung von Denkstrukturen beschrieben, die vom handlungsgebundenen zum abstrakteren und hypothetischen Denken führt.",
+      "coreIdeas": [
+        "Konkrete Operationen bleiben an anschauliche Situationen gebunden.",
+        "Formale Operationen ermöglichen hypothetisches und abstraktes Schlussfolgern."
+      ],
+      "pedagogicalRelevance": [
+        "Aufgaben und Erklärungen sollten an die verfügbaren Denkoperationen anschließen."
+      ],
+      "cautions": [
+        "Der Korpus kontrastiert Piagets eher individuelles Entwicklungsmodell mit sozial-konstruktivistischen Perspektiven."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-013",
+          "startLine": 690,
+          "endLine": 727,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Piaget",
+            "formal-operational"
+          ]
+        },
+        {
+          "docId": "doc-018",
+          "startLine": 391,
+          "endLine": 403,
+          "evidenceRole": "contrasts",
+          "evidenceTerms": [
+            "Piaget",
+            "Wygotski"
+          ]
+        },
+        {
+          "docId": "doc-017",
+          "startLine": 700,
+          "endLine": 725,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Jean Piagets",
+            "formal-operationalen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "konstruktivismus",
+        "sozialer-konstruktivismus"
+      ]
+    },
+    {
+      "id": "psychoanalyse-triebtheorie-bindung",
+      "title": "Psychoanalytische Triebtheorie als Kontrast zur Bindungstheorie",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [
+        "Sigmund Freud"
+      ],
+      "aliases": [],
+      "summary": "Im Korpus erscheint die Triebtheorie vor allem als Kontrastfolie: Bindung werde nicht bloß aus Bedürfnisbefriedigung abgeleitet, sondern als eigenes biologisches Motiv verstanden.",
+      "coreIdeas": [
+        "Die ältere Erklärung verbindet Beziehung mit der Befriedigung körperlicher Bedürfnisse.",
+        "Bowlbys Ansatz setzt dem ein eigenständiges Bindungssystem entgegen."
+      ],
+      "pedagogicalRelevance": [
+        "Der Vergleich macht sichtbar, dass gleiche Beobachtungen aus unterschiedlichen theoretischen Perspektiven erklärt werden können."
+      ],
+      "cautions": [
+        "Der Korpus bietet keine umfassende Darstellung der Psychoanalyse oder Freuds Gesamtwerk."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 608,
+          "endLine": 616,
+          "evidenceRole": "contrasts",
+          "evidenceTerms": [
+            "Psychoanalyse",
+            "Triebtheorie"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie"
+      ]
+    },
+    {
+      "id": "resilienz-schutzfaktoren",
+      "title": "Resilienz- und Schutzfaktorenansatz",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "professionalitaet"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Emmy Werner",
+        "Ruth Smith"
+      ],
+      "aliases": [],
+      "summary": "Resilienz wird als entwickelbare psychische Widerstandsfähigkeit verstanden, die aus dem Zusammenspiel von Belastungen, persönlichen Ressourcen und schützenden Beziehungen entsteht.",
+      "coreIdeas": [
+        "Resilienz ist kein angeborener unveränderlicher Wesenszug.",
+        "Stabile Beziehungen und Selbstwirksamkeit wirken als Schutzfaktoren."
+      ],
+      "pedagogicalRelevance": [
+        "Pädagogik kann verlässliche Beziehungen, Beteiligung und bewältigbare Herausforderungen stärken."
+      ],
+      "cautions": [
+        "Der Begriff darf nicht dazu dienen, Verantwortung für belastende Lebensbedingungen auf Kinder zu verlagern."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-006",
+          "startLine": 121,
+          "endLine": 128,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Werner",
+            "Resilienz"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 11517,
+          "endLine": 11538,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Resilienz",
+            "Schutzfaktoren"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "selbstwirksamkeit-bandura",
+        "bindungstheorie"
+      ]
+    },
+    {
+      "id": "resonanz-konzept",
+      "title": "Resonanz als pädagogisches Beziehungskonzept",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "professionalitaet"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Hartmut Rosa",
+        "Wolfgang Endres"
+      ],
+      "aliases": [],
+      "summary": "Resonanz bezeichnet eine antwortende Wechselbeziehung, in der Kind, Fachkraft und Welt einander berühren und verändern, ohne vollständig verfügbar zu sein.",
+      "coreIdeas": [
+        "Bedeutsame Beziehung enthält Antwort und Widerhall.",
+        "Resonanz kann entstehen, aber nicht technisch erzwungen werden."
+      ],
+      "pedagogicalRelevance": [
+        "Fachkräfte achten darauf, ob kindliche Anliegen Antwort finden und ob Interaktion offen für wechselseitige Veränderung bleibt."
+      ],
+      "cautions": [
+        "Der Korpus erläutert das Konzept knapp; die breitere Resonanztheorie wird nicht vollständig entfaltet."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 11539,
+          "endLine": 11550,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Resonanz",
+            "Widerhall"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 12701,
+          "endLine": 12704,
+          "evidenceRole": "attributes",
+          "evidenceTerms": [
+            "Rosa",
+            "Endres"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "risikokompetenz-pikler-prott",
+      "title": "Risikokompetenz nach Pikler und Prott",
+      "kind": "approach",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [
+        "Emmi Pikler",
+        "Rüdiger Prott"
+      ],
+      "aliases": [],
+      "summary": "Kinder sollen überschaubare Risiken erfahren dürfen, um eigene Fähigkeiten, Grenzen und sichere Handlungsweisen zu entwickeln.",
+      "coreIdeas": [
+        "Sicherheit entsteht nicht nur durch Vermeidung, sondern auch durch Erfahrung.",
+        "Aufsicht und Autonomie müssen verhältnismäßig austariert werden."
+      ],
+      "pedagogicalRelevance": [
+        "Fachkräfte gestalten herausfordernde, beobachtbare und entwicklungsangemessene Situationen."
+      ],
+      "cautions": [
+        "Der Korpus nennt den Ansatz nur knapp; konkrete Risikobewertung muss rechtlich und situativ begründet werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-010",
+          "startLine": 117,
+          "endLine": 129,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Risiken",
+            "Pikler"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "scaffolding",
+      "title": "Scaffolding",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Scaffolding bezeichnet zeitweilige, passgenaue Unterstützung bei Aufgaben, die ein Kind noch nicht allein, aber mit Hilfe bewältigen kann.",
+      "coreIdeas": [
+        "Unterstützung lenkt Aufmerksamkeit und gibt Hinweise, ohne die Lösung vollständig vorzugeben.",
+        "Hilfen werden an den wachsenden Fähigkeiten ausgerichtet."
+      ],
+      "pedagogicalRelevance": [
+        "Fragen, Demonstration, Kommentare und kleine Hinweise können selbstständiges Weiterlernen ermöglichen."
+      ],
+      "cautions": [
+        "Im Korpus wird das Konzept ohne theoretische Urheberschaft und nur als kompakte Handlungsübersicht dargestellt."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-014",
+          "startLine": 1871,
+          "endLine": 1890,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Scaffolding",
+            "Hinweise"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "sozialer-konstruktivismus",
+        "ko-konstruktion"
+      ]
+    },
+    {
+      "id": "selbstkonzept",
+      "title": "Selbstkonzept",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "beobachtung-fallverstehen"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [],
+      "aliases": [
+        "Fähigkeits-Selbstkonzept"
+      ],
+      "summary": "Im Korpus wird ein positives Selbstkonzept als personale Ressource behandelt, die durch Selbstwirksamkeit, bewältigte Herausforderungen, Ausdrucksmöglichkeiten und Rückmeldungen bedeutsamer Bezugspersonen mitgeprägt wird.",
+      "coreIdeas": [
+        "Erfahrungen eigener Kompetenz und erfolgreicher Bewältigung stabilisieren das Bild von den eigenen Fähigkeiten.",
+        "Themen, Interessen und Rückmeldungen wichtiger Bezugspersonen stehen mit dem Selbstbild des Kindes in Verbindung."
+      ],
+      "pedagogicalRelevance": [
+        "Kinder benötigen echte Handlungsmöglichkeiten, anerkennende Rückmeldung und Räume, in denen sie Gefühle, Bedürfnisse und Fähigkeiten ausdrücken können."
+      ],
+      "cautions": [
+        "Der Korpus verwendet Selbstkonzept als pädagogisches Ziel und Ressource, entfaltet aber keine eigenständige Selbstkonzepttheorie."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 1993,
+          "endLine": 2004,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "SELBSTKONZEPT",
+            "Selbstwirksamkeit"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 2451,
+          "endLine": 2468,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Stabilisierung des Selbstkonzeptes",
+            "Handhabbarkeit"
+          ]
+        },
+        {
+          "docId": "doc-027",
+          "startLine": 665,
+          "endLine": 672,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Fähigkeits-Selbstkonzepts",
+            "Bezugspersonen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "selbstwirksamkeit-bandura",
+        "resilienz-schutzfaktoren",
+        "lerndispositionen-carr-claxton"
+      ]
+    },
+    {
+      "id": "selbstwirksamkeit-bandura",
+      "title": "Selbstwirksamkeitstheorie",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "professionalitaet"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Albert Bandura"
+      ],
+      "aliases": [],
+      "summary": "Selbstwirksamkeit bezeichnet die Überzeugung, schwierige Anforderungen durch eigenes Handeln bewältigen zu können.",
+      "coreIdeas": [
+        "Eigene Erfolgserfahrungen sind besonders wirksam.",
+        "Beobachtete Modelle, ermutigende Rückmeldung und der Umgang mit Erregung beeinflussen Erwartungen."
+      ],
+      "pedagogicalRelevance": [
+        "Aufgaben sollten echte Handlungsspielräume, erreichbare Herausforderungen und sichtbare Fortschritte bieten."
+      ],
+      "cautions": [
+        "Selbstwirksamkeit ist keine Aufforderung, strukturelle Hindernisse zu individualisieren."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-010",
+          "startLine": 177,
+          "endLine": 214,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Albert",
+            "Selbstwirksamkeit"
+          ]
+        },
+        {
+          "docId": "doc-010",
+          "startLine": 257,
+          "endLine": 279,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Beobachtung",
+            "Verhaltensmodellen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "resilienz-schutzfaktoren"
+      ]
+    },
+    {
+      "id": "sozialer-konstruktivismus",
+      "title": "Sozialer Konstruktivismus",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "bildungsbereiche",
+        "sprache-kommunikation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Lew Wygotski"
+      ],
+      "aliases": [],
+      "summary": "Bedeutung und Wissen entstehen wesentlich in sozialer Interaktion; Lernen wird durch gemeinsame Tätigkeit, Sprache und kulturelle Werkzeuge vermittelt.",
+      "coreIdeas": [
+        "Kognitive Entwicklung ist nicht nur individueller Reifungsprozess.",
+        "Gemeinsame Deutung erweitert die Möglichkeiten des Einzelnen."
+      ],
+      "pedagogicalRelevance": [
+        "Dialog, Zusammenarbeit und gezielte Unterstützung werden zu zentralen Lernbedingungen."
+      ],
+      "cautions": [
+        "Der Quelltext fasst die Position stark verkürzt im Vergleich zu Piaget zusammen."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-018",
+          "startLine": 391,
+          "endLine": 403,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Wygotski",
+            "sozial"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "konstruktivismus",
+        "ko-konstruktion",
+        "scaffolding"
+      ]
+    },
+    {
+      "id": "systemtheorie-bindungseinfluss",
+      "title": "Systemtheorie als Einfluss auf Bowlbys Bindungstheorie",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Als eine von Bowlby integrierte theoretische Perspektive genannt.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 614,
+          "endLine": 616,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Systemtheorie",
+            "Bowlby"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie"
+      ]
+    },
+    {
+      "id": "multiple-intelligenzen",
+      "title": "Theorie der multiplen Intelligenzen",
+      "kind": "theory",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Howard Gardner"
+      ],
+      "aliases": [],
+      "summary": "Intelligenz wird als Bündel unterschiedlicher Fähigkeiten statt als einheitliche allgemeine Größe gefasst.",
+      "coreIdeas": [
+        "Kinder können in verschiedenen Ausdrucks- und Handlungsbereichen unterschiedliche Stärken zeigen.",
+        "Lernzugänge sollten nicht auf sprachlich-logische Leistungen verengt werden."
+      ],
+      "pedagogicalRelevance": [
+        "Vielfältige Ausdrucksformen und Materialien erweitern Beteiligungsmöglichkeiten."
+      ],
+      "cautions": [
+        "Der Korpus nennt die Theorie knapp; ihre empirische Kontroverse wird dort nicht ausgeführt."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-018",
+          "startLine": 493,
+          "endLine": 501,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Gardner",
+            "Intelligenzen"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "tuebinger-peer-eingewoehnung",
+      "title": "Tübinger Modell der Peer-Eingewöhnung",
+      "kind": "model",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das Modell nutzt neben Eltern und Fachkräften auch die Gruppe gleichaltriger Kinder als Ressource für Orientierung, Zugehörigkeit und gemeinsames Ankommen.",
+      "coreIdeas": [
+        "Eingewöhnung wird als sozialer Gruppenprozess verstanden.",
+        "Individuelle Bedürfnisse und schrittweise Beteiligung bleiben maßgeblich."
+      ],
+      "pedagogicalRelevance": [
+        "Peer-Beziehungen können Sicherheit und aktive Teilhabe unterstützen."
+      ],
+      "cautions": [
+        "Die Darstellung im Korpus stammt überwiegend aus Unterrichtspräsentationen und ist weniger quellenstark als der Text zum Berliner Modell."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 1432,
+          "endLine": 1555,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "TÜBINGER",
+            "Peer"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "berliner-eingewoehnungsmodell"
+      ]
+    },
+    {
+      "id": "bindungsentwicklung-phasen",
+      "title": "Vier Phasen der Bindungsentwicklung",
+      "kind": "model",
+      "axisIds": [
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "John Bowlby"
+      ],
+      "aliases": [],
+      "summary": "Das Modell beschreibt den Übergang von unspezifischen Nähe-Signalen über die Bevorzugung vertrauter Personen und eindeutige Bindung bis zu wechselseitig abgestimmten Beziehungen.",
+      "coreIdeas": [
+        "Frühes Bindungsverhalten richtet sich zunächst noch nicht auf eine einzige Person.",
+        "Mit wachsender Erfahrung entstehen Erwartungen, Trennungsreaktionen und bevorzugte Bezugspersonen.",
+        "Ab etwa zwei Jahren werden Absichten anderer stärker verstanden und Beziehungen wechselseitiger koordiniert."
+      ],
+      "pedagogicalRelevance": [
+        "Altersangaben bieten Orientierung für Beziehungsgestaltung und Eingewöhnung, dürfen aber individuelle Verläufe nicht ersetzen."
+      ],
+      "cautions": [
+        "Die im Korpus genannten Altersbereiche sind schematische Orientierungen und keine diagnostischen Grenzwerte."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-008",
+          "startLine": 655,
+          "endLine": 669,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "4 Phasen der Bindungsentwicklung",
+            "reziproker Beziehungen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie",
+        "bindungshierarchie"
+      ]
+    },
+    {
+      "id": "good-enough-mother-holding",
+      "title": "Winnicotts „good enough mother“ und Holding Environment",
+      "kind": "concept",
+      "axisIds": [
+        "beziehung-entwicklung",
+        "eltern-kooperation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Donald W. Winnicott"
+      ],
+      "aliases": [],
+      "summary": "Eine ausreichend verlässliche, nicht perfekte Fürsorge passt sich anfangs stark an und eröffnet schrittweise Frustration und Eigenständigkeit in einer haltgebenden Umgebung.",
+      "coreIdeas": [
+        "Sicherheit entsteht durch verlässliches Halten und Antworten.",
+        "Entwicklung benötigt keine perfekte, sondern hinreichend passende Fürsorge."
+      ],
+      "pedagogicalRelevance": [
+        "Der Ansatz entlastet von Perfektionsansprüchen und lenkt auf verlässliche, entwicklungsangemessene Beziehungsgestaltung."
+      ],
+      "cautions": [
+        "Historische Mutterzentrierung muss auf vielfältige Bezugspersonen und heutige Familienformen übertragen werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 11455,
+          "endLine": 11471,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Winnicott",
+            "nährende Umgebung"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bindungstheorie"
+      ]
+    },
+    {
+      "id": "generative-grammatik",
+      "title": "Generative Grammatik und angelegte Sprachfähigkeit",
+      "kind": "theory",
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Noam Chomsky"
+      ],
+      "aliases": [],
+      "summary": "Der Ansatz nimmt eine biologisch angelegte Fähigkeit an, aus begrenztem sprachlichem Input grammatische Strukturen zu bilden.",
+      "coreIdeas": [
+        "Kinder erzeugen mehr sprachliche Strukturen, als sie bloß nachgeahmt haben können.",
+        "Sprachentwicklung wird als aktiver Aufbau eines Regelsystems verstanden."
+      ],
+      "pedagogicalRelevance": [
+        "Fehler und Übergangsformen können als Hinweise auf eigene Regelbildung gelesen werden."
+      ],
+      "cautions": [
+        "Der Quelltext bezeichnet die Theorie ausdrücklich als umstritten und verbindet biologische Anlage mit der Bedeutung von Umwelt und Interaktion."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-002",
+          "startLine": 619,
+          "endLine": 623,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Chomsky",
+            "generativen",
+            "Sprachorgan"
+          ]
+        },
+        {
+          "docId": "doc-002",
+          "startLine": 649,
+          "endLine": 674,
+          "evidenceRole": "summarizes",
+          "evidenceTerms": [
+            "Chomsky",
+            "Umweltreize"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "kritische-phase-spracherwerb",
+        "konstruktivismus"
+      ]
+    },
+    {
+      "id": "kritische-phase-spracherwerb",
+      "title": "Hypothese der kritischen Phase des Spracherwerbs",
+      "kind": "theory",
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Eric Lenneberg"
+      ],
+      "aliases": [],
+      "summary": "Spracherwerb wird an ein biologisch besonders günstiges Entwicklungsfenster gebunden, das sich nach der Pubertät deutlich verengt.",
+      "coreIdeas": [
+        "Frühe sprachliche und soziale Anregung ist entwicklungswirksam.",
+        "Nach dem angenommenen Zeitfenster wird ein vollständiger Erstspracherwerb erheblich schwieriger."
+      ],
+      "pedagogicalRelevance": [
+        "Frühe Sprachbildung darf nicht auf spätere Förderphasen verschoben werden."
+      ],
+      "cautions": [
+        "Der Quelltext kennzeichnet die Übertragung auf einzelne Fälle als theoriegestützte Deutung, nicht als starre Altersdiagnose."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-002",
+          "startLine": 604,
+          "endLine": 623,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Lenneberg",
+            "Pubertät",
+            "Phase"
+          ]
+        },
+        {
+          "docId": "doc-002",
+          "startLine": 649,
+          "endLine": 674,
+          "evidenceRole": "summarizes",
+          "evidenceTerms": [
+            "kritische Phase",
+            "Interaktion"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "generative-grammatik"
+      ]
+    },
+    {
+      "id": "literacy-ansatz",
+      "title": "Literacy-Ansatz",
+      "kind": "approach",
+      "axisIds": [
+        "sprache-kommunikation",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Literacy fasst frühe Erfahrungen mit Schrift, Erzählungen, Büchern und sprachlich gestalteter Bedeutung als zusammenhängenden Bildungsbereich.",
+      "coreIdeas": [
+        "Kinder erwerben Schriftkultur lange vor formalem Lesen und Schreiben.",
+        "Gespräche, Vorlesen, Erzählen und sichtbare Schrift schaffen Zugänge zur Symbolwelt."
+      ],
+      "pedagogicalRelevance": [
+        "Alltag und Raumgestaltung können vielfältige, nicht verschulte Schrift- und Erzählanlässe eröffnen."
+      ],
+      "cautions": [
+        "Literacy ist breiter als ein Trainingsprogramm und darf nicht auf Vorläuferfertigkeiten reduziert werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-011",
+          "startLine": 290,
+          "endLine": 320,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Literacy",
+            "Montessori"
+          ]
+        },
+        {
+          "docId": "doc-011",
+          "startLine": 550,
+          "endLine": 590,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Bruner",
+            "Bilderbücher"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "montessori-sprachbildung",
+        "phonologische-bewusstheit-training"
+      ]
+    },
+    {
+      "id": "meilensteinmodell-tracy",
+      "title": "Meilensteinmodell des Grammatikerwerbs nach Tracy",
+      "kind": "model",
+      "axisIds": [
+        "sprache-kommunikation",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Rosemarie Tracy"
+      ],
+      "aliases": [],
+      "summary": "Das Modell beschreibt den Erwerb der Satzstruktur in vier Entwicklungsschritten und setzt die Schwelle zur Hauptsatzstruktur etwas weiter als Clahsens Phasenmodell.",
+      "coreIdeas": [
+        "Grammatische Entwicklung wird über beobachtbare Strukturmerkmale beschrieben.",
+        "Parallel vorkommende ältere und neue Formen sind im Übergang erwartbar."
+      ],
+      "pedagogicalRelevance": [
+        "Es bietet eine alternative, gleichwertig dargestellte Perspektive für sprachliche Verlaufsbeobachtung."
+      ],
+      "cautions": [
+        "Der Quelltext betont die Vergleichbarkeit, aber auch unterschiedliche Bewertungsschwellen der Modelle."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-002",
+          "startLine": 2593,
+          "endLine": 2608,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Meilensteinmodell",
+            "Tracy"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "topologisches-feldermodell",
+        "phasenmodell-clahsen"
+      ]
+    },
+    {
+      "id": "montessori-sprachbildung",
+      "title": "Montessoris Schreib- und Leseerziehung",
+      "kind": "approach",
+      "axisIds": [
+        "sprache-kommunikation",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Maria Montessori"
+      ],
+      "aliases": [],
+      "summary": "Montessoris Ansatz verbindet Sprachpflege mit vorbereiteter Umgebung und Materialien, über die Kinder Schrift und Lesen handelnd erschließen.",
+      "coreIdeas": [
+        "Sprachliche Bildung wird mit konkreten Handlungen und Materialien verbunden.",
+        "Selbsttätigkeit und vorbereitete Lernumgebung strukturieren den Zugang."
+      ],
+      "pedagogicalRelevance": [
+        "Material kann individuelle Wege zur Schrift unterstützen, ohne gemeinsames Erzählen und Dialog zu ersetzen."
+      ],
+      "cautions": [
+        "Der Korpus erläutert den Ansatz nur knapp und nicht als vollständige Darstellung der Montessori-Pädagogik."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-011",
+          "startLine": 294,
+          "endLine": 303,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Montessori",
+            "Schreib"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "literacy-ansatz"
+      ]
+    },
+    {
+      "id": "personzentrierter-ansatz-rogers",
+      "title": "Personzentrierter Ansatz nach Rogers",
+      "kind": "theory",
+      "axisIds": [
+        "sprache-kommunikation",
+        "professionalitaet"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [
+        "Carl Rogers"
+      ],
+      "aliases": [],
+      "summary": "In einem Fragenkatalog als Grundlage erfolgreicher Gesprächsführung genannt.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-009",
+          "startLine": 54,
+          "endLine": 61,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Rogers"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "pestalozzi-interaktion-sprache",
+      "title": "Pestalozzis Verständnis pädagogischer Interaktion und Sprache",
+      "kind": "approach",
+      "axisIds": [
+        "sprache-kommunikation",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [
+        "Johann Heinrich Pestalozzi"
+      ],
+      "aliases": [],
+      "summary": "In einem Fragenkatalog als historischer Bezugspunkt genannt.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-009",
+          "startLine": 37,
+          "endLine": 44,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Pestalozzi",
+            "Interaktion"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "phasenmodell-clahsen",
+      "title": "Phasenmodell des Grammatikerwerbs nach Clahsen",
+      "kind": "model",
+      "axisIds": [
+        "sprache-kommunikation",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Harald Clahsen"
+      ],
+      "aliases": [],
+      "summary": "Das Modell ordnet den Erwerb deutscher Satzstruktur in aufeinander bezogene Phasen und bewertet insbesondere Verbposition und Subjekt-Verb-Kongruenz.",
+      "coreIdeas": [
+        "Frühe Äußerungen entwickeln sich von Einwort- und Wortkombinationen zu stabilen Hauptsatzstrukturen.",
+        "Eine Phase gilt erst als erreicht, wenn die Struktur überwiegend produktiv und korrekt verwendet wird."
+      ],
+      "pedagogicalRelevance": [
+        "Sprachbeobachtung kann Entwicklungsstände beschreiben und Unterstützungsbedarf begründen."
+      ],
+      "cautions": [
+        "Phasen sind Orientierung; individuelle Verläufe und Mehrsprachigkeit dürfen nicht vorschnell pathologisiert werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-002",
+          "startLine": 2538,
+          "endLine": 2583,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Clahsen",
+            "Phase"
+          ]
+        },
+        {
+          "docId": "doc-002",
+          "startLine": 2593,
+          "endLine": 2608,
+          "evidenceRole": "compares",
+          "evidenceTerms": [
+            "Phasenmodell",
+            "Meilensteinmodell"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "topologisches-feldermodell",
+        "meilensteinmodell-tracy"
+      ]
+    },
+    {
+      "id": "mobbing-stufenmodell",
+      "title": "Stufenmodell von Mobbingverläufen",
+      "kind": "model",
+      "axisIds": [
+        "sprache-kommunikation",
+        "gruppe-institution-politik",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das Modell beschreibt eine Eskalation von frühen Grenzverletzungen über gezielten Machtaufbau bis zu schwerer, dauerhafter Gewalt.",
+      "coreIdeas": [
+        "Mobbing ist ein Prozess und nicht ein einzelner Streit.",
+        "Machtasymmetrie und Wiederholung verschärfen den Verlauf."
+      ],
+      "pedagogicalRelevance": [
+        "Frühe Beobachtung und Intervention sollen verhindern, dass sich Rollen und Gewalt stabilisieren."
+      ],
+      "cautions": [
+        "Der Korpus nennt keine eindeutige Urheberschaft und bietet nur eine verkürzte Stufenübersicht."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-015",
+          "startLine": 563,
+          "endLine": 578,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Stufenmodell",
+            "Mobbing"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "theory-of-mind",
+      "title": "Theory of Mind",
+      "kind": "concept",
+      "axisIds": [
+        "sprache-kommunikation",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Theory of Mind bezeichnet im Korpus die Fähigkeit, anderen Personen eigene Wissensstände, Überzeugungen und Bewusstseinsvorgänge zuzuschreiben.",
+      "coreIdeas": [
+        "Menschen handeln auf Grundlage eigener Annahmen und Informationen.",
+        "Sprachliche Formen wie glauben, wissen oder nicht wissen machen Perspektiven auf mentale Zustände ausdrückbar."
+      ],
+      "pedagogicalRelevance": [
+        "Gespräche über unterschiedliche Sichtweisen, Irrtümer und Absichten können Perspektivübernahme sprachlich unterstützen."
+      ],
+      "cautions": [
+        "Die Fundstelle ordnet die Fähigkeit knapp der Sprachentwicklung ab dem Schulalter zu und bietet keine vollständige Entwicklungstheorie."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-002",
+          "startLine": 2931,
+          "endLine": 2933,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "theory of mind",
+            "Annahmen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "mentalisierung"
+      ]
+    },
+    {
+      "id": "topologisches-feldermodell",
+      "title": "Topologisches Feldermodell",
+      "kind": "model",
+      "axisIds": [
+        "sprache-kommunikation"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das Modell beschreibt deutsche Satzstrukturen über Vorfeld, Satzklammern und Mittelfeld und macht die Stellung finiter und infiniter Verbteile analysierbar.",
+      "coreIdeas": [
+        "Satzglieder können nicht beliebig verschoben werden.",
+        "Die Besetzung der Satzklammern macht grammatische Entwicklung sichtbar."
+      ],
+      "pedagogicalRelevance": [
+        "Kindliche Äußerungen lassen sich strukturiert dokumentieren, ohne sie nur als richtig oder falsch zu bewerten."
+      ],
+      "cautions": [
+        "Es ist ein sprachwissenschaftliches Analysemodell, keine allgemeine Entwicklungstheorie."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-002",
+          "startLine": 1758,
+          "endLine": 1765,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "topologischen Feldermodells",
+            "Satzglieder"
+          ]
+        },
+        {
+          "docId": "doc-002",
+          "startLine": 2301,
+          "endLine": 2308,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "topologische Feldermodell",
+            "Clahsen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "phasenmodell-clahsen",
+        "meilensteinmodell-tracy"
+      ]
+    },
+    {
+      "id": "phonologische-bewusstheit-training",
+      "title": "Würzburger Training zur phonologischen Bewusstheit",
+      "kind": "approach",
+      "axisIds": [
+        "sprache-kommunikation",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das Programm fördert die bewusste Wahrnehmung von Lauten, Reimen und sprachlichen Segmenten als Vorläuferbereich des Schriftspracherwerbs.",
+      "coreIdeas": [
+        "Lautstruktur kann gezielt spielerisch thematisiert werden.",
+        "Das Training ist empirisch als Präventionsansatz beschrieben."
+      ],
+      "pedagogicalRelevance": [
+        "Es kann bei begründetem Bedarf ergänzen, soll aber nicht die alltagsintegrierte Sprach- und Literacy-Bildung verdrängen."
+      ],
+      "cautions": [
+        "Der Quelltext warnt ausdrücklich vor einer pauschalen Anwendung als allgemeines Vorschulprogramm."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-011",
+          "startLine": 869,
+          "endLine": 884,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Phonologische",
+            "Prävention"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "literacy-ansatz"
+      ]
+    },
+    {
+      "id": "verhalten-als-kommunikation",
+      "title": "Ansatz „Verhalten als Kommunikation“",
+      "kind": "approach",
+      "axisIds": [
+        "beobachtung-fallverstehen",
+        "sprache-kommunikation"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Auffälliges oder schwer verständliches Verhalten wird als möglicher Ausdruck von Bedürfnissen, Belastung oder fehlenden Ausdrucksmöglichkeiten gelesen.",
+      "coreIdeas": [
+        "Verhalten erhält eine kommunikative Funktion.",
+        "Die Deutung richtet sich auf die Frage, was Unterstützung und Verstehen erfordert."
+      ],
+      "pedagogicalRelevance": [
+        "Der Ansatz fördert Hypothesen statt moralischer Zuschreibungen."
+      ],
+      "cautions": [
+        "Nicht jedes Verhalten hat eine eindeutige Botschaft; Deutungen müssen geprüft und Grenzen klar gehalten werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-027",
+          "startLine": 387,
+          "endLine": 393,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Verhalten als Kommunikation",
+            "Unterstützung"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "mentalisierung",
+        "fuenf-ebenen-modell"
+      ]
+    },
+    {
+      "id": "bildungs-und-lerngeschichten",
+      "title": "Bildungs- und Lerngeschichten",
+      "kind": "approach",
+      "axisIds": [
+        "beobachtung-fallverstehen",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Margaret Carr"
+      ],
+      "aliases": [],
+      "summary": "Der Ansatz dokumentiert bedeutsame Lernsituationen narrativ und deutet sie über Lerndispositionen, Kontext und dialogische Rückmeldung.",
+      "coreIdeas": [
+        "Beobachtung sucht nach Interessen, Strategien und Beteiligung.",
+        "Dokumentation wird mit Kind, Familie und Team weitergedacht."
+      ],
+      "pedagogicalRelevance": [
+        "Sie verbindet ressourcenorientierte Beobachtung mit Planung anschließender Lerngelegenheiten."
+      ],
+      "cautions": [
+        "Eine positive Erzählform darf Widersprüche, Belastungen und Unterstützungsbedarf nicht ausblenden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-014",
+          "startLine": 397,
+          "endLine": 465,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Bildungs- und Lerngeschichten",
+            "Lerndispositionen"
+          ]
+        },
+        {
+          "docId": "doc-014",
+          "startLine": 724,
+          "endLine": 742,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Ansatz",
+            "Lerngeschichten"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "lerndispositionen-carr-claxton",
+        "eisbergmodell-carr"
+      ]
+    },
+    {
+      "id": "eisbergmodell-carr",
+      "title": "Eisbergmodell nach Carr",
+      "kind": "model",
+      "axisIds": [
+        "beobachtung-fallverstehen",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Margaret Carr"
+      ],
+      "aliases": [],
+      "summary": "Das Eisbergmodell macht sichtbar, dass beobachtbares Handeln nur die Oberfläche tiefer liegender Dispositionen, Erfahrungen und Bedingungen bildet.",
+      "coreIdeas": [
+        "Beobachtung darf nicht bei sichtbarem Verhalten stehen bleiben.",
+        "Interpretation verbindet Handlung, Situation und mögliche Lernorientierungen."
+      ],
+      "pedagogicalRelevance": [
+        "Es unterstützt vorsichtige, ressourcenorientierte Deutungen in Bildungs- und Lerngeschichten."
+      ],
+      "cautions": [
+        "Die tieferen Ebenen sind keine direkt beobachtbaren Tatsachen, sondern begründungsbedürftige Interpretationen."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-014",
+          "startLine": 446,
+          "endLine": 465,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Eisbergmodell",
+            "Carr"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "lerndispositionen-carr-claxton",
+        "bildungs-und-lerngeschichten"
+      ]
+    },
+    {
+      "id": "fuenf-ebenen-modell",
+      "title": "Fünf-Ebenen-Modell nach Fröhlich-Gildhoff",
+      "kind": "model",
+      "axisIds": [
+        "beobachtung-fallverstehen",
+        "professionalitaet",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Klaus Fröhlich-Gildhoff"
+      ],
+      "aliases": [],
+      "summary": "Das Modell ordnet Fallverstehen über Kind, Beziehungen, Familie, Institution und gesellschaftliche Bedingungen und richtet den Blick auf Wechselwirkungen.",
+      "coreIdeas": [
+        "Verhalten wird mehrperspektivisch statt monokausal erklärt.",
+        "Individuelle und strukturelle Bedingungen werden zusammengeführt."
+      ],
+      "pedagogicalRelevance": [
+        "Arbeitshypothesen können systematisch geprüft und auf Handlungsmöglichkeiten mehrerer Ebenen bezogen werden."
+      ],
+      "cautions": [
+        "Die Ebenen strukturieren Fragen, ersetzen aber keine konkrete Beobachtung und Beteiligung der Betroffenen."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-013",
+          "startLine": 518,
+          "endLine": 570,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Fröhlich-Gildhoff",
+            "Ebenen"
+          ]
+        },
+        {
+          "docId": "doc-027",
+          "startLine": 65,
+          "endLine": 100,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Fünf Ebenen",
+            "systemisch"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "verhalten-als-kommunikation"
+      ]
+    },
+    {
+      "id": "kinderperspektivenansatz",
+      "title": "Kinderperspektivenansatz",
+      "kind": "approach",
+      "axisIds": [
+        "beobachtung-fallverstehen",
+        "rahmen-recht-ethik",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Iris Nentwig-Gesemann",
+        "Bastian Walther",
+        "Elena Bakels",
+        "Lisa-Marie Munk"
+      ],
+      "aliases": [],
+      "summary": "Der Ansatz verbindet kinderrechtsbasierte Haltung, Forschung über Qualität aus Kindersicht und methodische Zugänge zu Erfahrungen, Interessen, Beschwerden und Verbesserungsvorschlägen von Kindern.",
+      "coreIdeas": [
+        "Kinder sind Akteure der Qualitätsentwicklung.",
+        "Verschiedene Ausdrucksformen werden systematisch erhoben und ausgewertet.",
+        "Ergebnisse sollen pädagogische Entscheidungen verändern."
+      ],
+      "pedagogicalRelevance": [
+        "Qualitätsentwicklung wird an den Perspektiven der betroffenen Kinder rückgebunden."
+      ],
+      "cautions": [
+        "Erhebung ersetzt nicht Beteiligung; Erwachsene behalten Verantwortung für Interpretation und Umsetzung."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 374,
+          "endLine": 433,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Kinderperspektivenansatz",
+            "Kinderrechte"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 11472,
+          "endLine": 11496,
+          "evidenceRole": "summarizes",
+          "evidenceTerms": [
+            "Kinderperspektiven",
+            "Methoden"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "aktive-theoriebildung",
+        "ko-konstruktion"
+      ]
+    },
+    {
+      "id": "lerndispositionen-carr-claxton",
+      "title": "Konzept der Lerndispositionen",
+      "kind": "concept",
+      "axisIds": [
+        "beobachtung-fallverstehen",
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Margaret Carr",
+        "Guy Claxton"
+      ],
+      "aliases": [],
+      "summary": "Lerndispositionen beschreiben relativ stabile, zugleich entwicklungsfähige Weisen, sich auf Lerngelegenheiten einzulassen.",
+      "coreIdeas": [
+        "Interesse, Engagiertheit, Standhalten, Ausdruck und Beteiligung werden im Kontext sichtbar.",
+        "Dispositionen verbinden Motivation, Können und soziale Lernbedingungen."
+      ],
+      "pedagogicalRelevance": [
+        "Beobachtung richtet sich auf Ressourcen und Lernprozesse statt auf isolierte Defizite."
+      ],
+      "cautions": [
+        "Dispositionen sind keine unveränderlichen Eigenschaften des Kindes, sondern situations- und beziehungsabhängig."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-014",
+          "startLine": 92,
+          "endLine": 107,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Claxton",
+            "Lerndispositionen"
+          ]
+        },
+        {
+          "docId": "doc-014",
+          "startLine": 397,
+          "endLine": 465,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Lerndispositionen",
+            "Carr"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "eisbergmodell-carr",
+        "bildungs-und-lerngeschichten"
+      ]
+    },
+    {
+      "id": "deliberative-demokratie",
+      "title": "Deliberative Demokratie",
+      "kind": "theory",
+      "axisIds": [
+        "gruppe-institution-politik",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Deliberative Demokratie versteht gemeinsame Entscheidungen als öffentlichen Prozess des Beratens, Abwägens und argumentativen Austragens von Konflikten unter gegenseitiger Anerkennung.",
+      "coreIdeas": [
+        "Freiheit des Einzelnen wird mit Freiheit und Gemeinwohl aller vermittelt.",
+        "Betroffene streiten Fragen gemeinsamer Lebensführung öffentlich aus.",
+        "Gemeinsam getroffene Entscheidungen werden als bindend anerkannt und bleiben revidierbar."
+      ],
+      "pedagogicalRelevance": [
+        "Partizipation wird nicht nur als Anhörung, sondern als begründete Mitentscheidung in zugänglichen Diskursen gestaltet."
+      ],
+      "cautions": [
+        "Die Urheberschaft ist in der OCR-Fundstelle nicht zuverlässig lesbar und wird deshalb nicht ergänzt."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-015",
+          "startLine": 1334,
+          "endLine": 1354,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "deliberative Demokratie",
+            "Beratschlagen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "demokratischer-prozess"
+      ]
+    },
+    {
+      "id": "kinderstube-demokratie",
+      "title": "Die Kinderstube der Demokratie",
+      "kind": "approach",
+      "axisIds": [
+        "gruppe-institution-politik",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das Konzept verankert Selbst- und Mitbestimmungsrechte von Kindern in klaren Zuständigkeiten, Gremien und Verfahren der Kita.",
+      "coreIdeas": [
+        "Rechte von Kindern und Vorbehalte der Erwachsenen werden transparent geklärt.",
+        "Entscheidungsprozesse werden institutionell statt vom Wohlwollen Einzelner abhängig gemacht."
+      ],
+      "pedagogicalRelevance": [
+        "Verfassungen, Gremien und festgelegte Verfahren können Beteiligung dauerhaft absichern."
+      ],
+      "cautions": [
+        "Formale Strukturen allein garantieren noch keine zugängliche und inklusive Beteiligung."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-015",
+          "startLine": 1663,
+          "endLine": 1688,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Kinderstube",
+            "Mitbestimmung"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "demokratischer-prozess"
+      ]
+    },
+    {
+      "id": "gebe-ansatz",
+      "title": "GEBe-Ansatz",
+      "kind": "approach",
+      "axisIds": [
+        "gruppe-institution-politik",
+        "beobachtung-fallverstehen"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "GEBe erschließt gesellschaftlich-demokratisches Engagement aus dem alltäglichen Handeln und den Interessen benachteiligter junger Menschen.",
+      "coreIdeas": [
+        "Fachkräfte beobachten Alltagshandeln und bilden Hypothesen über Interessenthemen.",
+        "Interessen werden dialogisch geklärt und in demokratisch beschlossene Projekte überführt."
+      ],
+      "pedagogicalRelevance": [
+        "Politische Bildung kann an bereits vorhandenen Anliegen und Tätigkeiten ansetzen."
+      ],
+      "cautions": [
+        "Projektunterstützung ersetzt keine verbindlichen Partizipationsrechte und Beschwerdewege."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-015",
+          "startLine": 1626,
+          "endLine": 1639,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "GEBe",
+            "Hypothesen"
+          ]
+        },
+        {
+          "docId": "doc-015",
+          "startLine": 3300,
+          "endLine": 3307,
+          "evidenceRole": "summarizes",
+          "evidenceTerms": [
+            "GEBe",
+            "Arbeitsansatz"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "demokratischer-prozess",
+        "kokode-ansatz"
+      ]
+    },
+    {
+      "id": "kokode-ansatz",
+      "title": "KoKoDe-Ansatz",
+      "kind": "approach",
+      "axisIds": [
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "KoKoDe überträgt demokratisches Engagement einrichtungsübergreifend in den Sozialraum und verbindet Akteure der Kinder- und Jugendhilfe.",
+      "coreIdeas": [
+        "Demokratisches Engagement wird kooperativ in der Kommune unterstützt.",
+        "Der GEBe-Ansatz wird über einzelne Einrichtungen hinaus vernetzt."
+      ],
+      "pedagogicalRelevance": [
+        "Kita, Ganztag, Jugendhilfe und weitere Akteure können gemeinsame Beteiligungsräume entwickeln."
+      ],
+      "cautions": [
+        "Der Korpus beschreibt den Ansatz knapp und vor allem über seinen Anwendungszweck."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-015",
+          "startLine": 3304,
+          "endLine": 3310,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "KoKode",
+            "einrichtungsübergreifend"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "gebe-ansatz",
+        "demokratischer-prozess"
+      ]
+    },
+    {
+      "id": "mainzer-jugendbeteiligungsmodell",
+      "title": "Mainzer Modell der Jugendbeteiligung",
+      "kind": "model",
+      "axisIds": [
+        "gruppe-institution-politik",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das kommunale Beteiligungsmodell kombiniert eine niedrigschwellige Jugendkonferenz, zeitlich begrenzte Projektgruppen und ein dauerhaftes freiwilliges Jugendgremium.",
+      "coreIdeas": [
+        "Schulklassen und freiwillig Teilnehmende eröffnen unterschiedliche Zugänge.",
+        "Projektgruppen verbinden Vorschläge mit begleiteter Umsetzung.",
+        "Ein dauerhaftes Gremium ermöglicht kontinuierliche jugendpolitische Mitwirkung."
+      ],
+      "pedagogicalRelevance": [
+        "Das Beispiel zeigt, wie Beteiligungsformate auf soziale Zugänglichkeit, Mobilität und unterschiedliche Bindungsbereitschaft zugeschnitten werden können."
+      ],
+      "cautions": [
+        "Es ist ein lokales Praxis- und Organisationsmodell, keine allgemeingültige Demokratietheorie."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-015",
+          "startLine": 1888,
+          "endLine": 2002,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Mainzer Modell",
+            "Jugendkonferenz"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "demokratischer-prozess",
+        "deliberative-demokratie"
+      ]
+    },
+    {
+      "id": "demokratischer-prozess",
+      "title": "Normatives Grundmodell demokratischer Partizipation",
+      "kind": "model",
+      "axisIds": [
+        "gruppe-institution-politik",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Demokratische Partizipation wird als Recht auf gleichberechtigtes Mitsprechen, Mitverhandeln, Mitentscheiden, Mithandeln und Mitverantworten gefasst.",
+      "coreIdeas": [
+        "Betroffene sind Ko-Autoren verbindlicher Entscheidungen.",
+        "Öffentlicher Diskurs und revidierbare Entscheidungen gehören zusammen."
+      ],
+      "pedagogicalRelevance": [
+        "Einrichtungen können ihre Entscheidungswege daran prüfen, ob Beteiligung tatsächlich Rechte und Folgen hat."
+      ],
+      "cautions": [
+        "Das Modell ist normativ; reale Machtunterschiede und gesetzliche Verantwortungen müssen zusätzlich geklärt werden."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-015",
+          "startLine": 1412,
+          "endLine": 1468,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "normatives Grundkonzept",
+            "Mitverantwortung"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "kinderstube-demokratie",
+        "gebe-ansatz",
+        "kokode-ansatz",
+        "deliberative-demokratie",
+        "mainzer-jugendbeteiligungsmodell"
+      ]
+    },
+    {
+      "id": "offenes-konzept",
+      "title": "Offenes Konzept",
+      "kind": "approach",
+      "axisIds": [
+        "gruppe-institution-politik",
+        "beziehung-entwicklung",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das offene Konzept löst starre Gruppen- und Raumzuordnungen zugunsten selbstbestimmter Wahlmöglichkeiten, Funktionsräume und gruppenübergreifender Beziehungen.",
+      "coreIdeas": [
+        "Kinder wählen Tätigkeiten, Räume und Spielpartner stärker selbst.",
+        "Fachkräfte begleiten statt dauerhaft zu steuern.",
+        "Öffnung benötigt klare Beziehungen, Absprachen und Orientierung."
+      ],
+      "pedagogicalRelevance": [
+        "Partizipation und Eigenverantwortung können wachsen, wenn Struktur und Bezugssicherheit mitgedacht werden."
+      ],
+      "cautions": [
+        "Der Korpus zeigt ausdrücklich auch Konflikte und Unsicherheit bei unzureichend gemeinsam entwickelter Umsetzung."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-012",
+          "startLine": 461,
+          "endLine": 504,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "offene Konzept",
+            "Partizipation"
+          ]
+        },
+        {
+          "docId": "doc-012",
+          "startLine": 320,
+          "endLine": 450,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "offenen Konzept",
+            "Konflikt"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "situationsansatz",
+      "title": "Situationsansatz",
+      "kind": "approach",
+      "axisIds": [
+        "gruppe-institution-politik",
+        "bildungsbereiche",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Der Situationsansatz richtet pädagogische Arbeit auf bedeutsame Lebenssituationen, gesellschaftliche Bedingungen und selbstbestimmtes Handeln von Kindern.",
+      "coreIdeas": [
+        "Kinderfragen und reale Lebenssituationen bilden Ausgangspunkte.",
+        "Projekte verbinden individuelle Erfahrung mit sozialem Lernen und Beteiligung."
+      ],
+      "pedagogicalRelevance": [
+        "Themen werden nicht isoliert vermittelt, sondern in ihrem Lebenswelt- und Machtbezug bearbeitet."
+      ],
+      "cautions": [
+        "Der Korpus nennt den Ansatz überwiegend im Zusammenhang mit Projekten und Fachstellen; eine vollständige Programmatik fehlt."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 11508,
+          "endLine": 11516,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Situationsansatz",
+            "Projekte"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "generative-themen-freire",
+        "reggio-paedagogik",
+        "vorurteilsbewusste-bildung"
+      ]
+    },
+    {
+      "id": "bildung-nachhaltige-entwicklung",
+      "title": "Bildung für nachhaltige Entwicklung",
+      "kind": "approach",
+      "axisIds": [
+        "bildungsbereiche",
+        "rahmen-recht-ethik",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "BNE verbindet Gegenwarts- und Zukunftsverantwortung mit Menschenwürde, Erhalt natürlicher Lebensgrundlagen und gerechter Teilhabe.",
+      "coreIdeas": [
+        "Handlungen haben lokale und globale Folgen.",
+        "Bedürfnisse heutiger und künftiger Generationen werden zusammen gedacht.",
+        "Kinder bearbeiten Zukunftsfragen forschend und partizipativ."
+      ],
+      "pedagogicalRelevance": [
+        "Nachhaltigkeit wird als Querschnitt aller Bildungsbereiche und des Kita-Alltags gestaltet."
+      ],
+      "cautions": [
+        "BNE darf nicht auf individuelles korrektes Verhalten reduziert werden; strukturelle Bedingungen und Zielkonflikte bleiben sichtbar."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 585,
+          "endLine": 620,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "nachhaltige Entwicklung",
+            "17 Ziele"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 1317,
+          "endLine": 1324,
+          "evidenceRole": "summarizes",
+          "evidenceTerms": [
+            "Menschenwürde",
+            "Gerechtigkeit"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "waldkindergarten-naturpaedagogik"
+      ]
+    },
+    {
+      "id": "froebel-spielgaben",
+      "title": "Fröbels Spielgaben und elementare mathematische Bildung",
+      "kind": "approach",
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Friedrich Fröbel"
+      ],
+      "aliases": [],
+      "summary": "Fröbels Spielgaben nutzen geometrische Grundkörper und geteilte Formen, um Eigenschaften, Beziehungen, Zerlegen und Zusammensetzen handelnd zu erfahren.",
+      "coreIdeas": [
+        "Material ordnet elementare Form- und Raumbeziehungen.",
+        "Spiel verbindet sinnliche Erfahrung, Gestaltung und mathematische Struktur."
+      ],
+      "pedagogicalRelevance": [
+        "Offenes Bauen und Variieren kann frühe Geometrie und Mengenbeziehungen anregen."
+      ],
+      "cautions": [
+        "Der Korpus behandelt nur den mathematischen Ausschnitt von Fröbels umfassender Pädagogik."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-019",
+          "startLine": 674,
+          "endLine": 684,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Fröbel",
+            "Spielgaben"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "generative-themen-freire",
+      "title": "Generative Themen nach Freire",
+      "kind": "concept",
+      "axisIds": [
+        "bildungsbereiche",
+        "gruppe-institution-politik",
+        "rahmen-recht-ethik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Paulo Freire"
+      ],
+      "aliases": [],
+      "summary": "Generative Themen sind lebensweltlich bedeutsame Fragen, in denen persönliche Erfahrungen und gesellschaftliche Widersprüche zum Ausgangspunkt gemeinsamen Forschens und Handelns werden.",
+      "coreIdeas": [
+        "Themen entstehen aus realen Erfahrungen und Fragen der Lernenden.",
+        "Handeln und Reflexion werden miteinander verschränkt."
+      ],
+      "pedagogicalRelevance": [
+        "Projekte können existenzielle und gesellschaftliche Kinderfragen aufnehmen, statt Inhalte nur vorzugeben."
+      ],
+      "cautions": [
+        "Der Korpus überträgt den Begriff knapp auf Kita-Projekte und entfaltet Freires politische Bildungstheorie nicht vollständig."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 8040,
+          "endLine": 8056,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "generativen Themen",
+            "existenziellen Fragen"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 11497,
+          "endLine": 11515,
+          "evidenceRole": "attributes",
+          "evidenceTerms": [
+            "Freire",
+            "Projekte"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "reggio-paedagogik",
+        "situationsansatz",
+        "projektmethode-frey"
+      ]
+    },
+    {
+      "id": "aktive-theoriebildung",
+      "title": "Kinder als aktive Theoriebildner",
+      "kind": "concept",
+      "axisIds": [
+        "bildungsbereiche",
+        "beobachtung-fallverstehen"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Kinder werden als Forschende verstanden, die Vermutungen bilden, Wirkungen prüfen und aus wiederholten Erfahrungen innere Erklärungen der Welt entwickeln.",
+      "coreIdeas": [
+        "Spiel und Experimentieren enthalten Hypothesenbildung und Prüfung.",
+        "Irritation und Reflexion treiben die Weiterentwicklung von Vorstellungen an."
+      ],
+      "pedagogicalRelevance": [
+        "Fachkräfte nehmen kindliche Erklärungen ernst und schaffen Möglichkeiten zum Vergleichen, Dokumentieren und erneuten Prüfen."
+      ],
+      "cautions": [
+        "Mit „Theorien“ sind hier kindliche Erklärungsmodelle gemeint, nicht ausformulierte wissenschaftliche Theorien."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 5570,
+          "endLine": 5584,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Theoriebildung",
+            "Vermutungen"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 7949,
+          "endLine": 7953,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Spielen",
+            "Theoriebildung"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 8040,
+          "endLine": 8056,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "innere Theorien",
+            "Hypothesen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "konstruktivismus",
+        "ko-konstruktion"
+      ]
+    },
+    {
+      "id": "ko-konstruktion",
+      "title": "Ko-Konstruktion",
+      "kind": "approach",
+      "axisIds": [
+        "bildungsbereiche",
+        "sprache-kommunikation",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Glenda MacNaughton",
+        "Gillian Williams"
+      ],
+      "aliases": [],
+      "summary": "Lernen wird als gemeinsamer Bedeutungsaufbau verstanden, bei dem Kinder und Erwachsene Beobachtungen, Fragen und Deutungen in Interaktion weiterentwickeln.",
+      "coreIdeas": [
+        "Soziale Interaktion ist der Schlüssel des Lernprozesses.",
+        "Fachkräfte machen kindliche Theorien sichtbar und unterstützen Aushandlung statt fertige Lösungen zu liefern."
+      ],
+      "pedagogicalRelevance": [
+        "Fragen, Zuhören, Dokumentieren und gemeinsames Prüfen werden zu pädagogischen Kernhandlungen."
+      ],
+      "cautions": [
+        "Ko-Konstruktion darf Beteiligungsunterschiede und Macht der Erwachsenen nicht verdecken."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-018",
+          "startLine": 375,
+          "endLine": 415,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Ko-Konstruktion",
+            "MacNaughton"
+          ]
+        },
+        {
+          "docId": "doc-018",
+          "startLine": 430,
+          "endLine": 455,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Theorien der Kinder",
+            "Dokumentationen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "konstruktivismus",
+        "sozialer-konstruktivismus",
+        "aktive-theoriebildung"
+      ]
+    },
+    {
+      "id": "orff-schulwerk",
+      "title": "Orff-Schulwerk und Elementares Musizieren",
+      "kind": "approach",
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Carl Orff",
+        "Gunild Keetman",
+        "Gertrud Orff"
+      ],
+      "aliases": [],
+      "summary": "Der Ansatz verbindet Sprache, Rhythmus, Bewegung, Gesang, Instrumentalspiel und Improvisation zu elementarem, selbsttätigem Musizieren.",
+      "coreIdeas": [
+        "Musik entsteht aus Bewegung und Sprache.",
+        "Modelle dienen als Ausgangsmaterial, nicht als bloß nachzuspielende Vorgabe.",
+        "Improvisation und eigenes Gestalten stehen im Mittelpunkt."
+      ],
+      "pedagogicalRelevance": [
+        "Kinder können über Körper, Stimme, Instrumente und Gruppe musikalische Ausdrucksformen entwickeln."
+      ],
+      "cautions": [
+        "Elementar bedeutet grundlegend und zugänglich, nicht vereinfachend oder künstlerisch minderwertig."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-023",
+          "startLine": 415,
+          "endLine": 445,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Orff",
+            "Bewegung"
+          ]
+        },
+        {
+          "docId": "doc-023",
+          "startLine": 552,
+          "endLine": 627,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Elementaren Musizieren",
+            "Improvisation"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "philosophische-aesthetik",
+      "title": "Philosophische Theorien der Ästhetik",
+      "kind": "theory",
+      "axisIds": [
+        "bildungsbereiche"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [
+        "Immanuel Kant",
+        "Friedrich Schiller",
+        "John Dewey",
+        "Theodor W. Adorno"
+      ],
+      "aliases": [],
+      "summary": "Mehrere philosophische Bezugspersonen werden für unterschiedliche Bestimmungen von Wahrnehmung, Schönheit und Kunst aufgezählt.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-020",
+          "startLine": 9,
+          "endLine": 17,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Kant",
+            "Adorno"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "projektmethode-frey",
+      "title": "Projektmethode nach Frey",
+      "kind": "approach",
+      "axisIds": [
+        "bildungsbereiche",
+        "gruppe-institution-politik",
+        "professionalitaet"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Karl Frey",
+        "John Dewey",
+        "William Heard Kilpatrick"
+      ],
+      "aliases": [],
+      "summary": "Die Projektmethode organisiert Lernen als gemeinsam verantworteten Prozess von Initiative, Planung, Durchführung, Reflexion und Abschluss an einer bedeutsamen Aufgabe.",
+      "coreIdeas": [
+        "Eine Projektinitiative wird gemeinsam geklärt und in ein Betätigungsgebiet überführt.",
+        "Handlung und Reflexion wechseln sich ab.",
+        "Beteiligte tragen Verantwortung für Weg und Ergebnis."
+      ],
+      "pedagogicalRelevance": [
+        "Komplexe Themen können fachübergreifend, handlungsorientiert und partizipativ bearbeitet werden."
+      ],
+      "cautions": [
+        "Nicht jede längere Aktivität ist ein Projekt; Mitbestimmung, Offenheit und Reflexion sind konstitutiv."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-025",
+          "startLine": 95,
+          "endLine": 123,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Projektmethode",
+            "Grundmuster"
+          ]
+        },
+        {
+          "docId": "doc-025",
+          "startLine": 335,
+          "endLine": 371,
+          "evidenceRole": "historical",
+          "evidenceTerms": [
+            "Dewey",
+            "Kilpatrick"
+          ]
+        },
+        {
+          "docId": "doc-025",
+          "startLine": 775,
+          "endLine": 835,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Modell von Frey",
+            "Projektinitiative"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "generative-themen-freire",
+        "reggio-paedagogik"
+      ]
+    },
+    {
+      "id": "reggio-paedagogik",
+      "title": "Reggio-Pädagogik",
+      "kind": "approach",
+      "axisIds": [
+        "bildungsbereiche",
+        "beobachtung-fallverstehen",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Reggio-Pädagogik versteht Kinder als kompetente Forschende mit vielen Ausdrucksweisen und entwickelt Projekte aus ihren Fragen, Beziehungen und Dokumentationen.",
+      "coreIdeas": [
+        "Die „hundert Sprachen“ stehen für vielfältige Ausdrucks- und Erkenntnisformen.",
+        "Raum, Material, Atelier und Dokumentation tragen den Bildungsprozess."
+      ],
+      "pedagogicalRelevance": [
+        "Projekte können kindliche Fragen vertiefen und unterschiedliche Ausdruckswege verbinden."
+      ],
+      "cautions": [
+        "Der Korpus bietet eine verdichtete Darstellung und keine vollständige Rekonstruktion der kommunalen Reggio-Praxis."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 4300,
+          "endLine": 4328,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "100 Sprachen",
+            "Reggio"
+          ]
+        },
+        {
+          "docId": "doc-003",
+          "startLine": 11508,
+          "endLine": 11516,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Reggio-Pädagogik",
+            "Projekte"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "aktive-theoriebildung",
+        "ko-konstruktion",
+        "generative-themen-freire"
+      ]
+    },
+    {
+      "id": "sieben-sinnessysteme-zimmer",
+      "title": "Sieben Sinnessysteme nach Renate Zimmer",
+      "kind": "model",
+      "axisIds": [
+        "bildungsbereiche",
+        "beobachtung-fallverstehen"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [
+        "Renate Zimmer"
+      ],
+      "aliases": [],
+      "summary": "Das Modell differenziert Wahrnehmung in taktile, kinästhetische, vestibuläre, gustatorische, olfaktorische, auditive und visuelle Systeme.",
+      "coreIdeas": [
+        "Wahrnehmung umfasst körpernahe und körperferne Sinne.",
+        "Ästhetische Erfahrung beginnt mit leiblicher und sinnlicher Welterschließung."
+      ],
+      "pedagogicalRelevance": [
+        "Lernarrangements können vielfältige Sinneszugänge eröffnen und Beobachtung differenzieren."
+      ],
+      "cautions": [
+        "Die Einteilung ist ein Orientierungsmodell und bildet das Zusammenspiel der Sinne nur vereinfacht ab."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-020",
+          "startLine": 19,
+          "endLine": 36,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Renate",
+            "Sinnessysteme"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "waldkindergarten-naturpaedagogik",
+      "title": "Waldkindergarten und Naturpädagogik",
+      "kind": "approach",
+      "axisIds": [
+        "bildungsbereiche",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Der Ansatz verlagert den Kita-Alltag dauerhaft in Natur- und Waldräume und versteht unmittelbare Naturerfahrung, Bewegung und selbsttätiges Spiel mit offenen Materialien als zentrale Bildungsbedingungen.",
+      "coreIdeas": [
+        "Natur wird nicht nur Thema, sondern täglicher Erfahrungs- und Bewegungsraum.",
+        "Ungefertigte Materialien regen Fantasie, Problemlösen und Anpassung an wechselnde Situationen an.",
+        "Eigene Erfahrungen sollen Zutrauen, Grenzwahrnehmung und ökologische Verbundenheit unterstützen."
+      ],
+      "pedagogicalRelevance": [
+        "Naturerfahrungen können Bewegung, Wahrnehmung, Selbsttätigkeit und ökologische Bildung verbinden."
+      ],
+      "cautions": [
+        "Der Quelltext stellt programmatische Wirkannahmen dar und betont selbst, dass kein allgemeingültiges pädagogisches Konzept für Waldkindergärten existiert."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-001",
+          "startLine": 420,
+          "endLine": 504,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Waldkindergärten",
+            "Pädagogische Grundidee"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "bildung-nachhaltige-entwicklung"
+      ]
+    },
+    {
+      "id": "beller-eingewoehnungsmodell",
+      "title": "Bellers Eingewöhnungsmodell",
+      "kind": "model",
+      "axisIds": [
+        "eltern-kooperation",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [
+        "Kuno Beller"
+      ],
+      "aliases": [],
+      "summary": "Nur bibliografisch als Modell zur Unterstützung bei Veränderungsstress genannt.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 12126,
+          "endLine": 12129,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Beller",
+            "Eingewöhnung"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "berliner-eingewoehnungsmodell"
+      ]
+    },
+    {
+      "id": "doing-family",
+      "title": "Doing Family",
+      "kind": "concept",
+      "axisIds": [
+        "eltern-kooperation",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Doing Family beschreibt Familie nicht nur als feste Form, sondern als fortlaufend hergestellte Praxis von Zugehörigkeit, Fürsorge und Alltag.",
+      "coreIdeas": [
+        "Familiäre Beziehungen werden durch wiederkehrende Handlungen erzeugt.",
+        "Auch Wohngruppen können bewusst familiäre Aspekte gestalten, ohne Familie zu ersetzen."
+      ],
+      "pedagogicalRelevance": [
+        "Alltagsrituale, Verantwortungsübernahme und Zugehörigkeit können in stationären Hilfen reflektiert gestaltet werden."
+      ],
+      "cautions": [
+        "Der Korpus nennt das Konzept nur kurz und erläutert seine sozialwissenschaftliche Herkunft nicht."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-013",
+          "startLine": 20,
+          "endLine": 28,
+          "evidenceRole": "applies",
+          "evidenceTerms": [
+            "Doing Family",
+            "familiäre"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "erziehungs-bildungspartnerschaft",
+      "title": "Erziehungs- und Bildungspartnerschaft",
+      "kind": "concept",
+      "axisIds": [
+        "eltern-kooperation",
+        "gruppe-institution-politik"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Das Konzept versteht Familie und Einrichtung als unterschiedliche, gleichwertig einzubeziehende Erfahrungs- und Bildungsorte des Kindes.",
+      "coreIdeas": [
+        "Eltern verfügen über besondere Expertise für ihr Kind.",
+        "Zusammenarbeit umfasst Information, Dialog, Beteiligung und gemeinsame Verantwortung."
+      ],
+      "pedagogicalRelevance": [
+        "Pädagogische Entscheidungen werden transparent und mit Familienperspektiven abgeglichen."
+      ],
+      "cautions": [
+        "Partnerschaft bedeutet nicht gleiche Rollen oder das Aufgeben professioneller Verantwortung und Schutzpflichten."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 11228,
+          "endLine": 11245,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Erziehung- und Bildungspartnerschaft",
+            "Elternrolle"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "muenchener-eingewoehnungsmodell",
+      "title": "Münchener Eingewöhnungsmodell",
+      "kind": "model",
+      "axisIds": [
+        "eltern-kooperation",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Als genutztes Eingewöhnungsmodell aufgeführt.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 9358,
+          "endLine": 9362,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Münchener Modell"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "berliner-eingewoehnungsmodell"
+      ]
+    },
+    {
+      "id": "partizipatorische-eingewoehnung",
+      "title": "Partizipatorische Eingewöhnung",
+      "kind": "model",
+      "axisIds": [
+        "eltern-kooperation",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "named-only",
+      "attributedTo": [
+        "Marjam Alemzadeh"
+      ],
+      "aliases": [],
+      "summary": "Als genutztes Eingewöhnungsmodell aufgeführt.",
+      "coreIdeas": [],
+      "pedagogicalRelevance": [],
+      "cautions": [
+        "Der Korpus nennt diese Position, erklärt ihre Annahmen aber nicht ausreichend für eine belastbare inhaltliche Synthese."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 9358,
+          "endLine": 9362,
+          "evidenceRole": "names",
+          "evidenceTerms": [
+            "Partizipatorische",
+            "Alemzadeh"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "berliner-eingewoehnungsmodell"
+      ]
+    },
+    {
+      "id": "geschlechterbewusste-paedagogik",
+      "title": "Geschlechterbewusste Pädagogik und Diversitätsansatz",
+      "kind": "approach",
+      "axisIds": [
+        "rahmen-recht-ethik",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Der Ansatz verbindet gleiche Rechte und Entfaltungschancen mit der Anerkennung realer Unterschiede, ohne stereotype Zuschreibungen oder vermeintlich wesenshafte Gegensätze zu verfestigen.",
+      "coreIdeas": [
+        "Kinder sollen Geschlechtsidentität ohne einengende Rollenerwartungen entwickeln können.",
+        "Durchschnittliche Unterschiede dürfen individuelle Vielfalt nicht überdecken.",
+        "Geschlecht wird mit weiteren Differenzlinien und gleichen Rechten in einem Diversitätsansatz zusammengedacht."
+      ],
+      "pedagogicalRelevance": [
+        "Materialien, Sprache, Räume und Erwartungen werden darauf geprüft, ob sie Möglichkeiten erweitern oder Rollen festschreiben."
+      ],
+      "cautions": [
+        "Weder Gleichmacherei noch die Verabsolutierung geschlechtlicher Differenzen wird dem Ansatz gerecht."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-005",
+          "startLine": 245,
+          "endLine": 330,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Geschlechterbewusste Pädagogik",
+            "Diversitats-Ansatz"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "vorurteilsbewusste-bildung"
+      ]
+    },
+    {
+      "id": "korczak-recht-heutiger-tag",
+      "title": "Korczaks Recht des Kindes auf den heutigen Tag",
+      "kind": "concept",
+      "axisIds": [
+        "rahmen-recht-ethik",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "applied",
+      "attributedTo": [
+        "Janusz Korczak"
+      ],
+      "aliases": [],
+      "summary": "Der Gedanke begründet Kindheit als gegenwärtig vollwertige Lebensphase und Kinderrechte nicht nur mit ihrer späteren Zukunft.",
+      "coreIdeas": [
+        "Das gegenwärtige Erleben und Wohlergehen des Kindes besitzt eigenen Wert.",
+        "Pädagogik darf aktuelle Rechte nicht zugunsten späterer Ziele aufschieben."
+      ],
+      "pedagogicalRelevance": [
+        "Entscheidungen werden daran geprüft, was sie für das Kind heute bedeuten."
+      ],
+      "cautions": [
+        "Der Korpus nennt den Leitgedanken, bietet aber keine umfassende Darstellung von Korczaks Pädagogik."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 1876,
+          "endLine": 1883,
+          "evidenceRole": "attributes",
+          "evidenceTerms": [
+            "Korczak",
+            "heutigen Tag"
+          ]
+        }
+      ],
+      "relatedIds": []
+    },
+    {
+      "id": "vorurteilsbewusste-bildung",
+      "title": "Vorurteilsbewusste Bildung und Erziehung",
+      "kind": "approach",
+      "axisIds": [
+        "rahmen-recht-ethik",
+        "gruppe-institution-politik",
+        "beziehung-entwicklung"
+      ],
+      "evidenceStatus": "explained",
+      "attributedTo": [],
+      "aliases": [],
+      "summary": "Der Anti-Bias-Ansatz stärkt Identitäten, macht Vielfalt erfahrbar, regt Kritik an Ungerechtigkeit an und unterstützt Handeln gegen Diskriminierung.",
+      "coreIdeas": [
+        "Zugehörigkeit und Anerkennung sind Bildungsbedingungen.",
+        "Vorurteile und gesellschaftliche Bewertungen wirken früh auf Selbst- und Fremdbilder.",
+        "Vier Ziele verbinden Identitätsstärkung, Vielfalt, Kritik und Aktivwerden."
+      ],
+      "pedagogicalRelevance": [
+        "Material, Sprache, Routinen und institutionelle Entscheidungen werden diskriminierungskritisch geprüft."
+      ],
+      "cautions": [
+        "Vielfalt darf nicht folkloristisch behandelt werden; Macht- und Ungleichheitsverhältnisse gehören zur Analyse."
+      ],
+      "sourceMentions": [
+        {
+          "docId": "doc-003",
+          "startLine": 3270,
+          "endLine": 3345,
+          "evidenceRole": "explains",
+          "evidenceTerms": [
+            "Vorurteilsbewusste",
+            "vier Zielen"
+          ]
+        }
+      ],
+      "relatedIds": [
+        "geschlechterbewusste-paedagogik"
+      ]
+    }
+  ],
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "source_refs_only": true,
+    "own_synthesis": true,
+    "local_origin_material_only": true
+  }
+}

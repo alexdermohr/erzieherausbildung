@@ -103,6 +103,11 @@ def validate_with_temp_home(home: Path) -> None:
     assert "Detail-Brückenindex v1" in bridge_text
     assert "stärkste Verbindungsknoten" in bridge_text
     assert "Orientierung, keine neue Quelle" in bridge_text
+    theory_text = (target / "Theoriekatalog.md").read_text(encoding="utf-8")
+    assert "Theoriekatalog v1" in theory_text
+    assert "Nur genannt, im Korpus nicht erklärt" in theory_text
+    assert "Eine bloße Namensnennung" in theory_text
+    assert "[[Theoriekatalog]]" in start_text
 
     (vault / "dirty.md").write_text("dirty\n", encoding="utf-8")
     dirty = run([sys.executable, str(SCRIPT)], env=env, check=False)

@@ -9,6 +9,7 @@ const excerptIndexUrl = sitePath("/data/excerpts/pilot-v1.jsonl");
 const detailIndexUrl = sitePath("/data/details/index.v1.json");
 const detailBridgeIndexUrl = sitePath("/data/detail-bridge-index.v1.json");
 const learningFieldFocusUrl = sitePath("/data/learning-field-focus.v1.json");
+const theoryCatalogUrl = sitePath("/data/theory-catalog.v1.json");
 
 const baseCanvasViews = [
   {
@@ -39,11 +40,15 @@ const state = {
   detailBacklog: null,
   detailBridgeIndex: null,
   learningFieldFocus: null,
+  theoryCatalog: null,
   activeAxis: "all",
   activeCluster: "all",
   activeDetailBridgeAxis: "all",
   activeDetailBridgeTarget: "",
   activeDetailBridgeDetail: "",
+  activeTheoryAxis: "all",
+  activeTheoryKind: "all",
+  theoryQuery: "",
   canvas: {
     activeView: baseCanvasViews[0].id,
     data: null,
@@ -697,6 +702,171 @@ function renderKnowledgeDetail(target, detail, { showTitle = true } = {}) {
   target.append(card);
 }
 
+const theoryKindLabels = {
+  theory: "Theorie",
+  model: "Modell",
+  approach: "Pädagogischer Ansatz",
+  concept: "Theoretisches Kernkonzept",
+};
+
+const theoryEvidenceLabels = {
+  explained: "im Korpus erklärt",
+  applied: "angewandt oder knapp eingeordnet",
+  "named-only": "nur genannt",
+};
+
+function theoryAxisTitle(axisId) {
+  return state.theoryCatalog?.vocabulary?.axes?.[axisId] ?? axisTitleById(axisId);
+}
+
+function theorySearchText(entry) {
+  return normalizeText([
+    entry.title,
+    ...(entry.aliases ?? []),
+    ...(entry.attributedTo ?? []),
+    entry.summary,
+    ...(entry.coreIdeas ?? []),
+    ...(entry.pedagogicalRelevance ?? []),
+    ...(entry.cautions ?? []),
+  ].join(" "));
+}
+
+function visibleTheories(status) {
+  const query = normalizeText(state.theoryQuery);
+  return (state.theoryCatalog?.entries ?? [])
+    .filter((entry) => entry.evidenceStatus === status || (status === "substantive" && entry.evidenceStatus !== "named-only"))
+    .filter((entry) => state.activeTheoryAxis === "all" || (entry.axisIds ?? []).includes(state.activeTheoryAxis))
+    .filter((entry) => state.activeTheoryKind === "all" || entry.kind === state.activeTheoryKind)
+    .filter((entry) => !query || theorySearchText(entry).includes(query))
+    .sort((left, right) => {
+      const axisOrder = theoryAxisTitle(left.axisIds[0]).localeCompare(theoryAxisTitle(right.axisIds[0]), "de");
+      return axisOrder || left.title.localeCompare(right.title, "de");
+    });
+}
+
+function theorySourceLabel(source) {
+  return `${source.docId} · Zeilen ${source.startLine}–${source.endLine}`;
+}
+
+function openTheory(theoryId) {
+  let target = document.querySelector(`#theory-${normalizeText(theoryId)}`);
+  if (!target) {
+    state.activeTheoryAxis = "all";
+    state.activeTheoryKind = "all";
+    state.theoryQuery = "";
+    const axisSelect = document.querySelector("#theory-axis-filter");
+    const kindSelect = document.querySelector("#theory-kind-filter");
+    const search = document.querySelector("#theory-search");
+    if (axisSelect) axisSelect.value = "all";
+    if (kindSelect) kindSelect.value = "all";
+    if (search) search.value = "";
+    renderTheories();
+    target = document.querySelector(`#theory-${normalizeText(theoryId)}`);
+  }
+  target?.closest(".theory-named-only")?.setAttribute("open", "");
+  target?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+  setTimeout(() => flashElement(target), 120);
+}
+
+function renderTheoryCard(entry) {
+  const card = el("article", "theory-card");
+  card.id = `theory-${normalizeText(entry.id)}`;
+  const meta = el("p", "theory-meta");
+  meta.append(el("span", "theory-kind", theoryKindLabels[entry.kind] ?? entry.kind));
+  meta.append(el("span", "theory-evidence", theoryEvidenceLabels[entry.evidenceStatus] ?? entry.evidenceStatus));
+  card.append(meta);
+  card.append(el("p", "theory-axis", theoryAxisTitle(entry.axisIds[0])));
+  card.append(el("h3", "", entry.title));
+  if (entry.attributedTo?.length) card.append(el("p", "theory-people", entry.attributedTo.join(", ")));
+  card.append(el("p", "theory-summary", entry.summary));
+
+  const disclosure = el("details", "theory-detail");
+  disclosure.append(el("summary", "", "Einordnung lesen"));
+  appendListSection(disclosure, "Kernideen", entry.coreIdeas);
+  appendListSection(disclosure, "Pädagogische Bedeutung", entry.pedagogicalRelevance);
+  appendListSection(disclosure, "Einordnung und Grenzen", entry.cautions);
+  if (entry.sourceMentions?.length) {
+    const sourceSection = el("div", "detail-subsection");
+    sourceSection.append(el("h5", "", "Fundstellen im Korpus"));
+    const sourceList = el("ul", "compact-list theory-sources");
+    entry.sourceMentions.forEach((source) => sourceList.append(el("li", "", theorySourceLabel(source))));
+    sourceSection.append(sourceList);
+    disclosure.append(sourceSection);
+  }
+  if (entry.relatedIds?.length) {
+    const related = el("div", "detail-subsection");
+    related.append(el("h5", "", "Verwandte Positionen"));
+    const actions = el("div", "action-row");
+    const byId = new Map((state.theoryCatalog?.entries ?? []).map((item) => [item.id, item]));
+    entry.relatedIds.forEach((id) => {
+      const item = byId.get(id);
+      if (item) actions.append(actionButton(item.title, () => openTheory(id), "text-link-action"));
+    });
+    related.append(actions);
+    disclosure.append(related);
+  }
+  card.append(disclosure);
+  return card;
+}
+
+function renderTheoryFilters() {
+  const axisSelect = document.querySelector("#theory-axis-filter");
+  const kindSelect = document.querySelector("#theory-kind-filter");
+  const search = document.querySelector("#theory-search");
+  if (!axisSelect || !kindSelect || !search || !state.theoryCatalog) return;
+
+  axisSelect.querySelectorAll("option:not([value='all'])").forEach((option) => option.remove());
+  Object.entries(state.theoryCatalog.vocabulary.axes).forEach(([id, title]) => {
+    const option = el("option", "", title);
+    option.value = id;
+    axisSelect.append(option);
+  });
+  kindSelect.querySelectorAll("option:not([value='all'])").forEach((option) => option.remove());
+  Object.entries(theoryKindLabels).forEach(([id, title]) => {
+    const option = el("option", "", title);
+    option.value = id;
+    kindSelect.append(option);
+  });
+  axisSelect.onchange = () => {
+    state.activeTheoryAxis = axisSelect.value;
+    renderTheories();
+  };
+  kindSelect.onchange = () => {
+    state.activeTheoryKind = kindSelect.value;
+    renderTheories();
+  };
+  search.oninput = () => {
+    state.theoryQuery = search.value;
+    renderTheories();
+  };
+}
+
+function renderTheories() {
+  const target = document.querySelector("#theory-list");
+  const namedTarget = document.querySelector("#theory-named-list");
+  const intro = document.querySelector("#theory-intro");
+  const empty = document.querySelector("#theory-empty");
+  if (!target || !namedTarget || !intro || !empty) return;
+  target.innerHTML = "";
+  namedTarget.innerHTML = "";
+  if (!state.theoryCatalog) {
+    intro.textContent = "Der Theoriekatalog konnte nicht geladen werden.";
+    return;
+  }
+
+  const substantive = visibleTheories("substantive");
+  const namedOnly = visibleTheories("named-only");
+  intro.textContent = "Kurzthesen zeigen den im Quellenkorpus belegten Ausschnitt. Kernideen, pädagogische Bedeutung, Grenzen und Fundstellen lassen sich jeweils aufklappen.";
+  substantive.forEach((entry) => target.append(renderTheoryCard(entry)));
+  empty.hidden = substantive.length > 0;
+
+  if (!namedOnly.length) {
+    namedTarget.append(el("p", "fineprint", "Für diese Auswahl gibt es keine nur erwähnte Position."));
+  } else {
+    namedOnly.forEach((entry) => namedTarget.append(renderTheoryCard(entry)));
+  }
+}
+
 function activeCanvasView() {
   return canvasViews.find((view) => view.id === state.canvas.activeView) ?? canvasViews[0];
 }
@@ -1016,11 +1186,12 @@ function renderCanvasSurface() {
 }
 
 async function boot() {
-  const [map, network, detailBridgeIndex, learningFieldFocus, sourceSummary, excerpts, details] = await Promise.all([
+  const [map, network, detailBridgeIndex, learningFieldFocus, theoryCatalog, sourceSummary, excerpts, details] = await Promise.all([
     fetch(learningMapUrl).then((res) => res.json()),
     fetch(knowledgeNetworkUrl).then((res) => res.json()),
     fetch(detailBridgeIndexUrl).then((res) => res.json()),
     fetch(learningFieldFocusUrl).then((res) => res.json()),
+    fetch(theoryCatalogUrl).then((res) => res.json()),
     fetch(sourceSummaryUrl).then((res) => res.json()).catch(() => null),
     loadExcerpts(),
     loadDetails(),
@@ -1029,6 +1200,7 @@ async function boot() {
   state.network = network;
   state.detailBridgeIndex = detailBridgeIndex;
   state.learningFieldFocus = learningFieldFocus;
+  state.theoryCatalog = theoryCatalog;
   canvasViews = [...baseCanvasViews, ...focusCanvasViews(learningFieldFocus)];
   state.excerpts = excerpts;
   state.details = details;
@@ -1040,6 +1212,8 @@ async function boot() {
   renderAxes();
   renderClusters();
   renderTopics();
+  renderTheoryFilters();
+  renderTheories();
   renderRelations();
   renderDetailBridgeAxisFilter();
   renderDetailBridgeIndex();
