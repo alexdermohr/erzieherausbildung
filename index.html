@@ -46,8 +46,7 @@
       <section id="karte" class="panel canvas-panel anchored-section">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Interaktive Karte</p>
-            <h2>Räumliche Lernlandkarte</h2>
+            <h2>Lernlandkarte</h2>
             <p class="fineprint">Wähle eine Lernkarte. Ein Klick auf einen Begriff zeigt rechts die Erklärung und passende Vertiefungen.</p>
           </div>
           <label class="filter-label">Lernkarte wählen
@@ -56,7 +55,7 @@
         </div>
         <div class="canvas-layout">
           <div class="canvas-stage-wrap">
-            <p id="canvas-status" class="fineprint">Lernkarte wird geladen…</p>
+            <p id="canvas-status" class="fineprint" role="status" aria-live="polite" hidden></p>
             <div id="canvas-viewer" class="canvas-viewer" aria-label="Interaktive Lernkarte"></div>
           </div>
           <aside id="canvas-detail" class="canvas-detail" aria-live="polite"></aside>

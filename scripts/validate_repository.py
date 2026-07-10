@@ -319,6 +319,10 @@ for token in ['<a href="#status">Status</a>', 'id="surface-list"', "Status und A
     assert token not in index_html
 assert 'role="group" aria-label="Theoriekatalog filtern"' in index_html
 assert 'class="filter-label theory-search-control"' in index_html
+assert '<h2>Lernlandkarte</h2>' in index_html
+assert '<p class="eyebrow">Interaktive Karte</p>' not in index_html
+assert "Räumliche Lernlandkarte" not in index_html
+assert 'id="canvas-status" class="fineprint" role="status" aria-live="polite" hidden' in index_html
 style_css = (root / "assets/styles.css").read_text(encoding="utf-8")
 for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta", "topic-summary", "topic-detail", "connection-context", "hub-insight", "index-layout", "theory-controls", "theory-card", "theory-detail", "theory-search-control", ".filter-label > select", "width: 100%; min-width: 0; max-width: 100%", "repeat(2, minmax(0, 1fr))", ".canvas-stage-wrap { min-width: 0; max-width: 100%; overflow: hidden; }"]:
     assert token in style_css
@@ -329,6 +333,14 @@ assert style_css.index(".theory-controls { display: grid") < style_css.index(".t
 assert ".index-layout, .bridge-index-layout { display: block; }" in style_css
 assert style_css.rindex(".index-layout, .bridge-index-layout { display: block; }") > style_css.index(".bridge-index-layout { display: grid")
 assert "appendSourceTags" not in app_js
+assert "canvas-node-badge" not in app_js
+assert "canvas-node-badge" not in style_css
+assert 'badge.textContent = context.topic ? "Thema" : "Achse"' not in app_js
+assert 'target.append(el("p", "eyebrow", context.kind === "topic"' not in app_js
+assert '`Achse: ${context.topic.axisTitle}`' not in app_js
+assert "Dieses Thema gehört zur Achse" not in app_js
+assert 'status.hidden = true' in app_js
+assert 'status.hidden = false' in app_js
 assert 'sitePath("/data/learning-map.v1.json")' in app_js
 assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
 assert 'sitePath("/data/detail-bridge-index.v1.json")' in app_js
