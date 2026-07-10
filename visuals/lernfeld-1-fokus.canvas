@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "lf1-center",
+      "type": "text",
+      "text": "Lernfeld 1: Berufsrolle und professionelle Haltung\n\nProfessionelle Identität entwickeln, pädagogisches Handeln begründen und Arbeitsfelder sowie Bedingungen reflektieren.",
+      "x": 0,
+      "y": 0,
+      "width": 480,
+      "height": 160
+    },
+    {
+      "id": "lf1-orientation",
+      "type": "text",
+      "text": "Professionelle Rolle klären\n\nAuftrag, Haltung, Verantwortung und Grenzen des eigenen Handelns bewusst verbinden.",
+      "x": -240,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "lf1-practice",
+      "type": "text",
+      "text": "Praxisbezug\n\nAlltagssituationen fachlich begründen, im Team reflektieren und institutionelle Bedingungen einbeziehen.",
+      "x": 300,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "topic-berufsrolle",
+      "type": "text",
+      "text": "Berufsrolle\n\nBerufsrolle meint hier nicht nur eine Berufsbezeichnung, sondern die Fähigkeit, pädagogisches Handeln über Auftrag, Haltung und Reflexion zu begründen.",
+      "x": -720,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-professionelle-haltung",
+      "type": "text",
+      "text": "Professionelle Haltung\n\nProfessionelle Haltung ist die fachlich reflektierte Art, Kindern, Eltern, Themen und Konflikten zu begegnen.",
+      "x": 620,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-reflexion",
+      "type": "text",
+      "text": "Reflexion und Selbstverständnis\n\nReflexion und Selbstverständnis machen aus Alltagshandeln professionelles Handeln.",
+      "x": -720,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-arbeitsbedingungen",
+      "type": "text",
+      "text": "Arbeitsbedingungen\n\nArbeitsbedingungen bilden den strukturellen Rahmen pädagogischer Professionalität.",
+      "x": 620,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-arbeitsfelder",
+      "type": "text",
+      "text": "Arbeitsfelder\n\nArbeitsfelder beschreiben die institutionellen Orte, Zielgruppen und Aufträge pädagogischer Arbeit.",
+      "x": -720,
+      "y": 380,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "lf1-cross-auftrag",
+      "type": "text",
+      "text": "Querbezug: Institutioneller Auftrag\n\nProfessionelle Entscheidungen stehen immer in einem rechtlichen und institutionellen Rahmen.",
+      "x": 0,
+      "y": 590,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf1-cross-team",
+      "type": "text",
+      "text": "Querbezug: Team und Organisation\n\nHaltung wird im Team abgestimmt und durch Leitung, Ressourcen und Arbeitsbedingungen mitgeprägt.",
+      "x": 0,
+      "y": 800,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf1-reflection",
+      "type": "text",
+      "text": "Reflexionsfrage\n\nWie beeinflussen eigene Haltung, Auftrag und Arbeitsbedingungen konkrete pädagogische Entscheidungen?",
+      "x": 0,
+      "y": 1010,
+      "width": 480,
+      "height": 140
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-lf1-orientation-center",
+      "fromNode": "lf1-orientation",
+      "toNode": "lf1-center"
+    },
+    {
+      "id": "e-lf1-practice-center",
+      "fromNode": "lf1-practice",
+      "toNode": "lf1-center"
+    },
+    {
+      "id": "e-lf1-topic-berufsrolle",
+      "fromNode": "lf1-center",
+      "toNode": "topic-berufsrolle"
+    },
+    {
+      "id": "e-lf1-topic-professionelle-haltung",
+      "fromNode": "lf1-center",
+      "toNode": "topic-professionelle-haltung"
+    },
+    {
+      "id": "e-lf1-topic-reflexion",
+      "fromNode": "lf1-center",
+      "toNode": "topic-reflexion"
+    },
+    {
+      "id": "e-lf1-topic-arbeitsbedingungen",
+      "fromNode": "lf1-center",
+      "toNode": "topic-arbeitsbedingungen"
+    },
+    {
+      "id": "e-lf1-topic-arbeitsfelder",
+      "fromNode": "lf1-center",
+      "toNode": "topic-arbeitsfelder"
+    },
+    {
+      "id": "e-lf1-cross-1",
+      "fromNode": "lf1-center",
+      "toNode": "lf1-cross-auftrag"
+    },
+    {
+      "id": "e-lf1-cross-2",
+      "fromNode": "lf1-cross-auftrag",
+      "toNode": "lf1-cross-team"
+    },
+    {
+      "id": "e-lf1-reflection",
+      "fromNode": "lf1-cross-team",
+      "toNode": "lf1-reflection"
+    },
+    {
+      "id": "e-lf1-reflection-center",
+      "fromNode": "lf1-reflection",
+      "toNode": "lf1-center"
+    }
+  ]
+}

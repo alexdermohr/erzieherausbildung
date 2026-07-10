@@ -28,7 +28,7 @@ Die alternative Sinnachse kippt von „Welche Datei ist wo sichtbar?“ zu „Wi
 Akzeptanz:
 
 - `index.html` enthält eine eigene Canvas-Sektion.
-- `assets/app.js` lädt `visuals/learning-map-v1.canvas`, `visuals/erzieherausbildung-systemkarte.canvas` und `visuals/lernfeld-4-bildungsbereiche.canvas`.
+- `assets/app.js` lädt die Haupt- und Systemkarte sowie die aus `data/learning-field-focus.v1.json` erzeugten Fokuskarten für Lernfeld 1 bis 5.
 - Die Canvas-Knoten und Kanten werden ohne externe Bibliothek als SVG gerendert.
 - Die Ansicht bleibt read-only; die kanonischen `.canvas`-Dateien bleiben im Repo.
 

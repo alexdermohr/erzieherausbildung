@@ -19,7 +19,8 @@
         "data/knowledge-network.v1.json",
         "data/source-summary.json",
         "data/machine-readable-inventory.json",
-        "data/detail-bridge-index.v1.json"
+        "data/detail-bridge-index.v1.json",
+        "data/learning-field-focus.v1.json"
       ],
       "outputs": ["README.md", "docs/*.md", "visuals/*.canvas", "index.html"],
       "guards": ["repository validation", "raw artifact scan", "doc-id Rückbindung"],
@@ -38,7 +39,8 @@
         "data/source-summary.json",
         "data/excerpts/pilot-v1.jsonl",
         "data/details/index.v1.json",
-        "data/detail-bridge-index.v1.json"
+        "data/detail-bridge-index.v1.json",
+        "data/learning-field-focus.v1.json"
       ],
       "outputs": ["index.html", "assets/app.js", "assets/styles.css"],
       "guards": ["static fetch allow-list", "source summary only", "no raw source material"],
@@ -58,7 +60,12 @@
         "docs/knowledge-network-v1.md",
         "docs/visualization-decision.md",
         "docs/pilot-index-v1.md",
-        "docs/detail-bridge-index-v1.md"
+        "docs/detail-bridge-index-v1.md",
+        "visuals/lernfeld-1-fokus.canvas",
+        "visuals/lernfeld-2-fokus.canvas",
+        "visuals/lernfeld-3-fokus.canvas",
+        "visuals/lernfeld-4-fokus.canvas",
+        "visuals/lernfeld-5-fokus.canvas"
       ],
       "outputs": ["~/vault-gewebe/schule/erzieherausbildung"],
       "guards": ["safe-list export", "manifest", "mirror warning", "target inside vault", "dirty-vault-stop", "temp-vault CI validation"],

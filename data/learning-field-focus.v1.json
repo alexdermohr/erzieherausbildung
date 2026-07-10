@@ -1,0 +1,215 @@
+{
+  "schema": "erzieherausbildung.learning-field-focus.v1",
+  "purpose": "Gemeinsames Datenmodell für gleichwertige Fokus-Canvases der Lernfelder 1 bis 5.",
+  "commonStructure": [
+    "orientation",
+    "practice",
+    "topics",
+    "crossLinks",
+    "reflection"
+  ],
+  "fields": [
+    {
+      "id": "lernfeld-1",
+      "label": "Lernfeld 1",
+      "title": "Berufsrolle und professionelle Haltung",
+      "summary": "Professionelle Identität entwickeln, pädagogisches Handeln begründen und Arbeitsfelder sowie Bedingungen reflektieren.",
+      "canvas": "visuals/lernfeld-1-fokus.canvas",
+      "orientation": {
+        "title": "Professionelle Rolle klären",
+        "text": "Auftrag, Haltung, Verantwortung und Grenzen des eigenen Handelns bewusst verbinden."
+      },
+      "practice": {
+        "title": "Praxisbezug",
+        "text": "Alltagssituationen fachlich begründen, im Team reflektieren und institutionelle Bedingungen einbeziehen."
+      },
+      "topicIds": [
+        "berufsrolle",
+        "professionelle-haltung",
+        "reflexion",
+        "arbeitsbedingungen",
+        "arbeitsfelder"
+      ],
+      "crossLinks": [
+        {
+          "id": "auftrag",
+          "title": "Querbezug: Institutioneller Auftrag",
+          "text": "Professionelle Entscheidungen stehen immer in einem rechtlichen und institutionellen Rahmen."
+        },
+        {
+          "id": "team",
+          "title": "Querbezug: Team und Organisation",
+          "text": "Haltung wird im Team abgestimmt und durch Leitung, Ressourcen und Arbeitsbedingungen mitgeprägt."
+        }
+      ],
+      "reflection": {
+        "title": "Reflexionsfrage",
+        "text": "Wie beeinflussen eigene Haltung, Auftrag und Arbeitsbedingungen konkrete pädagogische Entscheidungen?"
+      }
+    },
+    {
+      "id": "lernfeld-2",
+      "label": "Lernfeld 2",
+      "title": "Beziehung, Kommunikation und Schutz",
+      "summary": "Beziehungen gestalten, Entwicklung begleiten, Kommunikation ermöglichen und Schutz mit Selbstständigkeit ausbalancieren.",
+      "canvas": "visuals/lernfeld-2-fokus.canvas",
+      "orientation": {
+        "title": "Beziehung als Grundlage",
+        "text": "Sicherheit, Bindung, Dialog und verlässliche Begleitung als Grundlage von Entwicklung verstehen."
+      },
+      "practice": {
+        "title": "Praxisbezug",
+        "text": "Übergänge, Konflikte, Gespräche und Aufsicht so gestalten, dass Schutz und Beteiligung zusammenwirken."
+      },
+      "topicIds": [
+        "eingewoehnung",
+        "bindung-beziehung",
+        "selbstwirksamkeit",
+        "aufsichtspflicht",
+        "sprache-kommunikation",
+        "sprachbildung",
+        "gespraechsanlaesse",
+        "konflikte",
+        "dialogische-haltung",
+        "uebergaenge"
+      ],
+      "crossLinks": [
+        {
+          "id": "beobachtung",
+          "title": "Querbezug: Beobachtung",
+          "text": "Beziehung und Kommunikation werden tragfähiger, wenn Verhalten und Bedürfnisse sorgfältig wahrgenommen werden."
+        },
+        {
+          "id": "eltern",
+          "title": "Querbezug: Elternkooperation",
+          "text": "Eingewöhnung, Übergänge und Schutzfragen brauchen Austausch mit Eltern und Familien."
+        }
+      ],
+      "reflection": {
+        "title": "Reflexionsfrage",
+        "text": "Wo braucht ein Kind Sicherheit und Schutz, und wo braucht es Freiraum, Sprache und eigene Wirksamkeit?"
+      }
+    },
+    {
+      "id": "lernfeld-3",
+      "label": "Lernfeld 3",
+      "title": "Beobachtung, Fallverstehen und Selbstbestimmung",
+      "summary": "Kinder und Situationen ressourcenorientiert wahrnehmen, fachlich deuten und daraus begründete nächste Schritte entwickeln.",
+      "canvas": "visuals/lernfeld-3-fokus.canvas",
+      "orientation": {
+        "title": "Wahrnehmen vor Bewerten",
+        "text": "Beobachtungen dokumentieren, Kontexte einbeziehen und vorschnelle Defizitdeutungen vermeiden."
+      },
+      "practice": {
+        "title": "Praxisbezug",
+        "text": "Aus Beobachtung und Fallverstehen konkrete, beteiligungsorientierte Handlungsschritte ableiten."
+      },
+      "topicIds": [
+        "ressourcenorientierung",
+        "beobachtung",
+        "dokumentation",
+        "fallverstehen",
+        "foerderplanung",
+        "anpassung-selbstbestimmung",
+        "wohngruppe",
+        "politik"
+      ],
+      "crossLinks": [
+        {
+          "id": "beziehung",
+          "title": "Querbezug: Beziehung",
+          "text": "Fallverstehen braucht Beziehung, Perspektivübernahme und Wissen über die Lebenslage des Kindes."
+        },
+        {
+          "id": "rahmen",
+          "title": "Querbezug: Institutioneller Rahmen",
+          "text": "Wohngruppe, Regeln und politische Bildung machen Macht, Beteiligung und Auftrag sichtbar."
+        }
+      ],
+      "reflection": {
+        "title": "Reflexionsfrage",
+        "text": "Welche Beobachtung trägt eine Deutung wirklich, und welcher nächste Schritt stärkt Ressourcen und Selbstbestimmung?"
+      }
+    },
+    {
+      "id": "lernfeld-4",
+      "label": "Lernfeld 4",
+      "title": "Bildungsbereiche und Lernarrangements",
+      "summary": "Bildungsgelegenheiten planen, begleiten und reflektieren sowie unterschiedliche Zugänge zu Welt und Ausdruck eröffnen.",
+      "canvas": "visuals/lernfeld-4-fokus.canvas",
+      "orientation": {
+        "title": "Didaktische Prinzipien",
+        "text": "Alltagsnähe, Spiel, Wahrnehmung, Material, Raum, Beteiligung und Reflexion miteinander verbinden."
+      },
+      "practice": {
+        "title": "Beobachten und anschließen",
+        "text": "Interessen erkennen, passende Impulse setzen und Lernspuren gemeinsam reflektieren."
+      },
+      "topicIds": [
+        "lernarrangements",
+        "sozialpaedagogische-grundlagen",
+        "mathematik",
+        "naturwissenschaft",
+        "kunst-aesthetik",
+        "musik-rhythmik",
+        "theater",
+        "gesundheit-ernaehrung",
+        "religion-ethik"
+      ],
+      "crossLinks": [
+        {
+          "id": "sprache",
+          "title": "Querbezug: Sprache und Beobachtung",
+          "text": "Bildungsbereiche brauchen Gesprächsanlässe, Begriffsbildung und aufmerksame Beobachtung."
+        },
+        {
+          "id": "teilhabe",
+          "title": "Querbezug: Teilhabe",
+          "text": "Kinder bringen eigene Deutungen ein, wählen mit und erleben Selbstwirksamkeit."
+        }
+      ],
+      "reflection": {
+        "title": "Reflexionsfrage",
+        "text": "Was war der Bildungsgehalt, wer war beteiligt und welche nächsten Impulse sind sinnvoll?"
+      }
+    },
+    {
+      "id": "lernfeld-5",
+      "label": "Lernfeld 5",
+      "title": "Elternkooperation und Übergänge",
+      "summary": "Zusammenarbeit mit Eltern und Familien professionell, verständlich und an der Perspektive des Kindes orientiert gestalten.",
+      "canvas": "visuals/lernfeld-5-fokus.canvas",
+      "orientation": {
+        "title": "Kooperation auf Augenhöhe",
+        "text": "Elternperspektiven, Lebenslagen, Erwartungen und Ressourcen ernst nehmen."
+      },
+      "practice": {
+        "title": "Praxisbezug",
+        "text": "Gespräche vorbereiten, Übergänge abstimmen und gemeinsame Verantwortung für das Kind klären."
+      },
+      "topicIds": [
+        "elternkooperation",
+        "erziehungspartnerschaft",
+        "elterngespraeche",
+        "familienperspektive",
+        "uebergaenge"
+      ],
+      "crossLinks": [
+        {
+          "id": "dokumentation",
+          "title": "Querbezug: Beobachtung und Dokumentation",
+          "text": "Gespräche werden tragfähiger, wenn Beobachtungen nachvollziehbar und ressourcenorientiert aufbereitet sind."
+        },
+        {
+          "id": "dialog",
+          "title": "Querbezug: Sprache und Dialog",
+          "text": "Verständliche Sprache, Zuhören und Perspektivwechsel tragen Kooperation auch bei Unterschieden."
+        }
+      ],
+      "reflection": {
+        "title": "Reflexionsfrage",
+        "text": "Wie kann Zusammenarbeit Vertrauen schaffen, ohne Familien zu bewerten oder fachliche Verantwortung abzugeben?"
+      }
+    }
+  ]
+}

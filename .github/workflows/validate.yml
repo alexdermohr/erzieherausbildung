@@ -16,6 +16,7 @@ jobs:
       - run: python3 scripts/validate_excerpts.py
       - run: python3 scripts/validate_details.py
       - run: python3 scripts/build_detail_bridge_index.py --check
+      - run: python3 scripts/build_learning_field_focus_maps.py --check
       - run: python3 scripts/validate_detail_source_alignment.py
       - run: python3 scripts/validate_detail_backlog.py
       - run: python3 scripts/validate_view_export.py

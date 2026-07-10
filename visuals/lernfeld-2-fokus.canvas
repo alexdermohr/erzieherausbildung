@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "id": "lf2-center",
+      "type": "text",
+      "text": "Lernfeld 2: Beziehung, Kommunikation und Schutz\n\nBeziehungen gestalten, Entwicklung begleiten, Kommunikation ermöglichen und Schutz mit Selbstständigkeit ausbalancieren.",
+      "x": 0,
+      "y": 0,
+      "width": 480,
+      "height": 160
+    },
+    {
+      "id": "lf2-orientation",
+      "type": "text",
+      "text": "Beziehung als Grundlage\n\nSicherheit, Bindung, Dialog und verlässliche Begleitung als Grundlage von Entwicklung verstehen.",
+      "x": -240,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "lf2-practice",
+      "type": "text",
+      "text": "Praxisbezug\n\nÜbergänge, Konflikte, Gespräche und Aufsicht so gestalten, dass Schutz und Beteiligung zusammenwirken.",
+      "x": 300,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "topic-eingewoehnung",
+      "type": "text",
+      "text": "Eingewöhnung\n\nEingewöhnung wird als individueller Übergangsprozess verstanden, in dem Beziehungssicherheit wichtiger ist als ein starrer Zeitplan.",
+      "x": -720,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-bindung-beziehung",
+      "type": "text",
+      "text": "Bindung und Beziehung\n\nBindung und Beziehung bilden eine Sicherheitsgrundlage für pädagogische Prozesse.",
+      "x": 620,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-selbstwirksamkeit",
+      "type": "text",
+      "text": "Selbstwirksamkeit\n\nSelbstwirksamkeit bezeichnet die Erfahrung und Erwartung, durch eigenes Handeln etwas bewirken zu können.",
+      "x": -720,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-aufsichtspflicht",
+      "type": "text",
+      "text": "Aufsichtspflicht\n\nAufsichtspflicht ist die pädagogisch-rechtliche Aufgabe, Kinder vor erheblichen Gefahren zu schützen und zugleich Entwicklung, Selbstständigkeit und Selbstwirksamkeit nicht durch übermäßige Kontrolle zu blocki…",
+      "x": 620,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-sprache-kommunikation",
+      "type": "text",
+      "text": "Sprache und Kommunikation\n\nSprache und Kommunikation sind pädagogische Beziehungspraxis und Bildungsmedium zugleich.",
+      "x": -720,
+      "y": 380,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-sprachbildung",
+      "type": "text",
+      "text": "Sprachbildung im Alltag\n\nSprachbildung im Alltag ist keine isolierte Förderstunde, sondern eine durchgehende Qualität pädagogischer Situationen.",
+      "x": 620,
+      "y": 380,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-gespraechsanlaesse",
+      "type": "text",
+      "text": "Gesprächsanlässe\n\nGesprächsanlässe sind pädagogisch bedeutsame Ausgangspunkte für Sprache: aktuelle Themen, Alltagssituationen, Kinderfragen, Missverständnisse, Emotionen oder beobachtete Interessen können zum Gespräch werden.",
+      "x": -720,
+      "y": 570,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-konflikte",
+      "type": "text",
+      "text": "Konflikte\n\nKonflikte sind im pädagogischen Alltag keine bloße Störung, sondern eine sichtbare Lern- und Beziehungssituation.",
+      "x": 620,
+      "y": 570,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-dialogische-haltung",
+      "type": "text",
+      "text": "Dialogische Haltung\n\nDialogische Haltung beschreibt eine pädagogische Grundform des Sprechens mit Kindern: Erwachsene hören auf Bedeutung, bestätigen den Mitteilungsimpuls, erweitern Sprache beiläufig und halten Beziehung sowie Ge…",
+      "x": -720,
+      "y": 760,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-uebergaenge",
+      "type": "text",
+      "text": "Übergänge\n\nÜbergänge sind pädagogisch zu gestaltende Wechsel zwischen vertrauten und neuen Lebens-, Beziehungs- und Lernkontexten.",
+      "x": 620,
+      "y": 760,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "lf2-cross-beobachtung",
+      "type": "text",
+      "text": "Querbezug: Beobachtung\n\nBeziehung und Kommunikation werden tragfähiger, wenn Verhalten und Bedürfnisse sorgfältig wahrgenommen werden.",
+      "x": 0,
+      "y": 970,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf2-cross-eltern",
+      "type": "text",
+      "text": "Querbezug: Elternkooperation\n\nEingewöhnung, Übergänge und Schutzfragen brauchen Austausch mit Eltern und Familien.",
+      "x": 0,
+      "y": 1180,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf2-reflection",
+      "type": "text",
+      "text": "Reflexionsfrage\n\nWo braucht ein Kind Sicherheit und Schutz, und wo braucht es Freiraum, Sprache und eigene Wirksamkeit?",
+      "x": 0,
+      "y": 1390,
+      "width": 480,
+      "height": 140
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-lf2-orientation-center",
+      "fromNode": "lf2-orientation",
+      "toNode": "lf2-center"
+    },
+    {
+      "id": "e-lf2-practice-center",
+      "fromNode": "lf2-practice",
+      "toNode": "lf2-center"
+    },
+    {
+      "id": "e-lf2-topic-eingewoehnung",
+      "fromNode": "lf2-center",
+      "toNode": "topic-eingewoehnung"
+    },
+    {
+      "id": "e-lf2-topic-bindung-beziehung",
+      "fromNode": "lf2-center",
+      "toNode": "topic-bindung-beziehung"
+    },
+    {
+      "id": "e-lf2-topic-selbstwirksamkeit",
+      "fromNode": "lf2-center",
+      "toNode": "topic-selbstwirksamkeit"
+    },
+    {
+      "id": "e-lf2-topic-aufsichtspflicht",
+      "fromNode": "lf2-center",
+      "toNode": "topic-aufsichtspflicht"
+    },
+    {
+      "id": "e-lf2-topic-sprache-kommunikation",
+      "fromNode": "lf2-center",
+      "toNode": "topic-sprache-kommunikation"
+    },
+    {
+      "id": "e-lf2-topic-sprachbildung",
+      "fromNode": "lf2-center",
+      "toNode": "topic-sprachbildung"
+    },
+    {
+      "id": "e-lf2-topic-gespraechsanlaesse",
+      "fromNode": "lf2-center",
+      "toNode": "topic-gespraechsanlaesse"
+    },
+    {
+      "id": "e-lf2-topic-konflikte",
+      "fromNode": "lf2-center",
+      "toNode": "topic-konflikte"
+    },
+    {
+      "id": "e-lf2-topic-dialogische-haltung",
+      "fromNode": "lf2-center",
+      "toNode": "topic-dialogische-haltung"
+    },
+    {
+      "id": "e-lf2-topic-uebergaenge",
+      "fromNode": "lf2-center",
+      "toNode": "topic-uebergaenge"
+    },
+    {
+      "id": "e-lf2-cross-1",
+      "fromNode": "lf2-center",
+      "toNode": "lf2-cross-beobachtung"
+    },
+    {
+      "id": "e-lf2-cross-2",
+      "fromNode": "lf2-cross-beobachtung",
+      "toNode": "lf2-cross-eltern"
+    },
+    {
+      "id": "e-lf2-reflection",
+      "fromNode": "lf2-cross-eltern",
+      "toNode": "lf2-reflection"
+    },
+    {
+      "id": "e-lf2-reflection-center",
+      "fromNode": "lf2-reflection",
+      "toNode": "lf2-center"
+    }
+  ]
+}

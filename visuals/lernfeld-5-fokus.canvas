@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "lf5-center",
+      "type": "text",
+      "text": "Lernfeld 5: Elternkooperation und Übergänge\n\nZusammenarbeit mit Eltern und Familien professionell, verständlich und an der Perspektive des Kindes orientiert gestalten.",
+      "x": 0,
+      "y": 0,
+      "width": 480,
+      "height": 160
+    },
+    {
+      "id": "lf5-orientation",
+      "type": "text",
+      "text": "Kooperation auf Augenhöhe\n\nElternperspektiven, Lebenslagen, Erwartungen und Ressourcen ernst nehmen.",
+      "x": -240,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "lf5-practice",
+      "type": "text",
+      "text": "Praxisbezug\n\nGespräche vorbereiten, Übergänge abstimmen und gemeinsame Verantwortung für das Kind klären.",
+      "x": 300,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "topic-elternkooperation",
+      "type": "text",
+      "text": "Elternkooperation\n\nElternkooperation verbindet Familie und Einrichtung: Pädagogische Arbeit wird tragfähiger, wenn Austausch, Vertrauen und gemeinsame Verantwortung bewusst gestaltet werden.",
+      "x": -720,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-erziehungspartnerschaft",
+      "type": "text",
+      "text": "Erziehungspartnerschaft\n\nErziehungspartnerschaft meint eine professionelle, kindorientierte Zusammenarbeit zwischen Fachkräften und Eltern.",
+      "x": 620,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-elterngespraeche",
+      "type": "text",
+      "text": "Elterngespräche\n\nElterngespräche sind professionelle Gesprächssituationen zwischen Einrichtung und Familie.",
+      "x": -720,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-familienperspektive",
+      "type": "text",
+      "text": "Familienperspektive\n\nFamilienperspektive heißt, das Kind nicht isoliert von seinem familiären Kontext zu verstehen.",
+      "x": 620,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-uebergaenge",
+      "type": "text",
+      "text": "Übergänge\n\nÜbergänge sind pädagogisch zu gestaltende Wechsel zwischen vertrauten und neuen Lebens-, Beziehungs- und Lernkontexten.",
+      "x": -720,
+      "y": 380,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "lf5-cross-dokumentation",
+      "type": "text",
+      "text": "Querbezug: Beobachtung und Dokumentation\n\nGespräche werden tragfähiger, wenn Beobachtungen nachvollziehbar und ressourcenorientiert aufbereitet sind.",
+      "x": 0,
+      "y": 590,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf5-cross-dialog",
+      "type": "text",
+      "text": "Querbezug: Sprache und Dialog\n\nVerständliche Sprache, Zuhören und Perspektivwechsel tragen Kooperation auch bei Unterschieden.",
+      "x": 0,
+      "y": 800,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf5-reflection",
+      "type": "text",
+      "text": "Reflexionsfrage\n\nWie kann Zusammenarbeit Vertrauen schaffen, ohne Familien zu bewerten oder fachliche Verantwortung abzugeben?",
+      "x": 0,
+      "y": 1010,
+      "width": 480,
+      "height": 140
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-lf5-orientation-center",
+      "fromNode": "lf5-orientation",
+      "toNode": "lf5-center"
+    },
+    {
+      "id": "e-lf5-practice-center",
+      "fromNode": "lf5-practice",
+      "toNode": "lf5-center"
+    },
+    {
+      "id": "e-lf5-topic-elternkooperation",
+      "fromNode": "lf5-center",
+      "toNode": "topic-elternkooperation"
+    },
+    {
+      "id": "e-lf5-topic-erziehungspartnerschaft",
+      "fromNode": "lf5-center",
+      "toNode": "topic-erziehungspartnerschaft"
+    },
+    {
+      "id": "e-lf5-topic-elterngespraeche",
+      "fromNode": "lf5-center",
+      "toNode": "topic-elterngespraeche"
+    },
+    {
+      "id": "e-lf5-topic-familienperspektive",
+      "fromNode": "lf5-center",
+      "toNode": "topic-familienperspektive"
+    },
+    {
+      "id": "e-lf5-topic-uebergaenge",
+      "fromNode": "lf5-center",
+      "toNode": "topic-uebergaenge"
+    },
+    {
+      "id": "e-lf5-cross-1",
+      "fromNode": "lf5-center",
+      "toNode": "lf5-cross-dokumentation"
+    },
+    {
+      "id": "e-lf5-cross-2",
+      "fromNode": "lf5-cross-dokumentation",
+      "toNode": "lf5-cross-dialog"
+    },
+    {
+      "id": "e-lf5-reflection",
+      "fromNode": "lf5-cross-dialog",
+      "toNode": "lf5-reflection"
+    },
+    {
+      "id": "e-lf5-reflection-center",
+      "fromNode": "lf5-reflection",
+      "toNode": "lf5-center"
+    }
+  ]
+}

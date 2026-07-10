@@ -8,8 +8,9 @@ const sourceSummaryUrl = sitePath("/data/source-summary.json");
 const excerptIndexUrl = sitePath("/data/excerpts/pilot-v1.jsonl");
 const detailIndexUrl = sitePath("/data/details/index.v1.json");
 const detailBridgeIndexUrl = sitePath("/data/detail-bridge-index.v1.json");
+const learningFieldFocusUrl = sitePath("/data/learning-field-focus.v1.json");
 
-const canvasViews = [
+const baseCanvasViews = [
   {
     id: "learning-map",
     label: "Lernlandkarte",
@@ -22,13 +23,18 @@ const canvasViews = [
     url: sitePath("/visuals/erzieherausbildung-systemkarte.canvas"),
     role: "Pipeline und Oberflächen",
   },
-  {
-    id: "lernfeld-4",
-    label: "Lernfeld 4 – Fokuskarte",
-    url: sitePath("/visuals/lernfeld-4-bildungsbereiche.canvas"),
-    role: "ausgebaute Fokuskarte",
-  },
 ];
+
+let canvasViews = [...baseCanvasViews];
+
+function focusCanvasViews(focusModel) {
+  return (focusModel?.fields ?? []).map((field) => ({
+    id: field.id,
+    label: `${field.label} – Fokuskarte`,
+    url: sitePath(`/${field.canvas}`),
+    role: "Fokuskarte",
+  }));
+}
 
 const state = {
   map: null,
@@ -38,13 +44,14 @@ const state = {
   detailCoverage: null,
   detailBacklog: null,
   detailBridgeIndex: null,
+  learningFieldFocus: null,
   activeAxis: "all",
   activeCluster: "all",
   activeDetailBridgeAxis: "all",
   activeDetailBridgeTarget: "",
   activeDetailBridgeDetail: "",
   canvas: {
-    activeView: canvasViews[0].id,
+    activeView: baseCanvasViews[0].id,
     data: null,
     activeNodeId: null,
   },
@@ -1019,10 +1026,11 @@ function renderCanvasSurface() {
 }
 
 async function boot() {
-  const [map, network, detailBridgeIndex, sourceSummary, excerpts, details] = await Promise.all([
+  const [map, network, detailBridgeIndex, learningFieldFocus, sourceSummary, excerpts, details] = await Promise.all([
     fetch(learningMapUrl).then((res) => res.json()),
     fetch(knowledgeNetworkUrl).then((res) => res.json()),
     fetch(detailBridgeIndexUrl).then((res) => res.json()),
+    fetch(learningFieldFocusUrl).then((res) => res.json()),
     fetch(sourceSummaryUrl).then((res) => res.json()).catch(() => null),
     loadExcerpts(),
     loadDetails(),
@@ -1030,6 +1038,8 @@ async function boot() {
   state.map = map;
   state.network = network;
   state.detailBridgeIndex = detailBridgeIndex;
+  state.learningFieldFocus = learningFieldFocus;
+  canvasViews = [...baseCanvasViews, ...focusCanvasViews(learningFieldFocus)];
   state.excerpts = excerpts;
   state.details = details;
   renderSourceSummary(sourceSummary);
