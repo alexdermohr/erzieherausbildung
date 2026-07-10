@@ -1,0 +1,202 @@
+{
+  "nodes": [
+    {
+      "id": "lf3-center",
+      "type": "text",
+      "text": "Lernfeld 3: Beobachtung, Fallverstehen und Selbstbestimmung\n\nKinder und Situationen ressourcenorientiert wahrnehmen, fachlich deuten und daraus begründete nächste Schritte entwickeln.",
+      "x": 0,
+      "y": 0,
+      "width": 480,
+      "height": 160
+    },
+    {
+      "id": "lf3-orientation",
+      "type": "text",
+      "text": "Wahrnehmen vor Bewerten\n\nBeobachtungen dokumentieren, Kontexte einbeziehen und vorschnelle Defizitdeutungen vermeiden.",
+      "x": -240,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "lf3-practice",
+      "type": "text",
+      "text": "Praxisbezug\n\nAus Beobachtung und Fallverstehen konkrete, beteiligungsorientierte Handlungsschritte ableiten.",
+      "x": 300,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "topic-ressourcenorientierung",
+      "type": "text",
+      "text": "Ressourcenorientierung\n\nRessourcenorientierung bedeutet, Kinder über ihre Fähigkeiten, Interessen, Stärken und unterstützenden Kontexte zu verstehen.",
+      "x": -720,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-beobachtung",
+      "type": "text",
+      "text": "Beobachtung\n\nBeobachtung wird als ressourcenorientierter Zugang zum Kind gefasst: Sie soll Stärken, Interessen und Entwicklungsmöglichkeiten sichtbar machen.",
+      "x": 620,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-dokumentation",
+      "type": "text",
+      "text": "Dokumentation\n\nDokumentation macht pädagogische Wahrnehmung nachvollziehbar, anschlussfähig und besprechbar.",
+      "x": -720,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-fallverstehen",
+      "type": "text",
+      "text": "Fallverstehen\n\nFallverstehen ist die fachliche Ordnungsleistung zwischen Beobachtung und Handeln.",
+      "x": 620,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-foerderplanung",
+      "type": "text",
+      "text": "Förderliche Schlüsse ziehen\n\nFörderplanung übersetzt Beobachtung und Fallverstehen in nächste pädagogische Schritte.",
+      "x": -720,
+      "y": 380,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-anpassung-selbstbestimmung",
+      "type": "text",
+      "text": "Anpassung und Selbstbestimmung\n\nAnpassung und Selbstbestimmung markieren eine Grundspannung pädagogischer Arbeit: Kinder und Jugendliche brauchen Halt, Regeln, Beziehung und Orientierung, sollen aber zugleich eigene Bedürfnisse, Entscheidung…",
+      "x": 620,
+      "y": 380,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-wohngruppe",
+      "type": "text",
+      "text": "Wohngruppe\n\nDie Wohngruppe ist ein pädagogischer Lebensraum, in dem Schutz, Alltag, Beziehung, Hilfeauftrag und Verselbstständigung zusammenkommen.",
+      "x": -720,
+      "y": 570,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-politik",
+      "type": "text",
+      "text": "Politische Bildung\n\nPolitische Bildung in pädagogischen Einrichtungen meint nicht nur Wissen über Staat oder Parteien.",
+      "x": 620,
+      "y": 570,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "lf3-cross-beziehung",
+      "type": "text",
+      "text": "Querbezug: Beziehung\n\nFallverstehen braucht Beziehung, Perspektivübernahme und Wissen über die Lebenslage des Kindes.",
+      "x": 0,
+      "y": 780,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf3-cross-rahmen",
+      "type": "text",
+      "text": "Querbezug: Institutioneller Rahmen\n\nWohngruppe, Regeln und politische Bildung machen Macht, Beteiligung und Auftrag sichtbar.",
+      "x": 0,
+      "y": 990,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf3-reflection",
+      "type": "text",
+      "text": "Reflexionsfrage\n\nWelche Beobachtung trägt eine Deutung wirklich, und welcher nächste Schritt stärkt Ressourcen und Selbstbestimmung?",
+      "x": 0,
+      "y": 1200,
+      "width": 480,
+      "height": 140
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-lf3-orientation-center",
+      "fromNode": "lf3-orientation",
+      "toNode": "lf3-center"
+    },
+    {
+      "id": "e-lf3-practice-center",
+      "fromNode": "lf3-practice",
+      "toNode": "lf3-center"
+    },
+    {
+      "id": "e-lf3-topic-ressourcenorientierung",
+      "fromNode": "lf3-center",
+      "toNode": "topic-ressourcenorientierung"
+    },
+    {
+      "id": "e-lf3-topic-beobachtung",
+      "fromNode": "lf3-center",
+      "toNode": "topic-beobachtung"
+    },
+    {
+      "id": "e-lf3-topic-dokumentation",
+      "fromNode": "lf3-center",
+      "toNode": "topic-dokumentation"
+    },
+    {
+      "id": "e-lf3-topic-fallverstehen",
+      "fromNode": "lf3-center",
+      "toNode": "topic-fallverstehen"
+    },
+    {
+      "id": "e-lf3-topic-foerderplanung",
+      "fromNode": "lf3-center",
+      "toNode": "topic-foerderplanung"
+    },
+    {
+      "id": "e-lf3-topic-anpassung-selbstbestimmung",
+      "fromNode": "lf3-center",
+      "toNode": "topic-anpassung-selbstbestimmung"
+    },
+    {
+      "id": "e-lf3-topic-wohngruppe",
+      "fromNode": "lf3-center",
+      "toNode": "topic-wohngruppe"
+    },
+    {
+      "id": "e-lf3-topic-politik",
+      "fromNode": "lf3-center",
+      "toNode": "topic-politik"
+    },
+    {
+      "id": "e-lf3-cross-1",
+      "fromNode": "lf3-center",
+      "toNode": "lf3-cross-beziehung"
+    },
+    {
+      "id": "e-lf3-cross-2",
+      "fromNode": "lf3-cross-beziehung",
+      "toNode": "lf3-cross-rahmen"
+    },
+    {
+      "id": "e-lf3-reflection",
+      "fromNode": "lf3-cross-rahmen",
+      "toNode": "lf3-reflection"
+    },
+    {
+      "id": "e-lf3-reflection-center",
+      "fromNode": "lf3-reflection",
+      "toNode": "lf3-center"
+    }
+  ]
+}

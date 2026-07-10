@@ -26,6 +26,11 @@ Nur diese Repo-Dateien werden gespiegelt:
 
 - `visuals/erzieherausbildung-systemkarte.canvas` -> `Systemkarte.canvas`
 - `visuals/learning-map-v1.canvas` -> `Lernlandkarte.canvas`
+- `visuals/lernfeld-1-fokus.canvas` -> `Lernfeld 1 – Fokuskarte.canvas`
+- `visuals/lernfeld-2-fokus.canvas` -> `Lernfeld 2 – Fokuskarte.canvas`
+- `visuals/lernfeld-3-fokus.canvas` -> `Lernfeld 3 – Fokuskarte.canvas`
+- `visuals/lernfeld-4-fokus.canvas` -> `Lernfeld 4 – Fokuskarte.canvas`
+- `visuals/lernfeld-5-fokus.canvas` -> `Lernfeld 5 – Fokuskarte.canvas`
 - `docs/learning-map-v1.md` -> `Lernlandkarte.md`
 - `docs/knowledge-network-v1.md` -> `Wissensnetz.md`
 - `docs/pilot-index-v1.md` -> `Pilotindex.md`

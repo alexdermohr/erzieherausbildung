@@ -136,7 +136,41 @@ assert coverage["linked_doc_ids"] == sorted(topic_sources)
 canvas = j("visuals/learning-map-v1.canvas")
 assert len(canvas["nodes"]) >= 40
 assert len(canvas["edges"]) >= 8
-for canvas_path in ["visuals/learning-map-v1.canvas", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/lernfeld-4-bildungsbereiche.canvas"]:
+focus_model = j("data/learning-field-focus.v1.json")
+focus_contract = j("schemas/learning-field-focus.v1.schema.json")
+assert focus_contract["schema"] == "erzieherausbildung.learning_field_focus.contract.v1"
+assert focus_model["schema"] == focus_contract["dataSchema"]
+assert focus_model["commonStructure"] == focus_contract["commonStructure"]
+assert focus_contract["generatedBy"] == "scripts/build_learning_field_focus_maps.py"
+focus_fields = focus_model["fields"]
+assert [field["id"] for field in focus_fields] == focus_contract["fieldIds"]
+assert len({field["canvas"] for field in focus_fields}) == 5
+all_topic_ids = {topic["id"] for axis in lrn["axes"] for topic in axis["topics"]}
+focus_canvas_paths = []
+for field in focus_fields:
+    for key in ["id", "label", "title", "summary", "canvas", "orientation", "practice", "topicIds", "crossLinks", "reflection"]:
+        assert key in field, f"learning-field focus missing {key}: {field.get('id', '?')}"
+    assert len(field["topicIds"]) >= focus_contract["minimumTopicCount"]
+    assert len(field["topicIds"]) == len(set(field["topicIds"]))
+    assert set(field["topicIds"]) <= all_topic_ids
+    assert len(field["crossLinks"]) == focus_contract["crossLinkCount"]
+    assert field["canvas"] == focus_contract["canvasPattern"].format(fieldId=field["id"])
+    focus_canvas_paths.append(field["canvas"])
+    focus_canvas = j(field["canvas"])
+    focus_node_ids = {node["id"] for node in focus_canvas["nodes"]}
+    prefix = field["id"].replace("lernfeld-", "lf")
+    required_nodes = {
+        f"{prefix}-center",
+        f"{prefix}-orientation",
+        f"{prefix}-practice",
+        f"{prefix}-reflection",
+        *{f"topic-{topic_id}" for topic_id in field["topicIds"]},
+    }
+    assert required_nodes <= focus_node_ids
+    assert len(focus_canvas["nodes"]) == len(field["topicIds"]) + 6
+    assert len(focus_canvas["edges"]) == len(field["topicIds"]) + 6
+assert not (root / "visuals/lernfeld-4-bildungsbereiche.canvas").exists()
+for canvas_path in ["visuals/learning-map-v1.canvas", "visuals/erzieherausbildung-systemkarte.canvas", *focus_canvas_paths]:
     canvas_layout = j(canvas_path)
     rects = [
         {
@@ -157,12 +191,6 @@ for canvas_path in ["visuals/learning-map-v1.canvas", "visuals/erzieherausbildun
                 and left["y"] + left["h"] > right["y"]
             )
             assert not overlap, f"canvas node overlap in {canvas_path}: {left['id']} / {right['id']}"
-lf4_canvas = j("visuals/lernfeld-4-bildungsbereiche.canvas")
-lf4_node_ids = {node["id"] for node in lf4_canvas["nodes"]}
-for required_lf4_node in ["lf4-center", "lf4-prinzipien", "lf4-beobachtung", "topic-mathematik", "topic-naturwissenschaft", "topic-kunst-aesthetik", "topic-musik-rhythmik", "topic-theater", "lf4-reflexion"]:
-    assert required_lf4_node in lf4_node_ids
-assert len(lf4_canvas["nodes"]) >= 10
-assert len(lf4_canvas["edges"]) >= 10
 for node in j("visuals/learning-map-v1.canvas")["nodes"]:
     assert "doc-" not in node.get("text", "")
 system_canvas = j("visuals/erzieherausbildung-systemkarte.canvas")
@@ -223,8 +251,12 @@ assert {item["role"] for item in surface["surfaces"]} == set(surface_contract["r
 assert surface_by_id["repo"]["status"] == "active"
 assert surface_by_id["web"]["status"] == "active"
 assert "data/detail-bridge-index.v1.json" in surface_by_id["web"]["data_sources"]
+assert "data/learning-field-focus.v1.json" in surface_by_id["web"]["data_sources"]
+assert "data/learning-field-focus.v1.json" in surface_by_id["repo"]["data_sources"]
 assert surface_by_id["obsidian"]["status"] == "active"
 assert "docs/detail-bridge-index-v1.md" in surface_by_id["obsidian"]["data_sources"]
+for focus_canvas_path in focus_canvas_paths:
+    assert focus_canvas_path in surface_by_id["obsidian"]["data_sources"]
 assert surface_by_id["schauwerk_miro"]["status"] == "planned"
 surface_alignment = {entry["render_id"]: entry["surface_id"] for entry in surface["surface_alignment"]}
 assert surface_alignment == surface_contract["surfaceAlignment"]
@@ -263,6 +295,10 @@ assert "appendSourceTags" not in app_js
 assert 'sitePath("/data/learning-map.v1.json")' in app_js
 assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
 assert 'sitePath("/data/detail-bridge-index.v1.json")' in app_js
+assert 'sitePath("/data/learning-field-focus.v1.json")' in app_js
+assert "focusCanvasViews" in app_js
+assert "canvasViews = [...baseCanvasViews, ...focusCanvasViews(learningFieldFocus)]" in app_js
+assert "lernfeld-4-bildungsbereiche.canvas" not in app_js
 assert "fetch(sitePath(entry.path))" in app_js
 assert (root / ".nojekyll").exists()
 app_data_urls = {value.lstrip("/") for value in re.findall(r'"(/?data/[^"\n]+)"', app_js)}
@@ -272,8 +308,13 @@ for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "
     assert element_id in index_html
 for stale_section in ['id="cluster"', 'id="themen"', 'id="bruecken"', 'id="netzbruecken"', 'id="abdeckung"']:
     assert stale_section not in index_html
+canvas_plan = (root / "docs/canvas-homepage-detail-plan.md").read_text(encoding="utf-8")
+implementation_plan = (root / "docs/implementation-plan.md").read_text(encoding="utf-8")
+assert "Fokuskarten für Lernfeld 1 bis 5" in canvas_plan
+assert "gleichwertigen Fokuskarten für Lernfeld 1 bis 5" in implementation_plan
+assert "lernfeld-4-bildungsbereiche.canvas" not in canvas_plan
 readme = (root / "README.md").read_text(encoding="utf-8")
-for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "docs/knowledge-network-v1.md", "docs/detail-bridge-index-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
+for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "data/learning-field-focus.v1.json", "schemas/learning-field-focus.v1.schema.json", "scripts/build_learning_field_focus_maps.py", "docs/knowledge-network-v1.md", "docs/detail-bridge-index-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
     assert token in readme
 
 obsidian_script = (root / "scripts/obsidian_views.py").read_text(encoding="utf-8")

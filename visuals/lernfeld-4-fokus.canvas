@@ -1,0 +1,216 @@
+{
+  "nodes": [
+    {
+      "id": "lf4-center",
+      "type": "text",
+      "text": "Lernfeld 4: Bildungsbereiche und Lernarrangements\n\nBildungsgelegenheiten planen, begleiten und reflektieren sowie unterschiedliche Zugänge zu Welt und Ausdruck eröffnen.",
+      "x": 0,
+      "y": 0,
+      "width": 480,
+      "height": 160
+    },
+    {
+      "id": "lf4-orientation",
+      "type": "text",
+      "text": "Didaktische Prinzipien\n\nAlltagsnähe, Spiel, Wahrnehmung, Material, Raum, Beteiligung und Reflexion miteinander verbinden.",
+      "x": -240,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "lf4-practice",
+      "type": "text",
+      "text": "Beobachten und anschließen\n\nInteressen erkennen, passende Impulse setzen und Lernspuren gemeinsam reflektieren.",
+      "x": 300,
+      "y": -300,
+      "width": 440,
+      "height": 140
+    },
+    {
+      "id": "topic-lernarrangements",
+      "type": "text",
+      "text": "Lernarrangements\n\nLernarrangements sind geplante Bildungsangebote, die sich an Interessen, Ressourcen und beobachtbaren Themen der Kinder orientieren sollen.",
+      "x": -720,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-sozialpaedagogische-grundlagen",
+      "type": "text",
+      "text": "Sozialpädagogische Grundlagen\n\nSozialpädagogische Grundlagen beschreiben, wie pädagogisches Handeln fachlich begründet wird: Bildungsverständnis, Lebenswelt, Beobachtung, Fallverstehen, Ziele, Planung, Handlungsalternativen und Reflexion gr…",
+      "x": 620,
+      "y": 0,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-mathematik",
+      "type": "text",
+      "text": "Frühkindliche Mathematik\n\nFrühkindliche Mathematik entsteht im Alltag, wenn Kinder Mengen, Muster, Räume, Formen, Daten, Größen und Beziehungen entdecken.",
+      "x": -720,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-naturwissenschaft",
+      "type": "text",
+      "text": "Natur, Umwelt, Technik\n\nNatur, Umwelt und Technik bilden einen forschenden Bildungsbereich.",
+      "x": 620,
+      "y": 190,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-kunst-aesthetik",
+      "type": "text",
+      "text": "Kunst und Ästhetik\n\nKunst und Ästhetik beschreiben sinnliche Wahrnehmung, Materialerfahrung, Gestaltung und Ausdruck.",
+      "x": -720,
+      "y": 380,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-musik-rhythmik",
+      "type": "text",
+      "text": "Musik und Rhythmik\n\nMusik und Rhythmik verbinden Stimme, Klang, Bewegung, Körper, Wahrnehmung, Gruppe und Ausdruck.",
+      "x": 620,
+      "y": 380,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-theater",
+      "type": "text",
+      "text": "Theater\n\nTheater ist symbolisches, körperliches und soziales Spiel.",
+      "x": -720,
+      "y": 570,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-gesundheit-ernaehrung",
+      "type": "text",
+      "text": "Gesundheit und Ernährung\n\nGesundheit und Ernährung sind ein Bildungsbereich des Körpers, der Alltagsroutinen, Mahlzeiten, Bewegung, Genuss, Körperwahrnehmung und Wohlbefinden verbindet.",
+      "x": 620,
+      "y": 570,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "topic-religion-ethik",
+      "type": "text",
+      "text": "Religion, Gesellschaft und Ethik\n\nReligion, Gesellschaft und Ethik bilden einen Bildungsbereich für Sinnfragen, Werte, Zugehörigkeit, Differenz, Gerechtigkeit, Rituale und Weltanschauungen.",
+      "x": -720,
+      "y": 760,
+      "width": 380,
+      "height": 150
+    },
+    {
+      "id": "lf4-cross-sprache",
+      "type": "text",
+      "text": "Querbezug: Sprache und Beobachtung\n\nBildungsbereiche brauchen Gesprächsanlässe, Begriffsbildung und aufmerksame Beobachtung.",
+      "x": 0,
+      "y": 970,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf4-cross-teilhabe",
+      "type": "text",
+      "text": "Querbezug: Teilhabe\n\nKinder bringen eigene Deutungen ein, wählen mit und erleben Selbstwirksamkeit.",
+      "x": 0,
+      "y": 1180,
+      "width": 480,
+      "height": 140
+    },
+    {
+      "id": "lf4-reflection",
+      "type": "text",
+      "text": "Reflexionsfrage\n\nWas war der Bildungsgehalt, wer war beteiligt und welche nächsten Impulse sind sinnvoll?",
+      "x": 0,
+      "y": 1390,
+      "width": 480,
+      "height": 140
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-lf4-orientation-center",
+      "fromNode": "lf4-orientation",
+      "toNode": "lf4-center"
+    },
+    {
+      "id": "e-lf4-practice-center",
+      "fromNode": "lf4-practice",
+      "toNode": "lf4-center"
+    },
+    {
+      "id": "e-lf4-topic-lernarrangements",
+      "fromNode": "lf4-center",
+      "toNode": "topic-lernarrangements"
+    },
+    {
+      "id": "e-lf4-topic-sozialpaedagogische-grundlagen",
+      "fromNode": "lf4-center",
+      "toNode": "topic-sozialpaedagogische-grundlagen"
+    },
+    {
+      "id": "e-lf4-topic-mathematik",
+      "fromNode": "lf4-center",
+      "toNode": "topic-mathematik"
+    },
+    {
+      "id": "e-lf4-topic-naturwissenschaft",
+      "fromNode": "lf4-center",
+      "toNode": "topic-naturwissenschaft"
+    },
+    {
+      "id": "e-lf4-topic-kunst-aesthetik",
+      "fromNode": "lf4-center",
+      "toNode": "topic-kunst-aesthetik"
+    },
+    {
+      "id": "e-lf4-topic-musik-rhythmik",
+      "fromNode": "lf4-center",
+      "toNode": "topic-musik-rhythmik"
+    },
+    {
+      "id": "e-lf4-topic-theater",
+      "fromNode": "lf4-center",
+      "toNode": "topic-theater"
+    },
+    {
+      "id": "e-lf4-topic-gesundheit-ernaehrung",
+      "fromNode": "lf4-center",
+      "toNode": "topic-gesundheit-ernaehrung"
+    },
+    {
+      "id": "e-lf4-topic-religion-ethik",
+      "fromNode": "lf4-center",
+      "toNode": "topic-religion-ethik"
+    },
+    {
+      "id": "e-lf4-cross-1",
+      "fromNode": "lf4-center",
+      "toNode": "lf4-cross-sprache"
+    },
+    {
+      "id": "e-lf4-cross-2",
+      "fromNode": "lf4-cross-sprache",
+      "toNode": "lf4-cross-teilhabe"
+    },
+    {
+      "id": "e-lf4-reflection",
+      "fromNode": "lf4-cross-teilhabe",
+      "toNode": "lf4-reflection"
+    },
+    {
+      "id": "e-lf4-reflection-center",
+      "fromNode": "lf4-reflection",
+      "toNode": "lf4-center"
+    }
+  ]
+}

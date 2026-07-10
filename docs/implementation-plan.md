@@ -23,7 +23,7 @@ Das Repo beantwortet drei Fragen: Was gibt es? Wie haengt es zusammen? Was mache
 Akzeptanz: `data/source-summary.json` zaehlt nur `erzieherausbildung`; Validierung laeuft lokal und in CI.
 
 ## Phase 1 – Strukturkarte v1
-Web-App mit Lernfeldkarten, Obsidian-Systemkarte, Fokuskarte Lernfeld 4 und Schauwerk-DSL als Boardentwurf. Inhalte: Lernfelder 1–5 plus Querschnitt, Sinnachsen und Kernfragen.
+Web-App mit Lernfeldkarten, Obsidian-Systemkarte, gleichwertigen Fokuskarten für Lernfeld 1 bis 5 und Schauwerk-DSL als Boardentwurf. Inhalte: Lernfelder 1–5 plus Querschnitt, Sinnachsen und Kernfragen.
 
 ## Phase 2 – Exzerptmodell
 Von Dateititeln zu belastbaren Inhalten.
@@ -75,7 +75,7 @@ Nebenwirkung: Erste Version bleibt abstrakt; Detailkarten kommen erst nach Exzer
 
 ## Belegt / plausibel / spekulativ
 Belegt: korrekter Ordner `erzieherausbildung`, Cluster `kein lernfeld` und `lernfeld 1`– lernfeld 5`, Bestand aus PDFs.
-Plausibel: Lernfeld 4 braucht Fokuskarte; Sprache/Kommunikation ist Querschnitt; Web/Canvas/Miro ist robuster als eine Einzelflaeche.
+Plausibel: Jedes Lernfeld braucht eine gleich strukturierte Fokuskarte; Sprache/Kommunikation ist Querschnitt; Web/Canvas/Miro ist robuster als eine Einzelflaeche.
 Spekulativ: Gewichtung einzelner Themen, Tiefe einzelner PDFs, Miro-Sofortbedarf.
 
 ## Essenz

@@ -1,0 +1,22 @@
+{
+  "schema": "erzieherausbildung.learning_field_focus.contract.v1",
+  "dataSchema": "erzieherausbildung.learning-field-focus.v1",
+  "fieldIds": [
+    "lernfeld-1",
+    "lernfeld-2",
+    "lernfeld-3",
+    "lernfeld-4",
+    "lernfeld-5"
+  ],
+  "commonStructure": [
+    "orientation",
+    "practice",
+    "topics",
+    "crossLinks",
+    "reflection"
+  ],
+  "minimumTopicCount": 5,
+  "crossLinkCount": 2,
+  "canvasPattern": "visuals/{fieldId}-fokus.canvas",
+  "generatedBy": "scripts/build_learning_field_focus_maps.py"
+}

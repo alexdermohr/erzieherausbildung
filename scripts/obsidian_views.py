@@ -57,6 +57,11 @@ class ViewFile:
 VIEW_FILES = (
     ViewFile("visuals/erzieherausbildung-systemkarte.canvas", "Systemkarte.canvas", "copy"),
     ViewFile("visuals/learning-map-v1.canvas", "Lernlandkarte.canvas", "copy"),
+    ViewFile("visuals/lernfeld-1-fokus.canvas", "Lernfeld 1 – Fokuskarte.canvas", "copy"),
+    ViewFile("visuals/lernfeld-2-fokus.canvas", "Lernfeld 2 – Fokuskarte.canvas", "copy"),
+    ViewFile("visuals/lernfeld-3-fokus.canvas", "Lernfeld 3 – Fokuskarte.canvas", "copy"),
+    ViewFile("visuals/lernfeld-4-fokus.canvas", "Lernfeld 4 – Fokuskarte.canvas", "copy"),
+    ViewFile("visuals/lernfeld-5-fokus.canvas", "Lernfeld 5 – Fokuskarte.canvas", "copy"),
     ViewFile("docs/learning-map-v1.md", "Lernlandkarte.md", "markdown"),
     ViewFile("docs/knowledge-network-v1.md", "Wissensnetz.md", "markdown"),
     ViewFile("docs/pilot-index-v1.md", "Pilotindex.md", "markdown"),
@@ -184,11 +189,16 @@ Status: Vault-Spiegel; kanonisch bleibt das Repo.
 
 1. [[Systemkarte.canvas]] – Gesamtoberfläche und Darstellungslogik.
 2. [[Lernlandkarte.canvas]] – visuelle Lernachsen.
-3. [[Lernlandkarte]] – textliche Orientierung zu Achsen und Themen.
-4. [[Wissensnetz]] – Cluster, Brücken und Zusammenhangslogik.
-5. [[Pilotindex]] – konkret lokalisierte Quellen und offene Quellenarbeit.
-6. [[Detail-Brückenindex]] – Verbindungsknoten, Zielachsen und Brücken zwischen Detailkarten.
-7. [[Visualisierungsentscheidung]] – warum Web, Canvas und spätere Kollaboration getrennte Rollen haben.
+3. [[Lernfeld 1 – Fokuskarte.canvas]] – Berufsrolle und professionelle Haltung.
+4. [[Lernfeld 2 – Fokuskarte.canvas]] – Beziehung, Kommunikation und Schutz.
+5. [[Lernfeld 3 – Fokuskarte.canvas]] – Beobachtung, Fallverstehen und Selbstbestimmung.
+6. [[Lernfeld 4 – Fokuskarte.canvas]] – Bildungsbereiche und Lernarrangements.
+7. [[Lernfeld 5 – Fokuskarte.canvas]] – Elternkooperation und Übergänge.
+8. [[Lernlandkarte]] – textliche Orientierung zu Achsen und Themen.
+9. [[Wissensnetz]] – Cluster, Brücken und Zusammenhangslogik.
+10. [[Pilotindex]] – konkret lokalisierte Quellen und offene Quellenarbeit.
+11. [[Detail-Brückenindex]] – Verbindungsknoten, Zielachsen und Brücken zwischen Detailkarten.
+12. [[Visualisierungsentscheidung]] – warum Web, Canvas und spätere Kollaboration getrennte Rollen haben.
 
 ## Regel
 

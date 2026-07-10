@@ -91,6 +91,11 @@ def validate_with_temp_home(home: Path) -> None:
 
     assert (ROOT / "visuals" / "erzieherausbildung-systemkarte.canvas").read_bytes() == (target / "Systemkarte.canvas").read_bytes()
     assert (ROOT / "visuals" / "learning-map-v1.canvas").read_bytes() == (target / "Lernlandkarte.canvas").read_bytes()
+    for number in range(1, 6):
+        assert (ROOT / "visuals" / f"lernfeld-{number}-fokus.canvas").read_bytes() == (target / f"Lernfeld {number} – Fokuskarte.canvas").read_bytes()
+    start_text = (target / "Start hier.md").read_text(encoding="utf-8")
+    for number in range(1, 6):
+        assert f"[[Lernfeld {number} – Fokuskarte.canvas]]" in start_text
     pilot_text = (target / "Pilotindex.md").read_text(encoding="utf-8")
     assert "Offene Quellenarbeit" in pilot_text
     assert "Konkret lokalisierte Quellen im Pilot" in pilot_text
