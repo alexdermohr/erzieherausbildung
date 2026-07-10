@@ -31,6 +31,7 @@ required = [
     "data/learning-map.v1.json",
     "data/pilot-index.v1.json",
     "data/detail-bridge-index.v1.json",
+    "data/theory-catalog.v1.json",
     "data/details/index.v1.json",
     "data/details/backlog.v1.json",
     "data/surface-policy.v1.json",
@@ -38,18 +39,22 @@ required = [
     "docs/learning-map-v1.md",
     "docs/pilot-index-v1.md",
     "docs/detail-bridge-index-v1.md",
+    "docs/theory-catalog-v1.md",
     "docs/surface-policy-v1.md",
     "schemas/learning-map.v1.schema.json",
     "schemas/detail.v1.schema.json",
     "schemas/detail-backlog.v1.schema.json",
+    "schemas/theory-catalog.v1.schema.json",
     "schemas/surface-policy.v1.schema.json",
     "visuals/learning-map-v1.canvas",
     "scripts/obsidian_views.py",
     "scripts/build_pilot_index.py",
     "scripts/build_detail_bridge_index.py",
+    "scripts/build_theory_catalog.py",
     "scripts/validate_details.py",
     "scripts/validate_detail_source_alignment.py",
     "scripts/validate_detail_backlog.py",
+    "scripts/validate_theory_catalog.py",
     "scripts/validate_view_export.py",
     "scripts/validate_source_health.py",
     "docs/obsidian-vault-spiegel.md",
@@ -253,8 +258,11 @@ assert surface_by_id["web"]["status"] == "active"
 assert "data/detail-bridge-index.v1.json" in surface_by_id["web"]["data_sources"]
 assert "data/learning-field-focus.v1.json" in surface_by_id["web"]["data_sources"]
 assert "data/learning-field-focus.v1.json" in surface_by_id["repo"]["data_sources"]
+assert "data/theory-catalog.v1.json" in surface_by_id["repo"]["data_sources"]
+assert "data/theory-catalog.v1.json" in surface_by_id["web"]["data_sources"]
 assert surface_by_id["obsidian"]["status"] == "active"
 assert "docs/detail-bridge-index-v1.md" in surface_by_id["obsidian"]["data_sources"]
+assert "docs/theory-catalog-v1.md" in surface_by_id["obsidian"]["data_sources"]
 for focus_canvas_path in focus_canvas_paths:
     assert focus_canvas_path in surface_by_id["obsidian"]["data_sources"]
 assert surface_by_id["schauwerk_miro"]["status"] == "planned"
@@ -273,6 +281,30 @@ assert "temp-vault CI validation" in surface_by_id["obsidian"]["guards"]
 assert any("Keine Prüfungsnutzenlogik" in invariant for invariant in surface["invariants"])
 assert any("Bildungsleitlinien" in invariant for invariant in surface["invariants"])
 
+theory_schema = j("schemas/theory-catalog.v1.schema.json")
+theory_catalog = j("data/theory-catalog.v1.json")
+assert theory_schema["schema"] == "erzieherausbildung.theory_catalog.contract.v1"
+assert theory_catalog["schema"] == theory_schema["dataSchema"]
+assert theory_catalog["method"]["documentsScanned"] == inv["document_count"]
+assert theory_catalog["coverage"]["entries"] == len(theory_catalog["entries"])
+assert theory_catalog["coverage"]["explained"] == sum(entry["evidenceStatus"] == "explained" for entry in theory_catalog["entries"])
+assert theory_catalog["coverage"]["applied"] == sum(entry["evidenceStatus"] == "applied" for entry in theory_catalog["entries"])
+assert theory_catalog["coverage"]["namedOnly"] == sum(entry["evidenceStatus"] == "named-only" for entry in theory_catalog["entries"])
+assert {entry["kind"] for entry in theory_catalog["entries"]} <= set(theory_schema["kinds"])
+assert {entry["evidenceStatus"] for entry in theory_catalog["entries"]} == set(theory_schema["evidenceStatuses"])
+assert all(set(entry["axisIds"]) <= set(axis_ids) for entry in theory_catalog["entries"])
+assert all(entry["sourceMentions"] for entry in theory_catalog["entries"])
+assert all(mention["docId"] in valid_docs for entry in theory_catalog["entries"] for mention in entry["sourceMentions"])
+assert theory_catalog["sourcePolicy"]["raw_text_committed"] is False
+assert theory_catalog["sourcePolicy"]["source_refs_only"] is True
+assert theory_catalog["sourcePolicy"]["own_synthesis"] is True
+assert theory_catalog["sourcePolicy"]["local_origin_material_only"] is True
+theory_spec = importlib.util.spec_from_file_location("theory_catalog_builder", root / "scripts/build_theory_catalog.py")
+theory_builder = importlib.util.module_from_spec(theory_spec)
+assert theory_spec.loader is not None
+theory_spec.loader.exec_module(theory_builder)
+assert (root / "docs/theory-catalog-v1.md").read_text(encoding="utf-8") == theory_builder.render_doc(theory_catalog)
+
 app_js = (root / "assets/app.js").read_text(encoding="utf-8")
 index_html = (root / "index.html").read_text(encoding="utf-8")
 assert "sitePath" in app_js
@@ -281,12 +313,12 @@ assert 'src="assets/app.js"' in index_html
 html_ids = set(re.findall(r'id="([^"]+)"', index_html))
 for href in re.findall(r'href="#([^"]+)"', index_html):
     assert href in html_ids, f"broken in-page href: #{href}"
-for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verbindungen", "#index", 'id="karte"', 'id="achsen"', 'id="verbindungen"', 'id="index"', 'id="status"']:
+for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verbindungen", "#theorien", "#index", 'id="karte"', 'id="achsen"', 'id="theorien"', 'id="verbindungen"', 'id="index"', 'id="status"']:
     assert token in index_html
 for token in ['<a href="#status">Status</a>', 'id="surface-list"', "Status und Abdeckung"]:
     assert token not in index_html
 style_css = (root / "assets/styles.css").read_text(encoding="utf-8")
-for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta", "topic-summary", "topic-detail", "connection-context", "hub-insight", "index-layout"]:
+for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta", "topic-summary", "topic-detail", "connection-context", "hub-insight", "index-layout", "theory-controls", "theory-card", "theory-detail"]:
     assert token in style_css
 for stale_style in ["source-line", "muted-tag", "detail-ready-tag", "detail-missing-tag", "max-height: 820px"]:
     assert stale_style not in style_css
@@ -296,6 +328,7 @@ assert 'sitePath("/data/learning-map.v1.json")' in app_js
 assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
 assert 'sitePath("/data/detail-bridge-index.v1.json")' in app_js
 assert 'sitePath("/data/learning-field-focus.v1.json")' in app_js
+assert 'sitePath("/data/theory-catalog.v1.json")' in app_js
 assert "focusCanvasViews" in app_js
 assert 'id: "learning-map"' in app_js
 assert 'id: "system-map"' not in app_js
@@ -306,7 +339,7 @@ assert (root / ".nojekyll").exists()
 app_data_urls = {value.lstrip("/") for value in re.findall(r'"(/?data/[^"\n]+)"', app_js)}
 policy_web_urls = set(surface_by_id["web"]["data_sources"])
 assert app_data_urls == policy_web_urls
-for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list", "coverage-note", "map-stats"]:
+for element_id in ["cluster-list", "relation-list", "topic-grid", "axis-list", "theory-search", "theory-axis-filter", "theory-kind-filter", "theory-list", "theory-named-list", "detail-bridge-summary", "detail-bridge-hub-list", "detail-bridge-axis-list", "coverage-note", "map-stats"]:
     assert element_id in index_html
 for stale_section in ['id="cluster"', 'id="themen"', 'id="bruecken"', 'id="netzbruecken"', 'id="abdeckung"']:
     assert stale_section not in index_html
@@ -316,7 +349,7 @@ assert "Fokuskarten für Lernfeld 1 bis 5" in canvas_plan
 assert "gleichwertigen Fokuskarten für Lernfeld 1 bis 5" in implementation_plan
 assert "lernfeld-4-bildungsbereiche.canvas" not in canvas_plan
 readme = (root / "README.md").read_text(encoding="utf-8")
-for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "data/learning-field-focus.v1.json", "schemas/learning-field-focus.v1.schema.json", "scripts/build_learning_field_focus_maps.py", "docs/knowledge-network-v1.md", "docs/detail-bridge-index-v1.md", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
+for token in ["## Startpunkte", "index.html", "visuals/erzieherausbildung-systemkarte.canvas", "visuals/learning-map-v1.canvas", "data/learning-field-focus.v1.json", "schemas/learning-field-focus.v1.schema.json", "scripts/build_learning_field_focus_maps.py", "docs/knowledge-network-v1.md", "docs/detail-bridge-index-v1.md", "docs/theory-catalog-v1.md", "data/theory-catalog.v1.json", "schemas/theory-catalog.v1.schema.json", "scripts/validate_theory_catalog.py", "docs/visualization-decision.md", "docs/obsidian-vault-spiegel.md", "docs/surface-policy-v1.md", "data/surface-policy.v1.json", "scripts/obsidian_views.py --dry-run"]:
     assert token in readme
 
 obsidian_script = (root / "scripts/obsidian_views.py").read_text(encoding="utf-8")
@@ -340,13 +373,25 @@ assert "git status" in obsidian_script
 for token in ["TemporaryDirectory", "target outside vault", "read_bytes()", "obsidian export validation passed"]:
     assert token in view_export_validator
 assert "python3 scripts/validate_view_export.py" in workflow_validate
+assert "python3 scripts/build_theory_catalog.py --check" in workflow_validate
+assert "python3 scripts/validate_theory_catalog.py" in workflow_validate
 assert "refusing to write: vault git status is not clean" in obsidian_script
-for token in ["Repo bleibt kanonisch", "Vault", "Dry-Run", "kein gesamtes Repo", "machine-readable.local"]:
+for token in ["Repo bleibt kanonisch", "Vault", "Dry-Run", "kein gesamtes Repo", "machine-readable.local", "Theoriekatalog.md"]:
     assert token in obsidian_doc
 surface_doc = (root / "docs/surface-policy-v1.md").read_text(encoding="utf-8")
-for token in ["Repo bleibt Kanon", "Lesefläche", "Denkfläche", "Kollaborationsfläche", "Brücken-Hubs", "Keine Prüfungsnutzenlogik"]:
+for token in ["Repo bleibt Kanon", "Lesefläche", "Denkfläche", "Kollaborationsfläche", "Theorien vergleichen", "Keine Prüfungsnutzenlogik"]:
     assert token in surface_doc
 assert "renderClusters" in app_js
+assert "renderTheoryFilters" in app_js
+assert "renderTheories" in app_js
+assert "renderTheoryCard" in app_js
+assert "visibleTheories" in app_js
+assert "theorySearchText" in app_js
+assert "Fundstellen im Korpus" in app_js
+assert "Nur erwähnt, im Korpus nicht erklärt" in index_html
+assert '<a href="#theorien">Theorien</a>' in index_html
+assert index_html.index('id="index"') < index_html.index('id="theorien"') < index_html.index('id="verbindungen"')
+assert "incomingBridgeCount" not in theory_catalog["entries"][0]
 assert "bridgeRole" in app_js
 assert "bridgeClass" in app_js
 assert "bridgeTypeLabel" in app_js

@@ -34,6 +34,7 @@ Vercel/Web-App als Lesefläche, Obsidian Canvas als Denkfläche, Miro via Schauw
 - Wissensnetz: [`docs/knowledge-network-v1.md`](docs/knowledge-network-v1.md) und [`data/knowledge-network.v1.json`](data/knowledge-network.v1.json)
 - Pilot-Index: [`docs/pilot-index-v1.md`](docs/pilot-index-v1.md) und [`data/pilot-index.v1.json`](data/pilot-index.v1.json)
 - Detail-Brückenindex: [`docs/detail-bridge-index-v1.md`](docs/detail-bridge-index-v1.md) und [`data/detail-bridge-index.v1.json`](data/detail-bridge-index.v1.json)
+- Theoriekatalog: [`docs/theory-catalog-v1.md`](docs/theory-catalog-v1.md), [`data/theory-catalog.v1.json`](data/theory-catalog.v1.json), [`schemas/theory-catalog.v1.schema.json`](schemas/theory-catalog.v1.schema.json) und [`scripts/validate_theory_catalog.py`](scripts/validate_theory_catalog.py)
 - Detailmodell: [`data/details/index.v1.json`](data/details/index.v1.json), [`schemas/detail.v1.schema.json`](schemas/detail.v1.schema.json), [`scripts/validate_details.py`](scripts/validate_details.py)
 - Detail-Backlog: [`data/details/backlog.v1.json`](data/details/backlog.v1.json), [`schemas/detail-backlog.v1.schema.json`](schemas/detail-backlog.v1.schema.json), [`scripts/validate_detail_backlog.py`](scripts/validate_detail_backlog.py)
 - Darstellungsentscheidung: [`docs/visualization-decision.md`](docs/visualization-decision.md)
@@ -47,5 +48,7 @@ Gerendert anschauen: `index.html` im Browser öffnen; die `.canvas`-Dateien in O
 ```bash
 python3 scripts/build_source_summary.py --source-root "$HOME/iCloud/Drive/inbox/erzieherausbildung" --output data/source-summary.json
 python3 scripts/build_learning_field_focus_maps.py
+python3 scripts/build_theory_catalog.py --check
+python3 scripts/validate_theory_catalog.py
 python3 scripts/validate_repository.py
 ```

@@ -66,6 +66,7 @@ VIEW_FILES = (
     ViewFile("docs/knowledge-network-v1.md", "Wissensnetz.md", "markdown"),
     ViewFile("docs/pilot-index-v1.md", "Pilotindex.md", "markdown"),
     ViewFile("docs/detail-bridge-index-v1.md", "Detail-Brückenindex.md", "markdown"),
+    ViewFile("docs/theory-catalog-v1.md", "Theoriekatalog.md", "markdown"),
     ViewFile("docs/visualization-decision.md", "Visualisierungsentscheidung.md", "markdown"),
 )
 GENERATED_FILES = ("Start hier.md", MANIFEST_NAME)
@@ -198,7 +199,8 @@ Status: Vault-Spiegel; kanonisch bleibt das Repo.
 9. [[Wissensnetz]] – Cluster, Brücken und Zusammenhangslogik.
 10. [[Pilotindex]] – konkret lokalisierte Quellen und offene Quellenarbeit.
 11. [[Detail-Brückenindex]] – Verbindungsknoten, Zielachsen und Brücken zwischen Detailkarten.
-12. [[Visualisierungsentscheidung]] – warum Web, Canvas und spätere Kollaboration getrennte Rollen haben.
+12. [[Theoriekatalog]] – quellengebundene Theorien, Modelle, Kernkonzepte und pädagogische Ansätze.
+13. [[Visualisierungsentscheidung]] – warum Web, Canvas und spätere Kollaboration getrennte Rollen haben.
 
 ## Regel
 

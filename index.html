@@ -14,6 +14,7 @@
         <a href="#karte">Karte</a>
         <a href="#achsen">Wissensbereiche</a>
         <a href="#index">Themen</a>
+        <a href="#theorien">Theorien</a>
         <a href="#verbindungen">Zusammenhänge</a>
       </div>
     </nav>
@@ -34,6 +35,7 @@
           <ol class="step-list">
             <li><strong>Karte:</strong> Überblick gewinnen und Begriffe auswählen.</li>
             <li><strong>Themen:</strong> konkrete Inhalte finden und Vertiefungen aufklappen.</li>
+            <li><strong>Theorien:</strong> Denkmodelle vergleichen und ihre pädagogische Bedeutung prüfen.</li>
             <li><strong>Zusammenhänge:</strong> begründete Beziehungen zwischen Themen nachvollziehen.</li>
           </ol>
         </aside>
@@ -95,6 +97,39 @@
             <div id="topic-grid" class="topic-grid"></div>
           </div>
         </div>
+      </section>
+
+      <section id="theorien" class="panel anchored-section">
+        <div class="section-head theory-section-head">
+          <div>
+            <p class="eyebrow">Theorien und Denkmodelle</p>
+            <h2>Wie pädagogische Fragen erklärt werden</h2>
+            <p class="fineprint">Der Katalog unterscheidet Theorien, Modelle, theoretische Kernkonzepte und pädagogische Ansätze. Jede Darstellung bleibt an Fundstellen im Quellenkorpus gebunden.</p>
+          </div>
+        </div>
+        <div class="theory-controls" aria-label="Theoriekatalog filtern">
+          <label class="filter-label">Begriff oder Person suchen
+            <input id="theory-search" type="search" placeholder="z. B. Bindung, Bandura, Partizipation" autocomplete="off" />
+          </label>
+          <label class="filter-label">Nach Wissensbereich
+            <select id="theory-axis-filter">
+              <option value="all">Alle Wissensbereiche</option>
+            </select>
+          </label>
+          <label class="filter-label">Nach Art
+            <select id="theory-kind-filter">
+              <option value="all">Alle Arten</option>
+            </select>
+          </label>
+        </div>
+        <p id="theory-intro" class="connection-intro"></p>
+        <div id="theory-list" class="theory-list" aria-live="polite"></div>
+        <p id="theory-empty" class="fineprint" hidden>Für diese Auswahl ist keine erklärte oder angewandte Position hinterlegt.</p>
+        <details class="theory-named-only">
+          <summary>Nur erwähnt, im Korpus nicht erklärt</summary>
+          <p class="fineprint">Diese Positionen werden der Vollständigkeit halber aufgeführt. Fehlende Inhalte wurden nicht aus externem Wissen ergänzt.</p>
+          <div id="theory-named-list" class="theory-named-list"></div>
+        </details>
       </section>
 
       <section id="verbindungen" class="panel anchored-section">

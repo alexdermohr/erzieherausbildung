@@ -1,0 +1,37 @@
+{
+  "schema": "erzieherausbildung.theory_catalog.contract.v1",
+  "dataSchema": "erzieherausbildung.theory_catalog.v1",
+  "required": [
+    "schema",
+    "purpose",
+    "method",
+    "vocabulary",
+    "coverage",
+    "entries",
+    "sourcePolicy"
+  ],
+  "entryRequired": [
+    "id",
+    "title",
+    "kind",
+    "axisIds",
+    "evidenceStatus",
+    "attributedTo",
+    "aliases",
+    "summary",
+    "coreIdeas",
+    "pedagogicalRelevance",
+    "cautions",
+    "sourceMentions",
+    "relatedIds"
+  ],
+  "kinds": ["theory", "model", "approach", "concept"],
+  "evidenceStatuses": ["explained", "applied", "named-only"],
+  "evidenceRoles": ["explains", "summarizes", "applies", "compares", "contrasts", "historical", "attributes", "names"],
+  "blockedFields": ["rawMaterial", "directCitation", "localPath", "ocrArtifact", "pageScreenshot"],
+  "sourcePolicy": {
+    "raw_text_committed": false,
+    "public_surface": "own synthesis plus doc-id and line anchors only",
+    "origin_material": "local only"
+  }
+}
