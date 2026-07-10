@@ -111,19 +111,37 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
 .meta-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .meta-stat { display: inline-flex; gap: 6px; align-items: baseline; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; color: var(--muted); }
 .meta-stat strong { color: var(--ink); }
+.index-layout { display: grid; grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr); gap: 22px; align-items: start; }
 .topic-grid { display: grid; gap: 14px; }
 .topic-card, .relation-card { border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
-.hub-button { width: 100%; text-align: left; cursor: pointer; font: inherit; color: inherit; }
-.hub-title, .hub-id { display: block; }
-.hub-title { margin: 0 0 10px; font-size: 1.05rem; font-weight: 800; }
-.hub-button.active { outline: 2px solid rgba(22, 101, 52, .35); box-shadow: 0 0 0 4px rgba(22, 101, 52, .08); }
-.incoming-bridge-list { display: grid; gap: 10px; margin-top: 16px; }
-.incoming-bridge-card { border-left: 3px solid rgba(15, 23, 42, .24); padding: 10px 0 10px 14px; }
-.incoming-bridge-card h5 { margin: 0 0 6px; font-size: .98rem; }
-.incoming-bridge-card p { margin: 0 0 6px; }
-.connection-subsection { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 22px; }
+.topic-summary { margin: 0 0 14px; color: var(--muted); line-height: 1.5; }
+.topic-detail { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+.topic-detail > summary { cursor: pointer; color: var(--accent); font-weight: 900; }
+.topic-detail[open] > summary { margin-bottom: 10px; }
+.topic-detail .knowledge-detail-card { border: 0; padding: 0; margin: 0; background: transparent; }
+.compact-actions { margin-top: 10px; }
+.hub-button { width: 100%; text-align: left; cursor: pointer; font: inherit; color: inherit; background: rgba(255,255,255,.46); }
+.hub-axis, .hub-title, .hub-insight, .hub-source { display: block; }
+.hub-axis { margin-bottom: 6px; color: var(--accent); font-size: .76rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+.hub-title { margin: 0 0 9px; font-size: 1.12rem; font-weight: 900; }
+.hub-insight { color: var(--ink); line-height: 1.45; }
+.hub-source { margin-top: 9px; color: var(--muted); font-size: .82rem; }
+.hub-button.active { outline: 2px solid var(--accent); outline-offset: 2px; background: var(--accent-soft); }
+.connection-intro { margin: 4px 0 20px; max-width: 880px; color: var(--muted); line-height: 1.5; }
+.connection-context { align-self: start; border: 1px solid var(--line); border-radius: 22px; padding: 18px; background: rgba(255,255,255,.36); }
+.connection-context > h3 { margin-top: 0; }
+.connection-context-list { display: grid; gap: 10px; margin-top: 14px; }
+.connection-context-card { border-top: 1px solid var(--line); padding-top: 12px; }
+.connection-context-card:first-child { border-top: 0; padding-top: 0; }
+.connection-context-card h4 { margin: 0 0 5px; font-size: .96rem; }
+.connection-context-card p { margin: 0; color: var(--muted); line-height: 1.45; }
+.incoming-bridge-list { display: grid; gap: 12px; margin-top: 22px; }
+.incoming-bridge-list > h4 { margin: 0; font-size: 1.12rem; }
+.incoming-bridge-card { border: 1px solid var(--line); border-radius: 16px; padding: 14px; background: rgba(255,255,255,.34); }
+.incoming-bridge-card h5 { margin: 0 0 7px; font-size: .98rem; }
+.incoming-bridge-card p { margin: 0 0 9px; line-height: 1.5; }
+.connection-subsection { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 24px; }
 .status-surface-list { margin-top: 16px; }
-.index-layout .topic-grid { max-height: 820px; overflow: auto; padding-right: 4px; }
 .bridge-detail-card-target { margin-top: 18px; scroll-margin-top: 24px; }
 .inline-action { border: 1px solid var(--accent); border-radius: 999px; padding: 7px 10px; margin-top: 4px; color: var(--accent); background: transparent; cursor: pointer; }
 .inline-action.active { background: var(--accent-soft); }
@@ -230,6 +248,9 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
   .canvas-node rect,
   .canvas-detail,
   .excerpt-card { background: rgba(255,255,255,.035); fill: color-mix(in srgb, var(--panel) 88%, black); }
+  .hub-button,
+  .connection-context,
+  .incoming-bridge-card { background: rgba(255,255,255,.035); }
 }
 
 /* detail model surface */
@@ -248,6 +269,3 @@ select { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px
 @media (prefers-color-scheme: dark) {
   .knowledge-detail-card { background: rgba(255,255,255,.045); }
 }
-
-.detail-ready-tag { border: 1px solid var(--accent); }
-.detail-missing-tag { background: transparent; border: 1px dashed var(--line); color: var(--muted); }
