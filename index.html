@@ -23,7 +23,7 @@
         <div>
           <p class="eyebrow">Wissenslandkarte</p>
           <h1>Erzieherausbildung</h1>
-          <p class="lede">Eine klare Oberfläche für Wissensinhalte, Begriffe, Zusammenhänge und Detailkarten. Rohmaterial bleibt lokal; sichtbar wird die geordnete Struktur.</p>
+          <p class="lede">Eine übersichtliche Lernkarte für zentrale Inhalte, Begriffe und Zusammenhänge der Erzieherausbildung.</p>
           <div class="hero-actions" aria-label="Schnelleinstiege">
             <a class="primary-action" href="#karte">Karte öffnen</a>
             <a class="secondary-action" href="#index">Thema finden</a>
@@ -46,7 +46,7 @@
           <div>
             <p class="eyebrow">Interaktive Karte</p>
             <h2>Räumliche Lernlandkarte</h2>
-            <p class="fineprint">Wähle eine Karte, klicke einen Knoten und lies rechts die Rückbindung: Achse, Thema, Quellenanker, Exzerpte und Detailkarten.</p>
+            <p class="fineprint">Wähle eine Karte, klicke einen Knoten und lies rechts die passende Erklärung oder Detailkarte.</p>
           </div>
           <label class="filter-label">Canvas wählen
             <select id="canvas-view-select"></select>
@@ -80,7 +80,7 @@
       <section id="index" class="panel anchored-section">
         <p class="eyebrow">Themen</p>
         <h2>Lernwege und Themen</h2>
-        <p class="fineprint">Links stehen Lernwege als Einstieg. Rechts erscheinen die passenden Themen. Ein Klick auf ein Thema öffnet Karte oder Detailkarte.</p>
+        <p class="fineprint">Links stehen Lernwege als Einstieg. Rechts erscheinen die passenden Themen. Ein Klick öffnet Karte oder Detailkarte.</p>
         <div class="index-layout">
           <div>
             <h3>Lernwege</h3>
@@ -95,33 +95,33 @@
 
       <section id="verbindungen" class="panel anchored-section">
         <p class="eyebrow">Verbindungen</p>
-        <h2>Detail- und Clusterverbindungen</h2>
+        <h2>Verbindungen</h2>
         <div class="section-head compact-section-head">
-          <p class="fineprint">Diese Lesefläche zeigt die aus Detailkarten abgeleiteten Brücken. Sie ist Orientierung, keine neue Quelle.</p>
-          <label class="filter-label">Zielachse filtern
+          <p class="fineprint">Hier wird sichtbar, welche Themen besonders stark miteinander verbunden sind.</p>
+          <label class="filter-label">Bereich filtern
             <select id="detail-bridge-axis-filter">
-              <option value="all">Alle Zielachsen</option>
+              <option value="all">Alle Bereiche</option>
             </select>
           </label>
         </div>
         <div id="detail-bridge-summary" class="fineprint"></div>
         <div class="bridge-index-layout">
           <div>
-            <h3>Detailverbindungen</h3>
-            <p class="fineprint">Aus Detailkarten abgeleitete Hubs. Ein Klick zeigt eingehende Detailkarten und Relationstexte.</p>
+            <h3>Verbindungspunkte</h3>
+            <p class="fineprint">Ein Klick zeigt, welche Detailkarten zu diesem Verbindungspunkt führen.</p>
             <div id="detail-bridge-hub-list" class="relation-list"></div>
             <div id="detail-bridge-incoming-list" class="incoming-bridge-list"></div>
             <div id="detail-bridge-detail-card" class="bridge-detail-card-target"></div>
           </div>
           <div>
-            <h3>Zielachsen</h3>
+            <h3>Bereiche</h3>
             <div id="detail-bridge-axis-list" class="visuals-list"></div>
           </div>
         </div>
         <div class="connection-subsection">
-          <p class="eyebrow">Clusterverbindungen</p>
-          <h3>Brücken zwischen Erkenntnisclustern</h3>
-          <p class="fineprint">Die gröbere Netzsicht: Welche Erkenntniscluster stehen miteinander in Beziehung?</p>
+          <p class="eyebrow">Lernwegverbindungen</p>
+          <h3>Verbindungen zwischen Lernwegen</h3>
+          <p class="fineprint">Welche Lernwege stehen miteinander in Beziehung?</p>
           <div id="relation-list" class="relation-list"></div>
         </div>
       </section>

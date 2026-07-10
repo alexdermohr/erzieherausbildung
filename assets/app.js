@@ -214,7 +214,7 @@ function renderSourceSummary(summary) {
   const words = summary?.totals?.word_count ?? "325.811";
   target.textContent = `${map.axes.length} Sinnachsen, ${topicTotal} Themen, ${network.clusters.length} Cluster und ${network.bridges.length} Brücken aus ${fileCount} PDFs. Rohtexte bleiben lokal.`;
   const detail = document.querySelector("#source-detail");
-  detail.textContent = `Maschinenlesbarer Arbeitsstand: ${words.toLocaleString?.("de-DE") ?? words} Wörter laut Inventar; sichtbar werden Struktur, Cluster und Beziehungen, nicht die Rohtexte.`;
+  detail.textContent = `Arbeitsstand: ${words.toLocaleString?.("de-DE") ?? words} Wörter laut Inventar; sichtbar sind Lernkarte, Themen und Beziehungen.`;
 }
 
 function renderStats() {
@@ -247,10 +247,9 @@ function renderAxes() {
   state.map.axes.forEach((axis) => {
     const card = el("article", `axis-card ${axis.status}`);
     card.id = axisAnchorId(axis.id);
-    card.append(el("p", "module-meta", `${topicCount(axis)} Themen · ${axis.status}`));
+    card.append(el("p", "module-meta", `${topicCount(axis)} Themen`));
     card.append(el("h3", "", axis.title));
     card.append(el("p", "", axis.summary));
-    card.append(el("p", "source-line", `Quellen: ${axis.sources.join(", ")}`));
     const actions = el("div", "action-row");
     actions.append(actionButton("Themen zeigen", () => {
       setAxisFilter(axis.id);
@@ -282,7 +281,7 @@ function renderClusters() {
 
   state.network.clusters.forEach((cluster) => {
     const card = el("article", `cluster-card ${state.activeCluster === cluster.id ? "active" : ""}`);
-    card.append(el("p", "module-meta", `${cluster.topics.length} Themen · ${cluster.sources.length} Quellen`));
+    card.append(el("p", "module-meta", `${cluster.topics.length} Themen`));
     card.append(el("h3", "", cluster.title));
     card.append(el("p", "", cluster.insight));
     appendClusterButton(card, cluster.id, "Themen dieses Lernwegs zeigen");
@@ -316,14 +315,13 @@ function renderTopics() {
         card.id = topicAnchorId(topic.id);
         card.append(el("p", "module-meta", axis.title));
         card.append(el("h3", "", topic.title));
+        const detail = detailForTopic({ ...topic, axisId: axis.id, axisTitle: axis.title });
         const tags = el("div", "tag-row");
-        tags.append(el("span", "tag", topic.status === "background" ? "Rahmen" : "Wissensinhalt"));
-        tags.append(el("span", `tag ${detailTopics.has(topic.id) ? "detail-ready-tag" : "detail-missing-tag"}`, detailTopics.has(topic.id) ? "Detail vorhanden" : "Detail offen"));
-        topic.sources.forEach((source) => tags.append(el("span", "tag muted-tag", source)));
-        card.append(tags);
+        if (topic.status === "background") tags.append(el("span", "tag", "Rahmen"));
+        if (detail) tags.append(el("span", "tag detail-ready-tag", "Detailkarte"));
+        if (tags.children.length) card.append(tags);
         const actions = el("div", "action-row");
         actions.append(actionButton("Auf Karte zeigen", () => openTopic(topic.id, { showInMap: true }), "link-action"));
-        const detail = detailForTopic({ ...topic, axisId: axis.id, axisTitle: axis.title });
         if (detail) actions.append(actionButton("Detailkarte lesen", () => openStandaloneDetailCard(detail.id), "link-action"));
         card.append(actions);
         grid.append(card);
@@ -484,13 +482,12 @@ function renderIncomingBridgeDetails(index, targetId) {
   }
   const heading = el("h4", "", `Eingehend zu ${bridgeTargetTitle(index, targetId)}`);
   target.append(heading);
-  target.append(el("p", "fineprint", `${bridges.length} Detail-Brücken. Diese Relationstexte sind aus Detailkarten abgeleitet.`));
+  target.append(el("p", "fineprint", `${bridges.length} Verbindungen.`));
 
   bridges.slice(0, 16).forEach((bridge) => {
     const card = el("article", "incoming-bridge-card");
     card.append(el("h5", "", bridge.sourceTitle));
     card.append(el("p", "", bridge.relation));
-    card.append(el("p", "fineprint", `${bridge.sourceDetailId} → ${bridgeTargetTitle(index, bridge.targetId)}`));
     const button = el("button", `inline-action ${bridge.sourceDetailId === state.activeDetailBridgeDetail ? "active" : ""}`, "Detailkarte anzeigen");
     button.type = "button";
     button.onclick = () => openBridgeDetailCard(bridge.sourceDetailId);
@@ -498,7 +495,7 @@ function renderIncomingBridgeDetails(index, targetId) {
     target.append(card);
   });
   if (bridges.length > 16) {
-    target.append(el("p", "fineprint", `${bridges.length - 16} weitere eingehende Brücken sind im generierten Verbindungsindex dokumentiert.`));
+    target.append(el("p", "fineprint", `${bridges.length - 16} weitere Verbindungen sind ausgeblendet.`));
   }
 }
 
@@ -525,7 +522,7 @@ function renderDetailBridgeIndex() {
     hubs = visibleDetailBridgeHubs(index, activeAxis, state.activeDetailBridgeTarget);
   }
   const axisTitle = activeDetailBridgeAxisTitle(index);
-  summary.textContent = `${index.totals.details} Detailkarten erzeugen ${index.totals.bridges} Brücken zu ${index.totals.targets} Zielknoten. Filter: ${axisTitle}. Ein hoher Eingangswert markiert Orientierungsknoten, nicht automatisch Wichtigkeit im Ausbildungsplan.`;
+  summary.textContent = `Wähle einen Verbindungspunkt, um passende Detailkarten und Beziehungen zu sehen. Bereich: ${axisTitle}.`;
 
   if (!hubs.length) {
     hubsTarget.append(el("p", "fineprint", "Für diesen Filter wurden keine Hub-Knoten gefunden."));
@@ -542,18 +539,16 @@ function renderDetailBridgeIndex() {
     };
     const roleLine = el("span", "bridge-role");
     roleLine.append(el("span", "bridge-role-badge", "Hub"));
-    roleLine.append(el("span", "bridge-type", `${hub.incomingBridgeCount} eingehende Brücken`));
+    roleLine.append(el("span", "bridge-type", `${hub.incomingBridgeCount} Verbindungen`));
     card.append(roleLine);
     card.append(el("span", "hub-title", hub.targetTitle));
-    card.append(el("span", "fineprint hub-id", `Ziel-ID: ${hub.targetId}`));
     hubsTarget.append(card);
   });
 
   axes.forEach((axis) => {
     const card = el("article", "visual-card");
     card.append(el("h3", "", axis.axisTitle));
-    card.append(el("p", "", `${axis.incomingBridgeCount} eingehende Detail-Brücken`));
-    card.append(el("p", "fineprint", axis.axisId));
+    card.append(el("p", "", `${axis.incomingBridgeCount} Verbindungen`));
     axesTarget.append(card);
   });
 
@@ -672,7 +667,6 @@ function appendListSection(target, title, items) {
 
 function renderKnowledgeDetail(target, detail) {
   const card = el("article", "knowledge-detail-card");
-  card.append(el("p", "module-meta", `Detailstatus: ${detail.detailStatus ?? "draft"} · Unsicherheit ${detail.uncertainty ?? "?"} · Interpolation ${detail.interpolation ?? "?"}`));
   card.append(el("h4", "", detail.title));
   card.append(el("p", "", detail.summary));
   appendListSection(card, "Kernideen", detail.coreIdeas);
@@ -692,7 +686,10 @@ function renderKnowledgeDetail(target, detail) {
     });
     card.append(section);
   }
-  card.append(el("p", "fineprint", `Beleganker: ${(detail.sourceRefs ?? []).join(", ")} · Exzerpte: ${(detail.excerptRefs ?? []).join(", ")}`));
+  const meta = el("details", "detail-meta");
+  meta.append(el("summary", "", "Nachweise"));
+  meta.append(el("p", "fineprint", `Quellen: ${(detail.sourceRefs ?? []).join(", ")} · Exzerpte: ${(detail.excerptRefs ?? []).join(", ")} · Stand: ${detail.detailStatus ?? "draft"}`));
+  card.append(meta);
   target.append(card);
 }
 
@@ -811,34 +808,22 @@ function matchingExcerpts(sources, title, topicId = "") {
   });
 }
 
-function appendSourceTags(target, sources) {
-  const row = el("div", "tag-row");
-  if (!sources?.length) {
-    row.append(el("span", "tag muted-tag", "keine doc-ID"));
-  } else {
-    sources.forEach((source) => row.append(el("span", "tag muted-tag", source)));
-  }
-  target.append(row);
-}
-
 function renderCanvasDetail(node) {
   const target = document.querySelector("#canvas-detail");
   target.innerHTML = "";
   if (!node) {
-    target.append(el("p", "eyebrow", "Detailpfad"));
+    target.append(el("p", "eyebrow", "Lesebereich"));
     target.append(el("h3", "", "Knoten auswählen"));
-    target.append(el("p", "", "Klick auf einen Canvas-Knoten zeigt die aktuelle Rückbindung: Thema oder Achse, Quellen-IDs, vorhandene Pilotexzerpte und die noch fehlende Detailschicht."));
-    target.append(el("p", "fineprint", "Epistemische Leere: Flächendeckende Detailaufbereitungen fehlen noch; nötig für den Sprung vom Überblick zum belastbaren Lerninhalt."));
+    target.append(el("p", "", "Klicke einen Knoten in der Karte. Rechts erscheint die passende Erklärung oder Detailkarte."));
     return;
   }
 
   const context = findNodeContext(node);
   const label = canvasNodeLabel(node);
   const heading = context.topic?.title ?? context.axis?.title ?? label;
-  const status = context.topic?.status ?? context.axis?.status ?? "canvas";
   const sources = context.topic?.sources ?? context.axis?.sources ?? [];
   const summary = context.topic
-    ? `Dieses Thema gehört zur Achse „${context.topic.axisTitle}“ und ist über Quellenanker mit der späteren Detailaufbereitung verbindbar.`
+    ? `Dieses Thema gehört zur Achse „${context.topic.axisTitle}“.`
     : context.axis?.summary ?? "Dieser Canvas-Knoten ist noch nicht eindeutig an eine Sinnachse oder ein Thema gebunden.";
   const topicOrAxisId = context.topic?.id ?? context.axis?.id ?? node.id;
   const excerpts = matchingExcerpts(sources, heading, topicOrAxisId);
@@ -846,10 +831,8 @@ function renderCanvasDetail(node) {
 
   target.append(el("p", "eyebrow", context.kind === "topic" ? "Themenknoten" : context.kind === "axis" ? "Sinnachse" : "Canvas-Knoten"));
   target.append(el("h3", "", heading));
-  target.append(el("p", "module-meta", `Status: ${status}`));
   if (context.topic?.axisTitle) target.append(el("p", "fineprint", `Achse: ${context.topic.axisTitle}`));
   target.append(el("p", "", summary));
-  appendSourceTags(target, sources);
   const actions = el("div", "action-row");
   if (context.topic) {
     actions.append(actionButton("Im Themenbereich zeigen", () => openTopic(context.topic.id), "link-action"));
@@ -866,35 +849,28 @@ function renderCanvasDetail(node) {
   if (actions.children.length) target.append(actions);
 
   const detailBlock = el("article", "detail-note");
-  detailBlock.append(el("h4", "", "Detailaufbereitung"));
+  detailBlock.append(el("h4", "", "Detailkarte"));
   if (details.length) {
-    details.slice(0, 3).forEach((detail) => renderKnowledgeDetail(detailBlock, detail));
+    details.slice(0, 2).forEach((detail) => renderKnowledgeDetail(detailBlock, detail));
   } else {
-    detailBlock.append(el("p", "", "Für diesen Knoten gibt es noch keine Detaildatei. Das bleibt als Arbeitslücke sichtbar."));
+    detailBlock.append(el("p", "", "Zu diesem Knoten ist noch keine Detailkarte hinterlegt."));
   }
   target.append(detailBlock);
 
-  const depth = el("article", "detail-note");
-  depth.append(el("h4", "", "Detailtiefe"));
-  depth.append(el("p", "", sources.length ? "Dieser Knoten ist bereits über doc-IDs an Ursprungswissen rückgebunden. Die spätere Ausbaustufe ergänzt daraus geprüfte Detailaufbereitungen." : "Dieser Knoten braucht noch stabile Quellen- oder Detailzuordnung."));
-  target.append(depth);
-
-  const excerptBlock = el("article", "detail-note");
-  excerptBlock.append(el("h4", "", "Pilotexzerpte"));
   if (excerpts.length) {
-    excerpts.slice(0, 4).forEach((excerpt) => {
+    const excerptMeta = el("details", "detail-meta");
+    excerptMeta.append(el("summary", "", "Quellenhinweise"));
+    excerpts.slice(0, 3).forEach((excerpt) => {
       const item = el("div", "excerpt-card");
       item.append(el("strong", "", excerptTitle(excerpt)));
       item.append(el("p", "", excerptBody(excerpt)));
       const practiceUse = excerptPracticeUse(excerpt);
       if (practiceUse) item.append(el("p", "", practiceUse));
       item.append(el("p", "fineprint", `${excerptDocId(excerpt) || "doc-ID offen"} · ${excerptLocator(excerpt)} · ${excerptStatus(excerpt)}`));
-      excerptBlock.append(item);
+      excerptMeta.append(item);
     });
-  } else {
-    excerptBlock.append(el("p", "", "Noch kein passendes Pilotexzerpt gefunden. Das ist kein Fehler, sondern die sichtbare Grenze der bisherigen Tiefenerschließung."));
+    target.append(excerptMeta);
   }
-  target.append(excerptBlock);
 }
 
 async function openCanvasNode(nodeId) {
@@ -924,7 +900,7 @@ async function loadCanvasView() {
     renderCanvasDetail(null);
     const nodeCount = state.canvas.data.nodes?.length ?? 0;
     const edgeCount = state.canvas.data.edges?.length ?? 0;
-    status.textContent = `${view.label}: ${nodeCount} Knoten, ${edgeCount} Kanten · ${view.role} · read-only aus ${view.url}`;
+    status.textContent = `${view.label}: ${nodeCount} Knoten, ${edgeCount} Verbindungen`;
   } catch (error) {
     state.canvas.data = null;
     document.querySelector("#canvas-viewer").textContent = "Canvas konnte nicht geladen werden.";
@@ -1032,7 +1008,7 @@ function renderCanvasSurface() {
       badge.setAttribute("x", Number(node.x ?? 0) + 18);
       badge.setAttribute("y", Number(node.y ?? 0) + Number(node.height ?? 120) - 16);
       badge.setAttribute("class", "canvas-node-badge");
-      badge.textContent = context.topic ? "Thema · Quellenanker" : "Achse · Quellenanker";
+      badge.textContent = context.topic ? "Thema" : "Achse";
       group.append(badge);
     }
 

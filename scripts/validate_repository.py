@@ -253,8 +253,13 @@ for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verb
     assert token in index_html
 for token in ['<a href="#status">Status</a>', 'id="surface-list"', "Status und Abdeckung"]:
     assert token not in index_html
-for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight"]:
-    assert token in (root / "assets/styles.css").read_text(encoding="utf-8")
+style_css = (root / "assets/styles.css").read_text(encoding="utf-8")
+for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta"]:
+    assert token in style_css
+for stale_style in ["source-line", "muted-tag"]:
+    assert stale_style not in style_css
+    assert stale_style not in app_js
+assert "appendSourceTags" not in app_js
 assert 'sitePath("/data/learning-map.v1.json")' in app_js
 assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
 assert 'sitePath("/data/detail-bridge-index.v1.json")' in app_js
@@ -352,7 +357,7 @@ assert "openDetailBridgeTarget" not in app_js
 assert "bridgeTargetTitle" in app_js
 assert "visibleDetailBridgeHubs" in app_js
 assert "bridgeTargetHub" in app_js
-assert "Ziel-ID:" in app_js
+assert "Ziel-ID:" not in app_js
 assert "${bridge.targetId}:" not in app_js
 assert 'actionButton("Ziel öffnen"' not in app_js
 assert "openStandaloneDetailCard" in app_js
@@ -374,12 +379,21 @@ assert "detail-bridge-axis-filter" in index_html
 assert "detail-bridge-incoming-list" in index_html
 assert "detail-bridge-detail-card" in index_html
 assert "detailBacklogUrl" not in app_js
-assert "Detail- und Clusterverbindungen" in index_html
+assert "Detail- und Clusterverbindungen" not in index_html
+assert "Verbindungen" in index_html
 assert "Lernwege und Themen" in index_html
 assert "Stand, Quellen und Grenzen" in index_html
-assert "Orientierung, keine neue Quelle" in index_html
-assert "Detail offen" in app_js
-assert "Detail vorhanden" in app_js
+assert "Orientierung, keine neue Quelle" not in index_html
+assert "Detail offen" not in app_js
+assert "Detail vorhanden" not in app_js
+assert "Quellenhinweise" in app_js
+assert "Nachweise" in app_js
+assert "read-only" not in app_js
+assert "Quellenanker" not in app_js
+assert "Epistemische Leere" not in app_js
+assert "Detailstatus:" not in app_js
+assert "Unsicherheit" not in app_js
+assert "Interpolation" not in app_js
 # Regression guard for shared sourceRefs: doc-008 is used by multiple detail cards.
 # Exact topicId must win over source-only matches so the Canvas node "Übergänge"
 # does not render "Bindung und Beziehung" as its first detail card.
