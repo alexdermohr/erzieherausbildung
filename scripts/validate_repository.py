@@ -348,16 +348,17 @@ assert "openBridgeDetailCard" in app_js
 assert "openCanvasNode" in app_js
 assert "openTopic" in app_js
 assert "openAxis" in app_js
-assert "openDetailBridgeTarget" in app_js
+assert "openDetailBridgeTarget" not in app_js
 assert "bridgeTargetTitle" in app_js
 assert "visibleDetailBridgeHubs" in app_js
 assert "bridgeTargetHub" in app_js
 assert "Ziel-ID:" in app_js
 assert "${bridge.targetId}:" not in app_js
+assert 'actionButton("Ziel öffnen"' not in app_js
 assert "openStandaloneDetailCard" in app_js
 assert "Detailkarte anzeigen" in app_js
 assert "Auf Karte zeigen" in app_js
-assert "Ziel öffnen" in app_js
+assert "Ziel öffnen" not in app_js
 assert "Im Themenbereich zeigen" in app_js
 assert "Themen dieser Achse zeigen" in app_js
 assert "Themen dieses Lernwegs zeigen" in app_js
@@ -450,6 +451,8 @@ for detail_entry in detail_index["details"]:
     for bridge in detail_payload.get("bridges", []):
         assert bridge["targetId"] in bridge_targets, f"unknown detail bridge target: {detail_entry['id']} -> {bridge['targetId']}"
         assert bridge_index["byTarget"][bridge["targetId"]].get("targetTitle"), f"missing bridge target title: {bridge['targetId']}"
+# The compact bridge list in detail cards is explanatory text, not a deep-link launcher.
+# Keep titles readable, but do not reintroduce per-row target buttons.
 assert "Detail-Brückenindex v1" in expected_bridge_doc
 assert "Orientierung, keine neue Quelle" in expected_bridge_doc
 assert "python3 scripts/build_detail_bridge_index.py --check" in workflow_validate

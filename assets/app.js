@@ -433,19 +433,6 @@ function bridgeIncomingForTarget(index, targetId) {
   return (index.bridges ?? []).filter((bridge) => bridge.targetId === targetId);
 }
 
-function openDetailBridgeTarget(targetId) {
-  const index = state.detailBridgeIndex;
-  const meta = bridgeTargetMeta(index, targetId);
-  if (!meta) return;
-  state.activeDetailBridgeAxis = meta.axisId ?? "all";
-  state.activeDetailBridgeTarget = targetId;
-  state.activeDetailBridgeDetail = "";
-  renderDetailBridgeAxisFilter();
-  renderDetailBridgeIndex();
-  scrollToSection("verbindungen");
-  setTimeout(() => flashElement(document.querySelector("#detail-bridge-incoming-list")), 120);
-}
-
 function openStandaloneDetailCard(detailId) {
   state.activeDetailBridgeDetail = detailId;
   renderBridgeDetailCard(detailId);
@@ -707,7 +694,6 @@ function renderKnowledgeDetail(target, detail) {
       label.append(el("strong", "", bridgeTargetTitle(state.detailBridgeIndex, bridge.targetId)));
       label.append(document.createTextNode(`: ${bridge.relation}`));
       item.append(label);
-      item.append(actionButton("Ziel öffnen", () => openDetailBridgeTarget(bridge.targetId), "text-link-action"));
       section.append(item);
     });
     card.append(section);
