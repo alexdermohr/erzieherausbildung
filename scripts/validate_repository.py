@@ -286,9 +286,9 @@ for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verb
 for token in ['<a href="#status">Status</a>', 'id="surface-list"', "Status und Abdeckung"]:
     assert token not in index_html
 style_css = (root / "assets/styles.css").read_text(encoding="utf-8")
-for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta"]:
+for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta", "topic-summary", "topic-detail", "connection-context", "hub-insight", "index-layout"]:
     assert token in style_css
-for stale_style in ["source-line", "muted-tag"]:
+for stale_style in ["source-line", "muted-tag", "detail-ready-tag", "detail-missing-tag", "max-height: 820px"]:
     assert stale_style not in style_css
     assert stale_style not in app_js
 assert "appendSourceTags" not in app_js
@@ -297,6 +297,8 @@ assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
 assert 'sitePath("/data/detail-bridge-index.v1.json")' in app_js
 assert 'sitePath("/data/learning-field-focus.v1.json")' in app_js
 assert "focusCanvasViews" in app_js
+assert 'id: "learning-map"' in app_js
+assert 'id: "system-map"' not in app_js
 assert "canvasViews = [...baseCanvasViews, ...focusCanvasViews(learningFieldFocus)]" in app_js
 assert "lernfeld-4-bildungsbereiche.canvas" not in app_js
 assert "fetch(sitePath(entry.path))" in app_js
@@ -397,19 +399,45 @@ assert "openAxis" in app_js
 assert "openDetailBridgeTarget" not in app_js
 assert "bridgeTargetTitle" in app_js
 assert "visibleDetailBridgeHubs" in app_js
-assert "bridgeTargetHub" in app_js
+assert "bridgeTargetHub" not in app_js
+assert '.sort((left, right) =>' in app_js
+assert 'left.targetTitle.localeCompare(right.targetTitle, "de")' in app_js
 assert "Ziel-ID:" not in app_js
 assert "${bridge.targetId}:" not in app_js
 assert 'actionButton("Ziel öffnen"' not in app_js
-assert "openStandaloneDetailCard" in app_js
-assert "Detailkarte anzeigen" in app_js
-assert "Auf Karte zeigen" in app_js
-assert "Ziel öffnen" not in app_js
-assert "Im Themenbereich zeigen" in app_js
-assert "Themen dieser Achse zeigen" in app_js
+assert "sourcePerspectivesForTarget" in app_js
+assert "const visible = [...matching]" not in app_js
+assert 'if (state.activeDetailBridgeTarget && !hubs.some' in app_js
+assert 'state.activeDetailBridgeTarget = hubs[0]' not in app_js
+assert "hubRelationPreview" in app_js
+assert "renderKnowledgeDetail(disclosure, detail, { showTitle: false })" in app_js
+assert "Vertiefen" in app_js
+assert "In der Karte verorten" in app_js
+assert "Themen dieses Bereichs" in app_js
 assert "Themen dieses Lernwegs zeigen" in app_js
-assert "Diese Zielachse filtern" not in app_js
-assert "Detailkarte lesen" in app_js
+assert "Ziel öffnen" not in app_js
+for distracting_label in [
+    "openStandaloneDetailCard",
+    "Detailkarte anzeigen",
+    "Auf Karte zeigen",
+    "Im Themenbereich zeigen",
+    "Themen dieser Achse zeigen",
+    "Detailkarte lesen",
+    "Ersten Lernweg zeigen",
+    "Zweiten Lernweg zeigen",
+    "Hub auswählen",
+    "Eingehend zu",
+    "Diese Zielachse filtern",
+    'id: "system-map"',
+    "${hub.incomingBridgeCount} Verbindungen",
+    "${axis.incomingBridgeCount} Verbindungen",
+    "(${axis.incomingBridgeCount})",
+    "slice(0, 8)",
+    '"Canvas konnte nicht geladen werden."',
+    '"Geöffnete Detailkarte"',
+    "incomingBridgeCount:",
+]:
+    assert distracting_label not in app_js
 assert 'scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })' in app_js
 assert "topicExact" in app_js
 assert "score += 100" in app_js
@@ -422,7 +450,18 @@ assert "detail-bridge-detail-card" in index_html
 assert "detailBacklogUrl" not in app_js
 assert "Detail- und Clusterverbindungen" not in index_html
 assert "Verbindungen" in index_html
+assert "Wie Themen zusammenhängen" in index_html
+assert '<a href="#achsen">Wissensbereiche</a>' in index_html
+assert '<a href="#verbindungen">Zusammenhänge</a>' in index_html
+assert "Achsen erkunden" not in index_html
+assert ">Achsen</a>" not in index_html
+assert "Zentrale Begriffe" in index_html
+assert "Woher die Verbindungen kommen" in index_html
+assert "Wie Lernwege aufeinander aufbauen" in index_html
 assert "Lernwege und Themen" in index_html
+assert index_html.index('id="index"') < index_html.index('id="axis-filter"') < index_html.index('id="verbindungen"')
+for distracting_html in ["Canvas wählen", "Lade Canvas", "Canvas-Visualisierung", "Bereich filtern", "Verbindungspunkte", "<h3>Bereiche</h3>", "Detailkarten.</p>"]:
+    assert distracting_html not in index_html
 assert "Stand, Quellen und Grenzen" in index_html
 assert "Orientierung, keine neue Quelle" not in index_html
 assert "Detail offen" not in app_js

@@ -17,12 +17,6 @@ const baseCanvasViews = [
     url: sitePath("/visuals/learning-map-v1.canvas"),
     role: "Denkfläche",
   },
-  {
-    id: "system-map",
-    label: "Systemkarte",
-    url: sitePath("/visuals/erzieherausbildung-systemkarte.canvas"),
-    role: "Pipeline und Oberflächen",
-  },
 ];
 
 let canvasViews = [...baseCanvasViews];
@@ -107,10 +101,6 @@ function actionButton(text, onClick, className = "inline-action") {
   return button;
 }
 
-function topicCount(axis) {
-  return axis.topics?.length ?? 0;
-}
-
 function allTopics() {
   return state.map.axes.flatMap((axis) => axis.topics.map((topic) => ({ ...topic, axisId: axis.id, axisTitle: axis.title })));
 }
@@ -149,18 +139,13 @@ function detailForTopic(topic) {
   return state.details.find((detail) => (detail.topicIds ?? []).includes(topic.id)) ?? matchingDetails(topic.sources, topic.title, topic.id, topic.axisId)[0] ?? null;
 }
 
-function openTopic(topicId, { showInMap = false, showDetail = false } = {}) {
+function openTopic(topicId, { showInMap = false } = {}) {
   const topic = topicById(topicId);
   if (!topic) return;
   setAxisFilter(topic.axisId, { clearCluster: true });
   const topicCard = document.querySelector(`#${topicAnchorId(topic.id)}`);
   if (showInMap) {
     openCanvasNode(`topic-${topic.id}`);
-    return;
-  }
-  if (showDetail) {
-    const detail = detailForTopic(topic);
-    if (detail) openStandaloneDetailCard(detail.id);
     return;
   }
   topicCard?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
@@ -197,7 +182,7 @@ const bridgeTypeLabels = {
   requires_precision: "braucht Genauigkeit",
   leads_to_action: "führt zu Handeln",
   stabilizes: "stabilisiert",
-  communicates: "Kommunikation",
+  communicates: "verbindet durch Kommunikation",
 };
 
 function bridgeTypeLabel(type) {
@@ -219,9 +204,9 @@ function renderSourceSummary(summary) {
   const topicTotal = allTopics().length;
   const fileCount = summary?.totals?.files ?? "29";
   const words = summary?.totals?.word_count ?? "325.811";
-  target.textContent = `${map.axes.length} Sinnachsen, ${topicTotal} Themen, ${network.clusters.length} Cluster und ${network.bridges.length} Brücken aus ${fileCount} PDFs. Rohtexte bleiben lokal.`;
+  target.textContent = `${map.axes.length} Wissensbereiche, ${topicTotal} Themen, ${network.clusters.length} Lernwege und ${network.bridges.length} Beziehungen zwischen Lernwegen aus ${fileCount} PDFs. Rohtexte bleiben lokal.`;
   const detail = document.querySelector("#source-detail");
-  detail.textContent = `Arbeitsstand: ${words.toLocaleString?.("de-DE") ?? words} Wörter laut Inventar; sichtbar sind Lernkarte, Themen und Beziehungen.`;
+  detail.textContent = `Arbeitsstand: ${words.toLocaleString?.("de-DE") ?? words} Wörter laut Inventar; sichtbar sind Lernkarten, Themen und begründete Zusammenhänge.`;
 }
 
 function renderStats() {
@@ -229,7 +214,7 @@ function renderStats() {
   if (!target) return;
   const topics = allTopics();
   target.innerHTML = "";
-  [["Sinnachsen", state.map.axes.length], ["Themen", topics.length], ["Details", detailCoverageLabel()], ["Lernwege", state.network.clusters.length], ["Clusterbrücken", state.network.bridges.length]].forEach(([label, value]) => {
+  [["Wissensbereiche", state.map.axes.length], ["Themen", topics.length], ["Vertiefungen", detailCoverageLabel()], ["Lernwege", state.network.clusters.length], ["Lernweg-Beziehungen", state.network.bridges.length]].forEach(([label, value]) => {
     const item = el("span", "meta-stat");
     item.append(el("strong", "", String(value)));
     item.append(el("span", "", label));
@@ -254,15 +239,14 @@ function renderAxes() {
   state.map.axes.forEach((axis) => {
     const card = el("article", `axis-card ${axis.status}`);
     card.id = axisAnchorId(axis.id);
-    card.append(el("p", "module-meta", `${topicCount(axis)} Themen`));
     card.append(el("h3", "", axis.title));
     card.append(el("p", "", axis.summary));
     const actions = el("div", "action-row");
-    actions.append(actionButton("Themen zeigen", () => {
+    actions.append(actionButton("Themen dieses Bereichs", () => {
       setAxisFilter(axis.id);
       scrollToSection("index");
     }, "link-action"));
-    actions.append(actionButton("Auf Karte zeigen", () => openAxis(axis.id, { showInMap: true }), "link-action"));
+    actions.append(actionButton("In der Karte ansehen", () => openAxis(axis.id, { showInMap: true }), "text-link-action"));
     card.append(actions);
     target.append(card);
   });
@@ -288,7 +272,7 @@ function renderClusters() {
 
   state.network.clusters.forEach((cluster) => {
     const card = el("article", `cluster-card ${state.activeCluster === cluster.id ? "active" : ""}`);
-    card.append(el("p", "module-meta", `${cluster.topics.length} Themen`));
+    card.append(el("p", "module-meta", "Lernweg"));
     card.append(el("h3", "", cluster.title));
     card.append(el("p", "", cluster.insight));
     appendClusterButton(card, cluster.id, "Themen dieses Lernwegs zeigen");
@@ -312,7 +296,6 @@ function renderTopics() {
   const grid = document.querySelector("#topic-grid");
   grid.innerHTML = "";
   const focusTopics = activeClusterTopicSet();
-  const detailTopics = detailedTopicSet();
   const axes = state.activeAxis === "all" ? state.map.axes : state.map.axes.filter((axis) => axis.id === state.activeAxis);
   axes.forEach((axis) => {
     axis.topics
@@ -323,13 +306,20 @@ function renderTopics() {
         card.append(el("p", "module-meta", axis.title));
         card.append(el("h3", "", topic.title));
         const detail = detailForTopic({ ...topic, axisId: axis.id, axisTitle: axis.title });
-        const tags = el("div", "tag-row");
-        if (topic.status === "background") tags.append(el("span", "tag", "Rahmen"));
-        if (detail) tags.append(el("span", "tag detail-ready-tag", "Detailkarte"));
-        if (tags.children.length) card.append(tags);
-        const actions = el("div", "action-row");
-        actions.append(actionButton("Auf Karte zeigen", () => openTopic(topic.id, { showInMap: true }), "link-action"));
-        if (detail) actions.append(actionButton("Detailkarte lesen", () => openStandaloneDetailCard(detail.id), "link-action"));
+        if (detail?.summary) card.append(el("p", "topic-summary", detail.summary));
+        if (topic.status === "background") {
+          const tags = el("div", "tag-row");
+          tags.append(el("span", "tag", "Rahmen"));
+          card.append(tags);
+        }
+        if (detail) {
+          const disclosure = el("details", "topic-detail");
+          disclosure.append(el("summary", "", "Vertiefen"));
+          renderKnowledgeDetail(disclosure, detail, { showTitle: false });
+          card.append(disclosure);
+        }
+        const actions = el("div", "action-row compact-actions");
+        actions.append(actionButton("In der Karte verorten", () => openTopic(topic.id, { showInMap: true }), "text-link-action"));
         card.append(actions);
         grid.append(card);
       });
@@ -337,17 +327,17 @@ function renderTopics() {
 }
 
 function bridgeRole(bridge) {
-  if (state.activeCluster === "all") return "Netzbrücke";
-  if (bridge.from === state.activeCluster && bridge.to === state.activeCluster) return "Binnenbrücke";
-  if (bridge.from === state.activeCluster) return "Ausgehend";
-  if (bridge.to === state.activeCluster) return "Eingehend";
-  return "Verwandt";
+  if (state.activeCluster === "all") return "";
+  if (bridge.from === state.activeCluster && bridge.to === state.activeCluster) return "innerhalb dieses Lernwegs";
+  if (bridge.from === state.activeCluster) return "führt weiter";
+  if (bridge.to === state.activeCluster) return "führt hierher";
+  return "";
 }
 
 function bridgeClass(role) {
-  if (role === "Ausgehend") return "outgoing";
-  if (role === "Eingehend") return "incoming";
-  if (role === "Binnenbrücke") return "internal";
+  if (role === "führt weiter") return "outgoing";
+  if (role === "führt hierher") return "incoming";
+  if (role === "innerhalb dieses Lernwegs") return "internal";
   return "network";
 }
 
@@ -360,14 +350,14 @@ function renderRelations() {
     const role = bridgeRole(bridge);
     const card = el("article", `relation-card ${bridgeClass(role)}`);
     const roleLine = el("p", "bridge-role");
-    roleLine.append(el("span", "bridge-role-badge", role));
+    if (role) roleLine.append(el("span", "bridge-role-badge", role));
     roleLine.append(el("span", "bridge-type", bridgeTypeLabel(bridge.type)));
     card.append(roleLine);
     card.append(el("h3", "", `${clusterById.get(bridge.from)} → ${clusterById.get(bridge.to)}`));
     card.append(el("p", "", bridge.relation));
     const actions = el("div", "action-row");
-    actions.append(actionButton("Ersten Lernweg zeigen", () => focusCluster(bridge.from), "link-action"));
-    actions.append(actionButton("Zweiten Lernweg zeigen", () => focusCluster(bridge.to), "link-action"));
+    actions.append(actionButton(`Zu „${clusterById.get(bridge.from)}“`, () => focusCluster(bridge.from), "text-link-action"));
+    actions.append(actionButton(`Zu „${clusterById.get(bridge.to)}“`, () => focusCluster(bridge.to), "text-link-action"));
     card.append(actions);
     target.append(card);
   });
@@ -385,30 +375,17 @@ function bridgeTargetTitle(index, targetId) {
   return bridgeTargetMeta(index, targetId)?.targetTitle ?? targetId;
 }
 
-function bridgeTargetHub(index, targetId) {
-  const existing = (index.hubs ?? []).find((hub) => hub.targetId === targetId);
-  if (existing) return existing;
-  const meta = bridgeTargetMeta(index, targetId);
-  if (!meta) return null;
-  return {
-    targetId,
-    targetTitle: meta.targetTitle ?? targetId,
-    incomingBridgeCount: meta.incomingBridgeCount ?? bridgeIncomingForTarget(index, targetId).length,
-  };
-}
-
-function visibleDetailBridgeHubs(index, activeAxis, activeTargetId) {
-  const matching = (index.hubs ?? []).filter((hub) => activeAxis === "all" || targetAxisForHub(index, hub) === activeAxis);
-  const visible = matching.slice(0, 8);
-  const activeHub = bridgeTargetHub(index, activeTargetId);
-  if (activeHub && (activeAxis === "all" || targetAxisForHub(index, activeHub) === activeAxis) && !visible.some((hub) => hub.targetId === activeHub.targetId)) {
-    visible.push(activeHub);
-  }
-  return visible;
+function visibleDetailBridgeHubs(index, activeAxis) {
+  return (index.hubs ?? [])
+    .filter((hub) => activeAxis === "all" || targetAxisForHub(index, hub) === activeAxis)
+    .sort((left, right) => {
+      const axisOrder = axisTitleById(targetAxisForHub(index, left)).localeCompare(axisTitleById(targetAxisForHub(index, right)), "de");
+      return axisOrder || left.targetTitle.localeCompare(right.targetTitle, "de");
+    });
 }
 
 function activeDetailBridgeAxisTitle(index) {
-  if (state.activeDetailBridgeAxis === "all") return "alle Zielachsen";
+  if (state.activeDetailBridgeAxis === "all") return "alle Wissensbereiche";
   return (index.byTargetAxis ?? []).find((axis) => axis.axisId === state.activeDetailBridgeAxis)?.axisTitle ?? state.activeDetailBridgeAxis;
 }
 
@@ -417,11 +394,11 @@ function renderDetailBridgeAxisFilter() {
   if (!select || !state.detailBridgeIndex) return;
   const current = select.value || state.activeDetailBridgeAxis;
   select.innerHTML = "";
-  const allOption = el("option", "", "Alle Zielachsen");
+  const allOption = el("option", "", "Alle Wissensbereiche");
   allOption.value = "all";
   select.append(allOption);
   (state.detailBridgeIndex.byTargetAxis ?? []).forEach((axis) => {
-    const option = el("option", "", `${axis.axisTitle} (${axis.incomingBridgeCount})`);
+    const option = el("option", "", axis.axisTitle);
     option.value = axis.axisId;
     select.append(option);
   });
@@ -438,11 +415,26 @@ function bridgeIncomingForTarget(index, targetId) {
   return (index.bridges ?? []).filter((bridge) => bridge.targetId === targetId);
 }
 
-function openStandaloneDetailCard(detailId) {
-  state.activeDetailBridgeDetail = detailId;
-  renderBridgeDetailCard(detailId);
-  scrollToSection("verbindungen");
-  setTimeout(() => flashElement(document.querySelector("#detail-bridge-detail-card")), 120);
+function axisTitleById(axisId) {
+  return state.map.axes.find((axis) => axis.id === axisId)?.title ?? axisId;
+}
+
+function hubRelationPreview(index, targetId) {
+  const bridges = bridgeIncomingForTarget(index, targetId);
+  return bridges.find((bridge) => bridge.relation?.trim()) ?? null;
+}
+
+function sourcePerspectivesForTarget(index, targetId) {
+  const perspectives = new Map();
+  bridgeIncomingForTarget(index, targetId).forEach((bridge) => {
+    (bridge.sourceAxisIds ?? []).forEach((axisId) => {
+      if (!perspectives.has(axisId)) perspectives.set(axisId, new Set());
+      perspectives.get(axisId).add(bridge.sourceTitle);
+    });
+  });
+  return [...perspectives.entries()]
+    .map(([axisId, sourceTitles]) => ({ axisId, axisTitle: axisTitleById(axisId), sourceTitles: [...sourceTitles].sort((a, b) => a.localeCompare(b, "de")) }))
+    .sort((left, right) => left.axisTitle.localeCompare(right.axisTitle, "de"));
 }
 
 function detailById(detailId) {
@@ -453,16 +445,13 @@ function renderBridgeDetailCard(detailId) {
   const target = document.querySelector("#detail-bridge-detail-card");
   if (!target) return;
   target.innerHTML = "";
-  if (!detailId) {
-    target.append(el("p", "fineprint", "Detailkarte auswählen, um sie hier direkt zu lesen."));
-    return;
-  }
+  if (!detailId) return;
   const detail = detailById(detailId);
   if (!detail) {
-    target.append(el("p", "fineprint", `Detailkarte ${detailId} konnte nicht geladen werden.`));
+    target.append(el("p", "fineprint", "Die Vertiefung konnte nicht geladen werden."));
     return;
   }
-  target.append(el("h4", "", "Geöffnete Detailkarte"));
+  target.append(el("h4", "", "Geöffnete Vertiefung"));
   renderKnowledgeDetail(target, detail);
 }
 
@@ -477,62 +466,59 @@ function renderIncomingBridgeDetails(index, targetId) {
   if (!target) return;
   target.innerHTML = "";
   if (!targetId) {
-    target.append(el("p", "fineprint", "Hub auswählen, um eingehende Detailkarten und Relationstexte zu sehen."));
+    target.append(el("p", "fineprint", "Wähle einen zentralen Begriff, um die begründeten Zusammenhänge zu lesen."));
     renderBridgeDetailCard("");
     return;
   }
 
-  const targetMeta = index.byTarget?.[targetId];
+  const targetTitle = bridgeTargetTitle(index, targetId);
   const bridges = bridgeIncomingForTarget(index, targetId);
   if (!bridges.some((bridge) => bridge.sourceDetailId === state.activeDetailBridgeDetail)) {
-    state.activeDetailBridgeDetail = bridges[0]?.sourceDetailId ?? "";
+    state.activeDetailBridgeDetail = "";
   }
-  const heading = el("h4", "", `Eingehend zu ${bridgeTargetTitle(index, targetId)}`);
-  target.append(heading);
-  target.append(el("p", "fineprint", `${bridges.length} Verbindungen.`));
+  target.append(el("h4", "", `So hängt „${targetTitle}“ mit anderen Themen zusammen`));
+  target.append(el("p", "fineprint", "Jede Aussage stammt aus einer fachlichen Vertiefung und erklärt eine konkrete Beziehung."));
 
-  bridges.slice(0, 16).forEach((bridge) => {
+  bridges.forEach((bridge) => {
     const card = el("article", "incoming-bridge-card");
-    card.append(el("h5", "", bridge.sourceTitle));
+    card.append(el("h5", "", `${bridge.sourceTitle} → ${targetTitle}`));
     card.append(el("p", "", bridge.relation));
-    const button = el("button", `inline-action ${bridge.sourceDetailId === state.activeDetailBridgeDetail ? "active" : ""}`, "Detailkarte anzeigen");
+    const button = el("button", `inline-action ${bridge.sourceDetailId === state.activeDetailBridgeDetail ? "active" : ""}`, `„${bridge.sourceTitle}“ vertiefen`);
     button.type = "button";
     button.onclick = () => openBridgeDetailCard(bridge.sourceDetailId);
     card.append(button);
     target.append(card);
   });
-  if (bridges.length > 16) {
-    target.append(el("p", "fineprint", `${bridges.length - 16} weitere Verbindungen sind ausgeblendet.`));
-  }
 }
 
 function renderDetailBridgeIndex() {
   const summary = document.querySelector("#detail-bridge-summary");
   const hubsTarget = document.querySelector("#detail-bridge-hub-list");
-  const axesTarget = document.querySelector("#detail-bridge-axis-list");
-  if (!summary || !hubsTarget || !axesTarget) return;
+  const contextTarget = document.querySelector("#detail-bridge-axis-list");
+  if (!summary || !hubsTarget || !contextTarget) return;
   hubsTarget.innerHTML = "";
-  axesTarget.innerHTML = "";
+  contextTarget.innerHTML = "";
 
   const index = state.detailBridgeIndex;
   if (!index) {
-    summary.textContent = "Verbindungsindex konnte nicht geladen werden.";
+    summary.textContent = "Die Zusammenhänge konnten nicht geladen werden.";
     return;
   }
 
   const activeAxis = state.activeDetailBridgeAxis;
-  const axes = activeAxis === "all" ? (index.byTargetAxis ?? []) : (index.byTargetAxis ?? []).filter((axis) => axis.axisId === activeAxis);
-  let hubs = visibleDetailBridgeHubs(index, activeAxis, state.activeDetailBridgeTarget);
-  if (!hubs.some((hub) => hub.targetId === state.activeDetailBridgeTarget)) {
-    state.activeDetailBridgeTarget = hubs[0]?.targetId ?? "";
+  let hubs = visibleDetailBridgeHubs(index, activeAxis);
+  if (state.activeDetailBridgeTarget && !hubs.some((hub) => hub.targetId === state.activeDetailBridgeTarget)) {
+    state.activeDetailBridgeTarget = "";
     state.activeDetailBridgeDetail = "";
-    hubs = visibleDetailBridgeHubs(index, activeAxis, state.activeDetailBridgeTarget);
+    hubs = visibleDetailBridgeHubs(index, activeAxis);
   }
   const axisTitle = activeDetailBridgeAxisTitle(index);
-  summary.textContent = `Wähle einen Verbindungspunkt, um passende Detailkarten und Beziehungen zu sehen. Bereich: ${axisTitle}.`;
+  summary.textContent = activeAxis === "all"
+    ? "Zentrale Begriffe bündeln Beziehungen aus mehreren Wissensbereichen. Die Karten zeigen jeweils eine konkrete Beispielaussage statt einer Rangzahl."
+    : `Gezeigt werden zentrale Begriffe aus „${axisTitle}“. Die Beispielaussagen erklären, warum andere Themen dorthin führen.`;
 
   if (!hubs.length) {
-    hubsTarget.append(el("p", "fineprint", "Für diesen Filter wurden keine Hub-Knoten gefunden."));
+    hubsTarget.append(el("p", "fineprint", "Für diesen Wissensbereich sind keine zentralen Begriffe hinterlegt."));
   }
 
   hubs.forEach((hub) => {
@@ -544,19 +530,30 @@ function renderDetailBridgeIndex() {
       state.activeDetailBridgeDetail = "";
       renderDetailBridgeIndex();
     };
-    const roleLine = el("span", "bridge-role");
-    roleLine.append(el("span", "bridge-role-badge", "Hub"));
-    roleLine.append(el("span", "bridge-type", `${hub.incomingBridgeCount} Verbindungen`));
-    card.append(roleLine);
+    const targetMeta = bridgeTargetMeta(index, hub.targetId);
+    card.append(el("span", "hub-axis", axisTitleById(targetMeta?.axisId ?? "")));
     card.append(el("span", "hub-title", hub.targetTitle));
+    const preview = hubRelationPreview(index, hub.targetId);
+    if (preview) {
+      card.append(el("span", "hub-insight", preview.relation));
+      card.append(el("span", "hub-source", `Beispiel aus „${preview.sourceTitle}“`));
+    }
     hubsTarget.append(card);
   });
 
-  axes.forEach((axis) => {
-    const card = el("article", "visual-card");
-    card.append(el("h3", "", axis.axisTitle));
-    card.append(el("p", "", `${axis.incomingBridgeCount} Verbindungen`));
-    axesTarget.append(card);
+  const perspectives = sourcePerspectivesForTarget(index, state.activeDetailBridgeTarget);
+  if (!state.activeDetailBridgeTarget) {
+    contextTarget.append(el("p", "fineprint", "Wähle links einen Begriff, um seine fachlichen Herkunftsbereiche zu sehen."));
+  } else if (!perspectives.length) {
+    contextTarget.append(el("p", "fineprint", "Für diesen Begriff sind keine Herkunftsbereiche hinterlegt."));
+  }
+  perspectives.forEach((perspective) => {
+    const card = el("article", "connection-context-card");
+    card.append(el("h4", "", perspective.axisTitle));
+    const examples = perspective.sourceTitles.slice(0, 4);
+    const suffix = perspective.sourceTitles.length > examples.length ? " und weitere" : "";
+    card.append(el("p", "", `${examples.join(", ")}${suffix}`));
+    contextTarget.append(card);
   });
 
   renderIncomingBridgeDetails(index, state.activeDetailBridgeTarget);
@@ -573,7 +570,7 @@ function renderCoverage() {
   const focus = cluster ? ` Fokus: ${cluster.title} mit ${cluster.topics.length} Themen.` : "";
   const detailOpenText = detailCoverage?.missingTopicCount === 0 ? "keine Themen bleiben offen" : `${detailCoverage.missingTopicCount} Themen bleiben offen`;
   const detailLine = detailCoverage ? ` Detailaufbereitung: ${detailCoverage.detailedTopicCount}/${detailCoverage.topicCount} Themen; ${detailOpenText}.` : "";
-  target.textContent = `${coverage.linked_doc_ids.length} doc-IDs sind an Themen gebunden. Das Wissensnetz clustert ${netCoverage.topic_count} Themen in ${netCoverage.cluster_count} Erkenntnisgruppen.${focus}${detailLine} Bewusst nicht als Themenknoten modelliert: ${omitted}.`;
+  target.textContent = `${coverage.linked_doc_ids.length} Quellen sind an Themen gebunden. Das Wissensnetz ordnet ${netCoverage.topic_count} Themen in ${netCoverage.cluster_count} Lernwege.${focus}${detailLine} Bewusst nicht als eigenes Thema modelliert: ${omitted}.`;
 }
 
 function renderSurfaces() {
@@ -672,9 +669,9 @@ function appendListSection(target, title, items) {
   target.append(section);
 }
 
-function renderKnowledgeDetail(target, detail) {
+function renderKnowledgeDetail(target, detail, { showTitle = true } = {}) {
   const card = el("article", "knowledge-detail-card");
-  card.append(el("h4", "", detail.title));
+  if (showTitle) card.append(el("h4", "", detail.title));
   card.append(el("p", "", detail.summary));
   appendListSection(card, "Kernideen", detail.coreIdeas);
   appendListSection(card, "Praxisanker", detail.practiceAnchors);
@@ -820,8 +817,8 @@ function renderCanvasDetail(node) {
   target.innerHTML = "";
   if (!node) {
     target.append(el("p", "eyebrow", "Lesebereich"));
-    target.append(el("h3", "", "Knoten auswählen"));
-    target.append(el("p", "", "Klicke einen Knoten in der Karte. Rechts erscheint die passende Erklärung oder Detailkarte."));
+    target.append(el("h3", "", "Begriff auswählen"));
+    target.append(el("p", "", "Klicke einen Begriff in der Lernkarte. Rechts erscheinen Erklärung und Vertiefung."));
     return;
   }
 
@@ -831,36 +828,30 @@ function renderCanvasDetail(node) {
   const sources = context.topic?.sources ?? context.axis?.sources ?? [];
   const summary = context.topic
     ? `Dieses Thema gehört zur Achse „${context.topic.axisTitle}“.`
-    : context.axis?.summary ?? "Dieser Canvas-Knoten ist noch nicht eindeutig an eine Sinnachse oder ein Thema gebunden.";
+    : context.axis?.summary ?? "Dieser Begriff gehört zur ausgewählten Lernkarte, ist aber noch keinem Wissensbereich eindeutig zugeordnet.";
   const topicOrAxisId = context.topic?.id ?? context.axis?.id ?? node.id;
   const excerpts = matchingExcerpts(sources, heading, topicOrAxisId);
   const details = matchingDetails(sources, heading, context.topic?.id ?? "", context.axis?.id ?? "");
 
-  target.append(el("p", "eyebrow", context.kind === "topic" ? "Themenknoten" : context.kind === "axis" ? "Sinnachse" : "Canvas-Knoten"));
+  target.append(el("p", "eyebrow", context.kind === "topic" ? "Thema" : context.kind === "axis" ? "Wissensbereich" : "Lernkarte"));
   target.append(el("h3", "", heading));
   if (context.topic?.axisTitle) target.append(el("p", "fineprint", `Achse: ${context.topic.axisTitle}`));
   target.append(el("p", "", summary));
-  const actions = el("div", "action-row");
-  if (context.topic) {
-    actions.append(actionButton("Im Themenbereich zeigen", () => openTopic(context.topic.id), "link-action"));
-    const detail = detailForTopic(context.topic);
-    if (detail) actions.append(actionButton("Detailkarte lesen", () => openStandaloneDetailCard(detail.id), "link-action"));
-  }
   if (context.axis) {
-    actions.append(actionButton("Achse im Überblick zeigen", () => openAxis(context.axis.id), "link-action"));
-    actions.append(actionButton("Themen dieser Achse zeigen", () => {
+    const actions = el("div", "action-row");
+    actions.append(actionButton("Themen dieses Bereichs", () => {
       setAxisFilter(context.axis.id);
       scrollToSection("index");
     }, "link-action"));
+    target.append(actions);
   }
-  if (actions.children.length) target.append(actions);
 
   const detailBlock = el("article", "detail-note");
-  detailBlock.append(el("h4", "", "Detailkarte"));
+  detailBlock.append(el("h4", "", "Vertiefung"));
   if (details.length) {
     details.slice(0, 2).forEach((detail) => renderKnowledgeDetail(detailBlock, detail));
   } else {
-    detailBlock.append(el("p", "", "Zu diesem Knoten ist noch keine Detailkarte hinterlegt."));
+    detailBlock.append(el("p", "", "Zu diesem Begriff ist noch keine Vertiefung hinterlegt."));
   }
   target.append(detailBlock);
 
@@ -905,13 +896,12 @@ async function loadCanvasView() {
     state.canvas.activeNodeId = null;
     renderCanvasSurface();
     renderCanvasDetail(null);
-    const nodeCount = state.canvas.data.nodes?.length ?? 0;
-    const edgeCount = state.canvas.data.edges?.length ?? 0;
-    status.textContent = `${view.label}: ${nodeCount} Knoten, ${edgeCount} Verbindungen`;
+    status.textContent = `${view.label} · Begriff auswählen, um Erklärung und Vertiefung zu lesen.`;
   } catch (error) {
     state.canvas.data = null;
-    document.querySelector("#canvas-viewer").textContent = "Canvas konnte nicht geladen werden.";
-    status.textContent = `Fehler beim Laden von ${view.url}: ${error.message}`;
+    document.querySelector("#canvas-viewer").textContent = "Die Lernkarte konnte nicht geladen werden.";
+    status.textContent = "Diese Lernkarte ist derzeit nicht verfügbar.";
+    console.error("Fehler beim Laden der Lernkarte", view.url, error);
   }
 }
 
@@ -935,7 +925,7 @@ function renderCanvasSurface() {
   target.innerHTML = "";
   const data = state.canvas.data;
   if (!data?.nodes?.length) {
-    target.textContent = "Keine Canvas-Knoten vorhanden.";
+    target.textContent = "Diese Lernkarte enthält keine Begriffe.";
     return;
   }
 
@@ -949,7 +939,7 @@ function renderCanvasSurface() {
   const svg = svgEl("svg");
   svg.setAttribute("viewBox", `${minX} ${minY} ${maxX - minX} ${maxY - minY}`);
   svg.setAttribute("role", "img");
-  svg.setAttribute("aria-label", "Gerenderte Obsidian-Canvas-Lernlandkarte");
+  svg.setAttribute("aria-label", "Interaktive Lernkarte");
 
   const edgeLayer = svgEl("g");
   edgeLayer.setAttribute("class", "canvas-edge-layer");
