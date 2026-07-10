@@ -237,7 +237,6 @@ select, input[type="search"] { border: 1px solid var(--line); border-radius: 999
 .canvas-node:focus rect,
 .canvas-node.active rect { fill: var(--accent-soft); stroke-width: 4; }
 .canvas-node text { fill: var(--ink); font-size: 16px; font-weight: 800; pointer-events: none; }
-.canvas-node .canvas-node-badge { fill: var(--muted); font-size: 12px; font-weight: 900; letter-spacing: .03em; text-transform: uppercase; }
 .canvas-detail {
   border: 1px solid var(--line);
   border-radius: 24px;

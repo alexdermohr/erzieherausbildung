@@ -986,7 +986,6 @@ function renderCanvasDetail(node) {
   const target = document.querySelector("#canvas-detail");
   target.innerHTML = "";
   if (!node) {
-    target.append(el("p", "eyebrow", "Lesebereich"));
     target.append(el("h3", "", "Begriff auswählen"));
     target.append(el("p", "", "Klicke einen Begriff in der Lernkarte. Rechts erscheinen Erklärung und Vertiefung."));
     return;
@@ -997,15 +996,13 @@ function renderCanvasDetail(node) {
   const heading = context.topic?.title ?? context.axis?.title ?? label;
   const sources = context.topic?.sources ?? context.axis?.sources ?? [];
   const summary = context.topic
-    ? `Dieses Thema gehört zur Achse „${context.topic.axisTitle}“.`
+    ? `Dieser Inhalt gehört zum Wissensbereich „${context.topic.axisTitle}“.`
     : context.axis?.summary ?? "Dieser Begriff gehört zur ausgewählten Lernkarte, ist aber noch keinem Wissensbereich eindeutig zugeordnet.";
   const topicOrAxisId = context.topic?.id ?? context.axis?.id ?? node.id;
   const excerpts = matchingExcerpts(sources, heading, topicOrAxisId);
   const details = matchingDetails(sources, heading, context.topic?.id ?? "", context.axis?.id ?? "");
 
-  target.append(el("p", "eyebrow", context.kind === "topic" ? "Thema" : context.kind === "axis" ? "Wissensbereich" : "Lernkarte"));
   target.append(el("h3", "", heading));
-  if (context.topic?.axisTitle) target.append(el("p", "fineprint", `Achse: ${context.topic.axisTitle}`));
   target.append(el("p", "", summary));
   if (context.axis) {
     const actions = el("div", "action-row");
@@ -1058,6 +1055,7 @@ async function openCanvasNode(nodeId) {
 async function loadCanvasView() {
   const view = activeCanvasView();
   const status = document.querySelector("#canvas-status");
+  status.hidden = false;
   status.textContent = `${view.label} wird geladen…`;
   try {
     const response = await fetch(view.url);
@@ -1066,10 +1064,12 @@ async function loadCanvasView() {
     state.canvas.activeNodeId = null;
     renderCanvasSurface();
     renderCanvasDetail(null);
-    status.textContent = `${view.label} · Begriff auswählen, um Erklärung und Vertiefung zu lesen.`;
+    status.textContent = "";
+    status.hidden = true;
   } catch (error) {
     state.canvas.data = null;
     document.querySelector("#canvas-viewer").textContent = "Die Lernkarte konnte nicht geladen werden.";
+    status.hidden = false;
     status.textContent = "Diese Lernkarte ist derzeit nicht verfügbar.";
     console.error("Fehler beim Laden der Lernkarte", view.url, error);
   }
@@ -1168,16 +1168,6 @@ function renderCanvasSurface() {
       text.textContent = line;
       group.append(text);
     });
-
-    const context = findNodeContext(node);
-    if (context.topic || context.axis) {
-      const badge = svgEl("text");
-      badge.setAttribute("x", Number(node.x ?? 0) + 18);
-      badge.setAttribute("y", Number(node.y ?? 0) + Number(node.height ?? 120) - 16);
-      badge.setAttribute("class", "canvas-node-badge");
-      badge.textContent = context.topic ? "Thema" : "Achse";
-      group.append(badge);
-    }
 
     nodeLayer.append(group);
   });
