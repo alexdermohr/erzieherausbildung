@@ -317,12 +317,17 @@ for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verb
     assert token in index_html
 for token in ['<a href="#status">Status</a>', 'id="surface-list"', "Status und Abdeckung"]:
     assert token not in index_html
+assert 'role="group" aria-label="Theoriekatalog filtern"' in index_html
+assert 'class="filter-label theory-search-control"' in index_html
 style_css = (root / "assets/styles.css").read_text(encoding="utf-8")
-for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta", "topic-summary", "topic-detail", "connection-context", "hub-insight", "index-layout", "theory-controls", "theory-card", "theory-detail"]:
+for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta", "topic-summary", "topic-detail", "connection-context", "hub-insight", "index-layout", "theory-controls", "theory-card", "theory-detail", "theory-search-control", ".filter-label > select", "width: 100%; min-width: 0; max-width: 100%", "repeat(2, minmax(0, 1fr))", ".canvas-stage-wrap { min-width: 0; max-width: 100%; overflow: hidden; }"]:
     assert token in style_css
-for stale_style in ["source-line", "muted-tag", "detail-ready-tag", "detail-missing-tag", "max-height: 820px"]:
+for stale_style in ["source-line", "muted-tag", "detail-ready-tag", "detail-missing-tag", "max-height: 820px", 'input[type="search"] { min-width:']:
     assert stale_style not in style_css
     assert stale_style not in app_js
+assert style_css.index(".theory-controls { display: grid") < style_css.index(".theory-search-control { grid-column: 1 / -1; }")
+assert ".index-layout, .bridge-index-layout { display: block; }" in style_css
+assert style_css.rindex(".index-layout, .bridge-index-layout { display: block; }") > style_css.index(".bridge-index-layout { display: grid")
 assert "appendSourceTags" not in app_js
 assert 'sitePath("/data/learning-map.v1.json")' in app_js
 assert 'sitePath("/data/knowledge-network.v1.json")' in app_js
