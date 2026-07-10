@@ -554,12 +554,6 @@ function renderDetailBridgeIndex() {
     card.append(el("h3", "", axis.axisTitle));
     card.append(el("p", "", `${axis.incomingBridgeCount} eingehende Detail-Brücken`));
     card.append(el("p", "fineprint", axis.axisId));
-    card.append(actionButton("Diese Zielachse filtern", () => {
-      state.activeDetailBridgeAxis = axis.axisId;
-      state.activeDetailBridgeTarget = "";
-      renderDetailBridgeAxisFilter();
-      renderDetailBridgeIndex();
-    }, "link-action"));
     axesTarget.append(card);
   });
 

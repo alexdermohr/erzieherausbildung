@@ -362,6 +362,7 @@ assert "Ziel öffnen" not in app_js
 assert "Im Themenbereich zeigen" in app_js
 assert "Themen dieser Achse zeigen" in app_js
 assert "Themen dieses Lernwegs zeigen" in app_js
+assert "Diese Zielachse filtern" not in app_js
 assert "Detailkarte lesen" in app_js
 assert 'scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })' in app_js
 assert "topicExact" in app_js
