@@ -1,3 +1,5 @@
+> Fortführung: Der Plan für Kanon plus aktuelle Halbjahresarbeit liegt in [`living-canon-plan-v1.md`](living-canon-plan-v1.md).
+
 # Umsetzungsplan: Erzieherausbildung optimal visualisieren
 
 ## These

@@ -1,0 +1,34 @@
+{
+  "schema": "erzieherausbildung.current_work.v1",
+  "id": "work-2026-sommer-kurzer-bezeichner",
+  "title": "Kurzer, verständlicher Titel",
+  "contentLayer": "current-work",
+  "lifecycle": "active",
+  "reviewStatus": "draft",
+  "publicationStatus": "local-preview",
+  "termId": "2026-sommer",
+  "topicIds": [
+    "eingewoehnung"
+  ],
+  "axisIds": [
+    "beziehung-entwicklung"
+  ],
+  "summary": "Eigene knappe Zusammenfassung des Arbeitsvorhabens oder Ergebnisses.",
+  "keyFindings": [],
+  "openQuestions": [
+    "Welche Frage bleibt offen?"
+  ],
+  "relations": [
+    {
+      "type": "applies",
+      "targetId": "eingewoehnung",
+      "note": "Wendet den bestehenden Kanon auf eine konkrete Fragestellung an."
+    }
+  ],
+  "sourceRefs": [],
+  "authorship": {
+    "kind": "anonymized-group"
+  },
+  "personalDataIncluded": false,
+  "uncertainty": 0.5
+}

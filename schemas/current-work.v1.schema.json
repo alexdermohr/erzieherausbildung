@@ -1,0 +1,91 @@
+{
+  "schema": "erzieherausbildung.current_work.contract.v1",
+  "dataSchema": "erzieherausbildung.current_work.v1",
+  "indexSchema": "erzieherausbildung.current_work_index.v1",
+  "termSchema": "erzieherausbildung.term.v1",
+  "required": [
+    "schema",
+    "id",
+    "title",
+    "contentLayer",
+    "lifecycle",
+    "reviewStatus",
+    "publicationStatus",
+    "termId",
+    "topicIds",
+    "axisIds",
+    "summary",
+    "keyFindings",
+    "openQuestions",
+    "relations",
+    "sourceRefs",
+    "authorship",
+    "personalDataIncluded",
+    "uncertainty"
+  ],
+  "optional": [
+    "notes"
+  ],
+  "contentLayers": [
+    "current-work"
+  ],
+  "lifecycles": [
+    "active",
+    "canon-candidate",
+    "integrated",
+    "archived",
+    "rejected"
+  ],
+  "reviewStatuses": [
+    "draft",
+    "checked",
+    "needs-source",
+    "rejected"
+  ],
+  "relationTypes": [
+    "extends",
+    "questions",
+    "applies",
+    "contrasts",
+    "corrects",
+    "illustrates"
+  ],
+  "authorshipKinds": [
+    "anonymized-group",
+    "teacher-team",
+    "mixed-learning-group",
+    "editorial"
+  ],
+  "termStatuses": [
+    "planned",
+    "current",
+    "closed"
+  ],
+  "blockedFields": [
+    "rawMaterial",
+    "directCitation",
+    "pageScreenshot",
+    "ocrArtifact",
+    "localPath",
+    "authorName",
+    "studentName",
+    "teacherName",
+    "email",
+    "participants",
+    "personalData"
+  ],
+  "sourceRefPattern": "doc-XXX",
+  "idPattern": "work-...",
+  "privacyPolicy": {
+    "personalDataIncluded": false,
+    "freeTextAttribution": false,
+    "rawMaterialCommitted": false
+  },
+  "candidateRule": "canon-candidate and integrated require checked review, at least one key finding and at least one source reference",
+  "publicationStatuses": [
+    "local-preview",
+    "published",
+    "withdrawn"
+  ],
+  "publicationRule": "local-preview may be printed but must never be indexed or committed; indexed active, candidate, integrated and archived work stays published; rejected work is withdrawn but remains public in Git history"
+}

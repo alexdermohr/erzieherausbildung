@@ -10,6 +10,7 @@ const detailIndexUrl = sitePath("/data/details/index.v1.json");
 const detailBridgeIndexUrl = sitePath("/data/detail-bridge-index.v1.json");
 const learningFieldFocusUrl = sitePath("/data/learning-field-focus.v1.json");
 const theoryCatalogUrl = sitePath("/data/theory-catalog.v1.json");
+const currentWorkIndexUrl = sitePath("/data/current-work/index.v1.json");
 
 const baseCanvasViews = [
   {
@@ -41,6 +42,9 @@ const state = {
   detailBridgeIndex: null,
   learningFieldFocus: null,
   theoryCatalog: null,
+  currentWorkIndex: null,
+  currentWorks: [],
+  activeContentLayer: "canon",
   activeAxis: "all",
   activeCluster: "all",
   activeDetailBridgeAxis: "all",
@@ -109,6 +113,113 @@ function actionButton(text, onClick, className = "inline-action") {
 function allTopics() {
   return state.map.axes.flatMap((axis) => axis.topics.map((topic) => ({ ...topic, axisId: axis.id, axisTitle: axis.title })));
 }
+function currentTerm() {
+  return state.currentWorkIndex?.terms?.find((term) => term.id === state.currentWorkIndex.currentTermId) ?? null;
+}
+
+function publishedCurrentWorks() {
+  const termId = state.currentWorkIndex?.currentTermId;
+  return state.currentWorks
+    .filter((work) => work.termId === termId)
+    .filter((work) => work.publicationStatus === "published")
+    .filter((work) => ["active", "canon-candidate"].includes(work.lifecycle))
+    .sort((left, right) => left.title.localeCompare(right.title, "de"));
+}
+
+function currentWorksForTopic(topicId) {
+  return publishedCurrentWorks().filter((work) => (work.topicIds ?? []).includes(topicId));
+}
+
+const currentWorkLifecycleLabels = {
+  active: "In Arbeit",
+  "canon-candidate": "Kandidat für den Kanon",
+};
+
+function currentWorkLifecycleLabel(lifecycle) {
+  return currentWorkLifecycleLabels[lifecycle] ?? lifecycle;
+}
+
+function openCurrentWork(workId) {
+  setContentLayer("current-work");
+  const target = document.querySelector(`#current-work-${normalizeText(workId)}`);
+  target?.scrollIntoView({ behavior: "smooth", block: "center" });
+  setTimeout(() => flashElement(target), 120);
+}
+
+function setContentLayer(layer, { scroll = false } = {}) {
+  state.activeContentLayer = layer === "current-work" ? "current-work" : "canon";
+  document.querySelectorAll("#content-layer-switch [data-content-layer]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.contentLayer === state.activeContentLayer));
+  });
+  const currentSection = document.querySelector("#aktuell");
+  if (currentSection) currentSection.hidden = state.activeContentLayer !== "current-work";
+  const note = document.querySelector("#content-layer-note");
+  if (note) {
+    note.textContent = state.activeContentLayer === "current-work"
+      ? "Freigegebene aktuelle Arbeiten werden eingeblendet. Sie sind noch nicht automatisch Teil des Kanons."
+      : "Der geprüfte Ausbildungskanon ist sichtbar. Aktuelle Arbeiten bleiben ausgeblendet.";
+  }
+  renderTopics();
+  renderCurrentWork();
+  if (scroll && state.activeContentLayer === "current-work") scrollToSection("aktuell");
+}
+
+function renderContentLayerSwitch() {
+  document.querySelectorAll("#content-layer-switch [data-content-layer]").forEach((button) => {
+    button.addEventListener("click", () => setContentLayer(button.dataset.contentLayer, { scroll: button.dataset.contentLayer === "current-work" }));
+  });
+  setContentLayer(state.activeContentLayer);
+}
+
+function renderCurrentWorkCard(work, term) {
+  const card = el("article", `current-work-card ${work.lifecycle}`);
+  card.id = `current-work-${normalizeText(work.id)}`;
+  card.append(el("p", "module-meta", `${term?.label ?? "Aktuelles Halbjahr"} · ${currentWorkLifecycleLabel(work.lifecycle)}`));
+  card.append(el("h3", "", work.title));
+  card.append(el("p", "current-work-summary", work.summary));
+  appendListSection(card, "Erkenntnisse", work.keyFindings);
+  appendListSection(card, "Offene Fragen", work.openQuestions);
+  const actions = el("div", "action-row compact-actions");
+  (work.topicIds ?? []).forEach((topicId) => {
+    const topic = topicById(topicId);
+    if (topic) actions.append(actionButton(`Zum Thema „${topic.title}“`, () => openTopic(topic.id), "text-link-action"));
+  });
+  if (actions.childElementCount) card.append(actions);
+  return card;
+}
+
+function renderCurrentWork() {
+  const section = document.querySelector("#aktuell");
+  const target = document.querySelector("#current-work-list");
+  const empty = document.querySelector("#current-work-empty");
+  const label = document.querySelector("#current-term-label");
+  if (!section || !target || !empty || !label || !state.currentWorkIndex) return;
+  section.hidden = state.activeContentLayer !== "current-work";
+  const term = currentTerm();
+  label.textContent = term?.label ?? "Aktuelles Halbjahr";
+  target.innerHTML = "";
+  const works = publishedCurrentWorks();
+  works.forEach((work) => target.append(renderCurrentWorkCard(work, term)));
+  empty.hidden = works.length > 0;
+  empty.textContent = works.length ? "" : state.currentWorkIndex.emptyState;
+}
+
+async function loadCurrentWork() {
+  const response = await fetch(currentWorkIndexUrl);
+  if (!response.ok) throw new Error(`Aktuelle Arbeit konnte nicht geladen werden: ${response.status}`);
+  const index = await response.json();
+  const visibleEntries = (index.works ?? [])
+    .filter((entry) => entry.termId === index.currentTermId)
+    .filter((entry) => entry.publicationStatus === "published")
+    .filter((entry) => ["active", "canon-candidate"].includes(entry.lifecycle));
+  const works = await Promise.all(visibleEntries.map(async (entry) => {
+    const itemResponse = await fetch(sitePath(entry.path));
+    if (!itemResponse.ok) throw new Error(`Aktuelle Arbeit ${entry.id} konnte nicht geladen werden: ${itemResponse.status}`);
+    return await itemResponse.json();
+  }));
+  return { index, works };
+}
+
 
 function topicById(topicId) {
   return allTopics().find((topic) => topic.id === topicId) ?? null;
@@ -316,6 +427,17 @@ function renderTopics() {
           const tags = el("div", "tag-row");
           tags.append(el("span", "tag", "Rahmen"));
           card.append(tags);
+        }
+        if (state.activeContentLayer === "current-work") {
+          const linkedWorks = currentWorksForTopic(topic.id);
+          if (linkedWorks.length) {
+            const currentBlock = el("div", "current-work-inline");
+            currentBlock.append(el("h4", "", "Aktuelle Arbeit"));
+            linkedWorks.forEach((work) => {
+              currentBlock.append(actionButton(work.title, () => openCurrentWork(work.id), "text-link-action"));
+            });
+            card.append(currentBlock);
+          }
         }
         if (detail) {
           const disclosure = el("details", "topic-detail");
@@ -1176,7 +1298,7 @@ function renderCanvasSurface() {
 }
 
 async function boot() {
-  const [map, network, detailBridgeIndex, learningFieldFocus, theoryCatalog, sourceSummary, excerpts, details] = await Promise.all([
+  const [map, network, detailBridgeIndex, learningFieldFocus, theoryCatalog, sourceSummary, excerpts, details, currentWork] = await Promise.all([
     fetch(learningMapUrl).then((res) => res.json()),
     fetch(knowledgeNetworkUrl).then((res) => res.json()),
     fetch(detailBridgeIndexUrl).then((res) => res.json()),
@@ -1185,12 +1307,15 @@ async function boot() {
     fetch(sourceSummaryUrl).then((res) => res.json()).catch(() => null),
     loadExcerpts(),
     loadDetails(),
+    loadCurrentWork(),
   ]);
   state.map = map;
   state.network = network;
   state.detailBridgeIndex = detailBridgeIndex;
   state.learningFieldFocus = learningFieldFocus;
   state.theoryCatalog = theoryCatalog;
+  state.currentWorkIndex = currentWork.index;
+  state.currentWorks = currentWork.works;
   canvasViews = [...baseCanvasViews, ...focusCanvasViews(learningFieldFocus)];
   state.excerpts = excerpts;
   state.details = details;
@@ -1201,6 +1326,8 @@ async function boot() {
   renderAxisFilter();
   renderAxes();
   renderClusters();
+  renderContentLayerSwitch();
+  renderCurrentWork();
   renderTopics();
   renderTheoryFilters();
   renderTheories();

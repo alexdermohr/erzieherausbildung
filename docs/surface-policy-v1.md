@@ -4,54 +4,67 @@ Status: Contract v1. Oberflächenpolitik, nicht Inhaltszusammenfassung.
 
 ## These / Antithese / Synthese
 
-These: Web, Obsidian und spätere Schauwerk/Miro-Flächen sind nützlich, weil jede Oberfläche eine andere Erkenntnisfunktion hat.
+**These:** Web, Obsidian und spätere Schauwerk/Miro-Flächen erfüllen unterschiedliche Erkenntnisfunktionen.
 
-Antithese: Mehr Oberflächen erhöhen Drift, Scheingenauigkeit und die Gefahr einer zweiten Wahrheit.
+**Antithese:** Mehr Oberflächen und zusätzliche Live-Inhalte erhöhen Drift, Scheingenauigkeit und die Gefahr einer zweiten Wahrheit.
 
-Synthese: Das Repo bleibt Kanon. Web ist Lesefläche, Obsidian Denkfläche, Schauwerk/Miro Kollaborationsfläche. Jede Oberfläche ist abgeleitet, geprüft und begrenzt.
+**Synthese:** Das Repo bleibt kanonisch. Der dauerhafte Kanon und aktuelle Halbjahresarbeit sind getrennte Inhaltsebenen. Web liest beide kontrolliert; Obsidian und Schauwerk/Miro bleiben abgeleitet.
 
 ## Organe
 
 | Organ | Funktion | Autorität |
 | --- | --- | --- |
-| Repo | Kanon, Contracts, Datenmodelle, Validatoren | kanonisch |
-| Web | Lesen, Filtern, Überblick, Theorien vergleichen, Zusammenhänge erschließen | abgeleitet |
-| Obsidian | Denken, räumliches Ordnen, Navigation, Brückenorientierung | abgeleitet |
+| Repo | Kanon, aktuelle Arbeitsverträge, Entscheidungen, Validatoren | kanonisch |
+| Web | Lesen, Filtern, Überblick und aktuelle Halbjahresansicht | abgeleitet |
+| Obsidian | Denkfläche für räumliches Ordnen und Navigation | abgeleitet |
 | Schauwerk/Miro | spätere gemeinsame Sortierung oder Präsentation | abgeleitet und geplant |
-| CI | Reproduzierbarkeit und Driftprüfung | prüfend |
+| CI | Reproduzierbarkeit, Datenschutz- und Driftprüfung | prüfend |
 | Vault-Git-Status | Ampel für echten Obsidian-Sync | stoppend |
+
+## Inhaltsebenen
+
+### Kanon
+
+Geprüfte, dauerhaft relevante und quellengebundene Lernkarten, Details, Exzerpte, Theorien und Beziehungen.
+
+Die Web-Lesefläche erlaubt Überblick, Themenerschließung und Theorien vergleichen, ohne eigene Quellenautorität zu erhalten.
+
+### Aktuelle Arbeit
+
+Zeitlich gebundene, anonymisierte und fachlich verankerte Ausarbeitungen, Fragen oder Ergebnisse. Sie besitzt keine automatische kanonische Autorität.
+
+### Kristallisierung
+
+Eine aktuelle Arbeit verändert den Kanon nur, wenn eine Entscheidung konkrete Kanonziele und tatsächlich geänderte Kanondateien benennt.
 
 ## Regeln
 
 - Keine Rohtexte, PDFs, Office-Dateien, Bilder oder OCR-Artefakte committen.
+- Keine Klarnamen oder personenbezogenen Falldaten in aktueller Arbeit.
 - Keine Prüfungsnutzenlogik als Ordnungsprinzip.
 - Bildungsleitlinien bleiben Rahmen, nicht Zentrum.
-- Neue starke Claims brauchen spätere Exzerpt- oder Quellenrückbindung.
+- Neue starke Claims brauchen Exzerpt- oder Quellenrückbindung.
+- Kanon ist die Standardansicht der Website.
+- Ein leerer aktueller Bestand wird ehrlich angezeigt und nicht mit Beispieldaten kaschiert.
 - Vault-Änderungen werden nicht still zur Quelle.
-- Große Kollaborationsflächen starten erst, wenn ein konkreter gemeinsamer Sortier- oder Präsentationsbedarf besteht.
-
-## Resonanz- und Kontrastprüfung
-
-Deutung A: Die Oberflächen sind vor allem praktische Ausgabekanäle. Dann reicht eine Exportdokumentation.
-
-Deutung B: Die Oberflächen sind Erkenntnisorgane. Dann muss ihre Autorität explizit begrenzt werden, sonst entscheidet am Ende die bequemste Oberfläche. Diese Policy folgt Deutung B.
+- Große Kollaborationsflächen starten erst bei konkretem gemeinsamem Bedarf.
 
 ## Risiko und Nutzen
 
-Nutzen: klare Zuständigkeit, weniger Drift, bessere spätere Erweiterbarkeit und bessere Trennung von Kanon, Denkraum und Lesefläche. Die Web-Lesefläche darf nur deklarierte Struktur-, Exzerpt-, Detail-, Theorie- und Brückenindexdaten laden.
+Nutzen: Der Wissenskanon bleibt übersichtlich, während aktuelle Lernprozesse an ihrem fachlichen Ort sichtbar werden.
 
-Risiko: Der Contract kann bürokratisch wirken. Gegenmittel: klein halten, mit `data/surface-policy.v1.json` maschinenprüfbar machen und nicht zum Ersatz für Inhalte aufblasen.
+Risiko: Zusätzliche Lebenszyklen können bürokratisch oder visuell laut werden. Gegenmittel sind wenige Zustände, ein einziger Ansichtsumschalter und eingeklappte technische Metadaten.
 
 ## Unsicherheit
 
-Unsicherheitsgrad: 0.18. Interpolationsgrad: 0.24.
+Unsicherheitsgrad: 0,21. Interpolationsgrad: 0,25.
 
-Ursachen: Web und Obsidian sind konkret vorhanden; Schauwerk/Miro ist noch geplant. Die Rollen sind stabil, die spätere Kollaborationsform aber noch offen.
+Ursachen: Die technischen Oberflächen und Verträge sind konkret; der reale Halbjahresbetrieb ist noch nicht erprobt.
 
 ## Essenz
 
-Hebel: Autorität trennen, bevor mehr Inhalt ergänzt wird.
+**Hebel:** Autorität und Zeitbezug getrennt modellieren.
 
-Entscheidung: Repo bleibt Kanon; Oberflächen bleiben abgeleitet.
+**Entscheidung:** Repo bleibt Kanon; aktuelle Arbeit bleibt vorläufig; Oberflächen bleiben abgeleitet.
 
-Nächste Aktion: Exzerpte, Detailkarten, Theoriekatalog und abgeleitete Zusammenhangsflächen nur noch gegen diese Oberflächenpolitik erweitern.
+**Nächste Aktion:** erste reale, freigegebene Arbeit über den validierten Aufnahmeweg ergänzen.

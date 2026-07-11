@@ -8,3 +8,6 @@ __pycache__/
 *.pyc
 machine-readable.local/
 *.ocr.local.json
+
+# Local mutation lock; never publish.
+data/current-work/.lock
