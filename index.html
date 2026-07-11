@@ -24,10 +24,17 @@
         <div>
           <p class="eyebrow">Wissenslandkarte</p>
           <h1>Erzieherausbildung</h1>
-          <p class="lede">Eine übersichtliche Lernkarte für zentrale Inhalte, Begriffe und Zusammenhänge der Erzieherausbildung.</p>
+          <p class="lede">Eine übersichtliche Gesamtschau des Ausbildungskanons – mit einer getrennten Ansicht für freigegebene aktuelle Arbeitsergebnisse.</p>
           <div class="hero-actions" aria-label="Schnelleinstiege">
             <a class="primary-action" href="#karte">Karte öffnen</a>
             <a class="secondary-action" href="#index">Thema finden</a>
+          </div>
+          <div class="content-layer-control">
+            <div id="content-layer-switch" class="segmented-control" role="group" aria-label="Inhaltsebene wählen">
+              <button type="button" data-content-layer="canon" aria-pressed="true">Gesamtschau</button>
+              <button type="button" data-content-layer="current-work" aria-pressed="false">Aktuelles Halbjahr</button>
+            </div>
+            <p id="content-layer-note" class="fineprint">Der geprüfte Ausbildungskanon ist sichtbar. Aktuelle Arbeiten bleiben ausgeblendet.</p>
           </div>
         </div>
         <aside class="orientation-card" aria-label="Orientierung">
@@ -60,6 +67,18 @@
           </div>
           <aside id="canvas-detail" class="canvas-detail" aria-live="polite"></aside>
         </div>
+      </section>
+
+      <section id="aktuell" class="panel current-work-panel anchored-section" hidden>
+        <div class="section-head">
+          <div>
+            <p id="current-term-label" class="eyebrow">Aktuelles Halbjahr</p>
+            <h2>Woran gerade gearbeitet wird</h2>
+            <p id="current-work-intro" class="fineprint">Freigegebene Arbeiten werden an ihre Themen im Kanon angebunden, ohne selbst schon kanonisch zu sein.</p>
+          </div>
+        </div>
+        <div id="current-work-list" class="current-work-list" aria-live="polite"></div>
+        <p id="current-work-empty" class="current-work-empty" hidden></p>
       </section>
 
       <section id="achsen" class="panel anchored-section">

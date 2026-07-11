@@ -1,0 +1,35 @@
+{
+  "schema": "erzieherausbildung.current_work_index.v1",
+  "currentTermId": "2026-sommer",
+  "terms": [
+    {
+      "schema": "erzieherausbildung.term.v1",
+      "id": "2026-sommer",
+      "label": "Sommerhalbjahr 2026",
+      "startsOn": "2026-02-01",
+      "endsOn": "2026-07-31",
+      "status": "current"
+    }
+  ],
+  "works": [],
+  "coverage": {
+    "workCount": 0,
+    "currentTermWorkCount": 0,
+    "publishedCurrentTermWorkCount": 0,
+    "topicCountWithCurrentWork": 0,
+    "byLifecycle": {
+      "active": 0,
+      "canon-candidate": 0,
+      "integrated": 0,
+      "archived": 0,
+      "rejected": 0
+    },
+    "byReviewStatus": {
+      "draft": 0,
+      "checked": 0,
+      "needs-source": 0,
+      "rejected": 0
+    }
+  },
+  "emptyState": "Für dieses Halbjahr sind noch keine freigegebenen Arbeitsergebnisse veröffentlicht."
+}

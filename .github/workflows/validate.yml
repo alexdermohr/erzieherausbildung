@@ -15,6 +15,9 @@ jobs:
       - run: python3 scripts/validate_repository.py
       - run: python3 scripts/validate_excerpts.py
       - run: python3 scripts/validate_details.py
+      - run: python3 scripts/validate_current_work.py
+      - run: python3 -m unittest -v tests.test_current_work_model
+      - run: node --check assets/app.js
       - run: python3 scripts/build_detail_bridge_index.py --check
       - run: python3 scripts/build_learning_field_focus_maps.py --check
       - run: python3 scripts/build_theory_catalog.py --check

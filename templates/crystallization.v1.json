@@ -1,0 +1,11 @@
+{
+  "schema": "erzieherausbildung.crystallization_decision.v1",
+  "id": "decision-work-2026-sommer-kurzer-bezeichner",
+  "workId": "work-2026-sommer-kurzer-bezeichner",
+  "decision": "integrated",
+  "targetIds": ["detail-eingewoehnung-v1"],
+  "essence": "Die dauerhaft relevante Essenz in eigener, verallgemeinerter Form.",
+  "decidedOn": "2026-07-31",
+  "decidedBy": "editorial-team",
+  "canonChangeRefs": ["data/details/detail-eingewoehnung-v1.json"]
+}

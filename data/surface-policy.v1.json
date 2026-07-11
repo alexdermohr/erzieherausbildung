@@ -1,6 +1,6 @@
 {
   "schema": "erzieherausbildung.surface_policy.v1",
-  "purpose": "Kanonische Rollenklärung für Repo, Web, Obsidian und spätere Schauwerk/Miro-Flächen. Sie verhindert, dass eine bequeme Oberfläche zur zweiten Wahrheit wird.",
+  "purpose": "Kanonische Rollenklärung für Repo, Web, Obsidian und spätere Schauwerk/Miro-Flächen. Sie trennt dauerhaften Ausbildungskanon, laufende Halbjahresarbeit und abgeleitete Darstellungen.",
   "source_policy": {
     "raw_text_committed": false,
     "committed_source_refs": "doc-id-only",
@@ -21,10 +21,23 @@
         "data/machine-readable-inventory.json",
         "data/detail-bridge-index.v1.json",
         "data/learning-field-focus.v1.json",
-        "data/theory-catalog.v1.json"
+        "data/theory-catalog.v1.json",
+        "data/current-work/index.v1.json",
+        "data/current-work/decisions.v1.json"
       ],
-      "outputs": ["README.md", "docs/*.md", "visuals/*.canvas", "index.html"],
-      "guards": ["repository validation", "raw artifact scan", "doc-id Rückbindung"],
+      "outputs": [
+        "README.md",
+        "docs/*.md",
+        "visuals/*.canvas",
+        "index.html"
+      ],
+      "guards": [
+        "repository validation",
+        "raw artifact scan",
+        "doc-id Rückbindung",
+        "content-layer separation",
+        "crystallization decision validation"
+      ],
       "risk": "Das Repo kann zu abstrakt bleiben, wenn keine späteren Exzerpte nachgezogen werden.",
       "next_use": "Struktur- und Contract-Arbeit zuerst hier ändern."
     },
@@ -42,12 +55,23 @@
         "data/details/index.v1.json",
         "data/detail-bridge-index.v1.json",
         "data/learning-field-focus.v1.json",
-        "data/theory-catalog.v1.json"
+        "data/theory-catalog.v1.json",
+        "data/current-work/index.v1.json"
       ],
-      "outputs": ["index.html", "assets/app.js", "assets/styles.css"],
-      "guards": ["static fetch allow-list", "source summary only", "no raw source material"],
+      "outputs": [
+        "index.html",
+        "assets/app.js",
+        "assets/styles.css"
+      ],
+      "guards": [
+        "static fetch allow-list",
+        "source summary only",
+        "no raw source material",
+        "canon default view",
+        "current-work paths only from validated index"
+      ],
       "risk": "Die Lesefläche kann durch Glätte Scheingenauigkeit erzeugen.",
-      "next_use": "Überblick, Filter, Themenvertiefung, Theoriekatalog und begründete Zusammenhänge als Lesefläche."
+      "next_use": "Gesamtschau des Kanons und getrennte Ansicht freigegebener aktueller Halbjahresarbeit."
     },
     {
       "id": "obsidian",
@@ -70,8 +94,17 @@
         "visuals/lernfeld-5-fokus.canvas",
         "docs/theory-catalog-v1.md"
       ],
-      "outputs": ["~/vault-gewebe/schule/erzieherausbildung"],
-      "guards": ["safe-list export", "manifest", "mirror warning", "target inside vault", "dirty-vault-stop", "temp-vault CI validation"],
+      "outputs": [
+        "~/vault-gewebe/schule/erzieherausbildung"
+      ],
+      "guards": [
+        "safe-list export",
+        "manifest",
+        "mirror warning",
+        "target inside vault",
+        "dirty-vault-stop",
+        "temp-vault CI validation"
+      ],
       "risk": "Obsidian ist bequem genug, um fälschlich als Kanon gelesen zu werden.",
       "next_use": "Denken, Navigieren, Umordnen als abgeleitete Oberfläche."
     },
@@ -81,25 +114,61 @@
       "role": "collaboration_surface",
       "authority": "derived",
       "status": "planned",
-      "data_sources": ["data/learning-map.v1.json", "data/knowledge-network.v1.json"],
-      "outputs": ["future Schauwerk/Miro board"],
-      "guards": ["deferred until collaboration need", "no source authority", "export from shared data models"],
+      "data_sources": [
+        "data/learning-map.v1.json",
+        "data/knowledge-network.v1.json"
+      ],
+      "outputs": [
+        "future Schauwerk/Miro board"
+      ],
+      "guards": [
+        "deferred until collaboration need",
+        "no source authority",
+        "export from shared data models"
+      ],
       "risk": "Eine große Kollaborationsfläche kann Ordnung simulieren, bevor Begriffe geklärt sind.",
       "next_use": "Erst aktivieren, wenn gemeinsame Sortierung oder Präsentation konkret gebraucht wird."
     }
   ],
   "surface_alignment": [
-    {"render_id": "prepp_style_homepage", "surface_id": "web", "function": "Lesefläche"},
-    {"render_id": "obsidian_canvas", "surface_id": "obsidian", "function": "Denkfläche"},
-    {"render_id": "schauwerk_or_miro_board", "surface_id": "schauwerk_miro", "function": "Kollaborationsfläche"}
+    {
+      "render_id": "prepp_style_homepage",
+      "surface_id": "web",
+      "function": "Lesefläche"
+    },
+    {
+      "render_id": "obsidian_canvas",
+      "surface_id": "obsidian",
+      "function": "Denkfläche"
+    },
+    {
+      "render_id": "schauwerk_or_miro_board",
+      "surface_id": "schauwerk_miro",
+      "function": "Kollaborationsfläche"
+    }
   ],
-  "forbidden_material": ["raw_text", "pdf", "docx", "pptx", "m4a", "heic", "jpg", "jpeg", "png", "machine-readable.local", "source-material.local"],
+  "forbidden_material": [
+    "raw_text",
+    "pdf",
+    "docx",
+    "pptx",
+    "m4a",
+    "heic",
+    "jpg",
+    "jpeg",
+    "png",
+    "machine-readable.local",
+    "source-material.local"
+  ],
   "invariants": [
     "Repo bleibt Kanon.",
     "Oberflächen sind abgeleitet.",
     "Keine Rohtexte, PDFs, Office-Dateien oder Bilder committen.",
     "Keine Prüfungsnutzenlogik als Ordnungsprinzip.",
     "Bildungsleitlinien bleiben Rahmen, nicht Zentrum.",
-    "Neue starke Claims brauchen spätere Exzerpt- oder Quellenrückbindung."
+    "Neue starke Claims brauchen spätere Exzerpt- oder Quellenrückbindung.",
+    "Kanon und laufende Arbeit bleiben getrennte Inhaltsebenen.",
+    "Aktuelle Arbeit verändert den Kanon nur durch eine dokumentierte Kristallisierungsentscheidung.",
+    "Leere Live-Bestände werden angezeigt, nicht mit erfundenen Beispielen gefüllt."
   ]
 }

@@ -1,10 +1,24 @@
 {
   "schema": "erzieherausbildung.surface_policy.contract.v1",
   "dataSchema": "erzieherausbildung.surface_policy.v1",
-  "surfaceIds": ["repo", "web", "obsidian", "schauwerk_miro"],
+  "surfaceIds": [
+    "repo",
+    "web",
+    "obsidian",
+    "schauwerk_miro"
+  ],
   "canonicalSurface": "repo",
-  "derivedSurfaceIds": ["web", "obsidian", "schauwerk_miro"],
-  "roles": ["canonical_source", "reading_surface", "thinking_surface", "collaboration_surface"],
+  "derivedSurfaceIds": [
+    "web",
+    "obsidian",
+    "schauwerk_miro"
+  ],
+  "roles": [
+    "canonical_source",
+    "reading_surface",
+    "thinking_surface",
+    "collaboration_surface"
+  ],
   "surfaceAlignment": {
     "prepp_style_homepage": "web",
     "obsidian_canvas": "obsidian",
@@ -12,5 +26,16 @@
   },
   "rawTextCommitted": false,
   "committedSourceRefs": "doc-id-only",
-  "bildungsleitlinienRole": "background-frame-not-center"
+  "bildungsleitlinienRole": "background-frame-not-center",
+  "contentLayers": [
+    "canon",
+    "current-work"
+  ],
+  "currentWorkLifecycles": [
+    "active",
+    "canon-candidate",
+    "integrated",
+    "archived",
+    "rejected"
+  ]
 }

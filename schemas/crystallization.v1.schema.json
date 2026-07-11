@@ -1,0 +1,20 @@
+{
+  "schema": "erzieherausbildung.crystallization.contract.v1",
+  "dataSchema": "erzieherausbildung.crystallization_decision.v1",
+  "indexSchema": "erzieherausbildung.crystallization_decision_index.v1",
+  "required": [
+    "schema",
+    "id",
+    "workId",
+    "decision",
+    "targetIds",
+    "essence",
+    "decidedOn",
+    "decidedBy",
+    "canonChangeRefs"
+  ],
+  "decisions": ["integrated", "archived", "rejected"],
+  "decisionRoles": ["editorial-team"],
+  "integratedRule": "integrated decisions require canonical targetIds and existing canonChangeRefs",
+  "blockedFields": ["personName", "email", "rawMaterial", "directCitation", "localPath"]
+}
