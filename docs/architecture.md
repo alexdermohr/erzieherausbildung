@@ -11,7 +11,7 @@ Die gültige lokale Quelle ist `~/iCloud/Drive/inbox/erzieherausbildung`. Die fr
 ## Ebenen
 
 1. **Lokale Quellenebene:** Roh-PDFs und vollständige Arbeiten bleiben lokal.
-2. **Kanonische Wissensebene:** Lernkarte, Details, Exzerpte, Theorien und Wissensnetz bilden den dauerhaft geprüften Stand.
+2. **Kanonische Wissensebene:** Wissenskarte, Details, Exzerpte, Theorien und Wissensnetz bilden den dauerhaft geprüften Stand.
 3. **Aktuelle Arbeit:** anonymisierte, strukturierte Ergebnisse eines konkreten Halbjahres mit eigenem Lebenszyklus.
 4. **Kristallisierung:** geprüfte Entscheidungen verbinden aktuelle Arbeit mit konkret geänderten Kanonzielen oder archivieren sie.
 5. **Darstellungsflächen:** Web, Obsidian Canvas und spätere Schauwerk/Miro-Flächen bleiben abgeleitet.

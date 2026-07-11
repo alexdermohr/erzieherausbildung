@@ -90,7 +90,7 @@ def validate_with_temp_home(home: Path) -> None:
         assert WARNING in (target / name).read_text(encoding="utf-8")
 
     assert (ROOT / "visuals" / "erzieherausbildung-systemkarte.canvas").read_bytes() == (target / "Systemkarte.canvas").read_bytes()
-    assert (ROOT / "visuals" / "learning-map-v1.canvas").read_bytes() == (target / "Lernlandkarte.canvas").read_bytes()
+    assert (ROOT / "visuals" / "learning-map-v1.canvas").read_bytes() == (target / "Wissenskarte.canvas").read_bytes()
     for number in range(1, 6):
         assert (ROOT / "visuals" / f"lernfeld-{number}-fokus.canvas").read_bytes() == (target / f"Lernfeld {number} – Fokuskarte.canvas").read_bytes()
     start_text = (target / "Start hier.md").read_text(encoding="utf-8")
@@ -108,6 +108,71 @@ def validate_with_temp_home(home: Path) -> None:
     assert "Nur genannt, im Korpus nicht erklärt" in theory_text
     assert "Eine bloße Namensnennung" in theory_text
     assert "[[Theoriekatalog]]" in start_text
+
+    run(["git", "add", "."], cwd=vault)
+    run([
+        "git",
+        "-c",
+        "user.name=Validation",
+        "-c",
+        "user.email=validation@example.invalid",
+        "commit",
+        "-m",
+        "commit current export",
+    ], cwd=vault)
+    legacy_targets = ["Lernlandkarte.canvas", "Lernlandkarte.md"]
+    for name in legacy_targets:
+        (target / name).write_text("legacy managed view\n", encoding="utf-8")
+    manifest = json.loads((target / ".erzieherausbildung-obsidian-view.json").read_text(encoding="utf-8"))
+    manifest["managed_files"].extend({"target": name, "kind": "legacy-test"} for name in legacy_targets)
+    (target / ".erzieherausbildung-obsidian-view.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    run(["git", "add", "."], cwd=vault)
+    run([
+        "git",
+        "-c",
+        "user.name=Validation",
+        "-c",
+        "user.email=validation@example.invalid",
+        "commit",
+        "-m",
+        "add legacy managed export names",
+    ], cwd=vault)
+    migrated = run([sys.executable, str(SCRIPT)], env=env)
+    assert "removed stale managed file: Lernlandkarte.canvas" in migrated.stdout
+    assert "removed stale managed file: Lernlandkarte.md" in migrated.stdout
+    assert not any((target / name).exists() for name in legacy_targets)
+    assert {path.name for path in target.iterdir() if path.is_file()} == EXPECTED_FILES
+
+    run(["git", "add", "."], cwd=vault)
+    run([
+        "git",
+        "-c",
+        "user.name=Validation",
+        "-c",
+        "user.email=validation@example.invalid",
+        "commit",
+        "-m",
+        "commit migrated export",
+    ], cwd=vault)
+    managed_target = target / "Wissenskarte.md"
+    managed_target.unlink()
+    managed_target.symlink_to(vault / "seed.md")
+    run(["git", "add", "."], cwd=vault)
+    run([
+        "git",
+        "-c",
+        "user.name=Validation",
+        "-c",
+        "user.email=validation@example.invalid",
+        "commit",
+        "-m",
+        "add unsafe managed symlink",
+    ], cwd=vault)
+    unsafe_target = run([sys.executable, str(SCRIPT)], env=env, check=False)
+    assert unsafe_target.returncode != 0
+    assert "unsafe managed target" in unsafe_target.stderr
 
     (vault / "dirty.md").write_text("dirty\n", encoding="utf-8")
     dirty = run([sys.executable, str(SCRIPT)], env=env, check=False)

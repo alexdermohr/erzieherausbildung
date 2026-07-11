@@ -25,13 +25,13 @@ Der Export verweigert Zielpfade außerhalb von `~/vault-gewebe`.
 Nur diese Repo-Dateien werden gespiegelt:
 
 - `visuals/erzieherausbildung-systemkarte.canvas` -> `Systemkarte.canvas`
-- `visuals/learning-map-v1.canvas` -> `Lernlandkarte.canvas`
+- `visuals/learning-map-v1.canvas` -> `Wissenskarte.canvas`
 - `visuals/lernfeld-1-fokus.canvas` -> `Lernfeld 1 – Fokuskarte.canvas`
 - `visuals/lernfeld-2-fokus.canvas` -> `Lernfeld 2 – Fokuskarte.canvas`
 - `visuals/lernfeld-3-fokus.canvas` -> `Lernfeld 3 – Fokuskarte.canvas`
 - `visuals/lernfeld-4-fokus.canvas` -> `Lernfeld 4 – Fokuskarte.canvas`
 - `visuals/lernfeld-5-fokus.canvas` -> `Lernfeld 5 – Fokuskarte.canvas`
-- `docs/learning-map-v1.md` -> `Lernlandkarte.md`
+- `docs/learning-map-v1.md` -> `Wissenskarte.md`
 - `docs/knowledge-network-v1.md` -> `Wissensnetz.md`
 - `docs/pilot-index-v1.md` -> `Pilotindex.md`
 - `docs/detail-bridge-index-v1.md` -> `Detail-Brückenindex.md`
@@ -72,6 +72,7 @@ python3 scripts/obsidian_views.py --target-dir "$HOME/vault-gewebe/schule/erzieh
 - Markdown-Spiegeldateien bekommen den Warnhinweis: „SPIEGELDATEI aus /home/alex/repos/erzieherausbildung. Kanonische Quelle bleibt das Repo. Änderungen zuerst dort machen, dann neu spiegeln.“
 - Canvas-Dateien werden unverändert kopiert.
 - Schreibmodus stoppt, wenn der Vault-Git-Status nicht sauber belegbar ist.
+- Beim Umbenennen einer verwalteten Ansicht entfernt der Export ausschließlich alte Dateien, die im vorherigen Manifest als verwaltet ausgewiesen waren; fremde Vault-Dateien bleiben unberührt.
 
 ## Risiken
 

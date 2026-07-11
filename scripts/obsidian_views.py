@@ -56,13 +56,13 @@ class ViewFile:
 
 VIEW_FILES = (
     ViewFile("visuals/erzieherausbildung-systemkarte.canvas", "Systemkarte.canvas", "copy"),
-    ViewFile("visuals/learning-map-v1.canvas", "Lernlandkarte.canvas", "copy"),
+    ViewFile("visuals/learning-map-v1.canvas", "Wissenskarte.canvas", "copy"),
     ViewFile("visuals/lernfeld-1-fokus.canvas", "Lernfeld 1 – Fokuskarte.canvas", "copy"),
     ViewFile("visuals/lernfeld-2-fokus.canvas", "Lernfeld 2 – Fokuskarte.canvas", "copy"),
     ViewFile("visuals/lernfeld-3-fokus.canvas", "Lernfeld 3 – Fokuskarte.canvas", "copy"),
     ViewFile("visuals/lernfeld-4-fokus.canvas", "Lernfeld 4 – Fokuskarte.canvas", "copy"),
     ViewFile("visuals/lernfeld-5-fokus.canvas", "Lernfeld 5 – Fokuskarte.canvas", "copy"),
-    ViewFile("docs/learning-map-v1.md", "Lernlandkarte.md", "markdown"),
+    ViewFile("docs/learning-map-v1.md", "Wissenskarte.md", "markdown"),
     ViewFile("docs/knowledge-network-v1.md", "Wissensnetz.md", "markdown"),
     ViewFile("docs/pilot-index-v1.md", "Pilotindex.md", "markdown"),
     ViewFile("docs/detail-bridge-index-v1.md", "Detail-Brückenindex.md", "markdown"),
@@ -189,13 +189,13 @@ Status: Vault-Spiegel; kanonisch bleibt das Repo.
 ## Einstieg
 
 1. [[Systemkarte.canvas]] – Gesamtoberfläche und Darstellungslogik.
-2. [[Lernlandkarte.canvas]] – visuelle Lernachsen.
+2. [[Wissenskarte.canvas]] – visuelle Lernachsen.
 3. [[Lernfeld 1 – Fokuskarte.canvas]] – Berufsrolle und professionelle Haltung.
 4. [[Lernfeld 2 – Fokuskarte.canvas]] – Beziehung, Kommunikation und Schutz.
 5. [[Lernfeld 3 – Fokuskarte.canvas]] – Beobachtung, Fallverstehen und Selbstbestimmung.
 6. [[Lernfeld 4 – Fokuskarte.canvas]] – Bildungsbereiche und Lernarrangements.
 7. [[Lernfeld 5 – Fokuskarte.canvas]] – Elternkooperation und Übergänge.
-8. [[Lernlandkarte]] – textliche Orientierung zu Achsen und Themen.
+8. [[Wissenskarte]] – textliche Orientierung zu Achsen und Themen.
 9. [[Wissensnetz]] – Cluster, Brücken und Zusammenhangslogik.
 10. [[Pilotindex]] – konkret lokalisierte Quellen und offene Quellenarbeit.
 11. [[Detail-Brückenindex]] – Verbindungsknoten, Zielachsen und Brücken zwischen Detailkarten.
@@ -232,6 +232,53 @@ def planned_files(target: Path) -> Iterable[tuple[str, Path]]:
     yield "generated", target / MANIFEST_NAME
 
 
+def previous_managed_targets(target: Path) -> set[str]:
+    manifest_path = target / MANIFEST_NAME
+    if manifest_path.is_symlink():
+        raise SystemExit(f"unsafe previous manifest: {manifest_path}")
+    if not manifest_path.exists():
+        return set()
+    if not manifest_path.is_file():
+        raise SystemExit(f"unsafe previous manifest: {manifest_path}")
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SystemExit(f"cannot read previous manifest: {manifest_path}") from exc
+    if manifest.get("schema") != SCHEMA or manifest.get("policy") != POLICY:
+        raise SystemExit("refusing to migrate files from an unknown manifest contract")
+    entries = manifest.get("managed_files")
+    if not isinstance(entries, list):
+        raise SystemExit("previous manifest managed_files must be a list")
+    targets: set[str] = set()
+    for entry in entries:
+        if not isinstance(entry, dict) or not isinstance(entry.get("target"), str):
+            raise SystemExit("previous manifest contains an invalid managed target")
+        name = entry["target"]
+        ensure_safe_relative(name, kind="previous managed target")
+        targets.add(name)
+    return targets
+
+
+def ensure_safe_managed_target(path: Path) -> None:
+    if path.is_symlink():
+        raise SystemExit(f"unsafe managed target: {path}")
+    if path.exists() and not path.is_file():
+        raise SystemExit(f"managed target is not a regular file: {path}")
+
+
+def remove_stale_managed_files(target: Path, desired_targets: set[str]) -> list[str]:
+    removed: list[str] = []
+    for name in sorted(previous_managed_targets(target) - desired_targets):
+        stale_path = target / name
+        if not stale_path.exists() and not stale_path.is_symlink():
+            continue
+        if stale_path.is_symlink() or not stale_path.is_file():
+            raise SystemExit(f"refusing to remove unsafe stale managed path: {stale_path}")
+        stale_path.unlink()
+        removed.append(name)
+    return removed
+
+
 def main() -> int:
     args = parse_args()
     vault_root, target = resolve_inside_vault(args.target_dir)
@@ -258,15 +305,20 @@ def main() -> int:
 
     ensure_clean_vault(vault_root)
     target.mkdir(parents=True, exist_ok=True)
+    desired_targets = {spec.target for spec in VIEW_FILES} | set(GENERATED_FILES)
+    for name in remove_stale_managed_files(target, desired_targets):
+        print(f"removed stale managed file: {name}")
 
     managed: list[dict[str, str]] = []
     start_target = target / "Start hier.md"
+    ensure_safe_managed_target(start_target)
     start_target.write_text(build_start_text(source_head), encoding="utf-8")
     managed.append({"target": start_target.name, "kind": "generated", "sha256": sha256_file(start_target)})
 
     for spec in VIEW_FILES:
         source = REPO_ROOT / spec.source
         destination = target / spec.target
+        ensure_safe_managed_target(destination)
         if spec.mode == "markdown":
             write_markdown(source, destination)
         elif spec.mode == "copy":
@@ -283,6 +335,7 @@ def main() -> int:
     manifest_managed = [*managed, {"target": MANIFEST_NAME, "kind": "manifest"}]
     manifest = build_manifest(target, source_head, manifest_managed)
     manifest_target = target / MANIFEST_NAME
+    ensure_safe_managed_target(manifest_target)
     manifest_target.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {len(manifest_managed)} files")
     return 0

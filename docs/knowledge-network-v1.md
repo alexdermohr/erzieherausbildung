@@ -1,6 +1,6 @@
 # Wissensnetz v1
 
-Ergänzung zur Lernlandkarte v1. Die Lernlandkarte zeigt die Themen. Das Wissensnetz zeigt, welche Themen erkenntnislogisch zusammengehören.
+Ergänzung zur Wissenskarte v1. Die Wissenskarte zeigt die Themen. Das Wissensnetz zeigt, welche Themen erkenntnislogisch zusammengehören.
 
 ## Cluster
 

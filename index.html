@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erzieherausbildung – Lernlandkarte</title>
+    <title>Erzieherausbildung – Wissenskarte</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -22,7 +23,7 @@
     <header id="start" class="hero">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">Wissenslandkarte</p>
+          <p class="eyebrow">Wissenskarte</p>
           <h1>Erzieherausbildung</h1>
           <p class="lede">Eine übersichtliche Gesamtschau des Ausbildungskanons – mit einer getrennten Ansicht für freigegebene aktuelle Arbeitsergebnisse.</p>
           <div class="hero-actions" aria-label="Schnelleinstiege">
@@ -53,17 +54,17 @@
       <section id="karte" class="panel canvas-panel anchored-section">
         <div class="section-head">
           <div>
-            <h2>Lernlandkarte</h2>
-            <p class="fineprint">Wähle eine Lernkarte. Ein Klick auf einen Begriff zeigt rechts die Erklärung und passende Vertiefungen.</p>
+            <h2>Wissenskarte</h2>
+            <p class="fineprint">Wähle eine Ansicht. Ein Klick auf einen Begriff zeigt rechts die Erklärung und passende Vertiefungen.</p>
           </div>
-          <label class="filter-label">Lernkarte wählen
+          <label class="filter-label">Ansicht wählen
             <select id="canvas-view-select"></select>
           </label>
         </div>
         <div class="canvas-layout">
           <div class="canvas-stage-wrap">
             <p id="canvas-status" class="fineprint" role="status" aria-live="polite" hidden></p>
-            <div id="canvas-viewer" class="canvas-viewer" aria-label="Interaktive Lernkarte"></div>
+            <div id="canvas-viewer" class="canvas-viewer" aria-label="Interaktive Wissenskarte"></div>
           </div>
           <aside id="canvas-detail" class="canvas-detail" aria-live="polite"></aside>
         </div>

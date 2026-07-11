@@ -26,6 +26,6 @@ Unsicherheitsgrad: 0.28. Interpolationsgrad: 0.36.
 Ursachen: korrekter Ordner bekannt, aber noch keine vollständige fachliche Tiefenstruktur.
 
 ## Surface-Spine v1
-Die Systemkarte zeigt nun die Pipeline von lokaler Quellenebene über doc-ID-Belegschicht, Lernlandkarte und Wissensnetz zu Web- und Canvas-Flächen.
+Die Systemkarte zeigt nun die Pipeline von lokaler Quellenebene über doc-ID-Belegschicht, Wissenskarte und Wissensnetz zu Web- und Canvas-Flächen.
 
 Die alternative Sinnachse kippt von „Welche Datei gibt es?“ zu „Welche Erkenntnisfunktion hat diese Fläche?“. Dadurch bleiben Web als Lesefläche, Canvas als Denkfläche und Schauwerk/Miro als spätere Kollaborationsfläche getrennt.

@@ -334,10 +334,14 @@ app_js = (root / "assets/app.js").read_text(encoding="utf-8")
 index_html = (root / "index.html").read_text(encoding="utf-8")
 assert "sitePath" in app_js
 assert 'href="assets/styles.css"' in index_html
+assert 'href="assets/favicon.svg"' in index_html
+assert (root / "assets/favicon.svg").is_file()
 assert 'src="assets/app.js"' in index_html
 html_ids = set(re.findall(r'id="([^"]+)"', index_html))
 for href in re.findall(r'href="#([^"]+)"', index_html):
     assert href in html_ids, f"broken in-page href: #{href}"
+for selector_id in re.findall(r'document\.querySelector(?:All)?\("#([A-Za-z0-9_-]+)', app_js):
+    assert selector_id in html_ids, f"JS selector has no static HTML target: #{selector_id}"
 for token in ["top-nav", "skip-link", "hero-actions", "orientation-card", "#verbindungen", "#theorien", "#index", 'id="karte"', 'id="achsen"', 'id="theorien"', 'id="verbindungen"', 'id="index"', 'id="status"']:
     assert token in index_html
 for token in ['<a href="#status">Status</a>', 'id="surface-list"', "Status und Abdeckung"]:
@@ -347,20 +351,28 @@ assert 'role="group" aria-label="Inhaltsebene wählen"' in index_html
 assert 'class="filter-label theory-search-control"' in index_html
 for token in ['id="content-layer-switch"', 'data-content-layer="canon"', 'data-content-layer="current-work"', 'id="aktuell"', 'id="current-work-list"', 'id="current-work-empty"']:
     assert token in index_html
-assert '<h2>Lernlandkarte</h2>' in index_html
+assert '<title>Erzieherausbildung – Wissenskarte</title>' in index_html
+assert '<h2>Wissenskarte</h2>' in index_html
+assert '<label class="filter-label">Ansicht wählen' in index_html
+assert 'aria-label="Interaktive Wissenskarte"' in index_html
+for legacy_term in ["Lernlandkarte", "Lernkarte", "Wissenslandkarte"]:
+    assert legacy_term not in index_html
+    assert legacy_term not in app_js
 assert '<p class="eyebrow">Interaktive Karte</p>' not in index_html
-assert "Räumliche Lernlandkarte" not in index_html
+assert "Räumliche Wissenskarte" not in index_html
 assert 'id="canvas-status" class="fineprint" role="status" aria-live="polite" hidden' in index_html
 style_css = (root / "assets/styles.css").read_text(encoding="utf-8")
 for token in ["scroll-behavior: smooth", "position: sticky", "scroll-margin-top", "primary-action", "orientation-card", "@media (max-width: 1180px)", "minmax(320px, .44fr)", "action-row", "meta-panel", "meta-stat", "link-highlight", "detail-meta", "topic-summary", "topic-detail", "connection-context", "hub-insight", "index-layout", "theory-controls", "theory-card", "theory-detail", "theory-search-control", ".filter-label > select", "width: 100%; min-width: 0; max-width: 100%", "repeat(2, minmax(0, 1fr))", ".canvas-stage-wrap { min-width: 0; max-width: 100%; overflow: hidden; }", "content-layer-control", "segmented-control", "current-work-list", "current-work-card", "current-work-inline"]:
     assert token in style_css
-for stale_style in ["source-line", "muted-tag", "detail-ready-tag", "detail-missing-tag", "max-height: 820px", 'input[type="search"] { min-width:']:
+for stale_style in ["source-line", "muted-tag", "detail-ready-tag", "detail-missing-tag", "status-surface-list", "max-height: 820px", 'input[type="search"] { min-width:']:
     assert stale_style not in style_css
     assert stale_style not in app_js
 assert style_css.index(".theory-controls { display: grid") < style_css.index(".theory-search-control { grid-column: 1 / -1; }")
 assert ".index-layout, .bridge-index-layout { display: block; }" in style_css
 assert style_css.rindex(".index-layout, .bridge-index-layout { display: block; }") > style_css.index(".bridge-index-layout { display: grid")
 assert "appendSourceTags" not in app_js
+assert "renderSurfaces" not in app_js
+assert "surface-list" not in app_js
 assert "canvas-node-badge" not in app_js
 assert "canvas-node-badge" not in style_css
 assert 'badge.textContent = context.topic ? "Thema" : "Achse"' not in app_js
@@ -429,7 +441,7 @@ assert "python3 scripts/validate_view_export.py" in workflow_validate
 assert "python3 scripts/build_theory_catalog.py --check" in workflow_validate
 assert "python3 scripts/validate_theory_catalog.py" in workflow_validate
 assert "python3 scripts/validate_current_work.py" in workflow_validate
-assert "python3 -m unittest -v tests.test_current_work_model" in workflow_validate
+assert "python3 -m unittest discover -v" in workflow_validate
 assert "node --check assets/app.js" in workflow_validate
 assert "refusing to write: vault git status is not clean" in obsidian_script
 for token in ["Repo bleibt kanonisch", "Vault", "Dry-Run", "kein gesamtes Repo", "machine-readable.local", "Theoriekatalog.md"]:
