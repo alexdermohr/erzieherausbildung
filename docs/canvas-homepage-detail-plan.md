@@ -76,7 +76,7 @@ data/learning-map.v1.json
   -> Homepage und Obsidian
 ```
 
-Damit wird vermieden, dass Web, Canvas und Markdown drei auseinanderlaufende Wahrheiten bilden. Drei Wahrheiten sind gut für Philosophie-Seminare, schlecht für Lernlandkarten.
+Damit wird vermieden, dass Web, Canvas und Markdown drei auseinanderlaufende Wahrheiten bilden. Drei Wahrheiten sind gut für Philosophie-Seminare, schlecht für Wissenskarten.
 
 ## Quellen- und Oberflächenpolitik
 
@@ -156,7 +156,7 @@ Resonanzprüfung: Die Detailschicht stärkt die Homepage als Lernfläche, ohne O
 
 Die Detailschicht weist nun explizit aus, wie viel Themenabdeckung sie hat. `data/details/index.v1.json` enthält eine `coverage`-Sektion mit Gesamtzahl, Detailzahl, fehlenden Themen und Achsenaufschlüsselung.
 
-These: Coverage-Signale machen die Lernlandkarte ehrlicher, weil sie Tiefe nicht behaupten, sondern anzeigen.
+These: Coverage-Signale machen die Wissenskarte ehrlicher, weil sie Tiefe nicht behaupten, sondern anzeigen.
 Antithese: Sichtbare Lücken können unfertig wirken.
 Synthese: Das ist erwünscht. Die Lücke ist ein Arbeitsauftrag, kein Makel.
 

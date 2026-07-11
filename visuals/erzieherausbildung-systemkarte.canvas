@@ -21,7 +21,7 @@
     {
       "id": "learning-map",
       "type": "text",
-      "text": "Lernlandkarte v1\ndata/learning-map.v1.json: 8 Sinnachsen, Themen, Quellenbindung. Bildungsleitlinien rahmen, dominieren aber nicht.",
+      "text": "Wissenskarte v1\ndata/learning-map.v1.json: 8 Sinnachsen, Themen, Quellenbindung. Bildungsleitlinien rahmen, dominieren aber nicht.",
       "x": 120,
       "y": -240,
       "width": 460,

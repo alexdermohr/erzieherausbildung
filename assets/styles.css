@@ -174,7 +174,6 @@ select, input[type="search"] { border: 1px solid var(--line); border-radius: 999
   .theory-list, .theory-named-list { grid-template-columns: minmax(0, 1fr); }
 }
 .connection-subsection { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 24px; }
-.status-surface-list { margin-top: 16px; }
 .bridge-detail-card-target { margin-top: 18px; scroll-margin-top: 24px; }
 .inline-action { border: 1px solid var(--accent); border-radius: 999px; padding: 7px 10px; margin-top: 4px; color: var(--accent); background: transparent; cursor: pointer; }
 .inline-action.active { background: var(--accent-soft); }

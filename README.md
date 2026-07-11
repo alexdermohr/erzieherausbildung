@@ -28,7 +28,7 @@ Vercel/Web-App als Lesefläche, Obsidian Canvas als Denkfläche, Miro via Schauw
 
 - Web-Lesefläche: [`index.html`](index.html)
 - Systemkarte: [`visuals/erzieherausbildung-systemkarte.canvas`](visuals/erzieherausbildung-systemkarte.canvas)
-- Lernlandkarte: [`visuals/learning-map-v1.canvas`](visuals/learning-map-v1.canvas) und [`docs/learning-map-v1.md`](docs/learning-map-v1.md)
+- Wissenskarte: [`visuals/learning-map-v1.canvas`](visuals/learning-map-v1.canvas) und [`docs/learning-map-v1.md`](docs/learning-map-v1.md)
 - Lernfeld-Fokuskarten 1–5: [`data/learning-field-focus.v1.json`](data/learning-field-focus.v1.json), [`schemas/learning-field-focus.v1.schema.json`](schemas/learning-field-focus.v1.schema.json) und Generator [`scripts/build_learning_field_focus_maps.py`](scripts/build_learning_field_focus_maps.py)
 - Homepage-Canvas- und Detailpfad: [`docs/canvas-homepage-detail-plan.md`](docs/canvas-homepage-detail-plan.md)
 - Wissensnetz: [`docs/knowledge-network-v1.md`](docs/knowledge-network-v1.md) und [`data/knowledge-network.v1.json`](data/knowledge-network.v1.json)

@@ -15,7 +15,7 @@ const currentWorkIndexUrl = sitePath("/data/current-work/index.v1.json");
 const baseCanvasViews = [
   {
     id: "learning-map",
-    label: "Lernlandkarte",
+    label: "Wissenskarte",
     url: sitePath("/visuals/learning-map-v1.canvas"),
     role: "Denkfläche",
   },
@@ -322,7 +322,7 @@ function renderSourceSummary(summary) {
   const words = summary?.totals?.word_count ?? "325.811";
   target.textContent = `${map.axes.length} Wissensbereiche, ${topicTotal} Themen, ${network.clusters.length} Lernwege und ${network.bridges.length} Beziehungen zwischen Lernwegen aus ${fileCount} PDFs. Rohtexte bleiben lokal.`;
   const detail = document.querySelector("#source-detail");
-  detail.textContent = `Arbeitsstand: ${words.toLocaleString?.("de-DE") ?? words} Wörter laut Inventar; sichtbar sind Lernkarten, Themen und begründete Zusammenhänge.`;
+  detail.textContent = `Arbeitsstand: ${words.toLocaleString?.("de-DE") ?? words} Wörter laut Inventar; sichtbar sind Wissenskarten, Themen und begründete Zusammenhänge.`;
 }
 
 function renderStats() {
@@ -698,12 +698,6 @@ function renderCoverage() {
   const detailOpenText = detailCoverage?.missingTopicCount === 0 ? "keine Themen bleiben offen" : `${detailCoverage.missingTopicCount} Themen bleiben offen`;
   const detailLine = detailCoverage ? ` Detailaufbereitung: ${detailCoverage.detailedTopicCount}/${detailCoverage.topicCount} Themen; ${detailOpenText}.` : "";
   target.textContent = `${coverage.linked_doc_ids.length} Quellen sind an Themen gebunden. Das Wissensnetz ordnet ${netCoverage.topic_count} Themen in ${netCoverage.cluster_count} Lernwege.${focus}${detailLine} Bewusst nicht als eigenes Thema modelliert: ${omitted}.`;
-}
-
-function renderSurfaces() {
-  const target = document.querySelector("#surface-list");
-  if (!target) return;
-  target.innerHTML = "";
 }
 
 function parseJsonl(text) {
@@ -1109,7 +1103,7 @@ function renderCanvasDetail(node) {
   target.innerHTML = "";
   if (!node) {
     target.append(el("h3", "", "Begriff auswählen"));
-    target.append(el("p", "", "Klicke einen Begriff in der Lernkarte. Rechts erscheinen Erklärung und Vertiefung."));
+    target.append(el("p", "", "Klicke einen Begriff in der Wissenskarte. Rechts erscheinen Erklärung und Vertiefung."));
     return;
   }
 
@@ -1119,7 +1113,7 @@ function renderCanvasDetail(node) {
   const sources = context.topic?.sources ?? context.axis?.sources ?? [];
   const summary = context.topic
     ? `Dieser Inhalt gehört zum Wissensbereich „${context.topic.axisTitle}“.`
-    : context.axis?.summary ?? "Dieser Begriff gehört zur ausgewählten Lernkarte, ist aber noch keinem Wissensbereich eindeutig zugeordnet.";
+    : context.axis?.summary ?? "Dieser Begriff gehört zur ausgewählten Wissenskarte, ist aber noch keinem Wissensbereich eindeutig zugeordnet.";
   const topicOrAxisId = context.topic?.id ?? context.axis?.id ?? node.id;
   const excerpts = matchingExcerpts(sources, heading, topicOrAxisId);
   const details = matchingDetails(sources, heading, context.topic?.id ?? "", context.axis?.id ?? "");
@@ -1190,10 +1184,10 @@ async function loadCanvasView() {
     status.hidden = true;
   } catch (error) {
     state.canvas.data = null;
-    document.querySelector("#canvas-viewer").textContent = "Die Lernkarte konnte nicht geladen werden.";
+    document.querySelector("#canvas-viewer").textContent = "Die Wissenskarte konnte nicht geladen werden.";
     status.hidden = false;
-    status.textContent = "Diese Lernkarte ist derzeit nicht verfügbar.";
-    console.error("Fehler beim Laden der Lernkarte", view.url, error);
+    status.textContent = "Diese Wissenskarte ist derzeit nicht verfügbar.";
+    console.error("Fehler beim Laden der Wissenskarte", view.url, error);
   }
 }
 
@@ -1217,7 +1211,7 @@ function renderCanvasSurface() {
   target.innerHTML = "";
   const data = state.canvas.data;
   if (!data?.nodes?.length) {
-    target.textContent = "Diese Lernkarte enthält keine Begriffe.";
+    target.textContent = "Diese Wissenskarte enthält keine Begriffe.";
     return;
   }
 
@@ -1231,7 +1225,7 @@ function renderCanvasSurface() {
   const svg = svgEl("svg");
   svg.setAttribute("viewBox", `${minX} ${minY} ${maxX - minX} ${maxY - minY}`);
   svg.setAttribute("role", "img");
-  svg.setAttribute("aria-label", "Interaktive Lernkarte");
+  svg.setAttribute("aria-label", "Interaktive Wissenskarte");
 
   const edgeLayer = svgEl("g");
   edgeLayer.setAttribute("class", "canvas-edge-layer");
@@ -1335,9 +1329,8 @@ async function boot() {
   renderDetailBridgeAxisFilter();
   renderDetailBridgeIndex();
   renderCoverage();
-  renderSurfaces();
 }
 
 boot().catch((error) => {
-  document.body.innerHTML = `<pre>Fehler beim Laden der Lernlandkarte: ${error.message}</pre>`;
+  document.body.innerHTML = `<pre>Fehler beim Laden der Wissenskarte: ${error.message}</pre>`;
 });

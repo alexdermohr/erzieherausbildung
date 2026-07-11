@@ -1,4 +1,4 @@
-# Lernlandkarte v1
+# Wissenskarte v1
 
 Diese Karte ordnet den bisher gelernten Stoff. Sie ist keine Vollzusammenfassung aller PDFs.
 Die Bildungsleitlinien sind bewusst als Rahmen eingeordnet, nicht als Zentrum.
@@ -117,7 +117,7 @@ Die Bildungsleitlinien sind bewusst als Rahmen eingeordnet, nicht als Zentrum.
 - gruppe-institution-politik -> rahmen-recht-ethik: Institutionelles Handeln braucht Rechte, Schutz und Ethik.
 - bildungsbereiche -> beziehung-entwicklung: Bildungsbereiche werden über Beziehung und Begleitung wirksam.
 - eltern-kooperation -> beziehung-entwicklung: Elternkooperation stabilisiert Übergänge und Entwicklung.
-- rahmen-recht-ethik -> bildungsbereiche: Bildungsleitlinien rahmen Bildungsbereiche, dominieren aber nicht die Lernkarte.
+- rahmen-recht-ethik -> bildungsbereiche: Bildungsleitlinien rahmen Bildungsbereiche, dominieren aber nicht die Wissenskarte.
 
 ## Coverage-Notiz
 - Angebundene Quellen: siehe `coverage.linked_doc_ids` in `data/learning-map.v1.json`.

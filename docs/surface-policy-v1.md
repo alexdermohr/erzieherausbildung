@@ -25,7 +25,7 @@ Status: Contract v1. Oberflächenpolitik, nicht Inhaltszusammenfassung.
 
 ### Kanon
 
-Geprüfte, dauerhaft relevante und quellengebundene Lernkarten, Details, Exzerpte, Theorien und Beziehungen.
+Geprüfte, dauerhaft relevante und quellengebundene Wissenskarten, Details, Exzerpte, Theorien und Beziehungen.
 
 Die Web-Lesefläche erlaubt Überblick, Themenerschließung und Theorien vergleichen, ohne eigene Quellenautorität zu erhalten.
 

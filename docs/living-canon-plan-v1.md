@@ -64,7 +64,7 @@ Aktuelle Arbeiten tragen immer:
 "contentLayer": "current-work"
 ```
 
-Der bestehende Kanon wird nicht rückwirkend mit einem zusätzlichen Statusfeld überzogen. Seine kanonische Rolle ergibt sich aus den bestehenden Detail-, Theorie-, Lernkarten- und Wissensnetzverträgen.
+Der bestehende Kanon wird nicht rückwirkend mit einem zusätzlichen Statusfeld überzogen. Seine kanonische Rolle ergibt sich aus den bestehenden Detail-, Theorie-, Wissenskarten- und Wissensnetzverträgen.
 
 ### Lebenszyklus
 
@@ -222,7 +222,7 @@ Nach dem ersten realen Zyklus werden geprüft:
 
 ### Belegt
 
-Das Repo besitzt bereits strukturierte Lernkarten, Details, Exzerpte, Theorien, Wissensnetze, Quellenverträge und mehrere abgeleitete Oberflächen.
+Das Repo besitzt bereits strukturierte Wissenskarten, Details, Exzerpte, Theorien, Wissensnetze, Quellenverträge und mehrere abgeleitete Oberflächen.
 
 ### Plausibel
 
